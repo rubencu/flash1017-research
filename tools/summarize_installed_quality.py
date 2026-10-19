@@ -117,6 +117,57 @@ def generation_summary(rows):
     }
 
 
+def validate_mtp(audit, selected, receipt, arm, specification):
+    expected = specification.get("expected_runtime", {})
+    if "mtp_depth_fixed" in expected:
+        # V2 explicitly specifies native adaptive MTP. Its draft_width is the
+        # ceiling, not a request for fixed depth as in the original protocol.
+        fixed = expected["mtp_depth_fixed"]
+        depth = expected.get("mtp_depth")
+        audit.check(type(fixed) is bool, "mtp_mode", arm)
+        audit.check(type(depth) is int and depth > 0, "mtp_depth", arm)
+        audit.check(selected.get("mtp_enabled") is True, "mtp_enabled", arm)
+        for field in ("draft_width", "adaptive_max_depth"):
+            if field in specification:
+                audit.check(specification[field] == depth, "mtp_plan_depth", arm)
+        if fixed is False:
+            audit.check(selected.get("mtp_fixed_depth") is None, "mtp_setting", arm)
+            audit.check(
+                selected.get("mtp_adaptive_max_depth") == depth,
+                "mtp_setting",
+                arm,
+            )
+        elif fixed is True:
+            audit.check(selected.get("mtp_fixed_depth") == depth, "mtp_setting", arm)
+        for name in ("runtime_initial", "runtime_latest"):
+            runtime = receipt.get(name, {})
+            audit.check(
+                runtime.get("mtp_depth_fixed") is fixed,
+                "mtp_runtime_mode",
+                f"{arm}/{name}",
+            )
+            audit.check(
+                type(runtime.get("mtp_depth")) is int and runtime["mtp_depth"] == depth,
+                "mtp_runtime_depth",
+                f"{arm}/{name}",
+            )
+        return
+    # Preserve interpretation of historical protocols without explicit mode.
+    if "adaptive_max_depth" in specification:
+        audit.check(
+            selected.get("mtp_adaptive_max_depth")
+            == specification["adaptive_max_depth"],
+            "mtp_setting",
+            arm,
+        )
+    if "draft_width" in specification:
+        audit.check(
+            selected.get("mtp_fixed_depth") == specification["draft_width"],
+            "mtp_setting",
+            arm,
+        )
+
+
 def validate_settings(audit, directory, receipt, arm, plan):
     if directory is None:
         audit.pending.append(f"{arm}: settings bytes not supplied")
@@ -192,18 +243,7 @@ def validate_settings(audit, directory, receipt, arm, plan):
         "thinking_setting",
         arm,
     )
-    if "adaptive_max_depth" in plan[arm]:
-        audit.check(
-            selected.get("mtp_adaptive_max_depth") == plan[arm]["adaptive_max_depth"],
-            "mtp_setting",
-            arm,
-        )
-    if "draft_width" in plan[arm]:
-        audit.check(
-            selected.get("mtp_fixed_depth") == plan[arm]["draft_width"],
-            "mtp_setting",
-            arm,
-        )
+    validate_mtp(audit, selected, receipt, arm, plan[arm])
     # Return only relevant, non-secret settings for internal pair comparison.
     cache = dict(global_settings.get("cache", {}))
     cache.pop("ssd_cache_dir", None)

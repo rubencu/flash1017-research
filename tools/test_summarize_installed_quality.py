@@ -451,5 +451,121 @@ class PairIntegrityTest(unittest.TestCase):
         self.assertEqual(result["candidate_only_truncated"], ["HumanEval/0"])
 
 
+class MtpProtocolTest(unittest.TestCase):
+    def check_mtp(
+        self, *, selected=None, expected=None, snapshot=None, specification=None
+    ):
+        selected = (
+            selected
+            if selected is not None
+            else {"mtp_enabled": True, "mtp_adaptive_max_depth": 3}
+        )
+        expected = (
+            expected
+            if expected is not None
+            else {"mtp_depth": 3, "mtp_depth_fixed": False}
+        )
+        snapshot = (
+            snapshot
+            if snapshot is not None
+            else {"mtp_depth": 3, "mtp_depth_fixed": False}
+        )
+        specification = (
+            specification
+            if specification is not None
+            else {"draft_width": 3, "expected_runtime": expected}
+        )
+        audit = reporter.Audit()
+        reporter.validate_mtp(
+            audit,
+            selected,
+            {"runtime_initial": snapshot, "runtime_latest": snapshot},
+            "candidate",
+            specification,
+        )
+        return {e["code"] for e in audit.errors}
+
+    def test_explicit_adaptive_ceiling_passes(self):
+        self.assertEqual(self.check_mtp(), set())
+
+    def test_fixed_override_rejected(self):
+        self.assertIn(
+            "mtp_setting",
+            self.check_mtp(
+                selected={
+                    "mtp_enabled": True,
+                    "mtp_fixed_depth": 3,
+                    "mtp_adaptive_max_depth": 3,
+                }
+            ),
+        )
+
+    def test_wrong_adaptive_ceiling_rejected(self):
+        self.assertIn(
+            "mtp_setting",
+            self.check_mtp(selected={"mtp_enabled": True, "mtp_adaptive_max_depth": 2}),
+        )
+
+    def test_disabled_mtp_rejected(self):
+        self.assertIn(
+            "mtp_enabled",
+            self.check_mtp(
+                selected={"mtp_enabled": False, "mtp_adaptive_max_depth": 3}
+            ),
+        )
+
+    def test_wrong_runtime_mode_rejected(self):
+        self.assertIn(
+            "mtp_runtime_mode",
+            self.check_mtp(snapshot={"mtp_depth": 3, "mtp_depth_fixed": True}),
+        )
+
+    def test_wrong_runtime_depth_rejected(self):
+        self.assertIn(
+            "mtp_runtime_depth",
+            self.check_mtp(snapshot={"mtp_depth": 2, "mtp_depth_fixed": False}),
+        )
+
+    def test_missing_runtime_rejected(self):
+        self.assertEqual(
+            self.check_mtp(snapshot={}), {"mtp_runtime_mode", "mtp_runtime_depth"}
+        )
+
+    def test_invalid_mode_or_depth_rejected(self):
+        self.assertIn(
+            "mtp_mode",
+            self.check_mtp(expected={"mtp_depth": 3, "mtp_depth_fixed": "false"}),
+        )
+        self.assertIn(
+            "mtp_depth",
+            self.check_mtp(expected={"mtp_depth": True, "mtp_depth_fixed": False}),
+        )
+
+    def test_conflicting_plan_depth_rejected(self):
+        self.assertIn(
+            "mtp_plan_depth",
+            self.check_mtp(expected={"mtp_depth": 2, "mtp_depth_fixed": False}),
+        )
+
+    def test_legacy_fixed_protocol_unchanged(self):
+        self.assertIn("mtp_setting", self.check_mtp(specification={"draft_width": 3}))
+        self.assertEqual(
+            self.check_mtp(
+                specification={"draft_width": 3}, selected={"mtp_fixed_depth": 3}
+            ),
+            set(),
+        )
+
+    def test_explicit_fixed_mode_passes(self):
+        self.assertEqual(
+            self.check_mtp(
+                selected={"mtp_enabled": True, "mtp_fixed_depth": 3},
+                expected={"mtp_depth": 3, "mtp_depth_fixed": True},
+                snapshot={"mtp_depth": 3, "mtp_depth_fixed": True},
+            ),
+            set(),
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
