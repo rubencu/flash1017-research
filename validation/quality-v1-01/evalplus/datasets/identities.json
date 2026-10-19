@@ -1,0 +1,24 @@
+{
+  "HumanEvalPlus": {
+    "version": "v0.1.10",
+    "url": "https://github.com/evalplus/humanevalplus_release/releases/download/v0.1.10/HumanEvalPlus.jsonl.gz",
+    "compressed_sha256": "272720b90ac375502c8ed23cd791c2a93dfb22a911641a494da74a426c09f101",
+    "sha256": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+    "upstream_md5": "fe585eb4df8c88d844eeb463ea4d0302",
+    "task_count": 164,
+    "base_tests": 1570,
+    "plus_tests": 122683,
+    "file": "HumanEvalPlus-v0.1.10.jsonl"
+  },
+  "MbppPlus": {
+    "version": "v0.2.0",
+    "url": "https://github.com/evalplus/mbppplus_release/releases/download/v0.2.0/MbppPlus.jsonl.gz",
+    "compressed_sha256": "af43697e8791c4c149bdfd6b489d8b5412507551ac20e28a439f650b8225db63",
+    "sha256": "b54e762755248ca411b523c917fa9f93c07b5ff2966bf60b3917b853926a3dad",
+    "upstream_md5": "ee43ecabebf20deef4bb776a405ac5b1",
+    "task_count": 378,
+    "base_tests": 1174,
+    "plus_tests": 39841,
+    "file": "MbppPlus-v0.2.0.jsonl"
+  }
+}

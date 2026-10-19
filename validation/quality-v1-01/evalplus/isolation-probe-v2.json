@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "seatbelt": {
+    "event": "result",
+    "status": "probe_pass",
+    "isolation": {
+      "outside_read_denied": true,
+      "outside_write_denied": true,
+      "scratch_write_denied": true,
+      "network_denied": true,
+      "fork_denied": true,
+      "foreign_exec_denied": true,
+      "RLIMIT_AS": [
+        9223372036854775807,
+        9223372036854775807
+      ],
+      "RLIMIT_DATA": [
+        9223372036854775807,
+        9223372036854775807
+      ],
+      "RLIMIT_FSIZE": [
+        1048576,
+        1048576
+      ],
+      "RLIMIT_NOFILE": [
+        64,
+        64
+      ],
+      "RLIMIT_CORE": [
+        0,
+        0
+      ],
+      "RLIMIT_CPU": [
+        180,
+        180
+      ],
+      "memory_policy": "parent RSS watchdog; 4 GiB threshold, 20 ms polling, possible overshoot"
+    },
+    "returncode": 0,
+    "sampled_peak_rss": 26394624
+  },
+  "cpu_limit": {
+    "status": "timeout",
+    "reason": "worker_exit",
+    "returncode": -24,
+    "sampled_peak_rss": 26378240,
+    "events": [
+      {
+        "event": "candidate_start",
+        "timeout": 5
+      }
+    ],
+    "stderr": ""
+  },
+  "memory_watchdog": {
+    "status": "timeout",
+    "reason": "rss_watchdog_limit",
+    "returncode": -9,
+    "sampled_peak_rss": 160579584,
+    "events": [
+      {
+        "event": "candidate_start",
+        "timeout": 5
+      }
+    ],
+    "stderr": ""
+  },
+  "wall_watchdog": {
+    "status": "timeout",
+    "reason": "candidate_timeout",
+    "returncode": -9,
+    "sampled_peak_rss": 26525696,
+    "events": [
+      {
+        "event": "candidate_start",
+        "timeout": 0.1
+      }
+    ],
+    "stderr": ""
+  },
+  "output_watchdog": {
+    "status": "timeout",
+    "reason": "output_limit",
+    "returncode": -9,
+    "sampled_peak_rss": 28508160,
+    "events": [
+      {
+        "event": "candidate_start",
+        "timeout": 5
+      }
+    ],
+    "stderr": ""
+  }
+}

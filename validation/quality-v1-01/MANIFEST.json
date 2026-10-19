@@ -1,0 +1,285 @@
+{
+  "schema": "flash1017-quality-evidence/1",
+  "title": "Completed installed v1 quality evaluation",
+  "evidence_integrity_status": "verified",
+  "quality_acceptance_status": "failed",
+  "scope": "Original v1 generation and grading; separate from the later seeded evaluator amendment and v2 qualification. Hash verification is saved-evidence integrity, not a passing model-quality result or an independent rerun.",
+  "paired_tasks": 618,
+  "observed_regressions": [
+    "HumanEval/93",
+    "Mbpp/103",
+    "Mbpp/265",
+    "Mbpp/301",
+    "Mbpp/626",
+    "long-16384-early-2hop",
+    "long-65536-middle-2hop"
+  ],
+  "builds": {
+    "baseline": {
+      "version": "0.7.1rc1",
+      "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+      "wheel_sha256": "b3e12950a607991a1feb833b1bdc0b92fe41aeb73656ca5373db03d0d87b71c7",
+      "native_mtp": true,
+      "adaptive_max_depth": 3,
+      "prefill_step": 2048,
+      "engram_prefetch_mib": 16
+    },
+    "candidate": {
+      "version": "0.7.1rc1+flash1017.1",
+      "commit": "ad2f74058056e4cc7c0a13ddc76f96602e8ce092",
+      "wheel_sha256": "b5c333adc078c28d0950e925af55d5da628d0915e0586bc6ac62f97d35400554",
+      "profile": "flash1017-v1",
+      "draft_width": 5,
+      "prefill_step": 8192,
+      "engram_prefetch_mib": 64
+    }
+  },
+  "paired_report": "pair-summary-final-02.json",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7854,
+      "sha256": "a1e3936ace31544307e5cf55dda2785bdb45e3398e3cf2c4c0a65f13dcaa6800"
+    },
+    {
+      "path": "analysis/score_quality_supplement.py",
+      "bytes": 7032,
+      "sha256": "b90185db997939dd476bd880d6452e8753e470d83696ae7e3794f0ee58a407c8"
+    },
+    {
+      "path": "analysis/summarize_installed_quality.py",
+      "bytes": 30542,
+      "sha256": "4874227964bca97df5020045c8d5bcbd5cd998d1a3a1d16dae3d6bd2edb79837"
+    },
+    {
+      "path": "baseline-02/receipt.json",
+      "bytes": 6693,
+      "sha256": "b85020ae0463947e58d9c429e045e1b87d6a40c718a82769793d22e48fe79749"
+    },
+    {
+      "path": "baseline-02/responses.jsonl",
+      "bytes": 1273591,
+      "sha256": "a6d4c0cf9a34c305a780b30fd6d0b6a4120fdcfa411d342e31057acb3756ffeb"
+    },
+    {
+      "path": "baseline-supplement-02.jsonl",
+      "bytes": 84612,
+      "sha256": "f57afaffce3ad6f6c6bcd609084cdef2ab03fbebbb00e987901ef97301bd1511"
+    },
+    {
+      "path": "candidate-02/receipt.json",
+      "bytes": 12785,
+      "sha256": "5a5548d638cd1365382249e6fa5148f1212e299dd0cb72edb8f3cf7ce2509fb8"
+    },
+    {
+      "path": "candidate-02/responses.jsonl",
+      "bytes": 1272934,
+      "sha256": "0d3457e6b4ee660968bf91fcba1c92367498235c8d4623cb131f03e902a95104"
+    },
+    {
+      "path": "candidate-supplement-02.jsonl",
+      "bytes": 84969,
+      "sha256": "152e77e157d362b7b2878e1e7a6375ca63bb8d7894672ee478dc8cb983c8360e"
+    },
+    {
+      "path": "evalplus/PROTOCOL.md",
+      "bytes": 12835,
+      "sha256": "51ac7749aa74b0c5acb961bf8d8e5b845040cd40036d08074dbdf74dbe736e6d"
+    },
+    {
+      "path": "evalplus/adapter-source/flash1017_evalplus_export.py",
+      "bytes": 2836,
+      "sha256": "2238e8c05bd19862259bec2e6e18f402ef01bb961a017bad56f69c6f6e4d8675"
+    },
+    {
+      "path": "evalplus/adapter-source/flash1017_evalplus_grade.py",
+      "bytes": 22234,
+      "sha256": "abd0a290c723467101334de0c9cdc3d193382eca2050a6123f0c53d347db05d6"
+    },
+    {
+      "path": "evalplus/adapter-source-identities.json",
+      "bytes": 523,
+      "sha256": "693d21314be1265cbc19285ec9efeff6a925ed32a1d809d0f1c31f82b5ef71e2"
+    },
+    {
+      "path": "evalplus/baseline-grades.jsonl",
+      "bytes": 1142174,
+      "sha256": "2541d9b663c03d6c8855a51554ce887f500f40cfa8a29a430b9ce0b8748538dc"
+    },
+    {
+      "path": "evalplus/baseline-grades.jsonl.metadata.json",
+      "bytes": 11365,
+      "sha256": "6b6a49126e016cdd098724d7e852b3816cd609889ccf70dc4d9ab0cfc57c5b0a"
+    },
+    {
+      "path": "evalplus/candidate-grades.jsonl",
+      "bytes": 1144245,
+      "sha256": "c6b263dee26a144f0422754e2aa9422739888a1d19e6096d4d7dc6f7ee1cdc4f"
+    },
+    {
+      "path": "evalplus/candidate-grades.jsonl.metadata.json",
+      "bytes": 11365,
+      "sha256": "24de561f7eb0fbf7eeb58443fd3a7a610a26963894ec07f8fac0726c9c8e4f70"
+    },
+    {
+      "path": "evalplus/canonical-grades-v2.jsonl",
+      "bytes": 819292,
+      "sha256": "300cf547810b559598351d8f66c8b93ba9c469e0989d7dd478865dfa106a4816"
+    },
+    {
+      "path": "evalplus/canonical-grades-v2.jsonl.metadata.json",
+      "bytes": 11302,
+      "sha256": "5b5478c76eac8a8a8132765f7ee620e505f215dfa08603ec503dbbf5cf171c2c"
+    },
+    {
+      "path": "evalplus/datasets/HumanEvalPlus-v0.1.10.jsonl.gz",
+      "bytes": 925932,
+      "sha256": "272720b90ac375502c8ed23cd791c2a93dfb22a911641a494da74a426c09f101"
+    },
+    {
+      "path": "evalplus/datasets/MbppPlus-v0.2.0.jsonl.gz",
+      "bytes": 336032,
+      "sha256": "af43697e8791c4c149bdfd6b489d8b5412507551ac20e28a439f650b8225db63"
+    },
+    {
+      "path": "evalplus/datasets/identities.json",
+      "bytes": 1001,
+      "sha256": "955009a2a52342592f138263ff07f58e73d1efd3a84e4d1acd0937862d4887e7"
+    },
+    {
+      "path": "evalplus/generator-sanitizer-control.json",
+      "bytes": 1915,
+      "sha256": "0d1466d9bac1502f2f41ec851efbbb35a9e69b71d8094a09f2da2a0655dc3c29"
+    },
+    {
+      "path": "evalplus/hash-seed-observation.json",
+      "bytes": 414,
+      "sha256": "38ec38aece269129f93a40fd73f1cc14e1fd941e97ef07040cfa3d68aea684db"
+    },
+    {
+      "path": "evalplus/input-validation.json",
+      "bytes": 496,
+      "sha256": "754f2c745149938f42efa2880784a020bff4893594505ff523e15c50df39e878"
+    },
+    {
+      "path": "evalplus/isolation-probe-final.json",
+      "bytes": 1895,
+      "sha256": "04b4824b06a84d2228ce389b4b104df4b9e5b9814f55601b5b9d4732a74dc681"
+    },
+    {
+      "path": "evalplus/isolation-probe-v2.json",
+      "bytes": 1895,
+      "sha256": "f8cef84da390b842f5542cc90f1985c63aaaa8d5ef19fae632cfe0856e3092ac"
+    },
+    {
+      "path": "evalplus/licenses/EvalPlus-LICENSE.txt",
+      "bytes": 11558,
+      "sha256": "fcc1f77fe5443b21bfc4dfcc3d66f7654f599b91582df771850e5e876986a103"
+    },
+    {
+      "path": "evalplus/licenses/HumanEval-MIT.txt",
+      "bytes": 1083,
+      "sha256": "bcba3de214851cce46ed5af42d6698044616eeace887c3231bc7a20474ab639e"
+    },
+    {
+      "path": "evalplus/licenses/HumanEvalPlus-LICENSE.txt",
+      "bytes": 11549,
+      "sha256": "b0b08821a8c2b49e0f296b0b498c17d6e19b0439d1e4dd9cdb5f37712993c8a7"
+    },
+    {
+      "path": "evalplus/licenses/MBPPPlus-LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "evalplus/licenses/identities.json",
+      "bytes": 836,
+      "sha256": "6f7f42e19fc804406d4709ef1775c2cf5109ab8f176f9759c8e767710a858a7d"
+    },
+    {
+      "path": "evalplus/negative-controls-v2.json",
+      "bytes": 8043,
+      "sha256": "691096c6f5e1dbfa26f560c04241e03fdc71cfd0b19250230dfa2f43c6453a77"
+    },
+    {
+      "path": "evalplus/original-results-receipt.json",
+      "bytes": 2528,
+      "sha256": "b11f3606520fa779b465fbd7e73633611178c8359fd20a1ccbbdba45a9fb3bfc"
+    },
+    {
+      "path": "evalplus/requirements-resolved.txt",
+      "bytes": 721,
+      "sha256": "1a3805c4b10878a54a4facbef4045de7dcb7f87b9a7818b2e89957846e481d11"
+    },
+    {
+      "path": "evalplus/validation-receipt.json",
+      "bytes": 931,
+      "sha256": "cb241b6b83fce7ffced6db7f350d50e9baae18ef1e50afe50056d7ec687d9e84"
+    },
+    {
+      "path": "pair-summary-final-02.json",
+      "bytes": 173320,
+      "sha256": "fc5697d36e48d323410e20ffd03f0331f7c2bd81b1d4feac1ccafac7c11b8a8e"
+    },
+    {
+      "path": "protocol-02.json",
+      "bytes": 2816,
+      "sha256": "8a14157edc39daa822368187c5ea58b2f10d296c99ee170975a5ed30b1f20c39"
+    },
+    {
+      "path": "requests-01.jsonl",
+      "bytes": 2588151,
+      "sha256": "beca0b0b51ee509ff5f53998f27c5eb0f8d12c9527982c10055628927e97850d"
+    },
+    {
+      "path": "run_installed_quality.frozen-02.py",
+      "bytes": 13847,
+      "sha256": "4932bc49eb8e9e425ace4620e6b75e1e8a262519bf97f0abeaf085d56d1830ce"
+    },
+    {
+      "path": "supplement/frozen-02/FREEZE.json",
+      "bytes": 1021,
+      "sha256": "9da2e651823b9dc523e932f62a71b0ea2b6e25ce399287ed2fa29770ff58ebcd"
+    },
+    {
+      "path": "supplement/frozen-02/PROTOCOL.json",
+      "bytes": 3546,
+      "sha256": "31867dab5a44126d46eb066b5db0f9014eccef2025753505f974abe8b1eeeeec"
+    },
+    {
+      "path": "supplement/frozen-02/prepare_quality_supplement.py",
+      "bytes": 10920,
+      "sha256": "0b7058ad7f4ef95a287db3a04416c10477f22ccfa9e3fce615ed4fc035edde23"
+    },
+    {
+      "path": "supplement/frozen-02/requests.jsonl",
+      "bytes": 2262047,
+      "sha256": "8c5ff905ecc3639bec04ab658b4d60e067a769f945fc8a6949a712017847cf86"
+    },
+    {
+      "path": "supplement/frozen-02/score_quality_supplement.py",
+      "bytes": 7032,
+      "sha256": "042646947708537ff29689c6107cffa3f20a05cad869fcbe9633495d6cd551fc"
+    },
+    {
+      "path": "supplement/frozen-02/tasks.jsonl",
+      "bytes": 2267386,
+      "sha256": "db0ec1ce6d1ee205e681aa227ca8e5d24d5e3e8b2c45a571566fad85f55977ed"
+    },
+    {
+      "path": "supplement/frozen-02/test_quality_supplement.py",
+      "bytes": 4578,
+      "sha256": "59da33e3034b76c1f178408308a27cad833587bbb624b5e62dfbbf25fc0dea86"
+    },
+    {
+      "path": "supplement/sources/GSM8K-LICENSE",
+      "bytes": 1062,
+      "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b"
+    },
+    {
+      "path": "supplement-scores-02.json",
+      "bytes": 45066,
+      "sha256": "e4df0550d24e7ae52665c0c178fe79c47a5bdc134dbf8d4651136eb444f21744"
+    }
+  ]
+}

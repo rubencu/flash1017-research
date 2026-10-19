@@ -6,20 +6,29 @@ built on Apple's MLX framework. It uses the existing
 [mlx-community oQ2.5e-MTP checkpoint](https://huggingface.co/mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp/tree/78456115d301eecf9fadcdcc81c0cf6f8b2c8eab)
 without changing its weights or quantization.
 
-On one **M5 Ultra Mac Studio with 80 GPU cores and 256 GiB unified memory**, a
-prototype combining GPU weight reuse, speculative-decoding changes, selective
-decoder computation and disk-table caching reduced geometric-mean **time to
-first token by 20.06%: 19.554 → 15.631 seconds**. The reference was installed
-oMLX **0.7.1rc1 with its native speculative decoding enabled**. The comparison
-covered eight workloads with loaded models; timings exclude model loading and
-HTTP transport.
+**Current result: the first installed fork failed its quality gate.** The
+completed 618-task comparison against public oMLX `v0.7.1rc1` found seven
+baseline-pass to candidate-fail tasks. Both builds passed 447/542 coding tasks,
+but those equal totals concealed five regressions and five gains. The math
+subset passed 61/64 in both arms; synthetic long-context controls fell from
+11/12 to 10/12, with two regressions and one gain. The
+[complete evidence bundle](validation/quality-v1-01/README.md) preserves every
+outcome and the failed acceptance decision.
 
-The improvement had costs and limits: sampled peak memory rose **7.75 GiB**,
-one 64K code workload became **2.32% slower**, and the complete configuration
-has not passed a comparison of answer quality against stock. The
-[quality evidence and required validation](docs/QUALITY.md) explains the gap,
-including a task regression observed in one component configuration. These measurements describe the benchmark prototype. The
-installable fork has separate functional validation, explained below.
+A revised local build, `0.7.1rc1+flash1017.2` at commit
+`9280d25a1322c39f2f6713dc22b099a6e9dd41d1`, uses a conservative profile intended
+to preserve stock arithmetic. Its complete quality qualification is pending;
+it has no measured speedup. [Answer-quality evidence](docs/QUALITY.md) explains
+the original failure, evaluator limits and the revised acceptance requirements.
+
+Separately, a historical prototype on one **M5 Ultra Mac Studio with 80 GPU
+cores and 256 GiB unified memory** reduced geometric-mean **time to first token
+by 20.06%: 19.554 → 15.631 seconds** across eight workloads. That comparison
+used the installed application's embedded environment, loaded models and native
+speculative decoding in the reference; it excluded model loading and HTTP
+transport. Sampled peak memory rose **7.75 GiB**, and one 64K code workload
+became **2.32% slower**. This is an archived prototype result, not a measured
+speedup for either installed fork build.
 
 ![Time to first token for the benchmark prototype and two oMLX configurations](archives/2026-10-18-preview/evidence/overall/review/figures/first-token.png)
 
@@ -29,28 +38,32 @@ installable fork has separate functional validation, explained below.
   problems they exposed, and the complete comparison.
 - **[Methods and results](docs/RESULTS.md):** exact configurations, workload
   sources, individual component studies, failed checks and limits on the claims.
-- **[Installable fork validation](validation/runtime-preview-01/README.md):**
-  the tested build, installation checks, test failures and real HTTP requests.
-- **[Answer-quality evidence](docs/QUALITY.md):** what the coding and parity
-  checks show, and what is required for a no-quality-loss performance claim.
+- **[Installed v1 quality result](validation/quality-v1-01/README.md):** all 618
+  paired outcomes, seven regressions and the failed quality gate.
+- **[Historical v1 functional validation](validation/runtime-preview-01/README.md):**
+  installation checks, software-test failures and real HTTP requests.
+- **[Answer-quality evidence](docs/QUALITY.md):** benchmark provenance, scoring
+  limits and the revised build's pending qualification.
 - **[Attribution](docs/ATTRIBUTION.md):** reused implementations, related work
   and this project's contributions.
 
 ## Benchmark code and installable software
 
-The project provides two artifacts with different evidence:
+The runtime fork and research repository preserve distinct versions and evidence:
 
 | Artifact | What it contains | What was tested |
 |---|---|---|
 | **Benchmark prototype** | The source snapshot and experiment records in [`archives/2026-10-18-preview/`](archives/2026-10-18-preview/README.md), executed with the installed oMLX application's embedded environment. | The 20.06% overall latency result and the component comparisons described in [Methods and results](docs/RESULTS.md). |
-| **Installable oMLX fork** | Maintained runtime source in `rubencu/omlx`, branch `flash1017-preview`; package version `0.7.1rc1+flash1017.1`. | Clean installation, runtime tests and a real serving check. Its performance has not been benchmarked. |
+| **Historical installed v1 fork** | Package `0.7.1rc1+flash1017.1`, commit `ad2f74058056e4cc7c0a13ddc76f96602e8ce092`. | Clean installation and serving checks; completed 618-task quality evaluation **failed**. No installed-wheel performance comparison. |
+| **Current local v2 fork** | Maintained runtime source in `rubencu/omlx`, branch `flash1017-preview`; package `0.7.1rc1+flash1017.2`, commit `9280d25a1322c39f2f6713dc22b099a6e9dd41d1`. | Stock-arithmetic profile under qualification. Full quality and installed-wheel performance results pending. |
 
-The fork integrates the prototype's retained changes into ordinary package
-modules and bundles native binaries from a public oMLX release. Those binaries
+The fork integrates execution changes into ordinary package modules and bundles
+native binaries from a public oMLX release. Those binaries
 differ from the installed application's binaries used in the latency study.
-Consequently, the prototype's measured speedup cannot yet be assigned to the
-distributed build. [`RUNTIME-LINK.json`](RUNTIME-LINK.json) identifies the exact
-fork commit, wheel checksum and checkpoint used for installation validation.
+Consequently, the prototype's measured speedup cannot be assigned to either
+installed build. [`RUNTIME-LINK.json`](RUNTIME-LINK.json) is preserved as the
+historical **v1** installation-validation identity; it does not identify the
+current v2 candidate or certify quality preservation.
 
 To run the model or change the runtime, use the companion oMLX fork. To examine
 the method, recalculate results or propose analysis corrections, use this
@@ -72,6 +85,7 @@ With Python 3.9 or newer, from this repository:
 ```sh
 python3 -I -B tools/verify_research.py
 python3 -I -B tools/verify_runtime_preview.py
+python3 -I -B tools/verify_quality_evidence.py --folder validation/quality-v1-01
 python3 -I -B archives/2026-10-18-preview/analysis/analyze.py
 python3 -I -B -m unittest discover -s archives/2026-10-18-preview/analysis/tests -v
 ```
@@ -79,6 +93,8 @@ python3 -I -B -m unittest discover -s archives/2026-10-18-preview/analysis/tests
 These commands check saved files against their manifests, recalculate the
 overall comparison from recorded observations, and test the analyzer. They
 require no model weights or GPU and do not run inference or contact a server.
+An intact quality bundle still records a failed model-quality gate; checksum
+verification is not a passing benchmark result or a fresh execution of answers.
 The source patch can also be checked offline using the system `patch` utility:
 
 ```sh

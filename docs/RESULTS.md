@@ -8,9 +8,12 @@ before reporting its result.
 All performance results below concern the **benchmark prototype**, whose source
 and observations are preserved in
 [`archives/2026-10-18-preview/`](../archives/2026-10-18-preview/README.md). The
-**installable fork**, package `0.7.1rc1+flash1017.1`, integrates the retained
-changes with public release binaries. Its installation and serving tests are
-covered in the final section; it has not received a performance comparison.
+**historical installed v1 fork**, package `0.7.1rc1+flash1017.1`, integrates the
+retained changes with public release binaries. Its completed 618-task quality
+evaluation failed, as detailed below. The current local v2 build,
+`0.7.1rc1+flash1017.2` at `9280d25a1322c39f2f6713dc22b099a6e9dd41d1`, uses a
+revised stock-arithmetic profile; its qualification is pending. Neither
+installed build has received a performance comparison.
 
 ## Hardware, model and terms
 
@@ -56,7 +59,8 @@ The suite is a **custom latency benchmark**. Its inputs come from two synthetic
 code/prose prompts and public source material: CPython, curl, *Moby-Dick* and
 *Pride and Prejudice*. Those sources supply workload content; the experiment
 does not score coding ability or reading comprehension. No standardized
-answer-quality benchmark was run.
+answer-quality benchmark was part of this latency experiment. The later
+installed-wheel quality evaluation is a separate comparison below.
 
 There are eight fixed cases: two 1K synthetic inputs, four 16K natural-source
 inputs and two 64K natural-source inputs. Exact token IDs, execution order and
@@ -171,16 +175,50 @@ modified reference. It measures the incremental effect of replay and caching.
 The **20.06%, 7.34% and 40.33% figures have different references and metrics**;
 adding or multiplying them would not estimate a measured overall improvement.
 
-## Answer-quality evidence
+## Installed v1 answer-quality evaluation: failed
 
-The complete packaged configuration has not received a paired task-quality
-comparison against its unchanged release base. In an eight-task coding check,
-stock and the confidence/head configuration both passed 8/8; a configuration
-that enabled reference rounding at the same fixed depth as stock passed 7/8.
-Those tests did not cover the final combined fork. [Answer-quality evidence and
-validation requirements](QUALITY.md) records the exact configurations, the
-failed task and the additional checks needed. Component token equality and
-software-test counts cannot substitute for that missing comparison.
+The complete v1 wheel was compared with unchanged public oMLX `v0.7.1rc1`
+using the same pinned checkpoint, native assets and dependencies, normal HTTP
+chat generation, temperature 0, thinking disabled and ordinary EOS. The
+comparison produced all 618 responses in each arm without generation errors;
+all 618 pairs were graded and the evidence-integrity audit passed.
+
+| Suite | Baseline | Installed v1 | Paired regressions | Paired improvements |
+|---|---:|---:|---:|---:|
+| HumanEval+ v0.1.10 | 148/164 | 148/164 | 1 | 1 |
+| MBPP+ v0.2.0 | 299/378 | 299/378 | 4 | 4 |
+| Frozen GSM8K subset | 61/64 | 61/64 | 0 | 0 |
+| Synthetic long-context controls | 11/12 | 10/12 | 2 | 1 |
+
+The aggregate coding score was 447/542 in both arms, concealing five
+baseline-pass to candidate-fail tasks and five gains. The two long-context
+regressions returned an intermediate key instead of the requested final value;
+they were semantic errors, not formatting failures. The total of **seven
+observed regressions** violated the frozen zero-regression rule. The original
+zero-truncation prerequisite also failed: the baseline had four length stops
+and v1 had three, including one candidate-only length stop. Only 43/618 pairs
+had identical text and finish reason. None of these outcomes was removed.
+
+Coding used full pinned EvalPlus releases with unchanged sanitizer/oracles
+through a local isolated macOS adapter. Canonical-solution validation passed
+540/542: pinned upstream behavior rejects `HumanEval/32` and `Mbpp/630` even
+for canonical answers. Both tasks remain in both denominators. Original
+workers used Python `-I`, which ignores `PYTHONHASHSEED`; the original verdicts
+therefore have a documented reproducibility limitation. Later seed-controlled
+grading is a separate amendment, not a replacement of these results.
+
+The harness requested the same 224 GiB memory/wired guideline, but stock server
+startup raised the effective wired limit to about 243.2 GiB while the candidate
+profile reset it to 224 GiB before load. Equal requested values in the receipts
+do not establish equal live wired limits.
+
+The [v1 evidence bundle](../validation/quality-v1-01/README.md) contains the
+raw outputs, graders, controls, exact identities and failed acceptance report.
+[Answer-quality evidence](QUALITY.md) explains the benchmark origins and
+limitations. The eight authored development tasks and component token-equality
+checks remain narrower evidence; they do not override this complete-build
+failure. The revised v2 profile requires its own exact 618-pair qualification
+before any new performance measurement or claim of preserved outcomes.
 
 ## Serving limits and unsuccessful experiments
 
@@ -198,9 +236,9 @@ and unsuccessful serving checks are indexed in the
 These records include incomplete or superseded implementations. Large activation
 arrays and some supporting traces are omitted, as documented in that index.
 
-## What was tested in the installable fork
+## Historical installation and serving checks
 
-The distributed build uses oMLX source based on public `v0.7.1rc1`, with the
+The historical v1 build uses oMLX source based on public `v0.7.1rc1`, with the
 retained changes integrated into normal package modules. Its public native
 binaries are not byte-identical to those in the installed application used for
 the performance experiments. Source continuity and a successful installation
@@ -213,6 +251,8 @@ cancellation/recovery and context-limit rejection. The default test suite had
 unchanged public release base. The [validation record](../validation/runtime-preview-01/README.md)
 identifies the exact commit, wheel, checks and limitations.
 
-That evidence supports a functional experimental distribution on the test
-machine. A speedup for the installable build, equivalent answer quality and
-performance on other machines remain unmeasured.
+That evidence supports basic installation and serving on the test machine.
+The later quality evaluation of this same v1 build failed. Current v2 quality
+qualification is pending; speedups for either installed wheel and performance
+on other machines remain unmeasured. The historical prototype percentages
+cannot be transferred to the revised runtime.

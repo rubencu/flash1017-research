@@ -1,0 +1,404 @@
+{
+  "schema": "flash1017-quality-generation/1",
+  "arm": "candidate",
+  "status": "generated",
+  "plan_sha256": "8a14157edc39daa822368187c5ea58b2f10d296c99ee170975a5ed30b1f20c39",
+  "requests_sha256": "beca0b0b51ee509ff5f53998f27c5eb0f8d12c9527982c10055628927e97850d",
+  "total_tasks": 618,
+  "completed": 618,
+  "errors": 0,
+  "truncated": 3,
+  "runtime_version": "0.7.1rc1+flash1017.1",
+  "runtime_source": "installed wheel",
+  "packages": {
+    "shellingham": "1.5.4",
+    "uvicorn": "0.54.0",
+    "websockets": "17.2",
+    "socksio": "1.0.0",
+    "mlx": "0.32.4",
+    "mlx-lm": "0.31.4.dev132+g94cdcae13",
+    "lxml": "6.1.3",
+    "click": "8.5.0",
+    "onnxruntime": "1.31.0",
+    "packaging": "26.3",
+    "protobuf": "7.36.2",
+    "tokenizers": "0.23.3",
+    "starlette": "1.9.0",
+    "ddgs": "9.16.0",
+    "Pygments": "2.21.0",
+    "mlx-audio": "0.5.7",
+    "pypdfium2": "5.14.0",
+    "pyarrow": "26.0.0",
+    "jsonschema-specifications": "2025.9.1",
+    "sounddevice": "0.5.6",
+    "soupsieve": "3.0.3",
+    "requests": "2.34.2",
+    "defusedxml": "0.7.1",
+    "rich": "15.0.0",
+    "yarl": "1.25.1",
+    "omlx": "0.7.1rc1+flash1017.1",
+    "jsonschema": "4.26.0",
+    "python-pptx": "1.0.2",
+    "opentelemetry-api": "1.45.1",
+    "itsdangerous": "2.2.0",
+    "pdfminer.six": "20260107",
+    "datasets": "5.1.0",
+    "sentencepiece": "0.2.2",
+    "propcache": "0.5.4",
+    "numpy": "2.3.5",
+    "llguidance": "1.9.1",
+    "pydantic-extra-types": "2.11.1",
+    "filelock": "4.2.3",
+    "httpcore": "1.0.9",
+    "aiohappyeyeballs": "2.7.1",
+    "cryptography": "50.0.2",
+    "pillow": "13.0.0",
+    "transformers": "5.17.0",
+    "fsspec": "2026.7.0",
+    "cohere_melody": "0.15.2",
+    "hf-xet": "1.7.0",
+    "safetensors": "0.8.0",
+    "miniaudio": "1.71",
+    "tqdm": "4.70.1",
+    "pip": "25.0.1",
+    "urllib3": "2.8.0",
+    "mammoth": "1.11.0",
+    "h11": "0.16.0",
+    "pydantic_core": "2.50.1",
+    "mdurl": "0.1.2",
+    "python-multipart": "0.0.32",
+    "magika": "0.6.3",
+    "python-dateutil": "2.9.0.post0",
+    "mlx-metal": "0.32.4",
+    "certifi": "2026.10.18",
+    "PyYAML": "6.0.3",
+    "opencv-python": "5.0.0.93",
+    "cobble": "0.1.4",
+    "python-dotenv": "1.2.4",
+    "frozenlist": "1.8.0",
+    "cffi": "2.1.1",
+    "aiosignal": "1.4.0",
+    "typer": "0.27.3",
+    "fastapi": "0.146.0",
+    "Jinja2": "3.1.6",
+    "annotated-types": "0.8.0",
+    "referencing": "0.37.0",
+    "regex": "2026.9.29",
+    "primp": "2.0.1",
+    "pycparser": "3.11",
+    "markdown-it-py": "4.2.0",
+    "setproctitle": "1.3.8",
+    "annotated-doc": "0.0.5",
+    "mlx-vlm": "0.7.8",
+    "typing-inspection": "0.4.4",
+    "pdfplumber": "0.11.10",
+    "tabulate": "0.10.0",
+    "rpds-py": "2026.9.1",
+    "pandas": "3.0.6",
+    "flatbuffers": "25.12.19",
+    "aiohttp": "3.14.5",
+    "attrs": "26.1.0",
+    "pycountry": "26.2.16",
+    "tiktoken": "0.14.0",
+    "xxhash": "4.0.1",
+    "mlx-embeddings": "0.1.0",
+    "xlsxwriter": "3.2.9",
+    "httpx": "0.28.1",
+    "typing_extensions": "4.16.0",
+    "MarkupSafe": "3.0.4",
+    "beautifulsoup4": "4.15.0",
+    "markdownify": "1.2.3",
+    "pydantic": "2.14.1",
+    "psutil": "7.2.2",
+    "multiprocess": "0.70.19",
+    "mistral_common": "1.12.0",
+    "charset-normalizer": "3.5.2",
+    "markitdown": "0.1.8",
+    "anyio": "4.15.1",
+    "openai-harmony": "0.0.8",
+    "six": "1.17.0",
+    "multidict": "7.1.0",
+    "scipy": "1.18.1",
+    "huggingface_hub": "1.33.0",
+    "dill": "0.4.1",
+    "idna": "3.20"
+  },
+  "python": "3.12.15 (main, Oct  9 2026, 15:10:57) [Clang 22.1.3 ]",
+  "device": {
+    "device_name": "Apple M5 Ultra",
+    "max_recommended_working_set_size": 261133172736,
+    "memory_size": 274877906944,
+    "architecture": "applegpu_g17d",
+    "max_buffer_length": 179357827072,
+    "resource_limit": 499000
+  },
+  "memory_limit_bytes": 240518168576,
+  "native_assets": {
+    "custom_kernels/bonsai/_ext.cpython-312-darwin.so": "f4a7229864e22b20f7be9583d4edce7ff130e8c42f01653b2a77c79659e0b369",
+    "custom_kernels/bonsai/omlx_bonsai_kernels.metallib": "247f737f933468603fa390099ac8e575bb152685de4919c81158e38b533014ff",
+    "custom_kernels/decode_fast/_ext.cpython-312-darwin.so": "97fa662afbf36b448ceafa485d3214db8987cfffa90f1cfde490c00e79e9605d",
+    "custom_kernels/decode_fast/omlx_decode_fast_kernels.metallib": "84d7adce577fbecec0d43bb6ec3c8232e4db81803007aca9fc80caed64a7d8e6",
+    "custom_kernels/glm_moe_dsa/_ext.cpython-312-darwin.so": "576d880b99ad7df0a3d8d167daeba0d813d9fb176566671cb2ac7cabb0cfd104",
+    "custom_kernels/glm_moe_dsa/omlx_glm_kernels.metallib": "bb7cd8928579f9016afc50e26403cddbb14823469a4936337ae35deb15712c63",
+    "custom_kernels/minimax_m3/_ext.cpython-312-darwin.so": "c9320232198f841c10fd99a2cf1ff82f94d61e749788b19a2e541975b60c81dd",
+    "custom_kernels/minimax_m3/omlx_minimax_m3_kernels.metallib": "88b3550c3bc107e89a2b16496c69a130f6da4d92485e4f9579a1db63112a036a",
+    "custom_kernels/qwen35_prefill/_ext.cpython-312-darwin.so": "d42ffec393c072079a2a12b104a5011b5fbd76d00976240bf6154ce8f0cf2c82",
+    "custom_kernels/qwen35_prefill/omlx_qwen35_prefill_kernels.metallib": "92e22cbc4e6a4db7304392078493e1234a4db860ff942eb511e4599828b6fd11"
+  },
+  "settings_sha256": {
+    "settings.json": "815d6ae7da50563268dea285117a474de7212eb76fb52e96193729d397dffee2",
+    "model_settings.json": "628798bb3419caedf3616414512cf793737fa22c1ecc1c892daba4b36af83e86"
+  },
+  "started_unix": 1792382722.917622,
+  "responses": "responses.jsonl",
+  "harness_sha256": "4932bc49eb8e9e425ace4620e6b75e1e8a262519bf97f0abeaf085d56d1830ce",
+  "warmup": {
+    "excluded": true,
+    "usage": {
+      "prompt_tokens": 11,
+      "completion_tokens": 1,
+      "total_tokens": 12,
+      "input_tokens": 11,
+      "output_tokens": 1,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "model_load_duration": 24.84,
+      "time_to_first_token": 0.27,
+      "total_time": 0.34,
+      "prompt_eval_duration": 0.27,
+      "generation_duration": 0.07,
+      "prompt_tokens_per_second": 41.44,
+      "generation_tokens_per_second": 13.63
+    }
+  },
+  "runtime_initial": {
+    "prefill_step_size": 8192,
+    "max_num_seqs": 1,
+    "attention_output_quantization": true,
+    "flash1017_enabled": true,
+    "confidence": {
+      "cycles": 0,
+      "selected_depths": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "runtime": {
+      "closed": false,
+      "enabled": true,
+      "cone": {
+        "enabled": true,
+        "closed": false,
+        "counts": {
+          "model_calls": 4
+        },
+        "cone_counts": {
+          "full_calls": 4,
+          "fallback:short-chunk": 2,
+          "fallback:not-cache-only-prefill": 2
+        },
+        "shape_counts": {},
+        "prime_counts": {
+          "prefill_calls": 2,
+          "fallback:short-chunk": 2
+        },
+        "trace": [],
+        "prefill_trace": [],
+        "sources": {
+          "cone": "cone_arithmetic.py",
+          "shape": "shape_arithmetic.py",
+          "prime": "prime_arithmetic.py"
+        },
+        "owned_instances": 90
+      },
+      "rows": {
+        "status": "active",
+        "enabled": true,
+        "per_table_budget_bytes": 268435456,
+        "max_retained_bytes": 536870912,
+        "retained_bytes": 536870912,
+        "live_tables": [
+          {
+            "cache_id": 0,
+            "table": "language_model.layers.1.engram.embed.weight",
+            "budget": 268435456,
+            "nbytes": 268435456,
+            "closed": false,
+            "resident": false,
+            "cache_disabled_after_allocation_failure": false,
+            "counts": {
+              "calls": 4,
+              "cache_calls": 4,
+              "requested_rows": 288,
+              "unique_rows": 288,
+              "duplicate_rows_elided": 0,
+              "miss_rows": 288,
+              "native_read_calls": 4,
+              "native_requested_rows": 288,
+              "native_selected_bytes": 46080
+            },
+            "unique_hits": 0,
+            "unique_queries": 288,
+            "admitted": 288
+          },
+          {
+            "cache_id": 1,
+            "table": "language_model.layers.14.engram.embed.weight",
+            "budget": 268435456,
+            "nbytes": 268435456,
+            "closed": false,
+            "resident": false,
+            "cache_disabled_after_allocation_failure": false,
+            "counts": {
+              "calls": 4,
+              "cache_calls": 4,
+              "requested_rows": 288,
+              "unique_rows": 288,
+              "duplicate_rows_elided": 0,
+              "miss_rows": 288,
+              "native_read_calls": 4,
+              "native_requested_rows": 288,
+              "native_selected_bytes": 46080
+            },
+            "unique_hits": 0,
+            "unique_queries": 288,
+            "admitted": 288
+          }
+        ],
+        "retired_tables": [],
+        "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+      }
+    },
+    "memory_available_gib": 24.97210693359375
+  },
+  "last_task_id": "long-65536-late-2hop",
+  "runtime_latest": {
+    "prefill_step_size": 8192,
+    "max_num_seqs": 1,
+    "attention_output_quantization": true,
+    "flash1017_enabled": true,
+    "confidence": {
+      "cycles": 55442,
+      "selected_depths": [
+        16,
+        342,
+        14882,
+        1596,
+        12372,
+        20772
+      ]
+    },
+    "runtime": {
+      "closed": false,
+      "enabled": true,
+      "cone": {
+        "enabled": true,
+        "closed": false,
+        "counts": {
+          "model_calls": 57971
+        },
+        "cone_counts": {
+          "full_calls": 57911,
+          "fallback:short-chunk": 1231,
+          "fallback:not-cache-only-prefill": 56680,
+          "cone_calls": 60
+        },
+        "shape_counts": {
+          "index-pad": 300,
+          "gate-pad": 1200,
+          "hc-warp32": 840,
+          "local-wkv-pad": 180,
+          "final-moe-256": 60
+        },
+        "prime_counts": {
+          "prefill_calls": 1291,
+          "fallback:short-chunk": 1231,
+          "eligible_prefills": 60,
+          "wkv_pads": 180,
+          "stage:0": 60,
+          "stage:1": 60,
+          "stage:2": 60,
+          "padded_appends": 60
+        },
+        "trace": [],
+        "prefill_trace": [],
+        "sources": {
+          "cone": "cone_arithmetic.py",
+          "shape": "shape_arithmetic.py",
+          "prime": "prime_arithmetic.py"
+        },
+        "owned_instances": 90
+      },
+      "rows": {
+        "status": "active",
+        "enabled": true,
+        "per_table_budget_bytes": 268435456,
+        "max_retained_bytes": 536870912,
+        "retained_bytes": 536870912,
+        "live_tables": [
+          {
+            "cache_id": 0,
+            "table": "language_model.layers.1.engram.embed.weight",
+            "budget": 268435456,
+            "nbytes": 268435456,
+            "closed": false,
+            "resident": false,
+            "cache_disabled_after_allocation_failure": false,
+            "counts": {
+              "calls": 57971,
+              "cache_calls": 57971,
+              "requested_rows": 19880688,
+              "unique_rows": 16744742,
+              "duplicate_rows_elided": 3135946,
+              "miss_rows": 9254679,
+              "native_read_calls": 50977,
+              "native_requested_rows": 9254679,
+              "native_selected_bytes": 1480748640,
+              "all_hit_calls": 6994
+            },
+            "unique_hits": 7490063,
+            "unique_queries": 16744742,
+            "admitted": 5132535
+          },
+          {
+            "cache_id": 1,
+            "table": "language_model.layers.14.engram.embed.weight",
+            "budget": 268435456,
+            "nbytes": 268435456,
+            "closed": false,
+            "resident": false,
+            "cache_disabled_after_allocation_failure": false,
+            "counts": {
+              "calls": 57971,
+              "cache_calls": 57971,
+              "requested_rows": 19880688,
+              "unique_rows": 16744727,
+              "duplicate_rows_elided": 3135961,
+              "miss_rows": 9256659,
+              "native_read_calls": 51008,
+              "native_requested_rows": 9256659,
+              "native_selected_bytes": 1481065440,
+              "all_hit_calls": 6963
+            },
+            "unique_hits": 7488068,
+            "unique_queries": 16744727,
+            "admitted": 5132333
+          }
+        ],
+        "retired_tables": [],
+        "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+      }
+    },
+    "memory_available_gib": 27.62139892578125
+  },
+  "controllers_closed": true,
+  "finished_unix": 1792387520.498136
+}

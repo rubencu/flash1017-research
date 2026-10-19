@@ -1,0 +1,32 @@
+{
+  "frozen_at_utc": "2026-10-19T02:18:00.632588+00:00",
+  "before_model_outputs": true,
+  "fixture_validation": "passed",
+  "scorer_unit_tests": 10,
+  "files": {
+    "PROTOCOL.json": {
+      "sha256": "31867dab5a44126d46eb066b5db0f9014eccef2025753505f974abe8b1eeeeec",
+      "bytes": 3546
+    },
+    "prepare_quality_supplement.py": {
+      "sha256": "0b7058ad7f4ef95a287db3a04416c10477f22ccfa9e3fce615ed4fc035edde23",
+      "bytes": 10920
+    },
+    "requests.jsonl": {
+      "sha256": "8c5ff905ecc3639bec04ab658b4d60e067a769f945fc8a6949a712017847cf86",
+      "bytes": 2262047
+    },
+    "score_quality_supplement.py": {
+      "sha256": "042646947708537ff29689c6107cffa3f20a05cad869fcbe9633495d6cd551fc",
+      "bytes": 7032
+    },
+    "tasks.jsonl": {
+      "sha256": "db0ec1ce6d1ee205e681aa227ca8e5d24d5e3e8b2c45a571566fad85f55977ed",
+      "bytes": 2267386
+    },
+    "test_quality_supplement.py": {
+      "sha256": "59da33e3034b76c1f178408308a27cad833587bbb624b5e62dfbbf25fc0dea86",
+      "bytes": 4578
+    }
+  }
+}

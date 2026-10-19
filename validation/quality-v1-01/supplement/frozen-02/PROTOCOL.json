@@ -1,0 +1,70 @@
+{
+  "name": "flash1017-quality-01-supplement-v1",
+  "freeze_before_any_model_outputs": true,
+  "gsm8k": {
+    "repository": "https://github.com/openai/grade-school-math",
+    "revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+    "dataset_url": "https://raw.githubusercontent.com/openai/grade-school-math/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/test.jsonl",
+    "source_count": 1319,
+    "selected_count": 64,
+    "selection_seed": "flash1017-quality-01-gsm8k-v1",
+    "selection_rule": "Take the 64 smallest SHA256(seed + newline + zero-based index + newline + exact question), preserving hash order",
+    "scoring": "Official ANS_RE.search and comma-removal string equality; no numeric relaxation or answer repair",
+    "official_leaderboard_comparable": false,
+    "reason": "This is a fixed subset with an explicit zero-shot prompt, not the complete GSM8K benchmark or a replication of a published prompting setup"
+  },
+  "long_context": {
+    "count": 12,
+    "seed": "flash1017-quality-01-long-context-v1",
+    "kind": "authored deterministic engineering controls",
+    "standard_benchmark": false,
+    "ruler_result": false,
+    "content_token_targets": [
+      16384,
+      65536
+    ],
+    "chat_template_tokens": "Not included in targets; generation harness records actual prompt length",
+    "coverage": "single lookup and two-hop lookup at early, middle, late locations",
+    "scoring": "Exactly one non-empty output line: #### followed by the exact case-sensitive expected value"
+  },
+  "generation": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 0,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "samples_per_task_per_build": 1,
+    "normal_eos": true,
+    "max_tokens": "Per-task requests.jsonl value; identical for both builds",
+    "no_output_based_task_filtering": true,
+    "no_output_based_prompt_or_budget_changes": true
+  },
+  "paired_acceptance": {
+    "nonzero_regression_margin": null,
+    "rule": "No baseline-correct to candidate-incorrect task, no missing/duplicate result, no request error, and no length-truncated response in either build",
+    "improvements_cannot_offset_regressions": true,
+    "missing_or_truncated": "Retain and report as failed/incomplete; cannot silently exclude",
+    "score_means": "No observed task regressions on this frozen suite, not universal answer-quality equivalence",
+    "confidence": "Report a one-sided 95% exact binomial bound on observed regression rate, with sampling assumptions and finite-suite limits; do not interpret a nonsignificant difference as equivalence",
+    "engineering_gate": "Numerical/state parity and code-path activation are separate prerequisites owned by the runtime validation harness"
+  },
+  "sources": {
+    "GSM8K-LICENSE": {
+      "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+      "bytes": 1062
+    },
+    "gsm8k-official-dataset.py": {
+      "sha256": "c22b81bccaaebfd1123be296e8b3c3dca3ddc704c46b70bf4a50603bb627e197",
+      "bytes": 2246
+    },
+    "gsm8k-test.jsonl": {
+      "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+      "bytes": 749738
+    }
+  },
+  "tokenizer_sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b",
+  "tasks_sha256": "db0ec1ce6d1ee205e681aa227ca8e5d24d5e3e8b2c45a571566fad85f55977ed",
+  "requests_sha256": "8c5ff905ecc3639bec04ab658b4d60e067a769f945fc8a6949a712017847cf86",
+  "prepare_script_sha256": "0b7058ad7f4ef95a287db3a04416c10477f22ccfa9e3fce615ed4fc035edde23"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed_with_documented_pinned_upstream_exception",
+  "tasks": 542,
+  "canonical_plus_pass": 540,
+  "canonical_exceptions": [
+    [
+      "HumanEval/32",
+      "fail",
+      "fail"
+    ],
+    [
+      "Mbpp/630",
+      "fail",
+      "fail"
+    ]
+  ],
+  "canonical_sha256": "300cf547810b559598351d8f66c8b93ba9c469e0989d7dd478865dfa106a4816",
+  "adapter_sha256": "abd0a290c723467101334de0c9cdc3d193382eca2050a6123f0c53d347db05d6",
+  "probe_sha256": "f8cef84da390b842f5542cc90f1985c63aaaa8d5ef19fae632cfe0856e3092ac",
+  "controls_sha256": "691096c6f5e1dbfa26f560c04241e03fdc71cfd0b19250230dfa2f43c6453a77",
+  "exception_reasons": {
+    "HumanEval/32": "Pinned v0.3.1 find_zero oracle skips progress/details; official completeness check rejects it.",
+    "Mbpp/630": "Pinned v0.3.1 sanitizer removes the adjac generator helper because it has yield but no return. Both upstream behaviors are unchanged in both arms."
+  }
+}

@@ -1,7 +1,10 @@
-# Flash-1017 on a 256 GiB Mac: 20.1% less time to first token
+# Flash-1017 on a 256 GiB Mac: speed, numerical behavior and quality
 
-**Draft for review.** This article reports a prototype benchmark; the installable
-build and its validation are described under [Software and reproduction](#software-and-reproduction).
+**Draft for review.** A historical prototype improved first-token latency, but
+the first installed fork subsequently failed its full quality gate. The
+revised local build is awaiting qualification. These are separate results for
+different identified builds, not a validated faster-with-the-same-quality
+release.
 
 DeepSeek-V4.1-Flash-1017 already runs in oMLX, an inference server built on
 Apple's MLX framework. This project asks how much faster a specific checkpoint
@@ -15,19 +18,20 @@ was installed **oMLX 0.7.1rc1 with native speculative decoding enabled**. Time t
 first token includes processing the prompt and producing the first output;
 these measurements exclude model loading and HTTP transport.
 
-The gain varies by workload. One 64K code case regressed, sampled peak memory
-increased by **7.75 GiB**, and the complete configuration has not passed a
-paired evaluation of answer quality against stock. The [quality evidence](QUALITY.md)
-records the small coding checks, including a regression in a rounding-enabled
-configuration, and the validation required for a no-quality-loss claim.
-The experiment measures a particular release and configuration; upstream
-`main` was not benchmarked.
+The gain varies by workload. One 64K code case regressed and sampled peak memory
+increased by **7.75 GiB**. More importantly, the later installed v1 build had
+**seven observed task regressions across 618 paired requests**. Equal coding
+totals concealed changed failures; the long-context controls also regressed.
+The [quality evidence](QUALITY.md) contains the complete result, evaluator
+limits and revised acceptance plan. The timing experiment measures a
+particular release and configuration; upstream `main` was not benchmarked,
+and its 20.06% result cannot be assigned to either installed fork build.
 
 ![First-token latency by workload and configuration](../archives/2026-10-18-preview/evidence/overall/review/figures/first-token.png)
 
 *Two fresh-process blocks per configuration; 48 measured requests in total. The figure's block ranges are not confidence intervals. Timings exclude model loading and HTTP transport.*
 
-## What changed
+## What changed in the historical prototype
 
 We used the existing [mlx-community oQ2.5e-MTP checkpoint](https://huggingface.co/mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp/tree/78456115d301eecf9fadcdcc81c0cf6f8b2c8eab),
 unchanged. Two parts of execution matter here: **prefill**, which processes the
@@ -36,7 +40,8 @@ prediction (MTP) path uses DeepSeek's DSpark drafter to propose tokens that the
 target model verifies together. That is the speculative-decoding path used in
 this study.
 
-The complete prototype combines six changes:
+The measured prototype combined six changes. The current v2 profile does not
+enable all of them:
 
 - **Vocabulary projection:** reuse BF16 (16-bit floating-point) weights that map model activations
   to vocabulary scores across several verification rows. Each row represents
@@ -117,25 +122,68 @@ matrix-multiply fallback with six single-row reductions and can differ from
 that fallback. The depth-2 study does not test that extension. [Methods and
 results](RESULTS.md) defines each configuration, workload and evidence source.
 
+## What the complete installed-build quality test found
+
+The first installed fork, `0.7.1rc1+flash1017.1`, was tested against its
+unchanged public oMLX `v0.7.1rc1` base with the same checkpoint, native assets
+and dependencies. Both used ordinary HTTP chat requests, greedy generation,
+thinking disabled and normal EOS. All 618 requests and paired grades were
+retained. The evidence-integrity audit passed; the model-quality gate failed.
+
+| Evaluation | Baseline passed | Installed v1 passed | Regressions | Improvements |
+|---|---:|---:|---:|---:|
+| HumanEval+ and MBPP+, full pinned releases | 447/542 | 447/542 | 5 | 5 |
+| Frozen GSM8K test subset | 61/64 | 61/64 | 0 | 0 |
+| Synthetic 16K/64K retrieval controls | 11/12 | 10/12 | 2 | 1 |
+
+Equal coding totals did not mean preserved answers: five tasks that passed in
+stock failed in the candidate. In the two long-context regressions, v1 stopped
+at an intermediate lookup key instead of returning the final value. These
+were correctly formatted wrong answers. Improvements elsewhere did not count
+against the seven regressions. The original zero-truncation prerequisite also
+failed, with four length stops in stock and three in the candidate. Only
+43/618 pairs had identical text and finish reason.
+
+The coding adapter used pinned EvalPlus sanitizer/oracles in isolated macOS
+workers. Full canonical validation passed 540/542: two known pinned upstream
+behaviors reject `HumanEval/32` and `Mbpp/630`. Both tasks remain in the
+denominators, without repaired model answers. The original worker's `-I`
+interpreter flag ignored `PYTHONHASHSEED`, limiting deterministic regrading;
+the later seed-controlled protocol is a separately identified amendment.
+These limitations are part of the [saved v1 evidence](../validation/quality-v1-01/README.md),
+not omitted exceptions. The requested memory guideline was also insufficient
+to prove matching live wired limits; [Methods and results](RESULTS.md) records
+the startup difference.
+
+This result changed the production profile. The local v2 candidate restores
+stock prompt-chunk geometry, native MTP depth control and attention rounding,
+limits the head kernel to its existing specialized row range, and excludes
+dependency replay and confidence scheduling from the production path. Its
+full 618-task exact-output qualification is pending. Only a passing result
+will permit a new installed-wheel performance comparison; no archived
+percentage transfers to this revised build.
+
 ## Software and reproduction
 
 There are two source artifacts. The **benchmark prototype** is the
 [source snapshot](../archives/2026-10-18-preview/source/) that produced the
 performance results above, running with an installed oMLX application's embedded
-environment. The **installable fork**, version `0.7.1rc1+flash1017.1`, integrates
-those retained changes into normal oMLX package modules and uses native binaries
-from a public release. Those binaries differ from the measured application's
-binaries, so the prototype's speedup cannot yet be assigned to the installable
-build.
+environment. The **runtime fork** integrates execution changes into normal
+oMLX package modules and uses native binaries from a public release. Those
+binaries differ from the measured application's binaries. Its historical v1
+version is `0.7.1rc1+flash1017.1`; the current local v2 version is
+`0.7.1rc1+flash1017.2`, commit `9280d25a1322c39f2f6713dc22b099a6e9dd41d1`.
+The prototype's speedup is not a measured result for either wheel.
 
-The fork passed clean-installation checks and a real HTTP serving test covering
+The v1 fork passed clean-installation checks and a real HTTP serving test covering
 an 8,319-token prompt, cached-prefix reuse, cancellation/recovery and rejection
 of excessive context requests. Its default test suite had **18,054 passes and
 12 failures**, with all 12 failures reproduced on the unchanged public release
 base. The [validation record](../validation/runtime-preview-01/README.md) binds
-those results to an exact commit and wheel. This establishes a functional
-preview on the tested machine; performance and answer-quality equivalence for
-that build remain unmeasured.
+those results to an exact commit and wheel. The later complete quality test
+of that same build failed. The preserved [`RUNTIME-LINK.json`](../RUNTIME-LINK.json)
+identifies this historical v1 installation record, not the current v2 candidate.
+Current v2 qualification and installed-wheel performance results are pending.
 
 The maintained implementation belongs in the [rubencu/omlx fork](https://github.com/rubencu/omlx).
 The research repository supplies the article, [saved-data analyzer](../archives/2026-10-18-preview/analysis/),
@@ -152,9 +200,11 @@ prototype's application-dependent launcher is not a standalone installer.
 The serving profile allows one active request and a **131,072-token total
 context limit**, counting prompt and requested output. This limit is a
 configuration boundary, not evidence that every request up to it was tested.
-The overall timing suite stops at 64K input, and the fork's live validation
-reaches 8,319 input tokens. Offline state/output checks at longer lengths do
-not demonstrate reliable long-context chat. A separate long-context HTTP test
+The overall timing suite stops at 64K input. The earlier v1 functional check
+reached 8,319 input tokens; its later paired quality test includes approximately
+64K retrieval controls, with the failures reported above. Offline state/output
+checks at longer lengths do not demonstrate reliable long-context chat. A
+separate historical long-context HTTP test
 failed its recovery-response check; its cause was not established and the
 remaining cases were not run.
 

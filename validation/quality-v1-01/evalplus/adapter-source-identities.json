@@ -1,0 +1,9 @@
+{
+  "evalplus_commit": "e5d0ed0bab96280b60b637ec7f15b5e4841b0cb2",
+  "files": {
+    "adapter-source/flash1017_evalplus_export.py": "2238e8c05bd19862259bec2e6e18f402ef01bb961a017bad56f69c6f6e4d8675",
+    "adapter-source/flash1017_evalplus_grade.py": "abd0a290c723467101334de0c9cdc3d193382eca2050a6123f0c53d347db05d6",
+    "requirements-resolved.txt": "1a3805c4b10878a54a4facbef4045de7dcb7f87b9a7818b2e89957846e481d11",
+    "datasets/identities.json": "955009a2a52342592f138263ff07f58e73d1efd3a84e4d1acd0937862d4887e7"
+  }
+}

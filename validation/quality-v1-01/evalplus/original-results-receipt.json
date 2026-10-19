@@ -1,0 +1,68 @@
+{
+  "kind": "original evaluator protocol results; not seeded amendment",
+  "rows_per_arm": 542,
+  "suites": {
+    "humaneval": {
+      "tasks": 164,
+      "baseline_base_pass": 159,
+      "candidate_base_pass": 160,
+      "baseline_plus_pass": 148,
+      "candidate_plus_pass": 148,
+      "plus_regressions": [
+        "HumanEval/93"
+      ],
+      "plus_improvements": [
+        "HumanEval/103"
+      ]
+    },
+    "mbpp": {
+      "tasks": 378,
+      "baseline_base_pass": 351,
+      "candidate_base_pass": 349,
+      "baseline_plus_pass": 299,
+      "candidate_plus_pass": 299,
+      "plus_regressions": [
+        "Mbpp/103",
+        "Mbpp/265",
+        "Mbpp/301",
+        "Mbpp/626"
+      ],
+      "plus_improvements": [
+        "Mbpp/84",
+        "Mbpp/446",
+        "Mbpp/564",
+        "Mbpp/580"
+      ]
+    }
+  },
+  "infrastructure_errors": 0,
+  "phase_timeouts": {
+    "baseline": [],
+    "candidate": []
+  },
+  "sha256": {
+    "baseline-grades.jsonl": "2541d9b663c03d6c8855a51554ce887f500f40cfa8a29a430b9ce0b8748538dc",
+    "candidate-grades.jsonl": "c6b263dee26a144f0422754e2aa9422739888a1d19e6096d4d7dc6f7ee1cdc4f",
+    "baseline-grades.jsonl.metadata.json": "6b6a49126e016cdd098724d7e852b3816cd609889ccf70dc4d9ab0cfc57c5b0a",
+    "candidate-grades.jsonl.metadata.json": "24de561f7eb0fbf7eeb58443fd3a7a610a26963894ec07f8fac0726c9c8e4f70",
+    "canonical-grades-v2.jsonl": "300cf547810b559598351d8f66c8b93ba9c469e0989d7dd478865dfa106a4816",
+    "canonical-grades-v2.jsonl.metadata.json": "5b5478c76eac8a8a8132765f7ee620e505f215dfa08603ec503dbbf5cf171c2c",
+    "validation-receipt.json": "cb241b6b83fce7ffced6db7f350d50e9baae18ef1e50afe50056d7ec687d9e84",
+    "isolation-probe-v2.json": "f8cef84da390b842f5542cc90f1985c63aaaa8d5ef19fae632cfe0856e3092ac",
+    "negative-controls-v2.json": "691096c6f5e1dbfa26f560c04241e03fdc71cfd0b19250230dfa2f43c6453a77",
+    "generator-sanitizer-control.json": "0d1466d9bac1502f2f41ec851efbbb35a9e69b71d8094a09f2da2a0655dc3c29",
+    "hash-seed-observation.json": "38ec38aece269129f93a40fd73f1cc14e1fd941e97ef07040cfa3d68aea684db",
+    "requirements-resolved.txt": "1a3805c4b10878a54a4facbef4045de7dcb7f87b9a7818b2e89957846e481d11"
+  },
+  "adapter_bytes_still_match_frozen_copy": true,
+  "arm_intervals_utc": {
+    "baseline": {
+      "started": "2026-10-19T11:04:12.685284+00:00",
+      "last_result": "2026-10-19T11:09:42.241618+00:00"
+    },
+    "candidate": {
+      "started": "2026-10-19T11:09:42.513853+00:00",
+      "last_result": "2026-10-19T11:15:21.893209+00:00"
+    }
+  }
+}

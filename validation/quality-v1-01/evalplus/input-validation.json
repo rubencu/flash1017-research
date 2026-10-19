@@ -1,0 +1,19 @@
+{
+  "tasks": 542,
+  "arms": {
+    "baseline": {
+      "file_sha256": "a6d4c0cf9a34c305a780b30fd6d0b6a4120fdcfa411d342e31057acb3756ffeb",
+      "coding_samples": 542,
+      "total_rows": 618,
+      "coding_empty_answers": []
+    },
+    "candidate": {
+      "file_sha256": "0d3457e6b4ee660968bf91fcba1c92367498235c8d4623cb131f03e902a95104",
+      "coding_samples": 542,
+      "total_rows": 618,
+      "coding_empty_answers": []
+    }
+  },
+  "missing_rejected": true,
+  "duplicate_rejected": true
+}
