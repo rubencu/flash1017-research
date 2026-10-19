@@ -1,4 +1,7 @@
-# Publication plan for review
+# Maintainer publication and upstream plan
+
+This document proposes release actions for the repository owner. The research
+findings and their methods are in [RESULTS.md](RESULTS.md).
 
 No action below has been performed. The local source and artifacts are the
 reviewable deliverable; publication requires Ruben's approval.
@@ -23,7 +26,7 @@ oMLX API clients. Contributors can edit this fork, rebuild it and submit fixes
 to it. Keep future runtime work here, with new versioned validation when the
 inference code or native dependencies change.
 
-The old 20.06% result must remain labeled as the archived prototype comparison.
+The 20.06% result must identify the benchmark prototype and its installed-release reference.
 A functional smoke check does not make it a benchmark of this wheel or
 establish answer-quality equivalence. Do not turn that result into a general
 claim about all models or all Macs.

@@ -1,4 +1,11 @@
-# Installable fork validation, October 18
+# Installable oMLX fork: build and serving validation
+
+This record tests whether the Flash1017 fork installs and serves
+DeepSeek-V4.1-Flash-1017 through oMLX's normal server path. It covers package
+`0.7.1rc1+flash1017.1`, tested on October 18, 2026. It is functional validation;
+the [latency experiments](../../docs/RESULTS.md) used a different prototype build.
+
+## Artifact and environment
 
 Runtime commit: `ad2f74058056e4cc7c0a13ddc76f96602e8ce092`, branch
 `flash1017-preview`, based on public oMLX `v0.7.1rc1` at `7a5a3d75`.
@@ -10,8 +17,11 @@ SHA-256: `b5c333adc078c28d0950e925af55d5da628d0915e0586bc6ac62f97d35400554`
 The wheel was installed with its declared dependencies in a new Python 3.12
 environment. Imports and checks ran outside the runtime checkout. `pip check`
 reported no broken requirements. All five packaged native modules imported.
-The model and test machine were the same M5 Ultra/256 GiB setup as the archived
-study, but the public native binaries differ from that historical application.
+The test machine was an M5 Ultra Mac Studio with 80 GPU cores and 256 GiB
+unified memory. The model was `mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp`
+at revision `78456115d301eecf9fadcdcc81c0cf6f8b2c8eab`, with unchanged weights.
+The packaged native binaries come from a public oMLX release and differ from
+the installed application's binaries used for the prototype latency study.
 
 ## Checks and results
 
@@ -25,11 +35,13 @@ study, but the public native binaries differ from that historical application.
   5,120 and a vocabulary tail. Rows 2–5 exactly matched the normal batched
   kernel. Row 6 exactly matched six original one-row reductions; it was not
   compared as equivalent to the old six-row GEMM fallback.
-- **Port preservation:** 24 retained arithmetic functions/methods have identical
-  ASTs to their frozen sources. The third-party HotRows file remains unchanged.
-- **Checkpoint continuity:** all 61 saved file fingerprints still match the
-  earlier full-hash verification. This is not a new full-weight hash pass.
-- **Historical archive integrity:** all 337 files still match the frozen record.
+- **Source continuity:** the parsed code structure (abstract syntax tree) of 24
+  arithmetic functions/methods matches the prototype snapshot. The third-party
+  HotRows file is byte-identical to its credited source. This checks preservation
+  of those code units, not whole-runtime equivalence.
+- **Checkpoint continuity:** all 61 file fingerprints match the saved receipt
+  from full-weight hash verification. This check did not rehash all model weights.
+- **Research archive integrity:** all 337 files match the snapshot's manifest.
 
 ## Real installed-server smoke check
 
@@ -55,9 +67,9 @@ priming stages, confidence-policy activity, a 64 MiB prefetch budget, and two
 256 MiB retained row caches. The live check did not exercise a successful
 128K request or million-token serving.
 
-The original oMLX server stayed running; its idle Qwen model was temporarily
-unloaded to make room and then reloaded after this test. No original server
-settings were changed.
+To provide enough memory, the host's other loaded model was temporarily
+unloaded while idle and restored after the test. The test server then stopped.
+The restoration receipt is included for audit of the harness's cleanup.
 
 ## Evidence and reproduction
 
@@ -74,7 +86,8 @@ environment's Python with `-I -B`, supplying `--model`, an empty `--base-path`,
 new local result file, and an unused `--port`. The loader requires at least
 210 GiB available before loading. The test starts and stops its own server.
 
-This record establishes a bounded functional preview. It does **not** establish
-the old 20.06% speedup for this wheel, equivalent answer quality, general model
-support, or performance on another machine. Timings included by normal HTTP
-usage reporting are incidental smoke-test observations, not benchmark results.
+These checks support a functional preview on the identified machine and
+checkpoint. They do not measure a speedup for this wheel or establish equivalent
+answer quality, support for other models or performance on another machine.
+Timings included by normal HTTP usage reporting are incidental observations
+from the serving check, not a controlled performance comparison.

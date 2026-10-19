@@ -1,31 +1,67 @@
-# Flash1017 research
+# DeepSeek-V4.1-Flash-1017 on Apple Silicon
 
-**Local preparation for `rubencu/flash1017-research`. This GitHub repository has
-not been created or published.** This repository holds the research record for
-DeepSeek-V4.1-Flash-1017 in oMLX: measured results, raw evidence, analysis tools,
-articles, attribution and immutable source snapshots.
+This project investigates how to reduce the time spent processing prompts and
+generating tokens for **DeepSeek-V4.1-Flash-1017 in oMLX**, an inference server
+built on Apple's MLX framework. It uses the existing
+[mlx-community oQ2.5e-MTP checkpoint](https://huggingface.co/mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp/tree/78456115d301eecf9fadcdcc81c0cf6f8b2c8eab)
+without changing its weights or quantization.
 
-The companion **[rubencu/omlx](https://github.com/rubencu/omlx) fork is the canonical runtime implementation** for
-continued development and user installation. In the local workspace it is the
-sibling `../omlx`. Its installation and validation instructions belong
-there. This repository does not maintain a second editable inference runtime.
+On one **M5 Ultra Mac Studio with 80 GPU cores and 256 GiB unified memory**, a
+prototype combining GPU weight reuse, speculative-decoding changes, selective
+decoder computation and disk-table caching reduced geometric-mean **time to
+first token by 20.06%: 19.554 → 15.631 seconds**. The reference was installed
+oMLX **0.7.1rc1 with its native speculative decoding enabled**. The comparison
+covered eight workloads with loaded models; timings exclude model loading and
+HTTP transport.
 
-The October 18 evidence is about a historical prototype. **Its performance
-figures do not yet establish the performance or qualification of the current
-fork.** [`RUNTIME-LINK.json`](RUNTIME-LINK.json) binds the separate installable
-preview to its exact source commit and wheel. Its own validation is recorded
-under [`validation/runtime-preview-01`](validation/runtime-preview-01/).
+The improvement had costs and limits: sampled peak memory rose **7.75 GiB**,
+one 64K code workload became **2.32% slower**, and equivalent answer quality was
+not established. These measurements describe the benchmark prototype. The
+installable fork has separate functional validation, explained below.
 
-## Read or reproduce the study
+![Time to first token for the benchmark prototype and two oMLX configurations](archives/2026-10-18-preview/evidence/overall/review/figures/first-token.png)
 
-- [Complete historical snapshot](archives/2026-10-18-preview/README.md), including source, evidence, analyzer, licenses and the original package manifest.
-- [Current article draft](docs/ARTICLE.md) and [complete historical comparison](archives/2026-10-18-preview/evidence/overall/review/report.txt).
-- [Results and their limits](docs/RESULTS.md).
-- [Repository roles and future runtime bindings](docs/REPOSITORIES.md).
-- [Source/dependency boundaries](archives/2026-10-18-preview/DEPENDENCIES.md) and [attribution](docs/ATTRIBUTION.md).
-- [Review before publication](docs/REVIEW.md).
-- [Concrete publication and upstream plan](docs/PUBLICATION-PLAN.md).
-- [Local preparation checks](validation/README.md).
+## Start here
+
+- **[Research article](docs/ARTICLE.md):** the execution changes, the numerical
+  problems they exposed, and the complete comparison.
+- **[Methods and results](docs/RESULTS.md):** exact configurations, workload
+  sources, individual component studies, failed checks and limits on the claims.
+- **[Installable fork validation](validation/runtime-preview-01/README.md):**
+  the tested build, installation checks, test failures and real HTTP requests.
+- **[Attribution](docs/ATTRIBUTION.md):** reused implementations, related work
+  and this project's contributions.
+
+## Benchmark code and installable software
+
+The project provides two artifacts with different evidence:
+
+| Artifact | What it contains | What was tested |
+|---|---|---|
+| **Benchmark prototype** | The source snapshot and experiment records in [`archives/2026-10-18-preview/`](archives/2026-10-18-preview/README.md), executed with the installed oMLX application's embedded environment. | The 20.06% overall latency result and the component comparisons described in [Methods and results](docs/RESULTS.md). |
+| **Installable oMLX fork** | Maintained runtime source in `rubencu/omlx`, branch `flash1017-preview`; package version `0.7.1rc1+flash1017.1`. | Clean installation, runtime tests and a real serving check. Its performance has not been benchmarked. |
+
+The fork integrates the prototype's retained changes into ordinary package
+modules and bundles native binaries from a public oMLX release. Those binaries
+differ from the installed application's binaries used in the latency study.
+Consequently, the prototype's measured speedup cannot yet be assigned to the
+distributed build. [`RUNTIME-LINK.json`](RUNTIME-LINK.json) identifies the exact
+fork commit, wheel checksum and checkpoint used for installation validation.
+
+To run the model or change the runtime, use the companion oMLX fork. To examine
+the method, recalculate results or propose analysis corrections, use this
+research repository. [Repository layout and artifact identities](docs/REPOSITORIES.md)
+explains where each kind of contribution belongs.
+
+**Publication status:** these additions are prepared locally for review. The
+preview branch and wheel have not been published to the existing
+[rubencu/omlx fork](https://github.com/rubencu/omlx), and the proposed
+`rubencu/flash1017-research` remote has not been created. The local runtime
+checkout is the sibling `../omlx`; its `docs/flash1017-install.md` contains the
+installation instructions. [Release review](docs/REVIEW.md) and the
+[publication plan](docs/PUBLICATION-PLAN.md) are maintainer documents.
+
+## Inspect and recalculate the evidence
 
 With Python 3.9 or newer, from this repository:
 
@@ -36,55 +72,34 @@ python3 -I -B archives/2026-10-18-preview/analysis/analyze.py
 python3 -I -B -m unittest discover -s archives/2026-10-18-preview/analysis/tests -v
 ```
 
-These commands verify archived bytes and recalculate saved observations; they
-do not load model weights, execute inference, install software or contact a
-server. The source patch can also be checked offline using the system `patch`
-utility:
+These commands check saved files against their manifests, recalculate the
+overall comparison from recorded observations, and test the analyzer. They
+require no model weights or GPU and do not run inference or contact a server.
+The source patch can also be checked offline using the system `patch` utility:
 
 ```sh
 python3 -I -B archives/2026-10-18-preview/source/verify_source_kit.py
 ```
 
-The archive remains byte-identical to the reviewed preview. Its internal
-`PACKAGE-MANIFEST.json` describes that snapshot only. Root-level navigation and
-new documentation are separate; [`ARCHIVE-INDEX.json`](ARCHIVE-INDEX.json) and
-[`ARCHIVE-SHA256SUMS`](ARCHIVE-SHA256SUMS) bind the retained snapshot. Checksums
-provide integrity checking, not a publisher signature or external replication.
+Recalculating saved results is one level of reproduction. Running the benchmark
+again also requires the pinned checkpoint, hardware with sufficient memory,
+the execution environment and the recorded request/cache sequence. See the
+[environment and source requirements](archives/2026-10-18-preview/DEPENDENCIES.md).
+The prototype's application-dependent launcher is not a standalone installer.
 
-## Historical result
-
-On one 80-GPU-core M5 Ultra with 256 GiB memory, the complete prototype reduced
-equal-case geometric-mean time to first token from **19.554 to 15.631 seconds:
-20.06% less time**, against installed oMLX 0.7.1rc1 with native adaptive MTP.
-The fixed suite used the existing mlx-community oQ2.5e-mtp checkpoint, eight
-cases, two process blocks and three configurations: 48 measured requests and
-six excluded warmups. Current upstream main and the new development fork were
-not benchmarked by this study.
-
-![Historical time to first token](archives/2026-10-18-preview/evidence/overall/review/figures/first-token.png)
-
-The models stayed loaded and OS caches persisted; measurements exclude loading
-and HTTP transport. The 64K CPython case regressed 2.32%, and sampled peak
-footprint rose from 208.35 to 216.10 GiB. Nine requests reached EOS early, so the
-original fixed-512 useful-answer qualification failed. First-token timing was
-qualified separately. The 128-token supplement is explicitly post hoc. Outputs
-differed, and answer-quality equivalence was not established.
-
-The earlier 40.3% replay/cache result uses a different, locally corrected
-reference. It is retained as a separate study, not added to the overall result.
-The archive also retains failed and undeployed experiments. Offline long-context
-equality does not qualify optimized million-token chat. Read [the full scope](docs/RESULTS.md)
-before reusing any figure.
+The archive contains raw observations, exact overall-comparison input tokens,
+analysis code, source snapshots, selected unsuccessful experiments and the
+notes written during development. Its internal filenames and notes preserve
+laboratory terminology; the article and methods document provide the reader's
+guide. [`ARCHIVE-INDEX.json`](ARCHIVE-INDEX.json) and
+[`ARCHIVE-SHA256SUMS`](ARCHIVE-SHA256SUMS) bind its 337 files. Checksums detect
+changes; they are not external replication or a publisher signature.
 
 ## License and credits
 
 Original additions and repository documentation use [Apache-2.0](LICENSE).
 Existing per-file MIT/Apache notices and fixture licenses remain applicable;
 see [NOTICE](NOTICE) and [attribution](docs/ATTRIBUTION.md). Model weights are
-not included. This is credited integration, numerical repair and validation
-work; it does not claim a new model, quantizer or inference engine.
-
-Historical documents inside the archive still describe the publication plan
-that existed when they were frozen. The current two-repository arrangement is
-defined here and in [REPOSITORIES.md](docs/REPOSITORIES.md). No public push,
-release, article or upstream submission is authorized merely by this preparation.
+not included. The contribution is integration, numerical and state repairs,
+and measurements of a specific configuration, built on the credited model,
+runtime and optimization techniques.
