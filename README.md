@@ -15,8 +15,10 @@ covered eight workloads with loaded models; timings exclude model loading and
 HTTP transport.
 
 The improvement had costs and limits: sampled peak memory rose **7.75 GiB**,
-one 64K code workload became **2.32% slower**, and equivalent answer quality was
-not established. These measurements describe the benchmark prototype. The
+one 64K code workload became **2.32% slower**, and the complete configuration
+has not passed a comparison of answer quality against stock. The
+[quality evidence and required validation](docs/QUALITY.md) explains the gap,
+including a task regression observed in one component configuration. These measurements describe the benchmark prototype. The
 installable fork has separate functional validation, explained below.
 
 ![Time to first token for the benchmark prototype and two oMLX configurations](archives/2026-10-18-preview/evidence/overall/review/figures/first-token.png)
@@ -29,6 +31,8 @@ installable fork has separate functional validation, explained below.
   sources, individual component studies, failed checks and limits on the claims.
 - **[Installable fork validation](validation/runtime-preview-01/README.md):**
   the tested build, installation checks, test failures and real HTTP requests.
+- **[Answer-quality evidence](docs/QUALITY.md):** what the coding and parity
+  checks show, and what is required for a no-quality-loss performance claim.
 - **[Attribution](docs/ATTRIBUTION.md):** reused implementations, related work
   and this project's contributions.
 

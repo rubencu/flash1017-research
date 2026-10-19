@@ -16,7 +16,10 @@ first token includes processing the prompt and producing the first output;
 these measurements exclude model loading and HTTP transport.
 
 The gain varies by workload. One 64K code case regressed, sampled peak memory
-increased by **7.75 GiB**, and equivalent answer quality was not established.
+increased by **7.75 GiB**, and the complete configuration has not passed a
+paired evaluation of answer quality against stock. The [quality evidence](QUALITY.md)
+records the small coding checks, including a regression in a rounding-enabled
+configuration, and the validation required for a no-quality-loss claim.
 The experiment measures a particular release and configuration; upstream
 `main` was not benchmarked.
 

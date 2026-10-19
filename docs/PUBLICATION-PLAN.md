@@ -6,6 +6,17 @@ findings and their methods are in [RESULTS.md](RESULTS.md).
 No action below has been performed. The local source and artifacts are the
 reviewable deliverable; publication requires Ruben's approval.
 
+## Quality prerequisite
+
+The package is installable and functionally tested, but a claim of faster
+inference without quality loss is not ready. The complete packaged configuration
+has not received a paired answer-quality evaluation against its unchanged
+release base. The [quality evidence and validation requirement](QUALITY.md)
+records the existing task regression, the limits of component parity checks,
+and the checks needed before such a claim. A disclaimer does not complete this
+validation. Any no-quality-loss release claim must wait for that evidence, and
+speed must be measured on the exact configuration that passes.
+
 ## Runtime: the existing rubencu/omlx fork
 
 Push the tested `flash1017-preview` branch to the existing fork. It contains the

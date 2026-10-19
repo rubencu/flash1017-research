@@ -171,6 +171,17 @@ modified reference. It measures the incremental effect of replay and caching.
 The **20.06%, 7.34% and 40.33% figures have different references and metrics**;
 adding or multiplying them would not estimate a measured overall improvement.
 
+## Answer-quality evidence
+
+The complete packaged configuration has not received a paired task-quality
+comparison against its unchanged release base. In an eight-task coding check,
+stock and the confidence/head configuration both passed 8/8; a configuration
+that enabled reference rounding at the same fixed depth as stock passed 7/8.
+Those tests did not cover the final combined fork. [Answer-quality evidence and
+validation requirements](QUALITY.md) records the exact configurations, the
+failed task and the additional checks needed. Component token equality and
+software-test counts cannot substitute for that missing comparison.
+
 ## Serving limits and unsuccessful experiments
 
 The prototype's optimized serving profile admitted one active request, queued
