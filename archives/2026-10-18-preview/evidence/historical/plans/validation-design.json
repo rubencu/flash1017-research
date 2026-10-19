@@ -1,0 +1,10 @@
+{
+  "scope": "Local single-request tests on this exact quantized 1017 checkpoint; no general quality benchmark claim.",
+  "heldout_prompts": "Frozen before sweep completion and before profile selection; synthetic repeated-context throughput workloads.",
+  "sampling": "temperature 1, top_p 1; deterministic per-repeat seed; compare identical prompt hashes.",
+  "paired_repetitions": 5,
+  "kernel_primary": "Token-identical candidate using the existing arithmetic for rows 1..5; six-row fallback change reported separately.",
+  "quality": "Eight local programming tasks, 160 deterministic hidden cases each; greedy generation, no imports/classes; stop normally at EOS.",
+  "long_context": "Separate retrieval capability checks, not an aggregate quality benchmark.",
+  "honesty": "Discard forced-length runs with early EOS from speed summaries; report failures and unchanged/different token streams."
+}

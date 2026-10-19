@@ -1,0 +1,562 @@
+{
+  "profiles": {
+    "stock-f2": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false
+    },
+    "reference-f2": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true
+    },
+    "reference-f2-head": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true
+    },
+    "reference-a5-head6": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6
+    },
+    "confidence-head6": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      }
+    }
+  },
+  "prompts": {
+    "held-code-1k": {
+      "text": "Implement a fully documented Python module for a dependency graph. Include deterministic topological ordering, incremental edge insertion, cycle diagnostics with a concrete cycle path, edge removal, serialization, and at least twenty unit tests. Write at least 250 lines and start with code.",
+      "prompt_tokens": 1024,
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "held-prose-1k": {
+      "text": "Write a detailed 2000-word engineering guide explaining how a city water-distribution system maintains pressure and water quality. Cover gravity, pumps, storage tanks, demand peaks, leak detection, transient pressure, and sensor placement. Begin directly with the guide.",
+      "context": "Water distribution is governed by conservation of mass and pressure losses. Demand varies by location and time. Pumps add head, and pipes dissipate energy through friction. Storage tanks buffer changes in demand.\n",
+      "prompt_tokens": 1024,
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "held-code-16k": {
+      "text": "Write a Python module for a durable append-only event journal. Include framing, checksums, recovery after truncated writes, atomic index rebuilding, filtering, and a comprehensive suite of failure-injection tests. Explain invariants in comments. Aim for at least 300 lines, beginning with the implementation.",
+      "context": "class EventJournal:\n    def append(self, event):\n        encoded = encode_event(event)\n        checksum = checksum_bytes(encoded)\n        frame = encode_length(len(encoded)) + encoded + checksum\n        self.file.write(frame)\n        self.file.flush()\n\n",
+      "prompt_tokens": 16384,
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "held-prose-16k": {
+      "text": "Write an extensive design review of an island electrical microgrid powered by solar panels, wind turbines, batteries and backup generators. Include scheduling, reserve margins, forecasting errors, seasonal effects, maintenance, and measurement plans. Write at least 2000 words and begin directly with the review.",
+      "context": "A microgrid must balance supply and demand at every instant. Battery state of charge is bounded. Forecasts carry uncertainty. Reliability depends on independent reserves and safe transitions between operating modes.\n",
+      "prompt_tokens": 16384,
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "warmup": {
+      "text": "Write a comprehensive Python graph module with at least 200 lines of implementation and tests.",
+      "prompt_tokens": 1024,
+      "max_tokens": 96,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "warmup-16k": {
+      "text": "Write a comprehensive Python graph module with at least 200 lines of implementation and tests.",
+      "prompt_tokens": 16384,
+      "max_tokens": 64,
+      "temperature": 1.0,
+      "force_length": true
+    }
+  },
+  "jobs": [
+    {
+      "profile": "stock-f2",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "warmup-16k",
+      "warmup": true
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "warmup-16k",
+      "warmup": true
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-code-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-code-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-16k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-code-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-16k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-16k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-code-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-16k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-16k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-16k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-16k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-16k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-16k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-1k",
+      "repeat": 3,
+      "seed": 271020
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-code-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-1k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 1,
+      "seed": 271018
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 4,
+      "seed": 271021
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "held-code-1k",
+      "repeat": 2,
+      "seed": 271019
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-1k",
+      "repeat": 0,
+      "seed": 271017
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "held-prose-16k",
+      "repeat": 3,
+      "seed": 271020
+    }
+  ],
+  "cache_limit_bytes": 8589934592
+}

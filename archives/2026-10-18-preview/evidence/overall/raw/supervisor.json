@@ -1,0 +1,102 @@
+{
+  "status": "complete",
+  "started_at_unix": 1792357769.4747698,
+  "processes": [
+    {
+      "index": 0,
+      "arm": "native2048",
+      "block": 0,
+      "output": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/00-native2048-block0.jsonl",
+      "log": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/00-native2048-block0.log",
+      "started_at_unix": 1792357771.423575,
+      "pid": 96425,
+      "exit_code": 0,
+      "completed_at_unix": 1792358352.507997
+    },
+    {
+      "index": 1,
+      "arm": "native8192",
+      "block": 0,
+      "output": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/01-native8192-block0.jsonl",
+      "log": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/01-native8192-block0.log",
+      "started_at_unix": 1792358352.511115,
+      "pid": 96601,
+      "exit_code": 0,
+      "completed_at_unix": 1792359087.705889
+    },
+    {
+      "index": 2,
+      "arm": "complete",
+      "block": 0,
+      "output": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/02-complete-block0.jsonl",
+      "log": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/02-complete-block0.log",
+      "started_at_unix": 1792359087.709527,
+      "pid": 96845,
+      "exit_code": 0,
+      "completed_at_unix": 1792359577.485037
+    },
+    {
+      "index": 3,
+      "arm": "complete",
+      "block": 1,
+      "output": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/03-complete-block1.jsonl",
+      "log": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/03-complete-block1.log",
+      "started_at_unix": 1792359577.489216,
+      "pid": 96964,
+      "exit_code": 0,
+      "completed_at_unix": 1792360038.5441122
+    },
+    {
+      "index": 4,
+      "arm": "native8192",
+      "block": 1,
+      "output": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/04-native8192-block1.jsonl",
+      "log": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/04-native8192-block1.log",
+      "started_at_unix": 1792360038.5477262,
+      "pid": 97052,
+      "exit_code": 0,
+      "completed_at_unix": 1792360755.443816
+    },
+    {
+      "index": 5,
+      "arm": "native2048",
+      "block": 1,
+      "output": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/05-native2048-block1.jsonl",
+      "log": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/05-native2048-block1.log",
+      "started_at_unix": 1792360755.44715,
+      "pid": 97173,
+      "exit_code": 0,
+      "completed_at_unix": 1792361331.228427
+    }
+  ],
+  "plan_sha256": "f668ef98840aa9c13a736e4b8329b396ad1f69032c46836d1640fdf9346972db",
+  "manifest_sha256": "767355abf8eedac3427b0537612bceda3b646b01142d93bc0dee0152faedc570",
+  "prior_state": {
+    "loaded_models": [
+      "Qwen3.8-Flash-Next-oQ8e-mtp"
+    ],
+    "memory": {
+      "memory_guard_tier": "balanced",
+      "memory_guard_custom_ceiling_gb": 0.0
+    },
+    "candidate_server_running": false
+  },
+  "temporary_memory": {
+    "memory_guard_tier": "custom",
+    "memory_guard_custom_ceiling_gb": 32
+  },
+  "model_execution_started_at": 1792357771.422991,
+  "current_process": 5,
+  "benchmark_status": "all_processes_completed",
+  "restored_state": {
+    "loaded_models": [
+      "Qwen3.8-Flash-Next-oQ8e-mtp"
+    ],
+    "memory": {
+      "memory_guard_tier": "balanced",
+      "memory_guard_custom_ceiling_gb": 0.0
+    }
+  },
+  "restoration_status": "restored",
+  "completed_at_unix": 1792361363.412878
+}

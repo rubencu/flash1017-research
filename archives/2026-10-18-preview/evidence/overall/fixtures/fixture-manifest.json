@@ -1,0 +1,428 @@
+{
+  "status": "fixtures_frozen_no_inference",
+  "created_at_utc": "2026-10-18T11:12:30.244030+00:00",
+  "builder_sha256": "cba287bbb3cc167a7bd4b72ad9a7a6f081343f58a27864019a8abf4f810952f6",
+  "source_manifest_sha256": "44daa65bb2e1a545a054c584488a352648497db62d195a57f1aece8ebcd7aa15",
+  "qualified_profile_snapshot_sha256": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da",
+  "baseline_runtime": {
+    "mtp": true,
+    "depth": 5,
+    "fixed": true,
+    "attention_rounding": true,
+    "fused_head": true,
+    "instrument": true,
+    "draft_width": 5,
+    "head_max_rows": 6,
+    "policy": {
+      "cycle_ms": [
+        40.86379148066044,
+        51.855687983334064,
+        57.73166654398665,
+        66.96656247368082,
+        71.52610452612862,
+        77.69158302107826
+      ],
+      "temperatures": [
+        1.0,
+        0.9394130628134758,
+        1.0644944589178593,
+        0.8824969025845955,
+        1.3668379411737963
+      ]
+    },
+    "ced_prefill": false,
+    "prefill_step": 8192,
+    "engram_prefetch_bytes": 67108864
+  },
+  "baseline_runtime_sha256": "06bab346bc658a90a3e72b521f583b813b1a70e41cb9f4fbc6dad11be3826e78",
+  "native_encoder": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/encoding.py",
+  "native_encoder_sha256": "ef231812dd35f5747787e2410cfa3b1413b77248e11b539973a7d6ede8853596",
+  "tokenizer_files": {
+    "tokenizer.json": {
+      "path": "${USER_HOME}/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp/tokenizer.json",
+      "sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b"
+    },
+    "tokenizer_config.json": {
+      "path": "${USER_HOME}/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp/tokenizer_config.json",
+      "sha256": "6ac8c8dc065ed118161d02dd532749ae3f52c243deac27872134fae2f50d8547"
+    }
+  },
+  "tokenizers_version": "0.23.3",
+  "corpora": {
+    "cpython": {
+      "path": "corpora/cpython.txt",
+      "sha256": "dad12728462b2c80b3f6bfadf275a87c508b073a28d4312b3c29fe6fb56c9da8",
+      "characters": 708469,
+      "tokens": 165655,
+      "source_records": [
+        "sources/cpython/Lib/asyncio/base_events.py",
+        "sources/cpython/Lib/asyncio/events.py",
+        "sources/cpython/Lib/asyncio/tasks.py",
+        "sources/cpython/Lib/asyncio/futures.py",
+        "sources/cpython/Lib/asyncio/streams.py",
+        "sources/cpython/Lib/asyncio/locks.py",
+        "sources/cpython/Lib/asyncio/queues.py",
+        "sources/cpython/Lib/asyncio/taskgroups.py",
+        "sources/cpython/Lib/inspect.py",
+        "sources/cpython/Lib/ast.py",
+        "sources/cpython/Lib/dataclasses.py",
+        "sources/cpython/Lib/typing.py",
+        "sources/cpython/Lib/pickle.py",
+        "sources/cpython/Lib/dis.py"
+      ],
+      "transform": "Each selected source file once, in manifest order, with filename separators; no code edits.",
+      "old_full_source_hash_overlap": false,
+      "state_stream": {
+        "path": "fixtures/cpython-state-stream.json",
+        "file_sha256": "c4e31f885f5050b04049bfe007a49ca123d435572d9f4c80ddb2bdf59b698cc8",
+        "tokens": 131200
+      }
+    },
+    "curl": {
+      "path": "corpora/curl.txt",
+      "sha256": "db0b52c509bc4d8ef2babee3472b67ff623ccbf70539091911adfe631ec217c7",
+      "characters": 660794,
+      "tokens": 191268,
+      "source_records": [
+        "sources/curl/lib/multi.c",
+        "sources/curl/lib/easy.c",
+        "sources/curl/lib/transfer.c",
+        "sources/curl/lib/url.c",
+        "sources/curl/lib/http.c",
+        "sources/curl/lib/sendf.c",
+        "sources/curl/lib/connect.c",
+        "sources/curl/lib/hostip.c",
+        "sources/curl/lib/urlapi.c",
+        "sources/curl/lib/cfilters.c"
+      ],
+      "transform": "Each selected source file once, in manifest order, with filename separators; no code edits.",
+      "old_full_source_hash_overlap": false,
+      "state_stream": {
+        "path": "fixtures/curl-state-stream.json",
+        "file_sha256": "6ba84fa5f58803c6ff16fea6bed7133434f3393225be38b4ab12fa2bcc28dd5f",
+        "tokens": 131200
+      }
+    },
+    "moby-dick": {
+      "path": "corpora/moby-dick.txt",
+      "sha256": "6b74a36cf4b629ac137c8832b2ba2be071a02c348f3accde0c026a893a2f30eb",
+      "characters": 1218973,
+      "tokens": 309197,
+      "source_records": [
+        "sources/moby-dick/complete.txt"
+      ],
+      "transform": {
+        "removed_only_gutenberg_wrapper": true,
+        "original_character_span": [
+          873,
+          1219856
+        ],
+        "full_original_retained": "sources/moby-dick/complete.txt"
+      },
+      "old_full_source_hash_overlap": false,
+      "state_stream": {
+        "path": "fixtures/moby-dick-state-stream.json",
+        "file_sha256": "69590c1b5512fc50b5532e0dc03c8a5be0501dacc5b2f0c7bfd004a68b1d8e69",
+        "tokens": 131200
+      }
+    },
+    "pride-prejudice": {
+      "path": "corpora/pride-prejudice.txt",
+      "sha256": "cb7c0d9af2041d31e655fafe79becb0877c3fc775690c7a558eb8707035e5138",
+      "characters": 728713,
+      "tokens": 171811,
+      "source_records": [
+        "sources/pride-prejudice/complete.txt"
+      ],
+      "transform": {
+        "removed_only_gutenberg_wrapper": true,
+        "original_character_span": [
+          965,
+          729716
+        ],
+        "full_original_retained": "sources/pride-prejudice/complete.txt"
+      },
+      "old_full_source_hash_overlap": false,
+      "state_stream": {
+        "path": "fixtures/pride-prejudice-state-stream.json",
+        "file_sha256": "b2e24a51678a980b35a0a596c444f93a27274d10d36252c72aed3d06d00eec8a",
+        "tokens": 131200
+      }
+    }
+  },
+  "prompts": {
+    "cpython-16384": {
+      "prompt_tokens": 16384,
+      "input_tokens_sha256": "4aa960f794657af43657670080c8e3d5a2d6e31815fff0555c466e75c6ede978",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 16328,
+      "framing_and_question_tokens": 56,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "cpython",
+      "path": "fixtures/cpython-16384.json",
+      "file_sha256": "6459c08df94db1c52b0b618fe573652cd2b79549fe66d0c73918160afbaf3415"
+    },
+    "cpython-32768": {
+      "prompt_tokens": 32768,
+      "input_tokens_sha256": "f1b1013809a8b41a3a1ba73aee3187010ea068e7d99f0fff70fe2d2c02ddeadf",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 32712,
+      "framing_and_question_tokens": 56,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "cpython",
+      "path": "fixtures/cpython-32768.json",
+      "file_sha256": "7b2b24abb1ea3f68174bf72162d6e10de128309ec39cd39536cc5dc0d9908c06"
+    },
+    "cpython-65536": {
+      "prompt_tokens": 65536,
+      "input_tokens_sha256": "31a42897b4a2696c5d7a6386c7e56d263f27f8c388a20c825f51349753ebdd9c",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 65480,
+      "framing_and_question_tokens": 56,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "cpython",
+      "path": "fixtures/cpython-65536.json",
+      "file_sha256": "df4f56437967fc9dc9ec676d8c5feb0ee52957f3ae39e2f4c5a32efd99fbb529"
+    },
+    "cpython-131072": {
+      "prompt_tokens": 131072,
+      "input_tokens_sha256": "b61019566fa25f6f8e4f418d555b56f35cba52aec4a1cf6714cbbc71732ee304",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 131016,
+      "framing_and_question_tokens": 56,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "cpython",
+      "path": "fixtures/cpython-131072.json",
+      "file_sha256": "ecccc376046ab569b4b346c4db0c3c85730477416f6f7d99ed3d2e3331b0b178"
+    },
+    "curl-16384": {
+      "prompt_tokens": 16384,
+      "input_tokens_sha256": "af49fe7277fa0dc27468f16f33391f27bb97e31cb9f725b81f63b44f9735a448",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 16326,
+      "framing_and_question_tokens": 58,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "curl",
+      "path": "fixtures/curl-16384.json",
+      "file_sha256": "39c0809e27ab03fcb915bf578ec06eb08b9c54d91e23f60f3d57186fddf3c063"
+    },
+    "curl-32768": {
+      "prompt_tokens": 32768,
+      "input_tokens_sha256": "29087f25b209c2fcebd8bb1fd435a693bcff7074956df6a77179a0852e0a526c",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 32710,
+      "framing_and_question_tokens": 58,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "curl",
+      "path": "fixtures/curl-32768.json",
+      "file_sha256": "8e3634991b8f2493791fed5693e520ce5496ed920d9dededc51b19ce72f5cd56"
+    },
+    "curl-65536": {
+      "prompt_tokens": 65536,
+      "input_tokens_sha256": "ea19b5f8c779b5494ceb912b39b0a199403e6199ac6322929258b1126c7705ba",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 65478,
+      "framing_and_question_tokens": 58,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "curl",
+      "path": "fixtures/curl-65536.json",
+      "file_sha256": "6ee479f21243dda1985f752b5d109035b8b84f82bd0ff670d33f20754b960950"
+    },
+    "curl-131072": {
+      "prompt_tokens": 131072,
+      "input_tokens_sha256": "a78c8b56589e502802173a97edb204d2a6f2c1a50a9fe5cd40687d110e8303e7",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 131014,
+      "framing_and_question_tokens": 58,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "curl",
+      "path": "fixtures/curl-131072.json",
+      "file_sha256": "1a2fcb9c387f4cb43e6aa0fde023a218f9908e52ad6f485ceba9d4f06278e067"
+    },
+    "moby-dick-16384": {
+      "prompt_tokens": 16384,
+      "input_tokens_sha256": "70106dce6481c03f8bd729d17c55d9ce12368875a68a749c3e86c9f600105190",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 16333,
+      "framing_and_question_tokens": 51,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "moby-dick",
+      "path": "fixtures/moby-dick-16384.json",
+      "file_sha256": "d50f8ac6aeb6882a260ac633d56d39d9ea365e34c4f5b45d9026696d6158134e"
+    },
+    "moby-dick-32768": {
+      "prompt_tokens": 32768,
+      "input_tokens_sha256": "c9684ca9e82fdc6ce31866c1b8a03c0536ab15d166709260845ec3edf71072a6",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 32717,
+      "framing_and_question_tokens": 51,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "moby-dick",
+      "path": "fixtures/moby-dick-32768.json",
+      "file_sha256": "fc435dd30497112b347fd1e65b0c5617bf0e6ece4cb725afa9908f28e6bee458"
+    },
+    "moby-dick-65536": {
+      "prompt_tokens": 65536,
+      "input_tokens_sha256": "cd0c27725eabb017f48182bac5ba2f43fb6b17e2a2de56004401a9b8ec9f17bc",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 65485,
+      "framing_and_question_tokens": 51,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "moby-dick",
+      "path": "fixtures/moby-dick-65536.json",
+      "file_sha256": "cba606314c32a078ccd943c12429aac5cbd30f8fb884ade4bc619115281cb265"
+    },
+    "moby-dick-131072": {
+      "prompt_tokens": 131072,
+      "input_tokens_sha256": "6e687ee2418b40c38ef9ff79291305374596f92c8bf2eb31a15f311cfeeaeba3",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 131021,
+      "framing_and_question_tokens": 51,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "moby-dick",
+      "path": "fixtures/moby-dick-131072.json",
+      "file_sha256": "60794e83750a3edc304336f0a649e5a7e2a6a32d02bbe4658271414f0d93a5e0"
+    },
+    "pride-prejudice-16384": {
+      "prompt_tokens": 16384,
+      "input_tokens_sha256": "ff6c7bcb41f34a55d90b5dcc5c5f6bcbd9a000927b3c0737a49e3694ae231f76",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 16330,
+      "framing_and_question_tokens": 54,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "pride-prejudice",
+      "path": "fixtures/pride-prejudice-16384.json",
+      "file_sha256": "bcf9761b4220ab847f36a5b1693382a288a61fe4fa34f65c5deedbf8192cb011"
+    },
+    "pride-prejudice-32768": {
+      "prompt_tokens": 32768,
+      "input_tokens_sha256": "278c55a0d8f494d88717503671eba95e532cb9047661a158334411f9092de957",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 32714,
+      "framing_and_question_tokens": 54,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "pride-prejudice",
+      "path": "fixtures/pride-prejudice-32768.json",
+      "file_sha256": "d6ab3b08cec94876f3188b565e0ecc5cc82b7969d8ab44fdae1abe04408007c5"
+    },
+    "pride-prejudice-65536": {
+      "prompt_tokens": 65536,
+      "input_tokens_sha256": "aba763d4f3fab02b97397173495e7ebf7a27d7b4bad14379b0dac58b617e5ddb",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 65482,
+      "framing_and_question_tokens": 54,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "pride-prejudice",
+      "path": "fixtures/pride-prejudice-65536.json",
+      "file_sha256": "1ecb3ac12a14535b1abaffd36962eb1464456fdc31ae36ec68d5ccaffd38e017"
+    },
+    "pride-prejudice-131072": {
+      "prompt_tokens": 131072,
+      "input_tokens_sha256": "cf51f26ba821cfb828dd20f4265dca5541ddacdff522f0dcb2ca2fdbf934e539",
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 131018,
+      "framing_and_question_tokens": 54,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "pride-prejudice",
+      "path": "fixtures/pride-prejudice-131072.json",
+      "file_sha256": "9d532a5d9c07dba9462847f1785ec23bff5459c6ca2b52c81a9fd68f6ca5a73a"
+    }
+  },
+  "warmup": {
+    "path": "fixtures/warmup-16384.json",
+    "sha256": "24462c7382cf19088925644ec894d29137ff5bf76f7d51724cfa3b9a091fe456",
+    "measured": false,
+    "synthetic": true
+  },
+  "vision": {
+    "path": "fixtures/vision-shapes.png",
+    "sha256": "346d7531e3099bcbb378d4f3e46030b92c86ad9369866e0895ac32ae2aea0fbf",
+    "width": 512,
+    "height": 384,
+    "expected": {
+      "blue_circles": 2,
+      "green_squares": 3,
+      "red_triangles": 1
+    },
+    "license": "Original diagnostic fixture, CC0-1.0",
+    "construction": "Deterministic RGB geometry; gray horizontal bar is a distractor, not one of the requested shapes."
+  },
+  "http_cases": {
+    "path": "fixtures/http-prefix-cases.json",
+    "sha256": "082877514570d830a1105ef086eef1d15562c349c6d3eb85e501f191b087b2c8"
+  },
+  "disjoint_from_prior": {
+    "prior_manifest": "${ORIGINAL_LAB_ROOT}/work/prefill-fullmodel/natural-manifest.json",
+    "prior_manifest_sha256": "091e02e0d1a2f7e52e44c53d4eb9fdaf1c9fa85cad0538a7dfdd97c82e31ecfd",
+    "prior_repository": "https://github.com/jundot/omlx",
+    "source_identity_and_file_hash_overlap": false,
+    "limitation": "Common language/code idioms are possible; this is workload holdout from local tuning, not a model-training-data exclusion claim."
+  },
+  "cpu_only": true,
+  "inference_modules_loaded": false,
+  "weights_opened": false
+}

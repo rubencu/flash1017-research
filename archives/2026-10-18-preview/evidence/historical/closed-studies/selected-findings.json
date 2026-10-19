@@ -1,0 +1,104 @@
+{
+  "cache": {
+    "candidate": "1024 MiB/table; not deployed",
+    "comparisons": 24,
+    "denominator": "actual frozen v3 with 256 MiB/table",
+    "distinct_cases": 12,
+    "extra_retained_ceiling_bytes": 1610612736,
+    "functional_mtp_cycles": 1218,
+    "output_ids": 3072,
+    "repetitions": 2,
+    "timings": {
+      "prefill_seconds": {
+        "candidate_geomean": 39.13017717186965,
+        "faster": 16,
+        "latency_reduction_percent": 10.062299568607925,
+        "paired_speed_ratio": 1.111880774362069,
+        "reference_geomean": 43.508091694783396,
+        "slower": 8
+      },
+      "total_seconds": {
+        "candidate_geomean": 43.591793216381234,
+        "faster": 16,
+        "latency_reduction_percent": 9.113630494999935,
+        "paired_speed_ratio": 1.100274997721177,
+        "reference_geomean": 47.96296018181591,
+        "slower": 8
+      },
+      "ttft_seconds": {
+        "candidate_geomean": 39.26662019002935,
+        "faster": 16,
+        "latency_reduction_percent": 10.033289218253538,
+        "paired_speed_ratio": 1.1115222411831156,
+        "reference_geomean": 43.64572167730757,
+        "slower": 8
+      }
+    },
+    "warmup_functional_cycles": 84,
+    "warmup_output_ids": 256,
+    "warmup_regressions": 2
+  },
+  "envelope": {
+    "adopted": false,
+    "comparisons": 12,
+    "denominator": "actual frozen v3; same persistent shared 512 MiB row cache",
+    "functional_mtp_cycles": 609,
+    "output_ids": 1536,
+    "timings": {
+      "prefill_seconds": {
+        "candidate_geomean": 37.695381392454266,
+        "faster": 6,
+        "latency_reduction_percent": -3.398824546217405,
+        "paired_speed_ratio": 0.9671289827410157,
+        "reference_geomean": 36.45629586011888,
+        "slower": 6
+      },
+      "total_seconds": {
+        "candidate_geomean": 42.01270103615705,
+        "faster": 6,
+        "latency_reduction_percent": -2.8113596914566497,
+        "paired_speed_ratio": 0.972655164761037,
+        "reference_geomean": 40.86387064837953,
+        "slower": 6
+      },
+      "ttft_seconds": {
+        "candidate_geomean": 37.83540762444756,
+        "faster": 6,
+        "latency_reduction_percent": -3.384778175971781,
+        "paired_speed_ratio": 0.9672603816955477,
+        "reference_geomean": 36.59669082042978,
+        "slower": 6
+      }
+    }
+  },
+  "gains_may_be_combined": false,
+  "long": {
+    "absent_fields": 160,
+    "compared_output_ids": 256,
+    "functional_mtp_cycles": 117,
+    "input_tokens": [
+      262016,
+      1048448
+    ],
+    "next_logits": 258560,
+    "output_positions_per_request": 128,
+    "performance_claim": false,
+    "physical_rings": 6,
+    "serving_qualified": false,
+    "target_arrays": 560
+  },
+  "publication_authorized": false,
+  "schema": "flash1017-selected-closed-findings/3",
+  "validation_scope": "Selected pinned report/review consistency and arithmetic; no raw request/state/HTTP or omitted-closure recomputation.",
+  "whole": {
+    "absent_fields": 320,
+    "functional_mtp_cycles": 207,
+    "next_logits": 517120,
+    "output_ids": 512,
+    "pairs": 4,
+    "performance_claim": false,
+    "physical_rings": 12,
+    "serving_claim": false,
+    "target_arrays": 1120
+  }
+}

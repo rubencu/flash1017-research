@@ -1,0 +1,67 @@
+{
+  "summaries": [
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-16k",
+      "n": 5,
+      "median_decode_tps": 44.20298949646385,
+      "median_ttft_seconds": 17.217031917069107,
+      "median_total_seconds": 28.95750625000801,
+      "peak_process_gib": 208.5694288983941,
+      "max_swap_increase_bytes": 0
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-16k",
+      "n": 5,
+      "median_decode_tps": 35.24102021645449,
+      "median_ttft_seconds": 17.227648124913685,
+      "median_total_seconds": 31.761710374965332,
+      "peak_process_gib": 208.56912367790937,
+      "max_swap_increase_bytes": 0
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-16k",
+      "n": 5,
+      "median_decode_tps": 40.59158783836199,
+      "median_ttft_seconds": 17.204310290981084,
+      "median_total_seconds": 29.79324941604864,
+      "peak_process_gib": 208.59466686844826,
+      "max_swap_increase_bytes": 0
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-16k",
+      "n": 5,
+      "median_decode_tps": 32.89261652558467,
+      "median_ttft_seconds": 17.165760541916825,
+      "median_total_seconds": 32.76039395807311,
+      "peak_process_gib": 208.46696608513594,
+      "max_swap_increase_bytes": 0
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "n": 5,
+      "median_decode_tps": 39.7818133607748,
+      "median_ttft_seconds": 17.10090341605246,
+      "median_total_seconds": 30.11218649998773,
+      "peak_process_gib": 208.59492629021406,
+      "max_swap_increase_bytes": 0
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "n": 5,
+      "median_decode_tps": 32.77916927698951,
+      "median_ttft_seconds": 17.249989375006407,
+      "median_total_seconds": 32.76946008298546,
+      "peak_process_gib": 208.56480546295643,
+      "max_swap_increase_bytes": 0
+    }
+  ],
+  "kernel_pairs": [],
+  "exclusions": [],
+  "errors": []
+}

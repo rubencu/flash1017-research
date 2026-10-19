@@ -1,0 +1,32 @@
+DeepSeek-V4.1-Flash-1017: saved-observation recalculation
+Untouched installed oMLX 0.7.1rc1, native adaptive MTP; NOT current main
+TTFT: 20.06% less time (19.554s -> 15.631s, equal-case geometric means).
+48 measured requests; 8 cases; 3 arms; 2 process blocks per arm; 6 excluded warmups.
+Original fixed-512 qualification: FAIL; 9 early-EOS records retained.
+Prefill and TTFT qualify separately; no answer-quality equivalence claim.
+POST HOC time to token 128: 20.21% less (29.009s -> 23.147s), all 48 original runs.
+Saved token-128 delivery within original 512-token executions. NOT new 128-token requests, terminal completion or isolated GPU time.
+
+Per-case TTFT change vs native2048 (positive means slower):
+  held-code-1k                             -0.25%
+  held-prose-1k                            -0.95%
+  performance-cpython-16384               -36.54%
+  performance-cpython-65536                +2.32%
+  performance-curl-16384                  -27.36%
+  performance-moby-dick-16384             -35.64%
+  performance-pride-prejudice-16384       -28.72%
+  performance-pride-prejudice-65536       -22.00%
+
+Sampled process footprint peaks:
+  native2048   208.35 GiB
+  native8192   215.77 GiB
+  complete     216.10 GiB
+Complete package adds 7.75 GiB vs native2048; includes its changed chunk configuration.
+Full-512 elapsed/rate fields in JSON are DESCRIPTIVE FORCED CONTINUATION, not useful-answer completion.
+Saved independent audit/supplement: numerical comparison matched.
+
+All 48 records retained; two process blocks on one machine, equal-case geometric means, no confidence interval.
+Warm runtime, retained OS caches, declared row-cache history; model loading and HTTP transport excluded.
+Outputs can differ. No equivalent-answer speed, task-quality, generic-model, hardware or current-main claim.
+Sampled footprint may miss transients; process disk counters are not exclusively Engram or physical SSD traffic.
+This recalculates packaged observations and checks recorded activation fields. It does not rerun or reauthenticate the original runtime/source audit.

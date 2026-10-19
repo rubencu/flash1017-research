@@ -1,0 +1,24 @@
+{
+  "status": "frozen_cpu_reviewed_staging_not_installed",
+  "created_at_unix": 1792326263.303156,
+  "tests_passed": 24,
+  "independently_reviewed": true,
+  "final_profile_required": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/qualified-candidate-profile.json",
+  "qualification_http_status_required": "complete_validated",
+  "proposed_command_destination": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/Start Flash1017 Fast.command",
+  "sources_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/shortcut.py": "17a62243f4be2eeec74b55bd11599d533d7dd584db8343cf6a1fbd97162ff6be",
+    "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/test_cpu.py": "0f75c3a066050e3360258f40832d699f770da109efc334227e55e4b47ab4cb2b",
+    "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/Start Flash1017 Fast.command": "78d16c1e9a84ee0c92e306bae8ecf096da85d8ef4fe06fceb08afa471d7b879c",
+    "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/README.txt": "c97e765d458fc495c09ea9ca58f96afbb67f04697d482bdd5cf460af37fa3460",
+    "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/independent-review.json": "82b86c8c7d0bc0ed92512de48991ceda381cc9b4b6114876158b29f73825be2d",
+    "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/cpu-tests-draft.txt": "f033c82128b1fb578bd595246ee35af52d96a107d4c0a27047f355e55de4ec8b"
+  },
+  "native_files_observed_unchanged": {
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/Start Flash1017.command": "04760ce309d66aee3e8c2ec8302021a6b1849be5e5f872049d8e0f68016bb5bd",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/Stop Flash1017.command": "f1cd7030a3b51078b1676dbd60a45e52256a8981e05a1e5c441b309abedd6f97",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/run.sh": "fec7b7543f8d743f65ee321a6f3be7f583384941369cbaef9a1f129f801b9d27",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/qualified-profile.json": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da"
+  },
+  "live_operations": false
+}

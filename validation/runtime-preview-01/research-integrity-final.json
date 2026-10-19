@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "historical_files_checked": 337,
+  "snapshot_count": 1,
+  "scope": "Retained snapshot integrity and original package checks only. Not a model run, signature, external replication or current-runtime qualification."
+}

@@ -1,0 +1,498 @@
+[
+  {
+    "task": "stable_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 16.34013454092201,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def stable_unique(values):\n    result = []\n    for value in values:\n        found = False\n        for existing in result:\n            if existing == value:\n                found = True\n                break\n        if not found:\n            result.append(value)\n    return result\n"
+  },
+  {
+    "task": "glob_match",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 17.49810345901642,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def glob_match(text, pattern):\n    def match(ti, pi):\n        if pi == len(pattern):\n            return ti == len(text)\n        if pattern[pi] == '*':\n            while pi + 1 < len(pattern) and pattern[pi + 1] == '*':\n                pi += 1\n            if pi + 1 == len(pattern):\n                return True\n            for k in range(ti, len(text) + 1):\n                if match(k, pi + 1):\n                    return True\n            return False\n        if ti == len(text):\n            return False\n        if pattern[pi] == '?' or pattern[pi] == text[ti]:\n            return match(ti + 1, pi + 1)\n        return False\n    return match(0, 0)\n"
+  },
+  {
+    "task": "rotate_ragged",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 18.051714250002988,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def rotate_ragged(rows, fill=None):\n    def pad_rows(rows, fill):\n        max_len = 0\n        for row in rows:\n            if len(row) > max_len:\n                max_len = len(row)\n        padded = []\n        for row in rows:\n            new_row = list(row)\n            while len(new_row) < max_len:\n                new_row.append(fill)\n            padded.append(new_row)\n        return padded\n\n    def rotate_clockwise(matrix):\n        if not matrix:\n            return []\n        height = len(matrix)\n        width = len(matrix[0])\n        rotated = []\n        for col in range(width):\n            new_row = []\n            for row in range(height - 1, -1, -1):\n                new_row.append(matrix[row][col])\n            rotated.append(new_row)\n        return rotated\n\n    if not rows:\n        return []\n    padded = pad_rows(rows, fill)\n    if not padded or not padded[0]:\n        return []\n    return rotate_clockwise(padded)\n"
+  },
+  {
+    "task": "stable_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 15.927644292009063,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def stable_unique(values):\n    result = []\n    for value in values:\n        found = False\n        for existing in result:\n            if existing == value:\n                found = True\n                break\n        if not found:\n            result.append(value)\n    return result\n"
+  },
+  {
+    "task": "topological_order",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 18.946559416945092,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def topological_order(graph):\n    nodes = set(graph)\n    for neighbors in graph.values():\n        nodes.update(neighbors)\n    indegree = {node: 0 for node in nodes}\n    adjacency = {node: set() for node in nodes}\n    for node, neighbors in graph.items():\n        for neighbor in neighbors:\n            if neighbor not in adjacency[node]:\n                adjacency[node].add(neighbor)\n                indegree[neighbor] += 1\n    available = sorted(node for node in nodes if indegree[node] == 0)\n    result = []\n    while available:\n        node = available.pop(0)\n        result.append(node)\n        for neighbor in sorted(adjacency[node]):\n            indegree[neighbor] -= 1\n            if indegree[neighbor] == 0:\n                available.append(neighbor)\n        available.sort()\n    if len(result) != len(nodes):\n        raise ValueError(\"directed cycle detected\")\n    return result\n"
+  },
+  {
+    "task": "rotate_ragged",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 18.93756608304102,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def rotate_ragged(rows, fill=None):\n    def pad_rows(rows, fill):\n        max_len = 0\n        for row in rows:\n            if len(row) > max_len:\n                max_len = len(row)\n        padded = []\n        for row in rows:\n            new_row = list(row)\n            while len(new_row) < max_len:\n                new_row.append(fill)\n            padded.append(new_row)\n        return padded\n\n    def rotate_clockwise(matrix):\n        if not matrix:\n            return []\n        height = len(matrix)\n        width = len(matrix[0])\n        rotated = []\n        for col in range(width):\n            new_row = []\n            for row in range(height - 1, -1, -1):\n                new_row.append(matrix[row][col])\n            rotated.append(new_row)\n        return rotated\n\n    if not rows:\n        return []\n    padded = pad_rows(rows, fill)\n    if not padded or not padded[0]:\n        return []\n    return rotate_clockwise(padded)\n"
+  },
+  {
+    "task": "merge_intervals",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 17.3771139170276,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    result = []\n    current_start, current_end = sorted_intervals[0]\n    for start, end in sorted_intervals[1:]:\n        if start <= current_end:\n            if end > current_end:\n                current_end = end\n        else:\n            result.append([current_start, current_end])\n            current_start, current_end = start, end\n    result.append([current_start, current_end])\n    return result\n"
+  },
+  {
+    "task": "longest_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 16.140502416994423,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def longest_unique(text):\n    last = {}\n    start = 0\n    best = 0\n    for i, ch in enumerate(text):\n        if ch in last and last[ch] >= start:\n            start = last[ch] + 1\n        last[ch] = i\n        length = i - start + 1\n        if length > best:\n            best = length\n    return best\n"
+  },
+  {
+    "task": "lru_simulate",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 21.48707770893816,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def lru_simulate(capacity, operations):\n    def find_key(keys, key):\n        for i in range(len(keys)):\n            if keys[i] == key:\n                return i\n        return -1\n\n    def remove_at(items, index):\n        return items[:index] + items[index + 1:]\n\n    def append_item(items, item):\n        return items + [item]\n\n    def get_value(entries, key):\n        for entry in entries:\n            if entry[0] == key:\n                return entry[1]\n        return None\n\n    def update_entry(entries, key, value):\n        result = []\n        for entry in entries:\n            if entry[0] == key:\n                result.append([key, value])\n            else:\n                result.append(entry)\n        return result\n\n    def remove_entry(entries, key):\n        result = []\n        for entry in entries:\n            if entry[0] != key:\n                result.append(entry)\n        return result\n\n    keys = []\n    entries = []\n    get_results = []\n\n    for op in operations:\n        if op[0] == 'get':\n            key = op[1]\n            value = get_value(entries, key)\n            get_results.append(value)\n            if value is not None:\n                index = find_key(keys, key)\n                keys = remove_at(keys, index)\n                keys = append_item(keys, key)\n        else:\n            key = op[1]\n            value = op[2]\n            index = find_key(keys, key)\n            if index != -1:\n                keys = remove_at(keys, index)\n                entries = remove_entry(entries, key)\n            keys = append_item(keys, key)\n            entries = append_item(entries, [key, value])\n            if capacity == 0:\n                keys = []\n                entries = []\n            elif len(keys) > capacity:\n                oldest = keys[0]\n                keys = remove_at(keys, 0)\n                entries = remove_entry(entries, oldest)\n\n    return [get_results, keys]\n"
+  },
+  {
+    "task": "topological_order",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 17.577979916939512,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def topological_order(graph):\n    nodes = set(graph)\n    for neighbors in graph.values():\n        nodes.update(neighbors)\n    indegree = {node: 0 for node in nodes}\n    adjacency = {node: set() for node in nodes}\n    for node, neighbors in graph.items():\n        for neighbor in neighbors:\n            if neighbor not in adjacency[node]:\n                adjacency[node].add(neighbor)\n                indegree[neighbor] += 1\n    available = sorted(node for node in nodes if indegree[node] == 0)\n    result = []\n    while available:\n        node = available.pop(0)\n        result.append(node)\n        for neighbor in sorted(adjacency[node]):\n            indegree[neighbor] -= 1\n            if indegree[neighbor] == 0:\n                available.append(neighbor)\n        available.sort()\n    if len(result) != len(nodes):\n        raise ValueError(\"directed cycle detected\")\n    return result\n"
+  },
+  {
+    "task": "shortest_path",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 20.351057082996704,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_sorted(a, b):\n    result = []\n    i = j = 0\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            result.append(a[i]); i += 1\n        else:\n            result.append(b[j]); j += 1\n    return result + a[i:] + b[j:]\n\ndef shortest_path(edges, start, end):\n    if start == end:\n        return 0\n    graph = {}\n    for source, destination, weight in edges:\n        if source not in graph:\n            graph[source] = []\n        graph[source].append((destination, weight))\n    distances = {start: 0}\n    visited = set()\n    while True:\n        current = None\n        current_distance = None\n        for node in distances:\n            if node not in visited:\n                if current is None or distances[node] < current_distance:\n                    current = node\n                    current_distance = distances[node]\n        if current is None:\n            break\n        if current == end:\n            return current_distance\n        visited.add(current)\n        if current in graph:\n            for neighbor, weight in graph[current]:\n                new_distance = current_distance + weight\n                if neighbor not in distances or new_distance < distances[neighbor]:\n                    distances[neighbor] = new_distance\n    return None\n"
+  },
+  {
+    "task": "glob_match",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 17.8671115830075,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def glob_match(text, pattern):\n    def match(ti, pi):\n        while pi < len(pattern):\n            if pattern[pi] == '*':\n                while pi < len(pattern) and pattern[pi] == '*':\n                    pi += 1\n                if pi == len(pattern):\n                    return True\n                for k in range(ti, len(text) + 1):\n                    if match(k, pi):\n                        return True\n                return False\n            if ti < len(text) and (pattern[pi] == '?' or pattern[pi] == text[ti]):\n                ti += 1\n                pi += 1\n            else:\n                return False\n        return ti == len(text)\n    return match(0, 0)\n"
+  },
+  {
+    "task": "shortest_path",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 18.874906082986854,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_sorted(a, b):\n    result = []\n    i = j = 0\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            result.append(a[i]); i += 1\n        else:\n            result.append(b[j]); j += 1\n    return result + a[i:] + b[j:]\n\ndef shortest_path(edges, start, end):\n    if start == end:\n        return 0\n    graph = {}\n    for source, destination, weight in edges:\n        if source not in graph:\n            graph[source] = []\n        graph[source].append((destination, weight))\n    distances = {start: 0}\n    visited = set()\n    while True:\n        current = None\n        current_distance = None\n        for node in distances:\n            if node not in visited and (current_distance is None or distances[node] < current_distance):\n                current = node\n                current_distance = distances[node]\n        if current is None:\n            break\n        if current == end:\n            return current_distance\n        visited.add(current)\n        for neighbor, weight in graph.get(current, []):\n            new_distance = current_distance + weight\n            if neighbor not in distances or new_distance < distances[neighbor]:\n                distances[neighbor] = new_distance\n    return distances.get(end)\n"
+  },
+  {
+    "task": "lru_simulate",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 22.05182941700332,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def lru_simulate(capacity, operations):\n    def find_key(keys, key):\n        for i in range(len(keys)):\n            if keys[i] == key:\n                return i\n        return -1\n\n    def remove_at(items, index):\n        return items[:index] + items[index + 1:]\n\n    def append_item(items, item):\n        return items + [item]\n\n    def get_value(entries, key):\n        for entry in entries:\n            if entry[0] == key:\n                return entry[1]\n        return None\n\n    def update_entry(entries, key, value):\n        result = []\n        for entry in entries:\n            if entry[0] == key:\n                result.append([key, value])\n            else:\n                result.append(entry)\n        return result\n\n    def remove_entry(entries, key):\n        result = []\n        for entry in entries:\n            if entry[0] != key:\n                result.append(entry)\n        return result\n\n    entries = []\n    get_results = []\n\n    for op in operations:\n        if op[0] == 'get':\n            key = op[1]\n            value = get_value(entries, key)\n            get_results.append(value)\n            if value is not None:\n                entries = remove_entry(entries, key)\n                entries = append_item(entries, [key, value])\n        else:\n            key = op[1]\n            value = op[2]\n            entries = remove_entry(entries, key)\n            entries = append_item(entries, [key, value])\n            while len(entries) > capacity:\n                entries = entries[1:]\n\n    final_keys = []\n    for entry in entries:\n        final_keys.append(entry[0])\n\n    return [get_results, final_keys]\n"
+  },
+  {
+    "task": "longest_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 16.522288499982096,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def longest_unique(text):\n    last = {}\n    start = 0\n    best = 0\n    for i, ch in enumerate(text):\n        if ch in last and last[ch] >= start:\n            start = last[ch] + 1\n        last[ch] = i\n        length = i - start + 1\n        if length > best:\n            best = length\n    return best\n"
+  },
+  {
+    "task": "merge_intervals",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 16.61489933403209,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    result = []\n    current_start, current_end = sorted_intervals[0]\n    for start, end in sorted_intervals[1:]:\n        if start <= current_end:\n            if end > current_end:\n                current_end = end\n        else:\n            result.append([current_start, current_end])\n            current_start, current_end = start, end\n    result.append([current_start, current_end])\n    return result\n"
+  }
+]

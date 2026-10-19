@@ -1,0 +1,1084 @@
+{
+  "app_version": {
+    "CFBundleShortVersionString": "0.7.1rc1",
+    "CFBundleVersion": "3310",
+    "LSMinimumSystemVersion": "15.0"
+  },
+  "build_info_sha256": "fba20525b39347ad0a2da890cfbe3a15fe21cecab2f848844c4305bb64cce79a",
+  "build_info_text": "build_number = \"261016042522-macos26-27\"\n",
+  "calibration_matches_qualified_profile": true,
+  "known_missing_reconstruction_inputs": [
+    "verified full public-DMG/installed-app byte correspondence",
+    "complete reproducible native build flags/toolchain receipt",
+    "fresh-environment installation and numerical/serving validation"
+  ],
+  "native_files_not_bundled": {
+    "_runtime/omlx/custom_kernels/bonsai/_ext.cpython-311-darwin.so": "6906351898117ca5a0dfd48b42cddb3405d75ead56e580e82cf3302425ac9948",
+    "_runtime/omlx/custom_kernels/bonsai/omlx_bonsai_kernels.metallib": "8d64610e3f5f77340d4562d7db715435078ab9ab37e44f36fd2381b1233cf9c8",
+    "_runtime/omlx/custom_kernels/decode_fast/_ext.cpython-311-darwin.so": "493bfc814316ee2fc3ed159fc7a67ceefc091e216b01ba9df22def6bc050d301",
+    "_runtime/omlx/custom_kernels/decode_fast/omlx_decode_fast_kernels.metallib": "30b9dddc34f4a0a7f0477d6977ae3b428956c8e73d7bd6a8496d3bc02b382f00",
+    "_runtime/omlx/custom_kernels/glm_moe_dsa/_ext.cpython-311-darwin.so": "ec7d53acef24132b68dcdaf1771fc93fe536558fc994271d36e71e5fd91dfd84",
+    "_runtime/omlx/custom_kernels/glm_moe_dsa/omlx_glm_kernels.metallib": "f7ecc30bafd72c77d04e5406bcc523e1491f7787297e45a8ef215f2a815a6c1a",
+    "_runtime/omlx/custom_kernels/minimax_m3/_ext.cpython-311-darwin.so": "f2b56e7fa28e55f2fcd596e674010843a2ad0779165df4e5b8ce1045ce8fae51",
+    "_runtime/omlx/custom_kernels/minimax_m3/omlx_minimax_m3_kernels.metallib": "1989d2fef958ec7760514a067764fba9b1b374e73da3dd0b967758017f244764",
+    "_runtime/omlx/custom_kernels/qwen35_prefill/_ext.cpython-311-darwin.so": "453329bf4389935ad61552e1a8c2da164562e304ef28f0ca5788b1f4ec8cbba2",
+    "_runtime/omlx/custom_kernels/qwen35_prefill/omlx_qwen35_prefill_kernels.metallib": "8732f01a265bd7b744566e5c0a86f5b2a030f006fe8042334b70397b0aa78251",
+    "_runtime/omlx/custom_kernels/qwen35_prefill/omlx_qwen35_prefill_kernels_nax.metallib": "2e6abc31f226e385617e6899c43a485f4eb1e69c9aa29fd6707b1039b3640e79"
+  },
+  "observed_distributions": [
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/addict-2.4.0.dist-info/METADATA",
+      "metadata_sha256": "66320967996f85fa211f1216a7bf5f921d13b41b0de5db97f389daddbc54eaf4",
+      "name": "addict",
+      "version": "2.4.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/aiohappyeyeballs-2.7.1.dist-info/METADATA",
+      "metadata_sha256": "e68d1bf48aec9dcc2767343dedec25e12860085cba180e10bc3d3bdd031602ba",
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/aiohttp-3.14.5.dist-info/METADATA",
+      "metadata_sha256": "50b29a2268649f7ce5b22c0a41b60896d246fee58e2a74b468f66848e469834c",
+      "name": "aiohttp",
+      "version": "3.14.5"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/aiosignal-1.4.0.dist-info/METADATA",
+      "metadata_sha256": "09247ef1da8bc696728d47130e702e4307f6f7d101d6c485bff9f3a71ce7008d",
+      "name": "aiosignal",
+      "version": "1.4.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/annotated_doc-0.0.5.dist-info/METADATA",
+      "metadata_sha256": "8c24d70c5d9153d22123353a906042fd7603df2d15c2196290b0f8a962558c46",
+      "name": "annotated-doc",
+      "version": "0.0.5"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/annotated_types-0.8.0.dist-info/METADATA",
+      "metadata_sha256": "614985b278f601b8ef863f82783b991cc3ada4b89f592eb71c7c48c5f2ef2298",
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/anyio-4.15.1.dist-info/METADATA",
+      "metadata_sha256": "043aecb571af7189e8a6c528f5d8e32545f1b2cdfaaf761d51e6d5b67ea3ca81",
+      "name": "anyio",
+      "version": "4.15.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/apache_tvm_ffi-0.1.11.dist-info/METADATA",
+      "metadata_sha256": "02e62464dd5cf4940b20a295e139959fc09125c4810afead8b48d6bb8d273a1e",
+      "name": "apache-tvm-ffi",
+      "version": "0.1.11"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/attrs-26.1.0.dist-info/METADATA",
+      "metadata_sha256": "4cd40e690f23bf37cbcad34efd6758e062df1df07c86833f7e3ce95bf1fa38cc",
+      "name": "attrs",
+      "version": "26.1.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/audioread-3.1.0.dist-info/METADATA",
+      "metadata_sha256": "fb8bd8b902ba9ba56d0f9b11caf031819b12fd5d1c59815e3776598d291f6846",
+      "name": "audioread",
+      "version": "3.1.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/babel-2.18.0.dist-info/METADATA",
+      "metadata_sha256": "11399bc03a6b81fd20e8b82823392052a8db969a8ef150382b0cf5996afcf41a",
+      "name": "babel",
+      "version": "2.18.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/beautifulsoup4-4.15.0.dist-info/METADATA",
+      "metadata_sha256": "b2f888103259f1607c85f3b1163be1bc49fc9941a3243c3b89a21075bfc6d4fb",
+      "name": "beautifulsoup4",
+      "version": "4.15.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/blis-1.3.3.dist-info/METADATA",
+      "metadata_sha256": "535aa94ba125115b4c5af94f067168f0bb38f227bfa7d1b5dccf56e66ff66cb4",
+      "name": "blis",
+      "version": "1.3.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/catalogue-2.0.10.dist-info/METADATA",
+      "metadata_sha256": "570324cbd96a88587fd07f0cc7c29e0bc3c92b6d097d32e09775f8fcdd6576d2",
+      "name": "catalogue",
+      "version": "2.0.10"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/certifi-2026.7.22.dist-info/METADATA",
+      "metadata_sha256": "ef5af1638fbb23676ac3c5777dfcfc2cd9c348fe4172ed5ba3d277655b248090",
+      "name": "certifi",
+      "version": "2026.7.22"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/cffi-2.1.1.dist-info/METADATA",
+      "metadata_sha256": "558bafb9093a8e790175d9ecff9688382981d744877dad86fd6770db0f4dc918",
+      "name": "cffi",
+      "version": "2.1.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/charset_normalizer-3.5.2.dist-info/METADATA",
+      "metadata_sha256": "89ce6362bb7be88558f4be99a98f5d1b4da93d19cd0323e5ee0bac05cf883dfb",
+      "name": "charset-normalizer",
+      "version": "3.5.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/click-8.5.0.dist-info/METADATA",
+      "metadata_sha256": "e87bce0bd194de70dfb8e708e0a6b0483009f25611804eaf87bfeb63e6c20501",
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/cloudpathlib-0.26.0.dist-info/METADATA",
+      "metadata_sha256": "8d1d5c34dda3f5bf5de110807876fd44d35fbb26ba1a4ef6e49674b370f16745",
+      "name": "cloudpathlib",
+      "version": "0.26.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/cloudpickle-3.1.2.dist-info/METADATA",
+      "metadata_sha256": "3d0263bfe9ee4f23b244bdcaff73acbe7a1957ebf82743b6ae42693adc48d721",
+      "name": "cloudpickle",
+      "version": "3.1.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/cobble-0.1.4.dist-info/METADATA",
+      "metadata_sha256": "6eb2cf88cfb39b884adde1eff7d8f89f80b256572eb0c6c164d6f99943dbd49f",
+      "name": "cobble",
+      "version": "0.1.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/cohere_melody-0.15.2.dist-info/METADATA",
+      "metadata_sha256": "24b355997c672dfee22c1007d0e334c14d7ee25571aec2f95a4969b6b9cba68e",
+      "name": "cohere_melody",
+      "version": "0.15.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/confection-1.3.3.dist-info/METADATA",
+      "metadata_sha256": "19791218537d8fe97ed57409c2784f7c7c7e7f443df2d08d7042187e32effad3",
+      "name": "confection",
+      "version": "1.3.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/cryptography-50.0.2.dist-info/METADATA",
+      "metadata_sha256": "047cfc71226409de4318b360aef15c63a2adf609731e3dcf7fe932f14ea042ee",
+      "name": "cryptography",
+      "version": "50.0.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/csvw-4.1.0.dist-info/METADATA",
+      "metadata_sha256": "32498a2bfd45f70040fd50d517edda8f9c1326781071f83c909967495fa6848b",
+      "name": "csvw",
+      "version": "4.1.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/cymem-2.0.13.dist-info/METADATA",
+      "metadata_sha256": "615faac88aa1a2a800731e4add6f0be60967502a37a9c9b3bfd8feed5cc4f99a",
+      "name": "cymem",
+      "version": "2.0.13"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/ddgs-9.16.0.dist-info/METADATA",
+      "metadata_sha256": "c056cbb64e058022e1441e5c17d051c1029160b744ad7db920bd2769b499fcbd",
+      "name": "ddgs",
+      "version": "9.16.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/decorator-5.3.1.dist-info/METADATA",
+      "metadata_sha256": "2133792485403bbd739e1db5960228bedbcde6d00c0acc052b27f39dbae5b5c4",
+      "name": "decorator",
+      "version": "5.3.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/defusedxml-0.7.1.dist-info/METADATA",
+      "metadata_sha256": "369d3cef64870daf849fba711cb8d05a7efe3c8d9ab0f763adc34079fe378bb1",
+      "name": "defusedxml",
+      "version": "0.7.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/dill-0.4.1.dist-info/METADATA",
+      "metadata_sha256": "040d6c84eddf29c8c14dc2aef214962a919803f557243824dd4f8aa3b49e3868",
+      "name": "dill",
+      "version": "0.4.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/dlinfo-2.0.0.dist-info/METADATA",
+      "metadata_sha256": "380c36fadd6b34f01daa6a4ab51379cd2563b47f9ffbf40f7c700bb0a68df138",
+      "name": "dlinfo",
+      "version": "2.0.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/docopt-0.6.2.dist-info/METADATA",
+      "metadata_sha256": "d4c3ef35e6f87c733814ee02bcd50e34c431f4044195d4f997a79201f49c5176",
+      "name": "docopt",
+      "version": "0.6.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/en_core_web_sm-3.8.0.dist-info/METADATA",
+      "metadata_sha256": "a19f30538c12b7fd15f390c55335990847e2f3f67eeb984a3257a40b2f9cb2ff",
+      "name": "en_core_web_sm",
+      "version": "3.8.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/espeakng_loader-0.2.4.dist-info/METADATA",
+      "metadata_sha256": "dd7a4afdebbe21be5cce77b22da72c779da3ba15e1b9a7dd2bd401d4e7f514ee",
+      "name": "espeakng-loader",
+      "version": "0.2.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/fastapi-0.143.2.dist-info/METADATA",
+      "metadata_sha256": "5f9e4d0df80cc17d7b7b85a0a90e9e31da158a7b375143c4b19fa298601dfda4",
+      "name": "fastapi",
+      "version": "0.143.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/filelock-4.2.0.dist-info/METADATA",
+      "metadata_sha256": "aed783f71f21438a0fe5adbfefe066081e719c262094cf38c493e5bf2529c96b",
+      "name": "filelock",
+      "version": "4.2.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/flatbuffers-25.12.19.dist-info/METADATA",
+      "metadata_sha256": "9f38239f96faa21522a6aadab6912e1e560708bbe9c9f696a0679c9403fa089e",
+      "name": "flatbuffers",
+      "version": "25.12.19"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/frozenlist-1.8.0.dist-info/METADATA",
+      "metadata_sha256": "946c22dc9f7e2c76f2d698f00a4306dbe49a820e2b3f1a0e22fe5286cbec35f1",
+      "name": "frozenlist",
+      "version": "1.8.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/fsspec-2026.7.0.dist-info/METADATA",
+      "metadata_sha256": "88b1657585de14e3bb82aa5278aa9595b30aa4ca74ead073d8950615c808099d",
+      "name": "fsspec",
+      "version": "2026.7.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/h11-0.16.0.dist-info/METADATA",
+      "metadata_sha256": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64",
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/hf_xet-1.7.0.dist-info/METADATA",
+      "metadata_sha256": "05975b1239f188bb418539f178ef68a693ea6824f20c30583a02eea94faf650a",
+      "name": "hf-xet",
+      "version": "1.7.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/httpcore-1.0.9.dist-info/METADATA",
+      "metadata_sha256": "fe2d4fda6199128978779e0cf27f3c045c531863fcdd987eacc74f3a18d41c21",
+      "name": "httpcore",
+      "version": "1.0.9"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/httpcore2-2.13.1.dist-info/METADATA",
+      "metadata_sha256": "37a0ea0674e98b7c3a1f99c17d9bb5457de27a0f93c8b6560c9d17d525139abb",
+      "name": "httpcore2",
+      "version": "2.13.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/httpx-0.28.1.dist-info/METADATA",
+      "metadata_sha256": "febb9b0f8f3e80d57c8199c304f35c4336e8581d1d18d7983c92766b82793b25",
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/httpx2-2.13.1.dist-info/METADATA",
+      "metadata_sha256": "b75b03a003b5593e000907cf7239fcc3f688b8f17db4ecff883d11221ea988fc",
+      "name": "httpx2",
+      "version": "2.13.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/huggingface_hub-1.33.0.dist-info/METADATA",
+      "metadata_sha256": "bee565776d66f486d224f74024b656a69ed42e2639d80b18811fca4365adc42e",
+      "name": "huggingface_hub",
+      "version": "1.33.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/idna-3.20.dist-info/METADATA",
+      "metadata_sha256": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85",
+      "name": "idna",
+      "version": "3.20"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/isodate-0.7.2.dist-info/METADATA",
+      "metadata_sha256": "90bc9d1eee7c3c97fd3a52001dece07c0f9b480cfc8fbbf767ca4ae0ab848529",
+      "name": "isodate",
+      "version": "0.7.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/itsdangerous-2.2.0.dist-info/METADATA",
+      "metadata_sha256": "d2b934fb56708a1b94e439f0255c0f5a8108e3258ec827b18a1dc9c991db9611",
+      "name": "itsdangerous",
+      "version": "2.2.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/METADATA",
+      "metadata_sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8",
+      "name": "Jinja2",
+      "version": "3.1.6"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/joblib-1.6.0.dist-info/METADATA",
+      "metadata_sha256": "c5fd6509906c5795fd6724d97bc1709d1f266b78aff92c0156d6cf5ad7c045e3",
+      "name": "joblib",
+      "version": "1.6.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/jsonschema-4.26.0.dist-info/METADATA",
+      "metadata_sha256": "05b189866ca98a96da3934bf6b83687ced3ff85325273b77e16b705f6d8b26d2",
+      "name": "jsonschema",
+      "version": "4.26.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/jsonschema_specifications-2025.9.1.dist-info/METADATA",
+      "metadata_sha256": "35abd41757f32b4ea24756920ded47b70173d77cbc052a5a6d3ab583b2e8d89d",
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/language_tags-1.3.1.dist-info/METADATA",
+      "metadata_sha256": "91c72915f82e56169e421da6f32a083c179fe2c9600d6d1960f4999a285692b2",
+      "name": "language-tags",
+      "version": "1.3.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/lazy_loader-0.6.dist-info/METADATA",
+      "metadata_sha256": "9cd369edae6bf499af0c1acee15d0389361036907742690ac504f9b3b84d56b3",
+      "name": "lazy-loader",
+      "version": "0.6"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/librosa-0.11.0.dist-info/METADATA",
+      "metadata_sha256": "5aaba06be0f28ca1ca776f8884fc0945f752a38d7ddca249403644d6f685c6d3",
+      "name": "librosa",
+      "version": "0.11.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/llguidance-1.9.1.dist-info/METADATA",
+      "metadata_sha256": "e1bf99993163af223606a46fa290418b4976c3218bd459bc2ab40875e5a1828d",
+      "name": "llguidance",
+      "version": "1.9.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/llvmlite-0.50.0.dist-info/METADATA",
+      "metadata_sha256": "8f1269fc707c42d99b010322f95da3fc46a9ad3c542080fa0bc6d9deab6a9c05",
+      "name": "llvmlite",
+      "version": "0.50.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/lxml-6.1.3.dist-info/METADATA",
+      "metadata_sha256": "aad89f8107bc74045b86c9b7f7c0984196102520dd7faed5e4e45693b7c315ef",
+      "name": "lxml",
+      "version": "6.1.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/magika-0.6.3.dist-info/METADATA",
+      "metadata_sha256": "052ef6c3221375b3bbdef606bb5ebbfadd82fb03c0706891345f68615c7833a0",
+      "name": "magika",
+      "version": "0.6.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mammoth-1.11.0.dist-info/METADATA",
+      "metadata_sha256": "2d8df8645264b14efcaae3a5800c4c86ee0fdfaea9769882a324bac2caaa54f9",
+      "name": "mammoth",
+      "version": "1.11.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/METADATA",
+      "metadata_sha256": "72c36ff516755443b1ecb61e17b2567a990230b49a504b0eb0c42d5f82448a9c",
+      "name": "markdown-it-py",
+      "version": "4.2.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/markdownify-1.2.3.dist-info/METADATA",
+      "metadata_sha256": "4b457b9a3b3c6e7c87277a5157f9f99588b6cf89ee16ae20c8a019c6a66f6e2b",
+      "name": "markdownify",
+      "version": "1.2.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/markitdown-0.1.8.dist-info/METADATA",
+      "metadata_sha256": "bec6784f46e30de93cb04073b4007afe22cb35f0179a3eefe0dac6311c8d1c16",
+      "name": "markitdown",
+      "version": "0.1.8"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/markupsafe-3.0.4.dist-info/METADATA",
+      "metadata_sha256": "66767d76388ece15d49d50dafb655891ef5d868715e7128e7f7d737a70b353c4",
+      "name": "MarkupSafe",
+      "version": "3.0.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mcp-2.3.0.dist-info/METADATA",
+      "metadata_sha256": "a94577513a4fa0cb639c279c1ad6f4d49650872d45f2f4ab9bb2d9c2a505d457",
+      "name": "mcp",
+      "version": "2.3.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mcp_types-2.3.0.dist-info/METADATA",
+      "metadata_sha256": "eb973e8b7f53d52ab1df9d1f18854ffa84f074f6052e310089e2655961c48ca9",
+      "name": "mcp-types",
+      "version": "2.3.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mdurl-0.1.2.dist-info/METADATA",
+      "metadata_sha256": "b53b29d48f499367053fda3c81e7ce27d2558380ebbf83e66023b02eb7ddd25d",
+      "name": "mdurl",
+      "version": "0.1.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/miniaudio-1.71.dist-info/METADATA",
+      "metadata_sha256": "ba288dad68e1cc8690e91045df6ecfe46c232742086ff364ddb7788256c6071e",
+      "name": "miniaudio",
+      "version": "1.71"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/misaki-0.9.4.dist-info/METADATA",
+      "metadata_sha256": "90a060bb617b1ffa63b2220ca42200a56093e76c0899c1684684cede80086e39",
+      "name": "misaki",
+      "version": "0.9.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mistral_common-1.12.0.dist-info/METADATA",
+      "metadata_sha256": "5a9b4b2cfb8ee8b4e2aae7f820f02f354d514a3af29bab4da9f7e0d829b2524d",
+      "name": "mistral_common",
+      "version": "1.12.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mlx-0.32.4.dist-info/METADATA",
+      "metadata_sha256": "6dc55fc01204e315150f5153b414a8d299708511895069686d0d62ae15694f13",
+      "name": "mlx",
+      "version": "0.32.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mlx_audio-0.5.7.dist-info/METADATA",
+      "metadata_sha256": "0209d627fa8058a8b5b2dcab458bf99878c44d06f0786c02ff3dc239e59b9324",
+      "name": "mlx-audio",
+      "version": "0.5.7"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mlx_embeddings-0.1.0.dist-info/METADATA",
+      "metadata_sha256": "848149cf4c65aaac7583d849dc0046fb87018e9bc78b19f2f7968a0cae3d30ab",
+      "name": "mlx-embeddings",
+      "version": "0.1.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mlx_lm-0.31.4.dev132+g94cdcae13.dist-info/METADATA",
+      "metadata_sha256": "a43a3deceef969b64ff401a382873cf15ad03411da45147d1a88f7c58b9d8748",
+      "name": "mlx-lm",
+      "version": "0.31.4.dev132+g94cdcae13"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mlx_metal-0.32.4.dist-info/METADATA",
+      "metadata_sha256": "7f9177a2aa757749046d35ce83833d5e28dce7834c987b75ef753e5b69a68f1a",
+      "name": "mlx-metal",
+      "version": "0.32.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/mlx_vlm-0.7.8.dist-info/METADATA",
+      "metadata_sha256": "74fa2ee60ad2af66d2b820eb3b5fa2bf8065d1f93e1732fc04ad613e18e4750b",
+      "name": "mlx-vlm",
+      "version": "0.7.8"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/modelscope-1.40.2.dist-info/METADATA",
+      "metadata_sha256": "99aa5fc45b6e5535a9e6f8c98e4a87d7477c57dbea2b4585c6e1a539403d45b9",
+      "name": "modelscope",
+      "version": "1.40.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/modelscope_hub-0.4.6.dist-info/METADATA",
+      "metadata_sha256": "d3bb43830ff5a74d59aeb2223db82a7d50870d6ddd7755b66f3bcd1a2b2e1a95",
+      "name": "modelscope-hub",
+      "version": "0.4.6"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/msgpack-1.2.3.dist-info/METADATA",
+      "metadata_sha256": "f47c09192e9f4f81b8b4a63979473a13f7a63c67dcdc41be2e0f97353a9dc5b4",
+      "name": "msgpack",
+      "version": "1.2.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/multidict-7.1.0.dist-info/METADATA",
+      "metadata_sha256": "fe2db435bc86c7e62a42cc1f5b0c0650ba4fd1b05a420413f14085f8a3730e62",
+      "name": "multidict",
+      "version": "7.1.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/multiprocess-0.70.19.dist-info/METADATA",
+      "metadata_sha256": "24146d46d724ce041d187426babb43dc5a6a4cd5d1acad0d7fc0d12693376fa5",
+      "name": "multiprocess",
+      "version": "0.70.19"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/murmurhash-1.0.15.dist-info/METADATA",
+      "metadata_sha256": "e3b1f1ffa44da7ce73e64ece028991d1c9c52b5d466b2586575ea822a03dfd6e",
+      "name": "murmurhash",
+      "version": "1.0.15"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/narwhals-2.27.1.dist-info/METADATA",
+      "metadata_sha256": "5962ef236f36fe34aff21a837a0698386dcb1f0de54462aa18b73698e6ef1a4f",
+      "name": "narwhals",
+      "version": "2.27.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/num2words-0.5.14.dist-info/METADATA",
+      "metadata_sha256": "7b5b9217db18274db0fdb75c1e7dee83c61be4f408be4d9d796a2253d55786df",
+      "name": "num2words",
+      "version": "0.5.14"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/numba-0.68.0.dist-info/METADATA",
+      "metadata_sha256": "b3bbd7c095b9d0b410d778176e2824ea5be21e982e63e8d4fc7c8fdb82f98df7",
+      "name": "numba",
+      "version": "0.68.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/numpy-2.3.5.dist-info/METADATA",
+      "metadata_sha256": "9a8af38022f35d13e9b56b1e16122cf0a65b67333c25d08e0551bf9b8fca7587",
+      "name": "numpy",
+      "version": "2.3.5"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/onnxruntime-1.31.0.dist-info/METADATA",
+      "metadata_sha256": "49d642d98f88dc138508e87888dea36d54ea9a3cd2865ed0a97ce599a9d39428",
+      "name": "onnxruntime",
+      "version": "1.31.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/openai_harmony-0.0.8.dist-info/METADATA",
+      "metadata_sha256": "e72ad275f15de2b08167dee35a971f688793712cd81520a1ceb27c4d3a6af2c0",
+      "name": "openai-harmony",
+      "version": "0.0.8"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/opencv_python-5.0.0.93.dist-info/METADATA",
+      "metadata_sha256": "20749df4e7500c53075dee344cd02f63d4df0dce93526e49e7e1c90fbc094e3e",
+      "name": "opencv-python",
+      "version": "5.0.0.93"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/opentelemetry_api-1.45.1.dist-info/METADATA",
+      "metadata_sha256": "5bc71e90cb421be92a43bf5ad5b0f25dccfa2a24ddceaa2877779879962a4c9e",
+      "name": "opentelemetry-api",
+      "version": "1.45.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/packaging-26.3.dist-info/METADATA",
+      "metadata_sha256": "70fdb89fc4d4a9a043bf7372b8972bcc883fddff34ab55e9cf80d73875384763",
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/paroquant-0.1.14.dist-info/METADATA",
+      "metadata_sha256": "9665d01bfb8f7fc88dbc2918e888a13e9fdde0475fc13216459228e7e8c61b99",
+      "name": "paroquant",
+      "version": "0.1.14"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pdfminer_six-20260107.dist-info/METADATA",
+      "metadata_sha256": "4ca427c77b90fe19db60c0b3b8dbb4c0adc82979d089ec2f1b9238acff15ff9c",
+      "name": "pdfminer.six",
+      "version": "20260107"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pdfplumber-0.11.10.dist-info/METADATA",
+      "metadata_sha256": "11a7f2c3a00208fe38389ad3022fbcde4610aec3b9ded312d82701eda1f56c23",
+      "name": "pdfplumber",
+      "version": "0.11.10"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/phonemizer_fork-3.3.2.dist-info/METADATA",
+      "metadata_sha256": "8b85e61f526e6abc4cfe2f9dbf56dfc6a436a16941163186f686f632b43ea64d",
+      "name": "phonemizer-fork",
+      "version": "3.3.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pillow-12.3.0.dist-info/METADATA",
+      "metadata_sha256": "8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8",
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/platformdirs-4.13.0.dist-info/METADATA",
+      "metadata_sha256": "b41f474d5fb53a7de4a4a79c08f13c3a8cc675fe2c5522be8ce1b063e695dc7d",
+      "name": "platformdirs",
+      "version": "4.13.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pooch-1.9.0.dist-info/METADATA",
+      "metadata_sha256": "7a67b1fba8575748276b1abee0db0d0c7d673d1f4f8f404699e949f1359da962",
+      "name": "pooch",
+      "version": "1.9.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/preshed-3.0.13.dist-info/METADATA",
+      "metadata_sha256": "52df36fb1dc14a7d67da1bf440d7198214c688b53a571da0a443d531b387eb88",
+      "name": "preshed",
+      "version": "3.0.13"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/primp-2.0.1.dist-info/METADATA",
+      "metadata_sha256": "50f4bb350b46e8a006206a7f26155a881956aae3f53f393eae0608bd6e8ee7d3",
+      "name": "primp",
+      "version": "2.0.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/propcache-0.5.4.dist-info/METADATA",
+      "metadata_sha256": "6ed3bac0ad43050ceaf8bd09878ba3d673c94c4da0d4498f903f86c36cc6fb57",
+      "name": "propcache",
+      "version": "0.5.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/protobuf-7.36.2.dist-info/METADATA",
+      "metadata_sha256": "445916389cc3a87d5f815d763192372a17a221339d474cb661523157bf07d61c",
+      "name": "protobuf",
+      "version": "7.36.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/psutil-7.2.2.dist-info/METADATA",
+      "metadata_sha256": "525f8ba78523cf7bc3759d62a105e7c57fd679ea702402b9449fb0746aa0217f",
+      "name": "psutil",
+      "version": "7.2.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pycountry-26.2.16.dist-info/METADATA",
+      "metadata_sha256": "2e1290b19e66b7b1c4805214bdc22d84e8aa4ff28bd048059554e2432a791fad",
+      "name": "pycountry",
+      "version": "26.2.16"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pycparser-3.11.dist-info/METADATA",
+      "metadata_sha256": "e3a74c846648bb55f4f907284b745e2003b87b96d9c9d17a8a50cf37804541c9",
+      "name": "pycparser",
+      "version": "3.11"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pydantic-2.14.1.dist-info/METADATA",
+      "metadata_sha256": "4d4c8e8d5e6a27d5208f0d7949f25628e6747133034969d4d1399b1ad5394036",
+      "name": "pydantic",
+      "version": "2.14.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pydantic_core-2.50.1.dist-info/METADATA",
+      "metadata_sha256": "ae6817764b603fa2300cd31b9566ecc33476df46163c4150fffc353121a166f2",
+      "name": "pydantic_core",
+      "version": "2.50.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pydantic_extra_types-2.11.1.dist-info/METADATA",
+      "metadata_sha256": "50031a8ca40aaf2c0155b132e2d376e03c5c50745a8dc46471c2eaba9f514447",
+      "name": "pydantic-extra-types",
+      "version": "2.11.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pygments-2.21.0.dist-info/METADATA",
+      "metadata_sha256": "1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43",
+      "name": "Pygments",
+      "version": "2.21.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pyjwt-2.15.1.dist-info/METADATA",
+      "metadata_sha256": "1ea0c9f139b8c928276b3628af165955f6f764491448a6ad8f103cdcbb382da3",
+      "name": "PyJWT",
+      "version": "2.15.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pyloudnorm-0.2.0.dist-info/METADATA",
+      "metadata_sha256": "403211cc9961454871bf8fa2650db26678e69bbffe765fb332b8ae79a80c006b",
+      "name": "pyloudnorm",
+      "version": "0.2.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pyparsing-3.3.3.dist-info/METADATA",
+      "metadata_sha256": "f2ca34052d720622d300023472ef8ae94fe5b57d69acbb28a8667f6dd0e13497",
+      "name": "pyparsing",
+      "version": "3.3.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pypdfium2-5.14.0.dist-info/METADATA",
+      "metadata_sha256": "85fbd6fb9c6373299cde6898171c376f3ac6095a5d2eefd2e358573980f82955",
+      "name": "pypdfium2",
+      "version": "5.14.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/python_dateutil-2.9.0.post0.dist-info/METADATA",
+      "metadata_sha256": "a9d436da322be808332f98d88325998e87cb693a678a9969feb4cfad729a6e93",
+      "name": "python-dateutil",
+      "version": "2.9.0.post0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/python_dotenv-1.2.4.dist-info/METADATA",
+      "metadata_sha256": "87cfee6042412d48df1100ea7822684988c3f2b79de7a250f4717f4df3026d6f",
+      "name": "python-dotenv",
+      "version": "1.2.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/python_multipart-0.0.32.dist-info/METADATA",
+      "metadata_sha256": "e9d399d7dea5eddf0e4d24b5c24687a82e7e50bf2c2b30f8f8a06a64d887dd86",
+      "name": "python-multipart",
+      "version": "0.0.32"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/python_pptx-1.0.2.dist-info/METADATA",
+      "metadata_sha256": "d38c6af5f1817cc528706264d8343cd1c95dbdec5672f29b944f54f79134a3a2",
+      "name": "python-pptx",
+      "version": "1.0.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/pyyaml-6.0.3.dist-info/METADATA",
+      "metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34",
+      "name": "PyYAML",
+      "version": "6.0.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/rdflib-7.6.0.dist-info/METADATA",
+      "metadata_sha256": "29c569443738a45bfd85dd37865a038d7e19e5cb282dd3bd5f80f149d8d1f552",
+      "name": "rdflib",
+      "version": "7.6.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/referencing-0.37.0.dist-info/METADATA",
+      "metadata_sha256": "c93b00e6ab1524fd60848376604c189a114374776475c25a31d57be47b29de6a",
+      "name": "referencing",
+      "version": "0.37.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/regex-2026.9.29.dist-info/METADATA",
+      "metadata_sha256": "33859377dbf8dd38ee3de73fd97faebf4a63d50576e3cc1a9dfe44df08b0936a",
+      "name": "regex",
+      "version": "2026.9.29"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/requests-2.34.2.dist-info/METADATA",
+      "metadata_sha256": "8c384ba3e979480faae2859d3c5e6c1276dd2c3616e322e124d52c8cfc556f27",
+      "name": "requests",
+      "version": "2.34.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/rfc3986-1.5.0.dist-info/METADATA",
+      "metadata_sha256": "aa4b8207f89f832a6d84d4baf8cf8838a962f85dd83d1f31cce3973c712ed96a",
+      "name": "rfc3986",
+      "version": "1.5.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/rich-15.0.0.dist-info/METADATA",
+      "metadata_sha256": "fad34fc603fac4481bf81f8dd629492fc302c0ec31909c86644751512afb2e3b",
+      "name": "rich",
+      "version": "15.0.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/rpds_py-2026.9.1.dist-info/METADATA",
+      "metadata_sha256": "5d72dca2e387c8d2b4180b68ee87c15b64751e059100a6db58891ec9995445c3",
+      "name": "rpds-py",
+      "version": "2026.9.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/safetensors-0.8.0.dist-info/METADATA",
+      "metadata_sha256": "645be7b8d55e91534f991d144dc9e279581ea8dbea1a8c5b0be14e529d01e345",
+      "name": "safetensors",
+      "version": "0.8.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/scikit_learn-1.9.1.dist-info/METADATA",
+      "metadata_sha256": "32e503c710a61e4e04be4edb450f9f8141233ac6af3f3db59a877667538fa4ec",
+      "name": "scikit-learn",
+      "version": "1.9.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/scipy-1.17.1.dist-info/METADATA",
+      "metadata_sha256": "b1cd2c784f6e003c6c71af4c5ee57f6370ee467d17b656250d9fd38cf579d7d0",
+      "name": "scipy",
+      "version": "1.17.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/segments-2.4.0.dist-info/METADATA",
+      "metadata_sha256": "1d337da7a0f8ca58956e4e8e482b4b531bb4237b81486d012e0684b125c1060d",
+      "name": "segments",
+      "version": "2.4.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/sentencepiece-0.2.2.dist-info/METADATA",
+      "metadata_sha256": "bb49c79797fff1b8f3048efd4849d86dce4adbe26f7f3f0a5b37239a59d88ee8",
+      "name": "sentencepiece",
+      "version": "0.2.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/setproctitle-1.3.8.dist-info/METADATA",
+      "metadata_sha256": "8093ff8af9357364b865abc215932a8e19f8e139007ba9516cde5331d526d281",
+      "name": "setproctitle",
+      "version": "1.3.8"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/setuptools-84.0.0.dist-info/METADATA",
+      "metadata_sha256": "3ef2975718dd31cabdd5829455e9b868ca14dbf79ed8fed2de0af4e87347006e",
+      "name": "setuptools",
+      "version": "84.0.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/shellingham-1.5.4.dist-info/METADATA",
+      "metadata_sha256": "183d80220a37493262795739dd357cc5bb3f49bd390cc9198d5180e5451a07fa",
+      "name": "shellingham",
+      "version": "1.5.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/six-1.17.0.dist-info/METADATA",
+      "metadata_sha256": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468",
+      "name": "six",
+      "version": "1.17.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/smart_open-8.0.3.dist-info/METADATA",
+      "metadata_sha256": "411e7195a8cf5b50fb59ccc475a2e409f4bb8e5a3c346a85153f37006eb5a214",
+      "name": "smart_open",
+      "version": "8.0.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/socksio-1.0.0.dist-info/METADATA",
+      "metadata_sha256": "bbfa5fe1625dadce138e24ff9c161b6499c4f33cd6b0adde62ef3531a6870286",
+      "name": "socksio",
+      "version": "1.0.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/sounddevice-0.5.6.dist-info/METADATA",
+      "metadata_sha256": "0e95620083c46c892d3c78f5cae5db01d63814db395c1b170d2c013cb9e0b4de",
+      "name": "sounddevice",
+      "version": "0.5.6"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/soundfile-0.14.0.dist-info/METADATA",
+      "metadata_sha256": "266fbe4cb310c5222edd5216564149585c55395db7b29630f2e4b0ff8ac9cd47",
+      "name": "soundfile",
+      "version": "0.14.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/soupsieve-3.0.3.dist-info/METADATA",
+      "metadata_sha256": "f76db712b0fadfee975fb519a46cc7f7b92979dc0ca297004fffc97b0a1f5f7c",
+      "name": "soupsieve",
+      "version": "3.0.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/soxr-1.1.0.dist-info/METADATA",
+      "metadata_sha256": "4e2130ae330b85d863346ac935888e66d6816d8e934b6f4416614e8d22a4dc2e",
+      "name": "soxr",
+      "version": "1.1.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/spacy-3.8.16.dist-info/METADATA",
+      "metadata_sha256": "f7e3c7b28d3dd4856541c416c0874a34408fbaa8450dec8feb44ef8640ca9274",
+      "name": "spacy",
+      "version": "3.8.16"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/spacy_legacy-3.0.12.dist-info/METADATA",
+      "metadata_sha256": "d7d8fd88b4c1a701001877c575575049a22449481344d7e798b2637a2555dfd2",
+      "name": "spacy-legacy",
+      "version": "3.0.12"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/spacy_loggers-1.0.5.dist-info/METADATA",
+      "metadata_sha256": "18a091c9186a04bc9032859fd2ad3f853101ebe5aabff066391f0e584e692b73",
+      "name": "spacy-loggers",
+      "version": "1.0.5"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/srsly-2.5.4.dist-info/METADATA",
+      "metadata_sha256": "19b11ee9c724a02f3722ec6c58788a70a70734f9070dfef629dbfbf021da8919",
+      "name": "srsly",
+      "version": "2.5.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/sse_starlette-3.5.0.dist-info/METADATA",
+      "metadata_sha256": "6dc401682bdae1a3e1f31b1c320b7f926c354643993840393875ebfc171c9014",
+      "name": "sse-starlette",
+      "version": "3.5.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/starlette-1.8.0.dist-info/METADATA",
+      "metadata_sha256": "551e8d74d290002521c655b816b27654e49922b88cb474c8d710a893099036f8",
+      "name": "starlette",
+      "version": "1.8.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/tabulate-0.10.0.dist-info/METADATA",
+      "metadata_sha256": "38dfc6db689745ff4c3890b3c30ef7e5d0b156fdbeeb765b9027fd917043d84b",
+      "name": "tabulate",
+      "version": "0.10.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/termcolor-3.3.0.dist-info/METADATA",
+      "metadata_sha256": "880aeaba6300677d4ecc022fb63f8adcd57a753b6fd2b5ec17841f722f910196",
+      "name": "termcolor",
+      "version": "3.3.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/thinc-8.3.13.dist-info/METADATA",
+      "metadata_sha256": "151e4f7732eb618431031e5945aef62898bd729c32e2a28c8378af15809df1f0",
+      "name": "thinc",
+      "version": "8.3.13"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/threadpoolctl-3.7.0.dist-info/METADATA",
+      "metadata_sha256": "09b19e721560cd12246402d44e53c1ede5194b8398ef60822f02cab86ccf8d1f",
+      "name": "threadpoolctl",
+      "version": "3.7.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/tiktoken-0.14.0.dist-info/METADATA",
+      "metadata_sha256": "30086725221223f7a19463e71c0e9f79fe7aba9125b36632c00bf50a23fa968a",
+      "name": "tiktoken",
+      "version": "0.14.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/tokenizers-0.23.3.dist-info/METADATA",
+      "metadata_sha256": "87032ea29ec14be956ce0f15d164a8f436d6f1adbe19b261d6c179d9184f5cba",
+      "name": "tokenizers",
+      "version": "0.23.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/tqdm-4.70.1.dist-info/METADATA",
+      "metadata_sha256": "a5da70b966afea3a759716041bad7187f2ece02c22348cf9e7c0a512bbf15f57",
+      "name": "tqdm",
+      "version": "4.70.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/transformers-5.17.0.dist-info/METADATA",
+      "metadata_sha256": "cd295c5ad2c605e3c04456740df174e6a1bf5418eb2563788dc2163253f6d882",
+      "name": "transformers",
+      "version": "5.17.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/truststore-0.10.5.dist-info/METADATA",
+      "metadata_sha256": "1fd496f290853214e630d96f7163d2dd916f84ebe634b58aa827d6853e8f8610",
+      "name": "truststore",
+      "version": "0.10.5"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/typer-0.27.3.dist-info/METADATA",
+      "metadata_sha256": "fc2cbb86c4fd175326b63427e9a3fa13e79364d7333a945414d9c6ac80c0f0e4",
+      "name": "typer",
+      "version": "0.27.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/typing_extensions-4.16.0.dist-info/METADATA",
+      "metadata_sha256": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46",
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/typing_inspection-0.4.4.dist-info/METADATA",
+      "metadata_sha256": "bad3d9e6342ef6750cf5128ec942327b8bebdce0b6e4d6f67cb15b27ae5118da",
+      "name": "typing-inspection",
+      "version": "0.4.4"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/uritemplate-4.2.0.dist-info/METADATA",
+      "metadata_sha256": "352afd43b6f1ab8f94ca31af2a1ad4f0d1a94dbd712c1b6d9e44e35d4bb3a962",
+      "name": "uritemplate",
+      "version": "4.2.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/urllib3-2.8.0.dist-info/METADATA",
+      "metadata_sha256": "10898c620e8007c030e07fa5622b68358a43010025dfbd78a1cb797699de2bb4",
+      "name": "urllib3",
+      "version": "2.8.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/uvicorn-0.54.0.dist-info/METADATA",
+      "metadata_sha256": "9399e5ddda3d26e842d6fb5420c38b0857aac568d53badbdc224b3a21339efa8",
+      "name": "uvicorn",
+      "version": "0.54.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/wasabi-1.1.3.dist-info/METADATA",
+      "metadata_sha256": "428dba3283ea8a4059eff38495ac22d58f9c29b7c9ff12df3e796c209a96d069",
+      "name": "wasabi",
+      "version": "1.1.3"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/weasel-1.0.0.dist-info/METADATA",
+      "metadata_sha256": "a16824512ee2fec38c83720e7c7f0fcbaabff69e047820953418088bf4adc6b0",
+      "name": "weasel",
+      "version": "1.0.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/webrtcvad-2.0.10.dist-info/METADATA",
+      "metadata_sha256": "1f848dd24faf18159ca1b669014b616ec02d2d8a198dbea9a6553d118e7d8a2c",
+      "name": "webrtcvad",
+      "version": "2.0.10"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/websockets-17.2.dist-info/METADATA",
+      "metadata_sha256": "0d5f1279d095e7ba84ef21614af0822dc500ccb2e51b7c3a19eda7159b2dade4",
+      "name": "websockets",
+      "version": "17.2"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/wrapt-2.5.1.dist-info/METADATA",
+      "metadata_sha256": "166ca07d308c14c3e9dfe028c6389bf1a439027fe7b389d33eedb7d002e8bafb",
+      "name": "wrapt",
+      "version": "2.5.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/wsproto-1.2.0.dist-info/METADATA",
+      "metadata_sha256": "57b108f5afa05d2dcd2f17986265aab5ffcc90c7dea46a13174dc8691f8e570a",
+      "name": "wsproto",
+      "version": "1.2.0"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/xgrammar-0.2.8.dist-info/METADATA",
+      "metadata_sha256": "91ffa7936f8bde807ef453245bb41617818b06190d610f9777b135f746197bd8",
+      "name": "xgrammar",
+      "version": "0.2.8"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/xlsxwriter-3.2.9.dist-info/METADATA",
+      "metadata_sha256": "10d504f188e087f07a06b9038ed0535f37ac072c232e60c075ddb0aedb7b7d78",
+      "name": "xlsxwriter",
+      "version": "3.2.9"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/xxhash-4.0.1.dist-info/METADATA",
+      "metadata_sha256": "c09b864a32b9501a18e6c0e88cf5ee34c8ff304475c59e6d825812f136f3cb38",
+      "name": "xxhash",
+      "version": "4.0.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/yarl-1.25.1.dist-info/METADATA",
+      "metadata_sha256": "fd6baa258a11c4d7e7008272a69180d4d34aa04a6a5afda36ac5e55aa0aa4f41",
+      "name": "yarl",
+      "version": "1.25.1"
+    },
+    {
+      "metadata_relative_path": "Python/framework-mlx-base/lib/python3.11/site-packages/zstandard-0.25.0.dist-info/METADATA",
+      "metadata_sha256": "03d37736b26b9ae48451dd17026d93dffbd252fb708c1a2a9ae1be0c0966de92",
+      "name": "zstandard",
+      "version": "0.25.0"
+    }
+  ],
+  "package_versions_in_frozen_overall_plan": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.31.4.dev132+g94cdcae13",
+    "mlx-vlm": "0.7.8",
+    "numpy": "2.3.5",
+    "transformers": "5.17.0"
+  },
+  "public_runtime": {
+    "commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+    "cp311_wheel_sha256": "5b1487bd09fd85da6e7566cd94f0e4b30be03277e49a9250811cf05addc9b26e",
+    "cp311_wheel_url": "https://github.com/jundot/omlx/releases/download/v0.7.1rc1/omlx-0.7.1rc1-cp311-cp311-macosx_15_0_universal2.whl",
+    "release_url": "https://github.com/jundot/omlx/releases/tag/v0.7.1rc1",
+    "tag": "v0.7.1rc1",
+    "wheel_limit": "Prior read-only inspection found all five expected native paths but different file hashes. No ABI or behavior incompatibility is inferred. DMG contents and full embedded dependency equivalence were not checked."
+  },
+  "status": "historical-external-dependency-receipt-not-a-lockfile-or-installer"
+}

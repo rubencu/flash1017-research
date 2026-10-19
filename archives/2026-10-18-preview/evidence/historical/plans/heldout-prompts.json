@@ -1,0 +1,40 @@
+{
+  "held-code-1k": {
+    "text": "Implement a fully documented Python module for a dependency graph. Include deterministic topological ordering, incremental edge insertion, cycle diagnostics with a concrete cycle path, edge removal, serialization, and at least twenty unit tests. Write at least 250 lines and start with code.",
+    "prompt_tokens": 1024,
+    "max_tokens": 512,
+    "temperature": 1.0,
+    "force_length": true
+  },
+  "held-prose-1k": {
+    "text": "Write a detailed 2000-word engineering guide explaining how a city water-distribution system maintains pressure and water quality. Cover gravity, pumps, storage tanks, demand peaks, leak detection, transient pressure, and sensor placement. Begin directly with the guide.",
+    "context": "Water distribution is governed by conservation of mass and pressure losses. Demand varies by location and time. Pumps add head, and pipes dissipate energy through friction. Storage tanks buffer changes in demand.\n",
+    "prompt_tokens": 1024,
+    "max_tokens": 512,
+    "temperature": 1.0,
+    "force_length": true
+  },
+  "held-code-16k": {
+    "text": "Write a Python module for a durable append-only event journal. Include framing, checksums, recovery after truncated writes, atomic index rebuilding, filtering, and a comprehensive suite of failure-injection tests. Explain invariants in comments. Aim for at least 300 lines, beginning with the implementation.",
+    "context": "class EventJournal:\n    def append(self, event):\n        encoded = encode_event(event)\n        checksum = checksum_bytes(encoded)\n        frame = encode_length(len(encoded)) + encoded + checksum\n        self.file.write(frame)\n        self.file.flush()\n\n",
+    "prompt_tokens": 16384,
+    "max_tokens": 512,
+    "temperature": 1.0,
+    "force_length": true
+  },
+  "held-prose-16k": {
+    "text": "Write an extensive design review of an island electrical microgrid powered by solar panels, wind turbines, batteries and backup generators. Include scheduling, reserve margins, forecasting errors, seasonal effects, maintenance, and measurement plans. Write at least 2000 words and begin directly with the review.",
+    "context": "A microgrid must balance supply and demand at every instant. Battery state of charge is bounded. Forecasts carry uncertainty. Reliability depends on independent reserves and safe transitions between operating modes.\n",
+    "prompt_tokens": 16384,
+    "max_tokens": 512,
+    "temperature": 1.0,
+    "force_length": true
+  },
+  "warmup": {
+    "text": "Write a comprehensive Python graph module with at least 200 lines of implementation and tests.",
+    "prompt_tokens": 1024,
+    "max_tokens": 96,
+    "temperature": 1.0,
+    "force_length": true
+  }
+}

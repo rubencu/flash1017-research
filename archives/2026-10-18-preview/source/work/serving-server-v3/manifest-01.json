@@ -1,0 +1,38 @@
+{
+  "status": "frozen_for_server_qualification",
+  "qualification": false,
+  "scope": "New server wrapper CPU/source freeze only; no server or MLX invocation and no candidate profile created.",
+  "timestamp_utc": "2026-10-18T11:39:05.820360+00:00",
+  "baseline": {
+    "profile_sha256": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da"
+  },
+  "cpu_validation": {
+    "tests": 20,
+    "passed": 20,
+    "independently_reviewed": true,
+    "mlx_imported": false,
+    "http_executed": false
+  },
+  "sources_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-server-v3/serve_candidate.py": "772b1be8e53f17a754cae1c58b129d0a0a609e229186e1008c2f5f46d54baa1f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-server-v3/test_cpu.py": "dbe3c77b2bdef35cefcc335201c8ee878143c23ec2bafbc6fe037b2a405ad277",
+    "${ORIGINAL_LAB_ROOT}/work/serving-server-v3/design.json": "72e09155e731181a247644fe6934380e13aaac89f9c12971cd3c9ec897f01ae0",
+    "${ORIGINAL_LAB_ROOT}/work/serving-server-v3/unload-audit.json": "8ac1162d4ddd0cf2d9a5385722ed6bce0056ebdbe129ceb4e732f68fdb17124d",
+    "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/runtime.py": "d0656e8b5bf8e87adac844d6ca5de4556f42022d5833266f6ca75fe2d8861f98",
+    "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/evidence.py": "ffecaefb212e99426c2ea600517893c9fd08fd2b9d63a4e8eb8a0e5f8e473a4c",
+    "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/execution-manifest-01.json": "2c8ebc4ca96ae514e9d237aac7cb1c5a6555b46f5d4d6ecb6c9234ba7045bcad",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/cone_serving.py": "4c02a58440aa2ee79e16572fac20e775be35da52a5171bd314cbe5b394c633fb",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/manifest-01.json": "77b86682cb858889df293e4c229dc218d9beaf89d51fcc763cfe4336b052fa33",
+    "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633",
+    "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80",
+    "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/serving_cache.py": "0254590a69f88ff9adb213caaed897ed62e4c6ba2265ef08802925ea126f1c2a",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/hot_rows_upstream.py": "341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/UPSTREAM-LICENSE": "de69b4352c9952cd5f0f4b8cb4584782a07f02c9ba82aeb5d496aa2b7fe5457d",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/provenance.json": "dc85e733ce7fd6ba24841034b3e1f32cde3e205b7ba73a3747bcd883ec83b3a6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/manifest.json": "6a8a3d7869c9cf9f2b8071f466b61d69fcee68e330521db8bf3ec214642e6324",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/qualified-profile.json": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/provenance.json": "b5d54492cf217d77f6e45cf7d7dcdd3fbb51f6d98817ac04de3c93576df89692",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/checkpoint-hashes.json": "926e2b8c29d9d81d307d2812d4f24265d9a77d0bcd6b231f0bd29473caf5868f"
+  }
+}

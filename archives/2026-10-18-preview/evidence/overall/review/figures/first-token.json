@@ -1,0 +1,104 @@
+{
+  "title": "Time to the first token",
+  "supplement_sha256": "671d28c2918d3df0434f29bcfaf42e4e8ae6831fd534bfd16be4ed9f385c519c",
+  "caveat": "All 48 measurements retained. Early answer endings do not affect this endpoint.",
+  "scope": "Geometric means; bars span the two block means, not confidence intervals",
+  "groups": [
+    {
+      "input_tokens": 1024,
+      "arms": [
+        {
+          "arm": "native2048",
+          "requests": 4,
+          "geomean_seconds": 1.362652907540327,
+          "block_means_seconds": [
+            1.360062400152081,
+            1.3652483490613954
+          ]
+        },
+        {
+          "arm": "native8192",
+          "requests": 4,
+          "geomean_seconds": 1.363481122585555,
+          "block_means_seconds": [
+            1.3351529150731585,
+            1.3924103753653556
+          ]
+        },
+        {
+          "arm": "complete",
+          "requests": 4,
+          "geomean_seconds": 1.3544338016572506,
+          "block_means_seconds": [
+            1.3492736501675864,
+            1.3596136875895115
+          ]
+        }
+      ]
+    },
+    {
+      "input_tokens": 16384,
+      "arms": [
+        {
+          "arm": "native2048",
+          "requests": 8,
+          "geomean_seconds": 27.477437311963513,
+          "block_means_seconds": [
+            27.195021277580675,
+            27.76278619260754
+          ]
+        },
+        {
+          "arm": "native8192",
+          "requests": 8,
+          "geomean_seconds": 35.64423750298104,
+          "block_means_seconds": [
+            37.3892154065448,
+            33.98069880189365
+          ]
+        },
+        {
+          "arm": "complete",
+          "requests": 8,
+          "geomean_seconds": 18.633609277032384,
+          "block_means_seconds": [
+            18.697051182483644,
+            18.570382639503748
+          ]
+        }
+      ]
+    },
+    {
+      "input_tokens": 65536,
+      "arms": [
+        {
+          "arm": "native2048",
+          "requests": 4,
+          "geomean_seconds": 142.0981427809606,
+          "block_means_seconds": [
+            145.62345976283405,
+            138.65816822841086
+          ]
+        },
+        {
+          "arm": "native8192",
+          "requests": 4,
+          "geomean_seconds": 201.03873504309425,
+          "block_means_seconds": [
+            201.05809112891492,
+            201.0193808207055
+          ]
+        },
+        {
+          "arm": "complete",
+          "requests": 4,
+          "geomean_seconds": 126.94414845906535,
+          "block_means_seconds": [
+            130.16190856285328,
+            123.80593528417425
+          ]
+        }
+      ]
+    }
+  ]
+}

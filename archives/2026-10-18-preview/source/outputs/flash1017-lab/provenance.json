@@ -1,0 +1,44 @@
+{
+  "hardware": "Apple M5 Ultra, 80 GPU cores, 256 GiB unified memory",
+  "checkpoint": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "source_revision": "1bae0e1088993b9b82de08f59de5be5a34e42170",
+  "quantized_checkpoint": "mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+  "quantized_revision": "78456115d301eecf9fadcdcc81c0cf6f8b2c8eab",
+  "baseline": "oMLX.app 0.7.1rc1",
+  "mlx_version": "0.32.4",
+  "baseline_files_sha256": {
+    "patches/deepseek_v41/language.py": "e66470945439ed8ce3e007801344fea4b66ff79566284e9b7744c8843713eaa8",
+    "patches/deepseek_v41/config.py": "89b7bae64c2d7ae84384e7c0230915dd839ce7fed2126b101053221080547bda",
+    "patches/deepseek_v41/dspark.py": "bb1eb7c859d0855acd76415a02b4f1857b0e3e8699390bda2462567063e01aad",
+    "patches/mlx_lm_mtp/batch_generator.py": "51817ceeed8a2416f7b5896e81465c7a5e8b311a95357dc967636b8cffbae232",
+    "patches/deepseek_v41/loading.py": "104408ea7dfa05b886bd0d8ecc0359c31317f581f4538b5860cd1951edc062a1",
+    "patches/deepseek_v41/head.py": "4cc40064caa7b304d4a8288dbc91c085cc6b10b9ce3704415cfce1ef03893a43"
+  },
+  "research": [
+    {
+      "url": "https://arxiv.org/abs/2607.05147",
+      "idea": "DSpark confidence scheduling; causal early stopping is required to avoid selection bias."
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.19438",
+      "idea": "M5 cooperative tensor kernels primarily accelerate compute-bound prefill; do not assume decode gains."
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.17063",
+      "idea": "FlashMoE expert-cache recency/frequency policies, relevant only when expert offload is needed."
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.24787",
+      "idea": "Predict transfers rather than replacing expert routing; prediction misses should cost latency, not correctness."
+    },
+    {
+      "url": "https://huggingface.co/gnahzhang/DeepSeek-V4.1-Flash-1017-LSQ3-G128-MLX",
+      "idea": "Existing 1017 reference-arithmetic correction and exact metadata compression; prior art, not our novelty claim."
+    },
+    {
+      "url": "https://omlx.ai/benchmarks/performance/q494wr2b",
+      "idea": "Closest published 1017/M5 Ultra/256GB baseline; author-reported, not locally reproduced yet."
+    }
+  ],
+  "runtime_source_checkout": "165be1ff5933a020f2f5a7544e1e95a2797f777f"
+}

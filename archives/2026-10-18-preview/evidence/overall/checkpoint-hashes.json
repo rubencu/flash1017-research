@@ -1,0 +1,743 @@
+{
+  "repo": "mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+  "revision": "78456115d301eecf9fadcdcc81c0cf6f8b2c8eab",
+  "directory": "${USER_HOME}/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+  "status": "complete_hash_verified",
+  "files": {
+    ".gitattributes": {
+      "size": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "checked_against": "Hub Git blob SHA-1",
+      "expected": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "verified": true,
+      "fingerprint": [
+        2004869,
+        1519,
+        1792280536306651859
+      ]
+    },
+    "LICENSE": {
+      "size": 1084,
+      "sha256": "f2c6c602815669d292889e5be8c802f2ed950653b77999b1584e8e6aed25d040",
+      "checked_against": "Hub Git blob SHA-1",
+      "expected": "d62e3bef9f054f21b7fc616365850fbf879a99ff",
+      "verified": true,
+      "fingerprint": [
+        2004868,
+        1084,
+        1792280536302431882
+      ]
+    },
+    "README.md": {
+      "size": 2646,
+      "sha256": "27f581b561f85374fc46f89dcaa160f2d39b93154bc0dce869fc8b821a51c2d5",
+      "checked_against": "Hub Git blob SHA-1",
+      "expected": "624cfe75d2916516a256c0d14bd772a1ceca53c8",
+      "verified": true,
+      "fingerprint": [
+        2004854,
+        2646,
+        1792280536238022399
+      ]
+    },
+    "config.json": {
+      "size": 134355,
+      "sha256": "74259bebe816bb248eb075a9c285c64eb705d9ced63777ef5b0a9263b06793c6",
+      "checked_against": "Hub Git blob SHA-1",
+      "expected": "0400d132040fc8361a98def8d75a3a8f45ae8668",
+      "verified": true,
+      "fingerprint": [
+        2004859,
+        134355,
+        1792280536263088089
+      ]
+    },
+    "model-00003-of-00053.safetensors": {
+      "size": 4009238327,
+      "sha256": "e65f647085e2b5ec750efca6968e38a3c91ab3a1e372b258394fc60b4de999d5",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "e65f647085e2b5ec750efca6968e38a3c91ab3a1e372b258394fc60b4de999d5",
+      "verified": true,
+      "fingerprint": [
+        2011904,
+        4009238327,
+        1792281205287465289
+      ]
+    },
+    "model-00004-of-00053.safetensors": {
+      "size": 4348774056,
+      "sha256": "17482bd34bcd322f4f3a0b08d0c51c8ef4acb709833524e7ec3d0ae533ff34d8",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "17482bd34bcd322f4f3a0b08d0c51c8ef4acb709833524e7ec3d0ae533ff34d8",
+      "verified": true,
+      "fingerprint": [
+        2004885,
+        4348774056,
+        1792280656477426685
+      ]
+    },
+    "model-00005-of-00053.safetensors": {
+      "size": 4175101799,
+      "sha256": "2f61f330080c169a57937f713de1bab4e4bd99a8976e4e918e495b1129dd36da",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "2f61f330080c169a57937f713de1bab4e4bd99a8976e4e918e495b1129dd36da",
+      "verified": true,
+      "fingerprint": [
+        2011906,
+        4175101799,
+        1792281181406303599
+      ]
+    },
+    "model-00006-of-00053.safetensors": {
+      "size": 4999380429,
+      "sha256": "0d14ad3a3fc82c04b20fb797a23a7378308004d63f9303ed2c21a9d30495fb4c",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "0d14ad3a3fc82c04b20fb797a23a7378308004d63f9303ed2c21a9d30495fb4c",
+      "verified": true,
+      "fingerprint": [
+        2011959,
+        4999380429,
+        1792281576973067202
+      ]
+    },
+    "model-00007-of-00053.safetensors": {
+      "size": 4967329053,
+      "sha256": "d2f0c25c83224643b498cd3b6f8ac2234939479cda11bbae93c031dc96bdbbb0",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "d2f0c25c83224643b498cd3b6f8ac2234939479cda11bbae93c031dc96bdbbb0",
+      "verified": true,
+      "fingerprint": [
+        2011976,
+        4967329053,
+        1792281624962152929
+      ]
+    },
+    "model-00008-of-00053.safetensors": {
+      "size": 4899088564,
+      "sha256": "5c33bfe5fffcaea55efd2a04124f7a0d5cd9ee853c668e53805b372f39cc3e56",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "5c33bfe5fffcaea55efd2a04124f7a0d5cd9ee853c668e53805b372f39cc3e56",
+      "verified": true,
+      "fingerprint": [
+        2012715,
+        4899088564,
+        1792281991828129057
+      ]
+    },
+    "model-00009-of-00053.safetensors": {
+      "size": 4362562444,
+      "sha256": "895c4be427ada59bd331086fa7021bb99f0bef7485e98a6687b2d89889b2ae42",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "895c4be427ada59bd331086fa7021bb99f0bef7485e98a6687b2d89889b2ae42",
+      "verified": true,
+      "fingerprint": [
+        2012740,
+        4362562444,
+        1792281978138746215
+      ]
+    },
+    "model-00010-of-00053.safetensors": {
+      "size": 4175101835,
+      "sha256": "d684cc9845e1e646aa0d2c2a098f7f3bcf6b416469bdc6cadd9228ff1cff7107",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "d684cc9845e1e646aa0d2c2a098f7f3bcf6b416469bdc6cadd9228ff1cff7107",
+      "verified": true,
+      "fingerprint": [
+        2013138,
+        4175101835,
+        1792282332439057879
+      ]
+    },
+    "model-00011-of-00053.safetensors": {
+      "size": 4175101799,
+      "sha256": "7762a1cc5a7f20a9ccb131cebb1dc7aa39442f4037207b4d37845f0b9053ac4d",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "7762a1cc5a7f20a9ccb131cebb1dc7aa39442f4037207b4d37845f0b9053ac4d",
+      "verified": true,
+      "fingerprint": [
+        2013150,
+        4175101799,
+        1792282340922943811
+      ]
+    },
+    "model-00001-of-00053.safetensors": {
+      "size": 61442669536,
+      "sha256": "690072f5285b87c546f3f201a335d80e9fb9d2ebac42adb10661fc597ef75ac4",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "690072f5285b87c546f3f201a335d80e9fb9d2ebac42adb10661fc597ef75ac4",
+      "verified": true,
+      "fingerprint": [
+        2011902,
+        61442669536,
+        1792282406160439746
+      ]
+    },
+    "model-00002-of-00053.safetensors": {
+      "size": 61440987296,
+      "sha256": "4631630246946c8e7a9137c343cef999e937b59f1542f8fcf3963ac1ca828627",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "4631630246946c8e7a9137c343cef999e937b59f1542f8fcf3963ac1ca828627",
+      "verified": true,
+      "fingerprint": [
+        2011903,
+        61440987296,
+        1792282467026656846
+      ]
+    },
+    "model-00012-of-00053.safetensors": {
+      "size": 4999380431,
+      "sha256": "00c34b2395faa5887b7fffc4d7c10e4edc3f9415930948596fbc6aa51cf1417c",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "00c34b2395faa5887b7fffc4d7c10e4edc3f9415930948596fbc6aa51cf1417c",
+      "verified": true,
+      "fingerprint": [
+        2015091,
+        4999380431,
+        1792282528843054993
+      ]
+    },
+    "model-00013-of-00053.safetensors": {
+      "size": 4967329025,
+      "sha256": "a77400eac6a268ccb576fd75cd1c4861f18ca58e573a2f5b31853b847d578fe7",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "a77400eac6a268ccb576fd75cd1c4861f18ca58e573a2f5b31853b847d578fe7",
+      "verified": true,
+      "fingerprint": [
+        2015103,
+        4967329025,
+        1792282561162277527
+      ]
+    },
+    "model-00014-of-00053.safetensors": {
+      "size": 4045806070,
+      "sha256": "f3e83acd99d935f646468bc7f377fd266c14e1b4ef46b512a2430c9b6992cd8a",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "f3e83acd99d935f646468bc7f377fd266c14e1b4ef46b512a2430c9b6992cd8a",
+      "verified": true,
+      "fingerprint": [
+        2015837,
+        4045806070,
+        1792282593206867622
+      ]
+    },
+    "model-00015-of-00053.safetensors": {
+      "size": 3608870785,
+      "sha256": "4ebef9afe16d3a0e3324d71016a663c5b8665c2b7b0e6d979dcdad8f5bb175b8",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "4ebef9afe16d3a0e3324d71016a663c5b8665c2b7b0e6d979dcdad8f5bb175b8",
+      "verified": true,
+      "fingerprint": [
+        2016026,
+        3608870785,
+        1792282628593945046
+      ]
+    },
+    "model-00016-of-00053.safetensors": {
+      "size": 3620258969,
+      "sha256": "6a9d001e14a13a5b99da3ebc61c9dbf7c37d149b9cd6b7e569b6edb8b3c67dae",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "6a9d001e14a13a5b99da3ebc61c9dbf7c37d149b9cd6b7e569b6edb8b3c67dae",
+      "verified": true,
+      "fingerprint": [
+        2016066,
+        3620258969,
+        1792282664884294708
+      ]
+    },
+    "model-00017-of-00053.safetensors": {
+      "size": 4999380431,
+      "sha256": "d10a9f011e23b598d38a8896b5195ca8bdcbd5609b410a514ef1e89202e79100",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "d10a9f011e23b598d38a8896b5195ca8bdcbd5609b410a514ef1e89202e79100",
+      "verified": true,
+      "fingerprint": [
+        2016180,
+        4999380431,
+        1792282699440587447
+      ]
+    },
+    "model-00018-of-00053.safetensors": {
+      "size": 3988686369,
+      "sha256": "018947debdd66d3fd519dbfd8df5b4c5babac3972744773b25ab41b249b49caf",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "018947debdd66d3fd519dbfd8df5b4c5babac3972744773b25ab41b249b49caf",
+      "verified": true,
+      "fingerprint": [
+        2016196,
+        3988686369,
+        1792282727458466481
+      ]
+    },
+    "model-00019-of-00053.safetensors": {
+      "size": 3614616238,
+      "sha256": "9991cbdaeaac671065f814b9c6625f79046ae8aff6d44969d84e0a5843c98621",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "9991cbdaeaac671065f814b9c6625f79046ae8aff6d44969d84e0a5843c98621",
+      "verified": true,
+      "fingerprint": [
+        2016214,
+        3614616238,
+        1792282724143502618
+      ]
+    },
+    "model-00020-of-00053.safetensors": {
+      "size": 3614616190,
+      "sha256": "8324a9b2c6057b7827c4b3824995a436de68f6930f02bff2ed684f522786a5ae",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "8324a9b2c6057b7827c4b3824995a436de68f6930f02bff2ed684f522786a5ae",
+      "verified": true,
+      "fingerprint": [
+        2016240,
+        3614616190,
+        1792282758337487082
+      ]
+    },
+    "model-00021-of-00053.safetensors": {
+      "size": 4816910916,
+      "sha256": "7d290a6f52f6669c38d59efbe1acd838d1493696edc691b7e75e8e87dfe38844",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "7d290a6f52f6669c38d59efbe1acd838d1493696edc691b7e75e8e87dfe38844",
+      "verified": true,
+      "fingerprint": [
+        2016262,
+        4816910916,
+        1792282828898845535
+      ]
+    },
+    "model-00022-of-00053.safetensors": {
+      "size": 4524815454,
+      "sha256": "283414e9d1204d2bca0cdb5488e161ca27f31b13433761e1a6b063d48f1e5274",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "283414e9d1204d2bca0cdb5488e161ca27f31b13433761e1a6b063d48f1e5274",
+      "verified": true,
+      "fingerprint": [
+        2016282,
+        4524815454,
+        1792282868944305709
+      ]
+    },
+    "model-00023-of-00053.safetensors": {
+      "size": 3608870777,
+      "sha256": "64486463ea1ffd222ba2c9d35be2e0cb7709fc7e5c5322e95a2d0a7843493c68",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "64486463ea1ffd222ba2c9d35be2e0cb7709fc7e5c5322e95a2d0a7843493c68",
+      "verified": true,
+      "fingerprint": [
+        2016287,
+        3608870777,
+        1792282872438904640
+      ]
+    },
+    "model-00024-of-00053.safetensors": {
+      "size": 3608870714,
+      "sha256": "8a2869db21b8001cd81e0e5dea7a945acaa9275c2fc831d852f7505d9da35419",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "8a2869db21b8001cd81e0e5dea7a945acaa9275c2fc831d852f7505d9da35419",
+      "verified": true,
+      "fingerprint": [
+        2016422,
+        3608870714,
+        1792282889266756376
+      ]
+    },
+    "model-00025-of-00053.safetensors": {
+      "size": 3963618074,
+      "sha256": "4dbb196370d04ce2af739d84c85c883b855c03fe8d5b94e5a4b32e39cecd620d",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "4dbb196370d04ce2af739d84c85c883b855c03fe8d5b94e5a4b32e39cecd620d",
+      "verified": true,
+      "fingerprint": [
+        2016472,
+        3963618074,
+        1792282904520634455
+      ]
+    },
+    "model-00026-of-00053.safetensors": {
+      "size": 3608870767,
+      "sha256": "6a2af4126a70f21fa62bafa24508aed00bb17ddc833fb8b510fd3a718bdcdeb2",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "6a2af4126a70f21fa62bafa24508aed00bb17ddc833fb8b510fd3a718bdcdeb2",
+      "verified": true,
+      "fingerprint": [
+        2016495,
+        3608870767,
+        1792282996623125490
+      ]
+    },
+    "model-00027-of-00053.safetensors": {
+      "size": 3608870719,
+      "sha256": "70bb62ac9b6484546d6eedd1cb66fa30baa2373a68ffe17fd752d34628d593ee",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "70bb62ac9b6484546d6eedd1cb66fa30baa2373a68ffe17fd752d34628d593ee",
+      "verified": true,
+      "fingerprint": [
+        2016499,
+        3608870719,
+        1792282997975086293
+      ]
+    },
+    "model-00028-of-00053.safetensors": {
+      "size": 4996102982,
+      "sha256": "54448da3dc87ec7a2290c84895f2919e8f1a8c09592866f69ad087915608c89d",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "54448da3dc87ec7a2290c84895f2919e8f1a8c09592866f69ad087915608c89d",
+      "verified": true,
+      "fingerprint": [
+        2016509,
+        4996102982,
+        1792283042353034616
+      ]
+    },
+    "model-00029-of-00053.safetensors": {
+      "size": 4147751297,
+      "sha256": "505e26d961fe8b7f495838d017ddcd284f4ff08964010c26dc059d7b121df65f",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "505e26d961fe8b7f495838d017ddcd284f4ff08964010c26dc059d7b121df65f",
+      "verified": true,
+      "fingerprint": [
+        2016522,
+        4147751297,
+        1792283092618919573
+      ]
+    },
+    "model-00030-of-00053.safetensors": {
+      "size": 3608870760,
+      "sha256": "8c4102ab91fc33d45cfadcc070c574892c7200de2093506f57d1e574ef684db5",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "8c4102ab91fc33d45cfadcc070c574892c7200de2093506f57d1e574ef684db5",
+      "verified": true,
+      "fingerprint": [
+        2016561,
+        3608870760,
+        1792283136751564972
+      ]
+    },
+    "model-00031-of-00053.safetensors": {
+      "size": 4999380407,
+      "sha256": "8880ce8dd0177047cb5567aa87eb59826e82c9200021b1626264ecd659c9da64",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "8880ce8dd0177047cb5567aa87eb59826e82c9200021b1626264ecd659c9da64",
+      "verified": true,
+      "fingerprint": [
+        2016566,
+        4999380407,
+        1792283148474067164
+      ]
+    },
+    "model-00032-of-00053.safetensors": {
+      "size": 3988686373,
+      "sha256": "9c391613f32ab2cf0eb84f6333b40c34bc80fdbfad5e21fb74a8846e97a47dde",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "9c391613f32ab2cf0eb84f6333b40c34bc80fdbfad5e21fb74a8846e97a47dde",
+      "verified": true,
+      "fingerprint": [
+        2016588,
+        3988686373,
+        1792283200665608775
+      ]
+    },
+    "model-00033-of-00053.safetensors": {
+      "size": 3608870807,
+      "sha256": "d7f369b96704ea26d4c30d1c59978f3cb6dfa6ebeedbd002c505785f53e6af48",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "d7f369b96704ea26d4c30d1c59978f3cb6dfa6ebeedbd002c505785f53e6af48",
+      "verified": true,
+      "fingerprint": [
+        2016616,
+        3608870807,
+        1792283208121702172
+      ]
+    },
+    "model-00036-of-00053.safetensors": {
+      "size": 4055251634,
+      "sha256": "e99920e790020d9040e70013499f369b9632910205ff45c9ab0b088746c4d8e6",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "e99920e790020d9040e70013499f369b9632910205ff45c9ab0b088746c4d8e6",
+      "verified": true,
+      "fingerprint": [
+        2016706,
+        4055251634,
+        1792283269491526779
+      ]
+    },
+    "model-00034-of-00053.safetensors": {
+      "size": 3608870757,
+      "sha256": "53952fad0c4438ca83244e0e0e2386b989ef479b1c0513eebfd62d7843d1eef4",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "53952fad0c4438ca83244e0e0e2386b989ef479b1c0513eebfd62d7843d1eef4",
+      "verified": true,
+      "fingerprint": [
+        2016629,
+        3608870757,
+        1792283282150826728
+      ]
+    },
+    "model-00035-of-00053.safetensors": {
+      "size": 4996102958,
+      "sha256": "bb8029fd0bebf78d40df4394426ff9c4a4645accee35880aaf22997f67086b8f",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "bb8029fd0bebf78d40df4394426ff9c4a4645accee35880aaf22997f67086b8f",
+      "verified": true,
+      "fingerprint": [
+        2016639,
+        4996102958,
+        1792283294090085442
+      ]
+    },
+    "model-00037-of-00053.safetensors": {
+      "size": 3608870754,
+      "sha256": "ac5304bf189cc5f9823944e5446724af45d02823b63d5728085e58874bc0a9c2",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "ac5304bf189cc5f9823944e5446724af45d02823b63d5728085e58874bc0a9c2",
+      "verified": true,
+      "fingerprint": [
+        2016786,
+        3608870754,
+        1792283380292583170
+      ]
+    },
+    "model-00038-of-00053.safetensors": {
+      "size": 4999380447,
+      "sha256": "2f977b56a603c35237fd5ed8e1c275f73f5a669332159898c62b04765f950c64",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "2f977b56a603c35237fd5ed8e1c275f73f5a669332159898c62b04765f950c64",
+      "verified": true,
+      "fingerprint": [
+        2016843,
+        4999380447,
+        1792283420851674899
+      ]
+    },
+    "model-00039-of-00053.safetensors": {
+      "size": 4967329057,
+      "sha256": "c0cd705b2b9fca0708b8843d5ebad5967cca87c8eb2a10008641f9a6d4472e2e",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "c0cd705b2b9fca0708b8843d5ebad5967cca87c8eb2a10008641f9a6d4472e2e",
+      "verified": true,
+      "fingerprint": [
+        2016946,
+        4967329057,
+        1792283423792556492
+      ]
+    },
+    "model-00040-of-00053.safetensors": {
+      "size": 4954552978,
+      "sha256": "3ce88605d2ff2c820c06a72f7c44602919259c21410ea1ba711233c5f01118a2",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "3ce88605d2ff2c820c06a72f7c44602919259c21410ea1ba711233c5f01118a2",
+      "verified": true,
+      "fingerprint": [
+        2016952,
+        4954552978,
+        1792283500528612847
+      ]
+    },
+    "model-00041-of-00053.safetensors": {
+      "size": 4979676287,
+      "sha256": "54d281c86a354ca67eba7daeee276052170295e207057b7b196cabf1a2de88e1",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "54d281c86a354ca67eba7daeee276052170295e207057b7b196cabf1a2de88e1",
+      "verified": true,
+      "fingerprint": [
+        2017285,
+        4979676287,
+        1792283503179032470
+      ]
+    },
+    "model-00042-of-00053.safetensors": {
+      "size": 4356166276,
+      "sha256": "a08daf93926698ffb1483c9ef49887a09535b2a9bf9a941dcade0d1ae1222efb",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "a08daf93926698ffb1483c9ef49887a09535b2a9bf9a941dcade0d1ae1222efb",
+      "verified": true,
+      "fingerprint": [
+        2017308,
+        4356166276,
+        1792283505920391795
+      ]
+    },
+    "model-00043-of-00053.safetensors": {
+      "size": 3608870714,
+      "sha256": "8556e8837d03da94080e6127750a747af10b9855b4bd4d1417703bd57e2bc26b",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "8556e8837d03da94080e6127750a747af10b9855b4bd4d1417703bd57e2bc26b",
+      "verified": true,
+      "fingerprint": [
+        2017312,
+        3608870714,
+        1792283560484297652
+      ]
+    },
+    "model-00044-of-00053.safetensors": {
+      "size": 4995448857,
+      "sha256": "ffda3e4c9b0d664a346abcda6b61a90fc2630c89c74a80d1e5f4675fee8511b9",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "ffda3e4c9b0d664a346abcda6b61a90fc2630c89c74a80d1e5f4675fee8511b9",
+      "verified": true,
+      "fingerprint": [
+        2017350,
+        4995448857,
+        1792283638602959113
+      ]
+    },
+    "model-00045-of-00053.safetensors": {
+      "size": 4985608575,
+      "sha256": "024967c9c223b93b517f23cef4c287893f3a30138aa2f42908a077e83299c9aa",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "024967c9c223b93b517f23cef4c287893f3a30138aa2f42908a077e83299c9aa",
+      "verified": true,
+      "fingerprint": [
+        2017360,
+        4985608575,
+        1792283686550903682
+      ]
+    },
+    "model-00046-of-00053.safetensors": {
+      "size": 4954552992,
+      "sha256": "ca6b389468d18f58957155f5e91a6bd33e378b30e92b323bec7ee2248911b09d",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "ca6b389468d18f58957155f5e91a6bd33e378b30e92b323bec7ee2248911b09d",
+      "verified": true,
+      "fingerprint": [
+        2017364,
+        4954552992,
+        1792283695233080141
+      ]
+    },
+    "model-00048-of-00053.safetensors": {
+      "size": 3027807227,
+      "sha256": "219c41ffbc8a21f2e9e817075d20d7c03406c9db4fb5db665cb2a07b27e9330a",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "219c41ffbc8a21f2e9e817075d20d7c03406c9db4fb5db665cb2a07b27e9330a",
+      "verified": true,
+      "fingerprint": [
+        2017691,
+        3027807227,
+        1792283742994612080
+      ]
+    },
+    "model-00047-of-00053.safetensors": {
+      "size": 4985626655,
+      "sha256": "e993d833a030a26dbf946cda2e0acf88c9fe8340499a20f6fb712314d14184d4",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "e993d833a030a26dbf946cda2e0acf88c9fe8340499a20f6fb712314d14184d4",
+      "verified": true,
+      "fingerprint": [
+        2017426,
+        4985626655,
+        1792283770741760437
+      ]
+    },
+    "model-00049-of-00053.safetensors": {
+      "size": 3608870759,
+      "sha256": "356bfd033a08f1d6ed75b7aeb00d4fdd4f65122bbd3b42e8bb0844f60bcfc9a7",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "356bfd033a08f1d6ed75b7aeb00d4fdd4f65122bbd3b42e8bb0844f60bcfc9a7",
+      "verified": true,
+      "fingerprint": [
+        2017708,
+        3608870759,
+        1792283824040633664
+      ]
+    },
+    "model-00050-of-00053.safetensors": {
+      "size": 3608870755,
+      "sha256": "f038dbfe17f8321f3c10247dabcd9e45e292c39b9c2d2e7348057e4d59725614",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "f038dbfe17f8321f3c10247dabcd9e45e292c39b9c2d2e7348057e4d59725614",
+      "verified": true,
+      "fingerprint": [
+        2017712,
+        3608870755,
+        1792283826101845648
+      ]
+    },
+    "model.safetensors.index.json": {
+      "size": 196079,
+      "sha256": "cf5d05c50ce04258ece0b1d47f9abb9f8ff0eeb62665088042b3088a866714d0",
+      "checked_against": "Hub Git blob SHA-1",
+      "expected": "0290303a357cc375a8201a5d750730ba2026dcba",
+      "verified": true,
+      "fingerprint": [
+        2017775,
+        196079,
+        1792283828504596267
+      ]
+    },
+    "quantization_report.json": {
+      "size": 53402,
+      "sha256": "afaffd6a6136b30a01f1385598d7a4508dd797f48cff7cac658222ba923250c6",
+      "checked_against": "Hub Git blob SHA-1",
+      "expected": "4af82e5b239dec9f3dcb0a70213056b5d7946ca8",
+      "verified": true,
+      "fingerprint": [
+        2017781,
+        53402,
+        1792283828933273214
+      ]
+    },
+    "tokenizer.json": {
+      "size": 6367257,
+      "sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b",
+      "checked_against": "Hub Git blob SHA-1",
+      "expected": "6a15814dd25c934028034531da744c689f87ff21",
+      "verified": true,
+      "fingerprint": [
+        2017785,
+        6367257,
+        1792283830886170425
+      ]
+    },
+    "tokenizer_config.json": {
+      "size": 801,
+      "sha256": "6ac8c8dc065ed118161d02dd532749ae3f52c243deac27872134fae2f50d8547",
+      "checked_against": "Hub Git blob SHA-1",
+      "expected": "f3dad388a2bbfd6a8605bd02754acd86d9ca5112",
+      "verified": true,
+      "fingerprint": [
+        2017791,
+        801,
+        1792283831290781399
+      ]
+    },
+    "model-00051-of-00053.safetensors": {
+      "size": 4999380439,
+      "sha256": "ecb9b3964dbf0c5002f5418e5fc579159782704b7243f7babf57fa3fff339c51",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "ecb9b3964dbf0c5002f5418e5fc579159782704b7243f7babf57fa3fff339c51",
+      "verified": true,
+      "fingerprint": [
+        2017727,
+        4999380439,
+        1792283872802961078
+      ]
+    },
+    "model-00052-of-00053.safetensors": {
+      "size": 4967329015,
+      "sha256": "1139d0387ba0dae8112d8ddce96b4a09a83b3795394c43dd67d008aa2910a577",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "1139d0387ba0dae8112d8ddce96b4a09a83b3795394c43dd67d008aa2910a577",
+      "verified": true,
+      "fingerprint": [
+        2017741,
+        4967329015,
+        1792283874215289597
+      ]
+    },
+    "model-00053-of-00053.safetensors": {
+      "size": 4899088560,
+      "sha256": "0bfedd19c93893b13d8c676b998f2208b49540557c5845f6f625bc69437065c2",
+      "checked_against": "Hub LFS SHA-256",
+      "expected": "0bfedd19c93893b13d8c676b998f2208b49540557c5845f6f625bc69437065c2",
+      "verified": true,
+      "fingerprint": [
+        2017769,
+        4899088560,
+        1792283875325288599
+      ]
+    }
+  },
+  "started_at": 1792282340.351111,
+  "missing": [],
+  "completed_at": 1792283887.507812
+}

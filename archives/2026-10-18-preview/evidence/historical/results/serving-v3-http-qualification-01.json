@@ -1,0 +1,52 @@
+{
+  "status": "complete_validated",
+  "completed_at_unix": 1792326311.819561,
+  "tested_profile": "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/staged-01/candidate-profile.http-validation.json",
+  "tested_profile_sha256": "ee9508df157aba9523f23aff7665f7137afeb913483dc3bd8ada6f1c1787b6df",
+  "candidate_reports": {
+    "vision": {
+      "path": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-candidate-vision-01.json",
+      "sha256": "4933aaa20004d76dd9c0f06684e322fba8c84639d32668551f43631e23f20426",
+      "tests": 2,
+      "case": "vision-short-and-long",
+      "completed_at_unix": 1792325748.2518232
+    },
+    "sessions": {
+      "path": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-candidate-sessions-01.json",
+      "sha256": "4b44a9b49f9eff8dce78f24cb945b80355da2f35b21e7d50a457ea140978da40",
+      "tests": 7,
+      "case": "sessions",
+      "completed_at_unix": 1792325897.381176
+    },
+    "cancel": {
+      "path": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-candidate-cancel-02.json",
+      "sha256": "8449c2ce36ad8aabc76b769954ef51cb60e1f51b489c36e3d3f60c7eb9335165",
+      "tests": 2,
+      "case": "prefill-and-decode-cancellation",
+      "completed_at_unix": 1792326272.1760268
+    },
+    "lifecycle": {
+      "path": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-candidate-lifecycle-01.json",
+      "sha256": "f189958acbe10946a7194e5edf9bc3b4789b780d1bc8fd8ad2da94e274d38b95",
+      "tests": 2,
+      "case": "native-unload-and-reload",
+      "completed_at_unix": 1792326044.613701
+    }
+  },
+  "native_vision": {
+    "path": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-native-vision-01.json",
+    "sha256": "875ec3f4aa6c654d8c2e648811be12eac76a0cb65bb9a1421c59d4e008ed0ff6"
+  },
+  "manifests_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/manifest-01.json": "4cdace45a20175a9aa2a89b254e85bcee7d5aaa142e73c519ebf1dfef1bbc08f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3b/manifest-01.json": "7f46a1e70e42dace30e961b326d71b97f7fe063a51b77bd701427cea250fa4b6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/staged-01/candidate-manifest.json": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032"
+  },
+  "failed_attempt_retained": {
+    "path": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-candidate-cancel-01.json",
+    "sha256": "724cf664cbbc6f6aa68da83aa607a41328403c4875e445b9f919413e48e3c873",
+    "cause": "Test sent the short question field rather than full frozen tokens; required prefill boundary was correctly refused. Corrected test decodes and verifies complete input before HTTP."
+  },
+  "scope": "Functional live HTTP checks only, including multimodal fallback, reasoning, local stub tools, prefix reuse, queued clients, prefill/decode disconnect recovery and native unload/reload. Finite fixtures; no comparative HTTP timing or general-quality claim.",
+  "test_order": "vision, sessions, failed cancellation fixture, native unload/reload, corrected cancellation; same pinned runtime and serving profile throughout."
+}

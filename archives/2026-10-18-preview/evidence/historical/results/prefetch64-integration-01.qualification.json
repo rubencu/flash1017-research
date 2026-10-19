@@ -1,0 +1,72 @@
+{
+  "status": "complete_validated",
+  "exclusive_server_lock_held": true,
+  "profile_was_qualified": false,
+  "profile_sha256": "71fa1dc705de57ce1401d15f6b572691731db73a365b036313440cb5c54db10d",
+  "plan_sha256": "fd453abba34342ac62e60c6a42d2c765b24c5fb36e367df1654838314cc56b0f",
+  "bench_sha256": "281a09a214150bd375573fecc2a275ad71387c8a51241ce322ea2099fb5577f2",
+  "source_snapshot_manifest_sha256": "21c06ffd7c05650072347443bb306d494fe73f4a672b483bf80de23e48c74fae",
+  "checkpoint_metadata_sha256": "926e2b8c29d9d81d307d2812d4f24265d9a77d0bcd6b231f0bd29473caf5868f",
+  "checkpoint_fingerprints_verified": true,
+  "packages_verified": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.31.4.dev132+g94cdcae13",
+    "mlx-vlm": "0.7.8"
+  },
+  "initial_prefetch_bytes": 16777216,
+  "configure_events": [
+    {
+      "request_index": 0,
+      "effective_prefetch_bytes": 67108864,
+      "pending_after_configure": false
+    },
+    {
+      "request_index": 1,
+      "effective_prefetch_bytes": 67108864,
+      "pending_after_configure": false
+    }
+  ],
+  "request_checks": [
+    {
+      "passed": true,
+      "checks": {
+        "prompt": true,
+        "repeat": true,
+        "seed": true,
+        "input_count": true,
+        "input_hash": true,
+        "all_128_output_ids": true,
+        "output_count": true,
+        "decoded_text": true,
+        "finish_length": true,
+        "no_early_eos": true,
+        "fresh_kv": true
+      },
+      "reference_record_index": 3,
+      "reference_generated_tokens_sha256": "7bbe81087643075b3fc1184dc2699040da077511ff4ffc201baeafb19f6661dd"
+    },
+    {
+      "passed": true,
+      "checks": {
+        "prompt": true,
+        "repeat": true,
+        "seed": true,
+        "input_count": true,
+        "input_hash": true,
+        "all_128_output_ids": true,
+        "output_count": true,
+        "decoded_text": true,
+        "finish_length": true,
+        "no_early_eos": true,
+        "fresh_kv": true
+      },
+      "reference_record_index": 4,
+      "reference_generated_tokens_sha256": "4c446b5b99ee58f21a98452a95b43d7609138235a09ecea98c6d13c6869cf817"
+    }
+  ],
+  "model_cleanup_completed": true,
+  "source_hashes_reverified_after_cleanup": true,
+  "final_prefetch_bytes": 67108864,
+  "completed_at_unix": 1792304664.829754,
+  "raw_output_sha256": "1c8d835d3268609f5cec3a4ecf8b991cb7ed6adecb0aed7a023667685727f0b8"
+}

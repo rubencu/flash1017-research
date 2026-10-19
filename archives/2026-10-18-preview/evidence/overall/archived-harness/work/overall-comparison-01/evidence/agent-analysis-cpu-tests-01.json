@@ -1,0 +1,13 @@
+{
+  "cpu_only": true,
+  "no_model_imports": true,
+  "tests": [
+    "complete54record_fixture_exact20pctlatency25pctdecode",
+    "missingprocess_rejected_with_partialarithmetic_preserved",
+    "earlyEOS_rejected_no_silentdropping",
+    "wronginputhash_rejected",
+    "missingMTPactivity_rejected"
+  ],
+  "analyzer_sha256": "6397af6cf23857c5d6ed32cef37c0695f73d4ef38cfd57facacbedb78a827c6c",
+  "proposal_sha256": "4bb636958e499980cd18e765c050062d380390679f65b521a3ca06d8784c2bc3"
+}

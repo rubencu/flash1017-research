@@ -1,0 +1,60 @@
+2026-10-18 17:59:16,634 M5 sorted gather_qmm reroute installed (issue #2267)
+2026-10-18 17:59:16,640 Qwen3.5/3.6 MTP model patch applied (PR 990)
+2026-10-18 17:59:16,641 nemotron_h MTP chain patch applied (depth-k drafting, sequential fused verify, replay-free rollback)
+2026-10-18 17:59:16,642 MTP verify qmm patch applied (rows 2..6 split-K, 7..8 sg8, 9..24 mma)
+2026-10-18 17:59:16,642 Speculative backend selected for ${USER_HOME}/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp: embedded DSpark (model_type=deepseek_v41, active)
+2026-10-18 17:59:16,644 Patched mlx_vlm.models.qwen3_5.Model.sanitize for MTP
+2026-10-18 17:59:16,646 Patched mlx_vlm.models.qwen3_5_moe.Model.sanitize for MTP
+2026-10-18 17:59:16,649 Inkling mlx-vlm compatibility patch applied
+2026-10-18 17:59:16,649 mlx-vlm MTP sanitize patch applied for ${USER_HOME}/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp
+2026-10-18 17:59:16,723 mlx-vlm Qwen3.5-MoE runtime MTP patch applied
+2026-10-18 17:59:16,724 mlx-vlm Qwen3.5 (dense) runtime MTP patch applied
+2026-10-18 17:59:16,731 gemma4 small-L verify attention patch applied (kernel + per-token)
+2026-10-18 17:59:16,731 mlx-vlm Gemma 4 runtime MTP patch applied
+2026-10-18 17:59:16,731 mlx-vlm inkling runtime MTP patch applied
+2026-10-18 17:59:16,755 PoolingCache / BatchPoolingCache injected into mlx_lm.models.cache
+2026-10-18 17:59:16,755 PoolingCacheHandler + BatchPoolingCacheHandler registered
+2026-10-18 17:59:16,766 GLM-5.3 mlx-vlm compatibility patch applied
+2026-10-18 17:59:16,766 mlx-vlm GLM-5.3 (glm5_next) runtime MTP patch applied
+2026-10-18 17:59:16,766 mlx-vlm runtime MTP patch applied for ${USER_HOME}/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp
+2026-10-18 17:59:16,777 DeepSeek V4.1 Engram mode: SSD offload
+2026-10-18 17:59:17,260 DeepSeek V4.1 loaded 1 tensor groups (3.7 GiB tensors, 3.7 GiB active, 0.0 GiB cached)
+2026-10-18 17:59:27,787 DeepSeek V4.1 loaded 26 tensor groups (102.7 GiB tensors, 102.7 GiB active, 0.0 GiB cached)
+2026-10-18 17:59:40,303 DeepSeek V4.1 loaded 51 tensor groups (204.7 GiB tensors, 204.7 GiB active, 0.0 GiB cached)
+{"event": "loaded", "arm": "native2048", "block": 1}
+{"event": "start", "arm": "native2048", "block": 1, "job": 0, "prompt": "authored-warmup-16384", "warmup": true}
+2026-10-18 18:00:00,576 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=16384)
+2026-10-18 18:00:02,454 MTP[0] finish=length tokens=64 cycles=30 tok/cycle=2.13 accept=32/48 (66.7%) depth[d1=19/30,d2=9/14,d3=4/4] emits[init=2,draft=32,bonus=14,verify=16] timing[backbone=1787.5ms mtp=71.9ms sample=1.0ms cache=13.1ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 0, "prompt": "authored-warmup-16384", "warmup": true, "prefill_seconds": 19.483302416978404, "total_seconds": 21.473269416950643, "decode_tokens_per_second": 33.545306249859756, "generated_tokens": 64, "first_eos_position": null, "activation_passed": true}
+{"event": "start", "arm": "native2048", "block": 1, "job": 1, "prompt": "performance-pride-prejudice-16384", "warmup": false}
+2026-10-18 18:00:26,575 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=16384)
+2026-10-18 18:00:42,156 MTP[0] finish=length tokens=512 cycles=258 tok/cycle=1.98 accept=239/385 (62.1%) depth[d1=156/253,d2=61/103,d3=22/29] copy=13/15 in 5 emits[init=2,draft=252,bonus=111,verify=147] timing[backbone=14846.7ms mtp=572.1ms sample=9.4ms cache=117.9ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 1, "prompt": "performance-pride-prejudice-16384", "warmup": false, "prefill_seconds": 23.998207291821018, "total_seconds": 39.67433666693978, "decode_tokens_per_second": 32.784179788934836, "generated_tokens": 512, "first_eos_position": 407, "activation_passed": true}
+{"event": "start", "arm": "native2048", "block": 1, "job": 2, "prompt": "performance-moby-dick-16384", "warmup": false}
+2026-10-18 18:01:27,720 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=16384)
+2026-10-18 18:01:42,689 MTP[0] finish=length tokens=512 cycles=237 tok/cycle=2.16 accept=270/397 (68.0%) depth[d1=173/236,d2=75/130,d3=22/31] copy=3/3 in 1 emits[init=2,draft=273,bonus=110,verify=127] timing[backbone=14291.0ms mtp=533.0ms sample=8.4ms cache=102.9ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 2, "prompt": "performance-moby-dick-16384", "warmup": false, "prefill_seconds": 45.440041416091844, "total_seconds": 60.50971741601825, "decode_tokens_per_second": 34.12880859058085, "generated_tokens": 512, "first_eos_position": null, "activation_passed": true}
+{"event": "start", "arm": "native2048", "block": 1, "job": 3, "prompt": "performance-cpython-65536", "warmup": false}
+2026-10-18 18:03:21,229 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=65536)
+2026-10-18 18:03:34,259 MTP[0] finish=length tokens=512 cycles=197 tok/cycle=2.60 accept=313/395 (79.2%) depth[d1=157/196,d2=102/129,d3=54/70] copy=0/3 in 1 emits[init=2,draft=313,bonus=114,verify=83] timing[backbone=12455.5ms mtp=466.2ms sample=7.0ms cache=71.5ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 3, "prompt": "performance-cpython-65536", "warmup": false, "prefill_seconds": 98.39382820785977, "total_seconds": 111.52603212487884, "decode_tokens_per_second": 39.2032842875232, "generated_tokens": 512, "first_eos_position": null, "activation_passed": true}
+{"event": "start", "arm": "native2048", "block": 1, "job": 4, "prompt": "performance-curl-16384", "warmup": false}
+2026-10-18 18:03:57,248 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=16384)
+2026-10-18 18:04:09,438 MTP[0] finish=length tokens=512 cycles=183 tok/cycle=2.80 accept=304/374 (81.3%) depth[d1=149/174,d2=100/129,d3=55/71] copy=23/27 in 9 emits[init=2,draft=327,bonus=111,verify=72] timing[backbone=11682.7ms mtp=409.3ms sample=6.5ms cache=62.8ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 4, "prompt": "performance-curl-16384", "warmup": false, "prefill_seconds": 22.853460457874462, "total_seconds": 35.14191933302209, "decode_tokens_per_second": 41.90332587113204, "generated_tokens": 512, "first_eos_position": null, "activation_passed": true}
+{"event": "start", "arm": "native2048", "block": 1, "job": 5, "prompt": "held-prose-1k", "warmup": false}
+2026-10-18 18:04:10,838 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=1024)
+2026-10-18 18:04:26,741 MTP[0] finish=length tokens=512 cycles=263 tok/cycle=1.95 accept=247/393 (62.8%) depth[d1=165/263,d2=67/104,d3=15/26] emits[init=2,draft=247,bonus=117,verify=146] timing[backbone=15158.0ms mtp=585.8ms sample=9.2ms cache=115.6ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 5, "prompt": "held-prose-1k", "warmup": false, "prefill_seconds": 1.2753757920581847, "total_seconds": 17.273781874915585, "decode_tokens_per_second": 32.121885816010185, "generated_tokens": 512, "first_eos_position": null, "activation_passed": true}
+{"event": "start", "arm": "native2048", "block": 1, "job": 6, "prompt": "performance-pride-prejudice-65536", "warmup": false}
+2026-10-18 18:07:41,971 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=65536)
+2026-10-18 18:07:57,225 MTP[0] finish=length tokens=512 cycles=244 tok/cycle=2.10 accept=253/381 (66.4%) depth[d1=156/237,d2=71/104,d3=26/40] copy=13/21 in 7 emits[init=2,draft=266,bonus=112,verify=132] timing[backbone=14567.1ms mtp=538.9ms sample=8.7ms cache=105.5ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 6, "prompt": "performance-pride-prejudice-65536", "warmup": false, "prefill_seconds": 195.10048204101622, "total_seconds": 210.4634730410762, "decode_tokens_per_second": 33.49161882680742, "generated_tokens": 512, "first_eos_position": null, "activation_passed": true}
+{"event": "start", "arm": "native2048", "block": 1, "job": 7, "prompt": "performance-cpython-16384", "warmup": false}
+2026-10-18 18:08:20,882 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=16384)
+2026-10-18 18:08:34,092 MTP[0] finish=length tokens=512 cycles=204 tok/cycle=2.51 accept=306/394 (77.7%) depth[d1=158/204,d2=100/123,d3=48/67] emits[init=2,draft=306,bonus=116,verify=88] timing[backbone=12624.6ms mtp=472.0ms sample=7.2ms cache=74.9ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 7, "prompt": "performance-cpython-16384", "warmup": false, "prefill_seconds": 23.512889582896605, "total_seconds": 36.81749608297832, "decode_tokens_per_second": 38.673564473826055, "generated_tokens": 512, "first_eos_position": null, "activation_passed": true}
+{"event": "start", "arm": "native2048", "block": 1, "job": 8, "prompt": "held-code-1k", "warmup": false}
+2026-10-18 18:08:35,497 MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=1024)
+2026-10-18 18:08:48,525 MTP[0] finish=length tokens=512 cycles=202 tok/cycle=2.53 accept=308/399 (77.2%) depth[d1=163/202,d2=101/131,d3=44/66] emits[init=2,draft=308,bonus=111,verify=91] timing[backbone=12451.2ms mtp=463.7ms sample=7.1ms cache=76.5ms]
+{"event": "done", "arm": "native2048", "block": 1, "job": 8, "prompt": "held-code-1k", "warmup": false, "prefill_seconds": 1.276023083832115, "total_seconds": 14.39858049992472, "decode_tokens_per_second": 39.20671052378914, "generated_tokens": 512, "first_eos_position": null, "activation_passed": true}

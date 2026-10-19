@@ -1,0 +1,40 @@
+{
+  "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+  "files": [
+    {
+      "base_sha256": "89b7bae64c2d7ae84384e7c0230915dd839ce7fed2126b101053221080547bda",
+      "candidate_sha256": "13827eb47b011f6cfe22f82b5665763e386f8c0ccf69fc565ae05d2199d78ab9",
+      "path": "patches/deepseek_v41/config.py",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/config.py"
+    },
+    {
+      "base_sha256": "bb1eb7c859d0855acd76415a02b4f1857b0e3e8699390bda2462567063e01aad",
+      "candidate_sha256": "3a1cd606e053c90c9c8311a1d168ab95363e52d573ecf283cc64d05b3731cafe",
+      "path": "patches/deepseek_v41/dspark.py",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/dspark.py"
+    },
+    {
+      "base_sha256": "e66470945439ed8ce3e007801344fea4b66ff79566284e9b7744c8843713eaa8",
+      "candidate_sha256": "649d51f3621da9be3ba54aa298c977a276905084e27ad1a7f6f84a6cb4279250",
+      "path": "patches/deepseek_v41/language.py",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/language.py"
+    },
+    {
+      "base_sha256": "104408ea7dfa05b886bd0d8ecc0359c31317f581f4538b5860cd1951edc062a1",
+      "candidate_sha256": "5414edbd3bcb11662e4152e57f3e4c131d4e16a32842d8befc2df1c535e03563",
+      "path": "patches/deepseek_v41/loading.py",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/loading.py"
+    },
+    {
+      "base_sha256": "51817ceeed8a2416f7b5896e81465c7a5e8b311a95357dc967636b8cffbae232",
+      "candidate_sha256": "63c186f7f302ae4814c95180d0b3196280c44c8affad95a9bbaa3d213d8e4257",
+      "path": "patches/mlx_lm_mtp/batch_generator.py",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/mlx_lm_mtp/batch_generator.py"
+    }
+  ],
+  "patch_bytes": 7409,
+  "patch_output": "patching file 'omlx/patches/deepseek_v41/config.py'\npatching file 'omlx/patches/deepseek_v41/dspark.py'\npatching file 'omlx/patches/deepseek_v41/language.py'\npatching file 'omlx/patches/deepseek_v41/loading.py'\npatching file 'omlx/patches/mlx_lm_mtp/batch_generator.py'",
+  "patch_path": "source/patches/complete-runtime-vs-v0.7.1rc1.patch",
+  "patch_sha256": "528bbee4ab5a5d140294f4fb18936ca2bb55658dcd85d85669d0ac88591b5197",
+  "verification": "Applied with zero fuzz to five public baseline files in a temporary directory; all five outputs byte-identical to measured local runtime source. No import or inference."
+}

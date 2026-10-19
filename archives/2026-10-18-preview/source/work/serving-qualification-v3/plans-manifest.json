@@ -1,0 +1,57 @@
+{
+  "status": "frozen_unrun",
+  "created_at_utc": "2026-10-18T11:14:10.395242+00:00",
+  "plans": {
+    "boundary": {
+      "path": "plans/boundary-01.json",
+      "sha256": "d4095452c17564db3d57c106e041ef042a16355ecaa1243687201999c8047dcf",
+      "measured_pairs": 12,
+      "jobs": 26,
+      "measured_inputs": [
+        "boundary-cpython-2668",
+        "boundary-curl-2669",
+        "boundary-moby-dick-2670",
+        "boundary-pride-prejudice-8191",
+        "boundary-cpython-8192",
+        "boundary-curl-8193",
+        "boundary-moby-dick-8194",
+        "boundary-pride-prejudice-10860",
+        "boundary-cpython-10861",
+        "boundary-curl-10862",
+        "boundary-moby-dick-16384",
+        "boundary-pride-prejudice-16385"
+      ]
+    },
+    "performance": {
+      "path": "plans/performance-01.json",
+      "sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+      "measured_pairs": 12,
+      "jobs": 26,
+      "measured_inputs": [
+        "performance-cpython-16384",
+        "performance-curl-16384",
+        "performance-moby-dick-16384",
+        "performance-pride-prejudice-16384",
+        "performance-cpython-32768",
+        "performance-curl-32768",
+        "performance-moby-dick-32768",
+        "performance-pride-prejudice-32768",
+        "performance-cpython-65536",
+        "performance-curl-65536",
+        "performance-pride-prejudice-65536",
+        "performance-moby-dick-131072"
+      ]
+    }
+  },
+  "fixture_manifest_sha256": "69a69d82bc7e1162451b15782ce43bea924d781af17b074510310493cbae0b47",
+  "source_manifest_sha256": "44daa65bb2e1a545a054c584488a352648497db62d195a57f1aece8ebcd7aa15",
+  "builder_files_sha256": {
+    "build_fixtures.py": "cba287bbb3cc167a7bd4b72ad9a7a6f081343f58a27864019a8abf4f810952f6",
+    "freeze_plans.py": "1627a0ceb387a7135bec8a58695d040158adf3b07fde61fa9b4e6eb25732ff46",
+    "fetch_sources.py": "a7b8ea3904fee787c942bcdc9ddfa43e140e7b79f833e1c03d219eb0edf62ac0"
+  },
+  "total_measured_pairs": 24,
+  "gpu_executed": false,
+  "inference_imports": false,
+  "selection": "All inputs, lengths, generated lengths, seeds and order chosen before any v3 model outcome; root pins the independent execution harness separately."
+}

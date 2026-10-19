@@ -1,0 +1,7 @@
+{
+  "status": "cpu_validated",
+  "model_loaded": false,
+  "arm": "complete",
+  "jobs": 9,
+  "plan_sha256": "f668ef98840aa9c13a736e4b8329b396ad1f69032c46836d1640fdf9346972db"
+}

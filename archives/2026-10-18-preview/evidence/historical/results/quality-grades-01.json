@@ -1,0 +1,992 @@
+[
+  {
+    "task": "merge_intervals",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false,
+      "name": "stock-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 3.149350040941499,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_intervals(intervals):\n    def sort_key(pair):\n        return pair[0], pair[1]\n\n    def merge_sorted(sorted_pairs):\n        result = []\n        for start, end in sorted_pairs:\n            if not result or start > result[-1][1]:\n                result.append([start, end])\n            elif end > result[-1][1]:\n                result[-1][1] = end\n        return result\n\n    return merge_sorted(sorted(intervals, key=sort_key))\n"
+  },
+  {
+    "task": "merge_intervals",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "name": "reference-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 3.1992039170581847,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_intervals(intervals):\n    def sort_key(pair):\n        return pair[0]\n\n    def overlaps(a, b):\n        return a[1] >= b[0]\n\n    def merge_two(a, b):\n        return [a[0], max(a[1], b[1])]\n\n    sorted_intervals = sorted(intervals, key=sort_key)\n    result = []\n    for pair in sorted_intervals:\n        if result and overlaps(result[-1], pair):\n            result[-1] = merge_two(result[-1], pair)\n        else:\n            result.append([pair[0], pair[1]])\n    return result\n"
+  },
+  {
+    "task": "merge_intervals",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 2.8952828330220655,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_intervals(intervals):\n    def sort_key(pair):\n        return pair[0]\n\n    def overlaps(a, b):\n        return a[1] >= b[0]\n\n    def merge_two(a, b):\n        return [a[0], max(a[1], b[1])]\n\n    sorted_intervals = sorted(intervals, key=sort_key)\n    result = []\n    for pair in sorted_intervals:\n        if result and overlaps(result[-1], pair):\n            result[-1] = merge_two(result[-1], pair)\n        else:\n            result.append([pair[0], pair[1]])\n    return result\n"
+  },
+  {
+    "task": "merge_intervals",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6,
+      "name": "reference-a5-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 2.2778950409265235,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_intervals(intervals):\n    def sort_key(pair):\n        return pair[0], pair[1]\n\n    def merge_sorted(sorted_pairs):\n        result = []\n        for start, end in sorted_pairs:\n            if not result or start > result[-1][1]:\n                result.append([start, end])\n            else:\n                if end > result[-1][1]:\n                    result[-1][1] = end\n        return result\n\n    return merge_sorted(sorted(intervals, key=sort_key))\n"
+  },
+  {
+    "task": "merge_intervals",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 2.0685071249026805,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def merge_intervals(intervals):\n    def sort_key(pair):\n        return pair[0], pair[1]\n\n    def merge_sorted(sorted_pairs):\n        result = []\n        for start, end in sorted_pairs:\n            if not result or start > result[-1][1]:\n                result.append([start, end])\n            else:\n                if end > result[-1][1]:\n                    result[-1][1] = end\n        return result\n\n    return merge_sorted(sorted(intervals, key=sort_key))\n"
+  },
+  {
+    "task": "longest_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false,
+      "name": "stock-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 2.2723416660446674,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def longest_unique(text):\n    def longest_unique_from(start):\n        seen = set()\n        end = start\n        while end < len(text) and text[end] not in seen:\n            seen.add(text[end])\n            end += 1\n        return end - start\n\n    best = 0\n    for i in range(len(text)):\n        length = longest_unique_from(i)\n        if length > best:\n            best = length\n    return best\n"
+  },
+  {
+    "task": "longest_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "name": "reference-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 3.277244209079072,
+    "finish_reason": "stop",
+    "passed": false,
+    "cases": 160,
+    "failed_cases": 82,
+    "first_failures": [
+      {
+        "case": 0,
+        "input": [
+          "A1🦊1a🦊aé\n🦊中a\nAB"
+        ],
+        "expected": {
+          "value": 6,
+          "mutated": false
+        },
+        "actual": {
+          "value": 14,
+          "mutated": false
+        }
+      },
+      {
+        "case": 1,
+        "input": [
+          "🦊A0\n0BabAbé🦊中éb\nb"
+        ],
+        "expected": {
+          "value": 6,
+          "mutated": false
+        },
+        "actual": {
+          "value": 12,
+          "mutated": false
+        }
+      },
+      {
+        "case": 3,
+        "input": [
+          "A11🦊Aé0a"
+        ],
+        "expected": {
+          "value": 6,
+          "mutated": false
+        },
+        "actual": {
+          "value": 7,
+          "mutated": false
+        }
+      }
+    ],
+    "source": "def longest_unique(text):\n    def char_index(char):\n        return ord(char)\n    def update_start(start, seen, char):\n        if char in seen:\n            return seen[char] + 1\n        return start\n    def scan(text):\n        seen = {}\n        start = 0\n        best = 0\n        for i, char in enumerate(text):\n            start = update_start(start, seen, char)\n            seen[char] = i\n            length = i - start + 1\n            if length > best:\n                best = length\n        return best\n    if not text:\n        return 0\n    return scan(text)\n"
+  },
+  {
+    "task": "longest_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 2.9524238749872893,
+    "finish_reason": "stop",
+    "passed": false,
+    "cases": 160,
+    "failed_cases": 82,
+    "first_failures": [
+      {
+        "case": 0,
+        "input": [
+          "A1🦊1a🦊aé\n🦊中a\nAB"
+        ],
+        "expected": {
+          "value": 6,
+          "mutated": false
+        },
+        "actual": {
+          "value": 14,
+          "mutated": false
+        }
+      },
+      {
+        "case": 1,
+        "input": [
+          "🦊A0\n0BabAbé🦊中éb\nb"
+        ],
+        "expected": {
+          "value": 6,
+          "mutated": false
+        },
+        "actual": {
+          "value": 12,
+          "mutated": false
+        }
+      },
+      {
+        "case": 3,
+        "input": [
+          "A11🦊Aé0a"
+        ],
+        "expected": {
+          "value": 6,
+          "mutated": false
+        },
+        "actual": {
+          "value": 7,
+          "mutated": false
+        }
+      }
+    ],
+    "source": "def longest_unique(text):\n    def char_index(char):\n        return ord(char)\n    def update_start(start, seen, char):\n        if char in seen:\n            return seen[char] + 1\n        return start\n    def scan(text):\n        seen = {}\n        start = 0\n        best = 0\n        for i, char in enumerate(text):\n            start = update_start(start, seen, char)\n            seen[char] = i\n            length = i - start + 1\n            if length > best:\n                best = length\n        return best\n    if not text:\n        return 0\n    return scan(text)\n"
+  },
+  {
+    "task": "longest_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6,
+      "name": "reference-a5-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 2.8221919590141624,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def longest_unique(text):\n    def char_at(s, i):\n        return s[i]\n\n    def length(s):\n        return len(s)\n\n    def max(a, b):\n        return a if a > b else b\n\n    def scan(s):\n        n = length(s)\n        if n == 0:\n            return 0\n        last = {}\n        start = 0\n        best = 0\n        i = 0\n        while i < n:\n            c = char_at(s, i)\n            if c in last and last[c] >= start:\n                start = last[c] + 1\n            last[c] = i\n            best = max(best, i - start + 1)\n            i += 1\n        return best\n\n    return scan(text)\n"
+  },
+  {
+    "task": "longest_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 2.9490198749117553,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def longest_unique(text):\n    def char_at(s, i):\n        return s[i]\n\n    def length(s):\n        return len(s)\n\n    def max_value(a, b):\n        return a if a > b else b\n\n    def longest_unique_from(s, start):\n        seen = {}\n        best = 0\n        left = start\n        right = start\n        n = length(s)\n        while right < n:\n            c = char_at(s, right)\n            if c in seen and seen[c] >= left:\n                left = seen[c] + 1\n            seen[c] = right\n            best = max_value(best, right - left + 1)\n            right += 1\n        return best\n\n    if length(text) == 0:\n        return 0\n    return longest_unique_from(text, 0)\n"
+  },
+  {
+    "task": "stable_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false,
+      "name": "stock-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 1.6810062910662964,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def stable_unique(values):\n    def contains(seq, item):\n        for existing in seq:\n            if existing == item:\n                return True\n        return False\n\n    result = []\n    for value in values:\n        if not contains(result, value):\n            result.append(value)\n    return result\n"
+  },
+  {
+    "task": "stable_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "name": "reference-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 1.6211560420924798,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def stable_unique(values):\n    def contains(seq, item):\n        for existing in seq:\n            if existing == item:\n                return True\n        return False\n\n    result = []\n    for value in values:\n        if not contains(result, value):\n            result.append(value)\n    return result\n"
+  },
+  {
+    "task": "stable_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 1.5265122919809073,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def stable_unique(values):\n    def contains(seq, item):\n        for existing in seq:\n            if existing == item:\n                return True\n        return False\n\n    result = []\n    for value in values:\n        if not contains(result, value):\n            result.append(value)\n    return result\n"
+  },
+  {
+    "task": "stable_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6,
+      "name": "reference-a5-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 1.3389096249593422,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def stable_unique(values):\n    def contains(seq, item):\n        for existing in seq:\n            if existing == item:\n                return True\n        return False\n\n    result = []\n    for value in values:\n        if not contains(result, value):\n            result.append(value)\n    return result\n"
+  },
+  {
+    "task": "stable_unique",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 1.178996125003323,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def stable_unique(values):\n    def contains(seq, item):\n        for existing in seq:\n            if existing == item:\n                return True\n        return False\n\n    result = []\n    for value in values:\n        if not contains(result, value):\n            result.append(value)\n    return result\n"
+  },
+  {
+    "task": "glob_match",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false,
+      "name": "stock-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 3.674987082951702,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def glob_match(text, pattern):\n    def match(i, j):\n        if j == len(pattern):\n            return i == len(text)\n        if pattern[j] == '*':\n            while j + 1 < len(pattern) and pattern[j + 1] == '*':\n                j += 1\n            if j + 1 == len(pattern):\n                return True\n            for k in range(i, len(text) + 1):\n                if match(k, j + 1):\n                    return True\n            return False\n        if i == len(text):\n            return False\n        if pattern[j] == '?' or pattern[j] == text[i]:\n            return match(i + 1, j + 1)\n        return False\n    return match(0, 0)\n"
+  },
+  {
+    "task": "glob_match",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "name": "reference-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 3.64574291696772,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def glob_match(text, pattern):\n    def match(i, j):\n        if j == len(pattern):\n            return i == len(text)\n        if pattern[j] == '*':\n            while j + 1 < len(pattern) and pattern[j + 1] == '*':\n                j += 1\n            if j + 1 == len(pattern):\n                return True\n            k = i\n            while k <= len(text):\n                if match(k, j + 1):\n                    return True\n                k += 1\n            return False\n        if i == len(text):\n            return False\n        if pattern[j] == '?' or pattern[j] == text[i]:\n            return match(i + 1, j + 1)\n        return False\n    return match(0, 0)\n"
+  },
+  {
+    "task": "glob_match",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 3.396359750069678,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def glob_match(text, pattern):\n    def match(i, j):\n        if j == len(pattern):\n            return i == len(text)\n        if pattern[j] == '*':\n            while j + 1 < len(pattern) and pattern[j + 1] == '*':\n                j += 1\n            if j + 1 == len(pattern):\n                return True\n            k = i\n            while k <= len(text):\n                if match(k, j + 1):\n                    return True\n                k += 1\n            return False\n        if i == len(text):\n            return False\n        if pattern[j] == '?' or pattern[j] == text[i]:\n            return match(i + 1, j + 1)\n        return False\n    return match(0, 0)\n"
+  },
+  {
+    "task": "glob_match",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6,
+      "name": "reference-a5-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 2.7562981660012156,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def glob_match(text, pattern):\n    def match(i, j):\n        if j == len(pattern):\n            return i == len(text)\n        if pattern[j] == '*':\n            while j + 1 < len(pattern) and pattern[j + 1] == '*':\n                j += 1\n            if j + 1 == len(pattern):\n                return True\n            k = i\n            while k <= len(text):\n                if match(k, j + 1):\n                    return True\n                k += 1\n            return False\n        if i == len(text):\n            return False\n        if pattern[j] == '?' or pattern[j] == text[i]:\n            return match(i + 1, j + 1)\n        return False\n    return match(0, 0)\n"
+  },
+  {
+    "task": "glob_match",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 2.3724117090459913,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def glob_match(text, pattern):\n    def match(i, j):\n        if j == len(pattern):\n            return i == len(text)\n        if pattern[j] == '*':\n            while j + 1 < len(pattern) and pattern[j + 1] == '*':\n                j += 1\n            if j + 1 == len(pattern):\n                return True\n            k = i\n            while k <= len(text):\n                if match(k, j + 1):\n                    return True\n                k += 1\n            return False\n        if i == len(text):\n            return False\n        if pattern[j] == '?' or pattern[j] == text[i]:\n            return match(i + 1, j + 1)\n        return False\n    return match(0, 0)\n"
+  },
+  {
+    "task": "topological_order",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false,
+      "name": "stock-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 7.031534124980681,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def topological_order(graph):\n    def build_nodes(graph):\n        nodes = set()\n        for node in graph:\n            nodes.add(node)\n            for neighbor in graph[node]:\n                nodes.add(neighbor)\n        return nodes\n\n    def build_adjacency(graph, nodes):\n        adjacency = {}\n        for node in nodes:\n            adjacency[node] = set()\n        for node in graph:\n            for neighbor in graph[node]:\n                adjacency[node].add(neighbor)\n        return adjacency\n\n    def build_indegrees(adjacency):\n        indegree = {}\n        for node in adjacency:\n            indegree[node] = 0\n        for node in adjacency:\n            for neighbor in adjacency[node]:\n                indegree[neighbor] += 1\n        return indegree\n\n    def smallest_available(indegree, available):\n        result = None\n        for node in available:\n            if indegree[node] == 0:\n                if result is None or node < result:\n                    result = node\n        return result\n\n    nodes = build_nodes(graph)\n    adjacency = build_adjacency(graph, nodes)\n    indegree = build_indegrees(adjacency)\n    available = set(nodes)\n    order = []\n\n    while available:\n        node = smallest_available(indegree, available)\n        if node is None:\n            raise ValueError(\"directed cycle\")\n        order.append(node)\n        available.remove(node)\n        for neighbor in adjacency[node]:\n            indegree[neighbor] -= 1\n\n    return order\n"
+  },
+  {
+    "task": "topological_order",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "name": "reference-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 6.721373124979436,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def topological_order(graph):\n    def collect_nodes(graph):\n        nodes = set()\n        for node, neighbors in graph.items():\n            nodes.add(node)\n            for neighbor in neighbors:\n                nodes.add(neighbor)\n        return nodes\n\n    def build_adjacency(graph, nodes):\n        adjacency = {node: set() for node in nodes}\n        for node, neighbors in graph.items():\n            for neighbor in neighbors:\n                adjacency[node].add(neighbor)\n        return adjacency\n\n    def compute_indegrees(adjacency):\n        indegree = {node: 0 for node in adjacency}\n        for node, neighbors in adjacency.items():\n            for neighbor in neighbors:\n                indegree[neighbor] += 1\n        return indegree\n\n    def smallest_available(available):\n        return min(available)\n\n    nodes = collect_nodes(graph)\n    if not nodes:\n        return []\n    adjacency = build_adjacency(graph, nodes)\n    indegree = compute_indegrees(adjacency)\n    available = {node for node in nodes if indegree[node] == 0}\n    result = []\n    while available:\n        node = smallest_available(available)\n        available.remove(node)\n        result.append(node)\n        for neighbor in adjacency[node]:\n            indegree[neighbor] -= 1\n            if indegree[neighbor] == 0:\n                available.add(neighbor)\n    if len(result) != len(nodes):\n        raise ValueError(\"directed cycle detected\")\n    return result\n"
+  },
+  {
+    "task": "topological_order",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 6.116228666971438,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def topological_order(graph):\n    def collect_nodes(graph):\n        nodes = set()\n        for node, neighbors in graph.items():\n            nodes.add(node)\n            for neighbor in neighbors:\n                nodes.add(neighbor)\n        return nodes\n\n    def build_adjacency(graph, nodes):\n        adjacency = {node: set() for node in nodes}\n        for node, neighbors in graph.items():\n            for neighbor in neighbors:\n                adjacency[node].add(neighbor)\n        return adjacency\n\n    def compute_indegrees(adjacency):\n        indegree = {node: 0 for node in adjacency}\n        for node, neighbors in adjacency.items():\n            for neighbor in neighbors:\n                indegree[neighbor] += 1\n        return indegree\n\n    def smallest_available(available):\n        return min(available)\n\n    nodes = collect_nodes(graph)\n    if not nodes:\n        return []\n    adjacency = build_adjacency(graph, nodes)\n    indegree = compute_indegrees(adjacency)\n    available = {node for node in nodes if indegree[node] == 0}\n    result = []\n    while available:\n        node = smallest_available(available)\n        available.remove(node)\n        result.append(node)\n        for neighbor in adjacency[node]:\n            indegree[neighbor] -= 1\n            if indegree[neighbor] == 0:\n                available.add(neighbor)\n    if len(result) != len(nodes):\n        raise ValueError(\"directed cycle detected\")\n    return result\n"
+  },
+  {
+    "task": "topological_order",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6,
+      "name": "reference-a5-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 5.071900332928635,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def topological_order(graph):\n    def collect_nodes(graph):\n        nodes = set()\n        for node, neighbors in graph.items():\n            nodes.add(node)\n            for neighbor in neighbors:\n                nodes.add(neighbor)\n        return nodes\n\n    def build_adjacency(graph, nodes):\n        adjacency = {node: set() for node in nodes}\n        for node, neighbors in graph.items():\n            for neighbor in neighbors:\n                adjacency[node].add(neighbor)\n        return adjacency\n\n    def compute_indegrees(adjacency):\n        indegree = {node: 0 for node in adjacency}\n        for node, neighbors in adjacency.items():\n            for neighbor in neighbors:\n                indegree[neighbor] += 1\n        return indegree\n\n    def smallest_available(available, indegree):\n        candidates = [node for node in available if indegree[node] == 0]\n        if not candidates:\n            return None\n        return min(candidates)\n\n    nodes = collect_nodes(graph)\n    if not nodes:\n        return []\n    adjacency = build_adjacency(graph, nodes)\n    indegree = compute_indegrees(adjacency)\n    available = set(nodes)\n    result = []\n    while available:\n        node = smallest_available(available, indegree)\n        if node is None:\n            raise ValueError(\"directed cycle detected\")\n        available.remove(node)\n        result.append(node)\n        for neighbor in adjacency[node]:\n            indegree[neighbor] -= 1\n    return result\n"
+  },
+  {
+    "task": "topological_order",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 4.493009124998935,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def topological_order(graph):\n    def collect_nodes(graph):\n        nodes = set()\n        for node, neighbors in graph.items():\n            nodes.add(node)\n            for neighbor in neighbors:\n                nodes.add(neighbor)\n        return nodes\n\n    def build_adjacency(graph, nodes):\n        adjacency = {node: set() for node in nodes}\n        for node, neighbors in graph.items():\n            for neighbor in neighbors:\n                adjacency[node].add(neighbor)\n        return adjacency\n\n    def compute_indegrees(adjacency):\n        indegree = {node: 0 for node in adjacency}\n        for node in adjacency:\n            for neighbor in adjacency[node]:\n                indegree[neighbor] += 1\n        return indegree\n\n    def smallest_available(available, indegree):\n        candidates = [node for node in available if indegree[node] == 0]\n        if not candidates:\n            return None\n        return min(candidates)\n\n    nodes = collect_nodes(graph)\n    if not nodes:\n        return []\n    adjacency = build_adjacency(graph, nodes)\n    indegree = compute_indegrees(adjacency)\n    available = set(nodes)\n    result = []\n    while available:\n        node = smallest_available(available, indegree)\n        if node is None:\n            raise ValueError(\"directed cycle detected\")\n        available.remove(node)\n        result.append(node)\n        for neighbor in adjacency[node]:\n            indegree[neighbor] -= 1\n    return result\n"
+  },
+  {
+    "task": "shortest_path",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false,
+      "name": "stock-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 4.592621541931294,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def shortest_path(edges, start, end):\n    if start == end:\n        return 0\n    graph = {}\n    for source, destination, weight in edges:\n        if source not in graph:\n            graph[source] = []\n        graph[source].append((destination, weight))\n    distances = {start: 0}\n    visited = set()\n    while True:\n        current = None\n        current_distance = None\n        for node, distance in distances.items():\n            if node not in visited and (current_distance is None or distance < current_distance):\n                current = node\n                current_distance = distance\n        if current is None:\n            break\n        if current == end:\n            return current_distance\n        visited.add(current)\n        for neighbor, weight in graph.get(current, []):\n            new_distance = current_distance + weight\n            if neighbor not in distances or new_distance < distances[neighbor]:\n                distances[neighbor] = new_distance\n    return None\n"
+  },
+  {
+    "task": "shortest_path",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "name": "reference-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 4.226132875075564,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def shortest_path(edges, start, end):\n    if start == end:\n        return 0\n    graph = {}\n    for source, destination, weight in edges:\n        if source not in graph:\n            graph[source] = []\n        graph[source].append((destination, weight))\n    distances = {start: 0}\n    visited = set()\n    while True:\n        current = None\n        current_distance = None\n        for node, distance in distances.items():\n            if node not in visited and (current_distance is None or distance < current_distance):\n                current = node\n                current_distance = distance\n        if current is None:\n            break\n        if current == end:\n            return current_distance\n        visited.add(current)\n        for neighbor, weight in graph.get(current, []):\n            new_distance = current_distance + weight\n            if neighbor not in distances or new_distance < distances[neighbor]:\n                distances[neighbor] = new_distance\n    return None"
+  },
+  {
+    "task": "shortest_path",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 3.96315450000111,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def shortest_path(edges, start, end):\n    if start == end:\n        return 0\n    graph = {}\n    for source, destination, weight in edges:\n        if source not in graph:\n            graph[source] = []\n        graph[source].append((destination, weight))\n    distances = {start: 0}\n    visited = set()\n    while True:\n        current = None\n        current_distance = None\n        for node, distance in distances.items():\n            if node not in visited and (current_distance is None or distance < current_distance):\n                current = node\n                current_distance = distance\n        if current is None:\n            break\n        if current == end:\n            return current_distance\n        visited.add(current)\n        for neighbor, weight in graph.get(current, []):\n            new_distance = current_distance + weight\n            if neighbor not in distances or new_distance < distances[neighbor]:\n                distances[neighbor] = new_distance\n    return None"
+  },
+  {
+    "task": "shortest_path",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6,
+      "name": "reference-a5-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 3.0172763749724254,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def shortest_path(edges, start, end):\n    if start == end:\n        return 0\n    graph = {}\n    for source, destination, weight in edges:\n        if source not in graph:\n            graph[source] = []\n        graph[source].append((destination, weight))\n    distances = {start: 0}\n    visited = set()\n    while True:\n        current = None\n        current_distance = None\n        for node, distance in distances.items():\n            if node not in visited and (current_distance is None or distance < current_distance):\n                current = node\n                current_distance = distance\n        if current is None:\n            break\n        if current == end:\n            return current_distance\n        visited.add(current)\n        for neighbor, weight in graph.get(current, []):\n            new_distance = current_distance + weight\n            if neighbor not in distances or new_distance < distances[neighbor]:\n                distances[neighbor] = new_distance\n    return None"
+  },
+  {
+    "task": "shortest_path",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 2.811188417021185,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def shortest_path(edges, start, end):\n    if start == end:\n        return 0\n    graph = {}\n    for source, destination, weight in edges:\n        if source not in graph:\n            graph[source] = []\n        graph[source].append((destination, weight))\n    distances = {start: 0}\n    visited = set()\n    while True:\n        current = None\n        current_distance = None\n        for node, distance in distances.items():\n            if node not in visited and (current_distance is None or distance < current_distance):\n                current = node\n                current_distance = distance\n        if current is None:\n            break\n        if current == end:\n            return current_distance\n        visited.add(current)\n        for neighbor, weight in graph.get(current, []):\n            new_distance = current_distance + weight\n            if neighbor not in distances or new_distance < distances[neighbor]:\n                distances[neighbor] = new_distance\n    return None"
+  },
+  {
+    "task": "lru_simulate",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false,
+      "name": "stock-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 9.44820562505629,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def lru_simulate(capacity, operations):\n    def find_index(keys, key):\n        for i in range(len(keys)):\n            if keys[i] == key:\n                return i\n        return -1\n\n    def remove_at(items, index):\n        return items[:index] + items[index + 1:]\n\n    def append_item(items, item):\n        return items + [item]\n\n    def move_to_end(keys, values, key):\n        index = find_index(keys, key)\n        if index == -1:\n            return keys, values\n        value = values[index]\n        keys = remove_at(keys, index)\n        values = remove_at(values, index)\n        keys = append_item(keys, key)\n        values = append_item(values, value)\n        return keys, values\n\n    def put_item(keys, values, key, value):\n        index = find_index(keys, key)\n        if index != -1:\n            keys = remove_at(keys, index)\n            values = remove_at(values, index)\n        keys = append_item(keys, key)\n        values = append_item(values, value)\n        while len(keys) > capacity:\n            keys = keys[1:]\n            values = values[1:]\n        return keys, values\n\n    def get_item(keys, values, key):\n        index = find_index(keys, key)\n        if index == -1:\n            return None, keys, values\n        value = values[index]\n        keys, values = move_to_end(keys, values, key)\n        return value, keys, values\n\n    keys = []\n    values = []\n    get_results = []\n\n    for operation in operations:\n        if operation[0] == 'put':\n            keys, values = put_item(keys, values, operation[1], operation[2])\n        else:\n            result, keys, values = get_item(keys, values, operation[1])\n            get_results = append_item(get_results, result)\n\n    return [get_results, keys]\n"
+  },
+  {
+    "task": "lru_simulate",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "name": "reference-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 7.701386708999053,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def lru_simulate(capacity, operations):\n    def copy_ops(ops):\n        result = []\n        for op in ops:\n            result.append(list(op))\n        return result\n\n    def find_index(keys, key):\n        for i in range(len(keys)):\n            if keys[i] == key:\n                return i\n        return -1\n\n    def remove_at(items, index):\n        return items[:index] + items[index + 1:]\n\n    def move_to_end(keys, index):\n        key = keys[index]\n        return remove_at(keys, index) + [key]\n\n    ops = copy_ops(operations)\n    keys = []\n    values = []\n    get_results = []\n\n    for op in ops:\n        if op[0] == 'get':\n            key = op[1]\n            idx = find_index(keys, key)\n            if idx == -1:\n                get_results.append(None)\n            else:\n                get_results.append(values[idx])\n                keys = move_to_end(keys, idx)\n                value = values[idx]\n                values = remove_at(values, idx) + [value]\n        elif op[0] == 'put':\n            key = op[1]\n            value = op[2]\n            idx = find_index(keys, key)\n            if idx != -1:\n                keys = remove_at(keys, idx)\n                values = remove_at(values, idx)\n            if capacity > 0:\n                keys.append(key)\n                values.append(value)\n                while len(keys) > capacity:\n                    keys = keys[1:]\n                    values = values[1:]\n\n    return [get_results, keys]\n"
+  },
+  {
+    "task": "lru_simulate",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 7.01371508394368,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def lru_simulate(capacity, operations):\n    def copy_ops(ops):\n        result = []\n        for op in ops:\n            result.append(list(op))\n        return result\n\n    def find_index(keys, key):\n        for i in range(len(keys)):\n            if keys[i] == key:\n                return i\n        return -1\n\n    def remove_at(items, index):\n        return items[:index] + items[index + 1:]\n\n    def move_to_end(keys, index):\n        key = keys[index]\n        return remove_at(keys, index) + [key]\n\n    ops = copy_ops(operations)\n    keys = []\n    values = []\n    get_results = []\n\n    for op in ops:\n        if op[0] == 'get':\n            key = op[1]\n            idx = find_index(keys, key)\n            if idx == -1:\n                get_results.append(None)\n            else:\n                get_results.append(values[idx])\n                keys = move_to_end(keys, idx)\n                value = values[idx]\n                values = remove_at(values, idx) + [value]\n        elif op[0] == 'put':\n            key = op[1]\n            value = op[2]\n            idx = find_index(keys, key)\n            if idx != -1:\n                keys = remove_at(keys, idx)\n                values = remove_at(values, idx)\n            if capacity > 0:\n                keys.append(key)\n                values.append(value)\n                while len(keys) > capacity:\n                    keys = keys[1:]\n                    values = values[1:]\n\n    return [get_results, keys]\n"
+  },
+  {
+    "task": "lru_simulate",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6,
+      "name": "reference-a5-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 5.658755750046112,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def lru_simulate(capacity, operations):\n    def copy_ops(ops):\n        result = []\n        for op in ops:\n            result.append(list(op))\n        return result\n\n    def find_index(keys, key):\n        for i in range(len(keys)):\n            if keys[i] == key:\n                return i\n        return -1\n\n    def remove_at(items, index):\n        return items[:index] + items[index + 1:]\n\n    def move_to_end(keys, index):\n        key = keys[index]\n        return remove_at(keys, index) + [key]\n\n    ops = copy_ops(operations)\n    keys = []\n    values = []\n    get_results = []\n\n    for op in ops:\n        if op[0] == 'get':\n            key = op[1]\n            idx = find_index(keys, key)\n            if idx == -1:\n                get_results.append(None)\n            else:\n                get_results.append(values[idx])\n                keys = move_to_end(keys, idx)\n                value = values[idx]\n                values = remove_at(values, idx) + [value]\n        elif op[0] == 'put':\n            key = op[1]\n            value = op[2]\n            idx = find_index(keys, key)\n            if idx != -1:\n                keys = remove_at(keys, idx)\n                values = remove_at(values, idx)\n            if capacity > 0:\n                keys.append(key)\n                values.append(value)\n                while len(keys) > capacity:\n                    keys = keys[1:]\n                    values = values[1:]\n\n    return [get_results, keys]\n"
+  },
+  {
+    "task": "lru_simulate",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 5.16594074992463,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def lru_simulate(capacity, operations):\n    def copy_ops(ops):\n        result = []\n        for op in ops:\n            result.append(list(op))\n        return result\n\n    def find_index(keys, key):\n        for i in range(len(keys)):\n            if keys[i] == key:\n                return i\n        return -1\n\n    def remove_at(items, index):\n        return items[:index] + items[index + 1:]\n\n    def move_to_end(keys, index):\n        key = keys[index]\n        return remove_at(keys, index) + [key]\n\n    ops = copy_ops(operations)\n    keys = []\n    values = []\n    get_results = []\n\n    for op in ops:\n        if op[0] == 'get':\n            key = op[1]\n            idx = find_index(keys, key)\n            if idx == -1:\n                get_results.append(None)\n            else:\n                get_results.append(values[idx])\n                keys = move_to_end(keys, idx)\n                value = values[idx]\n                values = remove_at(values, idx) + [value]\n        elif op[0] == 'put':\n            key = op[1]\n            value = op[2]\n            idx = find_index(keys, key)\n            if idx != -1:\n                keys = remove_at(keys, idx)\n                values = remove_at(values, idx)\n            if capacity > 0:\n                keys.append(key)\n                values.append(value)\n                while len(keys) > capacity:\n                    keys = keys[1:]\n                    values = values[1:]\n\n    return [get_results, keys]\n"
+  },
+  {
+    "task": "rotate_ragged",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false,
+      "name": "stock-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 4.961363749927841,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def rotate_ragged(rows, fill=None):\n    def max_length(rows):\n        result = 0\n        for row in rows:\n            if len(row) > result:\n                result = len(row)\n        return result\n\n    def pad_rows(rows, width, fill):\n        result = []\n        for row in rows:\n            padded = list(row)\n            while len(padded) < width:\n                padded.append(fill)\n            result.append(padded)\n        return result\n\n    def rotate_clockwise(matrix):\n        if not matrix:\n            return []\n        height = len(matrix)\n        width = len(matrix[0])\n        result = []\n        for col in range(width):\n            new_row = []\n            for row in range(height - 1, -1, -1):\n                new_row.append(matrix[row][col])\n            result.append(new_row)\n        return result\n\n    if not rows:\n        return []\n    width = max_length(rows)\n    if width == 0:\n        return []\n    padded = pad_rows(rows, width, fill)\n    return rotate_clockwise(padded)\n"
+  },
+  {
+    "task": "rotate_ragged",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "name": "reference-f2"
+    },
+    "repeat": 0,
+    "total_seconds": 4.811764292069711,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def rotate_ragged(rows, fill=None):\n    def max_length(rows):\n        result = 0\n        for row in rows:\n            if len(row) > result:\n                result = len(row)\n        return result\n\n    def pad_rows(rows, width, fill):\n        result = []\n        for row in rows:\n            padded = list(row)\n            while len(padded) < width:\n                padded.append(fill)\n            result.append(padded)\n        return result\n\n    def rotate_clockwise(matrix):\n        if not matrix:\n            return []\n        height = len(matrix)\n        width = len(matrix[0])\n        result = []\n        for col in range(width):\n            new_row = []\n            for row in range(height - 1, -1, -1):\n                new_row.append(matrix[row][col])\n            result.append(new_row)\n        return result\n\n    if not rows:\n        return []\n    width = max_length(rows)\n    if width == 0:\n        return []\n    padded = pad_rows(rows, width, fill)\n    return rotate_clockwise(padded)\n"
+  },
+  {
+    "task": "rotate_ragged",
+    "profile": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "name": "reference-f2-head"
+    },
+    "repeat": 0,
+    "total_seconds": 4.500305208028294,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def rotate_ragged(rows, fill=None):\n    def max_length(rows):\n        result = 0\n        for row in rows:\n            if len(row) > result:\n                result = len(row)\n        return result\n\n    def pad_rows(rows, width, fill):\n        result = []\n        for row in rows:\n            padded = list(row)\n            while len(padded) < width:\n                padded.append(fill)\n            result.append(padded)\n        return result\n\n    def rotate_clockwise(matrix):\n        if not matrix:\n            return []\n        height = len(matrix)\n        width = len(matrix[0])\n        result = []\n        for col in range(width):\n            new_row = []\n            for row in range(height - 1, -1, -1):\n                new_row.append(matrix[row][col])\n            result.append(new_row)\n        return result\n\n    if not rows:\n        return []\n    width = max_length(rows)\n    if width == 0:\n        return []\n    padded = pad_rows(rows, width, fill)\n    return rotate_clockwise(padded)\n"
+  },
+  {
+    "task": "rotate_ragged",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6,
+      "name": "reference-a5-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 3.5653246250003576,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def rotate_ragged(rows, fill=None):\n    def max_length(rows):\n        result = 0\n        for row in rows:\n            if len(row) > result:\n                result = len(row)\n        return result\n\n    def pad_rows(rows, width, fill):\n        result = []\n        for row in rows:\n            padded = list(row)\n            while len(padded) < width:\n                padded.append(fill)\n            result.append(padded)\n        return result\n\n    def rotate_clockwise(matrix):\n        if not matrix:\n            return []\n        height = len(matrix)\n        width = len(matrix[0])\n        result = []\n        for col in range(width):\n            new_row = []\n            for row in range(height - 1, -1, -1):\n                new_row.append(matrix[row][col])\n            result.append(new_row)\n        return result\n\n    if not rows:\n        return []\n    width = max_length(rows)\n    if width == 0:\n        return []\n    padded = pad_rows(rows, width, fill)\n    return rotate_clockwise(padded)\n"
+  },
+  {
+    "task": "rotate_ragged",
+    "profile": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      },
+      "name": "confidence-head6"
+    },
+    "repeat": 0,
+    "total_seconds": 3.2751999580068514,
+    "finish_reason": "stop",
+    "passed": true,
+    "cases": 160,
+    "failed_cases": 0,
+    "first_failures": [],
+    "source": "def rotate_ragged(rows, fill=None):\n    def max_length(rows):\n        result = 0\n        for row in rows:\n            if len(row) > result:\n                result = len(row)\n        return result\n\n    def pad_rows(rows, width, fill):\n        result = []\n        for row in rows:\n            padded = list(row)\n            while len(padded) < width:\n                padded.append(fill)\n            result.append(padded)\n        return result\n\n    def rotate_clockwise(matrix):\n        if not matrix:\n            return []\n        height = len(matrix)\n        width = len(matrix[0])\n        result = []\n        for col in range(width):\n            new_row = []\n            for row in range(height - 1, -1, -1):\n                new_row.append(matrix[row][col])\n            result.append(new_row)\n        return result\n\n    if not rows:\n        return []\n    width = max_length(rows)\n    if width == 0:\n        return []\n    padded = pad_rows(rows, width, fill)\n    return rotate_clockwise(padded)\n"
+  }
+]

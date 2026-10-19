@@ -1,0 +1,20 @@
+[
+  {
+    "module": "cone_arithmetic.py",
+    "retained_functions": 7,
+    "ast_equal": true,
+    "source_hash_matches": true
+  },
+  {
+    "module": "shape_arithmetic.py",
+    "retained_functions": 11,
+    "ast_equal": true,
+    "source_hash_matches": true
+  },
+  {
+    "module": "prime_arithmetic.py",
+    "retained_functions": 6,
+    "ast_equal": true,
+    "source_hash_matches": true
+  }
+]

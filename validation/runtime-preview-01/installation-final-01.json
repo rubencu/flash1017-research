@@ -1,0 +1,15 @@
+{
+  "wheel": "omlx-0.7.1rc1+flash1017.1-cp312-cp312-macosx_15_0_arm64.whl",
+  "sha256": "b5c333adc078c28d0950e925af55d5da628d0915e0586bc6ac62f97d35400554",
+  "bytes": 39711619,
+  "runtime_commit": "ad2f74058056e4cc7c0a13ddc76f96602e8ce092",
+  "installed_from_wheel": true,
+  "versions": {
+    "omlx": "0.7.1rc1+flash1017.1",
+    "mlx": "0.32.4",
+    "mlx-lm": "0.31.4.dev132+g94cdcae13",
+    "mlx-vlm": "0.7.8",
+    "transformers": "5.17.0",
+    "numpy": "2.3.5"
+  }
+}

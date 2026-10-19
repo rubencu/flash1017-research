@@ -1,0 +1,32 @@
+{
+  "schema": "flash1017-bf16-rows2-5-cpu-verification/1",
+  "status": "passed_cpu_packet_checks_only",
+  "base_commit": "165be1ff5933a020f2f5a7544e1e95a2797f777f",
+  "checks": {
+    "base_sha256": true,
+    "patch_sha256": true,
+    "base_mit_notice": true,
+    "git_apply_check": true,
+    "only_expected_file": true,
+    "proposed_sha256": true,
+    "proposed_mit_notice": true,
+    "python_syntax_compiles_without_execution": true,
+    "imports_unchanged": true,
+    "original_metal_source_unchanged": true,
+    "original_kernel_factory_unchanged": true,
+    "original_guard_and_setup_unchanged": true,
+    "original_single_row_return_unchanged": true,
+    "new_branch_after_existing_one_to_five_guard": true,
+    "metal_body_matches_frozen_local_kernel_hash": true,
+    "packaged_local_source_sha256": true,
+    "metal_body_identical_to_packaged_local_kernel": true
+  },
+  "patch_sha256": "cf913a6e454dd74edfd115674ca79d6cb80ebf38c4e07427abdc0476492cc0d3",
+  "proposed_blob_sha256": "34e393fe8e6dd1e63c5f7f2c0ab2778b4ce6bd43260cfcd6aa13b493ce4cecb5",
+  "not_run": [
+    "MLX import or production-function execution",
+    "Metal compilation or GPU kernel execution",
+    "upstream focused or default test suite",
+    "current-main real-model numerical or performance validation"
+  ]
+}

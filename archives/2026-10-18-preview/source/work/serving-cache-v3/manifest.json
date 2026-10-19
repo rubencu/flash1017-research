@@ -1,0 +1,42 @@
+{
+  "schema": "flash1017-serving-row-cache-v3/1",
+  "status": "frozen-cpu-reviewed-candidate-not-qualified",
+  "entry": "serving_cache.install(model, enabled=True, budget_per_table=256*2**20)",
+  "tests": {
+    "command": "work/lab-env/bin/python work/serving-cache-v3/test_cpu.py",
+    "passed": 24,
+    "independently_passed": 24
+  },
+  "sources_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/NOTICE.txt": "8914883b9e04df2acfdd050b3b1908bda27c1580e2ad631fffef4324b06cabe1",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/README.md": "75c8abbfa57f90389312a41157727ee2c81ead2fa614f1ba686d2561be8bf011",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/UPSTREAM-LICENSE": "de69b4352c9952cd5f0f4b8cb4584782a07f02c9ba82aeb5d496aa2b7fe5457d",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/cpu-results.json": "a2e91f9edd93f4291e1696ad921f892105f07ac28e2b4780c01306397d928387",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/hot_rows_upstream.py": "341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/independent-review.json": "e8311031431076e4785a3d0273bfcefdaaf889461de39c9cd782985d0c36b0d1",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/provenance.json": "dc85e733ce7fd6ba24841034b3e1f32cde3e205b7ba73a3747bcd883ec83b3a6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/serving_cache.py": "0254590a69f88ff9adb213caaed897ed62e4c6ba2265ef08802925ea126f1c2a",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/test_cpu.py": "f2aed7becaf71256cc959ab609c576a47c07001ab4f6b6681a0b32e70afffb70"
+  },
+  "native_fixture_sha256": "1dd70bd3ad272c3472623e1c6ef6717b267e7f6c69213a83f5c914ce48400290",
+  "native_module_attribute_rules_source": "/Applications/oMLX.app/Contents/Resources/Python/framework-mlx-base/lib/python3.11/site-packages/mlx/nn/layers/base.py",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "HotRows_repository": "tacos8me/m5-ultra",
+    "HotRows_commit": "fb233e22762f11e23123437efd4cbfc400a59f07",
+    "HotRows_sha256": "341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa"
+  },
+  "limits": {
+    "exact_table_count": 2,
+    "per_table_max_bytes": 268435456,
+    "total_retained_array_max_bytes": 536870912,
+    "temporary_arrays_in_budget": false,
+    "global_prefetch_budget_modified": false
+  },
+  "qualification_remaining": [
+    "Real-model source and parameter identity checks",
+    "Native bypass versus corrected cone/cache logits, token and DSpark traces",
+    "Persistent request reuse, cancellation/recovery, detach/unload/reload",
+    "Long-context candidate sparse selection and server memory/resource checks"
+  ]
+}

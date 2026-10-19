@@ -1,0 +1,207 @@
+DeepSeek-V4.1-Flash-1017: complete runtime versus installed oMLX
+Local review copy. No publication or upstream submission made.
+
+RESULT
+Across this fixed suite, time to first token fell 20.06% versus stock 2K:
+19.554s to 15.631s (geometric means).
+The complete package improves the aggregate, with workload-dependent gains.
+Original full-512 useful-answer qualification: failed;
+9 requests reached EOS early. Every observation is retained.
+Post-hoc time to token 128 fell 20.21%, using all 48 requests.
+This is a warm-runtime performance result; answer-quality equivalence is not established.
+
+WHAT WAS COMPARED
+Same M5 Ultra Mac Studio, 80 GPU cores, 256 GiB memory; same downloaded model files.
+Model: DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp, mlx-community revision
+78456115d301eecf9fadcdcc81c0cf6f8b2c8eab. No new quantization or weight changes.
+Stock 2K: untouched installed oMLX 0.7.1rc1, native adaptive MTP max depth 3,
+2048-token prefill chunks, native 16 MiB Engram prefetch budget.
+Stock 8K: the same untouched runtime and MTP settings, with 8192-token chunks.
+Complete: the full qualified local runtime, with all existing accepted changes:
+  - BF16 output-head reuse for multiple rows, up to six rows;
+  - reference attention rounding after inverse RoPE, in target and draft;
+  - confidence-based speculative prefix selection, draft width five;
+  - 8192-token chunks and a 64 MiB Engram prefetch budget;
+  - repaired dependency replay and arithmetic-shape preservation;
+  - scoped HotRows integration, 256 MiB per table / 512 MiB total retention;
+  - model ownership and cleanup changes.
+This measures the whole package, including its configuration. It does not assign
+causal credit to individual patches. Historical component gains are not multiplied.
+The denominator is the original installed version, NOT current upstream main.
+
+METHOD
+48 measured requests: three configurations x two fresh processes x eight cases.
+Six additional warmups were excluded. The second block reversed configuration
+and case order. Per-case seeds matched across configurations within each block.
+Inputs: two 1K synthetic code/prose cases; four 16K natural-source cases;
+two 64K natural-source cases. Natural sources: CPython, curl, Moby-Dick,
+and Pride and Prejudice. Exact input token IDs were frozen before execution.
+Each measured request asked the generator for 512 tokens with stopping disabled,
+temperature 1, top-p 1, and thinking disabled. Native MTP was active in both
+stock configurations. All three used the same embedded Python and dependencies.
+Common memory policy: 8 GiB MLX allocator cache; a 224 GiB wired limit and
+allocation guideline, 32 GiB below physical memory. This is not a hard OS cap.
+The same per-shard loading headroom checks applied to all configurations.
+Timings start before prefill and exclude model loading and HTTP transport.
+Every request had fresh conversation state. Models stayed loaded within each
+process. OS caches were not purged. Candidate row caches were cleared after
+warmup and retained through the eight measured requests, as declared in advance.
+Aggregate numbers are geometric means over matched cases, with equal case
+weights. Whiskers in figures show the two block means, not confidence intervals.
+
+QUALIFICATION
+All 48 requests completed; independent structural issues: 0.
+Original service restoration confirmed: True.
+Original fixed-512 response qualification: False.
+Early end-of-answer tokens occurred in 9 of 48 requests.
+These observations are retained. The frozen acceptance rule is unchanged.
+Prefill and first-token timings qualify separately and contain no post-EOS continuation.
+Full-512 timing/rate numbers below are descriptive forced-continuation measurements,
+including post-EOS work. They are not validated useful-answer completion times.
+A supplementary first-128-token analysis is available for all 48 requests.
+It was chosen after observing early EOS and is explicitly POST HOC.
+Every measured prefix precedes EOS. Its endpoint is the saved delivery
+timestamp of token 128 within the ORIGINAL 512-token execution.
+It does not simulate a new max_tokens=128 request or include terminal
+synchronization/cleanup at 128. Speculative batches may compute further
+tokens before delivery; these are delivery observations, not kernel timings.
+
+PROMPT PROCESSING — qualified separately
+Group             Stock 2K     Stock 8K     Complete     Change vs 2K    Change vs 8K
+all               19.190s    23.843s    15.319s        -20.17%         -35.75%
+1K                 1.274s     1.273s     1.264s         -0.78%          -0.70%
+16K               27.383s    35.548s    18.536s        -32.31%         -47.86%
+64K              141.991s   200.934s   126.840s        -10.67%         -36.87%
+natural           47.395s    63.323s    35.191s        -25.75%         -44.43%
+synthetic          1.274s     1.273s     1.264s         -0.78%          -0.70%
+block0            19.201s    24.284s    15.420s        -19.69%         -36.50%
+block1            19.179s    23.410s    15.220s        -20.64%         -34.99%
+Negative change is less time; positive change is a higher rate.
+
+TIME TO FIRST TOKEN — qualified separately
+Group             Stock 2K     Stock 8K     Complete     Change vs 2K    Change vs 8K
+all               19.554s    24.293s    15.631s        -20.06%         -35.66%
+1K                 1.363s     1.363s     1.354s         -0.60%          -0.66%
+16K               27.477s    35.644s    18.634s        -32.19%         -47.72%
+64K              142.098s   201.039s   126.944s        -10.66%         -36.86%
+natural           47.517s    63.448s    35.324s        -25.66%         -44.33%
+synthetic          1.363s     1.363s     1.354s         -0.60%          -0.66%
+block0            19.563s    24.751s    15.741s        -19.54%         -36.40%
+block1            19.544s    23.843s    15.522s        -20.58%         -34.90%
+Negative change is less time; positive change is a higher rate.
+
+TIME TO TOKEN 128 — post-hoc observed delivery in the original runs
+Group             Stock 2K     Stock 8K     Complete     Change vs 2K    Change vs 8K
+all               29.009s    35.462s    23.147s        -20.21%         -34.73%
+1K                 5.007s     5.030s     4.641s         -7.29%          -7.72%
+16K               31.154s    39.181s    21.813s        -29.98%         -44.33%
+64K              145.740s   204.815s   129.985s        -10.81%         -36.54%
+natural           52.104s    67.999s    39.547s        -24.10%         -41.84%
+synthetic          5.007s     5.030s     4.641s         -7.29%          -7.72%
+block0            29.059s    36.204s    23.225s        -20.08%         -35.85%
+block1            28.960s    34.736s    23.070s        -20.34%         -33.59%
+Negative change is less time; positive change is a higher rate.
+
+DELIVERY RATE, TOKENS 2–128 — post hoc; tokens per second
+Group             Stock 2K     Stock 8K     Complete     Change vs 2K    Change vs 8K
+all               35.337     35.298     40.363          14.23%          14.35%
+1K                34.873     34.660     38.644          10.81%          11.49%
+16K               35.233     36.124     40.395          14.65%          11.82%
+64K               36.017     34.324     42.093          16.87%          22.63%
+natural           35.493     35.514     40.954          15.39%          15.32%
+synthetic         34.873     34.660     38.644          10.81%          11.49%
+block0            35.886     35.462     39.858          11.07%          12.40%
+block1            34.795     35.135     40.875          17.47%          16.34%
+Negative change is less time; positive change is a higher rate.
+
+FORCED 512-TOKEN ELAPSED TIME — descriptive, includes post-EOS work
+Group             Stock 2K     Stock 8K     Complete     Change vs 2K    Change vs 8K
+all               45.507s    54.069s    35.890s        -21.13%         -33.62%
+1K                16.024s    16.112s    13.044s        -18.59%         -19.04%
+16K               41.423s    49.618s    30.272s        -26.92%         -38.99%
+64K              155.983s   215.455s   138.797s        -11.02%         -35.58%
+natural           64.444s    80.949s    50.291s        -21.96%         -37.87%
+synthetic         16.024s    16.112s    13.044s        -18.59%         -19.04%
+block0            45.588s    54.945s    36.638s        -19.63%         -33.32%
+block1            45.427s    53.206s    35.157s        -22.61%         -33.92%
+Negative change is less time; positive change is a higher rate.
+
+FORCED 512-TOKEN DECODE RATE — descriptive; tokens per second
+Group             Stock 2K     Stock 8K     Complete     Change vs 2K    Change vs 8K
+all               36.706     35.999     43.884          19.56%          21.90%
+1K                34.867     34.664     43.738          25.44%          26.18%
+16K               37.061     36.744     44.185          19.22%          20.25%
+64K               37.904     35.885     43.433          14.58%          21.03%
+natural           37.340     36.455     43.932          17.66%          20.51%
+synthetic         34.867     34.664     43.738          25.44%          26.18%
+block0            37.141     36.372     42.623          14.76%          17.19%
+block1            36.275     35.630     45.182          24.55%          26.81%
+Negative change is less time; positive change is a higher rate.
+
+PER-CASE FIRST-TOKEN TIMES — geometric means of the two blocks
+Case                                  Stock 2K    Stock 8K    Complete
+held-code-1k                               1.367s     1.368s     1.363s
+held-prose-1k                              1.359s     1.359s     1.346s
+performance-cpython-16384                 22.880s    30.947s    14.519s
+performance-cpython-65536                102.073s   161.931s   104.445s
+performance-curl-16384                    23.234s    30.966s    16.878s
+performance-moby-dick-16384               38.055s    41.589s    24.494s
+performance-pride-prejudice-16384         28.178s    40.502s    20.085s
+performance-pride-prejudice-65536        197.818s   249.592s   154.289s
+
+PER-CASE TIME TO TOKEN 128 — post hoc; geometric means of both blocks
+Case                                  Stock 2K    Stock 8K    Complete    Change vs 2K
+held-code-1k                               4.804s     4.833s     4.605s         -4.15%
+held-prose-1k                              5.217s     5.235s     4.678s        -10.33%
+performance-cpython-16384                 26.313s    34.188s    17.508s        -33.46%
+performance-cpython-65536                105.325s   165.585s   107.176s          1.76%
+performance-curl-16384                    26.415s    34.123s    19.604s        -25.78%
+performance-moby-dick-16384               41.814s    45.438s    28.069s        -32.87%
+performance-pride-prejudice-16384         32.415s    44.459s    23.501s        -27.50%
+performance-pride-prejudice-65536        201.662s   253.339s   157.647s        -21.83%
+
+RESOURCES — measured requests; sampled peaks can miss brief transients
+native2048: footprint peak 208.35 GiB; minimum available 23.51 GiB; maximum within-request swap growth 0.000 GiB; summed process disk reads 278.78 GiB.
+native8192: footprint peak 215.77 GiB; minimum available 19.77 GiB; maximum within-request swap growth 0.002 GiB; summed process disk reads 319.89 GiB.
+complete: footprint peak 216.10 GiB; minimum available 19.63 GiB; maximum within-request swap growth 0.004 GiB; summed process disk reads 281.22 GiB.
+Disk-read counters cover the whole process request, not exclusively Engram
+or a claim about physical SSD traffic. Cache history is part of this procedure.
+
+EARLY EOS — zero-based positions; all observations retained
+{"arm": "native2048", "block": 0, "first_eos_position": 435, "fixture": "performance-moby-dick-16384", "generated_tokens": 512, "token_ids_sha256": "00963b2234dcfac0cc416ababbcc60d10b34fe5a1beb6f45a9a6d6eb8136e841"}
+{"arm": "native2048", "block": 0, "first_eos_position": 322, "fixture": "performance-pride-prejudice-16384", "generated_tokens": 512, "token_ids_sha256": "76aa79f60ff32567df8ef9c4dd05aae42a115a5ef2c4317a68280fb8431efe02"}
+{"arm": "native8192", "block": 0, "first_eos_position": 262, "fixture": "performance-pride-prejudice-65536", "generated_tokens": 512, "token_ids_sha256": "4482a039d39acf5a1e6844aa35d579b68028f1c4bcbcc4be561a7cb4331d003f"}
+{"arm": "native8192", "block": 0, "first_eos_position": 494, "fixture": "performance-pride-prejudice-16384", "generated_tokens": 512, "token_ids_sha256": "4b2fa51628b9afb3b6864e4ab2d1e59c3eb4740b1a692e60d5bc09d1bd6cc731"}
+{"arm": "complete", "block": 0, "first_eos_position": 318, "fixture": "performance-pride-prejudice-16384", "generated_tokens": 512, "token_ids_sha256": "59e85fd34c7f0d0dd9ff949ec1367fc2101642fe8112eae886e81e17def38adc"}
+{"arm": "complete", "block": 1, "first_eos_position": 390, "fixture": "performance-pride-prejudice-16384", "generated_tokens": 512, "token_ids_sha256": "8972d1710f8477c734f66da463e69191e7d2990214fc6823c92f4284649b82f2"}
+{"arm": "complete", "block": 1, "first_eos_position": 258, "fixture": "performance-curl-16384", "generated_tokens": 512, "token_ids_sha256": "818b7d949bd66780d195ccb5b935d82fd0673a808f411800f32fcd0ba03e2651"}
+{"arm": "native8192", "block": 1, "first_eos_position": 412, "fixture": "performance-pride-prejudice-65536", "generated_tokens": 512, "token_ids_sha256": "ca80c543b10f6527e07b27a46a4475b632a793fcbfb6413b3ed11381f0406342"}
+{"arm": "native2048", "block": 1, "first_eos_position": 407, "fixture": "performance-pride-prejudice-16384", "generated_tokens": 512, "token_ids_sha256": "61442f3dc8b81f064a4f7c2fc16658a2af39566bf8c4510063ac6435051400b6"}
+
+LIMITS
+Outputs can differ. This performance comparison does not establish answer
+quality equivalence, correctness on a task suite, or faster equivalent work.
+Two process blocks on one machine are not a confidence interval or evidence
+for other hardware, checkpoints, concurrency levels, cold starts, or tail latency.
+This is an existing local-runtime comparison, not portable-release qualification.
+Current upstream main and its changed native build layout were not benchmarked.
+No additional optimization experiments were introduced for this comparison.
+
+EVIDENCE
+Independent audit: ${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/overall-comparison-review-01/independent-audit.json
+Supplement: ${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/overall-comparison-review-01/supplement.json
+Frozen executable plan SHA256: f668ef98840aa9c13a736e4b8329b396ad1f69032c46836d1640fdf9346972db
+Frozen source manifest SHA256: 767355abf8eedac3427b0537612bceda3b646b01142d93bc0dee0152faedc570
+Raw per-request tokens, timing traces, activation checks and cleanup records:
+${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/00-native2048-block0.jsonl
+  SHA256 d12a4fb066c8583b2146d9c2162315d744f56e55a2f6b2c8460d55222264a3d7
+${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/01-native8192-block0.jsonl
+  SHA256 8cd6c024834190892a27a58413b3d70ec70f4f265870a462afde56470caa45ca
+${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/02-complete-block0.jsonl
+  SHA256 41a7a8b0723a24d711d2972eefc1240533deda2d0e170399180606fa2c91d3ec
+${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/03-complete-block1.jsonl
+  SHA256 62175aa5d4ed0bed4e6aa6883037abc12acf5716b6bfcb6afb8da07d259609db
+${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/04-native8192-block1.jsonl
+  SHA256 75fb21877a9bebf648a0ef65407d62c82603c93ef6f475503f38cd2ec46f4542
+${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/overall-comparison-01/05-native2048-block1.jsonl
+  SHA256 a4209297c607a00924640ef9834cefd65bb43c86da7a6a038fa267f1dbf3cebc

@@ -1,0 +1,42 @@
+{
+  "description": "Unrun persistent-serving v3 boundary and diverse performance qualification. Native64 baseline is unchanged; stop after any retained matched-pair correctness/activation failure, never on speed alone.",
+  "baseline": {
+    "profile_sha256": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da",
+    "inference_files_verified": 575,
+    "checkpoint_manifest_sha256": "926e2b8c29d9d81d307d2812d4f24265d9a77d0bcd6b231f0bd29473caf5868f",
+    "checkpoint_fingerprints_verified": 61,
+    "packages": {
+      "mlx": "0.32.4",
+      "mlx-lm": "0.31.4.dev132+g94cdcae13",
+      "mlx-vlm": "0.7.8"
+    },
+    "checkpoint_check": "Inode, size and mtime compared to previously fully hashed files."
+  },
+  "sources_sha256": {
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/provenance.json": "b5d54492cf217d77f6e45cf7d7dcdd3fbb51f6d98817ac04de3c93576df89692",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/qualified-profile.json": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/checkpoint-hashes.json": "926e2b8c29d9d81d307d2812d4f24265d9a77d0bcd6b231f0bd29473caf5868f",
+    "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678",
+    "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633",
+    "${ORIGINAL_LAB_ROOT}/work/cone-experiment/verify_real.py": "44f539da23e221a7cd030c93be8c2ab8ad7cfd82e4912c83130e74c3f4aa125d",
+    "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/NOTICE.txt": "8914883b9e04df2acfdd050b3b1908bda27c1580e2ad631fffef4324b06cabe1",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/UPSTREAM-LICENSE": "de69b4352c9952cd5f0f4b8cb4584782a07f02c9ba82aeb5d496aa2b7fe5457d",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/hot_rows_upstream.py": "341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/manifest.json": "6a8a3d7869c9cf9f2b8071f466b61d69fcee68e330521db8bf3ec214642e6324",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/provenance.json": "dc85e733ce7fd6ba24841034b3e1f32cde3e205b7ba73a3747bcd883ec83b3a6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/serving_cache.py": "0254590a69f88ff9adb213caaed897ed62e4c6ba2265ef08802925ea126f1c2a",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/cone_serving.py": "4c02a58440aa2ee79e16572fac20e775be35da52a5171bd314cbe5b394c633fb",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/manifest-01.json": "77b86682cb858889df293e4c229dc218d9beaf89d51fcc763cfe4336b052fa33",
+    "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/evidence.py": "ffecaefb212e99426c2ea600517893c9fd08fd2b9d63a4e8eb8a0e5f8e473a4c",
+    "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/freeze_execution.py": "66ae09668df22364976551853372298df821cfb5c960489f65609524a381d7c8",
+    "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/run_qualification.py": "acc5b0850473fe7a1aa2e6eb2a2b453bd020d5314a2483239f4468c1f5460766",
+    "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/runtime.py": "d0656e8b5bf8e87adac844d6ca5de4556f42022d5833266f6ca75fe2d8861f98",
+    "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/test_cpu.py": "da28b49ba9e907791e4758d79f2964505d840b2fdcef35ce1457d4ec180ed2d5",
+    "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/fixture-manifest.json": "69a69d82bc7e1162451b15782ce43bea924d781af17b074510310493cbae0b47",
+    "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans-manifest.json": "2708f1b58e943b2c5951cc47aba8c4523053e6fe093ff4666e57d22249a39714",
+    "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/boundary-01.json": "d4095452c17564db3d57c106e041ef042a16355ecaa1243687201999c8047dcf",
+    "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/performance-01.json": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+    "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/source-manifest.json": "44daa65bb2e1a545a054c584488a352648497db62d195a57f1aece8ebcd7aa15"
+  }
+}

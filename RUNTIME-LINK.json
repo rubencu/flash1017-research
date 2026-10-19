@@ -1,0 +1,18 @@
+{
+  "schema": "flash1017-research-runtime-link/1",
+  "runtime_repository": "rubencu/omlx",
+  "local_sibling": "../omlx",
+  "runtime_commit": "ad2f74058056e4cc7c0a13ddc76f96602e8ce092",
+  "runtime_tag": null,
+  "status": "local-installation-and-bounded-serving-validated",
+  "historical_results_apply_to": "archives/2026-10-18-preview",
+  "current_runtime_performance_claim": false,
+  "runtime_branch": "flash1017-preview",
+  "runtime_base_tag": "v0.7.1rc1",
+  "runtime_base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+  "runtime_wheel": "omlx-0.7.1rc1+flash1017.1-cp312-cp312-macosx_15_0_arm64.whl",
+  "runtime_wheel_sha256": "b5c333adc078c28d0950e925af55d5da628d0915e0586bc6ac62f97d35400554",
+  "validation": "validation/runtime-preview-01",
+  "model_repository": "mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+  "model_revision": "78456115d301eecf9fadcdcc81c0cf6f8b2c8eab"
+}

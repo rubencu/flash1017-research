@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "python": "3.9.6",
+  "python39_syntax_checked": true,
+  "only_analysis_plan_six_raw_files_two_reviews_and_inventory_copied": true,
+  "original_workspace_read_guard_confirmed": true,
+  "network_and_model_imports_denied": true,
+  "isolated_python_flag": true,
+  "guarded_analyzer_exit_code": 0,
+  "tests_exit_code": 0,
+  "tests_output": "test_boolean_token_rejected (test_analyze.SavedObservationTests) ... ok\ntest_candidate_priming_mismatch_rejected (test_analyze.SavedObservationTests) ... ok\ntest_changed_saved_review_rejected (test_analyze.SavedObservationTests) ... ok\ntest_complete_data_matches_saved_reviews (test_analyze.SavedObservationTests) ... ok\ntest_duplicate_case_with_same_record_count_rejected (test_analyze.SavedObservationTests) ... ok\ntest_duplicate_request_rejected (test_analyze.SavedObservationTests) ... ok\ntest_eos127_blocks_entire_prefix_analysis_without_subset (test_analyze.SavedObservationTests) ... ok\ntest_eos128_allows_positions_zero_through127 (test_analyze.SavedObservationTests) ... ok\ntest_eos_at_last_token_is_not_early (test_analyze.SavedObservationTests) ... ok\ntest_eos_claim_checked_against_actual_token_ids (test_analyze.SavedObservationTests) ... ok\ntest_extra_raw_file_rejected (test_analyze.SavedObservationTests) ... ok\ntest_first_token_endpoint_mismatch_rejected (test_analyze.SavedObservationTests) ... ok\ntest_fixed_length_boolean_must_match_eos (test_analyze.SavedObservationTests) ... ok\ntest_frozen_plan_hash_rejected_before_analysis (test_analyze.SavedObservationTests) ... ok\ntest_memory_guard_rejected (test_analyze.SavedObservationTests) ... ok\ntest_missing_cleanup_rejected (test_analyze.SavedObservationTests) ... ok\ntest_missing_process_rejected (test_analyze.SavedObservationTests) ... ok\ntest_missing_raw_file_rejected (test_analyze.SavedObservationTests) ... ok\ntest_missing_request_rejected (test_analyze.SavedObservationTests) ... ok\ntest_nan_timing_rejected (test_analyze.SavedObservationTests) ... ok\ntest_non_monotonic_arrivals_rejected (test_analyze.SavedObservationTests) ... ok\ntest_original_to_public_hash_mapping_rejected (test_analyze.SavedObservationTests) ... ok\ntest_out_of_vocabulary_token_rejected (test_analyze.SavedObservationTests) ... ok\ntest_overlapping_processes_rejected (test_analyze.SavedObservationTests) ... ok\ntest_prompt_hash_mismatch_rejected (test_analyze.SavedObservationTests) ... ok\ntest_request_order_rejected (test_analyze.SavedObservationTests) ... ok\ntest_resource_negative_rejected (test_analyze.SavedObservationTests) ... ok\ntest_seed_mismatch_rejected (test_analyze.SavedObservationTests) ... ok\ntest_source_activation_failure_rejected (test_analyze.SavedObservationTests) ... ok\ntest_stored_rate_arithmetic_rejected (test_analyze.SavedObservationTests) ... ok\ntest_strict_json_parser_rejects_duplicate_keys_and_nan (test_analyze.SavedObservationTests) ... ok\ntest_unreported_eos_rejected (test_analyze.SavedObservationTests) ... ok\ntest_warmup_cannot_be_measured (test_analyze.SavedObservationTests) ... ok\ntest_wrong_output_length_rejected (test_analyze.SavedObservationTests) ... ok\ntest_wrong_packaged_hash_rejected (test_analyze.SavedObservationTests) ... ok\ntest_zero_prefix_duration_rejected (test_analyze.SavedObservationTests) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 1.985s\n\nOK\n",
+  "headline": {
+    "baseline_geometric_mean": 19.55381604128208,
+    "candidate_geometric_mean": 15.631156450149781,
+    "ratio_candidate_over_baseline": 0.7993916081213627,
+    "change_percent": -20.06083918786373,
+    "improvement_percent": 20.06083918786373,
+    "direction_of_improvement": "lower"
+  },
+  "counts": {
+    "processes": 6,
+    "measured_requests": 48,
+    "excluded_warmups": 6,
+    "unique_cases": 8
+  },
+  "fixed512": {
+    "qualified": false,
+    "early_eos_count": 9,
+    "status": "failed_early_eos",
+    "scope": "Original frozen fixed-length rule; full-512 metrics remain descriptive forced continuation, including post-EOS work."
+  },
+  "prefix128": {
+    "post_hoc": true,
+    "available_for_all48": true,
+    "horizon_tokens": 128,
+    "early_eos_blockers": [],
+    "subset_or_shorter_horizon_used": false,
+    "scope": "Saved token-128 delivery within original 512-token executions. NOT new 128-token requests, terminal completion or isolated GPU time."
+  },
+  "saved_review_comparison": {
+    "matched": true,
+    "scope": "All aggregate, case and arm metrics, resource summaries, EOS records and original failure status."
+  },
+  "memory_tradeoff_gib_vs_native2048": 7.748337350785732,
+  "analyzer_sha256": "46acbe4a6f2853929ba61b02c8a6821cbbda4a8d71e0b22cf05adf27fc6852aa",
+  "public_input_bindings": {
+    "plan_sha256": "f668ef98840aa9c13a736e4b8329b396ad1f69032c46836d1640fdf9346972db",
+    "original_source_manifest_sha256": "767355abf8eedac3427b0537612bceda3b646b01142d93bc0dee0152faedc570",
+    "evidence_inventory_sha256": "2f7002d533fa89fc7fbca01900858fa02b74fec2967aacf63baa56267287cfe1",
+    "raw": [
+      {
+        "file": "00-native2048-block0.jsonl",
+        "packaged_sha256": "d12a4fb066c8583b2146d9c2162315d744f56e55a2f6b2c8460d55222264a3d7",
+        "bytes": 207813
+      },
+      {
+        "file": "01-native8192-block0.jsonl",
+        "packaged_sha256": "8cd6c024834190892a27a58413b3d70ec70f4f265870a462afde56470caa45ca",
+        "bytes": 207356
+      },
+      {
+        "file": "02-complete-block0.jsonl",
+        "packaged_sha256": "6f18b10d2cb1ba5e76d462ed8ed6695fd7f7c0155e6ebc897a8139a8b69535ce",
+        "bytes": 937193
+      },
+      {
+        "file": "03-complete-block1.jsonl",
+        "packaged_sha256": "5ba0624bb14efbfef6e23f5fb2693ed63ea97f7a03b1482365f2372d7090f4ca",
+        "bytes": 929940
+      },
+      {
+        "file": "04-native8192-block1.jsonl",
+        "packaged_sha256": "75fb21877a9bebf648a0ef65407d62c82603c93ef6f475503f38cd2ec46f4542",
+        "bytes": 207930
+      },
+      {
+        "file": "05-native2048-block1.jsonl",
+        "packaged_sha256": "a4209297c607a00924640ef9834cefd65bb43c86da7a6a038fa267f1dbf3cebc",
+        "bytes": 208971
+      }
+    ],
+    "normalization_note": "Packaged hashes identify path-normalized bytes; original audit hashes identify original bytes. No recorded absolute path is accessed."
+  },
+  "human_report": "DeepSeek-V4.1-Flash-1017: saved-observation recalculation\nUntouched installed oMLX 0.7.1rc1, native adaptive MTP; NOT current main\nTTFT: 20.06% less time (19.554s -> 15.631s, equal-case geometric means).\n48 measured requests; 8 cases; 3 arms; 2 process blocks per arm; 6 excluded warmups.\nOriginal fixed-512 qualification: FAIL; 9 early-EOS records retained.\nPrefill and TTFT qualify separately; no answer-quality equivalence claim.\nPOST HOC time to token 128: 20.21% less (29.009s -> 23.147s), all 48 original runs.\nSaved token-128 delivery within original 512-token executions. NOT new 128-token requests, terminal completion or isolated GPU time.\n\nPer-case TTFT change vs native2048 (positive means slower):\n  held-code-1k                             -0.25%\n  held-prose-1k                            -0.95%\n  performance-cpython-16384               -36.54%\n  performance-cpython-65536                +2.32%\n  performance-curl-16384                  -27.36%\n  performance-moby-dick-16384             -35.64%\n  performance-pride-prejudice-16384       -28.72%\n  performance-pride-prejudice-65536       -22.00%\n\nSampled process footprint peaks:\n  native2048   208.35 GiB\n  native8192   215.77 GiB\n  complete     216.10 GiB\nComplete package adds 7.75 GiB vs native2048; includes its changed chunk configuration.\nFull-512 elapsed/rate fields in JSON are DESCRIPTIVE FORCED CONTINUATION, not useful-answer completion.\nSaved independent audit/supplement: numerical comparison matched.\n\nAll 48 records retained; two process blocks on one machine, equal-case geometric means, no confidence interval.\nWarm runtime, retained OS caches, declared row-cache history; model loading and HTTP transport excluded.\nOutputs can differ. No equivalent-answer speed, task-quality, generic-model, hardware or current-main claim.\nSampled footprint may miss transients; process disk counters are not exclusively Engram or physical SSD traffic.\nThis recalculates packaged observations and checks recorded activation fields. It does not rerun or reauthenticate the original runtime/source audit.\n"
+}

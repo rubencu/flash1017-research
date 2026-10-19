@@ -1,0 +1,8 @@
+This serving adapter reuses HotRows verbatim from tacos8me/m5-ultra.
+Source: kernels/omlx/src/omlx/patches/deepseek_v41/hot_rows.py
+Commit: fb233e22762f11e23123437efd4cbfc400a59f07
+Source SHA256: 341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa
+License: Apache-2.0, as declared by the source SPDX header and upstream kernels/omlx/LICENSE.
+The unmodified source is hot_rows_upstream.py; the complete upstream license is UPSTREAM-LICENSE.
+The instance lifecycle adapter and CPU fixtures are local additions.
+No claim of a novel row-cache algorithm is made.

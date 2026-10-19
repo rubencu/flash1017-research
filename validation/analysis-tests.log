@@ -1,0 +1,41 @@
+test_boolean_token_rejected (test_analyze.SavedObservationTests) ... ok
+test_candidate_priming_mismatch_rejected (test_analyze.SavedObservationTests) ... ok
+test_changed_saved_review_rejected (test_analyze.SavedObservationTests) ... ok
+test_complete_data_matches_saved_reviews (test_analyze.SavedObservationTests) ... ok
+test_duplicate_case_with_same_record_count_rejected (test_analyze.SavedObservationTests) ... ok
+test_duplicate_request_rejected (test_analyze.SavedObservationTests) ... ok
+test_eos127_blocks_entire_prefix_analysis_without_subset (test_analyze.SavedObservationTests) ... ok
+test_eos128_allows_positions_zero_through127 (test_analyze.SavedObservationTests) ... ok
+test_eos_at_last_token_is_not_early (test_analyze.SavedObservationTests) ... ok
+test_eos_claim_checked_against_actual_token_ids (test_analyze.SavedObservationTests) ... ok
+test_extra_raw_file_rejected (test_analyze.SavedObservationTests) ... ok
+test_first_token_endpoint_mismatch_rejected (test_analyze.SavedObservationTests) ... ok
+test_fixed_length_boolean_must_match_eos (test_analyze.SavedObservationTests) ... ok
+test_frozen_plan_hash_rejected_before_analysis (test_analyze.SavedObservationTests) ... ok
+test_memory_guard_rejected (test_analyze.SavedObservationTests) ... ok
+test_missing_cleanup_rejected (test_analyze.SavedObservationTests) ... ok
+test_missing_process_rejected (test_analyze.SavedObservationTests) ... ok
+test_missing_raw_file_rejected (test_analyze.SavedObservationTests) ... ok
+test_missing_request_rejected (test_analyze.SavedObservationTests) ... ok
+test_nan_timing_rejected (test_analyze.SavedObservationTests) ... ok
+test_non_monotonic_arrivals_rejected (test_analyze.SavedObservationTests) ... ok
+test_original_to_public_hash_mapping_rejected (test_analyze.SavedObservationTests) ... ok
+test_out_of_vocabulary_token_rejected (test_analyze.SavedObservationTests) ... ok
+test_overlapping_processes_rejected (test_analyze.SavedObservationTests) ... ok
+test_prompt_hash_mismatch_rejected (test_analyze.SavedObservationTests) ... ok
+test_request_order_rejected (test_analyze.SavedObservationTests) ... ok
+test_resource_negative_rejected (test_analyze.SavedObservationTests) ... ok
+test_seed_mismatch_rejected (test_analyze.SavedObservationTests) ... ok
+test_source_activation_failure_rejected (test_analyze.SavedObservationTests) ... ok
+test_stored_rate_arithmetic_rejected (test_analyze.SavedObservationTests) ... ok
+test_strict_json_parser_rejects_duplicate_keys_and_nan (test_analyze.SavedObservationTests) ... ok
+test_unreported_eos_rejected (test_analyze.SavedObservationTests) ... ok
+test_warmup_cannot_be_measured (test_analyze.SavedObservationTests) ... ok
+test_wrong_output_length_rejected (test_analyze.SavedObservationTests) ... ok
+test_wrong_packaged_hash_rejected (test_analyze.SavedObservationTests) ... ok
+test_zero_prefix_duration_rejected (test_analyze.SavedObservationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 2.025s
+
+OK

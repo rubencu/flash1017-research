@@ -1,0 +1,3165 @@
+{
+  "archived_local_source_gaps": [],
+  "data_evidence_not_source": [
+    "checkpoint-hashes.json",
+    "overall frozen plan/manifest/token fixtures and raw JSONL",
+    "original qualification receipts/source snapshots",
+    "calibration raw cost6-01.jsonl",
+    "large saved state/logit arrays"
+  ],
+  "edges": [
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/head.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/quantization.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/deepseek_v4_dspark.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v4/switch_layers.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/activation.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/cache.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/engram.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/growth.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/head.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/hyper_connection.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/kernels.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/mtp.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/quantization.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/routing.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/config.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/convert.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/model.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/moe_offload.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/processing.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/quantization.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/storage.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/tool_parser.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_policy.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batched_head.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/cache_rollback.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/context_copy.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/fused_batch.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/prompt_priming.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/qwen35_verify_qmm.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "included": false,
+      "kind": "relative-import",
+      "resolution": "external-unmodified-upstream",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/qwen35_verify_sdpa_split.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/bench.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/head.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/bench.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/memory.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/bench.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/policy.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/bench_head.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/head.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/reproduce.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/reproduce.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/setup_runtime.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/serve.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/serve.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/memory.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/serve.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/setup_runtime.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/summarize_validation.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/analyze.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/verify_head.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/flash1017/verify_head.py",
+      "included": true,
+      "kind": "relative-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/head.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_bench.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_bench.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/tests/test_generation.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_calibrate.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/calibrate.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_generation.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/policy.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_head.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/head.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_policy.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/policy.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_quality.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/quality.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_quality_iter.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/quality.py"
+    },
+    {
+      "from": "outputs/flash1017-lab/tests/test_startup_port.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/serve.py"
+    },
+    {
+      "from": "work/cone-experiment/verify_real.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/cone-experiment/verify_real.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/cone-experiment/verify_real.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/memory.py"
+    },
+    {
+      "from": "work/cone-experiment/verify_real.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/cone.py"
+    },
+    {
+      "from": "work/cone-experiment/verify_real.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/cone.py"
+    },
+    {
+      "from": "work/overall-comparison-01/freeze.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/overall-comparison-01/supervise.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/overall-comparison-01/worker.py"
+    },
+    {
+      "from": "work/overall-comparison-01/worker.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/overall-comparison-01/worker.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/overall-comparison-01/worker.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/memory.py"
+    },
+    {
+      "from": "work/overall-comparison-01/worker.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/overall-comparison-01/runtime-audit/source_activation.py"
+    },
+    {
+      "from": "work/overall-comparison-01/worker.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/overall-comparison-01/runtime-audit/source_activation.py"
+    },
+    {
+      "from": "work/overall-comparison-01/worker.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/evidence.py"
+    },
+    {
+      "from": "work/overall-comparison-01/worker.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/runtime.py"
+    },
+    {
+      "from": "work/overall-comparison-01/worker.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/runtime.py"
+    },
+    {
+      "from": "work/serving-analysis-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-analysis-v3/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-analysis-v3/analyze_performance.py"
+    },
+    {
+      "from": "work/serving-analysis-v3/test_cpu_v2.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-analysis-v3/test_cpu_v2.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-analysis-v3/analyze_performance_v2.py"
+    },
+    {
+      "from": "work/serving-cache-v3/serving_cache.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/hot_rows_upstream.py"
+    },
+    {
+      "from": "work/serving-cache-v3/serving_cache.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-cache-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/hot_rows_upstream.py"
+    },
+    {
+      "from": "work/serving-cache-v3/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-cone-v3/cone_serving.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-dspark-stable/stabilization.py"
+    },
+    {
+      "from": "work/serving-cone-v3/cone_serving.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/cone.py"
+    },
+    {
+      "from": "work/serving-cone-v3/cone_serving.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-v2/stabilization.py"
+    },
+    {
+      "from": "work/serving-cone-v3/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-cone-v3/cone_serving.py"
+    },
+    {
+      "from": "work/serving-http-v3/check_cancel.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-http-v3/common.py"
+    },
+    {
+      "from": "work/serving-http-v3/check_lifecycle.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-http-v3/common.py"
+    },
+    {
+      "from": "work/serving-http-v3/check_sessions.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-http-v3/common.py"
+    },
+    {
+      "from": "work/serving-http-v3/check_vision.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-http-v3/common.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-dspark-stable/stabilization.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/cone.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/verify_real.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-v2/stabilization.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/hot_rows_upstream.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cone-v3/cone_serving.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/freeze_execution.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/run_qualification.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/runtime.py"
+    },
+    {
+      "from": "work/serving-integration-v3/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/test_cpu.py"
+    },
+    {
+      "from": "work/serving-integration-v3/run_qualification.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-integration-v3/run_qualification.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-integration-v3/run_qualification.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/verify_real.py"
+    },
+    {
+      "from": "work/serving-integration-v3/run_qualification.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3/run_qualification.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/runtime.py"
+    },
+    {
+      "from": "work/serving-integration-v3/runtime.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-integration-v3/runtime.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cone-v3/cone_serving.py"
+    },
+    {
+      "from": "work/serving-integration-v3/runtime.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3/runtime.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/run_qualification.py"
+    },
+    {
+      "from": "work/serving-integration-v3/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/runtime.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-dspark-stable/stabilization.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/cone.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/verify_real.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-v2/stabilization.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/hot_rows_upstream.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cone-v3/cone_serving.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/freeze_execution.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/run_qualification.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/runtime.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/freeze_execution.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/test_cpu.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/run_qualification.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/run_qualification.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/run_qualification.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/verify_real.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/run_qualification.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/run_qualification.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/runtime.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/runtime.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/runtime.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cone-v3/cone_serving.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/runtime.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/runtime.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/evidence.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/supervise_performance.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/reserve_memory.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/supervise_performance.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/run_qualification.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/run_qualification.py"
+    },
+    {
+      "from": "work/serving-integration-v3b/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3b/runtime.py"
+    },
+    {
+      "from": "work/serving-launch-v3/launch.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-server-v3/serve_candidate.py"
+    },
+    {
+      "from": "work/serving-launch-v3/launch.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/serving-server-v3/serve_candidate.py"
+    },
+    {
+      "from": "work/serving-launch-v3/test_launch.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-launch-v3/launch.py"
+    },
+    {
+      "from": "work/serving-launch-v3/test_launch.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-launch-v3/launch.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-dspark-stable/stabilization.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/cone.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-v2/stabilization.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-analysis-v3/analyze_performance_v2.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/hot_rows_upstream.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cone-v3/cone_serving.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/runtime.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-profile-v3/prepare.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-profile-v3/test_cpu.py"
+    },
+    {
+      "from": "work/serving-profile-v3/prepare.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-server-v3/serve_candidate.py"
+    },
+    {
+      "from": "work/serving-profile-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/serve.py"
+    },
+    {
+      "from": "work/serving-profile-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-analysis-v3/analyze_performance_v2.py"
+    },
+    {
+      "from": "work/serving-profile-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-profile-v3/prepare.py"
+    },
+    {
+      "from": "work/serving-profile-v3/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-profile-v3/prepare.py"
+    },
+    {
+      "from": "work/serving-profile-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-profile-v3/test_cpu.py"
+    },
+    {
+      "from": "work/serving-profile-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-state-review-v3/validate_boundary.py"
+    },
+    {
+      "from": "work/serving-qualification-v3/freeze_plans.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-qualification-v3/build_fixtures.py"
+    },
+    {
+      "from": "work/serving-qualification-v3/freeze_plans.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-qualification-v3/build_fixtures.py"
+    },
+    {
+      "from": "work/serving-qualification-v3/freeze_plans.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-qualification-v3/fetch_sources.py"
+    },
+    {
+      "from": "work/serving-qualification-v3/freeze_plans.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-qualification-v3/freeze_plans.py"
+    },
+    {
+      "from": "work/serving-qualification-v3/test_fixtures_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-qualification-v3/build_fixtures.py"
+    },
+    {
+      "from": "work/serving-qualification-v3/test_fixtures_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-qualification-v3/build_fixtures.py"
+    },
+    {
+      "from": "work/serving-qualification-v3/test_fixtures_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-qualification-v3/freeze_plans.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/config.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/serve.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/serve.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-dspark-stable/stabilization.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/cone.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-v2/stabilization.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/hot_rows_upstream.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cone-v3/cone_serving.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/runtime.py"
+    },
+    {
+      "from": "work/serving-server-v3/serve_candidate.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/runtime.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-dspark-stable/stabilization.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-experiment/cone.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/cone-v2/stabilization.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/hot_rows_upstream.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cache-v3/serving_cache.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-cone-v3/cone_serving.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/evidence.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-integration-v3/runtime.py"
+    },
+    {
+      "from": "work/serving-server-v3/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-server-v3/serve_candidate.py"
+    },
+    {
+      "from": "work/serving-shortcut-v3/shortcut.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-launch-v3/launch.py"
+    },
+    {
+      "from": "work/serving-shortcut-v3/shortcut.py",
+      "included": true,
+      "kind": "reviewed-dynamic-import",
+      "resolution": "bundled",
+      "to": "work/serving-launch-v3/launch.py"
+    },
+    {
+      "from": "work/serving-shortcut-v3/test_cpu.py",
+      "included": true,
+      "kind": "local-import",
+      "resolution": "bundled",
+      "to": "work/serving-shortcut-v3/shortcut.py"
+    },
+    {
+      "from": "work/serving-state-review-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "outputs/flash1017-lab/flash1017/bench.py"
+    },
+    {
+      "from": "work/serving-state-review-v3/test_cpu.py",
+      "included": true,
+      "kind": "literal-source-reference",
+      "resolution": "bundled",
+      "to": "work/serving-state-review-v3/validate_boundary.py"
+    }
+  ],
+  "entrypoints": [
+    "work/serving-shortcut-v3/shortcut.py",
+    "work/serving-launch-v3/launch.py",
+    "work/serving-server-v3/serve_candidate.py",
+    "outputs/flash1017-lab/flash1017/serve.py",
+    "work/overall-comparison-01/worker.py"
+  ],
+  "external_runtime": {
+    "native_binaries": "not included; public cp311 wheel differs bytewise from measured installed native modules; equivalence unverified",
+    "oMLX_release": "0.7.1rc1",
+    "packages": {
+      "mlx": "0.32.4",
+      "mlx-lm": "0.31.4.dev132+g94cdcae13",
+      "mlx-vlm": "0.7.8",
+      "numpy": "2.3.5",
+      "transformers": "5.17.0"
+    },
+    "public_base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+    "python": "embedded CPython 3.11; exact external build closure not bundled"
+  },
+  "literal_source_or_data_references": {
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/config.py": [],
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py": [],
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py": [],
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py": [
+      "config.json",
+      "conversion.inprogress.json",
+      "model.safetensors.index.json"
+    ],
+    "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py": [],
+    "outputs/flash1017-lab/flash1017/__init__.py": [],
+    "outputs/flash1017-lab/flash1017/analyze.py": [],
+    "outputs/flash1017-lab/flash1017/bench.py": [
+      "*.py",
+      ".load.jsonl",
+      ".py",
+      "provenance.json"
+    ],
+    "outputs/flash1017-lab/flash1017/bench_head.py": [],
+    "outputs/flash1017-lab/flash1017/calibrate.py": [],
+    "outputs/flash1017-lab/flash1017/final_report.py": [
+      "confidence-16k-01.jsonl",
+      "deployment-quality-grades-01.json",
+      "final-integrity-02.json",
+      "final-report-01.json",
+      "final-source-archive-report.json",
+      "head-full-numerics-01.json",
+      "head-single-row-numerics-01.json",
+      "heldout-01.jsonl",
+      "long-context-cache-01.json",
+      "long-context-http-01.json",
+      "quality-grades-01.json",
+      "server-finalization-01.json",
+      "server-finalization-02.json",
+      "server-restart-01.json",
+      "server-restart-02.json",
+      "server-state/original-server-memory-reservation.json",
+      "server-validation-01.json",
+      "startup-port-fix-01.json",
+      "validation-summary-01.json"
+    ],
+    "outputs/flash1017-lab/flash1017/head.py": [],
+    "outputs/flash1017-lab/flash1017/launch.py": [
+      "server-process.json"
+    ],
+    "outputs/flash1017-lab/flash1017/make_plans.py": [
+      ".json"
+    ],
+    "outputs/flash1017-lab/flash1017/memory.py": [],
+    "outputs/flash1017-lab/flash1017/plot_results.py": [
+      "results/validation-summary-01.json"
+    ],
+    "outputs/flash1017-lab/flash1017/policy.py": [],
+    "outputs/flash1017-lab/flash1017/quality.py": [],
+    "outputs/flash1017-lab/flash1017/reproduce.py": [
+      ".json",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json"
+    ],
+    "outputs/flash1017-lab/flash1017/restore_original_server.py": [
+      "server-state/original-server-memory-reservation.json"
+    ],
+    "outputs/flash1017-lab/flash1017/serve.py": [
+      "load-memory.jsonl",
+      "provenance.json",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json",
+      "server-process.json",
+      "settings.json"
+    ],
+    "outputs/flash1017-lab/flash1017/setup_runtime.py": [
+      "*.patch",
+      "flash1017-build.json",
+      "provenance.json"
+    ],
+    "outputs/flash1017-lab/flash1017/stop.py": [
+      "results/checkpoint-hashes.json",
+      "server-state/server-process.json"
+    ],
+    "outputs/flash1017-lab/flash1017/summarize_validation.py": [
+      "-01.jsonl",
+      "-grades-01.json",
+      "head-full-numerics-01.json",
+      "heldout-01.jsonl",
+      "plans/selection.json"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_head.py": [],
+    "outputs/flash1017-lab/flash1017/verify_long_cache.py": [
+      "plans/long-context-prompts.json",
+      "results/checkpoint-hashes.json",
+      "results/long-context-http-01.json"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_long_context.py": [
+      "fixtures/long-context-answers.json",
+      "plans/long-context-prompts.json",
+      "results/checkpoint-hashes.json",
+      "server-state/server-process.json"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_restart.py": [
+      "results/checkpoint-hashes.json"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_server.py": [
+      "results/checkpoint-hashes.json"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_snapshot.py": [],
+    "outputs/flash1017-lab/tests/test_attention_reference.py": [],
+    "outputs/flash1017-lab/tests/test_bench.py": [],
+    "outputs/flash1017-lab/tests/test_calibrate.py": [],
+    "outputs/flash1017-lab/tests/test_generation.py": [],
+    "outputs/flash1017-lab/tests/test_head.py": [],
+    "outputs/flash1017-lab/tests/test_policy.py": [],
+    "outputs/flash1017-lab/tests/test_quality.py": [],
+    "outputs/flash1017-lab/tests/test_quality_iter.py": [],
+    "outputs/flash1017-lab/tests/test_startup_port.py": [],
+    "work/cone-dspark-stable/stabilization.py": [],
+    "work/cone-experiment/cone.py": [],
+    "work/cone-experiment/verify_real.py": [
+      ".load.jsonl",
+      "_runtime/omlx/patches/deepseek_v41/language.py",
+      "_runtime/omlx/patches/deepseek_v41/loading.py",
+      "cone.py",
+      "flash1017/bench.py",
+      "frozen-used-tokens.json",
+      "manifest.json",
+      "outputs/flash1017-lab",
+      "provenance.json",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json",
+      "work/prefill-fullmodel/natural.json"
+    ],
+    "work/cone-v2/stabilization.py": [],
+    "work/overall-comparison-01/evidence/agent_analyze.py": [],
+    "work/overall-comparison-01/freeze.py": [
+      "*.py",
+      ".py",
+      "config.json",
+      "evidence/agent-proposed-plan-02.json",
+      "manifest-01.json",
+      "outputs/flash1017-lab",
+      "plan-01.json",
+      "provenance.json",
+      "qualified-candidate-profile.json",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json",
+      "work/serving-integration-v3b",
+      "work/serving-profile-v3/staged-01/candidate-manifest.json"
+    ],
+    "work/overall-comparison-01/runtime-audit/source_activation.py": [
+      "patches/deepseek_v41/head.py"
+    ],
+    "work/overall-comparison-01/supervise.py": [
+      ".jsonl",
+      "manifest-01.json",
+      "outputs/flash1017-lab",
+      "plan-01.json",
+      "supervisor.json",
+      "worker.py"
+    ],
+    "work/overall-comparison-01/worker.py": [
+      ".load.jsonl",
+      "flash1017/bench.py",
+      "outputs/flash1017-lab",
+      "results/checkpoint-hashes.json",
+      "runtime-audit/source_activation.py",
+      "work/serving-integration-v3b",
+      "work/serving-integration-v3b/runtime.py"
+    ],
+    "work/serving-analysis-v3/analyze_performance.py": [
+      ".json",
+      ".py",
+      ".qualification.json",
+      "/qualified-profile.json",
+      "/results/checkpoint-hashes.json",
+      "manifest.json"
+    ],
+    "work/serving-analysis-v3/analyze_performance_v2.py": [
+      ".json",
+      ".py",
+      ".qualification.json",
+      "/qualified-profile.json",
+      "/results/checkpoint-hashes.json",
+      "manifest.json"
+    ],
+    "work/serving-analysis-v3/test_cpu.py": [
+      ".json",
+      ".qualification.json",
+      "000-performance.json",
+      "_runtime/omlx/test.py",
+      "bench.py",
+      "execution.json",
+      "fixture.json",
+      "flash1017/bench.py",
+      "job02.json",
+      "live/qualified-profile.json",
+      "manifest.json",
+      "performance.json",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json",
+      "results/run.jsonl",
+      "sources.json",
+      "test.py"
+    ],
+    "work/serving-analysis-v3/test_cpu_v2.py": [
+      "../reporting.py",
+      ".json",
+      ".qualification.json",
+      "000-performance.json",
+      "_runtime/omlx/test.py",
+      "bench.py",
+      "execution.json",
+      "fixture.json",
+      "flash1017/bench.py",
+      "job02.json",
+      "live/qualified-profile.json",
+      "manifest.json",
+      "performance.json",
+      "qualified-profile.json",
+      "reporting.py",
+      "results/checkpoint-hashes.json",
+      "results/run.jsonl",
+      "sources.json",
+      "test.py"
+    ],
+    "work/serving-cache-v3/hot_rows_upstream.py": [],
+    "work/serving-cache-v3/serving_cache.py": [
+      "hot_rows_upstream.py",
+      "provenance.json",
+      "serving_cache.py"
+    ],
+    "work/serving-cache-v3/test_cpu.py": [
+      "hot_rows_upstream.py",
+      "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/storage.py"
+    ],
+    "work/serving-cone-v3/cone_serving.py": [
+      "work/cone-dspark-stable/stabilization.py",
+      "work/cone-experiment/cone.py",
+      "work/cone-v2/stabilization.py"
+    ],
+    "work/serving-cone-v3/test_cpu.py": [],
+    "work/serving-http-v3/check_cancel.py": [
+      "plans/performance-01.json",
+      "results/checkpoint-hashes.json",
+      "tokenizer.json"
+    ],
+    "work/serving-http-v3/check_lifecycle.py": [],
+    "work/serving-http-v3/check_sessions.py": [
+      "fixtures/http-prefix-cases.json"
+    ],
+    "work/serving-http-v3/check_vision.py": [
+      "fixtures/http-prefix-cases.json",
+      "vision-fixture-v2.json"
+    ],
+    "work/serving-http-v3/common.py": [
+      "*.py",
+      "outputs/flash1017-lab",
+      "server-state/server-process.json",
+      "work/serving-qualification-v3"
+    ],
+    "work/serving-integration-v3/evidence.py": [
+      "manifest.json",
+      "outputs/flash1017-lab",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json"
+    ],
+    "work/serving-integration-v3/freeze_execution.py": [
+      "evidence.py",
+      "execution-manifest-01.json",
+      "freeze_execution.py",
+      "provenance.json",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json",
+      "run_qualification.py",
+      "runtime.py",
+      "test_cpu.py",
+      "work/cone-dspark-stable/stabilization.py",
+      "work/cone-experiment/cone.py",
+      "work/cone-experiment/verify_real.py",
+      "work/cone-v2/stabilization.py",
+      "work/serving-cache-v3/NOTICE.txt",
+      "work/serving-cache-v3/UPSTREAM-LICENSE",
+      "work/serving-cache-v3/hot_rows_upstream.py",
+      "work/serving-cache-v3/manifest.json",
+      "work/serving-cache-v3/provenance.json",
+      "work/serving-cache-v3/serving_cache.py",
+      "work/serving-cone-v3/cone_serving.py",
+      "work/serving-cone-v3/manifest-01.json",
+      "work/serving-qualification-v3/fixture-manifest.json",
+      "work/serving-qualification-v3/plans-manifest.json",
+      "work/serving-qualification-v3/plans/boundary-01.json",
+      "work/serving-qualification-v3/plans/performance-01.json",
+      "work/serving-qualification-v3/source-manifest.json"
+    ],
+    "work/serving-integration-v3/reserve_memory.py": [
+      "original-memory-reservation.json"
+    ],
+    "work/serving-integration-v3/run_qualification.py": [
+      "*.json",
+      ".json",
+      ".qualification.json",
+      "flash1017/bench.py",
+      "work/cone-experiment/verify_real.py"
+    ],
+    "work/serving-integration-v3/runtime.py": [
+      "work/serving-cache-v3/serving_cache.py",
+      "work/serving-cone-v3/cone_serving.py"
+    ],
+    "work/serving-integration-v3/test_cpu.py": [],
+    "work/serving-integration-v3b/evidence.py": [
+      "manifest.json",
+      "outputs/flash1017-lab",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json"
+    ],
+    "work/serving-integration-v3b/freeze_execution.py": [
+      "evidence.py",
+      "execution-manifest-01.json",
+      "freeze_execution.py",
+      "provenance.json",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json",
+      "run_qualification.py",
+      "runtime.py",
+      "test_cpu.py",
+      "work/cone-dspark-stable/stabilization.py",
+      "work/cone-experiment/cone.py",
+      "work/cone-experiment/verify_real.py",
+      "work/cone-v2/stabilization.py",
+      "work/serving-cache-v3/NOTICE.txt",
+      "work/serving-cache-v3/UPSTREAM-LICENSE",
+      "work/serving-cache-v3/hot_rows_upstream.py",
+      "work/serving-cache-v3/manifest.json",
+      "work/serving-cache-v3/provenance.json",
+      "work/serving-cache-v3/serving_cache.py",
+      "work/serving-cone-v3/cone_serving.py",
+      "work/serving-cone-v3/manifest-01.json",
+      "work/serving-qualification-v3/fixture-manifest.json",
+      "work/serving-qualification-v3/plans-manifest.json",
+      "work/serving-qualification-v3/plans/boundary-01.json",
+      "work/serving-qualification-v3/plans/performance-01.json",
+      "work/serving-qualification-v3/source-manifest.json"
+    ],
+    "work/serving-integration-v3b/run_qualification.py": [
+      "*.json",
+      ".json",
+      ".qualification.json",
+      "flash1017/bench.py",
+      "work/cone-experiment/verify_real.py"
+    ],
+    "work/serving-integration-v3b/runtime.py": [
+      "work/serving-cache-v3/serving_cache.py",
+      "work/serving-cone-v3/cone_serving.py"
+    ],
+    "work/serving-integration-v3b/supervise_performance.py": [
+      "execution-manifest-01.json",
+      "outputs/flash1017-lab",
+      "performance-supervisor-01.json",
+      "results/serving-v3-boundary-01.qualification.json",
+      "results/serving-v3-performance-01.jsonl",
+      "run_qualification.py",
+      "work/serving-integration-v3/reserve_memory.py",
+      "work/serving-qualification-v3/plans/performance-01.json"
+    ],
+    "work/serving-integration-v3b/test_cpu.py": [],
+    "work/serving-launch-v3/launch.py": [
+      "outputs/flash1017-lab",
+      "server-state/server-process.json",
+      "work/serving-server-v3/serve_candidate.py"
+    ],
+    "work/serving-launch-v3/test_launch.py": [
+      "launch.py",
+      "manifest.json",
+      "native.json",
+      "profile.json",
+      "report.json",
+      "source.py",
+      "stamp.json"
+    ],
+    "work/serving-profile-v3/prepare.py": [
+      ".py",
+      ".qualification.json",
+      "candidate-manifest.json",
+      "candidate-profile.unqualified.json",
+      "manifest.json",
+      "native-profile.preserved.json",
+      "outputs/flash1017-lab",
+      "outputs/flash1017-lab/qualified-profile.json",
+      "prepare.py",
+      "qualified-profile.json",
+      "test_cpu.py",
+      "work/cone-dspark-stable/stabilization.py",
+      "work/cone-experiment/cone.py",
+      "work/cone-v2/stabilization.py",
+      "work/serving-analysis-v3/analyze_performance_v2.py",
+      "work/serving-analysis-v3/manifest-v2.json",
+      "work/serving-cache-v3/NOTICE.txt",
+      "work/serving-cache-v3/hot_rows_upstream.py",
+      "work/serving-cache-v3/serving_cache.py",
+      "work/serving-cone-v3/cone_serving.py",
+      "work/serving-integration-v3/evidence.py",
+      "work/serving-integration-v3/runtime.py",
+      "work/serving-profile-v3",
+      "work/serving-server-v3/manifest-01.json",
+      "work/serving-server-v3/serve_candidate.py"
+    ],
+    "work/serving-profile-v3/test_cpu.py": [
+      "-execution.json",
+      ".json",
+      ".jsonl",
+      ".qualification.json",
+      "candidate-manifest.json",
+      "candidate-profile.unqualified.json",
+      "flash1017/serve.py",
+      "manifest.json",
+      "native-profile.preserved.json",
+      "numpy/__init__.py",
+      "outputs/flash1017-lab",
+      "outputs/not-allowed",
+      "qualified-profile.json",
+      "serving-server-v3/serve_candidate.py",
+      "work/serving-analysis-v3/analyze_performance_v2.py",
+      "work/serving-analysis-v3/manifest-v2.json",
+      "work/serving-cache-v3/NOTICE.txt",
+      "work/serving-profile-v3",
+      "work/serving-profile-v3/PLAN.txt",
+      "work/serving-profile-v3/prepare.py",
+      "work/serving-profile-v3/test_cpu.py",
+      "work/serving-server-v3/manifest-01.json",
+      "work/serving-state-review-v3/validate_boundary.py"
+    ],
+    "work/serving-qualification-v3/build_fixtures.py": [
+      "-state-stream.json",
+      ".json",
+      "_runtime/omlx/patches/deepseek_v41/encoding.py",
+      "fixture-manifest.json",
+      "fixtures/http-prefix-cases.json",
+      "fixtures/warmup-16384.json",
+      "outputs/flash1017-lab",
+      "qualified-profile.json",
+      "results/checkpoint-hashes.json",
+      "source-manifest.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "work/prefill-fullmodel",
+      "work/prefill-fullmodel/natural-manifest.json"
+    ],
+    "work/serving-qualification-v3/fetch_sources.py": [
+      "Lib/ast.py",
+      "Lib/asyncio/base_events.py",
+      "Lib/asyncio/events.py",
+      "Lib/asyncio/futures.py",
+      "Lib/asyncio/locks.py",
+      "Lib/asyncio/queues.py",
+      "Lib/asyncio/streams.py",
+      "Lib/asyncio/taskgroups.py",
+      "Lib/asyncio/tasks.py",
+      "Lib/dataclasses.py",
+      "Lib/dis.py",
+      "Lib/inspect.py",
+      "Lib/pickle.py",
+      "Lib/typing.py",
+      "source-manifest.json"
+    ],
+    "work/serving-qualification-v3/freeze_plans.py": [
+      "-01.json",
+      "build_fixtures.py",
+      "fetch_sources.py",
+      "fixture-manifest.json",
+      "freeze_plans.py",
+      "plans-manifest.json",
+      "qualified-profile.json",
+      "tokenizer.json"
+    ],
+    "work/serving-qualification-v3/make_vision_v2.py": [
+      "validation-plan-02.json",
+      "validation-plan.json",
+      "vision-fixture-v2.json"
+    ],
+    "work/serving-qualification-v3/test_fixtures_cpu.py": [
+      "build_fixtures.py",
+      "cpu-validation-02.json",
+      "fixture-manifest.json",
+      "plans-manifest.json",
+      "source-manifest.json"
+    ],
+    "work/serving-server-v3/serve_candidate.py": [
+      "evidence.py",
+      "outputs/flash1017-lab",
+      "qualified-profile.json",
+      "runtime.py",
+      "work/cone-dspark-stable/stabilization.py",
+      "work/cone-experiment/cone.py",
+      "work/cone-v2/stabilization.py",
+      "work/serving-cache-v3/hot_rows_upstream.py",
+      "work/serving-cache-v3/serving_cache.py",
+      "work/serving-cone-v3/cone_serving.py",
+      "work/serving-integration-v3",
+      "work/serving-integration-v3/evidence.py",
+      "work/serving-integration-v3/runtime.py"
+    ],
+    "work/serving-server-v3/test_cpu.py": [
+      "manifest.json",
+      "profile.json",
+      "qualified-profile.json",
+      "source.py",
+      "work/cone-dspark-stable/stabilization.py",
+      "work/cone-experiment/cone.py",
+      "work/cone-v2/stabilization.py",
+      "work/serving-cache-v3/hot_rows_upstream.py",
+      "work/serving-cache-v3/serving_cache.py",
+      "work/serving-cone-v3/cone_serving.py",
+      "work/serving-integration-v3/evidence.py",
+      "work/serving-integration-v3/runtime.py"
+    ],
+    "work/serving-shortcut-v3/shortcut.py": [
+      "launch-report.json",
+      "outputs/flash1017-lab",
+      "outputs/flash1017-lab/qualified-candidate-profile.json",
+      "outputs/flash1017-lab/qualified-profile.json",
+      "outputs/flash1017-lab/run.sh",
+      "outputs/flash1017-lab/server-state/candidate-launches",
+      "shortcut-report.json",
+      "work/serving-launch-v3/launch.py",
+      "work/serving-launch-v3/manifest-01.json",
+      "work/serving-profile-v3/staged-01/candidate-manifest.json"
+    ],
+    "work/serving-shortcut-v3/test_cpu.py": [
+      "launch-report.json",
+      "native.py",
+      "outputs/flash1017-lab/native.py",
+      "outputs/flash1017-lab/qualified-profile.json",
+      "outputs/flash1017-lab/run.sh",
+      "outputs/flash1017-lab/server-state/candidate-launches",
+      "shortcut-report.json",
+      "work/dependency.py",
+      "work/serving-launch-v3/manifest-01.json"
+    ],
+    "work/serving-state-review-v3/test_cpu.py": [
+      ".qualification.json",
+      "bench.py",
+      "flash1017/bench.py",
+      "partial.jsonl",
+      "report.py",
+      "validate_boundary.py"
+    ],
+    "work/serving-state-review-v3/validate_boundary.py": [
+      "*.json",
+      ".json",
+      ".py",
+      ".qualification.json",
+      "manifest.json",
+      "outputs/flash1017-lab/qualified-profile.json",
+      "outputs/flash1017-lab/results/checkpoint-hashes.json",
+      "work/serving-integration-v3/execution-manifest-01.json",
+      "work/serving-qualification-v3/plans/boundary-01.json"
+    ]
+  },
+  "method": "AST parse (no imports), static local imports and literal Python source references, plus manually reviewed dynamic edges for startup/server/benchmark loaders. External packages, data references and runtime-generated paths are not resolved by this audit.",
+  "missing_reachable_local_sources": [],
+  "model_runs": 0,
+  "nonlocal_import_names": {
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/config.py": [
+      "dataclasses",
+      "dataclasses.dataclass",
+      "dataclasses.fields",
+      "typing",
+      "typing.Literal"
+    ],
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py": [
+      "dataclasses",
+      "dataclasses.replace",
+      "mlx.core",
+      "mlx.nn"
+    ],
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py": [
+      "contextlib",
+      "contextlib.nullcontext",
+      "math",
+      "mlx.core",
+      "mlx.nn",
+      "mlx_lm.models.switch_layers",
+      "mlx_lm.models.switch_layers.SwitchLinear",
+      "numpy",
+      "omlx.custom_kernels.glm_moe_dsa",
+      "omlx.custom_kernels.glm_moe_dsa.fast"
+    ],
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py": [
+      "contextlib",
+      "contextlib.ExitStack",
+      "contextlib.closing",
+      "fcntl",
+      "json",
+      "logging",
+      "mlx.core",
+      "mlx.utils",
+      "mlx.utils.tree_flatten",
+      "mlx_lm.generate",
+      "mlx_lm.generate.wired_limit",
+      "pathlib",
+      "pathlib.Path",
+      "transformers",
+      "transformers.PreTrainedTokenizerFast"
+    ],
+    "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py": [
+      "__future__",
+      "__future__.annotations",
+      "collections",
+      "collections.deque",
+      "contextlib",
+      "copy",
+      "copy.copy",
+      "dataclasses",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "functools",
+      "inspect",
+      "logging",
+      "math",
+      "mlx.core",
+      "mlx.nn",
+      "mlx_lm.generate",
+      "mlx_lm.generate.BatchGenerator",
+      "mlx_lm.generate.GenerationBatch",
+      "mlx_lm.models.cache",
+      "mlx_lm.models.cache.ArraysCache",
+      "mlx_lm.models.cache.BatchKVCache",
+      "mlx_lm.models.cache.KVCache",
+      "mlx_lm.models.cache.TokenBuffer",
+      "mlx_lm.models.cache.make_prompt_cache",
+      "mlx_vlm.models.cache",
+      "mlx_vlm.models.cache.ArraysCache",
+      "mlx_vlm.models.cache.BatchKVCache",
+      "mlx_vlm.speculative.cache_state",
+      "mlx_vlm.speculative.cache_state.SpeculativeCacheTransaction",
+      "omlx.api.grammar",
+      "omlx.api.grammar.GrammarConstraintProcessor",
+      "omlx.custom_kernels.nax",
+      "omlx.custom_kernels.nax.is_nax_available",
+      "omlx.custom_kernels.qwen35_prefill.fast",
+      "omlx.custom_kernels.qwen35_prefill.fast.set_command_buffer_caps",
+      "omlx.prefill_progress",
+      "omlx.prefill_progress.get_prefill_tracker",
+      "omlx.scheduler",
+      "omlx.scheduler._patched_merge_caches",
+      "omlx.utils.sampling",
+      "omlx.utils.sampling.apply_min_p",
+      "omlx.utils.sampling.apply_top_k",
+      "omlx.utils.sampling.apply_top_p",
+      "omlx.utils.sampling.apply_top_p_top_k",
+      "omlx.utils.sampling.make_sampler",
+      "omlx.utils.sampling.top_k_indices",
+      "statistics",
+      "statistics.median",
+      "sys",
+      "time",
+      "types",
+      "types.SimpleNamespace",
+      "typing",
+      "typing.Any",
+      "typing.Deque",
+      "typing.Dict",
+      "typing.List",
+      "typing.Optional",
+      "typing.Tuple",
+      "weakref"
+    ],
+    "outputs/flash1017-lab/flash1017/__init__.py": [],
+    "outputs/flash1017-lab/flash1017/analyze.py": [
+      "argparse",
+      "collections",
+      "collections.defaultdict",
+      "json",
+      "math",
+      "pathlib",
+      "pathlib.Path",
+      "random",
+      "statistics",
+      "statistics.median"
+    ],
+    "outputs/flash1017-lab/flash1017/bench.py": [
+      "__future__",
+      "__future__.annotations",
+      "argparse",
+      "ctypes",
+      "dataclasses",
+      "dataclasses.asdict",
+      "gc",
+      "hashlib",
+      "importlib.metadata",
+      "json",
+      "logging",
+      "mlx.core",
+      "mlx_lm.generate",
+      "mlx_lm.generate.BatchGenerator",
+      "omlx",
+      "omlx.model_settings",
+      "omlx.model_settings.ModelSettings",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.apply_patch",
+      "omlx.patches.deepseek_v41.loading",
+      "omlx.patches.deepseek_v41.loading.load",
+      "omlx.patches.deepseek_v41.storage",
+      "omlx.patches.mlx_lm_mtp",
+      "omlx.patches.mlx_lm_mtp.batch_generator",
+      "omlx.patches.mlx_lm_mtp.set_mtp_active",
+      "omlx.utils.model_loading",
+      "omlx.utils.model_loading.maybe_apply_pre_load_patches",
+      "omlx.utils.proc_memory",
+      "omlx.utils.proc_memory._RUSAGE_INFO_V4",
+      "omlx.utils.proc_memory._RusageInfoV4",
+      "omlx.utils.proc_memory._proc_pid_rusage",
+      "omlx.utils.proc_memory.get_phys_footprint",
+      "omlx.utils.sampling",
+      "omlx.utils.sampling.make_sampler",
+      "os",
+      "pathlib",
+      "pathlib.Path",
+      "platform",
+      "psutil",
+      "threading",
+      "time"
+    ],
+    "outputs/flash1017-lab/flash1017/bench_head.py": [
+      "argparse",
+      "hashlib",
+      "json",
+      "mlx.core",
+      "numpy",
+      "omlx.patches.deepseek_v41.head",
+      "omlx.patches.deepseek_v41.head.project_logits",
+      "pathlib",
+      "pathlib.Path",
+      "random",
+      "statistics",
+      "statistics.median",
+      "time"
+    ],
+    "outputs/flash1017-lab/flash1017/calibrate.py": [
+      "argparse",
+      "collections",
+      "collections.defaultdict",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "pathlib.Path",
+      "statistics",
+      "statistics.median"
+    ],
+    "outputs/flash1017-lab/flash1017/final_report.py": [
+      "datetime",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path"
+    ],
+    "outputs/flash1017-lab/flash1017/head.py": [
+      "functools",
+      "functools.cache",
+      "mlx.core",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.dspark",
+      "omlx.patches.deepseek_v41.head",
+      "omlx.patches.deepseek_v41.language"
+    ],
+    "outputs/flash1017-lab/flash1017/launch.py": [
+      "argparse",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "subprocess",
+      "time",
+      "urllib.request",
+      "webbrowser"
+    ],
+    "outputs/flash1017-lab/flash1017/make_plans.py": [
+      "argparse",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "random"
+    ],
+    "outputs/flash1017-lab/flash1017/memory.py": [
+      "json",
+      "mlx.core",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.loading",
+      "omlx.utils.proc_memory",
+      "omlx.utils.proc_memory.get_phys_footprint",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "time"
+    ],
+    "outputs/flash1017-lab/flash1017/plot_results.py": [
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "matplotlib.ticker",
+      "matplotlib.ticker.PercentFormatter",
+      "pathlib",
+      "pathlib.Path"
+    ],
+    "outputs/flash1017-lab/flash1017/policy.py": [
+      "dataclasses",
+      "dataclasses.dataclass",
+      "math",
+      "typing",
+      "typing.Iterable"
+    ],
+    "outputs/flash1017-lab/flash1017/quality.py": [
+      "__future__",
+      "__future__.annotations",
+      "argparse",
+      "ast",
+      "builtins",
+      "collections",
+      "collections.OrderedDict",
+      "heapq",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "random",
+      "re",
+      "resource",
+      "subprocess",
+      "sys",
+      "threading"
+    ],
+    "outputs/flash1017-lab/flash1017/reproduce.py": [
+      "argparse",
+      "fcntl",
+      "hashlib",
+      "importlib.metadata",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys"
+    ],
+    "outputs/flash1017-lab/flash1017/restore_original_server.py": [
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "urllib.request"
+    ],
+    "outputs/flash1017-lab/flash1017/serve.py": [
+      "argparse",
+      "fcntl",
+      "hashlib",
+      "importlib.metadata",
+      "json",
+      "omlx.cli",
+      "omlx.cli.main",
+      "omlx.model_settings",
+      "omlx.model_settings.ModelSettings",
+      "omlx.model_settings.ModelSettingsManager",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.loading",
+      "omlx.settings",
+      "omlx.settings.GlobalSettings",
+      "os",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "secrets",
+      "socket",
+      "sys"
+    ],
+    "outputs/flash1017-lab/flash1017/setup_runtime.py": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "shutil",
+      "subprocess"
+    ],
+    "outputs/flash1017-lab/flash1017/stop.py": [
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "urllib.parse",
+      "urllib.request"
+    ],
+    "outputs/flash1017-lab/flash1017/summarize_validation.py": [
+      "argparse",
+      "collections",
+      "collections.Counter",
+      "collections.defaultdict",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "statistics",
+      "statistics.median"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_head.py": [
+      "argparse",
+      "collections",
+      "collections.defaultdict",
+      "json",
+      "mlx.core",
+      "numpy",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.head",
+      "pathlib",
+      "pathlib.Path",
+      "sys"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_long_cache.py": [
+      "argparse",
+      "hashlib",
+      "json",
+      "omlx.patches.deepseek_v41.processing",
+      "omlx.patches.deepseek_v41.processing.Processor",
+      "os",
+      "pathlib",
+      "pathlib.Path",
+      "re",
+      "signal",
+      "threading",
+      "time",
+      "transformers",
+      "transformers.PreTrainedTokenizerFast",
+      "urllib.request"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_long_context.py": [
+      "argparse",
+      "ctypes",
+      "hashlib",
+      "json",
+      "omlx.patches.deepseek_v41.processing",
+      "omlx.patches.deepseek_v41.processing.Processor",
+      "omlx.utils.proc_memory",
+      "omlx.utils.proc_memory._RUSAGE_INFO_V4",
+      "omlx.utils.proc_memory._RusageInfoV4",
+      "omlx.utils.proc_memory._proc_pid_rusage",
+      "omlx.utils.proc_memory.get_phys_footprint",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "re",
+      "threading",
+      "time",
+      "transformers",
+      "transformers.PreTrainedTokenizerFast",
+      "urllib.request"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_restart.py": [
+      "argparse",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "subprocess",
+      "threading",
+      "time",
+      "urllib.request"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_server.py": [
+      "PIL",
+      "PIL.Image",
+      "PIL.ImageDraw",
+      "argparse",
+      "base64",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "re",
+      "time",
+      "urllib.request"
+    ],
+    "outputs/flash1017-lab/flash1017/verify_snapshot.py": [
+      "argparse",
+      "hashlib",
+      "huggingface_hub",
+      "huggingface_hub.HfApi",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "time"
+    ],
+    "outputs/flash1017-lab/tests/test_attention_reference.py": [
+      "mlx.core",
+      "mlx.nn",
+      "numpy",
+      "omlx.patches.deepseek_v41.config",
+      "omlx.patches.deepseek_v41.config.ModelConfig",
+      "omlx.patches.deepseek_v41.dspark",
+      "omlx.patches.deepseek_v41.dspark.DSparkAttention",
+      "omlx.patches.deepseek_v41.language",
+      "omlx.patches.deepseek_v41.language.Attention",
+      "pytest",
+      "types",
+      "types.SimpleNamespace"
+    ],
+    "outputs/flash1017-lab/tests/test_bench.py": [
+      "flash1017.bench.run_one",
+      "omlx.patches.mlx_lm_mtp",
+      "omlx.patches.mlx_lm_mtp.batch_generator",
+      "types",
+      "types.SimpleNamespace"
+    ],
+    "outputs/flash1017-lab/tests/test_calibrate.py": [
+      "flash1017.calibrate.fit",
+      "pytest"
+    ],
+    "outputs/flash1017-lab/tests/test_generation.py": [
+      "flash1017.policy.Experiment",
+      "flash1017.policy.PrefixPolicy",
+      "mlx.core",
+      "mlx.utils",
+      "mlx.utils.tree_flatten",
+      "mlx_lm.generate",
+      "mlx_lm.generate.BatchGenerator",
+      "numpy",
+      "omlx.patches.deepseek_v41.config",
+      "omlx.patches.deepseek_v41.config.ModelConfig",
+      "omlx.patches.deepseek_v41.language",
+      "omlx.patches.deepseek_v41.language.LanguageModel",
+      "omlx.patches.mlx_lm_mtp",
+      "omlx.patches.mlx_lm_mtp.batch_generator",
+      "pytest",
+      "zlib"
+    ],
+    "outputs/flash1017-lab/tests/test_head.py": [
+      "flash1017.head.fused_head",
+      "mlx.core",
+      "numpy",
+      "omlx.patches.deepseek_v41.head",
+      "omlx.patches.deepseek_v41.head.project_logits",
+      "pytest"
+    ],
+    "outputs/flash1017-lab/tests/test_policy.py": [
+      "flash1017.policy.Experiment",
+      "flash1017.policy.PrefixPolicy",
+      "hypothesis",
+      "hypothesis.given",
+      "hypothesis.strategies",
+      "math",
+      "pytest"
+    ],
+    "outputs/flash1017-lab/tests/test_quality.py": [
+      "flash1017.quality.judge",
+      "flash1017.quality.oracle",
+      "flash1017.quality.validate_code",
+      "pytest"
+    ],
+    "outputs/flash1017-lab/tests/test_quality_iter.py": [
+      "flash1017.quality.judge"
+    ],
+    "outputs/flash1017-lab/tests/test_startup_port.py": [
+      "flash1017.serve.check_port_available",
+      "pytest",
+      "socket"
+    ],
+    "work/cone-dspark-stable/stabilization.py": [
+      "collections",
+      "collections.Counter",
+      "contextlib",
+      "contextlib.contextmanager",
+      "mlx.core",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.language",
+      "omlx.patches.deepseek_v41.quantization",
+      "omlx.patches.deepseek_v41.quantization.QuantizedProjection",
+      "threading"
+    ],
+    "work/cone-experiment/cone.py": [
+      "collections",
+      "collections.Counter",
+      "contextlib",
+      "contextlib.contextmanager",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.language",
+      "threading"
+    ],
+    "work/cone-experiment/verify_real.py": [
+      "__future__",
+      "__future__.annotations",
+      "argparse",
+      "contextlib",
+      "contextlib.nullcontext",
+      "datetime",
+      "datetime.datetime",
+      "datetime.timezone",
+      "fcntl",
+      "flash1017",
+      "flash1017.memory.prepare_memory",
+      "gc",
+      "hashlib",
+      "importlib.metadata",
+      "json",
+      "logging",
+      "mlx.core",
+      "numpy",
+      "omlx.model_settings",
+      "omlx.model_settings.ModelSettings",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.apply_patch",
+      "omlx.patches.deepseek_v41.loading",
+      "omlx.patches.deepseek_v41.loading.load",
+      "omlx.patches.mlx_lm_mtp",
+      "omlx.patches.mlx_lm_mtp.batch_generator",
+      "omlx.patches.mlx_lm_mtp.deepseek_v4_dspark",
+      "omlx.patches.mlx_lm_mtp.deepseek_v4_dspark.drop_primed",
+      "omlx.patches.mlx_lm_mtp.set_mtp_active",
+      "omlx.utils.model_loading",
+      "omlx.utils.model_loading.maybe_apply_pre_load_patches",
+      "os",
+      "pathlib",
+      "pathlib.Path",
+      "platform",
+      "psutil",
+      "sys",
+      "time",
+      "traceback"
+    ],
+    "work/cone-v2/stabilization.py": [
+      "collections",
+      "collections.Counter",
+      "contextlib",
+      "contextlib.contextmanager",
+      "mlx.core",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.hyper_connection",
+      "omlx.patches.deepseek_v41.language",
+      "omlx.patches.deepseek_v41.quantization",
+      "omlx.patches.deepseek_v41.quantization.QuantizedProjection",
+      "threading"
+    ],
+    "work/overall-comparison-01/evidence/agent_analyze.py": [
+      "__future__",
+      "__future__.annotations",
+      "argparse",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "pathlib.Path",
+      "statistics"
+    ],
+    "work/overall-comparison-01/freeze.py": [
+      "copy",
+      "flash1017.bench.prepare",
+      "hashlib",
+      "importlib.metadata",
+      "json",
+      "omlx.patches.deepseek_v41.config",
+      "omlx.patches.deepseek_v41.config.ModelConfig",
+      "omlx.patches.deepseek_v41.processing",
+      "omlx.patches.deepseek_v41.processing.Processor",
+      "pathlib",
+      "pathlib.Path",
+      "time",
+      "transformers",
+      "transformers.PreTrainedTokenizerFast"
+    ],
+    "work/overall-comparison-01/runtime-audit/source_activation.py": [
+      "__future__",
+      "__future__.annotations",
+      "hashlib",
+      "pathlib",
+      "pathlib.Path",
+      "sys"
+    ],
+    "work/overall-comparison-01/supervise.py": [
+      "__future__",
+      "__future__.annotations",
+      "fcntl",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "signal",
+      "socket",
+      "subprocess",
+      "time",
+      "urllib.parse",
+      "urllib.request"
+    ],
+    "work/overall-comparison-01/worker.py": [
+      "__future__",
+      "__future__.annotations",
+      "argparse",
+      "fcntl",
+      "flash1017",
+      "flash1017.memory.prepare_memory",
+      "hashlib",
+      "importlib.metadata",
+      "importlib.util",
+      "json",
+      "logging",
+      "mlx.core",
+      "omlx",
+      "omlx.model_settings",
+      "omlx.model_settings.ModelSettings",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.apply_patch",
+      "omlx.patches.deepseek_v41.loading",
+      "omlx.patches.deepseek_v41.loading.load",
+      "omlx.patches.deepseek_v41.storage",
+      "omlx.patches.mlx_lm_mtp",
+      "omlx.patches.mlx_lm_mtp.batch_generator",
+      "omlx.patches.mlx_lm_mtp.set_mtp_active",
+      "omlx.utils.model_loading",
+      "omlx.utils.model_loading.maybe_apply_pre_load_patches",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "sys",
+      "time",
+      "traceback"
+    ],
+    "work/serving-analysis-v3/analyze_performance.py": [
+      "argparse",
+      "collections",
+      "collections.Counter",
+      "collections.defaultdict",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "time"
+    ],
+    "work/serving-analysis-v3/analyze_performance_v2.py": [
+      "argparse",
+      "collections",
+      "collections.Counter",
+      "collections.defaultdict",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "time"
+    ],
+    "work/serving-analysis-v3/test_cpu.py": [
+      "copy",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "tempfile",
+      "unittest"
+    ],
+    "work/serving-analysis-v3/test_cpu_v2.py": [
+      "copy",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "tempfile",
+      "unittest"
+    ],
+    "work/serving-cache-v3/hot_rows_upstream.py": [
+      "numpy",
+      "threading",
+      "threading.Lock"
+    ],
+    "work/serving-cache-v3/serving_cache.py": [
+      "collections",
+      "collections.Counter",
+      "contextlib",
+      "contextlib.ExitStack",
+      "contextlib.contextmanager",
+      "hashlib",
+      "importlib.util",
+      "numpy",
+      "pathlib",
+      "pathlib.Path",
+      "threading",
+      "types",
+      "types.MethodType"
+    ],
+    "work/serving-cache-v3/test_cpu.py": [
+      "ast",
+      "concurrent.futures",
+      "concurrent.futures.ThreadPoolExecutor",
+      "contextlib",
+      "contextlib.contextmanager",
+      "gc",
+      "hashlib",
+      "numpy",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "threading",
+      "time",
+      "types",
+      "types.SimpleNamespace",
+      "unittest",
+      "weakref"
+    ],
+    "work/serving-cone-v3/cone_serving.py": [
+      "ast",
+      "collections",
+      "collections.Counter",
+      "collections.deque",
+      "contextlib",
+      "contextlib.contextmanager",
+      "copy",
+      "hashlib",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "threading",
+      "types",
+      "types.FunctionType",
+      "types.SimpleNamespace"
+    ],
+    "work/serving-cone-v3/test_cpu.py": [
+      "concurrent.futures",
+      "concurrent.futures.ThreadPoolExecutor",
+      "gc",
+      "hashlib",
+      "importlib.util",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "threading",
+      "types",
+      "types.SimpleNamespace",
+      "unittest",
+      "weakref"
+    ],
+    "work/serving-http-v3/check_cancel.py": [
+      "argparse",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "time",
+      "tokenizers",
+      "tokenizers.Tokenizer",
+      "uuid"
+    ],
+    "work/serving-http-v3/check_lifecycle.py": [
+      "argparse",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "time"
+    ],
+    "work/serving-http-v3/check_sessions.py": [
+      "argparse",
+      "concurrent.futures",
+      "concurrent.futures.ThreadPoolExecutor",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "re",
+      "threading",
+      "time"
+    ],
+    "work/serving-http-v3/check_vision.py": [
+      "argparse",
+      "base64",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "re",
+      "time"
+    ],
+    "work/serving-http-v3/common.py": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "time",
+      "urllib.parse",
+      "urllib.request"
+    ],
+    "work/serving-integration-v3/evidence.py": [
+      "contextlib",
+      "contextlib.contextmanager",
+      "fcntl",
+      "hashlib",
+      "importlib.metadata",
+      "importlib.util",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys"
+    ],
+    "work/serving-integration-v3/freeze_execution.py": [
+      "pathlib",
+      "pathlib.Path"
+    ],
+    "work/serving-integration-v3/reserve_memory.py": [
+      "argparse",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "time",
+      "urllib.request"
+    ],
+    "work/serving-integration-v3/run_qualification.py": [
+      "argparse",
+      "concurrent.futures",
+      "concurrent.futures.ThreadPoolExecutor",
+      "concurrent.futures.TimeoutError",
+      "contextlib",
+      "contextlib.contextmanager",
+      "contextlib.nullcontext",
+      "copy",
+      "flash1017",
+      "gc",
+      "hashlib",
+      "json",
+      "mlx.core",
+      "numpy",
+      "omlx.models.vlm",
+      "omlx.models.vlm.VLMModelAdapter",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "threading",
+      "time",
+      "traceback"
+    ],
+    "work/serving-integration-v3/runtime.py": [
+      "contextlib",
+      "contextlib.contextmanager",
+      "mlx.utils",
+      "mlx.utils.tree_flatten",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.language",
+      "omlx.patches.deepseek_v41.quantization",
+      "omlx.patches.deepseek_v41.quantization.QuantizedProjection",
+      "omlx.patches.deepseek_v41.storage",
+      "pathlib",
+      "pathlib.Path"
+    ],
+    "work/serving-integration-v3/test_cpu.py": [
+      "copy",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "pytest",
+      "sys",
+      "types",
+      "types.SimpleNamespace"
+    ],
+    "work/serving-integration-v3b/evidence.py": [
+      "contextlib",
+      "contextlib.contextmanager",
+      "fcntl",
+      "hashlib",
+      "importlib.metadata",
+      "importlib.util",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys"
+    ],
+    "work/serving-integration-v3b/freeze_execution.py": [
+      "pathlib",
+      "pathlib.Path"
+    ],
+    "work/serving-integration-v3b/run_qualification.py": [
+      "argparse",
+      "concurrent.futures",
+      "concurrent.futures.ThreadPoolExecutor",
+      "concurrent.futures.TimeoutError",
+      "contextlib",
+      "contextlib.contextmanager",
+      "contextlib.nullcontext",
+      "copy",
+      "flash1017",
+      "gc",
+      "hashlib",
+      "json",
+      "mlx.core",
+      "numpy",
+      "omlx.models.vlm",
+      "omlx.models.vlm.VLMModelAdapter",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "threading",
+      "time",
+      "traceback"
+    ],
+    "work/serving-integration-v3b/runtime.py": [
+      "contextlib",
+      "contextlib.contextmanager",
+      "mlx.utils",
+      "mlx.utils.tree_flatten",
+      "omlx.patches.deepseek_v41",
+      "omlx.patches.deepseek_v41.language",
+      "omlx.patches.deepseek_v41.quantization",
+      "omlx.patches.deepseek_v41.quantization.QuantizedProjection",
+      "omlx.patches.deepseek_v41.storage",
+      "pathlib",
+      "pathlib.Path"
+    ],
+    "work/serving-integration-v3b/supervise_performance.py": [
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "signal",
+      "subprocess",
+      "time"
+    ],
+    "work/serving-integration-v3b/test_cpu.py": [
+      "copy",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "pytest",
+      "sys",
+      "types",
+      "types.SimpleNamespace"
+    ],
+    "work/serving-launch-v3/launch.py": [
+      "argparse",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "psutil",
+      "socket",
+      "subprocess",
+      "time",
+      "urllib.request",
+      "webbrowser"
+    ],
+    "work/serving-launch-v3/test_launch.py": [
+      "contextlib",
+      "io",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "tempfile",
+      "types",
+      "unittest",
+      "unittest.mock",
+      "unittest.mock.Mock",
+      "unittest.mock.patch"
+    ],
+    "work/serving-profile-v3/prepare.py": [
+      "argparse",
+      "copy",
+      "hashlib",
+      "importlib.metadata",
+      "json",
+      "pathlib",
+      "pathlib.Path"
+    ],
+    "work/serving-profile-v3/test_cpu.py": [
+      "copy",
+      "importlib.util",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "tempfile",
+      "unittest",
+      "unittest.mock",
+      "unittest.mock.patch"
+    ],
+    "work/serving-qualification-v3/build_fixtures.py": [
+      "datetime",
+      "datetime.datetime",
+      "datetime.timezone",
+      "hashlib",
+      "importlib.metadata",
+      "importlib.util",
+      "json",
+      "math",
+      "pathlib",
+      "pathlib.Path",
+      "random",
+      "re",
+      "struct",
+      "sys",
+      "tokenizers",
+      "tokenizers.Tokenizer",
+      "zlib"
+    ],
+    "work/serving-qualification-v3/fetch_sources.py": [
+      "concurrent.futures",
+      "concurrent.futures.ThreadPoolExecutor",
+      "datetime",
+      "datetime.datetime",
+      "datetime.timezone",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "urllib.request"
+    ],
+    "work/serving-qualification-v3/freeze_plans.py": [
+      "datetime",
+      "datetime.datetime",
+      "datetime.timezone",
+      "importlib.util",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "random",
+      "tokenizers",
+      "tokenizers.Tokenizer"
+    ],
+    "work/serving-qualification-v3/make_vision_v2.py": [
+      "datetime",
+      "datetime.datetime",
+      "datetime.timezone",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "struct",
+      "zlib"
+    ],
+    "work/serving-qualification-v3/test_fixtures_cpu.py": [
+      "collections",
+      "collections.Counter",
+      "datetime",
+      "datetime.datetime",
+      "datetime.timezone",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "struct",
+      "sys",
+      "unittest"
+    ],
+    "work/serving-server-v3/serve_candidate.py": [
+      "argparse",
+      "collections",
+      "collections.deque",
+      "copy",
+      "flash1017",
+      "hashlib",
+      "importlib.util",
+      "ipaddress",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "threading",
+      "time",
+      "weakref"
+    ],
+    "work/serving-server-v3/test_cpu.py": [
+      "asyncio",
+      "collections",
+      "collections.Counter",
+      "concurrent.futures",
+      "concurrent.futures.ThreadPoolExecutor",
+      "gc",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "tempfile",
+      "threading",
+      "types",
+      "types.SimpleNamespace",
+      "unittest",
+      "unittest.mock",
+      "unittest.mock.patch",
+      "weakref"
+    ],
+    "work/serving-shortcut-v3/shortcut.py": [
+      "argparse",
+      "contextlib",
+      "contextlib.contextmanager",
+      "datetime",
+      "datetime.datetime",
+      "datetime.timezone",
+      "fcntl",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "pathlib.Path",
+      "subprocess",
+      "tempfile",
+      "time"
+    ],
+    "work/serving-shortcut-v3/test_cpu.py": [
+      "contextlib",
+      "io",
+      "json",
+      "pathlib",
+      "pathlib.Path",
+      "sys",
+      "tempfile",
+      "types",
+      "types.SimpleNamespace",
+      "unittest",
+      "unittest.mock",
+      "unittest.mock.Mock"
+    ],
+    "work/serving-state-review-v3/test_cpu.py": [
+      "copy",
+      "hashlib",
+      "importlib.util",
+      "json",
+      "numpy",
+      "pathlib",
+      "pathlib.Path",
+      "tempfile",
+      "unittest"
+    ],
+    "work/serving-state-review-v3/validate_boundary.py": [
+      "argparse",
+      "collections",
+      "collections.Counter",
+      "hashlib",
+      "json",
+      "math",
+      "numpy",
+      "pathlib",
+      "pathlib.Path",
+      "time"
+    ]
+  },
+  "reachable_local_sources": [
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/config.py",
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py",
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+    "outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+    "outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+    "outputs/flash1017-lab/flash1017/bench.py",
+    "outputs/flash1017-lab/flash1017/head.py",
+    "outputs/flash1017-lab/flash1017/memory.py",
+    "outputs/flash1017-lab/flash1017/policy.py",
+    "outputs/flash1017-lab/flash1017/serve.py",
+    "outputs/flash1017-lab/flash1017/setup_runtime.py",
+    "work/cone-dspark-stable/stabilization.py",
+    "work/cone-experiment/cone.py",
+    "work/cone-v2/stabilization.py",
+    "work/overall-comparison-01/runtime-audit/source_activation.py",
+    "work/overall-comparison-01/worker.py",
+    "work/serving-cache-v3/hot_rows_upstream.py",
+    "work/serving-cache-v3/serving_cache.py",
+    "work/serving-cone-v3/cone_serving.py",
+    "work/serving-integration-v3/evidence.py",
+    "work/serving-integration-v3/runtime.py",
+    "work/serving-integration-v3b/evidence.py",
+    "work/serving-integration-v3b/runtime.py",
+    "work/serving-launch-v3/launch.py",
+    "work/serving-server-v3/serve_candidate.py",
+    "work/serving-shortcut-v3/shortcut.py"
+  ],
+  "service_actions": 0,
+  "source_guard_limit": "Copied profile/manifests retain historical original hashes. Redacted public paths and hashes are mapped in SOURCE-INVENTORY.json; original startup validators are intentionally not rewritten or bypassed."
+}

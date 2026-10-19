@@ -1,0 +1,70 @@
+--- a/omlx/patches/deepseek_v41/head.py
++++ b/omlx/patches/deepseek_v41/head.py
+@@ -25,6 +25,33 @@
+ """
+ 
+ 
++# Reuse each weight load across queries with the original per-query reduction.
++_ROWS_SOURCE = r"""
++    const uint row = thread_position_in_grid.x / KL;
++    if (row >= N) return;
++    const uint lane = thread_index_in_simdgroup % KL;
++    float sums[M];
++    for (uint q = 0; q < M; ++q) sums[q] = 0.0f;
++    for (uint k = lane * 4; k < K; k += KL * 4) {
++        const size_t offset = size_t(row) * K + k;
++        const float4 a = float4(w[offset], w[offset + 1],
++                               w[offset + 2], w[offset + 3]);
++        for (uint q = 0; q < M; ++q) {
++            const float4 b = float4(x[q * K + k], x[q * K + k + 1],
++                                   x[q * K + k + 2], x[q * K + k + 3]);
++            sums[q] += dot(a, b);
++        }
++    }
++    for (uint offset = KL / 2; offset > 0; offset /= 2) {
++        for (uint q = 0; q < M; ++q)
++            sums[q] += simd_shuffle_down(sums[q], offset);
++    }
++    if (lane == 0) {
++        for (uint q = 0; q < M; ++q) y[q * N + row] = sums[q];
++    }
++"""
++
++
+ @cache
+ def _kernel():
+     return mx.fast.metal_kernel(
+@@ -32,6 +59,16 @@
+         input_names=["x", "w"],
+         output_names=["y"],
+         source=_SOURCE,
++    )
++
++
++@cache
++def _rows_kernel():
++    return mx.fast.metal_kernel(
++        name="v41_bf16_head_rows_fp32_output",
++        input_names=["x", "w"],
++        output_names=["y"],
++        source=_ROWS_SOURCE,
+     )
+ 
+ 
+@@ -49,6 +86,16 @@
+     ):
+         return x.astype(mx.float32) @ weight.astype(mx.float32).T
+     lanes = 16
++    queries = x.size // width
++    if queries > 1:
++        return _rows_kernel()(
++            inputs=[x.astype(mx.float32), weight],
++            template=[("N", rows), ("K", width), ("KL", lanes), ("M", queries)],
++            grid=(((rows * lanes + 63) // 64) * 64, 1, 1),
++            threadgroup=(64, 1, 1),
++            output_shapes=[(*x.shape[:-1], rows)],
++            output_dtypes=[mx.float32],
++        )[0]
+     return _kernel()(
+         inputs=[x.astype(mx.float32), weight],
+         template=[("N", rows), ("K", width), ("KL", lanes)],

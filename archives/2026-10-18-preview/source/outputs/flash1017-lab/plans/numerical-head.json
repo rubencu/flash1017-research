@@ -1,0 +1,76 @@
+{
+  "profiles": {
+    "check-1": {
+      "mtp": true,
+      "depth": 1,
+      "fixed": true,
+      "fused_head": true,
+      "attention_rounding": true,
+      "head_max_rows": 5
+    },
+    "check-2": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "fused_head": true,
+      "attention_rounding": true,
+      "head_max_rows": 5
+    },
+    "check-3": {
+      "mtp": true,
+      "depth": 3,
+      "fixed": true,
+      "fused_head": true,
+      "attention_rounding": true,
+      "head_max_rows": 5
+    },
+    "check-4": {
+      "mtp": true,
+      "depth": 4,
+      "fixed": true,
+      "fused_head": true,
+      "attention_rounding": true,
+      "head_max_rows": 5
+    },
+    "check-5": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "fused_head": true,
+      "attention_rounding": true,
+      "head_max_rows": 6
+    }
+  },
+  "prompts": {
+    "numerical-check": {
+      "text": "Write a complete Python implementation of a prefix tree, including insert, delete, prefix search, iteration, and a detailed test suite. Aim for at least 200 lines of code.",
+      "prompt_tokens": 512,
+      "max_tokens": 128,
+      "temperature": 1.0,
+      "force_length": true
+    }
+  },
+  "jobs": [
+    {
+      "profile": "check-1",
+      "prompt": "numerical-check"
+    },
+    {
+      "profile": "check-2",
+      "prompt": "numerical-check"
+    },
+    {
+      "profile": "check-3",
+      "prompt": "numerical-check"
+    },
+    {
+      "profile": "check-4",
+      "prompt": "numerical-check"
+    },
+    {
+      "profile": "check-5",
+      "prompt": "numerical-check"
+    }
+  ],
+  "cache_limit_bytes": 8589934592
+}

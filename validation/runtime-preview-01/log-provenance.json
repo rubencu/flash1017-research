@@ -1,0 +1,27 @@
+{
+  "default-tests-final.log": {
+    "original_sha256": "57ce9a58d3c4cf638d27ffcb9215caec702513768e8186d304168f0f67db65c8",
+    "published_file": "default-tests-final.log.gz",
+    "redaction": "Workspace and model-directory prefixes replaced; then gzip with zero timestamp."
+  },
+  "baseline-failures.log": {
+    "original_sha256": "dbdbb0e974dc80d538393f5284b2ee50dae84bd7b085102db61bad828fe94b28",
+    "published_file": "baseline-failures.log.gz",
+    "redaction": "Workspace and model-directory prefixes replaced; then gzip with zero timestamp."
+  },
+  "installed-runtime-tests.log": {
+    "original_sha256": "4fa67fcffc842898c38186262e60c2243711d7f410b9a5ac6e9c855dd8d4ec7c",
+    "published_file": "installed-runtime-tests.log.gz",
+    "redaction": "Workspace and model-directory prefixes replaced; then gzip with zero timestamp."
+  },
+  "head-metal.log": {
+    "original_sha256": "3e96973f13fd60938ebd8de9a6545b98136705c209019dd9e8e474d7abe7a601",
+    "published_file": "head-metal.log.gz",
+    "redaction": "Workspace and model-directory prefixes replaced; then gzip with zero timestamp."
+  },
+  "serving-smoke-01.log": {
+    "original_sha256": "85955c37438819865edace2b7488cf41bae09c78c11f124f45134659c3f31def",
+    "published_file": "serving-smoke-01.log.gz",
+    "redaction": "Workspace and model-directory prefixes replaced; then gzip with zero timestamp."
+  }
+}

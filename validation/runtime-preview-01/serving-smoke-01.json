@@ -1,0 +1,248 @@
+{
+  "kind": "installed-wheel-serving-smoke",
+  "performance_benchmark": false,
+  "quality_evaluation": false,
+  "runtime_import": "site-packages/omlx/__init__.py",
+  "versions": {
+    "omlx": "0.7.1rc1+flash1017.1",
+    "mlx": "0.32.4",
+    "mlx-lm": "0.31.4.dev132+g94cdcae13",
+    "mlx-vlm": "0.7.8"
+  },
+  "requests": [
+    {
+      "name": "short",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 15,
+        "completion_tokens": 6,
+        "total_tokens": 21,
+        "input_tokens": 15,
+        "output_tokens": 6,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "model_load_duration": 24.41,
+        "time_to_first_token": 4.89,
+        "total_time": 5.11,
+        "prompt_eval_duration": 4.89,
+        "generation_duration": 0.22,
+        "prompt_tokens_per_second": 3.07,
+        "generation_tokens_per_second": 27.47
+      },
+      "text": "Two plus two equals four.",
+      "finish_reason": "stop"
+    },
+    {
+      "name": "wide-prefill",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 8314,
+        "completion_tokens": 32,
+        "total_tokens": 8346,
+        "input_tokens": 8314,
+        "output_tokens": 32,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "time_to_first_token": 10.35,
+        "total_time": 11.15,
+        "prompt_eval_duration": 10.35,
+        "generation_duration": 0.8,
+        "prompt_tokens_per_second": 803.56,
+        "generation_tokens_per_second": 39.77
+      },
+      "text": "The file implements asyncio's base event loop, handling callback scheduling, timers, executors, and async task management, along with an `AbstractServer",
+      "finish_reason": "length"
+    },
+    {
+      "name": "prefix-reuse",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 8319,
+        "completion_tokens": 32,
+        "total_tokens": 8351,
+        "input_tokens": 8319,
+        "output_tokens": 32,
+        "prompt_tokens_details": {
+          "cached_tokens": 8312
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "time_to_first_token": 0.31,
+        "total_time": 1.28,
+        "prompt_eval_duration": 0.31,
+        "generation_duration": 0.97,
+        "prompt_tokens_per_second": 22.9,
+        "generation_tokens_per_second": 32.82
+      },
+      "text": "The `BaseEventLoop` class provides foundational event loop functionality, with error handling that validates arguments, checks state (e.g., closed/running), and raises",
+      "finish_reason": "length"
+    },
+    {
+      "name": "after-cancellation",
+      "http_status": 200,
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 1,
+        "total_tokens": 15,
+        "input_tokens": 14,
+        "output_tokens": 1,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "time_to_first_token": 0.36,
+        "total_time": 0.37,
+        "prompt_eval_duration": 0.36,
+        "generation_duration": 0.01,
+        "prompt_tokens_per_second": 38.49,
+        "generation_tokens_per_second": 179.29
+      },
+      "text": "Paris",
+      "finish_reason": "stop"
+    }
+  ],
+  "status": "passed",
+  "native_modules_imported": 5,
+  "memory_setup": {
+    "wired_limit_bytes": 240518168576,
+    "previous_wired_limit_bytes": 261133172736,
+    "allocator_guideline_bytes": 240518168576,
+    "cache_limit_bytes": 8589934592,
+    "load_available_floor_bytes": 12884901888,
+    "physical_memory_reserve_bytes": 34359738368
+  },
+  "scheduler": {
+    "max_num_seqs": 1,
+    "completion_batch_size": 1,
+    "prefill_step_size": 8192,
+    "max_total_tokens": 131072,
+    "paged_ssd_cache_dir": "cache/flash1017-v1"
+  },
+  "runtime": {
+    "closed": false,
+    "enabled": true,
+    "cone": {
+      "enabled": true,
+      "closed": false,
+      "counts": {
+        "model_calls": 40
+      },
+      "cone_counts": {
+        "full_calls": 39,
+        "fallback:short-chunk": 6,
+        "fallback:not-cache-only-prefill": 33,
+        "cone_calls": 1
+      },
+      "shape_counts": {
+        "index-pad": 5,
+        "gate-pad": 20,
+        "hc-warp32": 14,
+        "local-wkv-pad": 3,
+        "final-moe-256": 1
+      },
+      "prime_counts": {
+        "prefill_calls": 7,
+        "fallback:short-chunk": 6,
+        "eligible_prefills": 1,
+        "wkv_pads": 3,
+        "stage:0": 1,
+        "stage:1": 1,
+        "stage:2": 1,
+        "padded_appends": 1
+      },
+      "trace": [],
+      "prefill_trace": [],
+      "sources": {
+        "cone": "cone_arithmetic.py",
+        "shape": "shape_arithmetic.py",
+        "prime": "prime_arithmetic.py"
+      },
+      "owned_instances": 90
+    },
+    "rows": {
+      "status": "active",
+      "enabled": true,
+      "per_table_budget_bytes": 268435456,
+      "max_retained_bytes": 536870912,
+      "retained_bytes": 536870912,
+      "live_tables": [
+        {
+          "cache_id": 0,
+          "table": "language_model.layers.1.engram.embed.weight",
+          "budget": 268435456,
+          "nbytes": 268435456,
+          "closed": false,
+          "resident": false,
+          "cache_disabled_after_allocation_failure": false,
+          "counts": {
+            "calls": 40,
+            "cache_calls": 40,
+            "requested_rows": 202224,
+            "unique_rows": 120521,
+            "duplicate_rows_elided": 81703,
+            "miss_rows": 119530,
+            "native_read_calls": 39,
+            "native_requested_rows": 119530,
+            "native_selected_bytes": 19124800,
+            "all_hit_calls": 1
+          },
+          "unique_hits": 991,
+          "unique_queries": 120521,
+          "admitted": 115235
+        },
+        {
+          "cache_id": 1,
+          "table": "language_model.layers.14.engram.embed.weight",
+          "budget": 268435456,
+          "nbytes": 268435456,
+          "closed": false,
+          "resident": false,
+          "cache_disabled_after_allocation_failure": false,
+          "counts": {
+            "calls": 40,
+            "cache_calls": 40,
+            "requested_rows": 202224,
+            "unique_rows": 120517,
+            "duplicate_rows_elided": 81707,
+            "miss_rows": 119517,
+            "native_read_calls": 40,
+            "native_requested_rows": 119517,
+            "native_selected_bytes": 19122720
+          },
+          "unique_hits": 1000,
+          "unique_queries": 120517,
+          "admitted": 115243
+        }
+      ],
+      "retired_tables": [],
+      "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+    }
+  },
+  "confidence": {
+    "cycles": 27,
+    "selected_depths": [
+      0,
+      4,
+      18,
+      1,
+      3,
+      1
+    ]
+  },
+  "prefetch_budget_bytes": 67108864,
+  "context_limit_http_status": 400,
+  "total_budget_http_status": 400,
+  "stream_cancelled_after_content": true,
+  "controllers_closed": true
+}

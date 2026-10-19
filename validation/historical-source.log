@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "copied_files": 140,
+  "generated_files": 5,
+  "originals_checked": 0,
+  "five_file_patch_reconstruction": "byte-identical",
+  "local_code_edges_recorded": "no missing targets",
+  "scope": "Integrity, Python syntax, recorded source-edge inventory, frozen policy values and offline patch reconstruction only. No external build, inference, serving or performance qualification."
+}

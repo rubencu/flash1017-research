@@ -1,0 +1,11 @@
+{
+  "repository": "tacos8me/m5-ultra",
+  "commit": "fb233e22762f11e23123437efd4cbfc400a59f07",
+  "source_url": "https://raw.githubusercontent.com/tacos8me/m5-ultra/fb233e22762f11e23123437efd4cbfc400a59f07/kernels/omlx/src/omlx/patches/deepseek_v41/hot_rows.py",
+  "source_sha256": "341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa",
+  "copied_verbatim": true,
+  "license_url": "https://raw.githubusercontent.com/tacos8me/m5-ultra/fb233e22762f11e23123437efd4cbfc400a59f07/kernels/omlx/LICENSE",
+  "license_sha256": "de69b4352c9952cd5f0f4b8cb4584782a07f02c9ba82aeb5d496aa2b7fe5457d",
+  "tree_notice_check": "Recursive tree at pinned commit returned no NOTICE files; kernels/omlx/LICENSE is the applicable subtree license.",
+  "scope": "Adapter only; no upstream storage or native reader copied."
+}

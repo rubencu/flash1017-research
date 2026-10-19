@@ -1,0 +1,22 @@
+{
+  "status": "11_cpu_record_tests_passed",
+  "created_at_utc": "2026-10-18T21:15:47.071233+00:00",
+  "tests": [
+    "complete fixture and independent aggregate",
+    "early EOS invalidates whole suite without dropping observations",
+    "source activation digest mismatch",
+    "missing native cleanup",
+    "unconfirmed process exit",
+    "incomplete same-process shard-load trace",
+    "restoration failure separate from performance qualification",
+    "forged decode-rate arithmetic",
+    "unexpected cone fallback",
+    "partial JSON preserved as invalid",
+    "execution wall limit exceeded"
+  ],
+  "scope": "Synthetic saved-record tests only. No model/runtime imports, HTTP, GPU execution, or live benchmark analysis.",
+  "files_sha256": {
+    "independent_report.py": "e0517b5e0d37519a2df239ddd404bcf8c797fe9497ea8c09f5c1ad273419827a",
+    "test_independent_report.py": "2c4835a1158e9be952239a7c46c6b1dadcff72d747c096cdc06166da01bc69ce"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "scope": "Local repository preparation; saved evidence, syntax, patch reconstruction and CPU analyzer tests only. No model run, installation or current-fork performance qualification.",
+  "checks": [
+    {
+      "name": "archive-integrity",
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "tools/verify_research.py"
+      ],
+      "returncode": 0,
+      "log": "validation/archive-integrity.log"
+    },
+    {
+      "name": "historical-source",
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "archives/2026-10-18-preview/source/verify_source_kit.py"
+      ],
+      "returncode": 0,
+      "log": "validation/historical-source.log"
+    },
+    {
+      "name": "saved-analysis",
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "archives/2026-10-18-preview/analysis/analyze.py",
+        "--json",
+        "validation/recalculated.json",
+        "--text",
+        "validation/recalculated.txt"
+      ],
+      "returncode": 0,
+      "log": "validation/saved-analysis.log"
+    },
+    {
+      "name": "analysis-tests",
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "archives/2026-10-18-preview/analysis/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "validation/analysis-tests.log"
+    }
+  ],
+  "headline_improvement_percent": 20.06083918786373,
+  "fixed512_qualified": false,
+  "early_eos_count": 9,
+  "model_runs": 0,
+  "service_actions": 0,
+  "external_actions": 0,
+  "historical_manifest_sha256": "8ea1acdcd506915c45c38ea39cdd743ae71fb6d099afc6b3721c3a4c36f9b487"
+}

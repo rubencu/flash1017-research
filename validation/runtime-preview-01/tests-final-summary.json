@@ -1,0 +1,36 @@
+{
+  "runtime_commit": "ad2f74058056e4cc7c0a13ddc76f96602e8ce092",
+  "default_command": "python -m pytest",
+  "passed": 18054,
+  "failed": 12,
+  "skipped": 460,
+  "deselected": 85,
+  "subtests_passed": 20,
+  "seconds": 321.15,
+  "failure_nodes": [
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[2-1024]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[2-156]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[2-512]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[2-640]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[3-1024]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[3-156]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[3-512]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[3-640]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[6-1024]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[6-156]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[6-512]",
+    "tests/test_deepseek_v4_dspark.py::test_dspark_attention_matches_stock_m1_fallback[6-640]"
+  ],
+  "all_remaining_failures_reproduced_on_base": true,
+  "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+  "base_failure_probe": {
+    "failed": 12,
+    "passed": 1,
+    "deselected": 63
+  },
+  "installed_runtime_contract_tests_passed": 33,
+  "metal_projection_cases_passed": 6,
+  "arithmetic_functions_ast_preserved": 24,
+  "default_log_sha256": "57ce9a58d3c4cf638d27ffcb9215caec702513768e8186d304168f0f67db65c8",
+  "scope": "Runtime tests and bounded component checks; no model-quality or speed claim."
+}

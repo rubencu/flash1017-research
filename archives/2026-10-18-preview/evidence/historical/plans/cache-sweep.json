@@ -1,0 +1,628 @@
+{
+  "cache_limit_bytes": 8589934592,
+  "purpose": "Check every native speculation setting with an allocation cache large enough for the 2.46 GiB FP32 vocabulary temporary. Validate the previously selected row-reuse candidate; retain same calibration prompts and seeds.",
+  "profiles": {
+    "stock-ar": {
+      "mtp": false
+    },
+    "stock-a3": {
+      "mtp": true,
+      "depth": 3,
+      "fixed": false,
+      "attention_rounding": false
+    },
+    "stock-a1": {
+      "mtp": true,
+      "depth": 1,
+      "fixed": false,
+      "attention_rounding": false
+    },
+    "stock-a2": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": false,
+      "attention_rounding": false
+    },
+    "stock-a4": {
+      "mtp": true,
+      "depth": 4,
+      "fixed": false,
+      "attention_rounding": false
+    },
+    "stock-a5": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": false,
+      "attention_rounding": false
+    },
+    "stock-f1": {
+      "mtp": true,
+      "depth": 1,
+      "fixed": true,
+      "attention_rounding": false
+    },
+    "stock-f2": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": false
+    },
+    "stock-f3": {
+      "mtp": true,
+      "depth": 3,
+      "fixed": true,
+      "attention_rounding": false
+    },
+    "stock-f4": {
+      "mtp": true,
+      "depth": 4,
+      "fixed": true,
+      "attention_rounding": false
+    },
+    "stock-f5": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": false
+    },
+    "reference-f2": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true
+    },
+    "reference-f2-head": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true
+    },
+    "reference-a5": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": false,
+      "attention_rounding": true
+    },
+    "reference-f5": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true
+    },
+    "reference-a5-head6": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6
+    },
+    "reference-f5-head6": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6
+    }
+  },
+  "prompts": {
+    "cal-code-1k": {
+      "text": "Write a complete, extensively documented Python module implementing an LRU cache with capacity resizing, statistics, snapshots, restoration, and a large unittest suite. Aim for at least 200 lines. Begin with the implementation and then the tests.",
+      "prompt_tokens": 1024,
+      "max_tokens": 256,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "cal-prose-1k": {
+      "text": "Write a detailed textbook chapter of at least 1500 words explaining how a household refrigerator moves heat. Cover thermodynamics, refrigerant phase changes, the compressor, thermostat control, practical energy measurements, and common failure modes. Start directly with the chapter.",
+      "context": "A heat pump transfers thermal energy from a colder reservoir to a warmer reservoir. Work must be supplied to maintain the cycle. Measurements distinguish heat flow, electrical input and useful cooling.\n",
+      "prompt_tokens": 1024,
+      "max_tokens": 256,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "warmup": {
+      "text": "Write a complete 200-line Python module implementing an LRU cache with tests and documentation.",
+      "prompt_tokens": 1024,
+      "max_tokens": 64,
+      "temperature": 1.0,
+      "force_length": true
+    }
+  },
+  "jobs": [
+    {
+      "profile": "stock-ar",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-a3",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-a1",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-a2",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-a4",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-a5",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-f1",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-f3",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-f4",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-f5",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-a5",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-f5",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "reference-f5-head6",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "stock-ar",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a1",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a2",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-ar",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f4",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a5",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a3",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a3",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f1",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f1",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-ar",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-f5",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a2",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a3",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a5",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f3",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-ar",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f1",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a1",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a4",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f3",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-a5",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f5",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-a5",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a5",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a4",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a4",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f5",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f5",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f5-head6",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f2",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a3",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-a5",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-a5",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a1",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a1",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f2",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f1",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-f5-head6",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f4",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-a4",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f5",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f4",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f5",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-f5-head6",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a2",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f3",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f5-head6",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "stock-f4",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f5",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a5",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-f3",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "reference-f5",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "stock-a2",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    }
+  ]
+}

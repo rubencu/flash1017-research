@@ -1,0 +1,280 @@
+{
+  "status": "PROPOSED_NOT_EXECUTABLE_OR_FROZEN",
+  "scope": "Immediate COMPLETE qualified runtime versus installed stock oMLX0.7.1rc1 with native adaptiveMTP, shareddependencies/nativeABI; not currentmain and not releasequalification.6natural16K/64K+2synthetic1K fixed512token directinference workloads, not HTTP timing.",
+  "source_plan": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/performance-01.json",
+  "source_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+  "candidate_profile_sha256": "564947e1123fbb8216177f213c624d465f877d774e6d53298c310bbcd0b2e108",
+  "arms": {
+    "native2048": {
+      "identity": "Unmodified installed oMLX with native adaptive MTP enabled",
+      "depth": 3,
+      "fixed": false,
+      "attention_rounding": false,
+      "fused_head": false,
+      "ced_prefill": false,
+      "prefill_step": 2048,
+      "engram_prefetch_bytes": 16777216
+    },
+    "native8192": {
+      "identity": "Same unmodified installed oMLX, larger chunk configuration",
+      "depth": 3,
+      "fixed": false,
+      "attention_rounding": false,
+      "fused_head": false,
+      "ced_prefill": false,
+      "prefill_step": 8192,
+      "engram_prefetch_bytes": 16777216
+    },
+    "complete": {
+      "identity": "Existing qualified complete runtime",
+      "runtime": {
+        "mtp": true,
+        "depth": 5,
+        "fixed": true,
+        "attention_rounding": true,
+        "fused_head": true,
+        "instrument": true,
+        "draft_width": 5,
+        "head_max_rows": 6,
+        "policy": {
+          "cycle_ms": [
+            40.86379148066044,
+            51.855687983334064,
+            57.73166654398665,
+            66.96656247368082,
+            71.52610452612862,
+            77.69158302107826
+          ],
+          "temperatures": [
+            1.0,
+            0.9394130628134758,
+            1.0644944589178593,
+            0.8824969025845955,
+            1.3668379411737963
+          ]
+        },
+        "ced_prefill": false,
+        "prefill_step": 8192,
+        "engram_prefetch_bytes": 67108864,
+        "serving_candidate": {
+          "name": "cone-hotrows-v3",
+          "schema": 1,
+          "row_cache_bytes_per_table": 268435456,
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032"
+        }
+      }
+    }
+  },
+  "fixtures": [
+    {
+      "id": "performance-cpython-16384",
+      "source": "cpython",
+      "input_tokens": 16384,
+      "input_tokens_sha256": "4aa960f794657af43657670080c8e3d5a2d6e31815fff0555c466e75c6ede978",
+      "source_plan_prompt_key": "performance-cpython-16384",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "timeout_seconds": 1200,
+      "source_plan": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/performance-01.json",
+      "source_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+      "cohort": "natural-source"
+    },
+    {
+      "id": "performance-curl-16384",
+      "source": "curl",
+      "input_tokens": 16384,
+      "input_tokens_sha256": "af49fe7277fa0dc27468f16f33391f27bb97e31cb9f725b81f63b44f9735a448",
+      "source_plan_prompt_key": "performance-curl-16384",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "timeout_seconds": 1200,
+      "source_plan": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/performance-01.json",
+      "source_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+      "cohort": "natural-source"
+    },
+    {
+      "id": "performance-moby-dick-16384",
+      "source": "moby-dick",
+      "input_tokens": 16384,
+      "input_tokens_sha256": "70106dce6481c03f8bd729d17c55d9ce12368875a68a749c3e86c9f600105190",
+      "source_plan_prompt_key": "performance-moby-dick-16384",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "timeout_seconds": 1200,
+      "source_plan": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/performance-01.json",
+      "source_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+      "cohort": "natural-source"
+    },
+    {
+      "id": "performance-pride-prejudice-16384",
+      "source": "pride-prejudice",
+      "input_tokens": 16384,
+      "input_tokens_sha256": "ff6c7bcb41f34a55d90b5dcc5c5f6bcbd9a000927b3c0737a49e3694ae231f76",
+      "source_plan_prompt_key": "performance-pride-prejudice-16384",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "timeout_seconds": 1200,
+      "source_plan": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/performance-01.json",
+      "source_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+      "cohort": "natural-source"
+    },
+    {
+      "id": "performance-cpython-65536",
+      "source": "cpython",
+      "input_tokens": 65536,
+      "input_tokens_sha256": "31a42897b4a2696c5d7a6386c7e56d263f27f8c388a20c825f51349753ebdd9c",
+      "source_plan_prompt_key": "performance-cpython-65536",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "timeout_seconds": 1200,
+      "source_plan": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/performance-01.json",
+      "source_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+      "cohort": "natural-source"
+    },
+    {
+      "id": "performance-pride-prejudice-65536",
+      "source": "pride-prejudice",
+      "input_tokens": 65536,
+      "input_tokens_sha256": "aba763d4f3fab02b97397173495e7ebf7a27d7b4bad14379b0dac58b617e5ddb",
+      "source_plan_prompt_key": "performance-pride-prejudice-65536",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "timeout_seconds": 1200,
+      "source_plan": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans/performance-01.json",
+      "source_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+      "cohort": "natural-source"
+    },
+    {
+      "id": "held-code-1k",
+      "source": "synthetic-code",
+      "cohort": "synthetic-generation",
+      "input_tokens": 1024,
+      "input_tokens_sha256": "d891e7f26f8d7e0c088d485ff56e8075e2311117d134d043130dfc73ba3dd984",
+      "source_plan": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/heldout.json",
+      "source_plan_sha256": "8ebf1580eadfa975ad26410ddde9ca9a56e857394d27c6d2809004f7009ccf5e",
+      "source_plan_prompt_key": "held-code-1k",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "timeout_seconds": 1200,
+      "historical_raw_sha256": "89361b786fc20826a67edaa8e94c93c5fe049682c286c1e5cfd8db68aad654e9"
+    },
+    {
+      "id": "held-prose-1k",
+      "source": "synthetic-prose",
+      "cohort": "synthetic-generation",
+      "input_tokens": 1024,
+      "input_tokens_sha256": "b57ac472fb5aba286d6938d49364364e2f6babc65911ae868b82151cfb7c72c2",
+      "source_plan": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/heldout.json",
+      "source_plan_sha256": "8ebf1580eadfa975ad26410ddde9ca9a56e857394d27c6d2809004f7009ccf5e",
+      "source_plan_prompt_key": "held-prose-1k",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "timeout_seconds": 1200,
+      "historical_raw_sha256": "89361b786fc20826a67edaa8e94c93c5fe049682c286c1e5cfd8db68aad654e9"
+    }
+  ],
+  "process_blocks": [
+    {
+      "block": 0,
+      "arm_order": [
+        "native2048",
+        "native8192",
+        "complete"
+      ],
+      "case_order": [
+        "held-code-1k",
+        "performance-cpython-16384",
+        "performance-pride-prejudice-65536",
+        "held-prose-1k",
+        "performance-curl-16384",
+        "performance-cpython-65536",
+        "performance-moby-dick-16384",
+        "performance-pride-prejudice-16384"
+      ],
+      "seed_by_case": {
+        "performance-cpython-16384": 2026101800,
+        "performance-curl-16384": 2026101801,
+        "performance-moby-dick-16384": 2026101802,
+        "performance-pride-prejudice-16384": 2026101803,
+        "performance-cpython-65536": 2026101804,
+        "performance-pride-prejudice-65536": 2026101805,
+        "held-code-1k": 2026101806,
+        "held-prose-1k": 2026101807
+      }
+    },
+    {
+      "block": 1,
+      "arm_order": [
+        "complete",
+        "native8192",
+        "native2048"
+      ],
+      "case_order": [
+        "performance-pride-prejudice-16384",
+        "performance-moby-dick-16384",
+        "performance-cpython-65536",
+        "performance-curl-16384",
+        "held-prose-1k",
+        "performance-pride-prejudice-65536",
+        "performance-cpython-16384",
+        "held-code-1k"
+      ],
+      "seed_by_case": {
+        "performance-cpython-16384": 2026101900,
+        "performance-curl-16384": 2026101901,
+        "performance-moby-dick-16384": 2026101902,
+        "performance-pride-prejudice-16384": 2026101903,
+        "performance-cpython-65536": 2026101904,
+        "performance-pride-prejudice-65536": 2026101905,
+        "held-code-1k": 2026101906,
+        "held-prose-1k": 2026101907
+      }
+    }
+  ],
+  "warmup": {
+    "source_plan_prompt_key": "authored-warmup-16384",
+    "max_tokens": 64,
+    "seed": 2026101799,
+    "excluded": true,
+    "per_process": 1
+  },
+  "counts": {
+    "measured": 48,
+    "excluded_warmups": 6,
+    "processes": 6
+  },
+  "cache_policy": "Fresh request KV each measured request, no prefix cache. Clear retained HotRows only after warmup; retain through measured sequence. Separate process per arm/block. Do not purge OS caches; record native seen-page state and peak footprint separately.",
+  "claim_policy": [
+    "Overall is directly measured total_seconds from start of model prefill through synchronization after512tokens, excluding model loading and HTTP transport.",
+    "No token-identical or quality-equivalence claim across complete vs native. Preserve all outputs and first differing position.",
+    "Any early EOS or shorter response invalidates fixed-length comparison; preserve complete invalid observations, mark incomplete and do not silently drop cases.",
+    "Report C/native2048 and C/native8192, percase/perblock and equal-case geometricmean. No combinedmultiplied percentage, broadconfidenceinterval or tail claim.",
+    "Native controls are installedapp evidence unless clean-source/native ABI identity to currentmain is independently established.",
+    "Stop on crashes, mismatched source/model/input pins, missing native MTP activity or candidatefastpath telemetry, memory constraints, or a declared wall limit. Do not retune after outcomes."
+  ],
+  "supersedes_proposal_sha256": "c6ff79b84fd43a219de2fe05a96df4cef7ddaac46c4c1bf88f24b8d93d0aada7"
+}

@@ -1,0 +1,31 @@
+Flash1017 research preview — proposed publication copy
+
+Original additions and new documentation: Copyright 2026 rubencu.
+Offered under Apache License 2.0 for the proposed release; see LICENSE.
+This does not replace the licenses or notices of adapted or included material.
+
+oMLX, MLX, MLX-LM and DeepSeek supply the inference and model foundation.
+Original oMLX files retain their MIT or Apache-2.0 notices. DeepSeek supplies
+the model and DSpark algorithm; mlx-community supplies the unchanged oQ2.5e
+checkpoint and quantization. This package redistributes no model weights.
+
+HotRows is copied from tacos8me/m5-ultra under its retained Apache-2.0 notice.
+The local cache ownership/reader/lifecycle adapter is a separate addition.
+Earlier BF16 reuse and confidence-cost implementations, ds4 dependency replay,
+and gnahzhang's reference-arithmetic work are related work where indicated.
+An acknowledgment of an analogous implementation is not a claim that its author
+invented the general technique or that our implementation derives from it.
+
+Detailed per-component provenance and source links: docs/ATTRIBUTION.md.
+Unmodified historical notices remain with their source snapshots; current
+publication wording distinguishes copied code from related implementations.
+
+Public fixture material has separate retained notices and licenses:
+evidence/overall/fixtures/NOTICE and evidence/overall/fixtures/sources/.
+CPython belongs to the Python Software Foundation and contributors; curl to
+Daniel Stenberg and contributors. The original Project Gutenberg ebook files
+retain their credits and full license. Do not blanket-relicense these materials.
+
+Measured records are copied with original hashes and only declared filesystem
+prefix normalization. No original numerical observation or failed qualification
+has been removed or changed by packaging the complete overall comparison.

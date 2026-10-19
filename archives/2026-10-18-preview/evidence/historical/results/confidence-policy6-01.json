@@ -1,0 +1,61 @@
+{
+  "cycle_ms": [
+    40.86379148066044,
+    51.855687983334064,
+    57.73166654398665,
+    66.96656247368082,
+    71.52610452612862,
+    77.69158302107826
+  ],
+  "temperatures": [
+    1.0,
+    0.9394130628134758,
+    1.0644944589178593,
+    0.8824969025845955,
+    1.3668379411737963
+  ],
+  "diagnostics": {
+    "cost_samples": [
+      980,
+      570,
+      442,
+      384,
+      370,
+      342
+    ],
+    "confidence": [
+      {
+        "n": 2108,
+        "empirical_acceptance": 0.7158444022770398,
+        "loss_before": 0.44426386273421825,
+        "loss_after": 0.44426386273421825
+      },
+      {
+        "n": 1107,
+        "empirical_acceptance": 0.6729900632339657,
+        "loss_before": 0.4949873651075198,
+        "loss_after": 0.49445104900207676
+      },
+      {
+        "n": 546,
+        "empirical_acceptance": 0.6117216117216118,
+        "loss_before": 0.5591570648090046,
+        "loss_after": 0.559091816763809
+      },
+      {
+        "n": 226,
+        "empirical_acceptance": 0.5221238938053098,
+        "loss_before": 0.5507448164674845,
+        "loss_after": 0.5498595468760042
+      },
+      {
+        "n": 61,
+        "empirical_acceptance": 0.47540983606557374,
+        "loss_before": 0.635691273507711,
+        "loss_after": 0.6283678941459633
+      }
+    ]
+  },
+  "calibration_sha256": "d08e5e6915a3186817f09405bb867d14553aefb710b60df10cf813430e0cd9c8",
+  "calibration_file": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/cost6-01.jsonl"
+}

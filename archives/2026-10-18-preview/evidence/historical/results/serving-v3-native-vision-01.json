@@ -1,0 +1,186 @@
+{
+  "status": "complete_validated",
+  "case": "vision-short-and-long",
+  "kind": "native",
+  "server": {
+    "pid": 79950,
+    "created": 1792325357.613358,
+    "port": 8001,
+    "profile": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/qualified-profile.json"
+  },
+  "profile_sha256": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da",
+  "started_at_unix": 1792325570.360966,
+  "timing_scope": "Functional serving qualification; not a controlled speed comparison.",
+  "source_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_vision.py": "5f222df8e9c0872781e37eb3462791e7335899c3990183cb51efba489b9cd73f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_cancel.py": "7877a4c1fdf0e6378a5e68d1e2c81136e81c7b6b9b797320c74d0196efe2539f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_lifecycle.py": "8fe87a256b4c8e889c0d69d2ce932e36ef7b2106210d630512a2db8048744f61",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/common.py": "09e9e59f86858fa7cd72bc10668344233ec6e1087db5c21b273aaff462db83c6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_sessions.py": "1ce082398ec09fd65ec3d18e5a71dcd12473b7b30d805084bd5977c169bd8526"
+  },
+  "tests": [
+    {
+      "response": {
+        "id": "chatcmpl-5d3be6bc",
+        "object": "chat.completion",
+        "created": 1792325572,
+        "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"blue_circles\": 2, \"green_squares\": 3, \"red_triangles\": 1}"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 258,
+          "completion_tokens": 26,
+          "total_tokens": 284,
+          "input_tokens": 258,
+          "output_tokens": 26,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "time_to_first_token": 1.01,
+          "total_time": 1.46,
+          "prompt_eval_duration": 1.01,
+          "generation_duration": 0.45,
+          "prompt_tokens_per_second": 254.59,
+          "generation_tokens_per_second": 57.6
+        }
+      },
+      "seconds": 1.7344185831025243,
+      "request_sha256": "99bf85e1699328b8627a3811c9543962b12d8e7e2f3f1ddb49a2bdbb44851f7d",
+      "queue_idle": {
+        "seconds": 0.0012605830561369658,
+        "status": {
+          "active_requests": 0,
+          "waiting_requests": 0,
+          "loaded_models": [
+            "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+          ]
+        },
+        "scope": "API queue idle only; not an independent GPU/executor fence."
+      },
+      "before": null,
+      "after": null,
+      "test": "vision-short",
+      "parsed": {
+        "blue_circles": 2,
+        "green_squares": 3,
+        "red_triangles": 1
+      },
+      "cone_delta": {},
+      "prime_delta": {},
+      "prompt_tokens": 258,
+      "passed": true
+    },
+    {
+      "response": {
+        "id": "chatcmpl-3a1fed63",
+        "object": "chat.completion",
+        "created": 1792325619,
+        "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"blue_circles\": 2, \"green_squares\": 3, \"red_triangles\": 1}"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 33044,
+          "completion_tokens": 26,
+          "total_tokens": 33070,
+          "input_tokens": 33044,
+          "output_tokens": 26,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "time_to_first_token": 47.13,
+          "total_time": 47.52,
+          "prompt_eval_duration": 47.13,
+          "generation_duration": 0.38,
+          "prompt_tokens_per_second": 701.07,
+          "generation_tokens_per_second": 67.82
+        }
+      },
+      "seconds": 47.57485558302142,
+      "request_sha256": "6249407e947ae57309c06153be0986604a7aaf2669b4ae687cf9f5b8059a78db",
+      "queue_idle": {
+        "seconds": 0.0011687919031828642,
+        "status": {
+          "active_requests": 0,
+          "waiting_requests": 0,
+          "loaded_models": [
+            "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+          ]
+        },
+        "scope": "API queue idle only; not an independent GPU/executor fence."
+      },
+      "before": null,
+      "after": null,
+      "test": "vision-long-fallback",
+      "parsed": {
+        "blue_circles": 2,
+        "green_squares": 3,
+        "red_triangles": 1
+      },
+      "cone_delta": {},
+      "prime_delta": {},
+      "prompt_tokens": 33044,
+      "passed": true
+    }
+  ],
+  "image": {
+    "status": "frozen_unrun",
+    "path": "fixtures/vision-shapes-v2.png",
+    "sha256": "5f2fe1401601626da1b424c048bfe3c1bd928366dcaf027eee2cd39b15d4d1da",
+    "width": 512,
+    "height": 384,
+    "expected": {
+      "blue_circles": 2,
+      "green_squares": 3,
+      "red_triangles": 1
+    },
+    "verified_green_components": [
+      [
+        65,
+        65,
+        4225
+      ],
+      [
+        65,
+        65,
+        4225
+      ],
+      [
+        65,
+        65,
+        4225
+      ]
+    ],
+    "license": "Original diagnostic fixture, CC0-1.0",
+    "created_at_utc": "2026-10-18T11:21:54.704318+00:00",
+    "builder_sha256": "e0c0e03c03b9dd9d66edb4f77666bdef88ba298c59623161e2218288001dc3d3",
+    "supersedes": {
+      "path": "fixtures/vision-shapes.png",
+      "sha256": "346d7531e3099bcbb378d4f3e46030b92c86ad9369866e0895ac32ae2aea0fbf",
+      "reason": "Visual QA found original green shapes were65x76, not squares. Original preserved; no model has consumed either image during preparation. Token fixtures and bench plans are unchanged."
+    }
+  },
+  "http_fixture_sha256": "082877514570d830a1105ef086eef1d15562c349c6d3eb85e501f191b087b2c8",
+  "completed_at_unix": 1792325619.75635
+}

@@ -1,0 +1,12 @@
+{
+  "status": "frozen_cpu_reviewed",
+  "created_at_unix": 1792324811.348096,
+  "tests_passed": 15,
+  "independently_reviewed": true,
+  "sources_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-launch-v3/launch.py": "f94c2959cc454af6403f91f6713c9f91e8aaf766b105eb98e3b8a69eff8e0674",
+    "${ORIGINAL_LAB_ROOT}/work/serving-launch-v3/test_launch.py": "6524331b995ee97ffdca4ee622cf0563d5be3e9866ab3484a1569781855b92a7",
+    "${ORIGINAL_LAB_ROOT}/work/serving-launch-review-v3/manifest-02.json": "f4098693e6865835d59ff59e452ef7dba8817d5b7018e5f607f592ebabf25fb5"
+  },
+  "scope": "Candidate-aware orchestration only; server keeps exclusive model lock. No live startup yet."
+}

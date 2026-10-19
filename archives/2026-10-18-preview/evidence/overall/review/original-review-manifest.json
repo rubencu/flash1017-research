@@ -1,0 +1,305 @@
+{
+  "created_at_unix": 1792361580.272979,
+  "purpose": "Local review evidence for the completed existing-runtime comparison. No publication authorized or performed.",
+  "model_weights_included": false,
+  "baseline": "Untouched installed oMLX 0.7.1rc1 with native adaptive MTP; current upstream main was not measured.",
+  "original_fixed512_qualification": "failed_due_to_9_early_EOS_records; unchanged",
+  "separate_endpoints": "Prefill/TTFT structurally qualified; all48 prefix128 analysis explicitly post hoc.",
+  "files": [
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/figures/first-128-tokens.json",
+      "bytes": 2643,
+      "sha256": "3cfc645fd879e6e71590f86911ba4f0c43bf7dbc98245fe79e6e600896956841"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/figures/first-128-tokens.pdf",
+      "bytes": 27731,
+      "sha256": "6557228e4b9cec0c7f4ad769a6bf8822bf4cf35e4a841d256ad38e9cc92cc50c"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/figures/first-128-tokens.png",
+      "bytes": 122981,
+      "sha256": "1e5f1c4ff76f299beb547d447c2f0d1f7dbe83148a417bba201a27a91c8619fa"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/figures/first-token.json",
+      "bytes": 2634,
+      "sha256": "954478b740b67068a7eefeba0d638530d9eedb1b2eba4abf6746454f6b013923"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/figures/first-token.pdf",
+      "bytes": 26093,
+      "sha256": "be3c89be960cd366b4d59742a52e75b7944b40b634674fc7af70d32a32d0b29b"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/figures/first-token.png",
+      "bytes": 117425,
+      "sha256": "dd93439760a36487feaf8295262c1a95ebec24846e95e30d9a93d40063443352"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/independent-audit.json",
+      "bytes": 46188,
+      "sha256": "5e52107e1751c031f465ff46b9b6c8991b804dedc545b2d53c789aebd376a371"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/plotting-requirements.txt",
+      "bytes": 228,
+      "sha256": "5adeb6ebcca86ba41e893f22d464acb8975c4937e6c695c48b00bf86262ec2a6"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/record-arithmetic-audit.json",
+      "bytes": 29900,
+      "sha256": "a0ca08951d4560bcc2e6678aeaa174e44381e83a636d7e7e1348715885a42925"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/report.txt",
+      "bytes": 16124,
+      "sha256": "fefde0ba8059e528605b0c6e957dd4a85c6ab2e9a8fe902f4ed474bb9ad37143"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/service-verification.json",
+      "bytes": 322,
+      "sha256": "26dc80f9342f3cf747dd4205f570873b6767570a05c7e95b2b299170c85fd964"
+    },
+    {
+      "path": "outputs/flash1017-lab/overall-comparison-review-01/supplement.json",
+      "bytes": 92552,
+      "sha256": "671d28c2918d3df0434f29bcfaf42e4e8ae6831fd534bfd16be4ed9f385c519c"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/00-native2048-block0.jsonl",
+      "bytes": 207813,
+      "sha256": "d12a4fb066c8583b2146d9c2162315d744f56e55a2f6b2c8460d55222264a3d7"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/00-native2048-block0.load.jsonl",
+      "bytes": 26502,
+      "sha256": "74c769e319e57375b64e71315bf5420c56937ed1112480677fcb2149c7086491"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/00-native2048-block0.log",
+      "bytes": 9383,
+      "sha256": "701f5fb076eac1f8818491ac089b2be82bc456d658c8499f8f064497a026755f"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/01-native8192-block0.jsonl",
+      "bytes": 207356,
+      "sha256": "8cd6c024834190892a27a58413b3d70ec70f4f265870a462afde56470caa45ca"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/01-native8192-block0.load.jsonl",
+      "bytes": 26481,
+      "sha256": "0f0993b0122f085fabbad8f23ecfe1239c72e32aa1541ab81a75e0ad3834ac83"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/01-native8192-block0.log",
+      "bytes": 9373,
+      "sha256": "57c88ad09669d20c2333d954b115cf5179b3283d6274732b7c5017dc0960c698"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/02-complete-block0.jsonl",
+      "bytes": 955443,
+      "sha256": "41a7a8b0723a24d711d2972eefc1240533deda2d0e170399180606fa2c91d3ec"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/02-complete-block0.load.jsonl",
+      "bytes": 26505,
+      "sha256": "e82a336d0cf3e4926a67c357c9ec072fec0ea28e61848344b94008e93c32bd5e"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/02-complete-block0.log",
+      "bytes": 9487,
+      "sha256": "5a3318e8c286af5c460ea55aa8800bba0c38410e557c11ad0eaf989d276f48d3"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/03-complete-block1.jsonl",
+      "bytes": 948190,
+      "sha256": "62175aa5d4ed0bed4e6aa6883037abc12acf5716b6bfcb6afb8da07d259609db"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/03-complete-block1.load.jsonl",
+      "bytes": 26507,
+      "sha256": "3d6ae740e00097070a6168fa83186d312b51612f17de73bf5fa9b619d7cca6c2"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/03-complete-block1.log",
+      "bytes": 9507,
+      "sha256": "f1a10ba693e55c6c3c458a3d07e9d2e3212e1fe53273193ed827a71e0fd60a81"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/04-native8192-block1.jsonl",
+      "bytes": 207930,
+      "sha256": "75fb21877a9bebf648a0ef65407d62c82603c93ef6f475503f38cd2ec46f4542"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/04-native8192-block1.load.jsonl",
+      "bytes": 26497,
+      "sha256": "c5f7544739e793c4df89080c906319ff6c2840ba00f2b275ebf73eb4e49b0a85"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/04-native8192-block1.log",
+      "bytes": 9370,
+      "sha256": "af2f23a90dbda4a9ef65b77d8864f6e8cc2a023b2e8f099c6e41191dfc2c4617"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/05-native2048-block1.jsonl",
+      "bytes": 208971,
+      "sha256": "a4209297c607a00924640ef9834cefd65bb43c86da7a6a038fa267f1dbf3cebc"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/05-native2048-block1.load.jsonl",
+      "bytes": 26498,
+      "sha256": "5748c5346b01203bdcf0f6bd12a10e3a8cdd9c59aad3e7a2b863ef7b3316ba04"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/05-native2048-block1.log",
+      "bytes": 9389,
+      "sha256": "70b6d6b2b0f4f689aa126c4c525ce2f620aec1b1a69b33a932311c1716754ffc"
+    },
+    {
+      "path": "outputs/flash1017-lab/results/overall-comparison-01/supervisor.json",
+      "bytes": 4231,
+      "sha256": "a5352fcd1691b61a64b8bde1465aea917a066fdf69ac453cece6e81d7fd560d2"
+    },
+    {
+      "path": "work/overall-comparison-01/cpu-validation-00.json",
+      "bytes": 178,
+      "sha256": "e9d67062f151d90f9e11403727da1cc648e9f751203755c69f0bd2c2c24755c4"
+    },
+    {
+      "path": "work/overall-comparison-01/cpu-validation-01.json",
+      "bytes": 178,
+      "sha256": "721c2afd453c9b6754ca5d392720b7756e6a45f476b234bac73bccc5fd8b6d91"
+    },
+    {
+      "path": "work/overall-comparison-01/cpu-validation-02.json",
+      "bytes": 176,
+      "sha256": "c4b4bc7633b0b47c36921e7cf93bd44f1ea92851d69bcedf3f938e7f91cc2f9a"
+    },
+    {
+      "path": "work/overall-comparison-01/cpu-validation-03.json",
+      "bytes": 176,
+      "sha256": "c4b4bc7633b0b47c36921e7cf93bd44f1ea92851d69bcedf3f938e7f91cc2f9a"
+    },
+    {
+      "path": "work/overall-comparison-01/cpu-validation-04.json",
+      "bytes": 178,
+      "sha256": "721c2afd453c9b6754ca5d392720b7756e6a45f476b234bac73bccc5fd8b6d91"
+    },
+    {
+      "path": "work/overall-comparison-01/cpu-validation-05.json",
+      "bytes": 178,
+      "sha256": "e9d67062f151d90f9e11403727da1cc648e9f751203755c69f0bd2c2c24755c4"
+    },
+    {
+      "path": "work/overall-comparison-01/evidence/agent-analysis-cpu-tests-01.json",
+      "bytes": 480,
+      "sha256": "5d1cdd4eaef9b4c4e51d1bc7ab94ad0fe86c3836de917f4ca4fa711255907510"
+    },
+    {
+      "path": "work/overall-comparison-01/evidence/agent-proposed-plan-01.json",
+      "bytes": 7918,
+      "sha256": "c6ff79b84fd43a219de2fe05a96df4cef7ddaac46c4c1bf88f24b8d93d0aada7"
+    },
+    {
+      "path": "work/overall-comparison-01/evidence/agent-proposed-plan-02.json",
+      "bytes": 11559,
+      "sha256": "4bb636958e499980cd18e765c050062d380390679f65b521a3ca06d8784c2bc3"
+    },
+    {
+      "path": "work/overall-comparison-01/evidence/agent_analyze.py",
+      "bytes": 9422,
+      "sha256": "6397af6cf23857c5d6ed32cef37c0695f73d4ef38cfd57facacbedb78a827c6c"
+    },
+    {
+      "path": "work/overall-comparison-01/freeze.py",
+      "bytes": 7022,
+      "sha256": "985ef3e78f59574ac4b6722cad479182f89a7e592403fad4af89fae97a74ca8d"
+    },
+    {
+      "path": "work/overall-comparison-01/manifest-00-before-cpu-review.json",
+      "bytes": 342764,
+      "sha256": "8b4af221187a6b557d96b543952ac8e49b637305b718efbcccbccf7abcf0e524"
+    },
+    {
+      "path": "work/overall-comparison-01/manifest-01.json",
+      "bytes": 342763,
+      "sha256": "767355abf8eedac3427b0537612bceda3b646b01142d93bc0dee0152faedc570"
+    },
+    {
+      "path": "work/overall-comparison-01/plan-00-before-cpu-review.json",
+      "bytes": 2957177,
+      "sha256": "6e990b6edb828442ef5f35acc27d9ab032519bf904aede6f0aaa504a5ea1d4fe"
+    },
+    {
+      "path": "work/overall-comparison-01/plan-01.json",
+      "bytes": 2957176,
+      "sha256": "f668ef98840aa9c13a736e4b8329b396ad1f69032c46836d1640fdf9346972db"
+    },
+    {
+      "path": "work/overall-comparison-01/runtime-audit/source_activation.py",
+      "bytes": 7030,
+      "sha256": "8f7da90b9b6f44efb1d1a1e872fc2684966c4c5e3876b7a20a09f8f8589d7cbf"
+    },
+    {
+      "path": "work/overall-comparison-01/supervise.py",
+      "bytes": 10034,
+      "sha256": "a78ab21918975740f7735fa605f48b2070e52ffbea0a9fe6da096ce017185919"
+    },
+    {
+      "path": "work/overall-comparison-01/worker.py",
+      "bytes": 13408,
+      "sha256": "fd30d12452dd74172f1a5deec6a8076a8424f8936873c208f8ba4a635a0054b9"
+    },
+    {
+      "path": "work/overall-comparison-report-01/cpu-tests-01.json",
+      "bytes": 951,
+      "sha256": "d949b7e325c1f5792a1c22d6e0b9170c919cbbab304bff7373273dc0df655df4"
+    },
+    {
+      "path": "work/overall-comparison-report-01/independent_report.py",
+      "bytes": 26069,
+      "sha256": "e0517b5e0d37519a2df239ddd404bcf8c797fe9497ea8c09f5c1ad273419827a"
+    },
+    {
+      "path": "work/overall-comparison-report-01/plot_overall.py",
+      "bytes": 4678,
+      "sha256": "8eac53c8cf9a45d8bfc31ca7afe1de5a4679891c25fc049aa8adbf7c44c4cf8a"
+    },
+    {
+      "path": "work/overall-comparison-report-01/test_independent_report.py",
+      "bytes": 13137,
+      "sha256": "2c4835a1158e9be952239a7c46c6b1dadcff72d747c096cdc06166da01bc69ce"
+    },
+    {
+      "path": "work/overall-comparison-supplement-01/cpu-tests-01.json",
+      "bytes": 1382,
+      "sha256": "7b857a4b95f8ff432551a554c66d40d7a8ebd07712063fbd046e92ae52234bdc"
+    },
+    {
+      "path": "work/overall-comparison-supplement-01/cpu-tests-02.json",
+      "bytes": 1634,
+      "sha256": "e24ab1320b12fc7f116922a97ec4ad59f8d26cc975e9c5f2d1bf64140a3d33b8"
+    },
+    {
+      "path": "work/overall-comparison-supplement-01/plot_observations.py",
+      "bytes": 5116,
+      "sha256": "b978fe12a28e4b0ba34cdaa0080ae8f747baff8ed1eac53c3196846ce8845ba1"
+    },
+    {
+      "path": "work/overall-comparison-supplement-01/render_report.py",
+      "bytes": 11806,
+      "sha256": "07fa4904c7e5b65da92b14332d12c7942c7554eeb408a2e3583d3391dc77f160"
+    },
+    {
+      "path": "work/overall-comparison-supplement-01/supplement.py",
+      "bytes": 16585,
+      "sha256": "a98285b705825a39f8840305460324bc69d5fa8f2355cdc5534053e089a9a813"
+    },
+    {
+      "path": "work/overall-comparison-supplement-01/test_supplement.py",
+      "bytes": 10146,
+      "sha256": "9bc6b4c7a0c09787987757b01221ba3e0bcfa1d3a7b7fd1f64f8201fb80c3f30"
+    }
+  ]
+}

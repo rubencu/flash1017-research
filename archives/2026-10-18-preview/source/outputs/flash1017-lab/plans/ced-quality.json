@@ -1,0 +1,154 @@
+{
+  "profiles": {
+    "reference-f2-head": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "prefill_step": 8192
+    },
+    "reference-f2-head-ced": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "ced_prefill": true,
+      "prefill_step": 8192
+    }
+  },
+  "prompts": {
+    "merge_intervals": {
+      "text": "Implement merge_intervals(intervals). Input is a list of [start, end] integer pairs with start <= end. Return a list of merged pairs sorted by start. Merge overlapping OR touching intervals. Empty input returns []. Do not mutate the input. Return only Python function definitions. Use Python builtins only: no imports, classes, decorators, annotations, examples, print calls, or explanatory prose. Helper functions are allowed.",
+      "temperature": 0,
+      "max_tokens": 1600,
+      "prompt_tokens": 4096
+    },
+    "longest_unique": {
+      "text": "Implement longest_unique(text), returning the length of the longest contiguous substring containing no repeated characters. Handle empty strings and arbitrary Unicode characters. Return only Python function definitions. Use Python builtins only: no imports, classes, decorators, annotations, examples, print calls, or explanatory prose. Helper functions are allowed.",
+      "temperature": 0,
+      "max_tokens": 1600,
+      "prompt_tokens": 4096
+    },
+    "stable_unique": {
+      "text": "Implement stable_unique(values), returning the first occurrence of each distinct value in order. Values may include nested lists and dictionaries, so they need not be hashable. Equality uses normal Python ==. Do not mutate the input. Return only Python function definitions. Use Python builtins only: no imports, classes, decorators, annotations, examples, print calls, or explanatory prose. Helper functions are allowed.",
+      "temperature": 0,
+      "max_tokens": 1600,
+      "prompt_tokens": 4096
+    },
+    "glob_match": {
+      "text": "Implement glob_match(text, pattern), returning a bool. The entire text must match. '?' matches exactly one Unicode character; '*' matches zero or more characters. All other pattern characters are literal. Empty strings and consecutive stars must work. Return only Python function definitions. Use Python builtins only: no imports, classes, decorators, annotations, examples, print calls, or explanatory prose. Helper functions are allowed.",
+      "temperature": 0,
+      "max_tokens": 1600,
+      "prompt_tokens": 4096
+    },
+    "topological_order": {
+      "text": "Implement topological_order(graph), where graph is a dict mapping string nodes to lists of outgoing neighbor names. Nodes appearing only as neighbors must be included. Return the lexicographically smallest valid topological ordering, always choosing the smallest currently available node. Duplicate edges count as one edge. Raise ValueError on a directed cycle. Empty input returns []. Do not mutate graph. Return only Python function definitions. Use Python builtins only: no imports, classes, decorators, annotations, examples, print calls, or explanatory prose. Helper functions are allowed.",
+      "temperature": 0,
+      "max_tokens": 1600,
+      "prompt_tokens": 4096
+    },
+    "shortest_path": {
+      "text": "Implement shortest_path(edges, start, end). edges is a list of [source, destination, nonnegative_integer_weight] describing directed edges between string nodes. Return the minimum total weight from start to end, or None if unreachable. If start == end return 0 even if absent from edges. Parallel edges and zero weights are allowed. Return only Python function definitions. Use Python builtins only: no imports, classes, decorators, annotations, examples, print calls, or explanatory prose. Helper functions are allowed.",
+      "temperature": 0,
+      "max_tokens": 1600,
+      "prompt_tokens": 4096
+    },
+    "lru_simulate": {
+      "text": "Implement lru_simulate(capacity, operations). Each operation is ['put', key, value] or ['get', key], with string keys. Return [get_results, final_keys_oldest_to_newest]. A get returns the value or None and makes a hit most recently used. Put updates/inserts and makes that key most recent, evicting oldest keys to fit capacity. Capacity is a nonnegative integer; zero stores nothing. Do not mutate the input. Return only Python function definitions. Use Python builtins only: no imports, classes, decorators, annotations, examples, print calls, or explanatory prose. Helper functions are allowed.",
+      "temperature": 0,
+      "max_tokens": 1600,
+      "prompt_tokens": 4096
+    },
+    "rotate_ragged": {
+      "text": "Implement rotate_ragged(rows, fill=None). Pad each input row on the right to the maximum row length using fill, then rotate the resulting rectangle 90 degrees clockwise. Return new lists and do not mutate rows. Empty input or all-empty rows returns []. Return only Python function definitions. Use Python builtins only: no imports, classes, decorators, annotations, examples, print calls, or explanatory prose. Helper functions are allowed.",
+      "temperature": 0,
+      "max_tokens": 1600,
+      "prompt_tokens": 4096
+    }
+  },
+  "jobs": [
+    {
+      "profile": "reference-f2-head",
+      "prompt": "merge_intervals",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head-ced",
+      "prompt": "merge_intervals",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "longest_unique",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head-ced",
+      "prompt": "longest_unique",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "stable_unique",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head-ced",
+      "prompt": "stable_unique",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "glob_match",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head-ced",
+      "prompt": "glob_match",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "topological_order",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head-ced",
+      "prompt": "topological_order",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "shortest_path",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head-ced",
+      "prompt": "shortest_path",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "lru_simulate",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head-ced",
+      "prompt": "lru_simulate",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "rotate_ragged",
+      "seed": 431017
+    },
+    {
+      "profile": "reference-f2-head-ced",
+      "prompt": "rotate_ragged",
+      "seed": 431017
+    }
+  ],
+  "cache_limit_bytes": 8589934592
+}

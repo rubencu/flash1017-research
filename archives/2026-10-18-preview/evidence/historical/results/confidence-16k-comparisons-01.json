@@ -1,0 +1,192 @@
+{
+  "comparisons": [
+    {
+      "baseline": "reference-f2-head",
+      "candidate": "confidence-head6",
+      "pairs": [
+        {
+          "prompt": "held-code-16k",
+          "repeat": 0,
+          "ratio": 1.1080839948817978,
+          "tokens_equal": false,
+          "baseline_seconds": 29.874755374970846,
+          "candidate_seconds": 28.95750625000801
+        },
+        {
+          "prompt": "held-code-16k",
+          "repeat": 1,
+          "ratio": 0.9333828125583062,
+          "tokens_equal": false,
+          "baseline_seconds": 29.19387120893225,
+          "candidate_seconds": 30.105706834001467
+        },
+        {
+          "prompt": "held-code-16k",
+          "repeat": 2,
+          "ratio": 1.146334284521494,
+          "tokens_equal": false,
+          "baseline_seconds": 30.222644375055097,
+          "candidate_seconds": 28.708013625000603
+        },
+        {
+          "prompt": "held-code-16k",
+          "repeat": 3,
+          "ratio": 1.1438248246737754,
+          "tokens_equal": false,
+          "baseline_seconds": 30.322922832914628,
+          "candidate_seconds": 28.75866525003221
+        },
+        {
+          "prompt": "held-code-16k",
+          "repeat": 4,
+          "ratio": 1.0589545442757267,
+          "tokens_equal": false,
+          "baseline_seconds": 30.11218649998773,
+          "candidate_seconds": 29.346291417023167
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 0,
+          "ratio": 1.0522692573686132,
+          "tokens_equal": false,
+          "baseline_seconds": 32.40607354196254,
+          "candidate_seconds": 31.66364674991928
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 1,
+          "ratio": 1.0179236541857744,
+          "tokens_equal": false,
+          "baseline_seconds": 32.76946008298546,
+          "candidate_seconds": 32.469536249991506
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 2,
+          "ratio": 1.0025346166858835,
+          "tokens_equal": false,
+          "baseline_seconds": 32.97211783309467,
+          "candidate_seconds": 32.85000479198061
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 3,
+          "ratio": 1.0777196771650017,
+          "tokens_equal": false,
+          "baseline_seconds": 32.16196758300066,
+          "candidate_seconds": 31.21204775001388
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 4,
+          "ratio": 1.1009424226006244,
+          "tokens_equal": false,
+          "baseline_seconds": 33.24656545894686,
+          "candidate_seconds": 31.761710374965332
+        }
+      ],
+      "paired_geometric_speedup": 1.0622805957122203,
+      "bootstrap_95_percent_interval": [
+        1.0217220337514183,
+        1.1001357096963398
+      ],
+      "identical_token_streams": 0,
+      "total_pairs": 10,
+      "interval_note": "Simple paired bootstrap; few runs or shared host conditions limit inference."
+    },
+    {
+      "baseline": "reference-a5-head6",
+      "candidate": "confidence-head6",
+      "pairs": [
+        {
+          "prompt": "held-code-16k",
+          "repeat": 0,
+          "ratio": 1.067047852276793,
+          "tokens_equal": false,
+          "baseline_seconds": 29.476547041093,
+          "candidate_seconds": 28.95750625000801
+        },
+        {
+          "prompt": "held-code-16k",
+          "repeat": 1,
+          "ratio": 1.0051266091143685,
+          "tokens_equal": false,
+          "baseline_seconds": 29.930613875039853,
+          "candidate_seconds": 30.105706834001467
+        },
+        {
+          "prompt": "held-code-16k",
+          "repeat": 2,
+          "ratio": 1.0875593659484633,
+          "tokens_equal": false,
+          "baseline_seconds": 29.65344704198651,
+          "candidate_seconds": 28.708013625000603
+        },
+        {
+          "prompt": "held-code-16k",
+          "repeat": 3,
+          "ratio": 1.1514746955026995,
+          "tokens_equal": false,
+          "baseline_seconds": 30.628917000023648,
+          "candidate_seconds": 28.75866525003221
+        },
+        {
+          "prompt": "held-code-16k",
+          "repeat": 4,
+          "ratio": 1.037829123750318,
+          "tokens_equal": false,
+          "baseline_seconds": 29.79324941604864,
+          "candidate_seconds": 29.346291417023167
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 0,
+          "ratio": 1.0525828677961842,
+          "tokens_equal": false,
+          "baseline_seconds": 32.33290604199283,
+          "candidate_seconds": 31.66364674991928
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 1,
+          "ratio": 1.0093103109502983,
+          "tokens_equal": false,
+          "baseline_seconds": 32.64636545907706,
+          "candidate_seconds": 32.469536249991506
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 2,
+          "ratio": 1.0259133400991052,
+          "tokens_equal": false,
+          "baseline_seconds": 33.192871124949306,
+          "candidate_seconds": 32.85000479198061
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 3,
+          "ratio": 1.158845308537913,
+          "tokens_equal": false,
+          "baseline_seconds": 33.17217958299443,
+          "candidate_seconds": 31.21204775001388
+        },
+        {
+          "prompt": "held-prose-16k",
+          "repeat": 4,
+          "ratio": 1.071396074223623,
+          "tokens_equal": false,
+          "baseline_seconds": 32.76039395807311,
+          "candidate_seconds": 31.761710374965332
+        }
+      ],
+      "paired_geometric_speedup": 1.0655173095528616,
+      "bootstrap_95_percent_interval": [
+        1.0369265149660971,
+        1.0972272039086057
+      ],
+      "identical_token_streams": 0,
+      "total_pairs": 10,
+      "interval_note": "Simple paired bootstrap; few runs or shared host conditions limit inference."
+    }
+  ]
+}

@@ -1,0 +1,1620 @@
+{
+  "all_originals_unchanged": true,
+  "closure": {
+    "external_runtime_closure": false,
+    "local_sources_reachable_from_reviewed_entrypoints": 26,
+    "missing": [],
+    "portable_install_qualified": false
+  },
+  "files": [
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/NOTICE",
+      "original_bytes": 3280,
+      "original_sha256": "d607532e200c1907b5167783b72beab2e9a925c15bea2dc568c0b7bd930e9c72",
+      "path": "source/outputs/flash1017-lab/NOTICE",
+      "public_bytes": 3280,
+      "public_sha256": "d607532e200c1907b5167783b72beab2e9a925c15bea2dc568c0b7bd930e9c72",
+      "role": "historical-notice",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/Start Flash1017 Fast.command",
+      "original_bytes": 477,
+      "original_sha256": "78d16c1e9a84ee0c92e306bae8ecf096da85d8ef4fe06fceb08afa471d7b879c",
+      "path": "source/outputs/flash1017-lab/Start Flash1017 Fast.command",
+      "public_bytes": 377,
+      "public_sha256": "61b4782bf0c8fec4f3d14a32218b23c120051eb2fcf951570419c17a45cb977f",
+      "role": "historical-launcher",
+      "transformations": [
+        {
+          "count": 2,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/Start Flash1017.command",
+      "original_bytes": 123,
+      "original_sha256": "04760ce309d66aee3e8c2ec8302021a6b1849be5e5f872049d8e0f68016bb5bd",
+      "path": "source/outputs/flash1017-lab/Start Flash1017.command",
+      "public_bytes": 123,
+      "public_sha256": "04760ce309d66aee3e8c2ec8302021a6b1849be5e5f872049d8e0f68016bb5bd",
+      "role": "historical-launcher",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/Stop Flash1017.command",
+      "original_bytes": 121,
+      "original_sha256": "f1cd7030a3b51078b1676dbd60a45e52256a8981e05a1e5c441b309abedd6f97",
+      "path": "source/outputs/flash1017-lab/Stop Flash1017.command",
+      "public_bytes": 121,
+      "public_sha256": "f1cd7030a3b51078b1676dbd60a45e52256a8981e05a1e5c441b309abedd6f97",
+      "role": "historical-launcher",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/config.py",
+      "original_bytes": 10491,
+      "original_sha256": "13827eb47b011f6cfe22f82b5665763e386f8c0ccf69fc565ae05d2199d78ab9",
+      "path": "source/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/config.py",
+      "public_bytes": 10491,
+      "public_sha256": "13827eb47b011f6cfe22f82b5665763e386f8c0ccf69fc565ae05d2199d78ab9",
+      "role": "changed-upstream-runtime-source",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py",
+      "original_bytes": 8480,
+      "original_sha256": "3a1cd606e053c90c9c8311a1d168ab95363e52d573ecf283cc64d05b3731cafe",
+      "path": "source/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/dspark.py",
+      "public_bytes": 8480,
+      "public_sha256": "3a1cd606e053c90c9c8311a1d168ab95363e52d573ecf283cc64d05b3731cafe",
+      "role": "changed-upstream-runtime-source",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "original_bytes": 42778,
+      "original_sha256": "649d51f3621da9be3ba54aa298c977a276905084e27ad1a7f6f84a6cb4279250",
+      "path": "source/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/language.py",
+      "public_bytes": 42778,
+      "public_sha256": "649d51f3621da9be3ba54aa298c977a276905084e27ad1a7f6f84a6cb4279250",
+      "role": "changed-upstream-runtime-source",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "original_bytes": 14601,
+      "original_sha256": "5414edbd3bcb11662e4152e57f3e4c131d4e16a32842d8befc2df1c535e03563",
+      "path": "source/outputs/flash1017-lab/_runtime/omlx/patches/deepseek_v41/loading.py",
+      "public_bytes": 14601,
+      "public_sha256": "5414edbd3bcb11662e4152e57f3e4c131d4e16a32842d8befc2df1c535e03563",
+      "role": "changed-upstream-runtime-source",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "original_bytes": 197687,
+      "original_sha256": "63c186f7f302ae4814c95180d0b3196280c44c8affad95a9bbaa3d213d8e4257",
+      "path": "source/outputs/flash1017-lab/_runtime/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "public_bytes": 197687,
+      "public_sha256": "63c186f7f302ae4814c95180d0b3196280c44c8affad95a9bbaa3d213d8e4257",
+      "role": "changed-upstream-runtime-source",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/__init__.py",
+      "original_bytes": 82,
+      "original_sha256": "18773d56c919dd799e609a2063ddeaaa5d6bb7183c7123fff15ddbd53b85b2b4",
+      "path": "source/outputs/flash1017-lab/flash1017/__init__.py",
+      "public_bytes": 82,
+      "public_sha256": "18773d56c919dd799e609a2063ddeaaa5d6bb7183c7123fff15ddbd53b85b2b4",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/analyze.py",
+      "original_bytes": 4047,
+      "original_sha256": "f37e9fe34e4802c0ef33491e28c7f348f1750a2e0f9773ce2bdadf564ebce67f",
+      "path": "source/outputs/flash1017-lab/flash1017/analyze.py",
+      "public_bytes": 4047,
+      "public_sha256": "f37e9fe34e4802c0ef33491e28c7f348f1750a2e0f9773ce2bdadf564ebce67f",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/bench.py",
+      "original_bytes": 15550,
+      "original_sha256": "281a09a214150bd375573fecc2a275ad71387c8a51241ce322ea2099fb5577f2",
+      "path": "source/outputs/flash1017-lab/flash1017/bench.py",
+      "public_bytes": 15550,
+      "public_sha256": "281a09a214150bd375573fecc2a275ad71387c8a51241ce322ea2099fb5577f2",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/bench_head.py",
+      "original_bytes": 2565,
+      "original_sha256": "a59eb8c850405ff5dfe0b7c16521ab07ff8137a8426262050ee5f4e7f3660e0e",
+      "path": "source/outputs/flash1017-lab/flash1017/bench_head.py",
+      "public_bytes": 2565,
+      "public_sha256": "a59eb8c850405ff5dfe0b7c16521ab07ff8137a8426262050ee5f4e7f3660e0e",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/calibrate.py",
+      "original_bytes": 3302,
+      "original_sha256": "e738b4efb92457642b221c2e0def08b62ab70caf27fd73c3ba2b90e52edde7be",
+      "path": "source/outputs/flash1017-lab/flash1017/calibrate.py",
+      "public_bytes": 3302,
+      "public_sha256": "e738b4efb92457642b221c2e0def08b62ab70caf27fd73c3ba2b90e52edde7be",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/final_report.py",
+      "original_bytes": 4429,
+      "original_sha256": "007ac5e813b20daf8e973553d860f95c31866359c63215f39bb654af10d2e0b9",
+      "path": "source/outputs/flash1017-lab/flash1017/final_report.py",
+      "public_bytes": 4429,
+      "public_sha256": "007ac5e813b20daf8e973553d860f95c31866359c63215f39bb654af10d2e0b9",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/head.py",
+      "original_bytes": 2949,
+      "original_sha256": "cc913209dd150c6d98660a0a6d0d40efb245aaac59303eeb64e9be2a78f85d10",
+      "path": "source/outputs/flash1017-lab/flash1017/head.py",
+      "public_bytes": 2949,
+      "public_sha256": "cc913209dd150c6d98660a0a6d0d40efb245aaac59303eeb64e9be2a78f85d10",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/launch.py",
+      "original_bytes": 2173,
+      "original_sha256": "c2ec66c8f5dc343fae68eb419fdb2236f0c9294cfd9fd5df5e2dc284a494cbed",
+      "path": "source/outputs/flash1017-lab/flash1017/launch.py",
+      "public_bytes": 2173,
+      "public_sha256": "c2ec66c8f5dc343fae68eb419fdb2236f0c9294cfd9fd5df5e2dc284a494cbed",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/make_plans.py",
+      "original_bytes": 5288,
+      "original_sha256": "b56fc4b6d9a2839eaf257c0da96dfdff52f6302ff87d7d457a36901622940139",
+      "path": "source/outputs/flash1017-lab/flash1017/make_plans.py",
+      "public_bytes": 5288,
+      "public_sha256": "b56fc4b6d9a2839eaf257c0da96dfdff52f6302ff87d7d457a36901622940139",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/memory.py",
+      "original_bytes": 2346,
+      "original_sha256": "7734c5f9325eea41b272f85f34a77c7e2755dd73e6b5226cd45d5d649e0bf054",
+      "path": "source/outputs/flash1017-lab/flash1017/memory.py",
+      "public_bytes": 2346,
+      "public_sha256": "7734c5f9325eea41b272f85f34a77c7e2755dd73e6b5226cd45d5d649e0bf054",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/plot_results.py",
+      "original_bytes": 3855,
+      "original_sha256": "296c1d36d59149214cabed2c9e90efd29986d6673f4f68b5f31be419bc95399b",
+      "path": "source/outputs/flash1017-lab/flash1017/plot_results.py",
+      "public_bytes": 3855,
+      "public_sha256": "296c1d36d59149214cabed2c9e90efd29986d6673f4f68b5f31be419bc95399b",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/policy.py",
+      "original_bytes": 3758,
+      "original_sha256": "4c78efb263915bceb34af8d6ee4ef70efc2d6c45c6db35d4c219226a1b917bcc",
+      "path": "source/outputs/flash1017-lab/flash1017/policy.py",
+      "public_bytes": 3758,
+      "public_sha256": "4c78efb263915bceb34af8d6ee4ef70efc2d6c45c6db35d4c219226a1b917bcc",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/quality.py",
+      "original_bytes": 14034,
+      "original_sha256": "88e12b1996494c9ff843c6128d6771719151c5ee9d015b8ab791e8f47a047406",
+      "path": "source/outputs/flash1017-lab/flash1017/quality.py",
+      "public_bytes": 14034,
+      "public_sha256": "88e12b1996494c9ff843c6128d6771719151c5ee9d015b8ab791e8f47a047406",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/reproduce.py",
+      "original_bytes": 2181,
+      "original_sha256": "9bc149bd6c9d6ffa277041755b9c2e308e6734d76351a7c67162f816a6dff843",
+      "path": "source/outputs/flash1017-lab/flash1017/reproduce.py",
+      "public_bytes": 2181,
+      "public_sha256": "9bc149bd6c9d6ffa277041755b9c2e308e6734d76351a7c67162f816a6dff843",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/restore_original_server.py",
+      "original_bytes": 1555,
+      "original_sha256": "a8ce1416fe9139dacb8366f2356dce2d519d597d1674f86b41d7e0bbbcce813a",
+      "path": "source/outputs/flash1017-lab/flash1017/restore_original_server.py",
+      "public_bytes": 1555,
+      "public_sha256": "a8ce1416fe9139dacb8366f2356dce2d519d597d1674f86b41d7e0bbbcce813a",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/serve.py",
+      "original_bytes": 7298,
+      "original_sha256": "759845de3bfc1cbb91a7c911822adbe67f09bff2be0f37c27c5c678133a47da6",
+      "path": "source/outputs/flash1017-lab/flash1017/serve.py",
+      "public_bytes": 7298,
+      "public_sha256": "759845de3bfc1cbb91a7c911822adbe67f09bff2be0f37c27c5c678133a47da6",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/setup_runtime.py",
+      "original_bytes": 1923,
+      "original_sha256": "e4844fa0572281e680ff120239098813a7460a5e03de881c638274d4bd87d8e4",
+      "path": "source/outputs/flash1017-lab/flash1017/setup_runtime.py",
+      "public_bytes": 1923,
+      "public_sha256": "e4844fa0572281e680ff120239098813a7460a5e03de881c638274d4bd87d8e4",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/stop.py",
+      "original_bytes": 1552,
+      "original_sha256": "d40d92cb4f2e28769392f96cc5f6288c3ca5500e60f68c786e37faa82ed13698",
+      "path": "source/outputs/flash1017-lab/flash1017/stop.py",
+      "public_bytes": 1552,
+      "public_sha256": "d40d92cb4f2e28769392f96cc5f6288c3ca5500e60f68c786e37faa82ed13698",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/summarize_validation.py",
+      "original_bytes": 4565,
+      "original_sha256": "17f8abf4bf8b5b5499415d261c409128f8f6a64d2ff01dfc01d45963822eb9d2",
+      "path": "source/outputs/flash1017-lab/flash1017/summarize_validation.py",
+      "public_bytes": 4565,
+      "public_sha256": "17f8abf4bf8b5b5499415d261c409128f8f6a64d2ff01dfc01d45963822eb9d2",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/verify_head.py",
+      "original_bytes": 3130,
+      "original_sha256": "67dacfb5f201f80a1b45cf4fee6a244b59dcbb6e50164e030947ff5908dbbab9",
+      "path": "source/outputs/flash1017-lab/flash1017/verify_head.py",
+      "public_bytes": 3130,
+      "public_sha256": "67dacfb5f201f80a1b45cf4fee6a244b59dcbb6e50164e030947ff5908dbbab9",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/verify_long_cache.py",
+      "original_bytes": 6151,
+      "original_sha256": "79d7d7a5566ed1fdff43a478a37e5afaf8b09ca0cfdca5aa27d10f5042ecc2ed",
+      "path": "source/outputs/flash1017-lab/flash1017/verify_long_cache.py",
+      "public_bytes": 6151,
+      "public_sha256": "79d7d7a5566ed1fdff43a478a37e5afaf8b09ca0cfdca5aa27d10f5042ecc2ed",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/verify_long_context.py",
+      "original_bytes": 6408,
+      "original_sha256": "b613bf94ca321cb88cb34a5f48c24bb3eb9c3e95b1ed5e6575562b34a489fe8a",
+      "path": "source/outputs/flash1017-lab/flash1017/verify_long_context.py",
+      "public_bytes": 6408,
+      "public_sha256": "b613bf94ca321cb88cb34a5f48c24bb3eb9c3e95b1ed5e6575562b34a489fe8a",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/verify_restart.py",
+      "original_bytes": 4469,
+      "original_sha256": "fe015261f5b7a87c4ccb5f2e892ce1e3e6c395c074a028e552497dab7b3d58df",
+      "path": "source/outputs/flash1017-lab/flash1017/verify_restart.py",
+      "public_bytes": 4469,
+      "public_sha256": "fe015261f5b7a87c4ccb5f2e892ce1e3e6c395c074a028e552497dab7b3d58df",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/verify_server.py",
+      "original_bytes": 7788,
+      "original_sha256": "6c1ae9fa7f72bb71da051dbdbd7d99f89fbe7ce1e628a8e256ecdb248dc32e9e",
+      "path": "source/outputs/flash1017-lab/flash1017/verify_server.py",
+      "public_bytes": 7788,
+      "public_sha256": "6c1ae9fa7f72bb71da051dbdbd7d99f89fbe7ce1e628a8e256ecdb248dc32e9e",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/flash1017/verify_snapshot.py",
+      "original_bytes": 3201,
+      "original_sha256": "f1d41ee0312473558583a05e15875f2c9e12b14ba225156f24103f05988a2461",
+      "path": "source/outputs/flash1017-lab/flash1017/verify_snapshot.py",
+      "public_bytes": 3201,
+      "public_sha256": "f1d41ee0312473558583a05e15875f2c9e12b14ba225156f24103f05988a2461",
+      "role": "local-runtime-and-archived-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/patches/confidence-experiment.patch",
+      "original_bytes": 4605,
+      "original_sha256": "e354c1c1ab004ed8ad20aa5dbf062bfe0a1c889cbcf55dd12960f5e44b8db603",
+      "path": "source/outputs/flash1017-lab/patches/confidence-experiment.patch",
+      "public_bytes": 4605,
+      "public_sha256": "e354c1c1ab004ed8ad20aa5dbf062bfe0a1c889cbcf55dd12960f5e44b8db603",
+      "role": "original-runtime-patch",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/patches/reference-arithmetic.patch",
+      "original_bytes": 2804,
+      "original_sha256": "0f057e41b5158ee22e5e68b116fed7a64c7c8a914189634cc312555eb3df3601",
+      "path": "source/outputs/flash1017-lab/patches/reference-arithmetic.patch",
+      "public_bytes": 2804,
+      "public_sha256": "0f057e41b5158ee22e5e68b116fed7a64c7c8a914189634cc312555eb3df3601",
+      "role": "original-runtime-patch",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/cache-sweep.json",
+      "original_bytes": 12995,
+      "original_sha256": "99b010f3e05a5f5bd412c0010ea7403aa6c47eab72c3485efc14d5a06c0ba912",
+      "path": "source/outputs/flash1017-lab/plans/cache-sweep.json",
+      "public_bytes": 12995,
+      "public_sha256": "99b010f3e05a5f5bd412c0010ea7403aa6c47eab72c3485efc14d5a06c0ba912",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/ced-quality.json",
+      "original_bytes": 7014,
+      "original_sha256": "24ca8577c2fbee2aac688d0982c19593c40b67a5819131e0eccd2febd6e6dbd8",
+      "path": "source/outputs/flash1017-lab/plans/ced-quality.json",
+      "public_bytes": 7014,
+      "public_sha256": "24ca8577c2fbee2aac688d0982c19593c40b67a5819131e0eccd2febd6e6dbd8",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/confidence-16k.json",
+      "original_bytes": 6918,
+      "original_sha256": "089e7ce0af54988368b008dfe1008ff79897facb5b37d88cd75b9e9b1e83d07c",
+      "path": "source/outputs/flash1017-lab/plans/confidence-16k.json",
+      "public_bytes": 6918,
+      "public_sha256": "089e7ce0af54988368b008dfe1008ff79897facb5b37d88cd75b9e9b1e83d07c",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/cost-calibration.json",
+      "original_bytes": 5800,
+      "original_sha256": "12fee0660b205e38d9aa7ecf0817ff059f88611e186c158763765822c9f57703",
+      "path": "source/outputs/flash1017-lab/plans/cost-calibration.json",
+      "public_bytes": 5800,
+      "public_sha256": "12fee0660b205e38d9aa7ecf0817ff059f88611e186c158763765822c9f57703",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/cost6-calibration.json",
+      "original_bytes": 6027,
+      "original_sha256": "e43f2b9556bdfdfb80ea811d6f3617da4d927412a6bfcbb4e2df715555f9e460",
+      "path": "source/outputs/flash1017-lab/plans/cost6-calibration.json",
+      "public_bytes": 6027,
+      "public_sha256": "e43f2b9556bdfdfb80ea811d6f3617da4d927412a6bfcbb4e2df715555f9e460",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/deployment-quality.json",
+      "original_bytes": 7652,
+      "original_sha256": "bdbe7017edb1ac2191121d59af9a1df595ec3db6efadf88c07c0944a146692d2",
+      "path": "source/outputs/flash1017-lab/plans/deployment-quality.json",
+      "public_bytes": 7652,
+      "public_sha256": "bdbe7017edb1ac2191121d59af9a1df595ec3db6efadf88c07c0944a146692d2",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/heldout-prompts.json",
+      "original_bytes": 2726,
+      "original_sha256": "9c5b1798a443735d66d54d4a8778e7d49a5a760321423439139744e63a6f0cb7",
+      "path": "source/outputs/flash1017-lab/plans/heldout-prompts.json",
+      "public_bytes": 2726,
+      "public_sha256": "9c5b1798a443735d66d54d4a8778e7d49a5a760321423439139744e63a6f0cb7",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/heldout.json",
+      "original_bytes": 13463,
+      "original_sha256": "8ebf1580eadfa975ad26410ddde9ca9a56e857394d27c6d2809004f7009ccf5e",
+      "path": "source/outputs/flash1017-lab/plans/heldout.json",
+      "public_bytes": 13463,
+      "public_sha256": "8ebf1580eadfa975ad26410ddde9ca9a56e857394d27c6d2809004f7009ccf5e",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/long-context-prompts.json",
+      "original_bytes": 6248965,
+      "original_sha256": "29d847c6628258c3cc8101dfcbb19ffae5ddabf567666c4863b874afbdcdcaa2",
+      "path": "source/outputs/flash1017-lab/plans/long-context-prompts.json",
+      "public_bytes": 6248965,
+      "public_sha256": "29d847c6628258c3cc8101dfcbb19ffae5ddabf567666c4863b874afbdcdcaa2",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/numerical-head.json",
+      "original_bytes": 1630,
+      "original_sha256": "999d157625528b74dea6141829e8a088a6d3a79dd992e84467c78535fabd1452",
+      "path": "source/outputs/flash1017-lab/plans/numerical-head.json",
+      "public_bytes": 1630,
+      "public_sha256": "999d157625528b74dea6141829e8a088a6d3a79dd992e84467c78535fabd1452",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/quality-prompts.json",
+      "original_bytes": 4505,
+      "original_sha256": "3c2a4f57424d82c502ce3550b7f588311575194cb93c43e64c7a8fdbad328320",
+      "path": "source/outputs/flash1017-lab/plans/quality-prompts.json",
+      "public_bytes": 4505,
+      "public_sha256": "3c2a4f57424d82c502ce3550b7f588311575194cb93c43e64c7a8fdbad328320",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/quality.json",
+      "original_bytes": 9953,
+      "original_sha256": "d944b4bee0fb42a1cd955d4dfddc5aa8dee1d078990d2bcfe83b7eae580ac915",
+      "path": "source/outputs/flash1017-lab/plans/quality.json",
+      "public_bytes": 9953,
+      "public_sha256": "d944b4bee0fb42a1cd955d4dfddc5aa8dee1d078990d2bcfe83b7eae580ac915",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/selection.json",
+      "original_bytes": 2687,
+      "original_sha256": "312f12831bc1972a32f1fdbd37db1bf481860c8d1153eb13c4c97884c62f91f6",
+      "path": "source/outputs/flash1017-lab/plans/selection.json",
+      "public_bytes": 2637,
+      "public_sha256": "3decb30f28633987652825c06c7fc41dd669d189175e67ec4956db9dddc7bd2f",
+      "role": "archived-experiment-plan",
+      "transformations": [
+        {
+          "count": 1,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/smoke.json",
+      "original_bytes": 2742,
+      "original_sha256": "8a45ae377a3ca2a24105bbfc309043f22e82e4f5d0ed133b7a4a8f4486919995",
+      "path": "source/outputs/flash1017-lab/plans/smoke.json",
+      "public_bytes": 2742,
+      "public_sha256": "8a45ae377a3ca2a24105bbfc309043f22e82e4f5d0ed133b7a4a8f4486919995",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/sweep.json",
+      "original_bytes": 26895,
+      "original_sha256": "c675476cc719251429c946076df80d59bb1da5a3ad5db06185335c13003a953b",
+      "path": "source/outputs/flash1017-lab/plans/sweep.json",
+      "public_bytes": 26895,
+      "public_sha256": "c675476cc719251429c946076df80d59bb1da5a3ad5db06185335c13003a953b",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/plans/validation-design.json",
+      "original_bytes": 901,
+      "original_sha256": "7b1bea104ea6e431df9c352c22b9eb0d48eb5bea8a7fc7c904dc2615de4cc766",
+      "path": "source/outputs/flash1017-lab/plans/validation-design.json",
+      "public_bytes": 901,
+      "public_sha256": "7b1bea104ea6e431df9c352c22b9eb0d48eb5bea8a7fc7c904dc2615de4cc766",
+      "role": "archived-experiment-plan",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/provenance.json",
+      "original_bytes": 2298,
+      "original_sha256": "b5d54492cf217d77f6e45cf7d7dcdd3fbb51f6d98817ac04de3c93576df89692",
+      "path": "source/outputs/flash1017-lab/provenance.json",
+      "public_bytes": 2298,
+      "public_sha256": "b5d54492cf217d77f6e45cf7d7dcdd3fbb51f6d98817ac04de3c93576df89692",
+      "role": "historical-runtime-provenance",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/qualified-candidate-profile.json",
+      "original_bytes": 75115,
+      "original_sha256": "564947e1123fbb8216177f213c624d465f877d774e6d53298c310bbcd0b2e108",
+      "path": "source/outputs/flash1017-lab/qualified-candidate-profile.json",
+      "public_bytes": 74715,
+      "public_sha256": "0dd07fe2e7829f48f87612c17496d6a81aba98c50223d20c5832edae2bf8eed5",
+      "role": "historical-candidate-profile",
+      "transformations": [
+        {
+          "count": 8,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/qualified-profile.json",
+      "original_bytes": 76701,
+      "original_sha256": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da",
+      "path": "source/outputs/flash1017-lab/qualified-profile.json",
+      "public_bytes": 76701,
+      "public_sha256": "12445cc52663faba9ce1b5cab9938d2d1c3fc587fc7ca9669ef4b890060c75da",
+      "role": "historical-baseline-profile",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/checkpoint-hashes.json",
+      "original_bytes": 24955,
+      "original_sha256": "926e2b8c29d9d81d307d2812d4f24265d9a77d0bcd6b231f0bd29473caf5868f",
+      "path": "source/outputs/flash1017-lab/results/checkpoint-hashes.json",
+      "public_bytes": 24953,
+      "public_sha256": "f4c316d07e143b97840aa7a7378cf40b00fbc0908b3600e4e78ba945029a0dfc",
+      "role": "historical-checkpoint-receipt",
+      "transformations": [
+        {
+          "count": 1,
+          "kind": "literal-path-prefix",
+          "replacement": "${USER_HOME}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/confidence-policy-02.json",
+      "original_bytes": 1524,
+      "original_sha256": "c8cc576d0094b5e6a9dbbb70b78e97680263793d7c0746bd3a13d996fde03d59",
+      "path": "source/outputs/flash1017-lab/results/confidence-policy-02.json",
+      "public_bytes": 1474,
+      "public_sha256": "a94d04f9099f5a02798d18ac0d6d2ce015ef59fd70ed38865a515e582ad926f7",
+      "role": "archived-calibration-values",
+      "transformations": [
+        {
+          "count": 1,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/confidence-policy6-01.json",
+      "original_bytes": 1525,
+      "original_sha256": "4cbedc1d42c5592e3a37fe55648eb5760cceacb6ccd8dbd5ee62d6dfa0263ff4",
+      "path": "source/outputs/flash1017-lab/results/confidence-policy6-01.json",
+      "public_bytes": 1475,
+      "public_sha256": "bce9538b74521d36a91ab393f32ff6e0385f7b58c1c7eaea4a6e10e402472452",
+      "role": "frozen-calibration-values",
+      "transformations": [
+        {
+          "count": 1,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/run.sh",
+      "original_bytes": 412,
+      "original_sha256": "fec7b7543f8d743f65ee321a6f3be7f583384941369cbaef9a1f129f801b9d27",
+      "path": "source/outputs/flash1017-lab/run.sh",
+      "public_bytes": 412,
+      "public_sha256": "fec7b7543f8d743f65ee321a6f3be7f583384941369cbaef9a1f129f801b9d27",
+      "role": "runtime-bootstrap",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_attention_reference.py",
+      "original_bytes": 3530,
+      "original_sha256": "92d35017acfed46d775a996babff5bd0503e08c15fa87930c4ad5057fd790991",
+      "path": "source/outputs/flash1017-lab/tests/test_attention_reference.py",
+      "public_bytes": 3530,
+      "public_sha256": "92d35017acfed46d775a996babff5bd0503e08c15fa87930c4ad5057fd790991",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_bench.py",
+      "original_bytes": 1321,
+      "original_sha256": "283d62254063a40ae4fceefd1eedb0bb3e8536c386ff94e787cce4586fa47720",
+      "path": "source/outputs/flash1017-lab/tests/test_bench.py",
+      "public_bytes": 1321,
+      "public_sha256": "283d62254063a40ae4fceefd1eedb0bb3e8536c386ff94e787cce4586fa47720",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_calibrate.py",
+      "original_bytes": 925,
+      "original_sha256": "2e58a47c57a2c7e684da1856659355ede2f0cedaa5b6a3703a4fc8ad95d0fa3f",
+      "path": "source/outputs/flash1017-lab/tests/test_calibrate.py",
+      "public_bytes": 925,
+      "public_sha256": "2e58a47c57a2c7e684da1856659355ede2f0cedaa5b6a3703a4fc8ad95d0fa3f",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_generation.py",
+      "original_bytes": 5090,
+      "original_sha256": "3c93e85e6f7f889ecca251c9e231d9ce3310329052ead9f28de2020290d69b81",
+      "path": "source/outputs/flash1017-lab/tests/test_generation.py",
+      "public_bytes": 5090,
+      "public_sha256": "3c93e85e6f7f889ecca251c9e231d9ce3310329052ead9f28de2020290d69b81",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_head.py",
+      "original_bytes": 1081,
+      "original_sha256": "a4e2e7c4dbef5539c1ea45f82d6f3d35f620ef9ca0a28d413392005660f230ae",
+      "path": "source/outputs/flash1017-lab/tests/test_head.py",
+      "public_bytes": 1081,
+      "public_sha256": "a4e2e7c4dbef5539c1ea45f82d6f3d35f620ef9ca0a28d413392005660f230ae",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_policy.py",
+      "original_bytes": 2087,
+      "original_sha256": "f588dcdec9ce33a803f9532a4a95eeebde1211e913692c72f11e36ddce2b0475",
+      "path": "source/outputs/flash1017-lab/tests/test_policy.py",
+      "public_bytes": 2087,
+      "public_sha256": "f588dcdec9ce33a803f9532a4a95eeebde1211e913692c72f11e36ddce2b0475",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_quality.py",
+      "original_bytes": 1642,
+      "original_sha256": "3254822ff2631009ad405cca77a598f6235ffb35b270787849a1c1f62e6b0b11",
+      "path": "source/outputs/flash1017-lab/tests/test_quality.py",
+      "public_bytes": 1642,
+      "public_sha256": "3254822ff2631009ad405cca77a598f6235ffb35b270787849a1c1f62e6b0b11",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_quality_iter.py",
+      "original_bytes": 308,
+      "original_sha256": "26f4f9c198a8fe6952febb80d4872391ba1716845ae3eae2506da2a1b9cb4832",
+      "path": "source/outputs/flash1017-lab/tests/test_quality_iter.py",
+      "public_bytes": 308,
+      "public_sha256": "26f4f9c198a8fe6952febb80d4872391ba1716845ae3eae2506da2a1b9cb4832",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/tests/test_startup_port.py",
+      "original_bytes": 1027,
+      "original_sha256": "9ba41849d7e090faa6a4372a459985d67e28192841dd738c2a7cdc870665c1b3",
+      "path": "source/outputs/flash1017-lab/tests/test_startup_port.py",
+      "public_bytes": 1027,
+      "public_sha256": "9ba41849d7e090faa6a4372a459985d67e28192841dd738c2a7cdc870665c1b3",
+      "role": "archived-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/third_party/deepseek-v41-MIT.txt",
+      "original_bytes": 1064,
+      "original_sha256": "1c8f573e830ca9b3ebfeb7ace1823146e22b66f99ee223840e7637c9e745e1c7",
+      "path": "source/outputs/flash1017-lab/third_party/deepseek-v41-MIT.txt",
+      "public_bytes": 1064,
+      "public_sha256": "1c8f573e830ca9b3ebfeb7ace1823146e22b66f99ee223840e7637c9e745e1c7",
+      "role": "third-party-license",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/third_party/omlx-Apache-2.0.txt",
+      "original_bytes": 10768,
+      "original_sha256": "de69b4352c9952cd5f0f4b8cb4584782a07f02c9ba82aeb5d496aa2b7fe5457d",
+      "path": "source/outputs/flash1017-lab/third_party/omlx-Apache-2.0.txt",
+      "public_bytes": 10768,
+      "public_sha256": "de69b4352c9952cd5f0f4b8cb4584782a07f02c9ba82aeb5d496aa2b7fe5457d",
+      "role": "third-party-license",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+      "original_bytes": 10754,
+      "original_sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678",
+      "path": "source/work/cone-dspark-stable/stabilization.py",
+      "public_bytes": 10754,
+      "public_sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678",
+      "role": "runtime-ast-definition",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+      "original_bytes": 12649,
+      "original_sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633",
+      "path": "source/work/cone-experiment/cone.py",
+      "public_bytes": 12649,
+      "public_sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633",
+      "role": "runtime-ast-definition",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/verify_real.py",
+      "original_bytes": 27535,
+      "original_sha256": "44f539da23e221a7cd030c93be8c2ab8ad7cfd82e4912c83130e74c3f4aa125d",
+      "path": "source/work/cone-experiment/verify_real.py",
+      "public_bytes": 27535,
+      "public_sha256": "44f539da23e221a7cd030c93be8c2ab8ad7cfd82e4912c83130e74c3f4aa125d",
+      "role": "archived-state-instrumentation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+      "original_bytes": 11240,
+      "original_sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80",
+      "path": "source/work/cone-v2/stabilization.py",
+      "public_bytes": 11240,
+      "public_sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80",
+      "role": "runtime-ast-definition",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/overall-comparison-01/evidence/agent_analyze.py",
+      "original_bytes": 9422,
+      "original_sha256": "6397af6cf23857c5d6ed32cef37c0695f73d4ef38cfd57facacbedb78a827c6c",
+      "path": "source/work/overall-comparison-01/evidence/agent_analyze.py",
+      "public_bytes": 9422,
+      "public_sha256": "6397af6cf23857c5d6ed32cef37c0695f73d4ef38cfd57facacbedb78a827c6c",
+      "role": "overall-benchmark-and-instrumentation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/overall-comparison-01/freeze.py",
+      "original_bytes": 7022,
+      "original_sha256": "985ef3e78f59574ac4b6722cad479182f89a7e592403fad4af89fae97a74ca8d",
+      "path": "source/work/overall-comparison-01/freeze.py",
+      "public_bytes": 7022,
+      "public_sha256": "985ef3e78f59574ac4b6722cad479182f89a7e592403fad4af89fae97a74ca8d",
+      "role": "overall-benchmark-and-instrumentation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/overall-comparison-01/runtime-audit/source_activation.py",
+      "original_bytes": 7030,
+      "original_sha256": "8f7da90b9b6f44efb1d1a1e872fc2684966c4c5e3876b7a20a09f8f8589d7cbf",
+      "path": "source/work/overall-comparison-01/runtime-audit/source_activation.py",
+      "public_bytes": 7030,
+      "public_sha256": "8f7da90b9b6f44efb1d1a1e872fc2684966c4c5e3876b7a20a09f8f8589d7cbf",
+      "role": "overall-benchmark-and-instrumentation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/overall-comparison-01/supervise.py",
+      "original_bytes": 10034,
+      "original_sha256": "a78ab21918975740f7735fa605f48b2070e52ffbea0a9fe6da096ce017185919",
+      "path": "source/work/overall-comparison-01/supervise.py",
+      "public_bytes": 10034,
+      "public_sha256": "a78ab21918975740f7735fa605f48b2070e52ffbea0a9fe6da096ce017185919",
+      "role": "overall-benchmark-and-instrumentation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/overall-comparison-01/worker.py",
+      "original_bytes": 13408,
+      "original_sha256": "fd30d12452dd74172f1a5deec6a8076a8424f8936873c208f8ba4a635a0054b9",
+      "path": "source/work/overall-comparison-01/worker.py",
+      "public_bytes": 13408,
+      "public_sha256": "fd30d12452dd74172f1a5deec6a8076a8424f8936873c208f8ba4a635a0054b9",
+      "role": "overall-benchmark-and-instrumentation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-analysis-v3/analyze_performance.py",
+      "original_bytes": 31927,
+      "original_sha256": "31d9a85b6f2894b7df9eaa1a9ac6551ed33a470ac6f0b08f23a63e6e36de6188",
+      "path": "source/work/serving-analysis-v3/analyze_performance.py",
+      "public_bytes": 31927,
+      "public_sha256": "31d9a85b6f2894b7df9eaa1a9ac6551ed33a470ac6f0b08f23a63e6e36de6188",
+      "role": "archived-performance-analysis",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-analysis-v3/analyze_performance_v2.py",
+      "original_bytes": 32849,
+      "original_sha256": "f8b0e68ec2f05779ea9779e1efebc2258e8aef47c642ea2c6185e1d3bf04c9d1",
+      "path": "source/work/serving-analysis-v3/analyze_performance_v2.py",
+      "public_bytes": 32849,
+      "public_sha256": "f8b0e68ec2f05779ea9779e1efebc2258e8aef47c642ea2c6185e1d3bf04c9d1",
+      "role": "archived-performance-analysis",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-analysis-v3/test_cpu.py",
+      "original_bytes": 16656,
+      "original_sha256": "be40b533ed7948da978bde104b5f26ece149438455a394af3270249e81d08343",
+      "path": "source/work/serving-analysis-v3/test_cpu.py",
+      "public_bytes": 16656,
+      "public_sha256": "be40b533ed7948da978bde104b5f26ece149438455a394af3270249e81d08343",
+      "role": "archived-performance-analysis",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-analysis-v3/test_cpu_v2.py",
+      "original_bytes": 17119,
+      "original_sha256": "b2235463b62f8a9eda0cc38212c4af6b49db650f9ad28ed52dd9ca3b4175aee0",
+      "path": "source/work/serving-analysis-v3/test_cpu_v2.py",
+      "public_bytes": 17119,
+      "public_sha256": "b2235463b62f8a9eda0cc38212c4af6b49db650f9ad28ed52dd9ca3b4175aee0",
+      "role": "archived-performance-analysis",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/NOTICE.txt",
+      "original_bytes": 571,
+      "original_sha256": "8914883b9e04df2acfdd050b3b1908bda27c1580e2ad631fffef4324b06cabe1",
+      "path": "source/work/serving-cache-v3/NOTICE.txt",
+      "public_bytes": 571,
+      "public_sha256": "8914883b9e04df2acfdd050b3b1908bda27c1580e2ad631fffef4324b06cabe1",
+      "role": "third-party-notice",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/UPSTREAM-LICENSE",
+      "original_bytes": 10768,
+      "original_sha256": "de69b4352c9952cd5f0f4b8cb4584782a07f02c9ba82aeb5d496aa2b7fe5457d",
+      "path": "source/work/serving-cache-v3/UPSTREAM-LICENSE",
+      "public_bytes": 10768,
+      "public_sha256": "de69b4352c9952cd5f0f4b8cb4584782a07f02c9ba82aeb5d496aa2b7fe5457d",
+      "role": "third-party-license",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/hot_rows_upstream.py",
+      "original_bytes": 4060,
+      "original_sha256": "341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa",
+      "path": "source/work/serving-cache-v3/hot_rows_upstream.py",
+      "public_bytes": 4060,
+      "public_sha256": "341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/manifest.json",
+      "original_bytes": 3078,
+      "original_sha256": "6a8a3d7869c9cf9f2b8071f466b61d69fcee68e330521db8bf3ec214642e6324",
+      "path": "source/work/serving-cache-v3/manifest.json",
+      "public_bytes": 2628,
+      "public_sha256": "6eb37b19e741f0a7b56e1026857bac97dec0ef7692c22bb8f438961e8141cad9",
+      "role": "historical-hash-guard",
+      "transformations": [
+        {
+          "count": 9,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/provenance.json",
+      "original_bytes": 812,
+      "original_sha256": "dc85e733ce7fd6ba24841034b3e1f32cde3e205b7ba73a3747bcd883ec83b3a6",
+      "path": "source/work/serving-cache-v3/provenance.json",
+      "public_bytes": 812,
+      "public_sha256": "dc85e733ce7fd6ba24841034b3e1f32cde3e205b7ba73a3747bcd883ec83b3a6",
+      "role": "runtime-provenance",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/serving_cache.py",
+      "original_bytes": 21028,
+      "original_sha256": "0254590a69f88ff9adb213caaed897ed62e4c6ba2265ef08802925ea126f1c2a",
+      "path": "source/work/serving-cache-v3/serving_cache.py",
+      "public_bytes": 21028,
+      "public_sha256": "0254590a69f88ff9adb213caaed897ed62e4c6ba2265ef08802925ea126f1c2a",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cache-v3/test_cpu.py",
+      "original_bytes": 24889,
+      "original_sha256": "f2aed7becaf71256cc959ab609c576a47c07001ab4f6b6681a0b32e70afffb70",
+      "path": "source/work/serving-cache-v3/test_cpu.py",
+      "public_bytes": 24889,
+      "public_sha256": "f2aed7becaf71256cc959ab609c576a47c07001ab4f6b6681a0b32e70afffb70",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/cone_serving.py",
+      "original_bytes": 16544,
+      "original_sha256": "4c02a58440aa2ee79e16572fac20e775be35da52a5171bd314cbe5b394c633fb",
+      "path": "source/work/serving-cone-v3/cone_serving.py",
+      "public_bytes": 16544,
+      "public_sha256": "4c02a58440aa2ee79e16572fac20e775be35da52a5171bd314cbe5b394c633fb",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/manifest-01.json",
+      "original_bytes": 1745,
+      "original_sha256": "77b86682cb858889df293e4c229dc218d9beaf89d51fcc763cfe4336b052fa33",
+      "path": "source/work/serving-cone-v3/manifest-01.json",
+      "public_bytes": 1395,
+      "public_sha256": "c795a0eeb40d9916727e0015c2afb61d7302760a9bde29d55891810b1df31dbc",
+      "role": "historical-hash-guard",
+      "transformations": [
+        {
+          "count": 7,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/test_cpu.py",
+      "original_bytes": 17520,
+      "original_sha256": "fed81736c6e26b49d8f85c9d0017362ce4767fc1d505de26f00124961d18d7e9",
+      "path": "source/work/serving-cone-v3/test_cpu.py",
+      "public_bytes": 17520,
+      "public_sha256": "fed81736c6e26b49d8f85c9d0017362ce4767fc1d505de26f00124961d18d7e9",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_cancel.py",
+      "original_bytes": 6705,
+      "original_sha256": "7877a4c1fdf0e6378a5e68d1e2c81136e81c7b6b9b797320c74d0196efe2539f",
+      "path": "source/work/serving-http-v3/check_cancel.py",
+      "public_bytes": 6705,
+      "public_sha256": "7877a4c1fdf0e6378a5e68d1e2c81136e81c7b6b9b797320c74d0196efe2539f",
+      "role": "archived-http-qualification",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_lifecycle.py",
+      "original_bytes": 4864,
+      "original_sha256": "8fe87a256b4c8e889c0d69d2ce932e36ef7b2106210d630512a2db8048744f61",
+      "path": "source/work/serving-http-v3/check_lifecycle.py",
+      "public_bytes": 4864,
+      "public_sha256": "8fe87a256b4c8e889c0d69d2ce932e36ef7b2106210d630512a2db8048744f61",
+      "role": "archived-http-qualification",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_sessions.py",
+      "original_bytes": 6200,
+      "original_sha256": "1ce082398ec09fd65ec3d18e5a71dcd12473b7b30d805084bd5977c169bd8526",
+      "path": "source/work/serving-http-v3/check_sessions.py",
+      "public_bytes": 6200,
+      "public_sha256": "1ce082398ec09fd65ec3d18e5a71dcd12473b7b30d805084bd5977c169bd8526",
+      "role": "archived-http-qualification",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_vision.py",
+      "original_bytes": 3631,
+      "original_sha256": "5f222df8e9c0872781e37eb3462791e7335899c3990183cb51efba489b9cd73f",
+      "path": "source/work/serving-http-v3/check_vision.py",
+      "public_bytes": 3631,
+      "public_sha256": "5f222df8e9c0872781e37eb3462791e7335899c3990183cb51efba489b9cd73f",
+      "role": "archived-http-qualification",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/common.py",
+      "original_bytes": 7049,
+      "original_sha256": "09e9e59f86858fa7cd72bc10668344233ec6e1087db5c21b273aaff462db83c6",
+      "path": "source/work/serving-http-v3/common.py",
+      "public_bytes": 7049,
+      "public_sha256": "09e9e59f86858fa7cd72bc10668344233ec6e1087db5c21b273aaff462db83c6",
+      "role": "archived-http-qualification",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/evidence.py",
+      "original_bytes": 5333,
+      "original_sha256": "ffecaefb212e99426c2ea600517893c9fd08fd2b9d63a4e8eb8a0e5f8e473a4c",
+      "path": "source/work/serving-integration-v3/evidence.py",
+      "public_bytes": 5333,
+      "public_sha256": "ffecaefb212e99426c2ea600517893c9fd08fd2b9d63a4e8eb8a0e5f8e473a4c",
+      "role": "runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/execution-manifest-01.json",
+      "original_bytes": 5453,
+      "original_sha256": "2c8ebc4ca96ae514e9d237aac7cb1c5a6555b46f5d4d6ecb6c9234ba7045bcad",
+      "path": "source/work/serving-integration-v3/execution-manifest-01.json",
+      "public_bytes": 4203,
+      "public_sha256": "3d42aa02ea0182d32f00fcf9bc3a88e036aa2dc0cf0f6b743b152cf108792a37",
+      "role": "historical-hash-guard",
+      "transformations": [
+        {
+          "count": 25,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/freeze_execution.py",
+      "original_bytes": 1669,
+      "original_sha256": "66ae09668df22364976551853372298df821cfb5c960489f65609524a381d7c8",
+      "path": "source/work/serving-integration-v3/freeze_execution.py",
+      "public_bytes": 1669,
+      "public_sha256": "66ae09668df22364976551853372298df821cfb5c960489f65609524a381d7c8",
+      "role": "runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/reserve_memory.py",
+      "original_bytes": 3282,
+      "original_sha256": "9968bd3b95bb020b3eb9f887e7a78eda3f9efbb62175ef4dbe839b721f9e330f",
+      "path": "source/work/serving-integration-v3/reserve_memory.py",
+      "public_bytes": 3282,
+      "public_sha256": "9968bd3b95bb020b3eb9f887e7a78eda3f9efbb62175ef4dbe839b721f9e330f",
+      "role": "runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/run_qualification.py",
+      "original_bytes": 20618,
+      "original_sha256": "acc5b0850473fe7a1aa2e6eb2a2b453bd020d5314a2483239f4468c1f5460766",
+      "path": "source/work/serving-integration-v3/run_qualification.py",
+      "public_bytes": 20618,
+      "public_sha256": "acc5b0850473fe7a1aa2e6eb2a2b453bd020d5314a2483239f4468c1f5460766",
+      "role": "runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/runtime.py",
+      "original_bytes": 4776,
+      "original_sha256": "d0656e8b5bf8e87adac844d6ca5de4556f42022d5833266f6ca75fe2d8861f98",
+      "path": "source/work/serving-integration-v3/runtime.py",
+      "public_bytes": 4776,
+      "public_sha256": "d0656e8b5bf8e87adac844d6ca5de4556f42022d5833266f6ca75fe2d8861f98",
+      "role": "runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3/test_cpu.py",
+      "original_bytes": 4379,
+      "original_sha256": "da28b49ba9e907791e4758d79f2964505d840b2fdcef35ce1457d4ec180ed2d5",
+      "path": "source/work/serving-integration-v3/test_cpu.py",
+      "public_bytes": 4379,
+      "public_sha256": "da28b49ba9e907791e4758d79f2964505d840b2fdcef35ce1457d4ec180ed2d5",
+      "role": "runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3b/evidence.py",
+      "original_bytes": 5333,
+      "original_sha256": "ffecaefb212e99426c2ea600517893c9fd08fd2b9d63a4e8eb8a0e5f8e473a4c",
+      "path": "source/work/serving-integration-v3b/evidence.py",
+      "public_bytes": 5333,
+      "public_sha256": "ffecaefb212e99426c2ea600517893c9fd08fd2b9d63a4e8eb8a0e5f8e473a4c",
+      "role": "benchmark-runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3b/execution-manifest-01.json",
+      "original_bytes": 5458,
+      "original_sha256": "263cdd276fbf26715846ccd015e42bae521e163b7de8680f795017f965b176a5",
+      "path": "source/work/serving-integration-v3b/execution-manifest-01.json",
+      "public_bytes": 4208,
+      "public_sha256": "6fe5e1f70349780f7a21a96f84b820c3d8dbb8cecbcee5f6ac1b2ace9bf8c32f",
+      "role": "historical-hash-guard",
+      "transformations": [
+        {
+          "count": 25,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3b/freeze_execution.py",
+      "original_bytes": 1669,
+      "original_sha256": "66ae09668df22364976551853372298df821cfb5c960489f65609524a381d7c8",
+      "path": "source/work/serving-integration-v3b/freeze_execution.py",
+      "public_bytes": 1669,
+      "public_sha256": "66ae09668df22364976551853372298df821cfb5c960489f65609524a381d7c8",
+      "role": "benchmark-runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3b/run_qualification.py",
+      "original_bytes": 20997,
+      "original_sha256": "63127955caa5ae8fa9e312e1b3d768a9f5b55fd22bbbb4595b34c58d8e325a84",
+      "path": "source/work/serving-integration-v3b/run_qualification.py",
+      "public_bytes": 20997,
+      "public_sha256": "63127955caa5ae8fa9e312e1b3d768a9f5b55fd22bbbb4595b34c58d8e325a84",
+      "role": "benchmark-runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3b/runtime.py",
+      "original_bytes": 4776,
+      "original_sha256": "d0656e8b5bf8e87adac844d6ca5de4556f42022d5833266f6ca75fe2d8861f98",
+      "path": "source/work/serving-integration-v3b/runtime.py",
+      "public_bytes": 4776,
+      "public_sha256": "d0656e8b5bf8e87adac844d6ca5de4556f42022d5833266f6ca75fe2d8861f98",
+      "role": "benchmark-runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3b/supervise_performance.py",
+      "original_bytes": 3434,
+      "original_sha256": "5a755fd11a4983ea9e7809e507c334d672013d6c87bc6f7aeae2604d193d760c",
+      "path": "source/work/serving-integration-v3b/supervise_performance.py",
+      "public_bytes": 3434,
+      "public_sha256": "5a755fd11a4983ea9e7809e507c334d672013d6c87bc6f7aeae2604d193d760c",
+      "role": "benchmark-runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-integration-v3b/test_cpu.py",
+      "original_bytes": 4836,
+      "original_sha256": "c6ea5c0cd07e9e3ecba43cefd7ee7b50aeaecfc95ff379a503f49972ecd371c9",
+      "path": "source/work/serving-integration-v3b/test_cpu.py",
+      "public_bytes": 4836,
+      "public_sha256": "c6ea5c0cd07e9e3ecba43cefd7ee7b50aeaecfc95ff379a503f49972ecd371c9",
+      "role": "benchmark-runtime-and-qualification-tools",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-launch-v3/launch.py",
+      "original_bytes": 6943,
+      "original_sha256": "f94c2959cc454af6403f91f6713c9f91e8aaf766b105eb98e3b8a69eff8e0674",
+      "path": "source/work/serving-launch-v3/launch.py",
+      "public_bytes": 6943,
+      "public_sha256": "f94c2959cc454af6403f91f6713c9f91e8aaf766b105eb98e3b8a69eff8e0674",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-launch-v3/manifest-01.json",
+      "original_bytes": 822,
+      "original_sha256": "6060581b5cc68a36f6581df9e610ff11dc38dadf1ead0313477d04a9ea54041d",
+      "path": "source/work/serving-launch-v3/manifest-01.json",
+      "public_bytes": 672,
+      "public_sha256": "80cc9a5dfe0b94a64a007f054c9f1f9a1e19c96c87ad649c0f46664382213899",
+      "role": "historical-hash-guard",
+      "transformations": [
+        {
+          "count": 3,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-launch-v3/test_launch.py",
+      "original_bytes": 8952,
+      "original_sha256": "6524331b995ee97ffdca4ee622cf0563d5be3e9866ab3484a1569781855b92a7",
+      "path": "source/work/serving-launch-v3/test_launch.py",
+      "public_bytes": 8952,
+      "public_sha256": "6524331b995ee97ffdca4ee622cf0563d5be3e9866ab3484a1569781855b92a7",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/prepare.py",
+      "original_bytes": 14293,
+      "original_sha256": "9d2d8bd65f3948b9e346ab1468e8f1068a26395afcca874ccc5ee3edf2da837e",
+      "path": "source/work/serving-profile-v3/prepare.py",
+      "public_bytes": 14293,
+      "public_sha256": "9d2d8bd65f3948b9e346ab1468e8f1068a26395afcca874ccc5ee3edf2da837e",
+      "role": "archived-profile-preparation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/staged-01/candidate-manifest.json",
+      "original_bytes": 250228,
+      "original_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+      "path": "source/work/serving-profile-v3/staged-01/candidate-manifest.json",
+      "public_bytes": 216778,
+      "public_sha256": "e7485d7228a481fd740334063c835163065f393b25c7c1c275080e573e579420",
+      "role": "historical-hash-guard",
+      "transformations": [
+        {
+          "count": 669,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/test_cpu.py",
+      "original_bytes": 13838,
+      "original_sha256": "2d7dffb19cc8745c105dc9aa729af57a3c003f26e19ec13fa61f183e4991a9ea",
+      "path": "source/work/serving-profile-v3/test_cpu.py",
+      "public_bytes": 13838,
+      "public_sha256": "2d7dffb19cc8745c105dc9aa729af57a3c003f26e19ec13fa61f183e4991a9ea",
+      "role": "archived-profile-preparation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/NOTICE",
+      "original_bytes": 1658,
+      "original_sha256": "a4d00d45e960a78323c4906d195861a188af1a883360c8a1a798e53cccbf25ad",
+      "path": "source/work/serving-qualification-v3/NOTICE",
+      "public_bytes": 1658,
+      "public_sha256": "a4d00d45e960a78323c4906d195861a188af1a883360c8a1a798e53cccbf25ad",
+      "role": "third-party-fixture-notice",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/build_fixtures.py",
+      "original_bytes": 15169,
+      "original_sha256": "cba287bbb3cc167a7bd4b72ad9a7a6f081343f58a27864019a8abf4f810952f6",
+      "path": "source/work/serving-qualification-v3/build_fixtures.py",
+      "public_bytes": 15169,
+      "public_sha256": "cba287bbb3cc167a7bd4b72ad9a7a6f081343f58a27864019a8abf4f810952f6",
+      "role": "archived-fixture-preparation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/fetch_sources.py",
+      "original_bytes": 4230,
+      "original_sha256": "a7b8ea3904fee787c942bcdc9ddfa43e140e7b79f833e1c03d219eb0edf62ac0",
+      "path": "source/work/serving-qualification-v3/fetch_sources.py",
+      "public_bytes": 4230,
+      "public_sha256": "a7b8ea3904fee787c942bcdc9ddfa43e140e7b79f833e1c03d219eb0edf62ac0",
+      "role": "archived-fixture-preparation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/fixture-manifest.json",
+      "original_bytes": 19447,
+      "original_sha256": "69a69d82bc7e1162451b15782ce43bea924d781af17b074510310493cbae0b47",
+      "path": "source/work/serving-qualification-v3/fixture-manifest.json",
+      "public_bytes": 19343,
+      "public_sha256": "c55e4d1cfd171892f59d2343539e5856ca9617640f5a2f307bc7d8c58d323a22",
+      "role": "historical-fixture-manifest",
+      "transformations": [
+        {
+          "count": 2,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        },
+        {
+          "count": 2,
+          "kind": "literal-path-prefix",
+          "replacement": "${USER_HOME}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/freeze_plans.py",
+      "original_bytes": 9566,
+      "original_sha256": "1627a0ceb387a7135bec8a58695d040158adf3b07fde61fa9b4e6eb25732ff46",
+      "path": "source/work/serving-qualification-v3/freeze_plans.py",
+      "public_bytes": 9566,
+      "public_sha256": "1627a0ceb387a7135bec8a58695d040158adf3b07fde61fa9b4e6eb25732ff46",
+      "role": "archived-fixture-preparation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/make_vision_v2.py",
+      "original_bytes": 3781,
+      "original_sha256": "e0c0e03c03b9dd9d66edb4f77666bdef88ba298c59623161e2218288001dc3d3",
+      "path": "source/work/serving-qualification-v3/make_vision_v2.py",
+      "public_bytes": 3781,
+      "public_sha256": "e0c0e03c03b9dd9d66edb4f77666bdef88ba298c59623161e2218288001dc3d3",
+      "role": "archived-fixture-preparation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/plans-manifest.json",
+      "original_bytes": 2208,
+      "original_sha256": "2708f1b58e943b2c5951cc47aba8c4523053e6fe093ff4666e57d22249a39714",
+      "path": "source/work/serving-qualification-v3/plans-manifest.json",
+      "public_bytes": 2208,
+      "public_sha256": "2708f1b58e943b2c5951cc47aba8c4523053e6fe093ff4666e57d22249a39714",
+      "role": "historical-fixture-manifest",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/source-manifest.json",
+      "original_bytes": 22482,
+      "original_sha256": "44daa65bb2e1a545a054c584488a352648497db62d195a57f1aece8ebcd7aa15",
+      "path": "source/work/serving-qualification-v3/source-manifest.json",
+      "public_bytes": 22482,
+      "public_sha256": "44daa65bb2e1a545a054c584488a352648497db62d195a57f1aece8ebcd7aa15",
+      "role": "historical-fixture-manifest",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-qualification-v3/test_fixtures_cpu.py",
+      "original_bytes": 9531,
+      "original_sha256": "d95a06dfaf376c0ab2ffe71dac780ae17f0629f994cfe0b05048860cb8a0d3f8",
+      "path": "source/work/serving-qualification-v3/test_fixtures_cpu.py",
+      "public_bytes": 9531,
+      "public_sha256": "d95a06dfaf376c0ab2ffe71dac780ae17f0629f994cfe0b05048860cb8a0d3f8",
+      "role": "archived-fixture-preparation",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-server-v3/manifest-01.json",
+      "original_bytes": 4251,
+      "original_sha256": "31986b257de485d5845f6d1e4f395d9b4232dedbd8ebd70ca4daafce84ca4435",
+      "path": "source/work/serving-server-v3/manifest-01.json",
+      "public_bytes": 3251,
+      "public_sha256": "91e2bbe514f510248c86d4c3b43acf61520c044a65f1f1338a8b1ab69ce45ae3",
+      "role": "historical-hash-guard",
+      "transformations": [
+        {
+          "count": 20,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-server-v3/serve_candidate.py",
+      "original_bytes": 17850,
+      "original_sha256": "772b1be8e53f17a754cae1c58b129d0a0a609e229186e1008c2f5f46d54baa1f",
+      "path": "source/work/serving-server-v3/serve_candidate.py",
+      "public_bytes": 17850,
+      "public_sha256": "772b1be8e53f17a754cae1c58b129d0a0a609e229186e1008c2f5f46d54baa1f",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-server-v3/test_cpu.py",
+      "original_bytes": 14909,
+      "original_sha256": "dbe3c77b2bdef35cefcc335201c8ee878143c23ec2bafbc6fe037b2a405ad277",
+      "path": "source/work/serving-server-v3/test_cpu.py",
+      "public_bytes": 14909,
+      "public_sha256": "dbe3c77b2bdef35cefcc335201c8ee878143c23ec2bafbc6fe037b2a405ad277",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/manifest-01.json",
+      "original_bytes": 2514,
+      "original_sha256": "618201ff979572074eac84595a3ae864f0a8afb6507318621a61313bd2a48510",
+      "path": "source/work/serving-shortcut-v3/manifest-01.json",
+      "public_bytes": 1914,
+      "public_sha256": "5cfe13581298c1856e169db7cf389d557bb50217c8075d0c073acbfd0459a4a7",
+      "role": "historical-hash-guard",
+      "transformations": [
+        {
+          "count": 12,
+          "kind": "literal-path-prefix",
+          "replacement": "${ORIGINAL_LAB_ROOT}"
+        }
+      ]
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/shortcut.py",
+      "original_bytes": 10479,
+      "original_sha256": "17a62243f4be2eeec74b55bd11599d533d7dd584db8343cf6a1fbd97162ff6be",
+      "path": "source/work/serving-shortcut-v3/shortcut.py",
+      "public_bytes": 10479,
+      "public_sha256": "17a62243f4be2eeec74b55bd11599d533d7dd584db8343cf6a1fbd97162ff6be",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-shortcut-v3/test_cpu.py",
+      "original_bytes": 10582,
+      "original_sha256": "0f75c3a066050e3360258f40832d699f770da109efc334227e55e4b47ab4cb2b",
+      "path": "source/work/serving-shortcut-v3/test_cpu.py",
+      "public_bytes": 10582,
+      "public_sha256": "0f75c3a066050e3360258f40832d699f770da109efc334227e55e4b47ab4cb2b",
+      "role": "runtime-and-tests",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-state-review-v3/test_cpu.py",
+      "original_bytes": 6369,
+      "original_sha256": "b70a3eb31c5a001d1feedc8a337d7eed04dcee9805bc832d85f1377a1ee68947",
+      "path": "source/work/serving-state-review-v3/test_cpu.py",
+      "public_bytes": 6369,
+      "public_sha256": "b70a3eb31c5a001d1feedc8a337d7eed04dcee9805bc832d85f1377a1ee68947",
+      "role": "archived-state-audit",
+      "transformations": []
+    },
+    {
+      "original": "${ORIGINAL_LAB_ROOT}/work/serving-state-review-v3/validate_boundary.py",
+      "original_bytes": 26144,
+      "original_sha256": "8f391e571c87b887a69587e1f2fb1595175f4a94f5dc80c500683c31a857a1bc",
+      "path": "source/work/serving-state-review-v3/validate_boundary.py",
+      "public_bytes": 26144,
+      "public_sha256": "8f391e571c87b887a69587e1f2fb1595175f4a94f5dc80c500683c31a857a1bc",
+      "role": "archived-state-audit",
+      "transformations": []
+    },
+    {
+      "original": "/Applications/oMLX.app/Contents/Resources/omlx/patches/deepseek_v41/config.py",
+      "original_bytes": 10101,
+      "original_sha256": "89b7bae64c2d7ae84384e7c0230915dd839ce7fed2126b101053221080547bda",
+      "path": "source/upstream-baseline/omlx/patches/deepseek_v41/config.py",
+      "public_bytes": 10101,
+      "public_sha256": "89b7bae64c2d7ae84384e7c0230915dd839ce7fed2126b101053221080547bda",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/config.py",
+      "role": "five-file-public-baseline",
+      "transformations": []
+    },
+    {
+      "original": "/Applications/oMLX.app/Contents/Resources/omlx/patches/deepseek_v41/dspark.py",
+      "original_bytes": 8385,
+      "original_sha256": "bb1eb7c859d0855acd76415a02b4f1857b0e3e8699390bda2462567063e01aad",
+      "path": "source/upstream-baseline/omlx/patches/deepseek_v41/dspark.py",
+      "public_bytes": 8385,
+      "public_sha256": "bb1eb7c859d0855acd76415a02b4f1857b0e3e8699390bda2462567063e01aad",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/dspark.py",
+      "role": "five-file-public-baseline",
+      "transformations": []
+    },
+    {
+      "original": "/Applications/oMLX.app/Contents/Resources/omlx/patches/deepseek_v41/language.py",
+      "original_bytes": 42683,
+      "original_sha256": "e66470945439ed8ce3e007801344fea4b66ff79566284e9b7744c8843713eaa8",
+      "path": "source/upstream-baseline/omlx/patches/deepseek_v41/language.py",
+      "public_bytes": 42683,
+      "public_sha256": "e66470945439ed8ce3e007801344fea4b66ff79566284e9b7744c8843713eaa8",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/language.py",
+      "role": "five-file-public-baseline",
+      "transformations": []
+    },
+    {
+      "original": "/Applications/oMLX.app/Contents/Resources/omlx/patches/deepseek_v41/loading.py",
+      "original_bytes": 14428,
+      "original_sha256": "104408ea7dfa05b886bd0d8ecc0359c31317f581f4538b5860cd1951edc062a1",
+      "path": "source/upstream-baseline/omlx/patches/deepseek_v41/loading.py",
+      "public_bytes": 14428,
+      "public_sha256": "104408ea7dfa05b886bd0d8ecc0359c31317f581f4538b5860cd1951edc062a1",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/loading.py",
+      "role": "five-file-public-baseline",
+      "transformations": []
+    },
+    {
+      "original": "/Applications/oMLX.app/Contents/Resources/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "original_bytes": 195357,
+      "original_sha256": "51817ceeed8a2416f7b5896e81465c7a5e8b311a95357dc967636b8cffbae232",
+      "path": "source/upstream-baseline/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "public_bytes": 195357,
+      "public_sha256": "51817ceeed8a2416f7b5896e81465c7a5e8b311a95357dc967636b8cffbae232",
+      "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/mlx_lm_mtp/batch_generator.py",
+      "role": "five-file-public-baseline",
+      "transformations": []
+    }
+  ],
+  "generated_files": [
+    {
+      "bytes": 96816,
+      "path": "source/SOURCE-CLOSURE-AUDIT.json",
+      "sha256": "2fceb9113765e2d226789e9e1c63d25debc4afdb8684dced804bea47a3a2ba5c"
+    },
+    {
+      "bytes": 52390,
+      "path": "source/EXTERNAL-BUILD-RECEIPT.json",
+      "sha256": "3d37a848877f4b8f254596c3ceaa0c78aa9bb87e22617bdbd607732590929ab9"
+    },
+    {
+      "bytes": 7409,
+      "path": "source/patches/complete-runtime-vs-v0.7.1rc1.patch",
+      "sha256": "528bbee4ab5a5d140294f4fb18936ca2bb55658dcd85d85669d0ac88591b5197"
+    },
+    {
+      "bytes": 2745,
+      "path": "source/patches/complete-runtime-receipt.json",
+      "sha256": "f77e99c23241fa281cc2c73b169a3bc00ab47f4dcbd18cb7aae7d83331a2b569"
+    },
+    {
+      "bytes": 4060,
+      "path": "source/verify_source_kit.py",
+      "sha256": "711a0b228b9a48a8d73c6fe0763778644d9a43c7e680d0650a24c24b12f48ea2"
+    }
+  ],
+  "normalization": [
+    "full original workspace prefix -> ${ORIGINAL_LAB_ROOT}",
+    "remaining user home prefix -> ${USER_HOME}"
+  ],
+  "public_base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+  "role_counts": {
+    "archived-calibration-values": 1,
+    "archived-experiment-plan": 16,
+    "archived-fixture-preparation": 5,
+    "archived-http-qualification": 5,
+    "archived-performance-analysis": 4,
+    "archived-profile-preparation": 2,
+    "archived-state-audit": 2,
+    "archived-state-instrumentation": 1,
+    "archived-tests": 9,
+    "benchmark-runtime-and-qualification-tools": 6,
+    "changed-upstream-runtime-source": 5,
+    "five-file-public-baseline": 5,
+    "frozen-calibration-values": 1,
+    "historical-baseline-profile": 1,
+    "historical-candidate-profile": 1,
+    "historical-checkpoint-receipt": 1,
+    "historical-fixture-manifest": 3,
+    "historical-hash-guard": 8,
+    "historical-launcher": 3,
+    "historical-notice": 1,
+    "historical-runtime-provenance": 1,
+    "local-runtime-and-archived-tools": 25,
+    "original-runtime-patch": 2,
+    "overall-benchmark-and-instrumentation": 5,
+    "runtime-and-qualification-tools": 6,
+    "runtime-and-tests": 11,
+    "runtime-ast-definition": 3,
+    "runtime-bootstrap": 1,
+    "runtime-provenance": 1,
+    "third-party-fixture-notice": 1,
+    "third-party-license": 3,
+    "third-party-notice": 1
+  },
+  "runtime_patch": {
+    "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+    "files": [
+      {
+        "base_sha256": "89b7bae64c2d7ae84384e7c0230915dd839ce7fed2126b101053221080547bda",
+        "candidate_sha256": "13827eb47b011f6cfe22f82b5665763e386f8c0ccf69fc565ae05d2199d78ab9",
+        "path": "patches/deepseek_v41/config.py",
+        "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/config.py"
+      },
+      {
+        "base_sha256": "bb1eb7c859d0855acd76415a02b4f1857b0e3e8699390bda2462567063e01aad",
+        "candidate_sha256": "3a1cd606e053c90c9c8311a1d168ab95363e52d573ecf283cc64d05b3731cafe",
+        "path": "patches/deepseek_v41/dspark.py",
+        "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/dspark.py"
+      },
+      {
+        "base_sha256": "e66470945439ed8ce3e007801344fea4b66ff79566284e9b7744c8843713eaa8",
+        "candidate_sha256": "649d51f3621da9be3ba54aa298c977a276905084e27ad1a7f6f84a6cb4279250",
+        "path": "patches/deepseek_v41/language.py",
+        "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/language.py"
+      },
+      {
+        "base_sha256": "104408ea7dfa05b886bd0d8ecc0359c31317f581f4538b5860cd1951edc062a1",
+        "candidate_sha256": "5414edbd3bcb11662e4152e57f3e4c131d4e16a32842d8befc2df1c535e03563",
+        "path": "patches/deepseek_v41/loading.py",
+        "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/deepseek_v41/loading.py"
+      },
+      {
+        "base_sha256": "51817ceeed8a2416f7b5896e81465c7a5e8b311a95357dc967636b8cffbae232",
+        "candidate_sha256": "63c186f7f302ae4814c95180d0b3196280c44c8affad95a9bbaa3d213d8e4257",
+        "path": "patches/mlx_lm_mtp/batch_generator.py",
+        "public_source_url": "https://raw.githubusercontent.com/jundot/omlx/7a5a3d75ce7463300bdfa5fedccd34348f60ff46/omlx/patches/mlx_lm_mtp/batch_generator.py"
+      }
+    ],
+    "patch_bytes": 7409,
+    "patch_output": "patching file 'omlx/patches/deepseek_v41/config.py'\npatching file 'omlx/patches/deepseek_v41/dspark.py'\npatching file 'omlx/patches/deepseek_v41/language.py'\npatching file 'omlx/patches/deepseek_v41/loading.py'\npatching file 'omlx/patches/mlx_lm_mtp/batch_generator.py'",
+    "patch_path": "source/patches/complete-runtime-vs-v0.7.1rc1.patch",
+    "patch_sha256": "528bbee4ab5a5d140294f4fb18936ca2bb55658dcd85d85669d0ac88591b5197",
+    "verification": "Applied with zero fuzz to five public baseline files in a temporary directory; all five outputs byte-identical to measured local runtime source. No import or inference."
+  },
+  "schema": "flash1017-research-source-inventory/1",
+  "source_file_count": 140,
+  "status": "local-review-only-not-an-installer"
+}

@@ -1,0 +1,21 @@
+Flash1017 research repository — local preparation for review
+
+Original additions and new documentation: Copyright 2026 rubencu.
+Offered under Apache License 2.0; see LICENSE.
+Existing third-party source and fixture licenses remain applicable.
+
+The runtime implementation is maintained in the companion rubencu/omlx fork.
+This repository retains research, evidence, analysis and historical snapshots.
+The October 18 snapshot's original NOTICE and full component attribution remain
+at archives/2026-10-18-preview/NOTICE and its docs/ATTRIBUTION.md.
+Current navigation and scope are documented in docs/REPOSITORIES.md.
+
+DeepSeek, mlx-community, Apple MLX, MLX-LM/oMLX, tacos8me/m5-ultra,
+antirez/ds4 and gnahzhang's reference-arithmetic work are credited at the
+component level. HotRows is copied code under its retained Apache-2.0 notice;
+analogous prior BF16 reuse, confidence-policy and replay implementations are
+related work unless direct derivation is separately established.
+
+Retained fixture licenses are under
+archives/2026-10-18-preview/evidence/overall/fixtures/.
+This repository includes no model weights or copied application distribution.

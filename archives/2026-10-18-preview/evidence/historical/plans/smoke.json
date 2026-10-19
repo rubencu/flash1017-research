@@ -1,0 +1,138 @@
+{
+  "profiles": {
+    "stock-ar": {
+      "mtp": false
+    },
+    "stock-a3": {
+      "mtp": true,
+      "depth": 3
+    },
+    "reference-a3": {
+      "mtp": true,
+      "depth": 3,
+      "attention_rounding": true
+    },
+    "reference-ar": {
+      "mtp": false,
+      "attention_rounding": true
+    },
+    "stock-a3-head": {
+      "mtp": true,
+      "depth": 3,
+      "fused_head": true
+    },
+    "reference-a3-head": {
+      "mtp": true,
+      "depth": 3,
+      "attention_rounding": true,
+      "fused_head": true
+    },
+    "reference-a5-head6": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6
+    }
+  },
+  "prompts": {
+    "identity": {
+      "text": "Reply with exactly this string and nothing else: FLASH1017_OK",
+      "max_tokens": 32
+    },
+    "arithmetic": {
+      "text": "Return only JSON with keys \"product\" and \"sum\" for 37 and 19.",
+      "max_tokens": 96
+    },
+    "code": {
+      "text": "Write a Python function stable_unique(xs) that removes duplicates while preserving first occurrence. Include a short example with a repeated value. Return only code.",
+      "max_tokens": 256
+    }
+  },
+  "jobs": [
+    {
+      "profile": "stock-ar",
+      "prompt": "identity"
+    },
+    {
+      "profile": "stock-a3",
+      "prompt": "identity"
+    },
+    {
+      "profile": "reference-a3",
+      "prompt": "identity"
+    },
+    {
+      "profile": "reference-ar",
+      "prompt": "identity"
+    },
+    {
+      "profile": "stock-a3-head",
+      "prompt": "identity"
+    },
+    {
+      "profile": "reference-a3-head",
+      "prompt": "identity"
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "identity"
+    },
+    {
+      "profile": "stock-ar",
+      "prompt": "arithmetic"
+    },
+    {
+      "profile": "stock-a3",
+      "prompt": "arithmetic"
+    },
+    {
+      "profile": "reference-a3",
+      "prompt": "arithmetic"
+    },
+    {
+      "profile": "reference-ar",
+      "prompt": "arithmetic"
+    },
+    {
+      "profile": "stock-a3-head",
+      "prompt": "arithmetic"
+    },
+    {
+      "profile": "reference-a3-head",
+      "prompt": "arithmetic"
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "arithmetic"
+    },
+    {
+      "profile": "stock-ar",
+      "prompt": "code"
+    },
+    {
+      "profile": "stock-a3",
+      "prompt": "code"
+    },
+    {
+      "profile": "reference-a3",
+      "prompt": "code"
+    },
+    {
+      "profile": "reference-ar",
+      "prompt": "code"
+    },
+    {
+      "profile": "stock-a3-head",
+      "prompt": "code"
+    },
+    {
+      "profile": "reference-a3-head",
+      "prompt": "code"
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "code"
+    }
+  ]
+}

@@ -1,0 +1,827 @@
+{
+  "status": "complete_validated",
+  "case": "native-unload-and-reload",
+  "kind": "candidate",
+  "server": {
+    "pid": 80188,
+    "created": 1792325644.418858,
+    "port": 8001,
+    "profile": "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/staged-01/candidate-profile.http-validation.json"
+  },
+  "profile_sha256": "ee9508df157aba9523f23aff7665f7137afeb913483dc3bd8ada6f1c1787b6df",
+  "started_at_unix": 1792326017.689826,
+  "timing_scope": "Functional serving qualification; not a controlled speed comparison.",
+  "source_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_vision.py": "5f222df8e9c0872781e37eb3462791e7335899c3990183cb51efba489b9cd73f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_cancel.py": "7877a4c1fdf0e6378a5e68d1e2c81136e81c7b6b9b797320c74d0196efe2539f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_lifecycle.py": "8fe87a256b4c8e889c0d69d2ce932e36ef7b2106210d630512a2db8048744f61",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/common.py": "09e9e59f86858fa7cd72bc10668344233ec6e1087db5c21b273aaff462db83c6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_sessions.py": "1ce082398ec09fd65ec3d18e5a71dcd12473b7b30d805084bd5977c169bd8526"
+  },
+  "tests": [
+    {
+      "test": "native-unload-release",
+      "passed": true
+    },
+    {
+      "test": "reload-generation",
+      "passed": true
+    }
+  ],
+  "before_unload": {
+    "candidate": "cone-hotrows-v3",
+    "namespace": "69438b6f7bdb",
+    "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+    "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+    "loaded_bindings": 1,
+    "models": [
+      {
+        "status": "loaded",
+        "enabled": true,
+        "python_call_active_hint": false,
+        "cone_counts": {
+          "full_calls": 105,
+          "fallback:short-chunk": 27,
+          "fallback:not-cache-only-prefill": 74,
+          "fallback:multimodal-or-token-types": 4,
+          "cone_calls": 8
+        },
+        "shape_counts": {
+          "index-pad": 40,
+          "gate-pad": 160,
+          "hc-warp32": 112,
+          "local-wkv-pad": 24,
+          "final-moe-256": 8
+        },
+        "prime_counts": {
+          "prefill_calls": 39,
+          "fallback:short-chunk": 27,
+          "fallback:multimodal-or-token-types": 4,
+          "eligible_prefills": 8,
+          "wkv_pads": 24,
+          "stage:0": 8,
+          "stage:1": 8,
+          "stage:2": 8,
+          "padded_appends": 8
+        },
+        "call_counts": {
+          "model_calls": 113
+        },
+        "row_status": "active",
+        "retained_row_cache_bytes_observed": 536870912,
+        "tables": [
+          {
+            "index": 0,
+            "retained_bytes": 268435456,
+            "unique_queries": 1604728,
+            "unique_hits": 514134,
+            "counts": {
+              "calls": 113,
+              "cache_calls": 113,
+              "requested_rows": 2395872,
+              "unique_rows": 1604728,
+              "duplicate_rows_elided": 791144,
+              "miss_rows": 1090594,
+              "native_read_calls": 113,
+              "native_requested_rows": 1090594,
+              "native_selected_bytes": 174495040
+            }
+          },
+          {
+            "index": 1,
+            "retained_bytes": 268435456,
+            "unique_queries": 1604751,
+            "unique_hits": 514322,
+            "counts": {
+              "calls": 113,
+              "cache_calls": 113,
+              "requested_rows": 2395872,
+              "unique_rows": 1604751,
+              "duplicate_rows_elided": 791121,
+              "miss_rows": 1090429,
+              "native_read_calls": 112,
+              "native_requested_rows": 1090429,
+              "native_selected_bytes": 174468640,
+              "all_hit_calls": 1
+            }
+          }
+        ]
+      }
+    ],
+    "collected_without_native_unload": 0,
+    "failed_unloads": 0,
+    "unloads": []
+  },
+  "unload_response": {
+    "http_status": 200,
+    "body": {
+      "status": "ok",
+      "model_id": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+    }
+  },
+  "after_unload": {
+    "status": {
+      "active_requests": 0,
+      "waiting_requests": 0,
+      "loaded_models": []
+    },
+    "telemetry": {
+      "candidate": "cone-hotrows-v3",
+      "namespace": "69438b6f7bdb",
+      "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+      "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+      "loaded_bindings": 0,
+      "models": [],
+      "collected_without_native_unload": 0,
+      "failed_unloads": 0,
+      "unloads": [
+        {
+          "created_at_unix": 1792325670.246101,
+          "closed_at_unix": 1792326018.0198998,
+          "native_close_returned": true,
+          "candidate_close_returned": true,
+          "hook_restore_returned": true,
+          "final": {
+            "cone": {
+              "enabled": true,
+              "closed": true,
+              "counts": {
+                "model_calls": 113
+              },
+              "cone_counts": {
+                "full_calls": 105,
+                "fallback:short-chunk": 27,
+                "fallback:not-cache-only-prefill": 74,
+                "fallback:multimodal-or-token-types": 4,
+                "cone_calls": 8
+              },
+              "shape_counts": {
+                "index-pad": 40,
+                "gate-pad": 160,
+                "hc-warp32": 112,
+                "local-wkv-pad": 24,
+                "final-moe-256": 8
+              },
+              "prime_counts": {
+                "prefill_calls": 39,
+                "fallback:short-chunk": 27,
+                "fallback:multimodal-or-token-types": 4,
+                "eligible_prefills": 8,
+                "wkv_pads": 24,
+                "stage:0": 8,
+                "stage:1": 8,
+                "stage:2": 8,
+                "padded_appends": 8
+              },
+              "trace": [],
+              "prefill_trace": [],
+              "sources": {
+                "cone": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                  "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                },
+                "shape": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                  "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                },
+                "prime": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                  "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                }
+              },
+              "owned_instances": 0,
+              "model_references_released": true
+            },
+            "rows": {
+              "status": "closed",
+              "enabled": false,
+              "per_table_budget_bytes": 268435456,
+              "max_retained_bytes": 536870912,
+              "retained_bytes": 0,
+              "live_tables": [],
+              "retired_tables": [
+                {
+                  "cache_id": 0,
+                  "table": "language_model.layers.1.engram.embed.weight",
+                  "budget": 268435456,
+                  "nbytes": 0,
+                  "closed": true,
+                  "resident": false,
+                  "cache_disabled_after_allocation_failure": false,
+                  "counts": {
+                    "calls": 113,
+                    "cache_calls": 113,
+                    "requested_rows": 2395872,
+                    "unique_rows": 1604728,
+                    "duplicate_rows_elided": 791144,
+                    "miss_rows": 1090594,
+                    "native_read_calls": 113,
+                    "native_requested_rows": 1090594,
+                    "native_selected_bytes": 174495040
+                  },
+                  "unique_hits": 514134,
+                  "unique_queries": 1604728,
+                  "admitted": 806210
+                },
+                {
+                  "cache_id": 1,
+                  "table": "language_model.layers.14.engram.embed.weight",
+                  "budget": 268435456,
+                  "nbytes": 0,
+                  "closed": true,
+                  "resident": false,
+                  "cache_disabled_after_allocation_failure": false,
+                  "counts": {
+                    "calls": 113,
+                    "cache_calls": 113,
+                    "requested_rows": 2395872,
+                    "unique_rows": 1604751,
+                    "duplicate_rows_elided": 791121,
+                    "miss_rows": 1090429,
+                    "native_read_calls": 112,
+                    "native_requested_rows": 1090429,
+                    "native_selected_bytes": 174468640,
+                    "all_hit_calls": 1
+                  },
+                  "unique_hits": 514322,
+                  "unique_queries": 1604751,
+                  "admitted": 806288
+                }
+              ],
+              "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+            }
+          },
+          "owner_closed": true,
+          "status": "unloaded"
+        }
+      ]
+    },
+    "elapsed_seconds": 2.4402768751606345
+  },
+  "reload_response": {
+    "http_status": 200,
+    "body": {
+      "status": "ok",
+      "model_id": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+      "message": "Loaded DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+    }
+  },
+  "reload_seconds": 23.802685666829348,
+  "after_reload": {
+    "candidate": "cone-hotrows-v3",
+    "namespace": "69438b6f7bdb",
+    "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+    "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+    "loaded_bindings": 1,
+    "models": [
+      {
+        "status": "loaded",
+        "enabled": true,
+        "python_call_active_hint": false,
+        "cone_counts": {},
+        "shape_counts": {},
+        "prime_counts": {},
+        "call_counts": {},
+        "row_status": "active",
+        "retained_row_cache_bytes_observed": 0,
+        "tables": [
+          {
+            "index": 0,
+            "retained_bytes": 0,
+            "unique_queries": 0,
+            "unique_hits": 0,
+            "counts": {}
+          },
+          {
+            "index": 1,
+            "retained_bytes": 0,
+            "unique_queries": 0,
+            "unique_hits": 0,
+            "counts": {}
+          }
+        ]
+      }
+    ],
+    "collected_without_native_unload": 0,
+    "failed_unloads": 0,
+    "unloads": [
+      {
+        "created_at_unix": 1792325670.246101,
+        "closed_at_unix": 1792326018.0198998,
+        "native_close_returned": true,
+        "candidate_close_returned": true,
+        "hook_restore_returned": true,
+        "final": {
+          "cone": {
+            "enabled": true,
+            "closed": true,
+            "counts": {
+              "model_calls": 113
+            },
+            "cone_counts": {
+              "full_calls": 105,
+              "fallback:short-chunk": 27,
+              "fallback:not-cache-only-prefill": 74,
+              "fallback:multimodal-or-token-types": 4,
+              "cone_calls": 8
+            },
+            "shape_counts": {
+              "index-pad": 40,
+              "gate-pad": 160,
+              "hc-warp32": 112,
+              "local-wkv-pad": 24,
+              "final-moe-256": 8
+            },
+            "prime_counts": {
+              "prefill_calls": 39,
+              "fallback:short-chunk": 27,
+              "fallback:multimodal-or-token-types": 4,
+              "eligible_prefills": 8,
+              "wkv_pads": 24,
+              "stage:0": 8,
+              "stage:1": 8,
+              "stage:2": 8,
+              "padded_appends": 8
+            },
+            "trace": [],
+            "prefill_trace": [],
+            "sources": {
+              "cone": {
+                "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+              },
+              "shape": {
+                "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+              },
+              "prime": {
+                "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+              }
+            },
+            "owned_instances": 0,
+            "model_references_released": true
+          },
+          "rows": {
+            "status": "closed",
+            "enabled": false,
+            "per_table_budget_bytes": 268435456,
+            "max_retained_bytes": 536870912,
+            "retained_bytes": 0,
+            "live_tables": [],
+            "retired_tables": [
+              {
+                "cache_id": 0,
+                "table": "language_model.layers.1.engram.embed.weight",
+                "budget": 268435456,
+                "nbytes": 0,
+                "closed": true,
+                "resident": false,
+                "cache_disabled_after_allocation_failure": false,
+                "counts": {
+                  "calls": 113,
+                  "cache_calls": 113,
+                  "requested_rows": 2395872,
+                  "unique_rows": 1604728,
+                  "duplicate_rows_elided": 791144,
+                  "miss_rows": 1090594,
+                  "native_read_calls": 113,
+                  "native_requested_rows": 1090594,
+                  "native_selected_bytes": 174495040
+                },
+                "unique_hits": 514134,
+                "unique_queries": 1604728,
+                "admitted": 806210
+              },
+              {
+                "cache_id": 1,
+                "table": "language_model.layers.14.engram.embed.weight",
+                "budget": 268435456,
+                "nbytes": 0,
+                "closed": true,
+                "resident": false,
+                "cache_disabled_after_allocation_failure": false,
+                "counts": {
+                  "calls": 113,
+                  "cache_calls": 113,
+                  "requested_rows": 2395872,
+                  "unique_rows": 1604751,
+                  "duplicate_rows_elided": 791121,
+                  "miss_rows": 1090429,
+                  "native_read_calls": 112,
+                  "native_requested_rows": 1090429,
+                  "native_selected_bytes": 174468640,
+                  "all_hit_calls": 1
+                },
+                "unique_hits": 514322,
+                "unique_queries": 1604751,
+                "admitted": 806288
+              }
+            ],
+            "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+          }
+        },
+        "owner_closed": true,
+        "status": "unloaded"
+      }
+    ]
+  },
+  "recovery": {
+    "response": {
+      "id": "chatcmpl-82290cac",
+      "object": "chat.completion",
+      "created": 1792326044,
+      "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "CANDIDATE_V3_RELOADED"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 16,
+        "completion_tokens": 9,
+        "total_tokens": 25,
+        "input_tokens": 16,
+        "output_tokens": 9,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "time_to_first_token": 0.28,
+        "total_time": 0.44,
+        "prompt_eval_duration": 0.28,
+        "generation_duration": 0.16,
+        "prompt_tokens_per_second": 57.52,
+        "generation_tokens_per_second": 56.4
+      }
+    },
+    "seconds": 0.5883627911098301,
+    "request_sha256": "e8e3b61d7cfe6881a9721316d69b9325fadfc2be1022a3ce8c535948c0b7489c",
+    "queue_idle": {
+      "seconds": 0.0014988339971750975,
+      "status": {
+        "active_requests": 0,
+        "waiting_requests": 0,
+        "loaded_models": [
+          "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+        ]
+      },
+      "scope": "API queue idle only; not an independent GPU/executor fence."
+    },
+    "before": {
+      "candidate": "cone-hotrows-v3",
+      "namespace": "69438b6f7bdb",
+      "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+      "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+      "loaded_bindings": 1,
+      "models": [
+        {
+          "status": "loaded",
+          "enabled": true,
+          "python_call_active_hint": false,
+          "cone_counts": {},
+          "shape_counts": {},
+          "prime_counts": {},
+          "call_counts": {},
+          "row_status": "active",
+          "retained_row_cache_bytes_observed": 0,
+          "tables": [
+            {
+              "index": 0,
+              "retained_bytes": 0,
+              "unique_queries": 0,
+              "unique_hits": 0,
+              "counts": {}
+            },
+            {
+              "index": 1,
+              "retained_bytes": 0,
+              "unique_queries": 0,
+              "unique_hits": 0,
+              "counts": {}
+            }
+          ]
+        }
+      ],
+      "collected_without_native_unload": 0,
+      "failed_unloads": 0,
+      "unloads": [
+        {
+          "created_at_unix": 1792325670.246101,
+          "closed_at_unix": 1792326018.0198998,
+          "native_close_returned": true,
+          "candidate_close_returned": true,
+          "hook_restore_returned": true,
+          "final": {
+            "cone": {
+              "enabled": true,
+              "closed": true,
+              "counts": {
+                "model_calls": 113
+              },
+              "cone_counts": {
+                "full_calls": 105,
+                "fallback:short-chunk": 27,
+                "fallback:not-cache-only-prefill": 74,
+                "fallback:multimodal-or-token-types": 4,
+                "cone_calls": 8
+              },
+              "shape_counts": {
+                "index-pad": 40,
+                "gate-pad": 160,
+                "hc-warp32": 112,
+                "local-wkv-pad": 24,
+                "final-moe-256": 8
+              },
+              "prime_counts": {
+                "prefill_calls": 39,
+                "fallback:short-chunk": 27,
+                "fallback:multimodal-or-token-types": 4,
+                "eligible_prefills": 8,
+                "wkv_pads": 24,
+                "stage:0": 8,
+                "stage:1": 8,
+                "stage:2": 8,
+                "padded_appends": 8
+              },
+              "trace": [],
+              "prefill_trace": [],
+              "sources": {
+                "cone": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                  "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                },
+                "shape": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                  "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                },
+                "prime": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                  "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                }
+              },
+              "owned_instances": 0,
+              "model_references_released": true
+            },
+            "rows": {
+              "status": "closed",
+              "enabled": false,
+              "per_table_budget_bytes": 268435456,
+              "max_retained_bytes": 536870912,
+              "retained_bytes": 0,
+              "live_tables": [],
+              "retired_tables": [
+                {
+                  "cache_id": 0,
+                  "table": "language_model.layers.1.engram.embed.weight",
+                  "budget": 268435456,
+                  "nbytes": 0,
+                  "closed": true,
+                  "resident": false,
+                  "cache_disabled_after_allocation_failure": false,
+                  "counts": {
+                    "calls": 113,
+                    "cache_calls": 113,
+                    "requested_rows": 2395872,
+                    "unique_rows": 1604728,
+                    "duplicate_rows_elided": 791144,
+                    "miss_rows": 1090594,
+                    "native_read_calls": 113,
+                    "native_requested_rows": 1090594,
+                    "native_selected_bytes": 174495040
+                  },
+                  "unique_hits": 514134,
+                  "unique_queries": 1604728,
+                  "admitted": 806210
+                },
+                {
+                  "cache_id": 1,
+                  "table": "language_model.layers.14.engram.embed.weight",
+                  "budget": 268435456,
+                  "nbytes": 0,
+                  "closed": true,
+                  "resident": false,
+                  "cache_disabled_after_allocation_failure": false,
+                  "counts": {
+                    "calls": 113,
+                    "cache_calls": 113,
+                    "requested_rows": 2395872,
+                    "unique_rows": 1604751,
+                    "duplicate_rows_elided": 791121,
+                    "miss_rows": 1090429,
+                    "native_read_calls": 112,
+                    "native_requested_rows": 1090429,
+                    "native_selected_bytes": 174468640,
+                    "all_hit_calls": 1
+                  },
+                  "unique_hits": 514322,
+                  "unique_queries": 1604751,
+                  "admitted": 806288
+                }
+              ],
+              "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+            }
+          },
+          "owner_closed": true,
+          "status": "unloaded"
+        }
+      ]
+    },
+    "after": {
+      "candidate": "cone-hotrows-v3",
+      "namespace": "69438b6f7bdb",
+      "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+      "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+      "loaded_bindings": 1,
+      "models": [
+        {
+          "status": "loaded",
+          "enabled": true,
+          "python_call_active_hint": false,
+          "cone_counts": {
+            "full_calls": 6,
+            "fallback:short-chunk": 2,
+            "fallback:not-cache-only-prefill": 4
+          },
+          "shape_counts": {},
+          "prime_counts": {
+            "prefill_calls": 2,
+            "fallback:short-chunk": 2
+          },
+          "call_counts": {
+            "model_calls": 6
+          },
+          "row_status": "active",
+          "retained_row_cache_bytes_observed": 536870912,
+          "tables": [
+            {
+              "index": 0,
+              "retained_bytes": 268435456,
+              "unique_queries": 688,
+              "unique_hits": 168,
+              "counts": {
+                "calls": 6,
+                "cache_calls": 6,
+                "requested_rows": 696,
+                "unique_rows": 688,
+                "duplicate_rows_elided": 8,
+                "miss_rows": 520,
+                "native_read_calls": 6,
+                "native_requested_rows": 520,
+                "native_selected_bytes": 83200
+              }
+            },
+            {
+              "index": 1,
+              "retained_bytes": 268435456,
+              "unique_queries": 688,
+              "unique_hits": 168,
+              "counts": {
+                "calls": 6,
+                "cache_calls": 6,
+                "requested_rows": 696,
+                "unique_rows": 688,
+                "duplicate_rows_elided": 8,
+                "miss_rows": 520,
+                "native_read_calls": 6,
+                "native_requested_rows": 520,
+                "native_selected_bytes": 83200
+              }
+            }
+          ]
+        }
+      ],
+      "collected_without_native_unload": 0,
+      "failed_unloads": 0,
+      "unloads": [
+        {
+          "created_at_unix": 1792325670.246101,
+          "closed_at_unix": 1792326018.0198998,
+          "native_close_returned": true,
+          "candidate_close_returned": true,
+          "hook_restore_returned": true,
+          "final": {
+            "cone": {
+              "enabled": true,
+              "closed": true,
+              "counts": {
+                "model_calls": 113
+              },
+              "cone_counts": {
+                "full_calls": 105,
+                "fallback:short-chunk": 27,
+                "fallback:not-cache-only-prefill": 74,
+                "fallback:multimodal-or-token-types": 4,
+                "cone_calls": 8
+              },
+              "shape_counts": {
+                "index-pad": 40,
+                "gate-pad": 160,
+                "hc-warp32": 112,
+                "local-wkv-pad": 24,
+                "final-moe-256": 8
+              },
+              "prime_counts": {
+                "prefill_calls": 39,
+                "fallback:short-chunk": 27,
+                "fallback:multimodal-or-token-types": 4,
+                "eligible_prefills": 8,
+                "wkv_pads": 24,
+                "stage:0": 8,
+                "stage:1": 8,
+                "stage:2": 8,
+                "padded_appends": 8
+              },
+              "trace": [],
+              "prefill_trace": [],
+              "sources": {
+                "cone": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                  "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                },
+                "shape": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                  "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                },
+                "prime": {
+                  "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                  "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                }
+              },
+              "owned_instances": 0,
+              "model_references_released": true
+            },
+            "rows": {
+              "status": "closed",
+              "enabled": false,
+              "per_table_budget_bytes": 268435456,
+              "max_retained_bytes": 536870912,
+              "retained_bytes": 0,
+              "live_tables": [],
+              "retired_tables": [
+                {
+                  "cache_id": 0,
+                  "table": "language_model.layers.1.engram.embed.weight",
+                  "budget": 268435456,
+                  "nbytes": 0,
+                  "closed": true,
+                  "resident": false,
+                  "cache_disabled_after_allocation_failure": false,
+                  "counts": {
+                    "calls": 113,
+                    "cache_calls": 113,
+                    "requested_rows": 2395872,
+                    "unique_rows": 1604728,
+                    "duplicate_rows_elided": 791144,
+                    "miss_rows": 1090594,
+                    "native_read_calls": 113,
+                    "native_requested_rows": 1090594,
+                    "native_selected_bytes": 174495040
+                  },
+                  "unique_hits": 514134,
+                  "unique_queries": 1604728,
+                  "admitted": 806210
+                },
+                {
+                  "cache_id": 1,
+                  "table": "language_model.layers.14.engram.embed.weight",
+                  "budget": 268435456,
+                  "nbytes": 0,
+                  "closed": true,
+                  "resident": false,
+                  "cache_disabled_after_allocation_failure": false,
+                  "counts": {
+                    "calls": 113,
+                    "cache_calls": 113,
+                    "requested_rows": 2395872,
+                    "unique_rows": 1604751,
+                    "duplicate_rows_elided": 791121,
+                    "miss_rows": 1090429,
+                    "native_read_calls": 112,
+                    "native_requested_rows": 1090429,
+                    "native_selected_bytes": 174468640,
+                    "all_hit_calls": 1
+                  },
+                  "unique_hits": 514322,
+                  "unique_queries": 1604751,
+                  "admitted": 806288
+                }
+              ],
+              "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+            }
+          },
+          "owner_closed": true,
+          "status": "unloaded"
+        }
+      ]
+    }
+  },
+  "completed_at_unix": 1792326044.613701
+}

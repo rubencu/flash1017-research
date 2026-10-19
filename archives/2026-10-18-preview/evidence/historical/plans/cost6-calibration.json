@@ -1,0 +1,271 @@
+{
+  "profiles": {
+    "cost6-0": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "instrument": true,
+      "draft_width": 5,
+      "forced_depth": 0,
+      "fused_head": true,
+      "head_max_rows": 6
+    },
+    "cost6-1": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "instrument": true,
+      "draft_width": 5,
+      "forced_depth": 1,
+      "fused_head": true,
+      "head_max_rows": 6
+    },
+    "cost6-2": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "instrument": true,
+      "draft_width": 5,
+      "forced_depth": 2,
+      "fused_head": true,
+      "head_max_rows": 6
+    },
+    "cost6-3": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "instrument": true,
+      "draft_width": 5,
+      "forced_depth": 3,
+      "fused_head": true,
+      "head_max_rows": 6
+    },
+    "cost6-4": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "instrument": true,
+      "draft_width": 5,
+      "forced_depth": 4,
+      "fused_head": true,
+      "head_max_rows": 6
+    },
+    "cost6-5": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "instrument": true,
+      "draft_width": 5,
+      "forced_depth": 5,
+      "fused_head": true,
+      "head_max_rows": 6
+    }
+  },
+  "prompts": {
+    "cal-code-1k": {
+      "text": "Write a complete, extensively documented Python module implementing an LRU cache with capacity resizing, statistics, snapshots, restoration, and a large unittest suite. Aim for at least 200 lines. Begin with the implementation and then the tests.",
+      "prompt_tokens": 1024,
+      "max_tokens": 256,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "cal-prose-1k": {
+      "text": "Write a detailed textbook chapter of at least 1500 words explaining how a household refrigerator moves heat. Cover thermodynamics, refrigerant phase changes, the compressor, thermostat control, practical energy measurements, and common failure modes. Start directly with the chapter.",
+      "context": "A heat pump transfers thermal energy from a colder reservoir to a warmer reservoir. Work must be supplied to maintain the cycle. Measurements distinguish heat flow, electrical input and useful cooling.\n",
+      "prompt_tokens": 1024,
+      "max_tokens": 256,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "warmup": {
+      "text": "Write a complete 200-line Python module implementing an LRU cache with tests and documentation.",
+      "prompt_tokens": 1024,
+      "max_tokens": 64,
+      "temperature": 1.0,
+      "force_length": true
+    }
+  },
+  "jobs": [
+    {
+      "profile": "cost6-0",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "cost6-1",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "cost6-2",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "cost6-3",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "cost6-4",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "cost6-5",
+      "prompt": "warmup",
+      "warmup": true
+    },
+    {
+      "profile": "cost6-0",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-3",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-2",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-3",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-1",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-4",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-4",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-5",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-1",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-4",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-0",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-3",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-5",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-2",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-2",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-5",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-1",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-4",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-0",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-1",
+      "prompt": "cal-prose-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-3",
+      "prompt": "cal-code-1k",
+      "repeat": 0,
+      "seed": 1017
+    },
+    {
+      "profile": "cost6-5",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-2",
+      "prompt": "cal-prose-1k",
+      "repeat": 1,
+      "seed": 1018
+    },
+    {
+      "profile": "cost6-0",
+      "prompt": "cal-code-1k",
+      "repeat": 1,
+      "seed": 1018
+    }
+  ],
+  "cache_limit_bytes": 8589934592
+}

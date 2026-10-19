@@ -1,0 +1,103 @@
+Independent completed long-state review — 18 October 2026
+
+Accepted within the frozen offline scope. The unchanged v4b validator reproduced
+the completed report, and an independent pass reread every saved NPY container
+and payload, checked their recorded hashes, and compared the actual paired bytes.
+No differences were found. This was CPU-only inspection of completed evidence;
+no model, inference framework, server, weight payload or network was used.
+
+| Exact input tokens | Saved state prefix | Pair order | Compared payload bytes | Compared output IDs | Functional MTP cycles |
+|---:|---:|:---:|---:|---:|---:|
+| 262,016 | 262,015 | native → candidate | 236,818,984 | 128 | 57 |
+| 1,048,448 | 1,048,447 | candidate → native | 936,743,464 | 128 | 60 |
+
+The total comparison covers 1,173,562,448 bytes per paired side, or 2,347,124,896
+payload bytes across all four archives. It includes 560 actual target-array
+comparisons, 160 absent optional target-field comparisons, six physical BF16
+DSpark rings, and 258,560 finite FP32 vocabulary logits. Thus the report's
+720 target-slot comparisons include absent optional fields; they are not 720
+nonempty tensors. All 256 compared generated-token positions and all 117
+functional speculative cycles match, including confidence vectors, decisions
+and non-timing totals. Four requests generated 512 positions in total. Each
+request produced its required 128 outputs without an early EOS.
+
+All 40 layers' layouts and offsets, compressor tails, packed global/index state,
+local cache bytes and normalized Engram history agree. Saved state is captured
+after prefill, before the final prompt token. The next real target forward
+supplies the complete next-token vocabulary row; there is no extra inference
+probe. These are boundary-state comparisons plus matching subsequent generation,
+not an archive of internal state at every generated token. The input plus its
+128 reserved output positions totals 262,144 or 1,048,576 respectively.
+
+The complete external prefill traces contain 32 and 128 chunks per arm. Both
+lengths end with an 8,063-token chunk; the other chunks have 8,192 tokens. Across
+the candidate requests, all 160 cones, 160 successful draft-context appends and
+480 ordered stage projections are present. Every decoder layer's absolute
+dependency geometry and all shape-correction events reconcile: 800 index pads,
+3,200 gate pads, 2,240 HC reductions, 480 local-WKV pads and 160 final-MoE pads.
+The native reference executes no candidate events. The original 16-entry deque
+matches the external trace's final 16 events, with the expected 16/112 evictions.
+The 262K pair uses the actual VLM adapter route; the near-1M pair uses the target
+prefill route. They use separate, sequential worker threads, as declared.
+
+The audit verified all 1,197 archived source entries, the exact frozen plan and
+execution manifest, the 575 qualified native source pins, and all four completed
+generation backups against their corresponding raw rows. Inputs, seeds, order,
+runtime, checkpoint identity and complete output lengths match the plan. The
+checkpoint identity relies on its preserved full-hash receipt and run-time
+fingerprint verification; this audit did not reread model weights. All selected
+evidence bytes were rechecked unchanged at the end of the heavy audit.
+
+Cleanup is complete: both row tables retain zero bytes, their recorded history
+survives finalization, native model close completed, hooks were restored and
+source hashes were reverified. The supervisor records actual child 84500 exit
+with code 0, followed by available lock/port and sufficient headroom, a successful
+qualified-131K restart, and restoration of the original memory allowance. The
+saved restart report records a new ready child 89667. This is a saved lifecycle
+observation, not a claim that a particular server is running at review time.
+
+Resource observations and limits
+
+| Input / arm | Instrumented prefill minutes | Sampled process peak GiB | Minimum system available GiB | Process disk reads GiB |
+|---|---:|---:|---:|---:|
+| 262K native | 18.844 | 216.134 | 18.921 | 247.845 |
+| 262K candidate | 14.679 | 216.705 | 18.705 | 216.857 |
+| Near-1M candidate | 67.479 | 217.335 | 17.668 | 802.253 |
+| Near-1M native | 91.808 | 218.312 | 17.508 | 980.861 |
+
+The archived state, trace and probe I/O occurs inside the requests. These times
+and process disk counters are diagnostic observations, not an uninstrumented
+performance benchmark or an isolated measure of Engram traffic. State exports
+also account for substantial recorded writes. Resources were sampled every
+0.2 seconds, so unobserved instantaneous peaks remain possible. Maximum sampled
+swap peak-minus-start is zero for each request; existing system swap was nonzero,
+up to 1.640 GiB. This does not imply zero paging or attribute system swap to one
+process. The retained candidate row bound is 512 MiB, excluding temporaries,
+and stays allocated during the later native arm.
+
+There is one pair at each length, no standalone warmup and no independent cold
+replication. Both prompts use prefixes of the same two-book corpus. The first
+candidate starts with an empty row cache after native has warmed OS pages; the
+second retains earlier row history. These finite checks establish agreement
+with the pinned quantized native64 implementation on these inputs. They do not
+establish universal arithmetic equivalence, unquantized quality, long-document
+retrieval/reasoning quality or million-token HTTP/prefix/cancellation/vision
+support. The serving qualification remains a separate, conditional gate.
+
+Retained audit-script corrections
+
+The first independent pass used compact JSON for token hashing, while the
+frozen records use ordinary JSON serialization. Exact ordinary-JSON input hashes
+agree. The second pass incorrectly expected raw tokenizer IDs in the Engram
+lookback slot; the pinned native NgramHash stores normalized IDs. The correction
+retains the int64 layout check and direct byte comparison without asserting a
+newly reconstructed token map. Both attempts had already passed the unchanged
+frozen validator. Their scripts, failure receipts and logs are retained; these
+were review-script errors, not changes to model evidence or acceptance rules.
+The third pass completed all independent payload comparisons. No frozen source,
+plan, result or prior failed long-suite receipt was changed.
+
+Evidence: audit-01.json, audit.py, audit-03.log and manifest-01.json in this
+directory. The older interrupted v4 suite retains its failed/incomplete scope;
+this successful result belongs to the separately frozen timeout-corrected v4b
+plan with unchanged inputs and an explicit 43,200-second request bound.

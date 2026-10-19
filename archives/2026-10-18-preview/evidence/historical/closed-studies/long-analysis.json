@@ -1,0 +1,4563 @@
+{
+  "status": "accepted_complete_long_state_and_generation",
+  "pairs": [
+    {
+      "prompt_id": "new-prose-262016",
+      "input_tokens": 262016,
+      "order": "AB",
+      "state": {
+        "passed": true,
+        "slots_compared": 363,
+        "full_vocabulary_values_compared": 129280,
+        "comparisons": [
+          {
+            "key": "layer00_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "prime0_physical_keys",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "prime1_physical_keys",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "prime2_physical_keys",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "probe_logits",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          }
+        ],
+        "bytes_compared": 236818984
+      },
+      "output_ids_identical": true,
+      "functional_mtp_identical": true,
+      "candidate_cache_phase": "initially empty; native has warmed OS caches",
+      "diagnostic_prefill_seconds": {
+        "native64": 1130.6529527090024,
+        "fastpath64": 880.7666242499836
+      },
+      "resources": {
+        "native64": {
+          "sampling_interval_seconds": 0.2,
+          "process_footprint_peak_bytes": 232071677488,
+          "system_used_peak_bytes": 252052635648,
+          "system_available_min_bytes": 20316798976,
+          "swap_start_bytes": 1760821248,
+          "swap_peak_bytes": 1760821248,
+          "swap_end_bytes": 1735655424,
+          "mlx_cache_peak_bytes": 8734772725,
+          "mlx_active_bytes": 220837878696,
+          "mlx_peak_bytes": 227899793500,
+          "disk_read_bytes_delta": 266121564160,
+          "disk_write_bytes_delta": 272183296
+        },
+        "fastpath64": {
+          "sampling_interval_seconds": 0.2,
+          "process_footprint_peak_bytes": 232685635672,
+          "system_used_peak_bytes": 251997995008,
+          "system_available_min_bytes": 20084047872,
+          "swap_start_bytes": 1735655424,
+          "swap_peak_bytes": 1735655424,
+          "swap_end_bytes": 1735655424,
+          "mlx_cache_peak_bytes": 8992409589,
+          "mlx_active_bytes": 220766955408,
+          "mlx_peak_bytes": 224746485641,
+          "disk_read_bytes_delta": 232848404480,
+          "disk_write_bytes_delta": 272498688
+        }
+      }
+    },
+    {
+      "prompt_id": "new-prose-1048448",
+      "input_tokens": 1048448,
+      "order": "BA",
+      "state": {
+        "passed": true,
+        "slots_compared": 363,
+        "full_vocabulary_values_compared": 129280,
+        "comparisons": [
+          {
+            "key": "layer00_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer00_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer01_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer02_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer03_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer04_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer05_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer06_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer07_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer08_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer09_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer10_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer11_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer12_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer13_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer14_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer15_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer16_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer17_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer18_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer19_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer20_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer21_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer22_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer23_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer24_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer25_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer26_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer27_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer28_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer29_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer30_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer31_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer32_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer33_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer34_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer35_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer36_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer37_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer38_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_left_padding",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_lengths",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot0",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot1",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot2",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot3",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot4",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot5",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "layer39_slot6",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "prime0_physical_keys",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "prime1_physical_keys",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "prime2_physical_keys",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          },
+          {
+            "key": "probe_logits",
+            "same_layout": true,
+            "different_bytes": 0,
+            "byte_identical": true
+          }
+        ],
+        "bytes_compared": 936743464
+      },
+      "output_ids_identical": true,
+      "functional_mtp_identical": true,
+      "candidate_cache_phase": "persistent reuse after262K request",
+      "diagnostic_prefill_seconds": {
+        "native64": 5508.463430209085,
+        "fastpath64": 4048.7369745001197
+      },
+      "resources": {
+        "native64": {
+          "sampling_interval_seconds": 0.2,
+          "process_footprint_peak_bytes": 234410674624,
+          "system_used_peak_bytes": 252488007680,
+          "system_available_min_bytes": 18798608384,
+          "swap_start_bytes": 1621229568,
+          "swap_peak_bytes": 1621229568,
+          "swap_end_bytes": 1621229568,
+          "mlx_cache_peak_bytes": 8727431316,
+          "mlx_active_bytes": 223023572120,
+          "mlx_peak_bytes": 229314238116,
+          "disk_read_bytes_delta": 1053191962624,
+          "disk_write_bytes_delta": 946450432
+        },
+        "fastpath64": {
+          "sampling_interval_seconds": 0.2,
+          "process_footprint_peak_bytes": 233361230200,
+          "system_used_peak_bytes": 252325675008,
+          "system_available_min_bytes": 18970836992,
+          "swap_start_bytes": 1735655424,
+          "swap_peak_bytes": 1735655424,
+          "swap_end_bytes": 1621229568,
+          "mlx_cache_peak_bytes": 8850280785,
+          "mlx_active_bytes": 222952645768,
+          "mlx_peak_bytes": 225726383913,
+          "disk_read_bytes_delta": 861412155392,
+          "disk_write_bytes_delta": 947871744
+        }
+      }
+    }
+  ],
+  "measured_pairs": 2,
+  "output_ids_compared": 256,
+  "full_vocabulary_values_compared": 258560,
+  "target_slot_comparisons": 720,
+  "physical_dspark_ring_comparisons": 6,
+  "cache_deltas": [
+    {
+      "bypass_calls": 182,
+      "native_requested_rows": 12584976,
+      "calls": 182,
+      "native_selected_bytes": 2013596160,
+      "native_read_calls": 182,
+      "unique_hits": 0,
+      "unique_queries": 0,
+      "admitted": 0,
+      "retained_bytes_before": 0,
+      "retained_bytes_after": 0,
+      "unique_row_hit_fraction": null
+    },
+    {
+      "bypass_calls": 0,
+      "miss_rows": 8647435,
+      "cache_calls": 182,
+      "duplicate_rows_elided": 2014407,
+      "native_requested_rows": 8647435,
+      "calls": 182,
+      "requested_rows": 12584976,
+      "native_selected_bytes": 1383589600,
+      "unique_rows": 10570569,
+      "native_read_calls": 182,
+      "unique_hits": 1923134,
+      "unique_queries": 10570569,
+      "admitted": 4337779,
+      "retained_bytes_before": 0,
+      "retained_bytes_after": 536870912,
+      "unique_row_hit_fraction": 0.18193287419059467
+    },
+    {
+      "bypass_calls": 0,
+      "miss_rows": 32344693,
+      "cache_calls": 380,
+      "duplicate_rows_elided": 7641832,
+      "native_requested_rows": 32344693,
+      "calls": 380,
+      "requested_rows": 50333664,
+      "native_selected_bytes": 5175150880,
+      "unique_rows": 42691832,
+      "native_read_calls": 380,
+      "unique_hits": 10347139,
+      "unique_queries": 42691832,
+      "admitted": 3887341,
+      "retained_bytes_before": 536870912,
+      "retained_bytes_after": 536870912,
+      "unique_row_hit_fraction": 0.24236811856656795
+    },
+    {
+      "bypass_calls": 380,
+      "miss_rows": 0,
+      "cache_calls": 0,
+      "duplicate_rows_elided": 0,
+      "native_requested_rows": 50333664,
+      "calls": 380,
+      "requested_rows": 0,
+      "native_selected_bytes": 8053386240,
+      "unique_rows": 0,
+      "native_read_calls": 380,
+      "unique_hits": 0,
+      "unique_queries": 0,
+      "admitted": 0,
+      "retained_bytes_before": 536870912,
+      "retained_bytes_after": 536870912,
+      "unique_row_hit_fraction": null
+    }
+  ],
+  "limits": [
+    "Finite two-pair state/generation validation, not a universal arithmetic proof.",
+    "Instrumented final-state archive and trace I/O: timings are diagnostic, with no uninstrumented speed claim.",
+    "Correlated source prefixes, shared OS caches, persistent candidate row history and no cold-replicate claim.",
+    "No HTTP/prefix-restoration/cancellation/vision evidence is implied.",
+    "Full-array raw bytes retained; CPU validator imports no inference framework and reads no weights."
+  ],
+  "raw": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-long-v4b-01.jsonl",
+  "raw_sha256": "bf4d66468b0ae170bf029f86a1ab179cb08f84122aedceb3a3c69ff711dc07f3",
+  "qualification_sha256": "953fc183c96552f0242b1e4fe777cabb8b5e5803005d3617464cc427160db647",
+  "plan_sha256": "cb0d7190a52fa9e1b271284ba49b169d88c2d54464cea67169f6b6f903ba385f",
+  "execution_manifest_sha256": "1fbf3be24123e829f12827c1f76b8a1046ca4680779e8b4a9527f24365f4184f",
+  "source_snapshot_manifest_sha256": "4e13aff101e1d9eaff27f0302a0de8077ec98dc133643bf088cbda8d503a4fb7",
+  "analyzer": "${ORIGINAL_LAB_ROOT}/work/serving-long-v4b/validate_long.py",
+  "analyzer_sha256": "06998d9383cb6efe32f3688c3143bb39d88dff801533426fdfbee273b631d94a",
+  "analyzed_at_unix": 1792342691.9591198
+}

@@ -1,0 +1,132 @@
+{
+  "status": "failed",
+  "case": "prefill-and-decode-cancellation",
+  "kind": "candidate",
+  "server": {
+    "pid": 80188,
+    "created": 1792325644.418858,
+    "port": 8001,
+    "profile": "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/staged-01/candidate-profile.http-validation.json"
+  },
+  "profile_sha256": "ee9508df157aba9523f23aff7665f7137afeb913483dc3bd8ada6f1c1787b6df",
+  "started_at_unix": 1792325922.844639,
+  "timing_scope": "Functional serving qualification; not a controlled speed comparison.",
+  "source_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_vision.py": "5f222df8e9c0872781e37eb3462791e7335899c3990183cb51efba489b9cd73f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_cancel.py": "7877a4c1fdf0e6378a5e68d1e2c81136e81c7b6b9b797320c74d0196efe2539f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_lifecycle.py": "8fe87a256b4c8e889c0d69d2ce932e36ef7b2106210d630512a2db8048744f61",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/common.py": "09e9e59f86858fa7cd72bc10668344233ec6e1087db5c21b273aaff462db83c6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_sessions.py": "1ce082398ec09fd65ec3d18e5a71dcd12473b7b30d805084bd5977c169bd8526"
+  },
+  "tests": [
+    {
+      "test": "cancel-prefill",
+      "prompt_id": "performance-cpython-65536",
+      "request_sha256": "0741be6d1047528b1a5a8f04b8f7c3117cd402472068e139de99e94c6f10cac8",
+      "before": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 100,
+              "fallback:short-chunk": 25,
+              "fallback:not-cache-only-prefill": 71,
+              "fallback:multimodal-or-token-types": 4,
+              "cone_calls": 8
+            },
+            "shape_counts": {
+              "index-pad": 40,
+              "gate-pad": 160,
+              "hc-warp32": 112,
+              "local-wkv-pad": 24,
+              "final-moe-256": 8
+            },
+            "prime_counts": {
+              "prefill_calls": 37,
+              "fallback:short-chunk": 25,
+              "fallback:multimodal-or-token-types": 4,
+              "eligible_prefills": 8,
+              "wkv_pads": 24,
+              "stage:0": 8,
+              "stage:1": 8,
+              "stage:2": 8,
+              "padded_appends": 8
+            },
+            "call_counts": {
+              "model_calls": 108
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 1602072,
+                "unique_hits": 513819,
+                "counts": {
+                  "calls": 108,
+                  "cache_calls": 108,
+                  "requested_rows": 2393208,
+                  "unique_rows": 1602072,
+                  "duplicate_rows_elided": 791136,
+                  "miss_rows": 1088253,
+                  "native_read_calls": 108,
+                  "native_requested_rows": 1088253,
+                  "native_selected_bytes": 174120480
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 1602095,
+                "unique_hits": 514006,
+                "counts": {
+                  "calls": 108,
+                  "cache_calls": 108,
+                  "requested_rows": 2393208,
+                  "unique_rows": 1602095,
+                  "duplicate_rows_elided": 791113,
+                  "miss_rows": 1088089,
+                  "native_read_calls": 107,
+                  "native_requested_rows": 1088089,
+                  "native_selected_bytes": 174094240,
+                  "all_hit_calls": 1
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "progress": [
+        {
+          "total": 107,
+          "cache": 0,
+          "processed": 0,
+          "time_ms": 0
+        },
+        {
+          "total": 107,
+          "cache": 0,
+          "processed": 107,
+          "time_ms": 514
+        }
+      ],
+      "visible_text": "**",
+      "retokenized_visible_tokens": 1
+    }
+  ],
+  "performance_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+  "nonce": "e9885372-732f-4943-b33d-7eb5dbf7c641",
+  "exception": "RuntimeError('Decode began before prefill cancellation boundary')",
+  "completed_at_unix": 1792325923.367811
+}

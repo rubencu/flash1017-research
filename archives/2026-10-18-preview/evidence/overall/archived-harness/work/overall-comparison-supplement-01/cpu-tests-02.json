@@ -1,0 +1,29 @@
+{
+  "status": "12_cpu_tests_passed",
+  "created_at_utc": "2026-10-18T21:55:59.073598+00:00",
+  "tests": [
+    "complete groups and independently known prefix arithmetic",
+    "EOS127 blocks all48 prefix without subsetting",
+    "EOS128 allows prefix but preserves failed fixed512 qualification",
+    "later EOS preserves original audit bytes and failure",
+    "incomplete independent audit refuses qualification",
+    "restoration failure refuses qualification",
+    "zero time rejects all numeric aggregates",
+    "nonfinite arrival rejects all numeric aggregates",
+    "changed raw digest rejects all aggregates",
+    "prefix optional switch",
+    "CLI refuses overwrite",
+    "CLI writes no report for incomplete run"
+  ],
+  "scope": "Temporary synthetic records only; actual running benchmark results were not analyzed. No inference imports or network/service calls.",
+  "files_sha256": {
+    "supplement.py": "a98285b705825a39f8840305460324bc69d5fa8f2355cdc5534053e089a9a813",
+    "test_supplement.py": "9bc6b4c7a0c09787987757b01221ba3e0bcfa1d3a7b7fd1f64f8201fb80c3f30"
+  },
+  "test_dependency_sha256": {
+    "work/overall-comparison-report-01/test_independent_report.py": "2c4835a1158e9be952239a7c46c6b1dadcff72d747c096cdc06166da01bc69ce",
+    "work/overall-comparison-report-01/independent_report.py": "e0517b5e0d37519a2df239ddd404bcf8c797fe9497ea8c09f5c1ad273419827a"
+  },
+  "revision_note": "Only prefill/TTFT scope prose changed to correctly include the EOS-at-first-token edge case; numeric and qualification gates unchanged.",
+  "prior_receipt_sha256": "7b857a4b95f8ff432551a554c66d40d7a8ebd07712063fbd046e92ae52234bdc"
+}

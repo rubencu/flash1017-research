@@ -1,0 +1,14 @@
+{
+  "verified_at_unix": 1792361424.124233,
+  "loaded_models": [
+    "Qwen3.8-Flash-Next-oQ8e-mtp"
+  ],
+  "active_requests": 0,
+  "waiting_requests": 0,
+  "memory": {
+    "memory_guard_tier": "balanced",
+    "memory_guard_custom_ceiling_gb": 0.0
+  },
+  "candidate_server_running": false,
+  "matches_original_state": true
+}

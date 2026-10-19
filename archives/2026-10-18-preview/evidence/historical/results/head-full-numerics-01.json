@@ -1,0 +1,42 @@
+{
+  "kind": "instrumented full-checkpoint numerical validation; not a speed benchmark",
+  "checkpoint": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+  "rows": {
+    "2": {
+      "calls": 124,
+      "logits_checked": 32061440,
+      "different_bits": 0,
+      "argmax_mismatches": 0,
+      "max_abs_error": 0.0
+    },
+    "3": {
+      "calls": 99,
+      "logits_checked": 38396160,
+      "different_bits": 0,
+      "argmax_mismatches": 0,
+      "max_abs_error": 0.0
+    },
+    "4": {
+      "calls": 86,
+      "logits_checked": 44472320,
+      "different_bits": 0,
+      "argmax_mismatches": 0,
+      "max_abs_error": 0.0
+    },
+    "5": {
+      "calls": 82,
+      "logits_checked": 53004800,
+      "different_bits": 0,
+      "argmax_mismatches": 0,
+      "max_abs_error": 0.0
+    },
+    "6": {
+      "calls": 40,
+      "logits_checked": 31027200,
+      "different_bits": 29034790,
+      "argmax_mismatches": 0,
+      "max_abs_error": 5.7220458984375e-05
+    }
+  },
+  "status": "complete"
+}

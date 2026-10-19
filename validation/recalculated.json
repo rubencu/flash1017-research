@@ -1,0 +1,2386 @@
+{
+  "schema": "flash1017-portable-observation-analysis/1",
+  "status": "validated_saved_observations",
+  "baseline": "Untouched installed oMLX 0.7.1rc1, native adaptive MTP; NOT current main",
+  "counts": {
+    "processes": 6,
+    "measured_requests": 48,
+    "excluded_warmups": 6,
+    "unique_cases": 8
+  },
+  "fixed512": {
+    "qualified": false,
+    "early_eos_count": 9,
+    "status": "failed_early_eos",
+    "scope": "Original frozen fixed-length rule; full-512 metrics remain descriptive forced continuation, including post-EOS work."
+  },
+  "prefill_ttft": {
+    "qualified_separately": true,
+    "scope": "Endpoints contain no post-EOS continuation; no answer-quality equivalence claim."
+  },
+  "prefix128": {
+    "post_hoc": true,
+    "available_for_all48": true,
+    "horizon_tokens": 128,
+    "early_eos_blockers": [],
+    "subset_or_shorter_horizon_used": false,
+    "scope": "Saved token-128 delivery within original 512-token executions. NOT new 128-token requests, terminal completion or isolated GPU time."
+  },
+  "early_eos_records": [
+    {
+      "arm": "native2048",
+      "block": 0,
+      "fixture": "performance-moby-dick-16384",
+      "first_eos_position": 435,
+      "generated_tokens": 512,
+      "token_ids_sha256": "00963b2234dcfac0cc416ababbcc60d10b34fe5a1beb6f45a9a6d6eb8136e841"
+    },
+    {
+      "arm": "native2048",
+      "block": 0,
+      "fixture": "performance-pride-prejudice-16384",
+      "first_eos_position": 322,
+      "generated_tokens": 512,
+      "token_ids_sha256": "76aa79f60ff32567df8ef9c4dd05aae42a115a5ef2c4317a68280fb8431efe02"
+    },
+    {
+      "arm": "native8192",
+      "block": 0,
+      "fixture": "performance-pride-prejudice-65536",
+      "first_eos_position": 262,
+      "generated_tokens": 512,
+      "token_ids_sha256": "4482a039d39acf5a1e6844aa35d579b68028f1c4bcbcc4be561a7cb4331d003f"
+    },
+    {
+      "arm": "native8192",
+      "block": 0,
+      "fixture": "performance-pride-prejudice-16384",
+      "first_eos_position": 494,
+      "generated_tokens": 512,
+      "token_ids_sha256": "4b2fa51628b9afb3b6864e4ab2d1e59c3eb4740b1a692e60d5bc09d1bd6cc731"
+    },
+    {
+      "arm": "complete",
+      "block": 0,
+      "fixture": "performance-pride-prejudice-16384",
+      "first_eos_position": 318,
+      "generated_tokens": 512,
+      "token_ids_sha256": "59e85fd34c7f0d0dd9ff949ec1367fc2101642fe8112eae886e81e17def38adc"
+    },
+    {
+      "arm": "complete",
+      "block": 1,
+      "fixture": "performance-pride-prejudice-16384",
+      "first_eos_position": 390,
+      "generated_tokens": 512,
+      "token_ids_sha256": "8972d1710f8477c734f66da463e69191e7d2990214fc6823c92f4284649b82f2"
+    },
+    {
+      "arm": "complete",
+      "block": 1,
+      "fixture": "performance-curl-16384",
+      "first_eos_position": 258,
+      "generated_tokens": 512,
+      "token_ids_sha256": "818b7d949bd66780d195ccb5b935d82fd0673a808f411800f32fcd0ba03e2651"
+    },
+    {
+      "arm": "native8192",
+      "block": 1,
+      "fixture": "performance-pride-prejudice-65536",
+      "first_eos_position": 412,
+      "generated_tokens": 512,
+      "token_ids_sha256": "ca80c543b10f6527e07b27a46a4475b632a793fcbfb6413b3ed11381f0406342"
+    },
+    {
+      "arm": "native2048",
+      "block": 1,
+      "fixture": "performance-pride-prejudice-16384",
+      "first_eos_position": 407,
+      "generated_tokens": 512,
+      "token_ids_sha256": "61442f3dc8b81f064a4f7c2fc16658a2af39566bf8c4510063ac6435051400b6"
+    }
+  ],
+  "pair_group_summaries": [
+    {
+      "baseline": "native2048",
+      "group": "all",
+      "pairs": 16,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 19.18975915458859,
+          "candidate_geometric_mean": 15.3194275876036,
+          "ratio_candidate_over_baseline": 0.7983126554217576,
+          "change_percent": -20.168734457824243,
+          "improvement_percent": 20.168734457824243,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 19.55381604128208,
+          "candidate_geometric_mean": 15.631156450149781,
+          "ratio_candidate_over_baseline": 0.7993916081213627,
+          "change_percent": -20.06083918786373,
+          "improvement_percent": 20.06083918786373,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 45.50720357489396,
+          "candidate_geometric_mean": 35.89005980054742,
+          "ratio_candidate_over_baseline": 0.7886676609667078,
+          "change_percent": -21.13323390332922,
+          "improvement_percent": 21.13323390332922,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 36.70557120559743,
+          "candidate_geometric_mean": 43.883702732815166,
+          "ratio_candidate_over_baseline": 1.1955597281679986,
+          "change_percent": 19.55597281679986,
+          "improvement_percent": 19.55597281679986,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 29.00933187179948,
+          "candidate_geometric_mean": 23.147133623232182,
+          "ratio_candidate_over_baseline": 0.7979202597814382,
+          "change_percent": -20.207974021856177,
+          "improvement_percent": 20.207974021856177,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 35.3365846888995,
+          "candidate_geometric_mean": 40.36342297301584,
+          "ratio_candidate_over_baseline": 1.1422559177230123,
+          "change_percent": 14.225591772301227,
+          "improvement_percent": 14.225591772301227,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "group": "natural",
+      "pairs": 12,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 47.39548006211883,
+          "candidate_geometric_mean": 35.19067186010946,
+          "ratio_candidate_over_baseline": 0.7424900394296428,
+          "change_percent": -25.750996057035724,
+          "improvement_percent": 25.750996057035724,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 47.51677434266214,
+          "candidate_geometric_mean": 35.32391941484985,
+          "ratio_candidate_over_baseline": 0.7433989344502882,
+          "change_percent": -25.660106554971186,
+          "improvement_percent": 25.660106554971186,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 64.44426228135859,
+          "candidate_geometric_mean": 50.29120520181396,
+          "ratio_candidate_over_baseline": 0.7803829762570098,
+          "change_percent": -21.96170237429902,
+          "improvement_percent": 21.96170237429902,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 37.33971313998698,
+          "candidate_geometric_mean": 43.93249474134897,
+          "ratio_candidate_over_baseline": 1.1765621920191407,
+          "change_percent": 17.65621920191407,
+          "improvement_percent": 17.65621920191407,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 52.10405894568378,
+          "candidate_geometric_mean": 39.54688226181702,
+          "ratio_candidate_over_baseline": 0.758998109975327,
+          "change_percent": -24.1001890024673,
+          "improvement_percent": 24.1001890024673,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 35.49261049202634,
+          "candidate_geometric_mean": 40.953520333951026,
+          "ratio_candidate_over_baseline": 1.1538604731019015,
+          "change_percent": 15.386047310190154,
+          "improvement_percent": 15.386047310190154,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "group": "synthetic",
+      "pairs": 4,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 1.2737004921966604,
+          "candidate_geometric_mean": 1.2638265573124854,
+          "ratio_candidate_over_baseline": 0.9922478361713231,
+          "change_percent": -0.7752163828676939,
+          "improvement_percent": 0.7752163828676939,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 1.362652907540327,
+          "candidate_geometric_mean": 1.3544338016572506,
+          "ratio_candidate_over_baseline": 0.9939683056208991,
+          "change_percent": -0.6031694379100894,
+          "improvement_percent": 0.6031694379100894,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 16.023885237373353,
+          "candidate_geometric_mean": 13.044294572955602,
+          "ratio_candidate_over_baseline": 0.8140531699847487,
+          "change_percent": -18.594683001525127,
+          "improvement_percent": 18.594683001525127,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 34.86703485877588,
+          "candidate_geometric_mean": 43.737651600840465,
+          "ratio_candidate_over_baseline": 1.254412707532883,
+          "change_percent": 25.441270753288304,
+          "improvement_percent": 25.441270753288304,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 5.006523239248581,
+          "candidate_geometric_mean": 4.641433389801698,
+          "ratio_candidate_over_baseline": 0.9270771687256407,
+          "change_percent": -7.292283127435928,
+          "improvement_percent": 7.292283127435928,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 34.8726105762134,
+          "candidate_geometric_mean": 38.64365870814754,
+          "ratio_candidate_over_baseline": 1.1081378213338116,
+          "change_percent": 10.813782133381157,
+          "improvement_percent": 10.813782133381157,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "group": "1K",
+      "pairs": 4,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 1.2737004921966604,
+          "candidate_geometric_mean": 1.2638265573124854,
+          "ratio_candidate_over_baseline": 0.9922478361713231,
+          "change_percent": -0.7752163828676939,
+          "improvement_percent": 0.7752163828676939,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 1.362652907540327,
+          "candidate_geometric_mean": 1.3544338016572506,
+          "ratio_candidate_over_baseline": 0.9939683056208991,
+          "change_percent": -0.6031694379100894,
+          "improvement_percent": 0.6031694379100894,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 16.023885237373353,
+          "candidate_geometric_mean": 13.044294572955602,
+          "ratio_candidate_over_baseline": 0.8140531699847487,
+          "change_percent": -18.594683001525127,
+          "improvement_percent": 18.594683001525127,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 34.86703485877588,
+          "candidate_geometric_mean": 43.737651600840465,
+          "ratio_candidate_over_baseline": 1.254412707532883,
+          "change_percent": 25.441270753288304,
+          "improvement_percent": 25.441270753288304,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 5.006523239248581,
+          "candidate_geometric_mean": 4.641433389801698,
+          "ratio_candidate_over_baseline": 0.9270771687256407,
+          "change_percent": -7.292283127435928,
+          "improvement_percent": 7.292283127435928,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 34.8726105762134,
+          "candidate_geometric_mean": 38.64365870814754,
+          "ratio_candidate_over_baseline": 1.1081378213338116,
+          "change_percent": 10.813782133381157,
+          "improvement_percent": 10.813782133381157,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "group": "16K",
+      "pairs": 8,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 27.382582682301326,
+          "candidate_geometric_mean": 18.535864837809953,
+          "ratio_candidate_over_baseline": 0.6769217152694136,
+          "change_percent": -32.30782847305864,
+          "improvement_percent": 32.30782847305864,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 27.477437311963513,
+          "candidate_geometric_mean": 18.633609277032384,
+          "ratio_candidate_over_baseline": 0.6781421813641777,
+          "change_percent": -32.18578186358223,
+          "improvement_percent": 32.18578186358223,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 41.42266135982405,
+          "candidate_geometric_mean": 30.272433376591554,
+          "ratio_candidate_over_baseline": 0.730818165294248,
+          "change_percent": -26.918183470575197,
+          "improvement_percent": 26.918183470575197,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 37.060564489948895,
+          "candidate_geometric_mean": 44.184633244986074,
+          "ratio_candidate_over_baseline": 1.192227745396843,
+          "change_percent": 19.222774539684305,
+          "improvement_percent": 19.222774539684305,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 31.154310886719113,
+          "candidate_geometric_mean": 21.81335361892362,
+          "ratio_candidate_over_baseline": 0.7001712764002271,
+          "change_percent": -29.982872359977286,
+          "improvement_percent": 29.982872359977286,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 35.233049672229015,
+          "candidate_geometric_mean": 40.3954039737654,
+          "ratio_candidate_over_baseline": 1.1465202231870772,
+          "change_percent": 14.652022318707726,
+          "improvement_percent": 14.652022318707726,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "group": "64K",
+      "pairs": 4,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 141.99137480703607,
+          "candidate_geometric_mean": 126.84021441086371,
+          "ratio_candidate_over_baseline": 0.8932952060168261,
+          "change_percent": -10.67047939831739,
+          "improvement_percent": 10.67047939831739,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 142.0981427809606,
+          "candidate_geometric_mean": 126.94414845906535,
+          "ratio_candidate_over_baseline": 0.8933554371273202,
+          "change_percent": -10.664456287267976,
+          "improvement_percent": 10.664456287267976,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 155.98282183768637,
+          "candidate_geometric_mean": 138.7974431923897,
+          "ratio_candidate_over_baseline": 0.8898251843194667,
+          "change_percent": -11.017481568053334,
+          "improvement_percent": 11.017481568053334,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 37.90433411189163,
+          "candidate_geometric_mean": 43.43252598965207,
+          "ratio_candidate_over_baseline": 1.1458459040974442,
+          "change_percent": 14.584590409744425,
+          "improvement_percent": 14.584590409744425,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 145.73986761603612,
+          "candidate_geometric_mean": 129.98459133721894,
+          "ratio_candidate_over_baseline": 0.8918945341687436,
+          "change_percent": -10.810546583125635,
+          "improvement_percent": 10.810546583125635,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 36.0174827488845,
+          "candidate_geometric_mean": 42.09299295850151,
+          "ratio_candidate_over_baseline": 1.1686822550030984,
+          "change_percent": 16.86822550030984,
+          "improvement_percent": 16.86822550030984,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "group": "block0",
+      "pairs": 8,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 19.200575624534206,
+          "candidate_geometric_mean": 15.419755780728849,
+          "ratio_candidate_over_baseline": 0.8030882033049946,
+          "change_percent": -19.691179669500535,
+          "improvement_percent": 19.691179669500535,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 19.563305923384466,
+          "candidate_geometric_mean": 15.741008203272438,
+          "ratio_candidate_over_baseline": 0.8046190283441229,
+          "change_percent": -19.538097165587708,
+          "improvement_percent": 19.538097165587708,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 45.58804520406783,
+          "candidate_geometric_mean": 36.63849081648141,
+          "ratio_candidate_over_baseline": 0.8036863755064487,
+          "change_percent": -19.631362449355127,
+          "improvement_percent": 19.631362449355127,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 37.141158959179826,
+          "candidate_geometric_mean": 42.62291373616769,
+          "ratio_candidate_over_baseline": 1.1475924535099353,
+          "change_percent": 14.759245350993533,
+          "improvement_percent": 14.759245350993533,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 29.058706840521396,
+          "candidate_geometric_mean": 23.224942926407067,
+          "ratio_candidate_over_baseline": 0.7992421360616317,
+          "change_percent": -20.075786393836825,
+          "improvement_percent": 20.075786393836825,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 35.88627935047732,
+          "candidate_geometric_mean": 39.85783347404252,
+          "ratio_candidate_over_baseline": 1.110670545831115,
+          "change_percent": 11.067054583111503,
+          "improvement_percent": 11.067054583111503,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "group": "block1",
+      "pairs": 8,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 19.1789487780031,
+          "candidate_geometric_mean": 15.219752176952914,
+          "ratio_candidate_over_baseline": 0.7935655052381646,
+          "change_percent": -20.64344947618354,
+          "improvement_percent": 20.64344947618354,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 19.544330762586842,
+          "candidate_geometric_mean": 15.522071319311307,
+          "ratio_candidate_over_baseline": 0.7941981492159748,
+          "change_percent": -20.580185078402526,
+          "improvement_percent": 20.580185078402526,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 45.42650530279931,
+          "candidate_geometric_mean": 35.156917323336764,
+          "ratio_candidate_over_baseline": 0.7739296053920814,
+          "change_percent": -22.607039460791857,
+          "improvement_percent": 22.607039460791857,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 36.275091981107494,
+          "candidate_geometric_mean": 45.181785962886174,
+          "ratio_candidate_over_baseline": 1.245531947552811,
+          "change_percent": 24.553194755281105,
+          "improvement_percent": 24.553194755281105,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 28.960040798329665,
+          "candidate_geometric_mean": 23.06958500046801,
+          "ratio_candidate_over_baseline": 0.7966005697684864,
+          "change_percent": -20.339943023151363,
+          "improvement_percent": 20.339943023151363,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 34.795310076054385,
+          "candidate_geometric_mean": 40.87542578448488,
+          "ratio_candidate_over_baseline": 1.1747395179160867,
+          "change_percent": 17.473951791608666,
+          "improvement_percent": 17.473951791608666,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "group": "all",
+      "pairs": 16,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 23.842777991972493,
+          "candidate_geometric_mean": 15.3194275876036,
+          "ratio_candidate_over_baseline": 0.6425185686316174,
+          "change_percent": -35.74814313683826,
+          "improvement_percent": 35.74814313683826,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 24.292761282180564,
+          "candidate_geometric_mean": 15.631156450149781,
+          "ratio_candidate_over_baseline": 0.6434491439067356,
+          "change_percent": -35.65508560932644,
+          "improvement_percent": 35.65508560932644,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 54.06850103616003,
+          "candidate_geometric_mean": 35.89005980054742,
+          "ratio_candidate_over_baseline": 0.6637886960569669,
+          "change_percent": -33.621130394303314,
+          "improvement_percent": 33.621130394303314,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 35.998859257524515,
+          "candidate_geometric_mean": 43.883702732815166,
+          "ratio_candidate_over_baseline": 1.219030370348265,
+          "change_percent": 21.9030370348265,
+          "improvement_percent": 21.9030370348265,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 35.46222683004167,
+          "candidate_geometric_mean": 23.147133623232182,
+          "ratio_candidate_over_baseline": 0.6527264555090827,
+          "change_percent": -34.72735444909173,
+          "improvement_percent": 34.72735444909173,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 35.29838810618504,
+          "candidate_geometric_mean": 40.36342297301584,
+          "ratio_candidate_over_baseline": 1.1434919592247128,
+          "change_percent": 14.349195922471282,
+          "improvement_percent": 14.349195922471282,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "group": "natural",
+      "pairs": 12,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 63.32292448325843,
+          "candidate_geometric_mean": 35.19067186010946,
+          "ratio_candidate_over_baseline": 0.5557335222161655,
+          "change_percent": -44.426647778383455,
+          "improvement_percent": 44.426647778383455,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 63.44822352043352,
+          "candidate_geometric_mean": 35.32391941484985,
+          "ratio_candidate_over_baseline": 0.5567361457090086,
+          "change_percent": -44.32638542909913,
+          "improvement_percent": 44.32638542909913,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 80.94925848904005,
+          "candidate_geometric_mean": 50.29120520181396,
+          "ratio_candidate_over_baseline": 0.6212682628664601,
+          "change_percent": -37.87317371335399,
+          "improvement_percent": 37.87317371335399,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 36.45513786789958,
+          "candidate_geometric_mean": 43.93249474134897,
+          "ratio_candidate_over_baseline": 1.205111194491834,
+          "change_percent": 20.5111194491834,
+          "improvement_percent": 20.5111194491834,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 67.9992760941654,
+          "candidate_geometric_mean": 39.54688226181702,
+          "ratio_candidate_over_baseline": 0.5815779892575987,
+          "change_percent": -41.84220107424012,
+          "improvement_percent": 41.84220107424012,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 35.513927515342615,
+          "candidate_geometric_mean": 40.953520333951026,
+          "ratio_candidate_over_baseline": 1.1531678752303136,
+          "change_percent": 15.316787523031362,
+          "improvement_percent": 15.316787523031362,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "group": "synthetic",
+      "pairs": 4,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 1.2727541678889411,
+          "candidate_geometric_mean": 1.2638265573124854,
+          "ratio_candidate_over_baseline": 0.9929855970605356,
+          "change_percent": -0.7014402939464426,
+          "improvement_percent": 0.7014402939464426,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 1.363481122585555,
+          "candidate_geometric_mean": 1.3544338016572506,
+          "ratio_candidate_over_baseline": 0.9933645425826299,
+          "change_percent": -0.663545741737015,
+          "improvement_percent": 0.663545741737015,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 16.111600838810947,
+          "candidate_geometric_mean": 13.044294572955602,
+          "ratio_candidate_over_baseline": 0.8096212600757483,
+          "change_percent": -19.03787399242517,
+          "improvement_percent": 19.03787399242517,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 34.66400356571405,
+          "candidate_geometric_mean": 43.737651600840465,
+          "ratio_candidate_over_baseline": 1.2617599556244314,
+          "change_percent": 26.175995562443145,
+          "improvement_percent": 26.175995562443145,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 5.0298049691103035,
+          "candidate_geometric_mean": 4.641433389801698,
+          "ratio_candidate_over_baseline": 0.9227859565741169,
+          "change_percent": -7.721404342588311,
+          "improvement_percent": 7.721404342588311,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 34.659587017733706,
+          "candidate_geometric_mean": 38.64365870814754,
+          "ratio_candidate_over_baseline": 1.1149486197967495,
+          "change_percent": 11.494861979674953,
+          "improvement_percent": 11.494861979674953,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "group": "1K",
+      "pairs": 4,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 1.2727541678889411,
+          "candidate_geometric_mean": 1.2638265573124854,
+          "ratio_candidate_over_baseline": 0.9929855970605356,
+          "change_percent": -0.7014402939464426,
+          "improvement_percent": 0.7014402939464426,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 1.363481122585555,
+          "candidate_geometric_mean": 1.3544338016572506,
+          "ratio_candidate_over_baseline": 0.9933645425826299,
+          "change_percent": -0.663545741737015,
+          "improvement_percent": 0.663545741737015,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 16.111600838810947,
+          "candidate_geometric_mean": 13.044294572955602,
+          "ratio_candidate_over_baseline": 0.8096212600757483,
+          "change_percent": -19.03787399242517,
+          "improvement_percent": 19.03787399242517,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 34.66400356571405,
+          "candidate_geometric_mean": 43.737651600840465,
+          "ratio_candidate_over_baseline": 1.2617599556244314,
+          "change_percent": 26.175995562443145,
+          "improvement_percent": 26.175995562443145,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 5.0298049691103035,
+          "candidate_geometric_mean": 4.641433389801698,
+          "ratio_candidate_over_baseline": 0.9227859565741169,
+          "change_percent": -7.721404342588311,
+          "improvement_percent": 7.721404342588311,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 34.659587017733706,
+          "candidate_geometric_mean": 38.64365870814754,
+          "ratio_candidate_over_baseline": 1.1149486197967495,
+          "change_percent": 11.494861979674953,
+          "improvement_percent": 11.494861979674953,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "group": "16K",
+      "pairs": 8,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 35.54799657685438,
+          "candidate_geometric_mean": 18.535864837809953,
+          "ratio_candidate_over_baseline": 0.5214320530760604,
+          "change_percent": -47.856794692393954,
+          "improvement_percent": 47.856794692393954,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 35.64423750298104,
+          "candidate_geometric_mean": 18.633609277032384,
+          "ratio_candidate_over_baseline": 0.5227663875675274,
+          "change_percent": -47.72336124324726,
+          "improvement_percent": 47.72336124324726,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 49.61823808771245,
+          "candidate_geometric_mean": 30.272433376591554,
+          "ratio_candidate_over_baseline": 0.610106979677061,
+          "change_percent": -38.98930203229391,
+          "improvement_percent": 38.98930203229391,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 36.743848452401195,
+          "candidate_geometric_mean": 44.184633244986074,
+          "ratio_candidate_over_baseline": 1.2025042314830965,
+          "change_percent": 20.25042314830965,
+          "improvement_percent": 20.25042314830965,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 39.1809898734962,
+          "candidate_geometric_mean": 21.81335361892362,
+          "ratio_candidate_over_baseline": 0.556733091464827,
+          "change_percent": -44.326690853517306,
+          "improvement_percent": 44.326690853517306,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 36.1241265131676,
+          "candidate_geometric_mean": 40.3954039737654,
+          "ratio_candidate_over_baseline": 1.1182389132382446,
+          "change_percent": 11.823891323824466,
+          "improvement_percent": 11.823891323824466,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "group": "64K",
+      "pairs": 4,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 200.9336311005467,
+          "candidate_geometric_mean": 126.84021441086371,
+          "ratio_candidate_over_baseline": 0.6312542789185605,
+          "change_percent": -36.87457210814395,
+          "improvement_percent": 36.87457210814395,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 201.03873504309425,
+          "candidate_geometric_mean": 126.94414845906535,
+          "ratio_candidate_over_baseline": 0.6314412415689635,
+          "change_percent": -36.85587584310365,
+          "improvement_percent": 36.85587584310365,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 215.4546875534339,
+          "candidate_geometric_mean": 138.7974431923897,
+          "ratio_candidate_over_baseline": 0.6442071173687848,
+          "change_percent": -35.57928826312152,
+          "improvement_percent": 35.57928826312152,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 35.88450440547468,
+          "candidate_geometric_mean": 43.43252598965207,
+          "ratio_candidate_over_baseline": 1.2103420880190792,
+          "change_percent": 21.034208801907916,
+          "improvement_percent": 21.034208801907916,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 204.81514167893363,
+          "candidate_geometric_mean": 129.98459133721894,
+          "ratio_candidate_over_baseline": 0.6346434656719941,
+          "change_percent": -36.535653432800586,
+          "improvement_percent": 36.535653432800586,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 34.32427736174882,
+          "candidate_geometric_mean": 42.09299295850151,
+          "ratio_candidate_over_baseline": 1.2263329687869904,
+          "change_percent": 22.63329687869904,
+          "improvement_percent": 22.63329687869904,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "group": "block0",
+      "pairs": 8,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 24.28358283879327,
+          "candidate_geometric_mean": 15.419755780728849,
+          "ratio_candidate_over_baseline": 0.634986850296886,
+          "change_percent": -36.501314970311405,
+          "improvement_percent": 36.501314970311405,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 24.75063335257237,
+          "candidate_geometric_mean": 15.741008203272438,
+          "ratio_candidate_over_baseline": 0.6359840566114826,
+          "change_percent": -36.40159433885174,
+          "improvement_percent": 36.40159433885174,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 54.94473212321522,
+          "candidate_geometric_mean": 36.63849081648141,
+          "ratio_candidate_over_baseline": 0.6668244506919878,
+          "change_percent": -33.31755493080122,
+          "improvement_percent": 33.31755493080122,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 36.37170327667069,
+          "candidate_geometric_mean": 42.62291373616769,
+          "ratio_candidate_over_baseline": 1.1718701599412478,
+          "change_percent": 17.187015994124778,
+          "improvement_percent": 17.187015994124778,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 36.203677730255514,
+          "candidate_geometric_mean": 23.224942926407067,
+          "ratio_candidate_over_baseline": 0.6415078351832172,
+          "change_percent": -35.84921648167828,
+          "improvement_percent": 35.84921648167828,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 35.462045480455515,
+          "candidate_geometric_mean": 39.85783347404252,
+          "ratio_candidate_over_baseline": 1.1239575420433572,
+          "change_percent": 12.395754204335718,
+          "improvement_percent": 12.395754204335718,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "group": "block1",
+      "pairs": 8,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 23.40997480266126,
+          "candidate_geometric_mean": 15.219752176952914,
+          "ratio_candidate_over_baseline": 0.6501396223298248,
+          "change_percent": -34.98603776701752,
+          "improvement_percent": 34.98603776701752,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 23.84335957413702,
+          "candidate_geometric_mean": 15.522071319311307,
+          "ratio_candidate_over_baseline": 0.6510018552984521,
+          "change_percent": -34.89981447015479,
+          "improvement_percent": 34.89981447015479,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 53.20624364391144,
+          "candidate_geometric_mean": 35.156917323336764,
+          "ratio_candidate_over_baseline": 0.6607667618602854,
+          "change_percent": -33.923323813971464,
+          "improvement_percent": 33.923323813971464,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 35.629837238727234,
+          "candidate_geometric_mean": 45.181785962886174,
+          "ratio_candidate_over_baseline": 1.268088474840874,
+          "change_percent": 26.808847484087405,
+          "improvement_percent": 26.808847484087405,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 34.73596083566872,
+          "candidate_geometric_mean": 23.06958500046801,
+          "ratio_candidate_over_baseline": 0.6641412658658616,
+          "change_percent": -33.585873413413836,
+          "improvement_percent": 33.585873413413836,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 35.13548601085549,
+          "candidate_geometric_mean": 40.87542578448488,
+          "ratio_candidate_over_baseline": 1.1633658851867306,
+          "change_percent": 16.336588518673057,
+          "improvement_percent": 16.336588518673057,
+          "direction_of_improvement": "higher"
+        }
+      }
+    }
+  ],
+  "per_case_two_block_summaries": [
+    {
+      "baseline": "native2048",
+      "fixture": "held-code-1k",
+      "pairs": 2,
+      "cohort": "synthetic-generation",
+      "input_tokens": 1024,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 1.2774100795881522,
+          "candidate_geometric_mean": 1.2735496240922894,
+          "ratio_candidate_over_baseline": 0.996977904310018,
+          "change_percent": -0.30220956899820184,
+          "improvement_percent": 0.30220956899820184,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 1.3667086971677078,
+          "candidate_geometric_mean": 1.3632578768558257,
+          "ratio_candidate_over_baseline": 0.9974750871791235,
+          "change_percent": -0.25249128208765237,
+          "improvement_percent": 0.25249128208765237,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 14.788839300646547,
+          "candidate_geometric_mean": 12.092245717285735,
+          "ratio_candidate_over_baseline": 0.8176602281936401,
+          "change_percent": -18.233977180635986,
+          "improvement_percent": 18.233977180635986,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 38.07313868534349,
+          "candidate_geometric_mean": 47.63533645069551,
+          "ratio_candidate_over_baseline": 1.2511533878091612,
+          "change_percent": 25.11533878091612,
+          "improvement_percent": 25.11533878091612,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 4.80445899293385,
+          "candidate_geometric_mean": 4.604950409303197,
+          "ratio_candidate_over_baseline": 0.9584742873393071,
+          "change_percent": -4.152571266069294,
+          "improvement_percent": 4.152571266069294,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 36.942906585055155,
+          "candidate_geometric_mean": 39.185085266605064,
+          "ratio_candidate_over_baseline": 1.0606930772051635,
+          "change_percent": 6.069307720516348,
+          "improvement_percent": 6.069307720516348,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "fixture": "held-prose-1k",
+      "pairs": 2,
+      "cohort": "synthetic-generation",
+      "input_tokens": 1024,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 1.270001677413617,
+          "candidate_geometric_mean": 1.254177722447808,
+          "ratio_candidate_over_baseline": 0.9875402093971759,
+          "change_percent": -1.2459790602824095,
+          "improvement_percent": 1.2459790602824095,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 1.3586091537107252,
+          "candidate_geometric_mean": 1.345666842800662,
+          "ratio_candidate_over_baseline": 0.9904738527083274,
+          "change_percent": -0.952614729167256,
+          "improvement_percent": 0.952614729167256,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 17.362072362858544,
+          "candidate_geometric_mean": 14.071300309652672,
+          "ratio_candidate_over_baseline": 0.8104620240930689,
+          "change_percent": -18.95379759069311,
+          "improvement_percent": 18.95379759069311,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 31.930914072789317,
+          "candidate_geometric_mean": 40.15888854981672,
+          "ratio_candidate_over_baseline": 1.2576805179542,
+          "change_percent": 25.76805179542001,
+          "improvement_percent": 25.76805179542001,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 5.217085832556968,
+          "candidate_geometric_mean": 4.678205408780041,
+          "ratio_candidate_over_baseline": 0.8967085378557375,
+          "change_percent": -10.329146214426254,
+          "improvement_percent": 10.329146214426254,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 32.918334825668246,
+          "candidate_geometric_mean": 38.109713126602756,
+          "ratio_candidate_over_baseline": 1.157704766308122,
+          "change_percent": 15.77047663081219,
+          "improvement_percent": 15.77047663081219,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "fixture": "performance-cpython-16384",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 16384,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 22.7889883484129,
+          "candidate_geometric_mean": 14.426418216361215,
+          "ratio_candidate_over_baseline": 0.6330433802414016,
+          "change_percent": -36.69566197585984,
+          "improvement_percent": 36.69566197585984,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 22.880281123560227,
+          "candidate_geometric_mean": 14.519003582193001,
+          "ratio_candidate_over_baseline": 0.634564038080919,
+          "change_percent": -36.5435961919081,
+          "improvement_percent": 36.5435961919081,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 35.61595246548513,
+          "candidate_geometric_mean": 24.63672243083799,
+          "ratio_candidate_over_baseline": 0.6917327973950173,
+          "change_percent": -30.826720260498274,
+          "improvement_percent": 30.826720260498274,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 40.12553242714172,
+          "candidate_geometric_mean": 50.672460886689926,
+          "ratio_candidate_over_baseline": 1.2628483118248686,
+          "change_percent": 26.284831182486855,
+          "improvement_percent": 26.284831182486855,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 26.312778392591838,
+          "candidate_geometric_mean": 17.508271538208888,
+          "ratio_candidate_over_baseline": 0.6653904531472132,
+          "change_percent": -33.46095468527868,
+          "improvement_percent": 33.46095468527868,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 37.06357560303944,
+          "candidate_geometric_mean": 42.64106575879606,
+          "ratio_candidate_over_baseline": 1.1504844059162829,
+          "change_percent": 15.048440591628287,
+          "improvement_percent": 15.048440591628287,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "fixture": "performance-cpython-65536",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 65536,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 101.97280943066951,
+          "candidate_geometric_mean": 104.34389311872333,
+          "ratio_candidate_over_baseline": 1.023252116925011,
+          "change_percent": 2.3252116925011057,
+          "improvement_percent": -2.3252116925011057,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 102.07287295439305,
+          "candidate_geometric_mean": 104.44548170323183,
+          "ratio_candidate_over_baseline": 1.023244263438132,
+          "change_percent": 2.324426343813202,
+          "improvement_percent": -2.324426343813202,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 114.4737602451726,
+          "candidate_geometric_mean": 114.70151547265233,
+          "ratio_candidate_over_baseline": 1.0019895845737217,
+          "change_percent": 0.198958457372167,
+          "improvement_percent": -0.198958457372167,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 41.35299408299133,
+          "candidate_geometric_mean": 50.11828501334978,
+          "ratio_candidate_over_baseline": 1.2119626673891468,
+          "change_percent": 21.19626673891468,
+          "improvement_percent": 21.19626673891468,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 105.3254226221367,
+          "candidate_geometric_mean": 107.17622660029123,
+          "ratio_candidate_over_baseline": 1.0175722435484018,
+          "change_percent": 1.7572243548401811,
+          "improvement_percent": -1.7572243548401811,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 39.053300752408006,
+          "candidate_geometric_mean": 46.735616728148344,
+          "ratio_candidate_over_baseline": 1.196713615180572,
+          "change_percent": 19.671361518057196,
+          "improvement_percent": 19.671361518057196,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "fixture": "performance-curl-16384",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 16384,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 23.142283462719213,
+          "candidate_geometric_mean": 16.78278109378165,
+          "ratio_candidate_over_baseline": 0.7251998758384268,
+          "change_percent": -27.48001241615732,
+          "improvement_percent": 27.48001241615732,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 23.234264641598315,
+          "candidate_geometric_mean": 16.878464118383704,
+          "ratio_candidate_over_baseline": 0.7264470977990293,
+          "change_percent": -27.35529022009707,
+          "improvement_percent": 27.35529022009707,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 35.48428040087503,
+          "candidate_geometric_mean": 27.060188072738843,
+          "ratio_candidate_over_baseline": 0.7625965009585359,
+          "change_percent": -23.740349904146406,
+          "improvement_percent": 23.740349904146406,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 41.71688067845064,
+          "candidate_geometric_mean": 50.27172101508955,
+          "ratio_candidate_over_baseline": 1.2050690319484505,
+          "change_percent": 20.50690319484505,
+          "improvement_percent": 20.50690319484505,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 26.414659165993395,
+          "candidate_geometric_mean": 19.603708568196428,
+          "ratio_candidate_over_baseline": 0.7421526223376194,
+          "change_percent": -25.784737766238063,
+          "improvement_percent": 25.784737766238063,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 40.021320268017945,
+          "candidate_geometric_mean": 46.867617394399026,
+          "ratio_candidate_over_baseline": 1.1710662487027477,
+          "change_percent": 17.106624870274768,
+          "improvement_percent": 17.106624870274768,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "fixture": "performance-moby-dick-16384",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 16384,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 37.95560095942316,
+          "candidate_geometric_mean": 24.394818110818097,
+          "ratio_candidate_over_baseline": 0.6427198488280462,
+          "change_percent": -35.728015117195376,
+          "improvement_percent": 35.728015117195376,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 38.05450470586889,
+          "candidate_geometric_mean": 24.493704230578917,
+          "ratio_candidate_over_baseline": 0.6436479575781053,
+          "change_percent": -35.63520424218947,
+          "improvement_percent": 35.63520424218947,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 53.06455975151308,
+          "candidate_geometric_mean": 37.34542894302737,
+          "ratio_candidate_over_baseline": 0.7037734623241177,
+          "change_percent": -29.622653767588226,
+          "improvement_percent": 29.622653767588226,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 34.40475670906326,
+          "candidate_geometric_mean": 39.95785956166204,
+          "ratio_candidate_over_baseline": 1.1614050899867552,
+          "change_percent": 16.140508998675518,
+          "improvement_percent": 16.140508998675518,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 41.81397982940903,
+          "candidate_geometric_mean": 28.06922233515168,
+          "ratio_candidate_over_baseline": 0.6712879866893164,
+          "change_percent": -32.871201331068356,
+          "improvement_percent": 32.871201331068356,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 34.04990040734425,
+          "candidate_geometric_mean": 35.74008078717739,
+          "ratio_candidate_over_baseline": 1.0496383354903613,
+          "change_percent": 4.963833549036134,
+          "improvement_percent": 4.963833549036134,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "fixture": "performance-pride-prejudice-16384",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 16384,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 28.08603958065886,
+          "candidate_geometric_mean": 19.986253128437916,
+          "ratio_candidate_over_baseline": 0.7116080952261147,
+          "change_percent": -28.83919047738853,
+          "improvement_percent": 28.83919047738853,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 28.177894655481825,
+          "candidate_geometric_mean": 20.084625216185376,
+          "ratio_candidate_over_baseline": 0.712779484122248,
+          "change_percent": -28.722051587775198,
+          "improvement_percent": 28.722051587775198,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 43.90023677747538,
+          "candidate_geometric_mean": 33.73169268554416,
+          "ratio_candidate_over_baseline": 0.7683715433364458,
+          "change_percent": -23.162845666355423,
+          "improvement_percent": 23.162845666355423,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 32.75646243781958,
+          "candidate_geometric_mean": 37.44441521316411,
+          "ratio_candidate_over_baseline": 1.1431153557635687,
+          "change_percent": 14.31153557635687,
+          "improvement_percent": 14.31153557635687,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 32.41450342237732,
+          "candidate_geometric_mean": 23.50054140182164,
+          "ratio_candidate_over_baseline": 0.7250008150856964,
+          "change_percent": -27.499918491430364,
+          "improvement_percent": 27.499918491430364,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 30.51029259454119,
+          "candidate_geometric_mean": 37.27961049057427,
+          "ratio_candidate_over_baseline": 1.2218699763385499,
+          "change_percent": 22.186997633854986,
+          "improvement_percent": 22.186997633854986,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native2048",
+      "fixture": "performance-pride-prejudice-65536",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 65536,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 197.714965706617,
+          "candidate_geometric_mean": 154.18669469700848,
+          "ratio_candidate_over_baseline": 0.7798433171002406,
+          "change_percent": -22.01566828997594,
+          "improvement_percent": 22.01566828997594,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 197.8182997829419,
+          "candidate_geometric_mean": 154.28926713924653,
+          "ratio_candidate_over_baseline": 0.7799544698773673,
+          "change_percent": -22.004553012263273,
+          "improvement_percent": 22.004553012263273,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 212.54338685422402,
+          "candidate_geometric_mean": 167.9553243682979,
+          "ratio_candidate_over_baseline": 0.7902166557809331,
+          "change_percent": -20.978334421906688,
+          "improvement_percent": 20.978334421906688,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 34.74327739322867,
+          "candidate_geometric_mean": 37.638644525432866,
+          "ratio_candidate_over_baseline": 1.083336039356163,
+          "change_percent": 8.333603935616306,
+          "improvement_percent": 8.333603935616306,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 201.66174968924935,
+          "candidate_geometric_mean": 157.64684502391225,
+          "ratio_candidate_over_baseline": 0.7817389528100298,
+          "change_percent": -21.82610471899702,
+          "improvement_percent": 21.82610471899702,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 33.21765480952857,
+          "candidate_geometric_mean": 37.91155825568278,
+          "ratio_candidate_over_baseline": 1.141307490642228,
+          "change_percent": 14.130749064222803,
+          "improvement_percent": 14.130749064222803,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "fixture": "held-code-1k",
+      "pairs": 2,
+      "cohort": "synthetic-generation",
+      "input_tokens": 1024,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 1.2785988780081645,
+          "candidate_geometric_mean": 1.2735496240922894,
+          "ratio_candidate_over_baseline": 0.9960509476406385,
+          "change_percent": -0.39490523593614935,
+          "improvement_percent": 0.39490523593614935,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 1.3682256869460525,
+          "candidate_geometric_mean": 1.3632578768558257,
+          "ratio_candidate_over_baseline": 0.9963691588766211,
+          "change_percent": -0.36308411233788584,
+          "improvement_percent": 0.36308411233788584,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 14.882984170646841,
+          "candidate_geometric_mean": 12.092245717285735,
+          "ratio_candidate_over_baseline": 0.8124879781257053,
+          "change_percent": -18.75120218742947,
+          "improvement_percent": 18.75120218742947,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 37.81796071040918,
+          "candidate_geometric_mean": 47.63533645069551,
+          "ratio_candidate_over_baseline": 1.2595955878071492,
+          "change_percent": 25.95955878071492,
+          "improvement_percent": 25.95955878071492,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 4.832754357231824,
+          "candidate_geometric_mean": 4.604950409303197,
+          "ratio_candidate_over_baseline": 0.9528625021903427,
+          "change_percent": -4.713749780965726,
+          "improvement_percent": 4.713749780965726,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 36.66166625377939,
+          "candidate_geometric_mean": 39.185085266605064,
+          "ratio_candidate_over_baseline": 1.0688299052028367,
+          "change_percent": 6.882990520283672,
+          "improvement_percent": 6.882990520283672,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "fixture": "held-prose-1k",
+      "pairs": 2,
+      "cohort": "synthetic-generation",
+      "input_tokens": 1024,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 1.2669361750122914,
+          "candidate_geometric_mean": 1.254177722447808,
+          "ratio_candidate_over_baseline": 0.9899296801085029,
+          "change_percent": -1.0070319891497093,
+          "improvement_percent": 1.0070319891497093,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 1.3587530108404307,
+          "candidate_geometric_mean": 1.345666842800662,
+          "ratio_candidate_over_baseline": 0.9903689869053727,
+          "change_percent": -0.9631013094627328,
+          "improvement_percent": 0.9631013094627328,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 17.44164198609716,
+          "candidate_geometric_mean": 14.071300309652672,
+          "ratio_candidate_over_baseline": 0.8067646567260691,
+          "change_percent": -19.323534327393087,
+          "improvement_percent": 19.323534327393087,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 31.773081378052847,
+          "candidate_geometric_mean": 40.15888854981672,
+          "ratio_candidate_over_baseline": 1.2639280424830421,
+          "change_percent": 26.392804248304213,
+          "improvement_percent": 26.392804248304213,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 5.234890117977731,
+          "candidate_geometric_mean": 4.678205408780041,
+          "ratio_candidate_over_baseline": 0.8936587594673828,
+          "change_percent": -10.634124053261719,
+          "improvement_percent": 10.634124053261719,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 32.76684054467974,
+          "candidate_geometric_mean": 38.109713126602756,
+          "ratio_candidate_over_baseline": 1.163057301012518,
+          "change_percent": 16.305730101251804,
+          "improvement_percent": 16.305730101251804,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "fixture": "performance-cpython-16384",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 16384,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 30.85282198432676,
+          "candidate_geometric_mean": 14.426418216361215,
+          "ratio_candidate_over_baseline": 0.46758828815366843,
+          "change_percent": -53.24117118463316,
+          "improvement_percent": 53.24117118463316,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 30.946580758708848,
+          "candidate_geometric_mean": 14.519003582193001,
+          "ratio_candidate_over_baseline": 0.46916341728987715,
+          "change_percent": -53.08365827101229,
+          "improvement_percent": 53.08365827101229,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 43.48361822824179,
+          "candidate_geometric_mean": 24.63672243083799,
+          "ratio_candidate_over_baseline": 0.5665748029872295,
+          "change_percent": -43.34251970127705,
+          "improvement_percent": 43.34251970127705,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 40.786285309580165,
+          "candidate_geometric_mean": 50.672460886689926,
+          "ratio_candidate_over_baseline": 1.2423897028638606,
+          "change_percent": 24.238970286386063,
+          "improvement_percent": 24.238970286386063,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 34.18845167739703,
+          "candidate_geometric_mean": 17.508271538208888,
+          "ratio_candidate_over_baseline": 0.5121106888202285,
+          "change_percent": -48.78893111797715,
+          "improvement_percent": 48.78893111797715,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 39.22209094196544,
+          "candidate_geometric_mean": 42.64106575879606,
+          "ratio_candidate_over_baseline": 1.0871696213720339,
+          "change_percent": 8.716962137203389,
+          "improvement_percent": 8.716962137203389,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "fixture": "performance-cpython-65536",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 65536,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 161.82938666335374,
+          "candidate_geometric_mean": 104.34389311872333,
+          "ratio_candidate_over_baseline": 0.6447771648284444,
+          "change_percent": -35.522283517155564,
+          "improvement_percent": 35.522283517155564,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 161.93080824800046,
+          "candidate_geometric_mean": 104.44548170323183,
+          "ratio_candidate_over_baseline": 0.6450006816693667,
+          "change_percent": -35.49993183306333,
+          "improvement_percent": 35.49993183306333,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 175.41238112652943,
+          "candidate_geometric_mean": 114.70151547265233,
+          "ratio_candidate_over_baseline": 0.6538963483422255,
+          "change_percent": -34.610365165777445,
+          "improvement_percent": 34.610365165777445,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 37.905489933249605,
+          "candidate_geometric_mean": 50.11828501334978,
+          "ratio_candidate_over_baseline": 1.322190666882463,
+          "change_percent": 32.2190666882463,
+          "improvement_percent": 32.2190666882463,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 165.58532691081749,
+          "candidate_geometric_mean": 107.17622660029123,
+          "ratio_candidate_over_baseline": 0.6472567865751491,
+          "change_percent": -35.274321342485095,
+          "improvement_percent": 35.274321342485095,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 34.75949604280248,
+          "candidate_geometric_mean": 46.735616728148344,
+          "ratio_candidate_over_baseline": 1.3445424142685667,
+          "change_percent": 34.45424142685667,
+          "improvement_percent": 34.45424142685667,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "fixture": "performance-curl-16384",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 16384,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 30.871874769193514,
+          "candidate_geometric_mean": 16.78278109378165,
+          "ratio_candidate_over_baseline": 0.5436268843163643,
+          "change_percent": -45.63731156836357,
+          "improvement_percent": 45.63731156836357,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 30.96637798079935,
+          "candidate_geometric_mean": 16.878464118383704,
+          "ratio_candidate_over_baseline": 0.5450577438810946,
+          "change_percent": -45.494225611890535,
+          "improvement_percent": 45.494225611890535,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 43.672788200937894,
+          "candidate_geometric_mean": 27.060188072738843,
+          "ratio_candidate_over_baseline": 0.6196121014356879,
+          "change_percent": -38.03878985643121,
+          "improvement_percent": 38.03878985643121,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 40.24969414727738,
+          "candidate_geometric_mean": 50.27172101508955,
+          "ratio_candidate_over_baseline": 1.2489963484229374,
+          "change_percent": 24.89963484229374,
+          "improvement_percent": 24.89963484229374,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 34.12288004480328,
+          "candidate_geometric_mean": 19.603708568196428,
+          "ratio_candidate_over_baseline": 0.574503340352772,
+          "change_percent": -42.549665964722806,
+          "improvement_percent": 42.549665964722806,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 40.28278234162586,
+          "candidate_geometric_mean": 46.867617394399026,
+          "ratio_candidate_over_baseline": 1.163465249170954,
+          "change_percent": 16.346524917095408,
+          "improvement_percent": 16.346524917095408,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "fixture": "performance-moby-dick-16384",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 16384,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 41.49201429798443,
+          "candidate_geometric_mean": 24.394818110818097,
+          "ratio_candidate_over_baseline": 0.5879400777128123,
+          "change_percent": -41.20599222871877,
+          "improvement_percent": 41.20599222871877,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 41.58888023135567,
+          "candidate_geometric_mean": 24.493704230578917,
+          "ratio_candidate_over_baseline": 0.5889483942419792,
+          "change_percent": -41.10516057580208,
+          "improvement_percent": 41.10516057580208,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 56.786532959446376,
+          "candidate_geometric_mean": 37.34542894302737,
+          "ratio_candidate_over_baseline": 0.6576458712437562,
+          "change_percent": -34.235412875624384,
+          "improvement_percent": 34.235412875624384,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 33.63654209242982,
+          "candidate_geometric_mean": 39.95785956166204,
+          "ratio_candidate_over_baseline": 1.1879300628424254,
+          "change_percent": 18.79300628424254,
+          "improvement_percent": 18.79300628424254,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 45.43816124882471,
+          "candidate_geometric_mean": 28.06922233515168,
+          "ratio_candidate_over_baseline": 0.6177455593205304,
+          "change_percent": -38.22544406794696,
+          "improvement_percent": 38.22544406794696,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 33.0318368198834,
+          "candidate_geometric_mean": 35.74008078717739,
+          "ratio_candidate_over_baseline": 1.0819889000439655,
+          "change_percent": 8.198890004396553,
+          "improvement_percent": 8.198890004396553,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "fixture": "performance-pride-prejudice-16384",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 16384,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 40.40527831687568,
+          "candidate_geometric_mean": 19.986253128437916,
+          "ratio_candidate_over_baseline": 0.49464460983778075,
+          "change_percent": -50.53553901622192,
+          "improvement_percent": 50.53553901622192,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 40.502050032758795,
+          "candidate_geometric_mean": 20.084625216185376,
+          "ratio_candidate_over_baseline": 0.4958915709190169,
+          "change_percent": -50.41084290809831,
+          "improvement_percent": 50.41084290809831,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 56.20609421698494,
+          "candidate_geometric_mean": 33.73169268554416,
+          "ratio_candidate_over_baseline": 0.6001429765840368,
+          "change_percent": -39.985702341596316,
+          "improvement_percent": 39.985702341596316,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 33.010376999789074,
+          "candidate_geometric_mean": 37.44441521316411,
+          "ratio_candidate_over_baseline": 1.1343225560072636,
+          "change_percent": 13.43225560072636,
+          "improvement_percent": 13.43225560072636,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 44.45859713370239,
+          "candidate_geometric_mean": 23.50054140182164,
+          "ratio_candidate_over_baseline": 0.5285938584869736,
+          "change_percent": -47.14061415130264,
+          "improvement_percent": 47.14061415130264,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 32.62920495355424,
+          "candidate_geometric_mean": 37.27961049057427,
+          "ratio_candidate_over_baseline": 1.1425227964836904,
+          "change_percent": 14.252279648369036,
+          "improvement_percent": 14.252279648369036,
+          "direction_of_improvement": "higher"
+        }
+      }
+    },
+    {
+      "baseline": "native8192",
+      "fixture": "performance-pride-prejudice-65536",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 65536,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 249.4869747683063,
+          "candidate_geometric_mean": 154.18669469700848,
+          "ratio_candidate_over_baseline": 0.6180150079586266,
+          "change_percent": -38.198499204137335,
+          "improvement_percent": 38.198499204137335,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 249.59162141541722,
+          "candidate_geometric_mean": 154.28926713924653,
+          "ratio_candidate_over_baseline": 0.6181668529748016,
+          "change_percent": -38.183314702519844,
+          "improvement_percent": 38.183314702519844,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 264.6376617809169,
+          "candidate_geometric_mean": 167.9553243682979,
+          "ratio_candidate_over_baseline": 0.6346614583805594,
+          "change_percent": -36.533854161944056,
+          "improvement_percent": 36.533854161944056,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 33.971270617900664,
+          "candidate_geometric_mean": 37.638644525432866,
+          "ratio_candidate_over_baseline": 1.1079551586039218,
+          "change_percent": 10.795515860392179,
+          "improvement_percent": 10.795515860392179,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 253.33912758800832,
+          "candidate_geometric_mean": 157.64684502391225,
+          "ratio_candidate_over_baseline": 0.6222759449945081,
+          "change_percent": -37.77240550054919,
+          "improvement_percent": 37.77240550054919,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 33.89450799158576,
+          "candidate_geometric_mean": 37.91155825568278,
+          "ratio_candidate_over_baseline": 1.118516258300437,
+          "change_percent": 11.85162583004371,
+          "improvement_percent": 11.85162583004371,
+          "direction_of_improvement": "higher"
+        }
+      }
+    }
+  ],
+  "per_arm_group_summaries": [
+    {
+      "arm": "native2048",
+      "group": "all",
+      "requests": 16,
+      "geometric_means": {
+        "prefill_seconds": 19.18975915458859,
+        "ttft_seconds": 19.55381604128208,
+        "total_seconds": 45.50720357489396,
+        "decode_tokens_per_second": 36.70557120559743,
+        "prefix128_delivery_seconds": 29.00933187179948,
+        "prefix128_post_first_tokens_per_second": 35.3365846888995
+      }
+    },
+    {
+      "arm": "native2048",
+      "group": "natural",
+      "requests": 12,
+      "geometric_means": {
+        "prefill_seconds": 47.39548006211883,
+        "ttft_seconds": 47.51677434266214,
+        "total_seconds": 64.44426228135859,
+        "decode_tokens_per_second": 37.33971313998698,
+        "prefix128_delivery_seconds": 52.10405894568378,
+        "prefix128_post_first_tokens_per_second": 35.49261049202634
+      }
+    },
+    {
+      "arm": "native2048",
+      "group": "synthetic",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 1.2737004921966604,
+        "ttft_seconds": 1.362652907540327,
+        "total_seconds": 16.023885237373353,
+        "decode_tokens_per_second": 34.86703485877588,
+        "prefix128_delivery_seconds": 5.006523239248581,
+        "prefix128_post_first_tokens_per_second": 34.8726105762134
+      }
+    },
+    {
+      "arm": "native2048",
+      "group": "1K",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 1.2737004921966604,
+        "ttft_seconds": 1.362652907540327,
+        "total_seconds": 16.023885237373353,
+        "decode_tokens_per_second": 34.86703485877588,
+        "prefix128_delivery_seconds": 5.006523239248581,
+        "prefix128_post_first_tokens_per_second": 34.8726105762134
+      }
+    },
+    {
+      "arm": "native2048",
+      "group": "16K",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 27.382582682301326,
+        "ttft_seconds": 27.477437311963513,
+        "total_seconds": 41.42266135982405,
+        "decode_tokens_per_second": 37.060564489948895,
+        "prefix128_delivery_seconds": 31.154310886719113,
+        "prefix128_post_first_tokens_per_second": 35.233049672229015
+      }
+    },
+    {
+      "arm": "native2048",
+      "group": "64K",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 141.99137480703607,
+        "ttft_seconds": 142.0981427809606,
+        "total_seconds": 155.98282183768637,
+        "decode_tokens_per_second": 37.90433411189163,
+        "prefix128_delivery_seconds": 145.73986761603612,
+        "prefix128_post_first_tokens_per_second": 36.0174827488845
+      }
+    },
+    {
+      "arm": "native2048",
+      "group": "block0",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 19.200575624534206,
+        "ttft_seconds": 19.563305923384466,
+        "total_seconds": 45.58804520406783,
+        "decode_tokens_per_second": 37.141158959179826,
+        "prefix128_delivery_seconds": 29.058706840521396,
+        "prefix128_post_first_tokens_per_second": 35.88627935047732
+      }
+    },
+    {
+      "arm": "native2048",
+      "group": "block1",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 19.1789487780031,
+        "ttft_seconds": 19.544330762586842,
+        "total_seconds": 45.42650530279931,
+        "decode_tokens_per_second": 36.275091981107494,
+        "prefix128_delivery_seconds": 28.960040798329665,
+        "prefix128_post_first_tokens_per_second": 34.795310076054385
+      }
+    },
+    {
+      "arm": "native8192",
+      "group": "all",
+      "requests": 16,
+      "geometric_means": {
+        "prefill_seconds": 23.842777991972493,
+        "ttft_seconds": 24.292761282180564,
+        "total_seconds": 54.06850103616003,
+        "decode_tokens_per_second": 35.998859257524515,
+        "prefix128_delivery_seconds": 35.46222683004167,
+        "prefix128_post_first_tokens_per_second": 35.29838810618504
+      }
+    },
+    {
+      "arm": "native8192",
+      "group": "natural",
+      "requests": 12,
+      "geometric_means": {
+        "prefill_seconds": 63.32292448325843,
+        "ttft_seconds": 63.44822352043352,
+        "total_seconds": 80.94925848904005,
+        "decode_tokens_per_second": 36.45513786789958,
+        "prefix128_delivery_seconds": 67.9992760941654,
+        "prefix128_post_first_tokens_per_second": 35.513927515342615
+      }
+    },
+    {
+      "arm": "native8192",
+      "group": "synthetic",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 1.2727541678889411,
+        "ttft_seconds": 1.363481122585555,
+        "total_seconds": 16.111600838810947,
+        "decode_tokens_per_second": 34.66400356571405,
+        "prefix128_delivery_seconds": 5.0298049691103035,
+        "prefix128_post_first_tokens_per_second": 34.659587017733706
+      }
+    },
+    {
+      "arm": "native8192",
+      "group": "1K",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 1.2727541678889411,
+        "ttft_seconds": 1.363481122585555,
+        "total_seconds": 16.111600838810947,
+        "decode_tokens_per_second": 34.66400356571405,
+        "prefix128_delivery_seconds": 5.0298049691103035,
+        "prefix128_post_first_tokens_per_second": 34.659587017733706
+      }
+    },
+    {
+      "arm": "native8192",
+      "group": "16K",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 35.54799657685438,
+        "ttft_seconds": 35.64423750298104,
+        "total_seconds": 49.61823808771245,
+        "decode_tokens_per_second": 36.743848452401195,
+        "prefix128_delivery_seconds": 39.1809898734962,
+        "prefix128_post_first_tokens_per_second": 36.1241265131676
+      }
+    },
+    {
+      "arm": "native8192",
+      "group": "64K",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 200.9336311005467,
+        "ttft_seconds": 201.03873504309425,
+        "total_seconds": 215.4546875534339,
+        "decode_tokens_per_second": 35.88450440547468,
+        "prefix128_delivery_seconds": 204.81514167893363,
+        "prefix128_post_first_tokens_per_second": 34.32427736174882
+      }
+    },
+    {
+      "arm": "native8192",
+      "group": "block0",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 24.28358283879327,
+        "ttft_seconds": 24.75063335257237,
+        "total_seconds": 54.94473212321522,
+        "decode_tokens_per_second": 36.37170327667069,
+        "prefix128_delivery_seconds": 36.203677730255514,
+        "prefix128_post_first_tokens_per_second": 35.462045480455515
+      }
+    },
+    {
+      "arm": "native8192",
+      "group": "block1",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 23.40997480266126,
+        "ttft_seconds": 23.84335957413702,
+        "total_seconds": 53.20624364391144,
+        "decode_tokens_per_second": 35.629837238727234,
+        "prefix128_delivery_seconds": 34.73596083566872,
+        "prefix128_post_first_tokens_per_second": 35.13548601085549
+      }
+    },
+    {
+      "arm": "complete",
+      "group": "all",
+      "requests": 16,
+      "geometric_means": {
+        "prefill_seconds": 15.3194275876036,
+        "ttft_seconds": 15.631156450149781,
+        "total_seconds": 35.89005980054742,
+        "decode_tokens_per_second": 43.883702732815166,
+        "prefix128_delivery_seconds": 23.147133623232182,
+        "prefix128_post_first_tokens_per_second": 40.36342297301584
+      }
+    },
+    {
+      "arm": "complete",
+      "group": "natural",
+      "requests": 12,
+      "geometric_means": {
+        "prefill_seconds": 35.19067186010946,
+        "ttft_seconds": 35.32391941484985,
+        "total_seconds": 50.29120520181396,
+        "decode_tokens_per_second": 43.93249474134897,
+        "prefix128_delivery_seconds": 39.54688226181702,
+        "prefix128_post_first_tokens_per_second": 40.953520333951026
+      }
+    },
+    {
+      "arm": "complete",
+      "group": "synthetic",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 1.2638265573124854,
+        "ttft_seconds": 1.3544338016572506,
+        "total_seconds": 13.044294572955602,
+        "decode_tokens_per_second": 43.737651600840465,
+        "prefix128_delivery_seconds": 4.641433389801698,
+        "prefix128_post_first_tokens_per_second": 38.64365870814754
+      }
+    },
+    {
+      "arm": "complete",
+      "group": "1K",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 1.2638265573124854,
+        "ttft_seconds": 1.3544338016572506,
+        "total_seconds": 13.044294572955602,
+        "decode_tokens_per_second": 43.737651600840465,
+        "prefix128_delivery_seconds": 4.641433389801698,
+        "prefix128_post_first_tokens_per_second": 38.64365870814754
+      }
+    },
+    {
+      "arm": "complete",
+      "group": "16K",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 18.535864837809953,
+        "ttft_seconds": 18.633609277032384,
+        "total_seconds": 30.272433376591554,
+        "decode_tokens_per_second": 44.184633244986074,
+        "prefix128_delivery_seconds": 21.81335361892362,
+        "prefix128_post_first_tokens_per_second": 40.3954039737654
+      }
+    },
+    {
+      "arm": "complete",
+      "group": "64K",
+      "requests": 4,
+      "geometric_means": {
+        "prefill_seconds": 126.84021441086371,
+        "ttft_seconds": 126.94414845906535,
+        "total_seconds": 138.7974431923897,
+        "decode_tokens_per_second": 43.43252598965207,
+        "prefix128_delivery_seconds": 129.98459133721894,
+        "prefix128_post_first_tokens_per_second": 42.09299295850151
+      }
+    },
+    {
+      "arm": "complete",
+      "group": "block0",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 15.419755780728849,
+        "ttft_seconds": 15.741008203272438,
+        "total_seconds": 36.63849081648141,
+        "decode_tokens_per_second": 42.62291373616769,
+        "prefix128_delivery_seconds": 23.224942926407067,
+        "prefix128_post_first_tokens_per_second": 39.85783347404252
+      }
+    },
+    {
+      "arm": "complete",
+      "group": "block1",
+      "requests": 8,
+      "geometric_means": {
+        "prefill_seconds": 15.219752176952914,
+        "ttft_seconds": 15.522071319311307,
+        "total_seconds": 35.156917323336764,
+        "decode_tokens_per_second": 45.181785962886174,
+        "prefix128_delivery_seconds": 23.06958500046801,
+        "prefix128_post_first_tokens_per_second": 40.87542578448488
+      }
+    }
+  ],
+  "resource_summary": [
+    {
+      "arm": "native2048",
+      "requests": 16,
+      "geometric_mean_total_seconds": 45.50720357489396,
+      "geometric_mean_decode_tokens_per_second": 36.70557120559743,
+      "max_process_footprint_gib": 208.34694036096334,
+      "minimum_system_available_gib": 23.508285522460938,
+      "max_request_swap_growth_gib": 0.0,
+      "process_disk_read_gib_sum": 278.77953720092773
+    },
+    {
+      "arm": "native8192",
+      "requests": 16,
+      "geometric_mean_total_seconds": 54.06850103616003,
+      "geometric_mean_decode_tokens_per_second": 35.998859257524515,
+      "max_process_footprint_gib": 215.77484273910522,
+      "minimum_system_available_gib": 19.769515991210938,
+      "max_request_swap_growth_gib": 0.00164794921875,
+      "process_disk_read_gib_sum": 319.8925552368164
+    },
+    {
+      "arm": "complete",
+      "requests": 16,
+      "geometric_mean_total_seconds": 35.89005980054742,
+      "geometric_mean_decode_tokens_per_second": 43.883702732815166,
+      "max_process_footprint_gib": 216.09527771174908,
+      "minimum_system_available_gib": 19.633514404296875,
+      "max_request_swap_growth_gib": 0.00445556640625,
+      "process_disk_read_gib_sum": 281.2217140197754
+    }
+  ],
+  "device": {
+    "device_name": "Apple M5 Ultra",
+    "max_recommended_working_set_size": 261133172736,
+    "memory_size": 274877906944,
+    "architecture": "applegpu_g17d",
+    "max_buffer_length": 179357827072,
+    "resource_limit": 499000
+  },
+  "packages": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.31.4.dev132+g94cdcae13",
+    "mlx-vlm": "0.7.8",
+    "numpy": "2.3.5",
+    "transformers": "5.17.0"
+  },
+  "common_memory_policy": {
+    "wired_limit_bytes": 240518168576,
+    "previous_wired_limit_bytes": 0,
+    "allocator_guideline_bytes": 240518168576,
+    "cache_limit_bytes": 8589934592,
+    "load_available_floor_bytes": 12884901888,
+    "physical_memory_reserve_bytes": 34359738368
+  },
+  "limits": [
+    "All 48 records retained; two process blocks on one machine, equal-case geometric means, no confidence interval.",
+    "Warm runtime, retained OS caches, declared row-cache history; model loading and HTTP transport excluded.",
+    "Outputs can differ. No equivalent-answer speed, task-quality, generic-model, hardware or current-main claim.",
+    "Sampled footprint may miss transients; process disk counters are not exclusively Engram or physical SSD traffic.",
+    "This recalculates packaged observations and checks recorded activation fields. It does not rerun or reauthenticate the original runtime/source audit."
+  ],
+  "headline": {
+    "baseline_geometric_mean": 19.55381604128208,
+    "candidate_geometric_mean": 15.631156450149781,
+    "ratio_candidate_over_baseline": 0.7993916081213627,
+    "change_percent": -20.06083918786373,
+    "improvement_percent": 20.06083918786373,
+    "direction_of_improvement": "lower"
+  },
+  "memory_tradeoff_gib_vs_native2048": 7.748337350785732,
+  "ttft_regressions_vs_native2048": [
+    {
+      "baseline": "native2048",
+      "fixture": "performance-cpython-65536",
+      "pairs": 2,
+      "cohort": "natural-source",
+      "input_tokens": 65536,
+      "metrics": {
+        "prefill_seconds": {
+          "baseline_geometric_mean": 101.97280943066951,
+          "candidate_geometric_mean": 104.34389311872333,
+          "ratio_candidate_over_baseline": 1.023252116925011,
+          "change_percent": 2.3252116925011057,
+          "improvement_percent": -2.3252116925011057,
+          "direction_of_improvement": "lower"
+        },
+        "ttft_seconds": {
+          "baseline_geometric_mean": 102.07287295439305,
+          "candidate_geometric_mean": 104.44548170323183,
+          "ratio_candidate_over_baseline": 1.023244263438132,
+          "change_percent": 2.324426343813202,
+          "improvement_percent": -2.324426343813202,
+          "direction_of_improvement": "lower"
+        },
+        "total_seconds": {
+          "baseline_geometric_mean": 114.4737602451726,
+          "candidate_geometric_mean": 114.70151547265233,
+          "ratio_candidate_over_baseline": 1.0019895845737217,
+          "change_percent": 0.198958457372167,
+          "improvement_percent": -0.198958457372167,
+          "direction_of_improvement": "lower"
+        },
+        "decode_tokens_per_second": {
+          "baseline_geometric_mean": 41.35299408299133,
+          "candidate_geometric_mean": 50.11828501334978,
+          "ratio_candidate_over_baseline": 1.2119626673891468,
+          "change_percent": 21.19626673891468,
+          "improvement_percent": 21.19626673891468,
+          "direction_of_improvement": "higher"
+        },
+        "prefix128_delivery_seconds": {
+          "baseline_geometric_mean": 105.3254226221367,
+          "candidate_geometric_mean": 107.17622660029123,
+          "ratio_candidate_over_baseline": 1.0175722435484018,
+          "change_percent": 1.7572243548401811,
+          "improvement_percent": -1.7572243548401811,
+          "direction_of_improvement": "lower"
+        },
+        "prefix128_post_first_tokens_per_second": {
+          "baseline_geometric_mean": 39.053300752408006,
+          "candidate_geometric_mean": 46.735616728148344,
+          "ratio_candidate_over_baseline": 1.196713615180572,
+          "change_percent": 19.671361518057196,
+          "improvement_percent": 19.671361518057196,
+          "direction_of_improvement": "higher"
+        }
+      }
+    }
+  ],
+  "saved_review_comparison": {
+    "matched": true,
+    "scope": "All aggregate, case and arm metrics, resource summaries, EOS records and original failure status."
+  },
+  "inputs": {
+    "plan_sha256": "f668ef98840aa9c13a736e4b8329b396ad1f69032c46836d1640fdf9346972db",
+    "original_source_manifest_sha256": "767355abf8eedac3427b0537612bceda3b646b01142d93bc0dee0152faedc570",
+    "evidence_inventory_sha256": "2f7002d533fa89fc7fbca01900858fa02b74fec2967aacf63baa56267287cfe1",
+    "raw": [
+      {
+        "file": "00-native2048-block0.jsonl",
+        "packaged_sha256": "d12a4fb066c8583b2146d9c2162315d744f56e55a2f6b2c8460d55222264a3d7",
+        "bytes": 207813
+      },
+      {
+        "file": "01-native8192-block0.jsonl",
+        "packaged_sha256": "8cd6c024834190892a27a58413b3d70ec70f4f265870a462afde56470caa45ca",
+        "bytes": 207356
+      },
+      {
+        "file": "02-complete-block0.jsonl",
+        "packaged_sha256": "6f18b10d2cb1ba5e76d462ed8ed6695fd7f7c0155e6ebc897a8139a8b69535ce",
+        "bytes": 937193
+      },
+      {
+        "file": "03-complete-block1.jsonl",
+        "packaged_sha256": "5ba0624bb14efbfef6e23f5fb2693ed63ea97f7a03b1482365f2372d7090f4ca",
+        "bytes": 929940
+      },
+      {
+        "file": "04-native8192-block1.jsonl",
+        "packaged_sha256": "75fb21877a9bebf648a0ef65407d62c82603c93ef6f475503f38cd2ec46f4542",
+        "bytes": 207930
+      },
+      {
+        "file": "05-native2048-block1.jsonl",
+        "packaged_sha256": "a4209297c607a00924640ef9834cefd65bb43c86da7a6a038fa267f1dbf3cebc",
+        "bytes": 208971
+      }
+    ],
+    "normalization_note": "Packaged hashes identify path-normalized bytes; original audit hashes identify original bytes. No recorded absolute path is accessed."
+  },
+  "analyzer_sha256": "46acbe4a6f2853929ba61b02c8a6821cbbda4a8d71e0b22cf05adf27fc6852aa"
+}

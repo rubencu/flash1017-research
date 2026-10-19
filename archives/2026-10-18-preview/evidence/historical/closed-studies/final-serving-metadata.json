@@ -1,0 +1,83 @@
+{
+  "status": "failed_exact_response_requirement",
+  "tested_model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+  "attempt": "main-long-http-v4c-01",
+  "token_reconciliation": {
+    "cases": 8,
+    "exact_input_ids": 2139342,
+    "configured_prompt_context_limit": 1048576
+  },
+  "main_sequence": {
+    "planned_jobs": 9,
+    "attempted_jobs": 3,
+    "accepted_jobs": 2,
+    "accepted_names": [
+      "short-smoke",
+      "cancel-262k"
+    ],
+    "failed_job": "post-cancel-short",
+    "not_run": [
+      "cold-262k",
+      "replay-262k",
+      "fork-short-262k",
+      "fork-eligible-262k",
+      "cold-near1m",
+      "replay-near1m"
+    ]
+  },
+  "cancellation": {
+    "processed": 139264,
+    "prompt_tokens": 262015,
+    "cached_tokens": 0,
+    "no_output_before_disconnect": true,
+    "observations": 239,
+    "settlement_seconds": 26.3007519999519,
+    "budget_seconds": 600,
+    "initial_entered_cones": 18,
+    "initial_completed_primes": 17,
+    "initial_python_call_active_hint": true,
+    "final_entered_cones": 18,
+    "final_completed_primes": 18,
+    "final_stage_pads": [
+      18,
+      18,
+      18
+    ],
+    "final_python_call_active_hint": false,
+    "no_reported_counter_failures": true,
+    "scope": "Observed CPU/API settlement, not an independent GPU/executor/future fence."
+  },
+  "recovery_response": {
+    "expected": "LONG_HTTP_RECOVERED_OK",
+    "actual": "LONG_\nHTTP_RECOVERED_OK",
+    "embedded_newline_present_in_server_content_chunk": true,
+    "prompt_tokens": 34,
+    "cached_tokens": 0,
+    "completion_tokens": 10,
+    "finish_reason": "stop",
+    "done": true,
+    "strict_content_check_passed": false
+  },
+  "cause": "Unknown; no comparative experiment isolates cancellation, optimization or native serving as the cause.",
+  "restart_run": false,
+  "finalization_run": false,
+  "qualified_1m_profile_created": false,
+  "retry_authorized": false,
+  "audit_sha256": "27f7cac709e73fb7f781630e514004a9d491863e355c6c2387ac5c582ebebcca",
+  "note": "Existing qualified131K path remains the supported serving qualification. This negative HTTP result does not revoke separately completed offline state comparisons; their scope remains unchanged.",
+  "restoration": {
+    "status": "saved_verified_stop_and_131k_restoration_independently_audited",
+    "profile_sha256": "564947e1123fbb8216177f213c624d465f877d774e6d53298c310bbcd0b2e108",
+    "configured_prompt_context_limit": 131072,
+    "namespace": "69438b6f7bdb",
+    "qualification_http_status": "complete_validated",
+    "native_test_model_release_and_actual_exit_recorded": true,
+    "saved_ready_and_idle": true,
+    "original_app_memory_restoration_recorded": true,
+    "qualified_1m_profile_created": false,
+    "user_facing_1m_shortcuts_created": false,
+    "root_receipt_sha256": "6435d9abf77e7c8f2c4aa80a4c77d4f846f3654e14e6d414bdb3446ca85022e0",
+    "audit_sha256": "0dd3e7315d56ea897a68cf810d270bcbac7d6d37d24310d88db1c3c2535cd28d",
+    "scope": "Saved lifecycle records and immutable profile bytes; no new live/model/API check."
+  }
+}

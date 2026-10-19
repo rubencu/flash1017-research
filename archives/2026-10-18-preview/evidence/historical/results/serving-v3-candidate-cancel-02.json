@@ -1,0 +1,3195 @@
+{
+  "status": "complete_validated",
+  "case": "prefill-and-decode-cancellation",
+  "kind": "candidate",
+  "server": {
+    "pid": 80188,
+    "created": 1792325644.418858,
+    "port": 8001,
+    "profile": "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/staged-01/candidate-profile.http-validation.json"
+  },
+  "profile_sha256": "ee9508df157aba9523f23aff7665f7137afeb913483dc3bd8ada6f1c1787b6df",
+  "started_at_unix": 1792326171.3102431,
+  "timing_scope": "Functional serving qualification; not a controlled speed comparison.",
+  "source_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3b/check_vision.py": "5f222df8e9c0872781e37eb3462791e7335899c3990183cb51efba489b9cd73f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3b/check_cancel.py": "8967757985622cad4af5eee6e525d254a5aadc21caee7fd1297c0783f3a26a16",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3b/check_lifecycle.py": "8fe87a256b4c8e889c0d69d2ce932e36ef7b2106210d630512a2db8048744f61",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3b/common.py": "09e9e59f86858fa7cd72bc10668344233ec6e1087db5c21b273aaff462db83c6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3b/check_sessions.py": "1ce082398ec09fd65ec3d18e5a71dcd12473b7b30d805084bd5977c169bd8526"
+  },
+  "tests": [
+    {
+      "test": "cancel-prefill",
+      "prompt_id": "performance-cpython-65536",
+      "request_sha256": "02bacc006a0bc21d6e229e0c2722cc6d3129920d7869cd1ae1709ea517e98822",
+      "before": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 6,
+              "fallback:short-chunk": 2,
+              "fallback:not-cache-only-prefill": 4
+            },
+            "shape_counts": {},
+            "prime_counts": {
+              "prefill_calls": 2,
+              "fallback:short-chunk": 2
+            },
+            "call_counts": {
+              "model_calls": 6
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 688,
+                "unique_hits": 168,
+                "counts": {
+                  "calls": 6,
+                  "cache_calls": 6,
+                  "requested_rows": 696,
+                  "unique_rows": 688,
+                  "duplicate_rows_elided": 8,
+                  "miss_rows": 520,
+                  "native_read_calls": 6,
+                  "native_requested_rows": 520,
+                  "native_selected_bytes": 83200
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 688,
+                "unique_hits": 168,
+                "counts": {
+                  "calls": 6,
+                  "cache_calls": 6,
+                  "requested_rows": 696,
+                  "unique_rows": 688,
+                  "duplicate_rows_elided": 8,
+                  "miss_rows": 520,
+                  "native_read_calls": 6,
+                  "native_requested_rows": 520,
+                  "native_selected_bytes": 83200
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": [
+          {
+            "created_at_unix": 1792325670.246101,
+            "closed_at_unix": 1792326018.0198998,
+            "native_close_returned": true,
+            "candidate_close_returned": true,
+            "hook_restore_returned": true,
+            "final": {
+              "cone": {
+                "enabled": true,
+                "closed": true,
+                "counts": {
+                  "model_calls": 113
+                },
+                "cone_counts": {
+                  "full_calls": 105,
+                  "fallback:short-chunk": 27,
+                  "fallback:not-cache-only-prefill": 74,
+                  "fallback:multimodal-or-token-types": 4,
+                  "cone_calls": 8
+                },
+                "shape_counts": {
+                  "index-pad": 40,
+                  "gate-pad": 160,
+                  "hc-warp32": 112,
+                  "local-wkv-pad": 24,
+                  "final-moe-256": 8
+                },
+                "prime_counts": {
+                  "prefill_calls": 39,
+                  "fallback:short-chunk": 27,
+                  "fallback:multimodal-or-token-types": 4,
+                  "eligible_prefills": 8,
+                  "wkv_pads": 24,
+                  "stage:0": 8,
+                  "stage:1": 8,
+                  "stage:2": 8,
+                  "padded_appends": 8
+                },
+                "trace": [],
+                "prefill_trace": [],
+                "sources": {
+                  "cone": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                    "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                  },
+                  "shape": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                    "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                  },
+                  "prime": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                    "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                  }
+                },
+                "owned_instances": 0,
+                "model_references_released": true
+              },
+              "rows": {
+                "status": "closed",
+                "enabled": false,
+                "per_table_budget_bytes": 268435456,
+                "max_retained_bytes": 536870912,
+                "retained_bytes": 0,
+                "live_tables": [],
+                "retired_tables": [
+                  {
+                    "cache_id": 0,
+                    "table": "language_model.layers.1.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604728,
+                      "duplicate_rows_elided": 791144,
+                      "miss_rows": 1090594,
+                      "native_read_calls": 113,
+                      "native_requested_rows": 1090594,
+                      "native_selected_bytes": 174495040
+                    },
+                    "unique_hits": 514134,
+                    "unique_queries": 1604728,
+                    "admitted": 806210
+                  },
+                  {
+                    "cache_id": 1,
+                    "table": "language_model.layers.14.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604751,
+                      "duplicate_rows_elided": 791121,
+                      "miss_rows": 1090429,
+                      "native_read_calls": 112,
+                      "native_requested_rows": 1090429,
+                      "native_selected_bytes": 174468640,
+                      "all_hit_calls": 1
+                    },
+                    "unique_hits": 514322,
+                    "unique_queries": 1604751,
+                    "admitted": 806288
+                  }
+                ],
+                "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+              }
+            },
+            "owner_closed": true,
+            "status": "unloaded"
+          }
+        ]
+      },
+      "progress": [
+        {
+          "total": 65591,
+          "cache": 0,
+          "processed": 0,
+          "time_ms": 0
+        },
+        {
+          "total": 65591,
+          "cache": 0,
+          "processed": 8192,
+          "time_ms": 9257
+        }
+      ],
+      "visible_text": "",
+      "retokenized_visible_tokens": 0,
+      "qualifying_unfinished_frame": {
+        "id": "chatcmpl-14cd7a20",
+        "object": "chat.completion.chunk",
+        "created": 1792326180,
+        "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": ""
+            }
+          }
+        ],
+        "prompt_progress": {
+          "total": 65591,
+          "cache": 0,
+          "processed": 8192,
+          "time_ms": 9257
+        }
+      },
+      "observed_before_disconnect": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": true,
+            "cone_counts": {
+              "full_calls": 6,
+              "fallback:short-chunk": 2,
+              "fallback:not-cache-only-prefill": 4,
+              "cone_calls": 2
+            },
+            "shape_counts": {
+              "index-pad": 5,
+              "gate-pad": 20,
+              "hc-warp32": 14,
+              "local-wkv-pad": 3,
+              "final-moe-256": 1
+            },
+            "prime_counts": {
+              "prefill_calls": 4,
+              "fallback:short-chunk": 2,
+              "eligible_prefills": 2,
+              "wkv_pads": 3,
+              "stage:0": 1,
+              "stage:1": 1,
+              "stage:2": 1,
+              "padded_appends": 1
+            },
+            "call_counts": {
+              "model_calls": 8
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 222906,
+                "unique_hits": 19558,
+                "counts": {
+                  "calls": 8,
+                  "cache_calls": 8,
+                  "requested_rows": 393912,
+                  "unique_rows": 222906,
+                  "duplicate_rows_elided": 171006,
+                  "miss_rows": 203348,
+                  "native_read_calls": 8,
+                  "native_requested_rows": 203348,
+                  "native_selected_bytes": 32535680
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 116821,
+                "unique_hits": 192,
+                "counts": {
+                  "calls": 7,
+                  "cache_calls": 7,
+                  "requested_rows": 197304,
+                  "unique_rows": 116821,
+                  "duplicate_rows_elided": 80483,
+                  "miss_rows": 116629,
+                  "native_read_calls": 7,
+                  "native_requested_rows": 116629,
+                  "native_selected_bytes": 18660640
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": [
+          {
+            "created_at_unix": 1792325670.246101,
+            "closed_at_unix": 1792326018.0198998,
+            "native_close_returned": true,
+            "candidate_close_returned": true,
+            "hook_restore_returned": true,
+            "final": {
+              "cone": {
+                "enabled": true,
+                "closed": true,
+                "counts": {
+                  "model_calls": 113
+                },
+                "cone_counts": {
+                  "full_calls": 105,
+                  "fallback:short-chunk": 27,
+                  "fallback:not-cache-only-prefill": 74,
+                  "fallback:multimodal-or-token-types": 4,
+                  "cone_calls": 8
+                },
+                "shape_counts": {
+                  "index-pad": 40,
+                  "gate-pad": 160,
+                  "hc-warp32": 112,
+                  "local-wkv-pad": 24,
+                  "final-moe-256": 8
+                },
+                "prime_counts": {
+                  "prefill_calls": 39,
+                  "fallback:short-chunk": 27,
+                  "fallback:multimodal-or-token-types": 4,
+                  "eligible_prefills": 8,
+                  "wkv_pads": 24,
+                  "stage:0": 8,
+                  "stage:1": 8,
+                  "stage:2": 8,
+                  "padded_appends": 8
+                },
+                "trace": [],
+                "prefill_trace": [],
+                "sources": {
+                  "cone": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                    "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                  },
+                  "shape": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                    "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                  },
+                  "prime": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                    "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                  }
+                },
+                "owned_instances": 0,
+                "model_references_released": true
+              },
+              "rows": {
+                "status": "closed",
+                "enabled": false,
+                "per_table_budget_bytes": 268435456,
+                "max_retained_bytes": 536870912,
+                "retained_bytes": 0,
+                "live_tables": [],
+                "retired_tables": [
+                  {
+                    "cache_id": 0,
+                    "table": "language_model.layers.1.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604728,
+                      "duplicate_rows_elided": 791144,
+                      "miss_rows": 1090594,
+                      "native_read_calls": 113,
+                      "native_requested_rows": 1090594,
+                      "native_selected_bytes": 174495040
+                    },
+                    "unique_hits": 514134,
+                    "unique_queries": 1604728,
+                    "admitted": 806210
+                  },
+                  {
+                    "cache_id": 1,
+                    "table": "language_model.layers.14.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604751,
+                      "duplicate_rows_elided": 791121,
+                      "miss_rows": 1090429,
+                      "native_read_calls": 112,
+                      "native_requested_rows": 1090429,
+                      "native_selected_bytes": 174468640,
+                      "all_hit_calls": 1
+                    },
+                    "unique_hits": 514322,
+                    "unique_queries": 1604751,
+                    "admitted": 806288
+                  }
+                ],
+                "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+              }
+            },
+            "owner_closed": true,
+            "status": "unloaded"
+          }
+        ]
+      },
+      "qualifying_progress": {
+        "total": 65591,
+        "cache": 0,
+        "processed": 8192,
+        "time_ms": 9257
+      },
+      "stream_closed_after_seconds": 9.671904250048101,
+      "queue_idle_after_disconnect": {
+        "seconds": 0.006001791916787624,
+        "status": {
+          "active_requests": 0,
+          "waiting_requests": 0,
+          "loaded_models": [
+            "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+          ]
+        },
+        "scope": "API queue idle only; not an independent GPU/executor fence."
+      },
+      "recovery": {
+        "response": {
+          "id": "chatcmpl-a679ff30",
+          "object": "chat.completion",
+          "created": 1792326187,
+          "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "CANCEL_V3_PREFILL_RECOVERED"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 18,
+            "completion_tokens": 12,
+            "total_tokens": 30,
+            "input_tokens": 18,
+            "output_tokens": 12,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "time_to_first_token": 6.76,
+            "total_time": 6.9,
+            "prompt_eval_duration": 6.76,
+            "generation_duration": 0.13,
+            "prompt_tokens_per_second": 2.66,
+            "generation_tokens_per_second": 89.52
+          }
+        },
+        "seconds": 6.928776833927259,
+        "request_sha256": "8a1723e69ff8a3ef55a6e8809a54b9b0fe6915beb1ae705f0212e79db2d73c51",
+        "queue_idle": {
+          "seconds": 0.0010437499731779099,
+          "status": {
+            "active_requests": 0,
+            "waiting_requests": 0,
+            "loaded_models": [
+              "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+            ]
+          },
+          "scope": "API queue idle only; not an independent GPU/executor fence."
+        },
+        "before": {
+          "candidate": "cone-hotrows-v3",
+          "namespace": "69438b6f7bdb",
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+          "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+          "loaded_bindings": 1,
+          "models": [
+            {
+              "status": "loaded",
+              "enabled": true,
+              "python_call_active_hint": true,
+              "cone_counts": {
+                "full_calls": 6,
+                "fallback:short-chunk": 2,
+                "fallback:not-cache-only-prefill": 4,
+                "cone_calls": 2
+              },
+              "shape_counts": {
+                "index-pad": 5,
+                "gate-pad": 20,
+                "hc-warp32": 14,
+                "local-wkv-pad": 3,
+                "final-moe-256": 1
+              },
+              "prime_counts": {
+                "prefill_calls": 4,
+                "fallback:short-chunk": 2,
+                "eligible_prefills": 2,
+                "wkv_pads": 3,
+                "stage:0": 1,
+                "stage:1": 1,
+                "stage:2": 1,
+                "padded_appends": 1
+              },
+              "call_counts": {
+                "model_calls": 8
+              },
+              "row_status": "active",
+              "retained_row_cache_bytes_observed": 536870912,
+              "tables": [
+                {
+                  "index": 0,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 222906,
+                  "unique_hits": 19558,
+                  "counts": {
+                    "calls": 8,
+                    "cache_calls": 8,
+                    "requested_rows": 393912,
+                    "unique_rows": 222906,
+                    "duplicate_rows_elided": 171006,
+                    "miss_rows": 203348,
+                    "native_read_calls": 8,
+                    "native_requested_rows": 203348,
+                    "native_selected_bytes": 32535680
+                  }
+                },
+                {
+                  "index": 1,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 116821,
+                  "unique_hits": 192,
+                  "counts": {
+                    "calls": 7,
+                    "cache_calls": 7,
+                    "requested_rows": 197304,
+                    "unique_rows": 116821,
+                    "duplicate_rows_elided": 80483,
+                    "miss_rows": 116629,
+                    "native_read_calls": 7,
+                    "native_requested_rows": 116629,
+                    "native_selected_bytes": 18660640
+                  }
+                }
+              ]
+            }
+          ],
+          "collected_without_native_unload": 0,
+          "failed_unloads": 0,
+          "unloads": [
+            {
+              "created_at_unix": 1792325670.246101,
+              "closed_at_unix": 1792326018.0198998,
+              "native_close_returned": true,
+              "candidate_close_returned": true,
+              "hook_restore_returned": true,
+              "final": {
+                "cone": {
+                  "enabled": true,
+                  "closed": true,
+                  "counts": {
+                    "model_calls": 113
+                  },
+                  "cone_counts": {
+                    "full_calls": 105,
+                    "fallback:short-chunk": 27,
+                    "fallback:not-cache-only-prefill": 74,
+                    "fallback:multimodal-or-token-types": 4,
+                    "cone_calls": 8
+                  },
+                  "shape_counts": {
+                    "index-pad": 40,
+                    "gate-pad": 160,
+                    "hc-warp32": 112,
+                    "local-wkv-pad": 24,
+                    "final-moe-256": 8
+                  },
+                  "prime_counts": {
+                    "prefill_calls": 39,
+                    "fallback:short-chunk": 27,
+                    "fallback:multimodal-or-token-types": 4,
+                    "eligible_prefills": 8,
+                    "wkv_pads": 24,
+                    "stage:0": 8,
+                    "stage:1": 8,
+                    "stage:2": 8,
+                    "padded_appends": 8
+                  },
+                  "trace": [],
+                  "prefill_trace": [],
+                  "sources": {
+                    "cone": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                      "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                    },
+                    "shape": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                      "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                    },
+                    "prime": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                      "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                    }
+                  },
+                  "owned_instances": 0,
+                  "model_references_released": true
+                },
+                "rows": {
+                  "status": "closed",
+                  "enabled": false,
+                  "per_table_budget_bytes": 268435456,
+                  "max_retained_bytes": 536870912,
+                  "retained_bytes": 0,
+                  "live_tables": [],
+                  "retired_tables": [
+                    {
+                      "cache_id": 0,
+                      "table": "language_model.layers.1.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604728,
+                        "duplicate_rows_elided": 791144,
+                        "miss_rows": 1090594,
+                        "native_read_calls": 113,
+                        "native_requested_rows": 1090594,
+                        "native_selected_bytes": 174495040
+                      },
+                      "unique_hits": 514134,
+                      "unique_queries": 1604728,
+                      "admitted": 806210
+                    },
+                    {
+                      "cache_id": 1,
+                      "table": "language_model.layers.14.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604751,
+                        "duplicate_rows_elided": 791121,
+                        "miss_rows": 1090429,
+                        "native_read_calls": 112,
+                        "native_requested_rows": 1090429,
+                        "native_selected_bytes": 174468640,
+                        "all_hit_calls": 1
+                      },
+                      "unique_hits": 514322,
+                      "unique_queries": 1604751,
+                      "admitted": 806288
+                    }
+                  ],
+                  "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+                }
+              },
+              "owner_closed": true,
+              "status": "unloaded"
+            }
+          ]
+        },
+        "after": {
+          "candidate": "cone-hotrows-v3",
+          "namespace": "69438b6f7bdb",
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+          "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+          "loaded_bindings": 1,
+          "models": [
+            {
+              "status": "loaded",
+              "enabled": true,
+              "python_call_active_hint": false,
+              "cone_counts": {
+                "full_calls": 12,
+                "fallback:short-chunk": 4,
+                "fallback:not-cache-only-prefill": 8,
+                "cone_calls": 2
+              },
+              "shape_counts": {
+                "index-pad": 10,
+                "gate-pad": 40,
+                "hc-warp32": 28,
+                "local-wkv-pad": 6,
+                "final-moe-256": 2
+              },
+              "prime_counts": {
+                "prefill_calls": 6,
+                "fallback:short-chunk": 4,
+                "eligible_prefills": 2,
+                "wkv_pads": 6,
+                "stage:0": 2,
+                "stage:1": 2,
+                "stage:2": 2,
+                "padded_appends": 2
+              },
+              "call_counts": {
+                "model_calls": 14
+              },
+              "row_status": "active",
+              "retained_row_cache_bytes_observed": 536870912,
+              "tables": [
+                {
+                  "index": 0,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 223650,
+                  "unique_hits": 19888,
+                  "counts": {
+                    "calls": 14,
+                    "cache_calls": 14,
+                    "requested_rows": 394656,
+                    "unique_rows": 223650,
+                    "duplicate_rows_elided": 171006,
+                    "miss_rows": 203762,
+                    "native_read_calls": 13,
+                    "native_requested_rows": 203762,
+                    "native_selected_bytes": 32601920,
+                    "all_hit_calls": 1
+                  }
+                },
+                {
+                  "index": 1,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 223644,
+                  "unique_hits": 19917,
+                  "counts": {
+                    "calls": 14,
+                    "cache_calls": 14,
+                    "requested_rows": 394656,
+                    "unique_rows": 223644,
+                    "duplicate_rows_elided": 171012,
+                    "miss_rows": 203727,
+                    "native_read_calls": 13,
+                    "native_requested_rows": 203727,
+                    "native_selected_bytes": 32596320,
+                    "all_hit_calls": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "collected_without_native_unload": 0,
+          "failed_unloads": 0,
+          "unloads": [
+            {
+              "created_at_unix": 1792325670.246101,
+              "closed_at_unix": 1792326018.0198998,
+              "native_close_returned": true,
+              "candidate_close_returned": true,
+              "hook_restore_returned": true,
+              "final": {
+                "cone": {
+                  "enabled": true,
+                  "closed": true,
+                  "counts": {
+                    "model_calls": 113
+                  },
+                  "cone_counts": {
+                    "full_calls": 105,
+                    "fallback:short-chunk": 27,
+                    "fallback:not-cache-only-prefill": 74,
+                    "fallback:multimodal-or-token-types": 4,
+                    "cone_calls": 8
+                  },
+                  "shape_counts": {
+                    "index-pad": 40,
+                    "gate-pad": 160,
+                    "hc-warp32": 112,
+                    "local-wkv-pad": 24,
+                    "final-moe-256": 8
+                  },
+                  "prime_counts": {
+                    "prefill_calls": 39,
+                    "fallback:short-chunk": 27,
+                    "fallback:multimodal-or-token-types": 4,
+                    "eligible_prefills": 8,
+                    "wkv_pads": 24,
+                    "stage:0": 8,
+                    "stage:1": 8,
+                    "stage:2": 8,
+                    "padded_appends": 8
+                  },
+                  "trace": [],
+                  "prefill_trace": [],
+                  "sources": {
+                    "cone": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                      "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                    },
+                    "shape": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                      "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                    },
+                    "prime": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                      "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                    }
+                  },
+                  "owned_instances": 0,
+                  "model_references_released": true
+                },
+                "rows": {
+                  "status": "closed",
+                  "enabled": false,
+                  "per_table_budget_bytes": 268435456,
+                  "max_retained_bytes": 536870912,
+                  "retained_bytes": 0,
+                  "live_tables": [],
+                  "retired_tables": [
+                    {
+                      "cache_id": 0,
+                      "table": "language_model.layers.1.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604728,
+                        "duplicate_rows_elided": 791144,
+                        "miss_rows": 1090594,
+                        "native_read_calls": 113,
+                        "native_requested_rows": 1090594,
+                        "native_selected_bytes": 174495040
+                      },
+                      "unique_hits": 514134,
+                      "unique_queries": 1604728,
+                      "admitted": 806210
+                    },
+                    {
+                      "cache_id": 1,
+                      "table": "language_model.layers.14.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604751,
+                        "duplicate_rows_elided": 791121,
+                        "miss_rows": 1090429,
+                        "native_read_calls": 112,
+                        "native_requested_rows": 1090429,
+                        "native_selected_bytes": 174468640,
+                        "all_hit_calls": 1
+                      },
+                      "unique_hits": 514322,
+                      "unique_queries": 1604751,
+                      "admitted": 806288
+                    }
+                  ],
+                  "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+                }
+              },
+              "owner_closed": true,
+              "status": "unloaded"
+            }
+          ]
+        }
+      },
+      "recovery_completed_after_disconnect_seconds": 6.941103749908507,
+      "next_eligible_request": {
+        "response": {
+          "id": "chatcmpl-d2c6b902",
+          "object": "chat.completion",
+          "created": 1792326213,
+          "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "POST_CANCEL_CONE_OK"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 32821,
+            "completion_tokens": 7,
+            "total_tokens": 32828,
+            "input_tokens": 32821,
+            "output_tokens": 7,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "time_to_first_token": 25.93,
+            "total_time": 26.01,
+            "prompt_eval_duration": 25.93,
+            "generation_duration": 0.09,
+            "prompt_tokens_per_second": 1265.9,
+            "generation_tokens_per_second": 82.32
+          }
+        },
+        "seconds": 26.070035957964137,
+        "request_sha256": "1653d72a405c33854fb8879cc15efb3e9631f6eed0c5796bd47eb44cac33d3c7",
+        "queue_idle": {
+          "seconds": 0.0009774169884622097,
+          "status": {
+            "active_requests": 0,
+            "waiting_requests": 0,
+            "loaded_models": [
+              "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+            ]
+          },
+          "scope": "API queue idle only; not an independent GPU/executor fence."
+        },
+        "before": {
+          "candidate": "cone-hotrows-v3",
+          "namespace": "69438b6f7bdb",
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+          "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+          "loaded_bindings": 1,
+          "models": [
+            {
+              "status": "loaded",
+              "enabled": true,
+              "python_call_active_hint": false,
+              "cone_counts": {
+                "full_calls": 12,
+                "fallback:short-chunk": 4,
+                "fallback:not-cache-only-prefill": 8,
+                "cone_calls": 2
+              },
+              "shape_counts": {
+                "index-pad": 10,
+                "gate-pad": 40,
+                "hc-warp32": 28,
+                "local-wkv-pad": 6,
+                "final-moe-256": 2
+              },
+              "prime_counts": {
+                "prefill_calls": 6,
+                "fallback:short-chunk": 4,
+                "eligible_prefills": 2,
+                "wkv_pads": 6,
+                "stage:0": 2,
+                "stage:1": 2,
+                "stage:2": 2,
+                "padded_appends": 2
+              },
+              "call_counts": {
+                "model_calls": 14
+              },
+              "row_status": "active",
+              "retained_row_cache_bytes_observed": 536870912,
+              "tables": [
+                {
+                  "index": 0,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 223650,
+                  "unique_hits": 19888,
+                  "counts": {
+                    "calls": 14,
+                    "cache_calls": 14,
+                    "requested_rows": 394656,
+                    "unique_rows": 223650,
+                    "duplicate_rows_elided": 171006,
+                    "miss_rows": 203762,
+                    "native_read_calls": 13,
+                    "native_requested_rows": 203762,
+                    "native_selected_bytes": 32601920,
+                    "all_hit_calls": 1
+                  }
+                },
+                {
+                  "index": 1,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 223644,
+                  "unique_hits": 19917,
+                  "counts": {
+                    "calls": 14,
+                    "cache_calls": 14,
+                    "requested_rows": 394656,
+                    "unique_rows": 223644,
+                    "duplicate_rows_elided": 171012,
+                    "miss_rows": 203727,
+                    "native_read_calls": 13,
+                    "native_requested_rows": 203727,
+                    "native_selected_bytes": 32596320,
+                    "all_hit_calls": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "collected_without_native_unload": 0,
+          "failed_unloads": 0,
+          "unloads": [
+            {
+              "created_at_unix": 1792325670.246101,
+              "closed_at_unix": 1792326018.0198998,
+              "native_close_returned": true,
+              "candidate_close_returned": true,
+              "hook_restore_returned": true,
+              "final": {
+                "cone": {
+                  "enabled": true,
+                  "closed": true,
+                  "counts": {
+                    "model_calls": 113
+                  },
+                  "cone_counts": {
+                    "full_calls": 105,
+                    "fallback:short-chunk": 27,
+                    "fallback:not-cache-only-prefill": 74,
+                    "fallback:multimodal-or-token-types": 4,
+                    "cone_calls": 8
+                  },
+                  "shape_counts": {
+                    "index-pad": 40,
+                    "gate-pad": 160,
+                    "hc-warp32": 112,
+                    "local-wkv-pad": 24,
+                    "final-moe-256": 8
+                  },
+                  "prime_counts": {
+                    "prefill_calls": 39,
+                    "fallback:short-chunk": 27,
+                    "fallback:multimodal-or-token-types": 4,
+                    "eligible_prefills": 8,
+                    "wkv_pads": 24,
+                    "stage:0": 8,
+                    "stage:1": 8,
+                    "stage:2": 8,
+                    "padded_appends": 8
+                  },
+                  "trace": [],
+                  "prefill_trace": [],
+                  "sources": {
+                    "cone": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                      "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                    },
+                    "shape": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                      "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                    },
+                    "prime": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                      "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                    }
+                  },
+                  "owned_instances": 0,
+                  "model_references_released": true
+                },
+                "rows": {
+                  "status": "closed",
+                  "enabled": false,
+                  "per_table_budget_bytes": 268435456,
+                  "max_retained_bytes": 536870912,
+                  "retained_bytes": 0,
+                  "live_tables": [],
+                  "retired_tables": [
+                    {
+                      "cache_id": 0,
+                      "table": "language_model.layers.1.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604728,
+                        "duplicate_rows_elided": 791144,
+                        "miss_rows": 1090594,
+                        "native_read_calls": 113,
+                        "native_requested_rows": 1090594,
+                        "native_selected_bytes": 174495040
+                      },
+                      "unique_hits": 514134,
+                      "unique_queries": 1604728,
+                      "admitted": 806210
+                    },
+                    {
+                      "cache_id": 1,
+                      "table": "language_model.layers.14.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604751,
+                        "duplicate_rows_elided": 791121,
+                        "miss_rows": 1090429,
+                        "native_read_calls": 112,
+                        "native_requested_rows": 1090429,
+                        "native_selected_bytes": 174468640,
+                        "all_hit_calls": 1
+                      },
+                      "unique_hits": 514322,
+                      "unique_queries": 1604751,
+                      "admitted": 806288
+                    }
+                  ],
+                  "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+                }
+              },
+              "owner_closed": true,
+              "status": "unloaded"
+            }
+          ]
+        },
+        "after": {
+          "candidate": "cone-hotrows-v3",
+          "namespace": "69438b6f7bdb",
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+          "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+          "loaded_bindings": 1,
+          "models": [
+            {
+              "status": "loaded",
+              "enabled": true,
+              "python_call_active_hint": false,
+              "cone_counts": {
+                "full_calls": 17,
+                "fallback:short-chunk": 6,
+                "fallback:not-cache-only-prefill": 11,
+                "cone_calls": 6
+              },
+              "shape_counts": {
+                "index-pad": 30,
+                "gate-pad": 120,
+                "hc-warp32": 84,
+                "local-wkv-pad": 18,
+                "final-moe-256": 6
+              },
+              "prime_counts": {
+                "prefill_calls": 12,
+                "fallback:short-chunk": 6,
+                "eligible_prefills": 6,
+                "wkv_pads": 18,
+                "stage:0": 6,
+                "stage:1": 6,
+                "stage:2": 6,
+                "padded_appends": 6
+              },
+              "call_counts": {
+                "model_calls": 23
+              },
+              "row_status": "active",
+              "retained_row_cache_bytes_observed": 536870912,
+              "tables": [
+                {
+                  "index": 0,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 668761,
+                  "unique_hits": 275957,
+                  "counts": {
+                    "calls": 23,
+                    "cache_calls": 23,
+                    "requested_rows": 1182528,
+                    "unique_rows": 668761,
+                    "duplicate_rows_elided": 513767,
+                    "miss_rows": 392804,
+                    "native_read_calls": 22,
+                    "native_requested_rows": 392804,
+                    "native_selected_bytes": 62848640,
+                    "all_hit_calls": 1
+                  }
+                },
+                {
+                  "index": 1,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 668768,
+                  "unique_hits": 276013,
+                  "counts": {
+                    "calls": 23,
+                    "cache_calls": 23,
+                    "requested_rows": 1182528,
+                    "unique_rows": 668768,
+                    "duplicate_rows_elided": 513760,
+                    "miss_rows": 392755,
+                    "native_read_calls": 22,
+                    "native_requested_rows": 392755,
+                    "native_selected_bytes": 62840800,
+                    "all_hit_calls": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "collected_without_native_unload": 0,
+          "failed_unloads": 0,
+          "unloads": [
+            {
+              "created_at_unix": 1792325670.246101,
+              "closed_at_unix": 1792326018.0198998,
+              "native_close_returned": true,
+              "candidate_close_returned": true,
+              "hook_restore_returned": true,
+              "final": {
+                "cone": {
+                  "enabled": true,
+                  "closed": true,
+                  "counts": {
+                    "model_calls": 113
+                  },
+                  "cone_counts": {
+                    "full_calls": 105,
+                    "fallback:short-chunk": 27,
+                    "fallback:not-cache-only-prefill": 74,
+                    "fallback:multimodal-or-token-types": 4,
+                    "cone_calls": 8
+                  },
+                  "shape_counts": {
+                    "index-pad": 40,
+                    "gate-pad": 160,
+                    "hc-warp32": 112,
+                    "local-wkv-pad": 24,
+                    "final-moe-256": 8
+                  },
+                  "prime_counts": {
+                    "prefill_calls": 39,
+                    "fallback:short-chunk": 27,
+                    "fallback:multimodal-or-token-types": 4,
+                    "eligible_prefills": 8,
+                    "wkv_pads": 24,
+                    "stage:0": 8,
+                    "stage:1": 8,
+                    "stage:2": 8,
+                    "padded_appends": 8
+                  },
+                  "trace": [],
+                  "prefill_trace": [],
+                  "sources": {
+                    "cone": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                      "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                    },
+                    "shape": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                      "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                    },
+                    "prime": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                      "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                    }
+                  },
+                  "owned_instances": 0,
+                  "model_references_released": true
+                },
+                "rows": {
+                  "status": "closed",
+                  "enabled": false,
+                  "per_table_budget_bytes": 268435456,
+                  "max_retained_bytes": 536870912,
+                  "retained_bytes": 0,
+                  "live_tables": [],
+                  "retired_tables": [
+                    {
+                      "cache_id": 0,
+                      "table": "language_model.layers.1.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604728,
+                        "duplicate_rows_elided": 791144,
+                        "miss_rows": 1090594,
+                        "native_read_calls": 113,
+                        "native_requested_rows": 1090594,
+                        "native_selected_bytes": 174495040
+                      },
+                      "unique_hits": 514134,
+                      "unique_queries": 1604728,
+                      "admitted": 806210
+                    },
+                    {
+                      "cache_id": 1,
+                      "table": "language_model.layers.14.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604751,
+                        "duplicate_rows_elided": 791121,
+                        "miss_rows": 1090429,
+                        "native_read_calls": 112,
+                        "native_requested_rows": 1090429,
+                        "native_selected_bytes": 174468640,
+                        "all_hit_calls": 1
+                      },
+                      "unique_hits": 514322,
+                      "unique_queries": 1604751,
+                      "admitted": 806288
+                    }
+                  ],
+                  "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+                }
+              },
+              "owner_closed": true,
+              "status": "unloaded"
+            }
+          ]
+        }
+      },
+      "after": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 17,
+              "fallback:short-chunk": 6,
+              "fallback:not-cache-only-prefill": 11,
+              "cone_calls": 6
+            },
+            "shape_counts": {
+              "index-pad": 30,
+              "gate-pad": 120,
+              "hc-warp32": 84,
+              "local-wkv-pad": 18,
+              "final-moe-256": 6
+            },
+            "prime_counts": {
+              "prefill_calls": 12,
+              "fallback:short-chunk": 6,
+              "eligible_prefills": 6,
+              "wkv_pads": 18,
+              "stage:0": 6,
+              "stage:1": 6,
+              "stage:2": 6,
+              "padded_appends": 6
+            },
+            "call_counts": {
+              "model_calls": 23
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 668761,
+                "unique_hits": 275957,
+                "counts": {
+                  "calls": 23,
+                  "cache_calls": 23,
+                  "requested_rows": 1182528,
+                  "unique_rows": 668761,
+                  "duplicate_rows_elided": 513767,
+                  "miss_rows": 392804,
+                  "native_read_calls": 22,
+                  "native_requested_rows": 392804,
+                  "native_selected_bytes": 62848640,
+                  "all_hit_calls": 1
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 668768,
+                "unique_hits": 276013,
+                "counts": {
+                  "calls": 23,
+                  "cache_calls": 23,
+                  "requested_rows": 1182528,
+                  "unique_rows": 668768,
+                  "duplicate_rows_elided": 513760,
+                  "miss_rows": 392755,
+                  "native_read_calls": 22,
+                  "native_requested_rows": 392755,
+                  "native_selected_bytes": 62840800,
+                  "all_hit_calls": 1
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": [
+          {
+            "created_at_unix": 1792325670.246101,
+            "closed_at_unix": 1792326018.0198998,
+            "native_close_returned": true,
+            "candidate_close_returned": true,
+            "hook_restore_returned": true,
+            "final": {
+              "cone": {
+                "enabled": true,
+                "closed": true,
+                "counts": {
+                  "model_calls": 113
+                },
+                "cone_counts": {
+                  "full_calls": 105,
+                  "fallback:short-chunk": 27,
+                  "fallback:not-cache-only-prefill": 74,
+                  "fallback:multimodal-or-token-types": 4,
+                  "cone_calls": 8
+                },
+                "shape_counts": {
+                  "index-pad": 40,
+                  "gate-pad": 160,
+                  "hc-warp32": 112,
+                  "local-wkv-pad": 24,
+                  "final-moe-256": 8
+                },
+                "prime_counts": {
+                  "prefill_calls": 39,
+                  "fallback:short-chunk": 27,
+                  "fallback:multimodal-or-token-types": 4,
+                  "eligible_prefills": 8,
+                  "wkv_pads": 24,
+                  "stage:0": 8,
+                  "stage:1": 8,
+                  "stage:2": 8,
+                  "padded_appends": 8
+                },
+                "trace": [],
+                "prefill_trace": [],
+                "sources": {
+                  "cone": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                    "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                  },
+                  "shape": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                    "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                  },
+                  "prime": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                    "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                  }
+                },
+                "owned_instances": 0,
+                "model_references_released": true
+              },
+              "rows": {
+                "status": "closed",
+                "enabled": false,
+                "per_table_budget_bytes": 268435456,
+                "max_retained_bytes": 536870912,
+                "retained_bytes": 0,
+                "live_tables": [],
+                "retired_tables": [
+                  {
+                    "cache_id": 0,
+                    "table": "language_model.layers.1.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604728,
+                      "duplicate_rows_elided": 791144,
+                      "miss_rows": 1090594,
+                      "native_read_calls": 113,
+                      "native_requested_rows": 1090594,
+                      "native_selected_bytes": 174495040
+                    },
+                    "unique_hits": 514134,
+                    "unique_queries": 1604728,
+                    "admitted": 806210
+                  },
+                  {
+                    "cache_id": 1,
+                    "table": "language_model.layers.14.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604751,
+                      "duplicate_rows_elided": 791121,
+                      "miss_rows": 1090429,
+                      "native_read_calls": 112,
+                      "native_requested_rows": 1090429,
+                      "native_selected_bytes": 174468640,
+                      "all_hit_calls": 1
+                    },
+                    "unique_hits": 514322,
+                    "unique_queries": 1604751,
+                    "admitted": 806288
+                  }
+                ],
+                "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+              }
+            },
+            "owner_closed": true,
+            "status": "unloaded"
+          }
+        ]
+      },
+      "passed": true,
+      "drain_interpretation": "Queue acknowledgement and successful sequential recovery are recorded separately. CPU telemetry is non-atomic and is not an independent GPU or prefetch-future completion timestamp."
+    },
+    {
+      "test": "cancel-decode",
+      "prompt_id": "performance-pride-prejudice-16384",
+      "request_sha256": "dc1172d26043fa8d557301aeed039d046bd91c00f922f933de8d8ce0678c19b2",
+      "before": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 17,
+              "fallback:short-chunk": 6,
+              "fallback:not-cache-only-prefill": 11,
+              "cone_calls": 6
+            },
+            "shape_counts": {
+              "index-pad": 30,
+              "gate-pad": 120,
+              "hc-warp32": 84,
+              "local-wkv-pad": 18,
+              "final-moe-256": 6
+            },
+            "prime_counts": {
+              "prefill_calls": 12,
+              "fallback:short-chunk": 6,
+              "eligible_prefills": 6,
+              "wkv_pads": 18,
+              "stage:0": 6,
+              "stage:1": 6,
+              "stage:2": 6,
+              "padded_appends": 6
+            },
+            "call_counts": {
+              "model_calls": 23
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 668761,
+                "unique_hits": 275957,
+                "counts": {
+                  "calls": 23,
+                  "cache_calls": 23,
+                  "requested_rows": 1182528,
+                  "unique_rows": 668761,
+                  "duplicate_rows_elided": 513767,
+                  "miss_rows": 392804,
+                  "native_read_calls": 22,
+                  "native_requested_rows": 392804,
+                  "native_selected_bytes": 62848640,
+                  "all_hit_calls": 1
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 668768,
+                "unique_hits": 276013,
+                "counts": {
+                  "calls": 23,
+                  "cache_calls": 23,
+                  "requested_rows": 1182528,
+                  "unique_rows": 668768,
+                  "duplicate_rows_elided": 513760,
+                  "miss_rows": 392755,
+                  "native_read_calls": 22,
+                  "native_requested_rows": 392755,
+                  "native_selected_bytes": 62840800,
+                  "all_hit_calls": 1
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": [
+          {
+            "created_at_unix": 1792325670.246101,
+            "closed_at_unix": 1792326018.0198998,
+            "native_close_returned": true,
+            "candidate_close_returned": true,
+            "hook_restore_returned": true,
+            "final": {
+              "cone": {
+                "enabled": true,
+                "closed": true,
+                "counts": {
+                  "model_calls": 113
+                },
+                "cone_counts": {
+                  "full_calls": 105,
+                  "fallback:short-chunk": 27,
+                  "fallback:not-cache-only-prefill": 74,
+                  "fallback:multimodal-or-token-types": 4,
+                  "cone_calls": 8
+                },
+                "shape_counts": {
+                  "index-pad": 40,
+                  "gate-pad": 160,
+                  "hc-warp32": 112,
+                  "local-wkv-pad": 24,
+                  "final-moe-256": 8
+                },
+                "prime_counts": {
+                  "prefill_calls": 39,
+                  "fallback:short-chunk": 27,
+                  "fallback:multimodal-or-token-types": 4,
+                  "eligible_prefills": 8,
+                  "wkv_pads": 24,
+                  "stage:0": 8,
+                  "stage:1": 8,
+                  "stage:2": 8,
+                  "padded_appends": 8
+                },
+                "trace": [],
+                "prefill_trace": [],
+                "sources": {
+                  "cone": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                    "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                  },
+                  "shape": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                    "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                  },
+                  "prime": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                    "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                  }
+                },
+                "owned_instances": 0,
+                "model_references_released": true
+              },
+              "rows": {
+                "status": "closed",
+                "enabled": false,
+                "per_table_budget_bytes": 268435456,
+                "max_retained_bytes": 536870912,
+                "retained_bytes": 0,
+                "live_tables": [],
+                "retired_tables": [
+                  {
+                    "cache_id": 0,
+                    "table": "language_model.layers.1.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604728,
+                      "duplicate_rows_elided": 791144,
+                      "miss_rows": 1090594,
+                      "native_read_calls": 113,
+                      "native_requested_rows": 1090594,
+                      "native_selected_bytes": 174495040
+                    },
+                    "unique_hits": 514134,
+                    "unique_queries": 1604728,
+                    "admitted": 806210
+                  },
+                  {
+                    "cache_id": 1,
+                    "table": "language_model.layers.14.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604751,
+                      "duplicate_rows_elided": 791121,
+                      "miss_rows": 1090429,
+                      "native_read_calls": 112,
+                      "native_requested_rows": 1090429,
+                      "native_selected_bytes": 174468640,
+                      "all_hit_calls": 1
+                    },
+                    "unique_hits": 514322,
+                    "unique_queries": 1604751,
+                    "admitted": 806288
+                  }
+                ],
+                "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+              }
+            },
+            "owner_closed": true,
+            "status": "unloaded"
+          }
+        ]
+      },
+      "progress": [
+        {
+          "total": 16438,
+          "cache": 0,
+          "processed": 0,
+          "time_ms": 0
+        },
+        {
+          "total": 16438,
+          "cache": 0,
+          "processed": 8192,
+          "time_ms": 15936
+        },
+        {
+          "total": 16438,
+          "cache": 0,
+          "processed": 16438,
+          "time_ms": 34700
+        }
+      ],
+      "visible_text": "The supplied excerpt is the opening of *Pride and Prejudice*, through Chapter VI",
+      "retokenized_visible_tokens": 17,
+      "qualifying_unfinished_frame": {
+        "id": "chatcmpl-c6e54f59",
+        "object": "chat.completion.chunk",
+        "created": 1792326249,
+        "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "judice*, through Chapter VI"
+            }
+          }
+        ]
+      },
+      "observed_before_disconnect": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 28,
+              "fallback:short-chunk": 8,
+              "fallback:not-cache-only-prefill": 20,
+              "cone_calls": 8
+            },
+            "shape_counts": {
+              "index-pad": 40,
+              "gate-pad": 160,
+              "hc-warp32": 112,
+              "local-wkv-pad": 24,
+              "final-moe-256": 8
+            },
+            "prime_counts": {
+              "prefill_calls": 16,
+              "fallback:short-chunk": 8,
+              "eligible_prefills": 8,
+              "wkv_pads": 24,
+              "stage:0": 8,
+              "stage:1": 8,
+              "stage:2": 8,
+              "padded_appends": 8
+            },
+            "call_counts": {
+              "model_calls": 36
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 1007295,
+                "unique_hits": 291160,
+                "counts": {
+                  "calls": 36,
+                  "cache_calls": 36,
+                  "requested_rows": 1577592,
+                  "unique_rows": 1007295,
+                  "duplicate_rows_elided": 570297,
+                  "miss_rows": 716135,
+                  "native_read_calls": 35,
+                  "native_requested_rows": 716135,
+                  "native_selected_bytes": 114581600,
+                  "all_hit_calls": 1
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 1007301,
+                "unique_hits": 291236,
+                "counts": {
+                  "calls": 36,
+                  "cache_calls": 36,
+                  "requested_rows": 1577592,
+                  "unique_rows": 1007301,
+                  "duplicate_rows_elided": 570291,
+                  "miss_rows": 716065,
+                  "native_read_calls": 35,
+                  "native_requested_rows": 716065,
+                  "native_selected_bytes": 114570400,
+                  "all_hit_calls": 1
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": [
+          {
+            "created_at_unix": 1792325670.246101,
+            "closed_at_unix": 1792326018.0198998,
+            "native_close_returned": true,
+            "candidate_close_returned": true,
+            "hook_restore_returned": true,
+            "final": {
+              "cone": {
+                "enabled": true,
+                "closed": true,
+                "counts": {
+                  "model_calls": 113
+                },
+                "cone_counts": {
+                  "full_calls": 105,
+                  "fallback:short-chunk": 27,
+                  "fallback:not-cache-only-prefill": 74,
+                  "fallback:multimodal-or-token-types": 4,
+                  "cone_calls": 8
+                },
+                "shape_counts": {
+                  "index-pad": 40,
+                  "gate-pad": 160,
+                  "hc-warp32": 112,
+                  "local-wkv-pad": 24,
+                  "final-moe-256": 8
+                },
+                "prime_counts": {
+                  "prefill_calls": 39,
+                  "fallback:short-chunk": 27,
+                  "fallback:multimodal-or-token-types": 4,
+                  "eligible_prefills": 8,
+                  "wkv_pads": 24,
+                  "stage:0": 8,
+                  "stage:1": 8,
+                  "stage:2": 8,
+                  "padded_appends": 8
+                },
+                "trace": [],
+                "prefill_trace": [],
+                "sources": {
+                  "cone": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                    "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                  },
+                  "shape": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                    "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                  },
+                  "prime": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                    "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                  }
+                },
+                "owned_instances": 0,
+                "model_references_released": true
+              },
+              "rows": {
+                "status": "closed",
+                "enabled": false,
+                "per_table_budget_bytes": 268435456,
+                "max_retained_bytes": 536870912,
+                "retained_bytes": 0,
+                "live_tables": [],
+                "retired_tables": [
+                  {
+                    "cache_id": 0,
+                    "table": "language_model.layers.1.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604728,
+                      "duplicate_rows_elided": 791144,
+                      "miss_rows": 1090594,
+                      "native_read_calls": 113,
+                      "native_requested_rows": 1090594,
+                      "native_selected_bytes": 174495040
+                    },
+                    "unique_hits": 514134,
+                    "unique_queries": 1604728,
+                    "admitted": 806210
+                  },
+                  {
+                    "cache_id": 1,
+                    "table": "language_model.layers.14.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604751,
+                      "duplicate_rows_elided": 791121,
+                      "miss_rows": 1090429,
+                      "native_read_calls": 112,
+                      "native_requested_rows": 1090429,
+                      "native_selected_bytes": 174468640,
+                      "all_hit_calls": 1
+                    },
+                    "unique_hits": 514322,
+                    "unique_queries": 1604751,
+                    "admitted": 806288
+                  }
+                ],
+                "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+              }
+            },
+            "owner_closed": true,
+            "status": "unloaded"
+          }
+        ]
+      },
+      "qualifying_progress": null,
+      "stream_closed_after_seconds": 35.54297383292578,
+      "queue_idle_after_disconnect": {
+        "seconds": 0.0021837500389665365,
+        "status": {
+          "active_requests": 0,
+          "waiting_requests": 0,
+          "loaded_models": [
+            "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+          ]
+        },
+        "scope": "API queue idle only; not an independent GPU/executor fence."
+      },
+      "recovery": {
+        "response": {
+          "id": "chatcmpl-2aa66886",
+          "object": "chat.completion",
+          "created": 1792326250,
+          "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "CANCEL_V3_DECODE_RECOVERED"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 18,
+            "completion_tokens": 12,
+            "total_tokens": 30,
+            "input_tokens": 18,
+            "output_tokens": 12,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "time_to_first_token": 0.53,
+            "total_time": 0.66,
+            "prompt_eval_duration": 0.53,
+            "generation_duration": 0.13,
+            "prompt_tokens_per_second": 33.89,
+            "generation_tokens_per_second": 93.05
+          }
+        },
+        "seconds": 0.6659987079910934,
+        "request_sha256": "b6f396bcbb1861e01c041344d65320defdaca2b3fd812ea28c8a93c89f864753",
+        "queue_idle": {
+          "seconds": 0.0011441661044955254,
+          "status": {
+            "active_requests": 0,
+            "waiting_requests": 0,
+            "loaded_models": [
+              "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+            ]
+          },
+          "scope": "API queue idle only; not an independent GPU/executor fence."
+        },
+        "before": {
+          "candidate": "cone-hotrows-v3",
+          "namespace": "69438b6f7bdb",
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+          "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+          "loaded_bindings": 1,
+          "models": [
+            {
+              "status": "loaded",
+              "enabled": true,
+              "python_call_active_hint": true,
+              "cone_counts": {
+                "full_calls": 29,
+                "fallback:short-chunk": 8,
+                "fallback:not-cache-only-prefill": 21,
+                "cone_calls": 8
+              },
+              "shape_counts": {
+                "index-pad": 40,
+                "gate-pad": 160,
+                "hc-warp32": 112,
+                "local-wkv-pad": 24,
+                "final-moe-256": 8
+              },
+              "prime_counts": {
+                "prefill_calls": 16,
+                "fallback:short-chunk": 8,
+                "eligible_prefills": 8,
+                "wkv_pads": 24,
+                "stage:0": 8,
+                "stage:1": 8,
+                "stage:2": 8,
+                "padded_appends": 8
+              },
+              "call_counts": {
+                "model_calls": 37
+              },
+              "row_status": "active",
+              "retained_row_cache_bytes_observed": 536870912,
+              "tables": [
+                {
+                  "index": 0,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 1007343,
+                  "unique_hits": 291183,
+                  "counts": {
+                    "calls": 37,
+                    "cache_calls": 37,
+                    "requested_rows": 1577640,
+                    "unique_rows": 1007343,
+                    "duplicate_rows_elided": 570297,
+                    "miss_rows": 716160,
+                    "native_read_calls": 36,
+                    "native_requested_rows": 716160,
+                    "native_selected_bytes": 114585600,
+                    "all_hit_calls": 1
+                  }
+                },
+                {
+                  "index": 1,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 1007301,
+                  "unique_hits": 291236,
+                  "counts": {
+                    "calls": 36,
+                    "cache_calls": 36,
+                    "requested_rows": 1577592,
+                    "unique_rows": 1007301,
+                    "duplicate_rows_elided": 570291,
+                    "miss_rows": 716065,
+                    "native_read_calls": 35,
+                    "native_requested_rows": 716065,
+                    "native_selected_bytes": 114570400,
+                    "all_hit_calls": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "collected_without_native_unload": 0,
+          "failed_unloads": 0,
+          "unloads": [
+            {
+              "created_at_unix": 1792325670.246101,
+              "closed_at_unix": 1792326018.0198998,
+              "native_close_returned": true,
+              "candidate_close_returned": true,
+              "hook_restore_returned": true,
+              "final": {
+                "cone": {
+                  "enabled": true,
+                  "closed": true,
+                  "counts": {
+                    "model_calls": 113
+                  },
+                  "cone_counts": {
+                    "full_calls": 105,
+                    "fallback:short-chunk": 27,
+                    "fallback:not-cache-only-prefill": 74,
+                    "fallback:multimodal-or-token-types": 4,
+                    "cone_calls": 8
+                  },
+                  "shape_counts": {
+                    "index-pad": 40,
+                    "gate-pad": 160,
+                    "hc-warp32": 112,
+                    "local-wkv-pad": 24,
+                    "final-moe-256": 8
+                  },
+                  "prime_counts": {
+                    "prefill_calls": 39,
+                    "fallback:short-chunk": 27,
+                    "fallback:multimodal-or-token-types": 4,
+                    "eligible_prefills": 8,
+                    "wkv_pads": 24,
+                    "stage:0": 8,
+                    "stage:1": 8,
+                    "stage:2": 8,
+                    "padded_appends": 8
+                  },
+                  "trace": [],
+                  "prefill_trace": [],
+                  "sources": {
+                    "cone": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                      "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                    },
+                    "shape": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                      "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                    },
+                    "prime": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                      "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                    }
+                  },
+                  "owned_instances": 0,
+                  "model_references_released": true
+                },
+                "rows": {
+                  "status": "closed",
+                  "enabled": false,
+                  "per_table_budget_bytes": 268435456,
+                  "max_retained_bytes": 536870912,
+                  "retained_bytes": 0,
+                  "live_tables": [],
+                  "retired_tables": [
+                    {
+                      "cache_id": 0,
+                      "table": "language_model.layers.1.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604728,
+                        "duplicate_rows_elided": 791144,
+                        "miss_rows": 1090594,
+                        "native_read_calls": 113,
+                        "native_requested_rows": 1090594,
+                        "native_selected_bytes": 174495040
+                      },
+                      "unique_hits": 514134,
+                      "unique_queries": 1604728,
+                      "admitted": 806210
+                    },
+                    {
+                      "cache_id": 1,
+                      "table": "language_model.layers.14.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604751,
+                        "duplicate_rows_elided": 791121,
+                        "miss_rows": 1090429,
+                        "native_read_calls": 112,
+                        "native_requested_rows": 1090429,
+                        "native_selected_bytes": 174468640,
+                        "all_hit_calls": 1
+                      },
+                      "unique_hits": 514322,
+                      "unique_queries": 1604751,
+                      "admitted": 806288
+                    }
+                  ],
+                  "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+                }
+              },
+              "owner_closed": true,
+              "status": "unloaded"
+            }
+          ]
+        },
+        "after": {
+          "candidate": "cone-hotrows-v3",
+          "namespace": "69438b6f7bdb",
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+          "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+          "loaded_bindings": 1,
+          "models": [
+            {
+              "status": "loaded",
+              "enabled": true,
+              "python_call_active_hint": false,
+              "cone_counts": {
+                "full_calls": 35,
+                "fallback:short-chunk": 10,
+                "fallback:not-cache-only-prefill": 25,
+                "cone_calls": 8
+              },
+              "shape_counts": {
+                "index-pad": 40,
+                "gate-pad": 160,
+                "hc-warp32": 112,
+                "local-wkv-pad": 24,
+                "final-moe-256": 8
+              },
+              "prime_counts": {
+                "prefill_calls": 18,
+                "fallback:short-chunk": 10,
+                "eligible_prefills": 8,
+                "wkv_pads": 24,
+                "stage:0": 8,
+                "stage:1": 8,
+                "stage:2": 8,
+                "padded_appends": 8
+              },
+              "call_counts": {
+                "model_calls": 43
+              },
+              "row_status": "active",
+              "retained_row_cache_bytes_observed": 536870912,
+              "tables": [
+                {
+                  "index": 0,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 1008087,
+                  "unique_hits": 291691,
+                  "counts": {
+                    "calls": 43,
+                    "cache_calls": 43,
+                    "requested_rows": 1578384,
+                    "unique_rows": 1008087,
+                    "duplicate_rows_elided": 570297,
+                    "miss_rows": 716396,
+                    "native_read_calls": 42,
+                    "native_requested_rows": 716396,
+                    "native_selected_bytes": 114623360,
+                    "all_hit_calls": 1
+                  }
+                },
+                {
+                  "index": 1,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 1008093,
+                  "unique_hits": 291777,
+                  "counts": {
+                    "calls": 43,
+                    "cache_calls": 43,
+                    "requested_rows": 1578384,
+                    "unique_rows": 1008093,
+                    "duplicate_rows_elided": 570291,
+                    "miss_rows": 716316,
+                    "native_read_calls": 42,
+                    "native_requested_rows": 716316,
+                    "native_selected_bytes": 114610560,
+                    "all_hit_calls": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "collected_without_native_unload": 0,
+          "failed_unloads": 0,
+          "unloads": [
+            {
+              "created_at_unix": 1792325670.246101,
+              "closed_at_unix": 1792326018.0198998,
+              "native_close_returned": true,
+              "candidate_close_returned": true,
+              "hook_restore_returned": true,
+              "final": {
+                "cone": {
+                  "enabled": true,
+                  "closed": true,
+                  "counts": {
+                    "model_calls": 113
+                  },
+                  "cone_counts": {
+                    "full_calls": 105,
+                    "fallback:short-chunk": 27,
+                    "fallback:not-cache-only-prefill": 74,
+                    "fallback:multimodal-or-token-types": 4,
+                    "cone_calls": 8
+                  },
+                  "shape_counts": {
+                    "index-pad": 40,
+                    "gate-pad": 160,
+                    "hc-warp32": 112,
+                    "local-wkv-pad": 24,
+                    "final-moe-256": 8
+                  },
+                  "prime_counts": {
+                    "prefill_calls": 39,
+                    "fallback:short-chunk": 27,
+                    "fallback:multimodal-or-token-types": 4,
+                    "eligible_prefills": 8,
+                    "wkv_pads": 24,
+                    "stage:0": 8,
+                    "stage:1": 8,
+                    "stage:2": 8,
+                    "padded_appends": 8
+                  },
+                  "trace": [],
+                  "prefill_trace": [],
+                  "sources": {
+                    "cone": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                      "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                    },
+                    "shape": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                      "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                    },
+                    "prime": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                      "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                    }
+                  },
+                  "owned_instances": 0,
+                  "model_references_released": true
+                },
+                "rows": {
+                  "status": "closed",
+                  "enabled": false,
+                  "per_table_budget_bytes": 268435456,
+                  "max_retained_bytes": 536870912,
+                  "retained_bytes": 0,
+                  "live_tables": [],
+                  "retired_tables": [
+                    {
+                      "cache_id": 0,
+                      "table": "language_model.layers.1.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604728,
+                        "duplicate_rows_elided": 791144,
+                        "miss_rows": 1090594,
+                        "native_read_calls": 113,
+                        "native_requested_rows": 1090594,
+                        "native_selected_bytes": 174495040
+                      },
+                      "unique_hits": 514134,
+                      "unique_queries": 1604728,
+                      "admitted": 806210
+                    },
+                    {
+                      "cache_id": 1,
+                      "table": "language_model.layers.14.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604751,
+                        "duplicate_rows_elided": 791121,
+                        "miss_rows": 1090429,
+                        "native_read_calls": 112,
+                        "native_requested_rows": 1090429,
+                        "native_selected_bytes": 174468640,
+                        "all_hit_calls": 1
+                      },
+                      "unique_hits": 514322,
+                      "unique_queries": 1604751,
+                      "admitted": 806288
+                    }
+                  ],
+                  "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+                }
+              },
+              "owner_closed": true,
+              "status": "unloaded"
+            }
+          ]
+        }
+      },
+      "recovery_completed_after_disconnect_seconds": 0.6709928340278566,
+      "next_eligible_request": {
+        "response": {
+          "id": "chatcmpl-b35c5fc1",
+          "object": "chat.completion",
+          "created": 1792326272,
+          "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "POST_CANCEL_CONE_OK"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 32820,
+            "completion_tokens": 7,
+            "total_tokens": 32827,
+            "input_tokens": 32820,
+            "output_tokens": 7,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "time_to_first_token": 21.72,
+            "total_time": 21.8,
+            "prompt_eval_duration": 21.72,
+            "generation_duration": 0.09,
+            "prompt_tokens_per_second": 1511.13,
+            "generation_tokens_per_second": 82.31
+          }
+        },
+        "seconds": 21.86738379090093,
+        "request_sha256": "19763c946bfab0be6863be195bd4efec417192ef1005b7e6e8dc0a4012d92a67",
+        "queue_idle": {
+          "seconds": 0.0013040830381214619,
+          "status": {
+            "active_requests": 0,
+            "waiting_requests": 0,
+            "loaded_models": [
+              "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+            ]
+          },
+          "scope": "API queue idle only; not an independent GPU/executor fence."
+        },
+        "before": {
+          "candidate": "cone-hotrows-v3",
+          "namespace": "69438b6f7bdb",
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+          "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+          "loaded_bindings": 1,
+          "models": [
+            {
+              "status": "loaded",
+              "enabled": true,
+              "python_call_active_hint": false,
+              "cone_counts": {
+                "full_calls": 35,
+                "fallback:short-chunk": 10,
+                "fallback:not-cache-only-prefill": 25,
+                "cone_calls": 8
+              },
+              "shape_counts": {
+                "index-pad": 40,
+                "gate-pad": 160,
+                "hc-warp32": 112,
+                "local-wkv-pad": 24,
+                "final-moe-256": 8
+              },
+              "prime_counts": {
+                "prefill_calls": 18,
+                "fallback:short-chunk": 10,
+                "eligible_prefills": 8,
+                "wkv_pads": 24,
+                "stage:0": 8,
+                "stage:1": 8,
+                "stage:2": 8,
+                "padded_appends": 8
+              },
+              "call_counts": {
+                "model_calls": 43
+              },
+              "row_status": "active",
+              "retained_row_cache_bytes_observed": 536870912,
+              "tables": [
+                {
+                  "index": 0,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 1008087,
+                  "unique_hits": 291691,
+                  "counts": {
+                    "calls": 43,
+                    "cache_calls": 43,
+                    "requested_rows": 1578384,
+                    "unique_rows": 1008087,
+                    "duplicate_rows_elided": 570297,
+                    "miss_rows": 716396,
+                    "native_read_calls": 42,
+                    "native_requested_rows": 716396,
+                    "native_selected_bytes": 114623360,
+                    "all_hit_calls": 1
+                  }
+                },
+                {
+                  "index": 1,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 1008093,
+                  "unique_hits": 291777,
+                  "counts": {
+                    "calls": 43,
+                    "cache_calls": 43,
+                    "requested_rows": 1578384,
+                    "unique_rows": 1008093,
+                    "duplicate_rows_elided": 570291,
+                    "miss_rows": 716316,
+                    "native_read_calls": 42,
+                    "native_requested_rows": 716316,
+                    "native_selected_bytes": 114610560,
+                    "all_hit_calls": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "collected_without_native_unload": 0,
+          "failed_unloads": 0,
+          "unloads": [
+            {
+              "created_at_unix": 1792325670.246101,
+              "closed_at_unix": 1792326018.0198998,
+              "native_close_returned": true,
+              "candidate_close_returned": true,
+              "hook_restore_returned": true,
+              "final": {
+                "cone": {
+                  "enabled": true,
+                  "closed": true,
+                  "counts": {
+                    "model_calls": 113
+                  },
+                  "cone_counts": {
+                    "full_calls": 105,
+                    "fallback:short-chunk": 27,
+                    "fallback:not-cache-only-prefill": 74,
+                    "fallback:multimodal-or-token-types": 4,
+                    "cone_calls": 8
+                  },
+                  "shape_counts": {
+                    "index-pad": 40,
+                    "gate-pad": 160,
+                    "hc-warp32": 112,
+                    "local-wkv-pad": 24,
+                    "final-moe-256": 8
+                  },
+                  "prime_counts": {
+                    "prefill_calls": 39,
+                    "fallback:short-chunk": 27,
+                    "fallback:multimodal-or-token-types": 4,
+                    "eligible_prefills": 8,
+                    "wkv_pads": 24,
+                    "stage:0": 8,
+                    "stage:1": 8,
+                    "stage:2": 8,
+                    "padded_appends": 8
+                  },
+                  "trace": [],
+                  "prefill_trace": [],
+                  "sources": {
+                    "cone": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                      "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                    },
+                    "shape": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                      "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                    },
+                    "prime": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                      "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                    }
+                  },
+                  "owned_instances": 0,
+                  "model_references_released": true
+                },
+                "rows": {
+                  "status": "closed",
+                  "enabled": false,
+                  "per_table_budget_bytes": 268435456,
+                  "max_retained_bytes": 536870912,
+                  "retained_bytes": 0,
+                  "live_tables": [],
+                  "retired_tables": [
+                    {
+                      "cache_id": 0,
+                      "table": "language_model.layers.1.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604728,
+                        "duplicate_rows_elided": 791144,
+                        "miss_rows": 1090594,
+                        "native_read_calls": 113,
+                        "native_requested_rows": 1090594,
+                        "native_selected_bytes": 174495040
+                      },
+                      "unique_hits": 514134,
+                      "unique_queries": 1604728,
+                      "admitted": 806210
+                    },
+                    {
+                      "cache_id": 1,
+                      "table": "language_model.layers.14.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604751,
+                        "duplicate_rows_elided": 791121,
+                        "miss_rows": 1090429,
+                        "native_read_calls": 112,
+                        "native_requested_rows": 1090429,
+                        "native_selected_bytes": 174468640,
+                        "all_hit_calls": 1
+                      },
+                      "unique_hits": 514322,
+                      "unique_queries": 1604751,
+                      "admitted": 806288
+                    }
+                  ],
+                  "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+                }
+              },
+              "owner_closed": true,
+              "status": "unloaded"
+            }
+          ]
+        },
+        "after": {
+          "candidate": "cone-hotrows-v3",
+          "namespace": "69438b6f7bdb",
+          "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+          "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+          "loaded_bindings": 1,
+          "models": [
+            {
+              "status": "loaded",
+              "enabled": true,
+              "python_call_active_hint": false,
+              "cone_counts": {
+                "full_calls": 40,
+                "fallback:short-chunk": 12,
+                "fallback:not-cache-only-prefill": 28,
+                "cone_calls": 12
+              },
+              "shape_counts": {
+                "index-pad": 60,
+                "gate-pad": 240,
+                "hc-warp32": 168,
+                "local-wkv-pad": 36,
+                "final-moe-256": 12
+              },
+              "prime_counts": {
+                "prefill_calls": 24,
+                "fallback:short-chunk": 12,
+                "eligible_prefills": 12,
+                "wkv_pads": 36,
+                "stage:0": 12,
+                "stage:1": 12,
+                "stage:2": 12,
+                "padded_appends": 12
+              },
+              "call_counts": {
+                "model_calls": 52
+              },
+              "row_status": "active",
+              "retained_row_cache_bytes_observed": 536870912,
+              "tables": [
+                {
+                  "index": 0,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 1453221,
+                  "unique_hits": 682663,
+                  "counts": {
+                    "calls": 52,
+                    "cache_calls": 52,
+                    "requested_rows": 2366232,
+                    "unique_rows": 1453221,
+                    "duplicate_rows_elided": 913011,
+                    "miss_rows": 770558,
+                    "native_read_calls": 51,
+                    "native_requested_rows": 770558,
+                    "native_selected_bytes": 123289280,
+                    "all_hit_calls": 1
+                  }
+                },
+                {
+                  "index": 1,
+                  "retained_bytes": 268435456,
+                  "unique_queries": 1453241,
+                  "unique_hits": 682684,
+                  "counts": {
+                    "calls": 52,
+                    "cache_calls": 52,
+                    "requested_rows": 2366232,
+                    "unique_rows": 1453241,
+                    "duplicate_rows_elided": 912991,
+                    "miss_rows": 770557,
+                    "native_read_calls": 51,
+                    "native_requested_rows": 770557,
+                    "native_selected_bytes": 123289120,
+                    "all_hit_calls": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "collected_without_native_unload": 0,
+          "failed_unloads": 0,
+          "unloads": [
+            {
+              "created_at_unix": 1792325670.246101,
+              "closed_at_unix": 1792326018.0198998,
+              "native_close_returned": true,
+              "candidate_close_returned": true,
+              "hook_restore_returned": true,
+              "final": {
+                "cone": {
+                  "enabled": true,
+                  "closed": true,
+                  "counts": {
+                    "model_calls": 113
+                  },
+                  "cone_counts": {
+                    "full_calls": 105,
+                    "fallback:short-chunk": 27,
+                    "fallback:not-cache-only-prefill": 74,
+                    "fallback:multimodal-or-token-types": 4,
+                    "cone_calls": 8
+                  },
+                  "shape_counts": {
+                    "index-pad": 40,
+                    "gate-pad": 160,
+                    "hc-warp32": 112,
+                    "local-wkv-pad": 24,
+                    "final-moe-256": 8
+                  },
+                  "prime_counts": {
+                    "prefill_calls": 39,
+                    "fallback:short-chunk": 27,
+                    "fallback:multimodal-or-token-types": 4,
+                    "eligible_prefills": 8,
+                    "wkv_pads": 24,
+                    "stage:0": 8,
+                    "stage:1": 8,
+                    "stage:2": 8,
+                    "padded_appends": 8
+                  },
+                  "trace": [],
+                  "prefill_trace": [],
+                  "sources": {
+                    "cone": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                      "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                    },
+                    "shape": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                      "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                    },
+                    "prime": {
+                      "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                      "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                    }
+                  },
+                  "owned_instances": 0,
+                  "model_references_released": true
+                },
+                "rows": {
+                  "status": "closed",
+                  "enabled": false,
+                  "per_table_budget_bytes": 268435456,
+                  "max_retained_bytes": 536870912,
+                  "retained_bytes": 0,
+                  "live_tables": [],
+                  "retired_tables": [
+                    {
+                      "cache_id": 0,
+                      "table": "language_model.layers.1.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604728,
+                        "duplicate_rows_elided": 791144,
+                        "miss_rows": 1090594,
+                        "native_read_calls": 113,
+                        "native_requested_rows": 1090594,
+                        "native_selected_bytes": 174495040
+                      },
+                      "unique_hits": 514134,
+                      "unique_queries": 1604728,
+                      "admitted": 806210
+                    },
+                    {
+                      "cache_id": 1,
+                      "table": "language_model.layers.14.engram.embed.weight",
+                      "budget": 268435456,
+                      "nbytes": 0,
+                      "closed": true,
+                      "resident": false,
+                      "cache_disabled_after_allocation_failure": false,
+                      "counts": {
+                        "calls": 113,
+                        "cache_calls": 113,
+                        "requested_rows": 2395872,
+                        "unique_rows": 1604751,
+                        "duplicate_rows_elided": 791121,
+                        "miss_rows": 1090429,
+                        "native_read_calls": 112,
+                        "native_requested_rows": 1090429,
+                        "native_selected_bytes": 174468640,
+                        "all_hit_calls": 1
+                      },
+                      "unique_hits": 514322,
+                      "unique_queries": 1604751,
+                      "admitted": 806288
+                    }
+                  ],
+                  "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+                }
+              },
+              "owner_closed": true,
+              "status": "unloaded"
+            }
+          ]
+        }
+      },
+      "after": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 40,
+              "fallback:short-chunk": 12,
+              "fallback:not-cache-only-prefill": 28,
+              "cone_calls": 12
+            },
+            "shape_counts": {
+              "index-pad": 60,
+              "gate-pad": 240,
+              "hc-warp32": 168,
+              "local-wkv-pad": 36,
+              "final-moe-256": 12
+            },
+            "prime_counts": {
+              "prefill_calls": 24,
+              "fallback:short-chunk": 12,
+              "eligible_prefills": 12,
+              "wkv_pads": 36,
+              "stage:0": 12,
+              "stage:1": 12,
+              "stage:2": 12,
+              "padded_appends": 12
+            },
+            "call_counts": {
+              "model_calls": 52
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 1453221,
+                "unique_hits": 682663,
+                "counts": {
+                  "calls": 52,
+                  "cache_calls": 52,
+                  "requested_rows": 2366232,
+                  "unique_rows": 1453221,
+                  "duplicate_rows_elided": 913011,
+                  "miss_rows": 770558,
+                  "native_read_calls": 51,
+                  "native_requested_rows": 770558,
+                  "native_selected_bytes": 123289280,
+                  "all_hit_calls": 1
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 1453241,
+                "unique_hits": 682684,
+                "counts": {
+                  "calls": 52,
+                  "cache_calls": 52,
+                  "requested_rows": 2366232,
+                  "unique_rows": 1453241,
+                  "duplicate_rows_elided": 912991,
+                  "miss_rows": 770557,
+                  "native_read_calls": 51,
+                  "native_requested_rows": 770557,
+                  "native_selected_bytes": 123289120,
+                  "all_hit_calls": 1
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": [
+          {
+            "created_at_unix": 1792325670.246101,
+            "closed_at_unix": 1792326018.0198998,
+            "native_close_returned": true,
+            "candidate_close_returned": true,
+            "hook_restore_returned": true,
+            "final": {
+              "cone": {
+                "enabled": true,
+                "closed": true,
+                "counts": {
+                  "model_calls": 113
+                },
+                "cone_counts": {
+                  "full_calls": 105,
+                  "fallback:short-chunk": 27,
+                  "fallback:not-cache-only-prefill": 74,
+                  "fallback:multimodal-or-token-types": 4,
+                  "cone_calls": 8
+                },
+                "shape_counts": {
+                  "index-pad": 40,
+                  "gate-pad": 160,
+                  "hc-warp32": 112,
+                  "local-wkv-pad": 24,
+                  "final-moe-256": 8
+                },
+                "prime_counts": {
+                  "prefill_calls": 39,
+                  "fallback:short-chunk": 27,
+                  "fallback:multimodal-or-token-types": 4,
+                  "eligible_prefills": 8,
+                  "wkv_pads": 24,
+                  "stage:0": 8,
+                  "stage:1": 8,
+                  "stage:2": 8,
+                  "padded_appends": 8
+                },
+                "trace": [],
+                "prefill_trace": [],
+                "sources": {
+                  "cone": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+                    "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+                  },
+                  "shape": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+                    "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+                  },
+                  "prime": {
+                    "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+                    "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+                  }
+                },
+                "owned_instances": 0,
+                "model_references_released": true
+              },
+              "rows": {
+                "status": "closed",
+                "enabled": false,
+                "per_table_budget_bytes": 268435456,
+                "max_retained_bytes": 536870912,
+                "retained_bytes": 0,
+                "live_tables": [],
+                "retired_tables": [
+                  {
+                    "cache_id": 0,
+                    "table": "language_model.layers.1.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604728,
+                      "duplicate_rows_elided": 791144,
+                      "miss_rows": 1090594,
+                      "native_read_calls": 113,
+                      "native_requested_rows": 1090594,
+                      "native_selected_bytes": 174495040
+                    },
+                    "unique_hits": 514134,
+                    "unique_queries": 1604728,
+                    "admitted": 806210
+                  },
+                  {
+                    "cache_id": 1,
+                    "table": "language_model.layers.14.engram.embed.weight",
+                    "budget": 268435456,
+                    "nbytes": 0,
+                    "closed": true,
+                    "resident": false,
+                    "cache_disabled_after_allocation_failure": false,
+                    "counts": {
+                      "calls": 113,
+                      "cache_calls": 113,
+                      "requested_rows": 2395872,
+                      "unique_rows": 1604751,
+                      "duplicate_rows_elided": 791121,
+                      "miss_rows": 1090429,
+                      "native_read_calls": 112,
+                      "native_requested_rows": 1090429,
+                      "native_selected_bytes": 174468640,
+                      "all_hit_calls": 1
+                    },
+                    "unique_hits": 514322,
+                    "unique_queries": 1604751,
+                    "admitted": 806288
+                  }
+                ],
+                "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+              }
+            },
+            "owner_closed": true,
+            "status": "unloaded"
+          }
+        ]
+      },
+      "passed": true,
+      "drain_interpretation": "Queue acknowledgement and successful sequential recovery are recorded separately. CPU telemetry is non-atomic and is not an independent GPU or prefetch-future completion timestamp."
+    }
+  ],
+  "performance_plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+  "http_source_proofs": {
+    "performance-cpython-65536": {
+      "frozen_input_tokens": 65536,
+      "frozen_input_tokens_sha256": "31a42897b4a2696c5d7a6386c7e56d263f27f8c388a20c825f51349753ebdd9c",
+      "http_source_sha256": "57251fe2b44b7d6874ee993ef8e2c9cb5aa60d9b2dc9ab2b18b84ec3f1f93615",
+      "http_source_retokenized_tokens": 65535,
+      "http_source_characters": 290949,
+      "construction": "Decode complete frozen token vector with special tokens removed; HTTP applies a fresh chat template."
+    },
+    "performance-pride-prejudice-16384": {
+      "frozen_input_tokens": 16384,
+      "frozen_input_tokens_sha256": "ff6c7bcb41f34a55d90b5dcc5c5f6bcbd9a000927b3c0737a49e3694ae231f76",
+      "http_source_sha256": "e1ad6e903c5874b771ce421d3af838866d37f448dc04f039ca78e636e82a17c1",
+      "http_source_retokenized_tokens": 16383,
+      "http_source_characters": 71826,
+      "construction": "Decode complete frozen token vector with special tokens removed; HTTP applies a fresh chat template."
+    },
+    "performance-cpython-32768": {
+      "frozen_input_tokens": 32768,
+      "frozen_input_tokens_sha256": "f1b1013809a8b41a3a1ba73aee3187010ea068e7d99f0fff70fe2d2c02ddeadf",
+      "http_source_sha256": "363154047b3d5995b4670b4c496da5378b47d446520d855facd77e45ab429575",
+      "http_source_retokenized_tokens": 32767,
+      "http_source_characters": 148240,
+      "construction": "Decode complete frozen token vector with special tokens removed; HTTP applies a fresh chat template."
+    }
+  },
+  "nonce": "a0508d88-edb1-4dd8-b072-83213ab8608a",
+  "completed_at_unix": 1792326272.1760268
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "flash1017-bf16-rows2-5-patch-packet/1",
+  "status": "local-review-only; hardware-and-current-main-production-validation-pending",
+  "base_commit": "165be1ff5933a020f2f5a7544e1e95a2797f777f",
+  "base_path": "omlx/patches/deepseek_v41/head.py",
+  "base_raw_url": "https://raw.githubusercontent.com/jundot/omlx/165be1ff5933a020f2f5a7544e1e95a2797f777f/omlx/patches/deepseek_v41/head.py",
+  "base_blob_sha256": "4cc40064caa7b304d4a8288dbc91c085cc6b10b9ce3704415cfce1ef03893a43",
+  "patch_sha256": "cf913a6e454dd74edfd115674ca79d6cb80ebf38c4e07427abdc0476492cc0d3",
+  "proposed_blob_sha256": "34e393fe8e6dd1e63c5f7f2c0ab2778b4ce6bd43260cfcd6aa13b493ce4cecb5",
+  "reused_kernel": {
+    "source_path": "../../source/outputs/flash1017-lab/flash1017/head.py",
+    "source_file_sha256": "cc913209dd150c6d98660a0a6d0d40efb245aaac59303eeb64e9be2a78f85d10",
+    "original_assignment": "_SOURCE",
+    "packet_assignment": "_ROWS_SOURCE",
+    "metal_source_sha256": "a224eda2187902ae545f70882c1247ad27b66ff1d067358bdce11e8dc5d61376",
+    "metal_body_unchanged": true
+  },
+  "prior_implementation": "https://github.com/tacos8me/m5-ultra/blob/fb233e22762f11e23123437efd4cbfc400a59f07/kernels/omlx/src/omlx/patches/deepseek_v41/head.py",
+  "scope": "Only 2-5 BF16 verification rows admitted by the unchanged upstream guard; row 1 and all original fallback branches retained; no six-row extension or other features."
+}

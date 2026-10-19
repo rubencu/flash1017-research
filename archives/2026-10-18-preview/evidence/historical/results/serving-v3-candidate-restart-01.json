@@ -1,0 +1,403 @@
+{
+  "status": "complete_validated",
+  "case": "final-profile-process-restart",
+  "kind": "candidate",
+  "server": {
+    "pid": 80747,
+    "created": 1792326475.654738,
+    "port": 8001,
+    "profile": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/qualified-candidate-profile.json"
+  },
+  "profile_sha256": "564947e1123fbb8216177f213c624d465f877d774e6d53298c310bbcd0b2e108",
+  "started_at_unix": 1792326547.691526,
+  "timing_scope": "Functional serving qualification; not a controlled speed comparison.",
+  "source_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_vision.py": "5f222df8e9c0872781e37eb3462791e7335899c3990183cb51efba489b9cd73f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_cancel.py": "7877a4c1fdf0e6378a5e68d1e2c81136e81c7b6b9b797320c74d0196efe2539f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_lifecycle.py": "8fe87a256b4c8e889c0d69d2ce932e36ef7b2106210d630512a2db8048744f61",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/common.py": "09e9e59f86858fa7cd72bc10668344233ec6e1087db5c21b273aaff462db83c6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_sessions.py": "1ce082398ec09fd65ec3d18e5a71dcd12473b7b30d805084bd5977c169bd8526"
+  },
+  "tests": [
+    {
+      "response": {
+        "id": "chatcmpl-6759acdd",
+        "object": "chat.completion",
+        "created": 1792326548,
+        "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "FLASH1017_FAST_READY"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 17,
+          "completion_tokens": 10,
+          "total_tokens": 27,
+          "input_tokens": 17,
+          "output_tokens": 10,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "time_to_first_token": 0.3,
+          "total_time": 0.49,
+          "prompt_eval_duration": 0.3,
+          "generation_duration": 0.19,
+          "prompt_tokens_per_second": 56.75,
+          "generation_tokens_per_second": 53.67
+        }
+      },
+      "seconds": 0.6760042498353869,
+      "request_sha256": "c7a0e85ebd2dfd5bbf1959023d5eb819031d5503d99861ddf869201c28be9238",
+      "queue_idle": {
+        "seconds": 0.0010542499367147684,
+        "status": {
+          "active_requests": 0,
+          "waiting_requests": 0,
+          "loaded_models": [
+            "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+          ]
+        },
+        "scope": "API queue idle only; not an independent GPU/executor fence."
+      },
+      "before": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {},
+            "shape_counts": {},
+            "prime_counts": {},
+            "call_counts": {},
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 0,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 0,
+                "unique_queries": 0,
+                "unique_hits": 0,
+                "counts": {}
+              },
+              {
+                "index": 1,
+                "retained_bytes": 0,
+                "unique_queries": 0,
+                "unique_hits": 0,
+                "counts": {}
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "after": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 6,
+              "fallback:short-chunk": 2,
+              "fallback:not-cache-only-prefill": 4
+            },
+            "shape_counts": {},
+            "prime_counts": {
+              "prefill_calls": 2,
+              "fallback:short-chunk": 2
+            },
+            "call_counts": {
+              "model_calls": 6
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 720,
+                "unique_hits": 192,
+                "counts": {
+                  "calls": 6,
+                  "cache_calls": 6,
+                  "requested_rows": 720,
+                  "unique_rows": 720,
+                  "duplicate_rows_elided": 0,
+                  "miss_rows": 528,
+                  "native_read_calls": 6,
+                  "native_requested_rows": 528,
+                  "native_selected_bytes": 84480
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 720,
+                "unique_hits": 192,
+                "counts": {
+                  "calls": 6,
+                  "cache_calls": 6,
+                  "requested_rows": 720,
+                  "unique_rows": 720,
+                  "duplicate_rows_elided": 0,
+                  "miss_rows": 528,
+                  "native_read_calls": 6,
+                  "native_requested_rows": 528,
+                  "native_selected_bytes": 84480
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "test": "restart-short",
+      "passed": true
+    },
+    {
+      "response": {
+        "id": "chatcmpl-d45a71a7",
+        "object": "chat.completion",
+        "created": 1792326581,
+        "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "RESTART_CONE_READY"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 32813,
+          "completion_tokens": 8,
+          "total_tokens": 32821,
+          "input_tokens": 32813,
+          "output_tokens": 8,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "time_to_first_token": 33.34,
+          "total_time": 33.5,
+          "prompt_eval_duration": 33.34,
+          "generation_duration": 0.16,
+          "prompt_tokens_per_second": 984.09,
+          "generation_tokens_per_second": 49.82
+        }
+      },
+      "seconds": 33.56441258289851,
+      "request_sha256": "1af49b03ca70b89a5b6816d4910199e5ef51e4ed273cf8f53849e019a38acd59",
+      "queue_idle": {
+        "seconds": 0.00111624994315207,
+        "status": {
+          "active_requests": 0,
+          "waiting_requests": 0,
+          "loaded_models": [
+            "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+          ]
+        },
+        "scope": "API queue idle only; not an independent GPU/executor fence."
+      },
+      "before": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 6,
+              "fallback:short-chunk": 2,
+              "fallback:not-cache-only-prefill": 4
+            },
+            "shape_counts": {},
+            "prime_counts": {
+              "prefill_calls": 2,
+              "fallback:short-chunk": 2
+            },
+            "call_counts": {
+              "model_calls": 6
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 720,
+                "unique_hits": 192,
+                "counts": {
+                  "calls": 6,
+                  "cache_calls": 6,
+                  "requested_rows": 720,
+                  "unique_rows": 720,
+                  "duplicate_rows_elided": 0,
+                  "miss_rows": 528,
+                  "native_read_calls": 6,
+                  "native_requested_rows": 528,
+                  "native_selected_bytes": 84480
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 720,
+                "unique_hits": 192,
+                "counts": {
+                  "calls": 6,
+                  "cache_calls": 6,
+                  "requested_rows": 720,
+                  "unique_rows": 720,
+                  "duplicate_rows_elided": 0,
+                  "miss_rows": 528,
+                  "native_read_calls": 6,
+                  "native_requested_rows": 528,
+                  "native_selected_bytes": 84480
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "after": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 12,
+              "fallback:short-chunk": 4,
+              "fallback:not-cache-only-prefill": 8,
+              "cone_calls": 4
+            },
+            "shape_counts": {
+              "index-pad": 20,
+              "gate-pad": 80,
+              "hc-warp32": 56,
+              "local-wkv-pad": 12,
+              "final-moe-256": 4
+            },
+            "prime_counts": {
+              "prefill_calls": 8,
+              "fallback:short-chunk": 4,
+              "eligible_prefills": 4,
+              "wkv_pads": 12,
+              "stage:0": 4,
+              "stage:1": 4,
+              "stage:2": 4,
+              "padded_appends": 4
+            },
+            "call_counts": {
+              "model_calls": 16
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 445281,
+                "unique_hits": 66918,
+                "counts": {
+                  "calls": 16,
+                  "cache_calls": 16,
+                  "requested_rows": 788520,
+                  "unique_rows": 445281,
+                  "duplicate_rows_elided": 343239,
+                  "miss_rows": 378363,
+                  "native_read_calls": 16,
+                  "native_requested_rows": 378363,
+                  "native_selected_bytes": 60538080
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 445292,
+                "unique_hits": 66964,
+                "counts": {
+                  "calls": 16,
+                  "cache_calls": 16,
+                  "requested_rows": 788520,
+                  "unique_rows": 445292,
+                  "duplicate_rows_elided": 343228,
+                  "miss_rows": 378328,
+                  "native_read_calls": 16,
+                  "native_requested_rows": 378328,
+                  "native_selected_bytes": 60532480
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "test": "restart-fresh-cone",
+      "passed": true,
+      "cone_delta": {
+        "fallback:not-cache-only-prefill": 4,
+        "full_calls": 6,
+        "fallback:short-chunk": 2,
+        "cone_calls": 4
+      },
+      "prime_delta": {
+        "stage:1": 4,
+        "stage:0": 4,
+        "wkv_pads": 12,
+        "stage:2": 4,
+        "eligible_prefills": 4,
+        "padded_appends": 4,
+        "fallback:short-chunk": 2,
+        "prefill_calls": 6
+      }
+    }
+  ],
+  "script_sha256": "966c992bea14b0242c2c3e7374ba61648e363b9e5aeda5c1668d5b18e7470606",
+  "http_manifest_sha256": "4cdace45a20175a9aa2a89b254e85bcee7d5aaa142e73c519ebf1dfef1bbc08f",
+  "fixture_sha256": "082877514570d830a1105ef086eef1d15562c349c6d3eb85e501f191b087b2c8",
+  "completed_at_unix": 1792326582.01917
+}

@@ -1,0 +1,444 @@
+{
+  "status": "complete_validated",
+  "case": "vision-short-and-long",
+  "kind": "candidate",
+  "server": {
+    "pid": 80188,
+    "created": 1792325644.418858,
+    "port": 8001,
+    "profile": "${ORIGINAL_LAB_ROOT}/work/serving-profile-v3/staged-01/candidate-profile.http-validation.json"
+  },
+  "profile_sha256": "ee9508df157aba9523f23aff7665f7137afeb913483dc3bd8ada6f1c1787b6df",
+  "started_at_unix": 1792325698.296575,
+  "timing_scope": "Functional serving qualification; not a controlled speed comparison.",
+  "source_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_vision.py": "5f222df8e9c0872781e37eb3462791e7335899c3990183cb51efba489b9cd73f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_cancel.py": "7877a4c1fdf0e6378a5e68d1e2c81136e81c7b6b9b797320c74d0196efe2539f",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_lifecycle.py": "8fe87a256b4c8e889c0d69d2ce932e36ef7b2106210d630512a2db8048744f61",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/common.py": "09e9e59f86858fa7cd72bc10668344233ec6e1087db5c21b273aaff462db83c6",
+    "${ORIGINAL_LAB_ROOT}/work/serving-http-v3/check_sessions.py": "1ce082398ec09fd65ec3d18e5a71dcd12473b7b30d805084bd5977c169bd8526"
+  },
+  "tests": [
+    {
+      "response": {
+        "id": "chatcmpl-57148059",
+        "object": "chat.completion",
+        "created": 1792325699,
+        "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"blue_circles\": 2, \"green_squares\": 3, \"red_triangles\": 1}"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 258,
+          "completion_tokens": 26,
+          "total_tokens": 284,
+          "input_tokens": 258,
+          "output_tokens": 26,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "time_to_first_token": 0.96,
+          "total_time": 1.4,
+          "prompt_eval_duration": 0.96,
+          "generation_duration": 0.44,
+          "prompt_tokens_per_second": 267.8,
+          "generation_tokens_per_second": 58.89
+        }
+      },
+      "seconds": 1.6057425839826465,
+      "request_sha256": "99bf85e1699328b8627a3811c9543962b12d8e7e2f3f1ddb49a2bdbb44851f7d",
+      "queue_idle": {
+        "seconds": 0.0012101668398827314,
+        "status": {
+          "active_requests": 0,
+          "waiting_requests": 0,
+          "loaded_models": [
+            "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+          ]
+        },
+        "scope": "API queue idle only; not an independent GPU/executor fence."
+      },
+      "before": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {},
+            "shape_counts": {},
+            "prime_counts": {},
+            "call_counts": {},
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 0,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 0,
+                "unique_queries": 0,
+                "unique_hits": 0,
+                "counts": {}
+              },
+              {
+                "index": 1,
+                "retained_bytes": 0,
+                "unique_queries": 0,
+                "unique_hits": 0,
+                "counts": {}
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "after": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 9,
+              "fallback:short-chunk": 2,
+              "fallback:not-cache-only-prefill": 7
+            },
+            "shape_counts": {},
+            "prime_counts": {
+              "prefill_calls": 2,
+              "fallback:short-chunk": 2
+            },
+            "call_counts": {
+              "model_calls": 9
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 2288,
+                "unique_hits": 142,
+                "counts": {
+                  "calls": 9,
+                  "cache_calls": 9,
+                  "requested_rows": 6936,
+                  "unique_rows": 2288,
+                  "duplicate_rows_elided": 4648,
+                  "miss_rows": 2146,
+                  "native_read_calls": 9,
+                  "native_requested_rows": 2146,
+                  "native_selected_bytes": 343360
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 2288,
+                "unique_hits": 144,
+                "counts": {
+                  "calls": 9,
+                  "cache_calls": 9,
+                  "requested_rows": 6936,
+                  "unique_rows": 2288,
+                  "duplicate_rows_elided": 4648,
+                  "miss_rows": 2144,
+                  "native_read_calls": 9,
+                  "native_requested_rows": 2144,
+                  "native_selected_bytes": 343040
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "test": "vision-short",
+      "parsed": {
+        "blue_circles": 2,
+        "green_squares": 3,
+        "red_triangles": 1
+      },
+      "cone_delta": {
+        "fallback:short-chunk": 2,
+        "full_calls": 9,
+        "fallback:not-cache-only-prefill": 7
+      },
+      "prime_delta": {
+        "fallback:short-chunk": 2,
+        "prefill_calls": 2
+      },
+      "prompt_tokens": 258,
+      "passed": true
+    },
+    {
+      "response": {
+        "id": "chatcmpl-1764e045",
+        "object": "chat.completion",
+        "created": 1792325748,
+        "model": "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"blue_circles\": 2, \"green_squares\": 3, \"red_triangles\": 1}"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 33044,
+          "completion_tokens": 26,
+          "total_tokens": 33070,
+          "input_tokens": 33044,
+          "output_tokens": 26,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "time_to_first_token": 47.83,
+          "total_time": 48.2,
+          "prompt_eval_duration": 47.83,
+          "generation_duration": 0.38,
+          "prompt_tokens_per_second": 690.89,
+          "generation_tokens_per_second": 69.15
+        }
+      },
+      "seconds": 48.263671207940206,
+      "request_sha256": "6249407e947ae57309c06153be0986604a7aaf2669b4ae687cf9f5b8059a78db",
+      "queue_idle": {
+        "seconds": 0.0012204998638480902,
+        "status": {
+          "active_requests": 0,
+          "waiting_requests": 0,
+          "loaded_models": [
+            "DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp"
+          ]
+        },
+        "scope": "API queue idle only; not an independent GPU/executor fence."
+      },
+      "before": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 9,
+              "fallback:short-chunk": 2,
+              "fallback:not-cache-only-prefill": 7
+            },
+            "shape_counts": {},
+            "prime_counts": {
+              "prefill_calls": 2,
+              "fallback:short-chunk": 2
+            },
+            "call_counts": {
+              "model_calls": 9
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 2288,
+                "unique_hits": 142,
+                "counts": {
+                  "calls": 9,
+                  "cache_calls": 9,
+                  "requested_rows": 6936,
+                  "unique_rows": 2288,
+                  "duplicate_rows_elided": 4648,
+                  "miss_rows": 2146,
+                  "native_read_calls": 9,
+                  "native_requested_rows": 2146,
+                  "native_selected_bytes": 343360
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 2288,
+                "unique_hits": 144,
+                "counts": {
+                  "calls": 9,
+                  "cache_calls": 9,
+                  "requested_rows": 6936,
+                  "unique_rows": 2288,
+                  "duplicate_rows_elided": 4648,
+                  "miss_rows": 2144,
+                  "native_read_calls": 9,
+                  "native_requested_rows": 2144,
+                  "native_selected_bytes": 343040
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "after": {
+        "candidate": "cone-hotrows-v3",
+        "namespace": "69438b6f7bdb",
+        "manifest_sha256": "98c0532d46416e02698dc6a77476ea8152de7910cbd4641810c37e3195539032",
+        "observation": "Nonblocking, non-atomic CPU counters; not a GPU/worker-idle proof.",
+        "loaded_bindings": 1,
+        "models": [
+          {
+            "status": "loaded",
+            "enabled": true,
+            "python_call_active_hint": false,
+            "cone_counts": {
+              "full_calls": 23,
+              "fallback:short-chunk": 5,
+              "fallback:not-cache-only-prefill": 14,
+              "fallback:multimodal-or-token-types": 4
+            },
+            "shape_counts": {},
+            "prime_counts": {
+              "prefill_calls": 9,
+              "fallback:short-chunk": 5,
+              "fallback:multimodal-or-token-types": 4
+            },
+            "call_counts": {
+              "model_calls": 23
+            },
+            "row_status": "active",
+            "retained_row_cache_bytes_observed": 536870912,
+            "tables": [
+              {
+                "index": 0,
+                "retained_bytes": 268435456,
+                "unique_queries": 451418,
+                "unique_hits": 71764,
+                "counts": {
+                  "calls": 23,
+                  "cache_calls": 23,
+                  "requested_rows": 800712,
+                  "unique_rows": 451418,
+                  "duplicate_rows_elided": 349294,
+                  "miss_rows": 379654,
+                  "native_read_calls": 23,
+                  "native_requested_rows": 379654,
+                  "native_selected_bytes": 60744640
+                }
+              },
+              {
+                "index": 1,
+                "retained_bytes": 268435456,
+                "unique_queries": 451428,
+                "unique_hits": 71847,
+                "counts": {
+                  "calls": 23,
+                  "cache_calls": 23,
+                  "requested_rows": 800712,
+                  "unique_rows": 451428,
+                  "duplicate_rows_elided": 349284,
+                  "miss_rows": 379581,
+                  "native_read_calls": 22,
+                  "native_requested_rows": 379581,
+                  "native_selected_bytes": 60732960,
+                  "all_hit_calls": 1
+                }
+              }
+            ]
+          }
+        ],
+        "collected_without_native_unload": 0,
+        "failed_unloads": 0,
+        "unloads": []
+      },
+      "test": "vision-long-fallback",
+      "parsed": {
+        "blue_circles": 2,
+        "green_squares": 3,
+        "red_triangles": 1
+      },
+      "cone_delta": {
+        "fallback:short-chunk": 3,
+        "full_calls": 14,
+        "fallback:multimodal-or-token-types": 4,
+        "fallback:not-cache-only-prefill": 7
+      },
+      "prime_delta": {
+        "fallback:short-chunk": 3,
+        "prefill_calls": 7,
+        "fallback:multimodal-or-token-types": 4
+      },
+      "prompt_tokens": 33044,
+      "passed": true
+    }
+  ],
+  "image": {
+    "status": "frozen_unrun",
+    "path": "fixtures/vision-shapes-v2.png",
+    "sha256": "5f2fe1401601626da1b424c048bfe3c1bd928366dcaf027eee2cd39b15d4d1da",
+    "width": 512,
+    "height": 384,
+    "expected": {
+      "blue_circles": 2,
+      "green_squares": 3,
+      "red_triangles": 1
+    },
+    "verified_green_components": [
+      [
+        65,
+        65,
+        4225
+      ],
+      [
+        65,
+        65,
+        4225
+      ],
+      [
+        65,
+        65,
+        4225
+      ]
+    ],
+    "license": "Original diagnostic fixture, CC0-1.0",
+    "created_at_utc": "2026-10-18T11:21:54.704318+00:00",
+    "builder_sha256": "e0c0e03c03b9dd9d66edb4f77666bdef88ba298c59623161e2218288001dc3d3",
+    "supersedes": {
+      "path": "fixtures/vision-shapes.png",
+      "sha256": "346d7531e3099bcbb378d4f3e46030b92c86ad9369866e0895ac32ae2aea0fbf",
+      "reason": "Visual QA found original green shapes were65x76, not squares. Original preserved; no model has consumed either image during preparation. Token fixtures and bench plans are unchanged."
+    }
+  },
+  "http_fixture_sha256": "082877514570d830a1105ef086eef1d15562c349c6d3eb85e501f191b087b2c8",
+  "completed_at_unix": 1792325748.2518232
+}

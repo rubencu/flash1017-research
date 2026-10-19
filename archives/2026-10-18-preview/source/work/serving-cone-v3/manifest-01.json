@@ -1,0 +1,21 @@
+{
+  "status": "frozen_for_real_model_qualification",
+  "timestamp_utc": "2026-10-18T11:21:25.783465+00:00",
+  "scope": "New staging files only. No live server or qualified inference source changes. No MLX imports or GPU work by this agent.",
+  "cpu_validation": {
+    "command": "python3 -m unittest discover -s work/serving-cone-v3 -p test_cpu.py -v",
+    "tests": 18,
+    "passed": 18,
+    "mlx_imported": false,
+    "numerical_validation": false
+  },
+  "sources_sha256": {
+    "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/cone_serving.py": "4c02a58440aa2ee79e16572fac20e775be35da52a5171bd314cbe5b394c633fb",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/test_cpu.py": "fed81736c6e26b49d8f85c9d0017362ce4767fc1d505de26f00124961d18d7e9",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/design.json": "75a9a688c7d4aec86de890c57827c2feb2e2c6c6cdce8320a842b8a7cc303e31",
+    "${ORIGINAL_LAB_ROOT}/work/serving-cone-v3/source-audit.json": "b9ec901eef970307615c434acb8a4eb3e8e31ebdd347d0d09210cbcdfb45f1b6",
+    "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633",
+    "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80",
+    "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+  }
+}

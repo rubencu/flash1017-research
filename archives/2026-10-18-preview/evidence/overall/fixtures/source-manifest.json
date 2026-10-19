@@ -1,0 +1,516 @@
+{
+  "fetched_at_utc": "2026-10-18T11:09:39.671452+00:00",
+  "repos": {
+    "cpython": {
+      "repo": "python/cpython",
+      "revision": "ebf955df7a89ed0c7968f79faec1de49f61ed7cb",
+      "tag": "v3.14.0",
+      "license": "PSF-2.0 and retained historical licenses",
+      "files": [
+        "LICENSE",
+        "Lib/asyncio/base_events.py",
+        "Lib/asyncio/events.py",
+        "Lib/asyncio/tasks.py",
+        "Lib/asyncio/futures.py",
+        "Lib/asyncio/streams.py",
+        "Lib/asyncio/locks.py",
+        "Lib/asyncio/queues.py",
+        "Lib/asyncio/taskgroups.py",
+        "Lib/inspect.py",
+        "Lib/ast.py",
+        "Lib/dataclasses.py",
+        "Lib/typing.py",
+        "Lib/pickle.py",
+        "Lib/dis.py"
+      ]
+    },
+    "curl": {
+      "repo": "curl/curl",
+      "revision": "11b991232fbcaa88e2b1faecac224416b0001e35",
+      "tag": "curl-8_16_0",
+      "license": "curl license (COPYING and per-file notices retained)",
+      "files": [
+        "COPYING",
+        "lib/multi.c",
+        "lib/easy.c",
+        "lib/transfer.c",
+        "lib/url.c",
+        "lib/http.c",
+        "lib/sendf.c",
+        "lib/connect.c",
+        "lib/hostip.c",
+        "lib/urlapi.c",
+        "lib/cfilters.c"
+      ]
+    }
+  },
+  "books": {
+    "moby-dick": {
+      "id": 2701,
+      "title": "Moby Dick; Or, The Whale",
+      "author": "Herman Melville",
+      "url": "https://www.gutenberg.org/ebooks/2701.txt.utf-8"
+    },
+    "pride-prejudice": {
+      "id": 1342,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "url": "https://www.gutenberg.org/ebooks/1342.txt.utf-8"
+    }
+  },
+  "files": [
+    {
+      "source": "cpython",
+      "path": "sources/cpython/LICENSE",
+      "source_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/LICENSE",
+      "kind": "license",
+      "bytes": 13804,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+      "headers": {
+        "ETag": "\"1406f1b1383707a91c7b0c6c26bc0d762f482719ed60585bb32ef6069157e76f\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/asyncio/base_events.py",
+      "source_path": "Lib/asyncio/base_events.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/base_events.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/base_events.py",
+      "kind": "code",
+      "bytes": 80683,
+      "sha256": "a82285b1ccb379d4bc18f3c1b05a2876040daed1523e7fb6bc05c0a86977894d",
+      "headers": {
+        "ETag": "\"a007b0bf36c8b59914889fd1aad53478f0d942e4fdebcc3f6e9b2bfb186c579d\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/asyncio/events.py",
+      "source_path": "Lib/asyncio/events.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/events.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/events.py",
+      "kind": "code",
+      "bytes": 29531,
+      "sha256": "b1a138015c6e1878d7f8c6be51896da451d7f25c24f6ef18d76ceff249050d94",
+      "headers": {
+        "ETag": "\"397e9697e0364a6a6af21ee739108ae933122ac29712f233ba738964ee973f90\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/asyncio/tasks.py",
+      "source_path": "Lib/asyncio/tasks.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/tasks.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/tasks.py",
+      "kind": "code",
+      "bytes": 40458,
+      "sha256": "8554946e93b93d70288a2ab0ad7f255cf3119c4861f89e3c9194956d0f3f591a",
+      "headers": {
+        "ETag": "\"be4864f4fbe7e39842c4525a5d0b39522b3cb9f88bc0686d81a54cf72470dd77\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/asyncio/futures.py",
+      "source_path": "Lib/asyncio/futures.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/futures.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/futures.py",
+      "kind": "code",
+      "bytes": 16824,
+      "sha256": "f23f290c9e3ab1b1839a0929ace615ce9195131d52d0a3819721fc2c9e1eb7b4",
+      "headers": {
+        "ETag": "\"dbf1af84671a7c096180b7374d85d232fedef9622730579735b65684804c12da\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/asyncio/streams.py",
+      "source_path": "Lib/asyncio/streams.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/streams.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/streams.py",
+      "kind": "code",
+      "bytes": 28481,
+      "sha256": "d1753bc21667afe914390623be181ebb31776845d7c7f2f50805cae972f0189b",
+      "headers": {
+        "ETag": "\"91cd7c472ee9c3b6e3dd895c09ab14232af9a51b7f23c08069566ae5a8208c65\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/asyncio/locks.py",
+      "source_path": "Lib/asyncio/locks.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/locks.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/locks.py",
+      "kind": "code",
+      "bytes": 20574,
+      "sha256": "e8503dc3ab56aaa57ab14f74f2a4f9ce81db1740be68667ca0da0b48b34ee75f",
+      "headers": {
+        "ETag": "\"08c39951c8644a7a641dcce084c057c8c3ac00c30ab55d674086e2ff2968ffa5\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/asyncio/queues.py",
+      "source_path": "Lib/asyncio/queues.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/queues.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/queues.py",
+      "kind": "code",
+      "bytes": 10178,
+      "sha256": "48693f7c118584b0a896d3ad7c5fd6c1250104733075be071e6b19708b866d96",
+      "headers": {
+        "ETag": "\"7297a8f80d8cf07698f61161429eb50c916c6797c5f5b50f2d46ad21c9b5359a\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/asyncio/taskgroups.py",
+      "source_path": "Lib/asyncio/taskgroups.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/taskgroups.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/asyncio/taskgroups.py",
+      "kind": "code",
+      "bytes": 10070,
+      "sha256": "df0ea4f0911ea9c1006b4dec45557e0862a09d7a411c63259943731df8c41dda",
+      "headers": {
+        "ETag": "\"deeeb6b9a9059509a146a0610253e87bbfc10032ed77df9229ca4a0f5e060afd\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/inspect.py",
+      "source_path": "Lib/inspect.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/inspect.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/inspect.py",
+      "kind": "code",
+      "bytes": 126826,
+      "sha256": "dd95bf21e36fcb4cdbcb9085e38d4c871cbea8c00c7e261f23f6384b9a6e648d",
+      "headers": {
+        "ETag": "\"181023bc834c68f07f9331722f5178c268d38d6be468da89e24a86dbb2236dcf\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/ast.py",
+      "source_path": "Lib/ast.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/ast.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/ast.py",
+      "kind": "code",
+      "bytes": 25479,
+      "sha256": "5ea9a796353544bea0d706153516f04ef3d92be305d15a73238403837d77e34c",
+      "headers": {
+        "ETag": "\"b75383c6396c2ea1a3ed66a388995a6634fcb44a675d86aab7471db2ef3f5b1a\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/dataclasses.py",
+      "source_path": "Lib/dataclasses.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/dataclasses.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/dataclasses.py",
+      "kind": "code",
+      "bytes": 68691,
+      "sha256": "a12733cbd85591ae21b0677a42ebbcc0cc50eb32fd11ae441cade9b4ae8dbcb8",
+      "headers": {
+        "ETag": "\"ee32c5c6775c1201598b5ed2c903356459d1e12b1685d5536045b7565bf35ca5\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/typing.py",
+      "source_path": "Lib/typing.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/typing.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/typing.py",
+      "kind": "code",
+      "bytes": 134633,
+      "sha256": "b7b20c5180b6be1dd5f17f3f5be5f1a77540802f360ccea8ebf4ecc35ce8a0b5",
+      "headers": {
+        "ETag": "\"4fadb7f04d6ec14cee2f2e3618b16d645b2e8a54a8da60b26c6b41a5c2b3dab0\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/pickle.py",
+      "source_path": "Lib/pickle.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/pickle.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/pickle.py",
+      "kind": "code",
+      "bytes": 69945,
+      "sha256": "b24a348ff4c37e7db4f7e25edec94a83583ee9bd9a2f55c5df9f11b0c3237a51",
+      "headers": {
+        "ETag": "\"d030f3a5d8c6d63b60d20f98fec8e774bfe7c9757e6f79ace726572eed61088e\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "cpython",
+      "path": "sources/cpython/Lib/dis.py",
+      "source_path": "Lib/dis.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/dis.py",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/dis.py",
+      "kind": "code",
+      "bytes": 45533,
+      "sha256": "17d4d9a9195c9ee5aa27a96f3e0871f9363fd501e3a64ef20cb1cc876d7ad553",
+      "headers": {
+        "ETag": "\"8c969dad43e040818483bf00253c3559d55fa3dddba678760cce0a4858850f1d\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/COPYING",
+      "source_path": "COPYING",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/COPYING",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/COPYING",
+      "kind": "license",
+      "bytes": 1088,
+      "sha256": "e18f1989333b70044b2adfb7dc2f905d0119dbdcac3bc9f4bc9d540e3a29de5b",
+      "headers": {
+        "ETag": "\"197554dd04b98a9e86ab991b365a278a7a97a51e11b16cf74fcfd9e0a2e7d7d7\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/multi.c",
+      "source_path": "lib/multi.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/multi.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/multi.c",
+      "kind": "code",
+      "bytes": 124486,
+      "sha256": "459ee566074e24894221876bd1a4e37886767a717325b41b7938e570d0056258",
+      "headers": {
+        "ETag": "\"60a049a00912a2b17eea1d6b760f9c38dee308a3e84c8665948af9773d85b15c\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/easy.c",
+      "source_path": "lib/easy.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/easy.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/easy.c",
+      "kind": "code",
+      "bytes": 37441,
+      "sha256": "ea6537005e2d4894f72f08f3cd321335f01b8cc877d6504e2178a8cde16d2725",
+      "headers": {
+        "ETag": "\"25656e1e50e9aae8db867f46f7aed908d983075db5d90eee7e568a70187a49f3\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/transfer.c",
+      "source_path": "lib/transfer.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/transfer.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/transfer.c",
+      "kind": "code",
+      "bytes": 30089,
+      "sha256": "306d2d0f020d9553a1a945168064264466f0a16ba90284dcd5d0fcd6c2eb6dcb",
+      "headers": {
+        "ETag": "\"28bdc8b77032e5ceb85b90004863861dc5221dcc00f907315d4f12a24dd56269\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/url.c",
+      "source_path": "lib/url.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/url.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/url.c",
+      "kind": "code",
+      "bytes": 123119,
+      "sha256": "945282e635514a4ff570cd3c8bc06fffc620039f9c77862f6c1c50a29d0288e2",
+      "headers": {
+        "ETag": "\"3191140b303189f8161a954fec989b52847af3829d4fffe84a333dddecbaae85\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/http.c",
+      "source_path": "lib/http.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/http.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/http.c",
+      "kind": "code",
+      "bytes": 152322,
+      "sha256": "19de2798bd384b8fe11484b25009630d13505ae0677442022e4b98a79e3113bd",
+      "headers": {
+        "ETag": "\"a266c83cf388cba4ce1d7a8c4ea1cbffe057bf83ebceb392d07b344272867c69\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/sendf.c",
+      "source_path": "lib/sendf.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/sendf.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/sendf.c",
+      "kind": "code",
+      "bytes": 39761,
+      "sha256": "7db6472763e6392570261270076ecbb1842d8d1d681e08e14e5431715aaf4eca",
+      "headers": {
+        "ETag": "\"c14afd08c84db3efa5bd0959634480cd57a73e81443cceb45a7ad98360446bb2\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/connect.c",
+      "source_path": "lib/connect.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/connect.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/connect.c",
+      "kind": "code",
+      "bytes": 17583,
+      "sha256": "83d81509c4a108c4673ed1ec49caee4e22742cd8e1144fa3ecf1f07c79561e1e",
+      "headers": {
+        "ETag": "\"8588fbd705ff5ef3904adfb254ffc3bbb147c2fe91a424b08dd8db0af6caf090\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/hostip.c",
+      "source_path": "lib/hostip.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/hostip.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/hostip.c",
+      "kind": "code",
+      "bytes": 48852,
+      "sha256": "50190b97bdc28c923dbfcf3d587f374181c1cd3745fae7155bed129badd9a4d9",
+      "headers": {
+        "ETag": "\"3ece5b91027d7dc7eb59d1f2abb94d3d31e1958ca4567a835b6db5eed6561b93\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/urlapi.c",
+      "source_path": "lib/urlapi.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/urlapi.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/urlapi.c",
+      "kind": "code",
+      "bytes": 53872,
+      "sha256": "db33e86d484aaff2e725f1a943f6c025957bda125ecdedb919bcfcc25597516f",
+      "headers": {
+        "ETag": "\"3ba466eaa9c5e59ace4ecf91870f56721eeff677d2479e52f88f0677457ec405\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "curl",
+      "path": "sources/curl/lib/cfilters.c",
+      "source_path": "lib/cfilters.c",
+      "url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/cfilters.c",
+      "final_url": "https://raw.githubusercontent.com/curl/curl/11b991232fbcaa88e2b1faecac224416b0001e35/lib/cfilters.c",
+      "kind": "code",
+      "bytes": 32933,
+      "sha256": "b5aee363f5289048279e5ea3d756c2a57bb48616d8897cfd09d270b81c235a61",
+      "headers": {
+        "ETag": "\"633cef201407dea03303088912604deae1cf6e90b4fd33a6b67ff816a13dfcf7\"",
+        "Last-Modified": null,
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "moby-dick",
+      "path": "sources/moby-dick/complete.txt",
+      "source_path": "complete.txt",
+      "url": "https://www.gutenberg.org/ebooks/2701.txt.utf-8",
+      "final_url": "https://www.gutenberg.org/cache/epub/2701/pg2701.txt",
+      "kind": "public-domain-prose",
+      "bytes": 1276315,
+      "sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+      "headers": {
+        "ETag": null,
+        "Last-Modified": "Sun, 11 Oct 2026 16:00:21 GMT",
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "moby-dick",
+      "path": "sources/moby-dick/catalog.html",
+      "source_path": "catalog.html",
+      "url": "https://www.gutenberg.org/ebooks/2701",
+      "final_url": "https://www.gutenberg.org/ebooks/2701",
+      "kind": "catalog-and-rights",
+      "bytes": 25444,
+      "sha256": "96149e69a0c0fb3bb84d6707afa71ea230951a8e6e4107e27aaba7f3069d8489",
+      "headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "text/html;charset=utf-8"
+      }
+    },
+    {
+      "source": "pride-prejudice",
+      "path": "sources/pride-prejudice/complete.txt",
+      "source_path": "complete.txt",
+      "url": "https://www.gutenberg.org/ebooks/1342.txt.utf-8",
+      "final_url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+      "kind": "public-domain-prose",
+      "bytes": 772386,
+      "sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+      "headers": {
+        "ETag": null,
+        "Last-Modified": "Thu, 01 Oct 2026 13:21:01 GMT",
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "source": "pride-prejudice",
+      "path": "sources/pride-prejudice/catalog.html",
+      "source_path": "catalog.html",
+      "url": "https://www.gutenberg.org/ebooks/1342",
+      "final_url": "https://www.gutenberg.org/ebooks/1342",
+      "kind": "catalog-and-rights",
+      "bytes": 24938,
+      "sha256": "9f1c04e978d7348ac81e1735c43f3a69c85c36bf00f1e00296817b465b217100",
+      "headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "text/html;charset=utf-8"
+      }
+    }
+  ],
+  "fetcher_sha256": "a7b8ea3904fee787c942bcdc9ddfa43e140e7b79f833e1c03d219eb0edf62ac0",
+  "rights": "Code files retain full notices plus upstream license. Both Gutenberg catalog pages explicitly identify public-domain status in the USA; full ebook headers and license tails are retained. No inferred worldwide public-domain claim.",
+  "purpose": "Held-out runtime-validation inputs from repositories/books absent from the earlier oMLX natural-source pilot. This does not imply absence from model training data."
+}

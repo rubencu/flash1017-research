@@ -1,0 +1,433 @@
+{
+  "status": "complete_validated",
+  "mode": "performance",
+  "plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+  "manifest_sha256": "263cdd276fbf26715846ccd015e42bae521e163b7de8680f795017f965b176a5",
+  "started_at_unix": 1792323051.6867929,
+  "loading_thread": 8245444480,
+  "pairs": [
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 42,
+      "prompt_id": "authored-warmup-16384",
+      "warmup": true,
+      "pair_index": 0
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 60,
+      "prompt_id": "performance-pride-prejudice-16384",
+      "warmup": false,
+      "pair_index": 1
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 41,
+      "prompt_id": "performance-curl-65536",
+      "warmup": false,
+      "pair_index": 2
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 44,
+      "prompt_id": "performance-cpython-32768",
+      "warmup": false,
+      "pair_index": 3
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 60,
+      "prompt_id": "performance-pride-prejudice-32768",
+      "warmup": false,
+      "pair_index": 4
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 45,
+      "prompt_id": "performance-curl-16384",
+      "warmup": false,
+      "pair_index": 5
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 49,
+      "prompt_id": "performance-cpython-16384",
+      "warmup": false,
+      "pair_index": 6
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 51,
+      "prompt_id": "performance-moby-dick-16384",
+      "warmup": false,
+      "pair_index": 7
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 69,
+      "prompt_id": "performance-moby-dick-131072",
+      "warmup": false,
+      "pair_index": 8
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 56,
+      "prompt_id": "performance-moby-dick-32768",
+      "warmup": false,
+      "pair_index": 9
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 55,
+      "prompt_id": "performance-pride-prejudice-65536",
+      "warmup": false,
+      "pair_index": 10
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 43,
+      "prompt_id": "performance-cpython-65536",
+      "warmup": false,
+      "pair_index": 11
+    },
+    {
+      "checks": {
+        "same_input": true,
+        "same_seed": true,
+        "all_output_ids_identical": true,
+        "decoded_text_identical": true,
+        "finish_reason_identical": true,
+        "functional_mtp_cycles_identical": true,
+        "functional_mtp_totals_identical": true,
+        "full_requested_length": true,
+        "no_early_eos": true,
+        "intended_paths_exercised": true
+      },
+      "passed": true,
+      "compared_output_tokens": 128,
+      "compared_mtp_cycles": 36,
+      "prompt_id": "performance-curl-32768",
+      "warmup": false,
+      "pair_index": 12
+    }
+  ],
+  "scope": "Fresh KV, native64 bypass versus persistent model-owned cone+HotRows. OS cache is not purged. Row-cache memory remains allocated during subsequent baseline arms.",
+  "timing_interpretation": "Completed paired requests; excludes state/probe observers.",
+  "worker_threads": [
+    6154317824,
+    6171144192
+  ],
+  "installation": {
+    "cone": {
+      "enabled": false,
+      "closed": false,
+      "counts": {},
+      "cone_counts": {},
+      "shape_counts": {},
+      "prime_counts": {},
+      "trace": [],
+      "prefill_trace": [],
+      "sources": {
+        "cone": {
+          "path": "${ORIGINAL_LAB_ROOT}/work/cone-experiment/cone.py",
+          "sha256": "3add39a4dcc84f58b5674d570be9f5ae6120118e2aa13d81b1e21f8bd2ed6633"
+        },
+        "shape": {
+          "path": "${ORIGINAL_LAB_ROOT}/work/cone-v2/stabilization.py",
+          "sha256": "d5d7b58149b78bcdec2d210eb9b2dc71717d0a413dc2fb15e776b83bdd559a80"
+        },
+        "prime": {
+          "path": "${ORIGINAL_LAB_ROOT}/work/cone-dspark-stable/stabilization.py",
+          "sha256": "d6b6af7379dec4d4255fa1518f9b7ab147634c225222c83a5229f3d031a05678"
+        }
+      },
+      "owned_instances": 90
+    },
+    "rows": {
+      "status": "active",
+      "enabled": false,
+      "per_table_budget_bytes": 268435456,
+      "max_retained_bytes": 536870912,
+      "retained_bytes": 0,
+      "live_tables": [
+        {
+          "cache_id": 0,
+          "table": "language_model.layers.1.engram.embed.weight",
+          "budget": 268435456,
+          "nbytes": 0,
+          "closed": false,
+          "resident": false,
+          "cache_disabled_after_allocation_failure": false,
+          "counts": {},
+          "unique_hits": 0,
+          "unique_queries": 0,
+          "admitted": 0
+        },
+        {
+          "cache_id": 1,
+          "table": "language_model.layers.14.engram.embed.weight",
+          "budget": 268435456,
+          "nbytes": 0,
+          "closed": false,
+          "resident": false,
+          "cache_disabled_after_allocation_failure": false,
+          "counts": {},
+          "unique_hits": 0,
+          "unique_queries": 0,
+          "admitted": 0
+        }
+      ],
+      "retired_tables": [],
+      "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+    }
+  },
+  "mismatch_pending": false,
+  "model_cleanup_completed": true,
+  "row_cache_after_model_close": {
+    "status": "closed",
+    "enabled": false,
+    "per_table_budget_bytes": 268435456,
+    "max_retained_bytes": 536870912,
+    "retained_bytes": 0,
+    "live_tables": [],
+    "retired_tables": [
+      {
+        "cache_id": 0,
+        "table": "language_model.layers.1.engram.embed.weight",
+        "budget": 268435456,
+        "nbytes": 0,
+        "closed": true,
+        "resident": false,
+        "cache_disabled_after_allocation_failure": false,
+        "counts": {
+          "calls": 1486,
+          "bypass_calls": 743,
+          "native_read_calls": 1486,
+          "native_requested_rows": 19812421,
+          "native_selected_bytes": 3169987360,
+          "cache_calls": 743,
+          "requested_rows": 13027200,
+          "unique_rows": 9258837,
+          "duplicate_rows_elided": 3768363,
+          "miss_rows": 6785221
+        },
+        "unique_hits": 2473616,
+        "unique_queries": 9258837,
+        "admitted": 2742879
+      },
+      {
+        "cache_id": 1,
+        "table": "language_model.layers.14.engram.embed.weight",
+        "budget": 268435456,
+        "nbytes": 0,
+        "closed": true,
+        "resident": false,
+        "cache_disabled_after_allocation_failure": false,
+        "counts": {
+          "calls": 1486,
+          "bypass_calls": 743,
+          "native_read_calls": 1486,
+          "native_requested_rows": 19813084,
+          "native_selected_bytes": 3170093440,
+          "cache_calls": 743,
+          "requested_rows": 13027200,
+          "unique_rows": 9258826,
+          "duplicate_rows_elided": 3768374,
+          "miss_rows": 6785884
+        },
+        "unique_hits": 2472942,
+        "unique_queries": 9258826,
+        "admitted": 2744107
+      }
+    ],
+    "scope": "Retained payload, full-ID tags and frequency sketch only; temporary CPU gather arrays are additional."
+  },
+  "instance_hooks_restored": true,
+  "source_hashes_reverified": true,
+  "completed_at_unix": 1792325356.577752,
+  "raw_output_sha256": "496f228087d1cc7e9b45e792339db85fe9a0ffff58bb13eeec4a575416d7a340",
+  "completed_request_files_sha256": {
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job24.json": "d0e5dd9f33e3deb4e3930596f6c74369543b62f6944718b44ff823bd366c3332",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job08.json": "1ac42399d9356d8395caef720b9ed427b9dafc82000d52d3eb5cba97ffa9d9da",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job04.json": "6223e844beab74da584350a7edafe3d29a8f2f088857ab47de61384ed93d6cd4",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job12.json": "c587b1177a1cdd0beab865177ced5bea7fe34cd1a6d57ac15777bba3f5355b4f",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job13.json": "8c593767997b3b100d704d564bc85a0567e166dbfe826947b77459d44d7c67b2",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job05.json": "a9d075caac380f2abe08fd99c1010879bac58f1e4123aa0a7c43eba7df098f79",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job09.json": "b2f3938a5664b60ee4b4c17f6bd9eb44db55c28a8804670a7bf7466d2d6720a4",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job25.json": "4c5244020d90e6bbaf8cf319568564f3347bff40d8b2c86af01ada452a746b30",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job02.json": "3611fecf3c3ba6fb4eaa320ccb8078801d6bda89e84612d8e3d5f4b2c7321e66",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job14.json": "887c900151b008ed216df65448d4042a4ca2f26252245d27af65429db16d16ba",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job22.json": "fda13b2f1464a338198dbbeb23f47c31ffd761910db0262422b855dc1bf33e05",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job18.json": "20480df2e9c207fab12a44f5541a4f52bae37f8adc5f83868da4dfdec196f4f4",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job19.json": "c3e028b367b52446b919f9231111fd27b851cf4f5da3fc00b85df8fc9f92ac08",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job23.json": "1a3d6029f9a5b43a7f8191d01f4c6ee7b3cd206d3ce6ea87fc6ce86be9a4ab09",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job15.json": "bd88a6f1dc8cba289066e5b0a3d635d7aef348bf50d9b88ea604eb18845a9601",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job03.json": "b7dee4f1eeef063c36baaec67c7b55490db7e8fc35be939b77972c80edafa5f4",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job16.json": "bc9151915735a2c95c2515b8772be03a6b8d9b7684bfc8e1fade64453a997342",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job00.json": "1ca64946812fa70f0319846ef482d44fa18e7872804335003cfbc56e78a90236",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job20.json": "0f9023a68df9aae8e11e68ed302b0878b5e735290b73b1f209725e1abf16b501",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job21.json": "e5d85be6f569d2b7f511ada01b547aedab94942c67d72b3abaa175287f1c9a92",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job01.json": "f273dafabb67ea76541597eb410b4e0acce0217414ad60ac0072c9454c3f66f2",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job17.json": "d828468fe7e55ed38545207c320e4491cc16f9491012e31e992deba1d3e96cd9",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job10.json": "39406fc9788baaf7ec5fb99c0e1106817ffdb51c42dd7f7dd907c5ee9e57d0da",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job06.json": "848c0c023b1ee35dd9a02213a3474ad78ae4895bbaee12dc615e0291f2128f35",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job07.json": "633ccd6c8471647209600f2b27395bb9a077841671a6b5320496825f9f09fa51",
+    "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.completed/job11.json": "d06f06426b1b73aaa72ef216c0bbb46cabc2495c31a1af3c01f678f4fb399e29"
+  }
+}

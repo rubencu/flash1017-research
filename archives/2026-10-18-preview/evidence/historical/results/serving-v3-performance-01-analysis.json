@@ -1,0 +1,1529 @@
+{
+  "status": "accepted_complete_token_and_functional_trace_identical",
+  "measured": {
+    "pairs": 12,
+    "output_tokens_compared": 1536,
+    "mtp_cycles_compared": 609,
+    "prefill_seconds": {
+      "native64_geomean": 68.82833547422966,
+      "fastpath64_geomean": 41.07310917753339,
+      "paired_speed_ratio_geomean": 1.6757517717182722,
+      "latency_reduction_percent": 40.325290602281385,
+      "candidate_faster_pairs": 12
+    },
+    "ttft_seconds": {
+      "native64_geomean": 68.97057514412089,
+      "fastpath64_geomean": 41.21388427536407,
+      "paired_speed_ratio_geomean": 1.6734791286185229,
+      "latency_reduction_percent": 40.24425026289321,
+      "candidate_faster_pairs": 12
+    },
+    "total_seconds": {
+      "native64_geomean": 73.22822766079861,
+      "fastpath64_geomean": 45.42553255793564,
+      "paired_speed_ratio_geomean": 1.6120499537876287,
+      "latency_reduction_percent": 37.967182862390395,
+      "candidate_faster_pairs": 12
+    },
+    "measured_decode_tokens_per_second": {
+      "native64": 40.86945880710841,
+      "fastpath64": 41.400168487846365
+    },
+    "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+    "resources": {
+      "native64": {
+        "disk_read_bytes_sum": 420310372352,
+        "disk_write_bytes_sum": 0,
+        "process_footprint_peak_bytes": 232432732176,
+        "system_available_min_bytes": 20671643648,
+        "swap_peak_bytes": 2011234304,
+        "max_per_request_swap_growth_bytes": 0
+      },
+      "fastpath64": {
+        "disk_read_bytes_sum": 306695970816,
+        "disk_write_bytes_sum": 0,
+        "process_footprint_peak_bytes": 232231061568,
+        "system_available_min_bytes": 21225291776,
+        "swap_peak_bytes": 2011234304,
+        "max_per_request_swap_growth_bytes": 0
+      }
+    },
+    "candidate_row_cache": {
+      "unique_rows": 18298473,
+      "calls": 1394,
+      "miss_rows": 13378023,
+      "requested_rows": 25260048,
+      "bypass_calls": 0,
+      "native_read_calls": 1394,
+      "native_selected_bytes": 2140483680,
+      "duplicate_rows_elided": 6961575,
+      "native_requested_rows": 13378023,
+      "cache_calls": 1394,
+      "unique_hits": 4920450,
+      "unique_queries": 18298473,
+      "admitted": 5299738,
+      "weighted_unique_hit_fraction": 0.2688994868588215
+    }
+  },
+  "warmup_separate": {
+    "pairs": 1,
+    "output_tokens_compared": 128,
+    "mtp_cycles_compared": 42,
+    "prefill_seconds": {
+      "native64_geomean": 18.22210199991241,
+      "fastpath64_geomean": 9.819903291994706,
+      "paired_speed_ratio_geomean": 1.8556294759814256,
+      "latency_reduction_percent": 46.10993126895071,
+      "candidate_faster_pairs": 1
+    },
+    "ttft_seconds": {
+      "native64_geomean": 18.329854625044387,
+      "fastpath64_geomean": 9.908973916899415,
+      "paired_speed_ratio_geomean": 1.849823682932847,
+      "latency_reduction_percent": 45.94079375097381,
+      "candidate_faster_pairs": 1
+    },
+    "total_seconds": {
+      "native64_geomean": 21.139115625061095,
+      "fastpath64_geomean": 12.505454249912871,
+      "paired_speed_ratio_geomean": 1.6903916645177741,
+      "latency_reduction_percent": 40.84211245295778,
+      "candidate_faster_pairs": 1
+    },
+    "measured_decode_tokens_per_second": {
+      "native64": 45.25121125951923,
+      "fastpath64": 48.96364540679405
+    },
+    "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+    "resources": {
+      "native64": {
+        "disk_read_bytes_sum": 8651743232,
+        "disk_write_bytes_sum": 0,
+        "process_footprint_peak_bytes": 231512098184,
+        "system_available_min_bytes": 21813805056,
+        "swap_peak_bytes": 2036400128,
+        "max_per_request_swap_growth_bytes": -16777216
+      },
+      "fastpath64": {
+        "disk_read_bytes_sum": 1949696,
+        "disk_write_bytes_sum": 0,
+        "process_footprint_peak_bytes": 232120633264,
+        "system_available_min_bytes": 21637562368,
+        "swap_peak_bytes": 2019622912,
+        "max_per_request_swap_growth_bytes": -8388608
+      }
+    },
+    "candidate_row_cache": {
+      "unique_rows": 219190,
+      "calls": 92,
+      "miss_rows": 193082,
+      "requested_rows": 794352,
+      "bypass_calls": 0,
+      "native_read_calls": 92,
+      "native_selected_bytes": 30893120,
+      "duplicate_rows_elided": 575162,
+      "native_requested_rows": 193082,
+      "cache_calls": 92,
+      "unique_hits": 26108,
+      "unique_queries": 219190,
+      "admitted": 187248,
+      "weighted_unique_hit_fraction": 0.11911127332451298
+    }
+  },
+  "all_measured_orders": {
+    "BA": 6,
+    "AB": 6
+  },
+  "ordered_pairs": [
+    {
+      "pair_index": 0,
+      "prompt_id": "authored-warmup-16384",
+      "source": "authored-warmup",
+      "input_tokens": 16384,
+      "order": "AB",
+      "warmup": true,
+      "candidate_history_phase": "empty-cache warmup",
+      "first_measured_request_for_source": true,
+      "cache_delta": {
+        "unique_rows": 219190,
+        "calls": 92,
+        "miss_rows": 193082,
+        "requested_rows": 794352,
+        "bypass_calls": 0,
+        "native_read_calls": 92,
+        "native_selected_bytes": 30893120,
+        "duplicate_rows_elided": 575162,
+        "native_requested_rows": 193082,
+        "cache_calls": 92,
+        "unique_hits": 26108,
+        "unique_queries": 219190,
+        "admitted": 187248,
+        "retained_bytes_before": 0,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.11911127332451298
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 18.22210199991241,
+          "ttft_seconds": 18.32985462504439,
+          "total_seconds": 21.139115625061095,
+          "decode_tokens_per_second": 45.25121125951922
+        },
+        "fastpath64": {
+          "prefill_seconds": 9.819903291994706,
+          "ttft_seconds": 9.908973916899413,
+          "total_seconds": 12.505454249912873,
+          "decode_tokens_per_second": 48.96364540679404
+        }
+      },
+      "paired_prefill_speed_ratio": 1.8556294759814256
+    },
+    {
+      "pair_index": 1,
+      "prompt_id": "performance-pride-prejudice-16384",
+      "source": "pride-prejudice",
+      "input_tokens": 16384,
+      "order": "BA",
+      "warmup": false,
+      "candidate_history_phase": "warmup-primed first measured request",
+      "first_measured_request_for_source": true,
+      "cache_delta": {
+        "unique_rows": 681322,
+        "calls": 128,
+        "miss_rows": 657029,
+        "requested_rows": 794400,
+        "bypass_calls": 0,
+        "native_read_calls": 128,
+        "native_selected_bytes": 105124640,
+        "duplicate_rows_elided": 113078,
+        "native_requested_rows": 657029,
+        "cache_calls": 128,
+        "unique_hits": 24293,
+        "unique_queries": 681322,
+        "admitted": 568918,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.03565568116103693
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 24.169747208012268,
+          "ttft_seconds": 24.267911792034283,
+          "total_seconds": 27.822852292098105,
+          "decode_tokens_per_second": 35.752032632726795
+        },
+        "fastpath64": {
+          "prefill_seconds": 18.936273167142645,
+          "ttft_seconds": 19.033273209119216,
+          "total_seconds": 22.524325334001333,
+          "decode_tokens_per_second": 36.40681896914887
+        }
+      },
+      "paired_prefill_speed_ratio": 1.2763729692044423
+    },
+    {
+      "pair_index": 2,
+      "prompt_id": "performance-curl-65536",
+      "source": "curl",
+      "input_tokens": 65536,
+      "order": "BA",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": true,
+      "cache_delta": {
+        "unique_rows": 1590971,
+        "calls": 102,
+        "miss_rows": 1207929,
+        "requested_rows": 3153264,
+        "bypass_calls": 0,
+        "native_read_calls": 102,
+        "native_selected_bytes": 193268640,
+        "duplicate_rows_elided": 1562293,
+        "native_requested_rows": 1207929,
+        "cache_calls": 102,
+        "unique_hits": 383042,
+        "unique_queries": 1590971,
+        "admitted": 881262,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.24075988814378138
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 107.60334487492219,
+          "ttft_seconds": 107.7084327088669,
+          "total_seconds": 110.40844283392653,
+          "decode_tokens_per_second": 47.08245708075923
+        },
+        "fastpath64": {
+          "prefill_seconds": 81.72983824997209,
+          "ttft_seconds": 81.83380400016904,
+          "total_seconds": 84.53218504204415,
+          "decode_tokens_per_second": 47.11159113279169
+        }
+      },
+      "paired_prefill_speed_ratio": 1.3165735694449259
+    },
+    {
+      "pair_index": 3,
+      "prompt_id": "performance-cpython-32768",
+      "source": "cpython",
+      "input_tokens": 32768,
+      "order": "AB",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": true,
+      "cache_delta": {
+        "unique_rows": 895452,
+        "calls": 100,
+        "miss_rows": 758153,
+        "requested_rows": 1581024,
+        "bypass_calls": 0,
+        "native_read_calls": 100,
+        "native_selected_bytes": 121304480,
+        "duplicate_rows_elided": 685572,
+        "native_requested_rows": 758153,
+        "cache_calls": 100,
+        "unique_hits": 137299,
+        "unique_queries": 895452,
+        "admitted": 469952,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.15332926834715876
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 50.99646087503061,
+          "ttft_seconds": 51.096868250053376,
+          "total_seconds": 53.991271667182446,
+          "decode_tokens_per_second": 43.91838378744704
+        },
+        "fastpath64": {
+          "prefill_seconds": 30.417805457953364,
+          "ttft_seconds": 30.51444008294493,
+          "total_seconds": 33.436348624993116,
+          "decode_tokens_per_second": 43.50543873665404
+        }
+      },
+      "paired_prefill_speed_ratio": 1.6765332050506796
+    },
+    {
+      "pair_index": 4,
+      "prompt_id": "performance-pride-prejudice-32768",
+      "source": "pride-prejudice",
+      "input_tokens": 32768,
+      "order": "BA",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": false,
+      "cache_delta": {
+        "unique_rows": 1349903,
+        "calls": 132,
+        "miss_rows": 807697,
+        "requested_rows": 1580928,
+        "bypass_calls": 0,
+        "native_read_calls": 132,
+        "native_selected_bytes": 129231520,
+        "duplicate_rows_elided": 231025,
+        "native_requested_rows": 807697,
+        "cache_calls": 132,
+        "unique_hits": 542206,
+        "unique_queries": 1349903,
+        "admitted": 337457,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.4016629342997238
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 101.55364937498234,
+          "ttft_seconds": 101.66272404184565,
+          "total_seconds": 105.20297933393158,
+          "decode_tokens_per_second": 35.89994755142034
+        },
+        "fastpath64": {
+          "prefill_seconds": 49.040867833187804,
+          "ttft_seconds": 49.142256333027035,
+          "total_seconds": 52.76244954112917,
+          "decode_tokens_per_second": 35.10705468674195
+        }
+      },
+      "paired_prefill_speed_ratio": 2.070796335016265
+    },
+    {
+      "pair_index": 5,
+      "prompt_id": "performance-curl-16384",
+      "source": "curl",
+      "input_tokens": 16384,
+      "order": "BA",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": false,
+      "cache_delta": {
+        "unique_rows": 410581,
+        "calls": 98,
+        "miss_rows": 115303,
+        "requested_rows": 794256,
+        "bypass_calls": 0,
+        "native_read_calls": 98,
+        "native_selected_bytes": 18448480,
+        "duplicate_rows_elided": 383675,
+        "native_requested_rows": 115303,
+        "cache_calls": 98,
+        "unique_hits": 295278,
+        "unique_queries": 410581,
+        "admitted": 26189,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.7191711257949102
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 21.3439134999644,
+          "ttft_seconds": 21.441342290956527,
+          "total_seconds": 24.302568207960576,
+          "decode_tokens_per_second": 44.43151149038826
+        },
+        "fastpath64": {
+          "prefill_seconds": 11.599778833100572,
+          "ttft_seconds": 11.697067582979798,
+          "total_seconds": 14.5969585001003,
+          "decode_tokens_per_second": 43.838091032192956
+        }
+      },
+      "paired_prefill_speed_ratio": 1.8400276252732022
+    },
+    {
+      "pair_index": 6,
+      "prompt_id": "performance-cpython-16384",
+      "source": "cpython",
+      "input_tokens": 16384,
+      "order": "AB",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": false,
+      "cache_delta": {
+        "unique_rows": 453423,
+        "calls": 106,
+        "miss_rows": 160614,
+        "requested_rows": 795168,
+        "bypass_calls": 0,
+        "native_read_calls": 106,
+        "native_selected_bytes": 25698240,
+        "duplicate_rows_elided": 341745,
+        "native_requested_rows": 160614,
+        "cache_calls": 106,
+        "unique_hits": 292809,
+        "unique_queries": 453423,
+        "admitted": 37449,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.6457744754897744
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 27.39844883303158,
+          "ttft_seconds": 27.49937341688201,
+          "total_seconds": 30.674304999876767,
+          "decode_tokens_per_second": 40.036300111969844
+        },
+        "fastpath64": {
+          "prefill_seconds": 11.802167542045936,
+          "ttft_seconds": 11.894667125074193,
+          "total_seconds": 14.875393917085603,
+          "decode_tokens_per_second": 42.64794187079564
+        }
+      },
+      "paired_prefill_speed_ratio": 2.3214760115396555
+    },
+    {
+      "pair_index": 7,
+      "prompt_id": "performance-moby-dick-16384",
+      "source": "moby-dick",
+      "input_tokens": 16384,
+      "order": "AB",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": true,
+      "cache_delta": {
+        "unique_rows": 691668,
+        "calls": 110,
+        "miss_rows": 639262,
+        "requested_rows": 793872,
+        "bypass_calls": 0,
+        "native_read_calls": 110,
+        "native_selected_bytes": 102281920,
+        "duplicate_rows_elided": 102204,
+        "native_requested_rows": 639262,
+        "cache_calls": 110,
+        "unique_hits": 52406,
+        "unique_queries": 691668,
+        "admitted": 330309,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.07576756478541728
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 32.05105916596949,
+          "ttft_seconds": 32.15476162498817,
+          "total_seconds": 35.268750624964014,
+          "decode_tokens_per_second": 40.81839708723394
+        },
+        "fastpath64": {
+          "prefill_seconds": 23.805113166105002,
+          "ttft_seconds": 23.90325600001961,
+          "total_seconds": 26.884960625087842,
+          "decode_tokens_per_second": 42.63085108758886
+        }
+      },
+      "paired_prefill_speed_ratio": 1.3463939004333536
+    },
+    {
+      "pair_index": 8,
+      "prompt_id": "performance-moby-dick-131072",
+      "source": "moby-dick",
+      "input_tokens": 131072,
+      "order": "BA",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": false,
+      "cache_delta": {
+        "unique_rows": 5545300,
+        "calls": 174,
+        "miss_rows": 4560330,
+        "requested_rows": 6299280,
+        "bypass_calls": 0,
+        "native_read_calls": 174,
+        "native_selected_bytes": 729652800,
+        "duplicate_rows_elided": 753980,
+        "native_requested_rows": 4560330,
+        "cache_calls": 174,
+        "unique_hits": 984970,
+        "unique_queries": 5545300,
+        "admitted": 1655574,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.17762249111860495
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 490.1402662501205,
+          "ttft_seconds": 490.2533847501036,
+          "total_seconds": 494.1145862499252,
+          "decode_tokens_per_second": 32.91448286515129
+        },
+        "fastpath64": {
+          "prefill_seconds": 372.20210770796984,
+          "ttft_seconds": 372.30940754082985,
+          "total_seconds": 376.15382570796646,
+          "decode_tokens_per_second": 33.057844424639114
+        }
+      },
+      "paired_prefill_speed_ratio": 1.3168659072577984
+    },
+    {
+      "pair_index": 9,
+      "prompt_id": "performance-moby-dick-32768",
+      "source": "moby-dick",
+      "input_tokens": 32768,
+      "order": "AB",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": false,
+      "cache_delta": {
+        "unique_rows": 1385211,
+        "calls": 124,
+        "miss_rows": 731003,
+        "requested_rows": 1580208,
+        "bypass_calls": 0,
+        "native_read_calls": 124,
+        "native_selected_bytes": 116960480,
+        "duplicate_rows_elided": 194997,
+        "native_requested_rows": 731003,
+        "cache_calls": 124,
+        "unique_hits": 654208,
+        "unique_queries": 1385211,
+        "admitted": 134156,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.47228039627175933
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 71.61518850014545,
+          "ttft_seconds": 71.71981050004251,
+          "total_seconds": 74.95004429202527,
+          "decode_tokens_per_second": 39.34942998519055
+        },
+        "fastpath64": {
+          "prefill_seconds": 37.042377332923934,
+          "ttft_seconds": 37.14549741707742,
+          "total_seconds": 40.215685667004436,
+          "decode_tokens_per_second": 41.399727514195696
+        }
+      },
+      "paired_prefill_speed_ratio": 1.9333313263480143
+    },
+    {
+      "pair_index": 10,
+      "prompt_id": "performance-pride-prejudice-65536",
+      "source": "pride-prejudice",
+      "input_tokens": 65536,
+      "order": "AB",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": false,
+      "cache_delta": {
+        "unique_rows": 2696186,
+        "calls": 130,
+        "miss_rows": 1958903,
+        "requested_rows": 3153600,
+        "bypass_calls": 0,
+        "native_read_calls": 130,
+        "native_selected_bytes": 313424480,
+        "duplicate_rows_elided": 457414,
+        "native_requested_rows": 1958903,
+        "cache_calls": 130,
+        "unique_hits": 737283,
+        "unique_queries": 2696186,
+        "admitted": 462770,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.27345405695304403
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 222.44663679110818,
+          "ttft_seconds": 222.55796150001697,
+          "total_seconds": 225.87977391597815,
+          "decode_tokens_per_second": 38.26370072495459
+        },
+        "fastpath64": {
+          "prefill_seconds": 109.16796975000761,
+          "ttft_seconds": 109.27263258304447,
+          "total_seconds": 112.62198995798826,
+          "decode_tokens_per_second": 37.94874767684093
+        }
+      },
+      "paired_prefill_speed_ratio": 2.037654792889401
+    },
+    {
+      "pair_index": 11,
+      "prompt_id": "performance-cpython-65536",
+      "source": "cpython",
+      "input_tokens": 65536,
+      "order": "AB",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": false,
+      "cache_delta": {
+        "unique_rows": 1826062,
+        "calls": 106,
+        "miss_rows": 1333147,
+        "requested_rows": 3153792,
+        "bypass_calls": 0,
+        "native_read_calls": 106,
+        "native_selected_bytes": 213303520,
+        "duplicate_rows_elided": 1327730,
+        "native_requested_rows": 1333147,
+        "cache_calls": 106,
+        "unique_hits": 492915,
+        "unique_queries": 1826062,
+        "admitted": 328085,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.26993333194601277
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 125.35302624991164,
+          "ttft_seconds": 125.46254491689615,
+          "total_seconds": 128.4248106670566,
+          "decode_tokens_per_second": 42.911146828931244
+        },
+        "fastpath64": {
+          "prefill_seconds": 73.14465037500486,
+          "ttft_seconds": 73.24787595798261,
+          "total_seconds": 76.08106291596778,
+          "decode_tokens_per_second": 44.86825383043294
+        }
+      },
+      "paired_prefill_speed_ratio": 1.7137688895529608
+    },
+    {
+      "pair_index": 12,
+      "prompt_id": "performance-curl-32768",
+      "source": "curl",
+      "input_tokens": 32768,
+      "order": "BA",
+      "warmup": false,
+      "candidate_history_phase": "persistent reuse after previous measured requests",
+      "first_measured_request_for_source": false,
+      "cache_delta": {
+        "unique_rows": 772394,
+        "calls": 84,
+        "miss_rows": 448653,
+        "requested_rows": 1580256,
+        "bypass_calls": 0,
+        "native_read_calls": 84,
+        "native_selected_bytes": 71784480,
+        "duplicate_rows_elided": 807862,
+        "native_requested_rows": 448653,
+        "cache_calls": 84,
+        "unique_hits": 323741,
+        "unique_queries": 772394,
+        "admitted": 67617,
+        "retained_bytes_before": 536870912,
+        "retained_bytes_after": 536870912,
+        "unique_row_hit_fraction": 0.4191397136694485
+      },
+      "timings": {
+        "native64": {
+          "prefill_seconds": 45.74515962507576,
+          "ttft_seconds": 45.84489762503654,
+          "total_seconds": 48.24406808288768,
+          "decode_tokens_per_second": 52.99111735476406
+        },
+        "fastpath64": {
+          "prefill_seconds": 27.828677291981876,
+          "ttft_seconds": 27.932696542004123,
+          "total_seconds": 30.372578792041168,
+          "decode_tokens_per_second": 52.10681193709191
+        }
+      },
+      "paired_prefill_speed_ratio": 1.6438136511165071
+    }
+  ],
+  "by_input_tokens": {
+    "16384": {
+      "pairs": 4,
+      "output_tokens_compared": 512,
+      "mtp_cycles_compared": 205,
+      "prefill_seconds": {
+        "native64_geomean": 25.9435038696308,
+        "fastpath64_geomean": 15.761373516816114,
+        "paired_speed_ratio_geomean": 1.6460179591550936,
+        "latency_reduction_percent": 39.24732142574536,
+        "candidate_faster_pairs": 4
+      },
+      "ttft_seconds": {
+        "native64_geomean": 26.04432568713304,
+        "fastpath64_geomean": 15.861708307646175,
+        "paired_speed_ratio_geomean": 1.6419622137785945,
+        "latency_reduction_percent": 39.09725865744911,
+        "candidate_faster_pairs": 4
+      },
+      "total_seconds": {
+        "native64_geomean": 29.245204120372744,
+        "fastpath64_geomean": 19.04245821035964,
+        "paired_speed_ratio_geomean": 1.5357893291561755,
+        "latency_reduction_percent": 34.88690271409555,
+        "candidate_faster_pairs": 4
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 40.139820584969385,
+        "fastpath64": 41.27281703875084
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 44379602944,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232221575208,
+          "system_available_min_bytes": 21068791808,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 29325533184,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232231061568,
+          "system_available_min_bytes": 21445722112,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 2236994,
+        "calls": 442,
+        "miss_rows": 1572208,
+        "requested_rows": 3177696,
+        "bypass_calls": 0,
+        "native_read_calls": 442,
+        "native_selected_bytes": 251553280,
+        "duplicate_rows_elided": 940702,
+        "native_requested_rows": 1572208,
+        "cache_calls": 442,
+        "unique_hits": 664786,
+        "unique_queries": 2236994,
+        "admitted": 962865,
+        "weighted_unique_hit_fraction": 0.29717826690639315
+      }
+    },
+    "32768": {
+      "pairs": 4,
+      "output_tokens_compared": 512,
+      "mtp_cycles_compared": 196,
+      "prefill_seconds": {
+        "native64_geomean": 64.17952000011259,
+        "fastpath64_geomean": 35.21432436065926,
+        "paired_speed_ratio_geomean": 1.8225401499343465,
+        "latency_reduction_percent": 45.131524261014334,
+        "candidate_faster_pairs": 4
+      },
+      "ttft_seconds": {
+        "native64_geomean": 64.28676048028237,
+        "fastpath64_geomean": 35.31790101162844,
+        "paired_speed_ratio_geomean": 1.8202316286892548,
+        "latency_reduction_percent": 45.06193694040478,
+        "candidate_faster_pairs": 4
+      },
+      "total_seconds": {
+        "native64_geomean": 67.31965053313219,
+        "fastpath64_geomean": 38.31380062203581,
+        "paired_speed_ratio_geomean": 1.7570601047188728,
+        "latency_reduction_percent": 43.08675057191634,
+        "candidate_faster_pairs": 4
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 42.58144759134861,
+        "fastpath64": 42.604697235924306
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 95647703040,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232246233176,
+          "system_available_min_bytes": 20841250816,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 50894893056,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 231877855272,
+          "system_available_min_bytes": 21546500096,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 4402960,
+        "calls": 440,
+        "miss_rows": 2745506,
+        "requested_rows": 6322416,
+        "bypass_calls": 0,
+        "native_read_calls": 440,
+        "native_selected_bytes": 439280960,
+        "duplicate_rows_elided": 1919456,
+        "native_requested_rows": 2745506,
+        "cache_calls": 440,
+        "unique_hits": 1657454,
+        "unique_queries": 4402960,
+        "admitted": 1009182,
+        "weighted_unique_hit_fraction": 0.3764408488834784
+      }
+    },
+    "65536": {
+      "pairs": 3,
+      "output_tokens_compared": 384,
+      "mtp_cycles_compared": 139,
+      "prefill_seconds": {
+        "native64_geomean": 144.23217286845838,
+        "fastpath64_geomean": 86.74001251176315,
+        "paired_speed_ratio_geomean": 1.6628101459969042,
+        "latency_reduction_percent": 39.86084325938063,
+        "candidate_faster_pairs": 3
+      },
+      "ttft_seconds": {
+        "native64_geomean": 144.34518826238138,
+        "fastpath64_geomean": 86.84531480297164,
+        "paired_speed_ratio_geomean": 1.662095285046306,
+        "latency_reduction_percent": 39.834977633539225,
+        "candidate_faster_pairs": 3
+      },
+      "total_seconds": {
+        "native64_geomean": 147.40408562018828,
+        "fastpath64_geomean": 89.80640004951104,
+        "paired_speed_ratio_geomean": 1.6413539072819219,
+        "latency_reduction_percent": 39.07468733199669,
+        "candidate_faster_pairs": 3
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 42.59958849644655,
+        "fastpath64": 43.1275508900248
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 143418978304,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232346535976,
+          "system_available_min_bytes": 20671643648,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 114871058432,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 231862405184,
+          "system_available_min_bytes": 21225291776,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 6113219,
+        "calls": 338,
+        "miss_rows": 4499979,
+        "requested_rows": 9460656,
+        "bypass_calls": 0,
+        "native_read_calls": 338,
+        "native_selected_bytes": 719996640,
+        "duplicate_rows_elided": 3347437,
+        "native_requested_rows": 4499979,
+        "cache_calls": 338,
+        "unique_hits": 1613240,
+        "unique_queries": 6113219,
+        "admitted": 1672117,
+        "weighted_unique_hit_fraction": 0.26389370313741417
+      }
+    },
+    "131072": {
+      "pairs": 1,
+      "output_tokens_compared": 128,
+      "mtp_cycles_compared": 69,
+      "prefill_seconds": {
+        "native64_geomean": 490.1402662501203,
+        "fastpath64_geomean": 372.20210770796996,
+        "paired_speed_ratio_geomean": 1.3168659072577984,
+        "latency_reduction_percent": 24.06212398023352,
+        "candidate_faster_pairs": 1
+      },
+      "ttft_seconds": {
+        "native64_geomean": 490.2533847501035,
+        "fastpath64_geomean": 372.3094075408298,
+        "paired_speed_ratio_geomean": 1.31679021486004,
+        "latency_reduction_percent": 24.05775888103112,
+        "candidate_faster_pairs": 1
+      },
+      "total_seconds": {
+        "native64_geomean": 494.11458624992525,
+        "fastpath64_geomean": 376.1538257079665,
+        "paired_speed_ratio_geomean": 1.313597130960831,
+        "latency_reduction_percent": 23.873158944207674,
+        "candidate_faster_pairs": 1
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 32.9144828651513,
+        "fastpath64": 33.05784442463912
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 136864088064,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232432732176,
+          "system_available_min_bytes": 21223784448,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": -8388608
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 111604486144,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 231835469912,
+          "system_available_min_bytes": 21564129280,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 5545300,
+        "calls": 174,
+        "miss_rows": 4560330,
+        "requested_rows": 6299280,
+        "bypass_calls": 0,
+        "native_read_calls": 174,
+        "native_selected_bytes": 729652800,
+        "duplicate_rows_elided": 753980,
+        "native_requested_rows": 4560330,
+        "cache_calls": 174,
+        "unique_hits": 984970,
+        "unique_queries": 5545300,
+        "admitted": 1655574,
+        "weighted_unique_hit_fraction": 0.17762249111860495
+      }
+    }
+  },
+  "by_source": {
+    "cpython": {
+      "pairs": 3,
+      "output_tokens_compared": 384,
+      "mtp_cycles_compared": 136,
+      "prefill_seconds": {
+        "native64_geomean": 55.9500242078389,
+        "fastpath64_geomean": 29.722869905665217,
+        "paired_speed_ratio_geomean": 1.8823897014458482,
+        "latency_reduction_percent": 46.876037452186004,
+        "candidate_faster_pairs": 3
+      },
+      "ttft_seconds": {
+        "native64_geomean": 56.07170016079907,
+        "fastpath64_geomean": 29.84587010677537,
+        "paired_speed_ratio_geomean": 1.8787088451500755,
+        "latency_reduction_percent": 46.771954441928564,
+        "candidate_faster_pairs": 3
+      },
+      "total_seconds": {
+        "native64_geomean": 59.691946456945615,
+        "fastpath64_geomean": 33.57283096012275,
+        "paired_speed_ratio_geomean": 1.7779837073569016,
+        "latency_reduction_percent": 43.756514985923545,
+        "candidate_faster_pairs": 3
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 42.2561704505688,
+        "fastpath64": 43.66434329307407
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 74754617344,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232346535976,
+          "system_available_min_bytes": 20671643648,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 39975813120,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232231061568,
+          "system_available_min_bytes": 21289041920,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 3174937,
+        "calls": 312,
+        "miss_rows": 2251914,
+        "requested_rows": 5529984,
+        "bypass_calls": 0,
+        "native_read_calls": 312,
+        "native_selected_bytes": 360306240,
+        "duplicate_rows_elided": 2355047,
+        "native_requested_rows": 2251914,
+        "cache_calls": 312,
+        "unique_hits": 923023,
+        "unique_queries": 3174937,
+        "admitted": 835486,
+        "weighted_unique_hit_fraction": 0.29072167416235345
+      }
+    },
+    "curl": {
+      "pairs": 3,
+      "output_tokens_compared": 384,
+      "mtp_cycles_compared": 122,
+      "prefill_seconds": {
+        "native64_geomean": 47.18619850894283,
+        "fastpath64_geomean": 29.769689455431255,
+        "paired_speed_ratio_geomean": 1.5850416773606646,
+        "latency_reduction_percent": 36.910176288540754,
+        "candidate_faster_pairs": 3
+      },
+      "ttft_seconds": {
+        "native64_geomean": 47.30759765651382,
+        "fastpath64_geomean": 29.90250240661223,
+        "paired_speed_ratio_geomean": 1.5820614948283682,
+        "latency_reduction_percent": 36.79133186232523,
+        "candidate_faster_pairs": 3
+      },
+      "total_seconds": {
+        "native64_geomean": 50.586285687438725,
+        "fastpath64_geomean": 33.46483683947331,
+        "paired_speed_ratio_geomean": 1.511625050798691,
+        "latency_reduction_percent": 33.8460288501018,
+        "candidate_faster_pairs": 3
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 48.03794580966375,
+        "fastpath64": 47.56541639045667
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 51737350144,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232322041848,
+          "system_available_min_bytes": 21003190272,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 44564324352,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 231704528864,
+          "system_available_min_bytes": 21546500096,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 2773946,
+        "calls": 284,
+        "miss_rows": 1771885,
+        "requested_rows": 5527776,
+        "bypass_calls": 0,
+        "native_read_calls": 284,
+        "native_selected_bytes": 283501600,
+        "duplicate_rows_elided": 2753830,
+        "native_requested_rows": 1771885,
+        "cache_calls": 284,
+        "unique_hits": 1002061,
+        "unique_queries": 2773946,
+        "admitted": 975068,
+        "weighted_unique_hit_fraction": 0.36124026927705155
+      }
+    },
+    "moby-dick": {
+      "pairs": 3,
+      "output_tokens_compared": 384,
+      "mtp_cycles_compared": 176,
+      "prefill_seconds": {
+        "native64_geomean": 104.0054192987016,
+        "fastpath64_geomean": 68.97885428828877,
+        "paired_speed_ratio_geomean": 1.5077869931562449,
+        "latency_reduction_percent": 33.677634537309295,
+        "candidate_faster_pairs": 3
+      },
+      "ttft_seconds": {
+        "native64_geomean": 104.17615947491669,
+        "fastpath64_geomean": 69.14419908032076,
+        "paired_speed_ratio_geomean": 1.5066507510471199,
+        "latency_reduction_percent": 33.627617461777284,
+        "candidate_faster_pairs": 3
+      },
+      "total_seconds": {
+        "native64_geomean": 109.31083568917289,
+        "fastpath64_geomean": 74.08952126409645,
+        "paired_speed_ratio_geomean": 1.4753886085932189,
+        "latency_reduction_percent": 32.22124705480146,
+        "candidate_faster_pairs": 3
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 37.53131742508861,
+        "fastpath64": 38.785137824671224
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 190986387456,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232432732176,
+          "system_available_min_bytes": 20841250816,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 129038479360,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 231835469912,
+          "system_available_min_bytes": 21564129280,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 7622179,
+        "calls": 408,
+        "miss_rows": 5930595,
+        "requested_rows": 8673360,
+        "bypass_calls": 0,
+        "native_read_calls": 408,
+        "native_selected_bytes": 948895200,
+        "duplicate_rows_elided": 1051181,
+        "native_requested_rows": 5930595,
+        "cache_calls": 408,
+        "unique_hits": 1691584,
+        "unique_queries": 7622179,
+        "admitted": 2120039,
+        "weighted_unique_hit_fraction": 0.2219291884905878
+      }
+    },
+    "pride-prejudice": {
+      "pairs": 3,
+      "output_tokens_compared": 384,
+      "mtp_cycles_compared": 175,
+      "prefill_seconds": {
+        "native64_geomean": 81.7330732002282,
+        "fastpath64_geomean": 46.62826938051122,
+        "paired_speed_ratio_geomean": 1.7528652529057702,
+        "latency_reduction_percent": 42.95054920266838,
+        "candidate_faster_pairs": 3
+      },
+      "ttft_seconds": {
+        "native64_geomean": 81.88652252108034,
+        "fastpath64_geomean": 46.75484916315914,
+        "paired_speed_ratio_geomean": 1.7514017045659387,
+        "latency_reduction_percent": 42.902876170956084,
+        "candidate_faster_pairs": 3
+      },
+      "total_seconds": {
+        "native64_geomean": 87.11688628546291,
+        "fastpath64_geomean": 51.152474323176136,
+        "paired_speed_ratio_geomean": 1.7030825475824936,
+        "latency_reduction_percent": 41.282940077127286,
+        "candidate_faster_pairs": 3
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 36.62074493405794,
+        "fastpath64": 36.46908436480137
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 102832017408,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232239040552,
+          "system_available_min_bytes": 20895285248,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 93117353984,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 231981582280,
+          "system_available_min_bytes": 21225291776,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 4727411,
+        "calls": 390,
+        "miss_rows": 3423629,
+        "requested_rows": 5528928,
+        "bypass_calls": 0,
+        "native_read_calls": 390,
+        "native_selected_bytes": 547780640,
+        "duplicate_rows_elided": 801517,
+        "native_requested_rows": 3423629,
+        "cache_calls": 390,
+        "unique_hits": 1303782,
+        "unique_queries": 4727411,
+        "admitted": 1369145,
+        "weighted_unique_hit_fraction": 0.27579197154637075
+      }
+    }
+  },
+  "by_pair_order": {
+    "AB": {
+      "pairs": 6,
+      "output_tokens_compared": 768,
+      "mtp_cycles_compared": 298,
+      "prefill_seconds": {
+        "native64_geomean": 66.87221382997946,
+        "fastpath64_geomean": 36.90819100991341,
+        "paired_speed_ratio_geomean": 1.8118529247889108,
+        "latency_reduction_percent": 44.807882233790885,
+        "candidate_faster_pairs": 6
+      },
+      "ttft_seconds": {
+        "native64_geomean": 67.0028263494769,
+        "fastpath64_geomean": 37.032914869832666,
+        "paired_speed_ratio_geomean": 1.8092776813541613,
+        "latency_reduction_percent": 44.72932428749434,
+        "candidate_faster_pairs": 6
+      },
+      "total_seconds": {
+        "native64_geomean": 70.89752742771991,
+        "fastpath64_geomean": 40.79265713208723,
+        "paired_speed_ratio_geomean": 1.7379972870644993,
+        "latency_reduction_percent": 42.46251087715945,
+        "candidate_faster_pairs": 6
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 40.835884018317664,
+        "fastpath64": 42.109810669335175
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 193696137216,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232346535976,
+          "system_available_min_bytes": 20671643648,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 107780370432,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232231061568,
+          "system_available_min_bytes": 21225291776,
+          "swap_peak_bytes": 2002845696,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 7948002,
+        "calls": 676,
+        "miss_rows": 5581082,
+        "requested_rows": 11057664,
+        "bypass_calls": 0,
+        "native_read_calls": 676,
+        "native_selected_bytes": 892973120,
+        "duplicate_rows_elided": 3109662,
+        "native_requested_rows": 5581082,
+        "cache_calls": 676,
+        "unique_hits": 2366920,
+        "unique_queries": 7948002,
+        "admitted": 1762721,
+        "weighted_unique_hit_fraction": 0.29780062964251897
+      }
+    },
+    "BA": {
+      "pairs": 6,
+      "output_tokens_compared": 768,
+      "mtp_cycles_compared": 311,
+      "prefill_seconds": {
+        "native64_geomean": 70.84167687640247,
+        "fastpath64_geomean": 45.70801904261456,
+        "paired_speed_ratio_geomean": 1.5498741437548471,
+        "latency_reduction_percent": 35.4786319889613,
+        "candidate_faster_pairs": 6
+      },
+      "ttft_seconds": {
+        "native64_geomean": 70.99611307289236,
+        "fastpath64_geomean": 45.866879856297395,
+        "paired_speed_ratio_geomean": 1.5478731776681953,
+        "latency_reduction_percent": 35.39522394809779,
+        "candidate_faster_pairs": 6
+      },
+      "total_seconds": {
+        "native64_geomean": 75.63554782370501,
+        "fastpath64_geomean": 50.584569705535365,
+        "paired_speed_ratio_geomean": 1.4952296374961227,
+        "latency_reduction_percent": 33.12064080841943,
+        "candidate_faster_pairs": 6
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 40.90306120069995,
+        "fastpath64": 40.702485325354395
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 226614235136,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232432732176,
+          "system_available_min_bytes": 21003190272,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 198915600384,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 231981582280,
+          "system_available_min_bytes": 21546500096,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 10350471,
+        "calls": 718,
+        "miss_rows": 7796941,
+        "requested_rows": 14202384,
+        "bypass_calls": 0,
+        "native_read_calls": 718,
+        "native_selected_bytes": 1247510560,
+        "duplicate_rows_elided": 3851913,
+        "native_requested_rows": 7796941,
+        "cache_calls": 718,
+        "unique_hits": 2553530,
+        "unique_queries": 10350471,
+        "admitted": 3537017,
+        "weighted_unique_hit_fraction": 0.2467066474559467
+      }
+    }
+  },
+  "history_strata": {
+    "warmup_primed_first_measured": {
+      "pairs": 1,
+      "output_tokens_compared": 128,
+      "mtp_cycles_compared": 60,
+      "prefill_seconds": {
+        "native64_geomean": 24.169747208012268,
+        "fastpath64_geomean": 18.936273167142648,
+        "paired_speed_ratio_geomean": 1.2763729692044423,
+        "latency_reduction_percent": 21.652994530016123,
+        "candidate_faster_pairs": 1
+      },
+      "ttft_seconds": {
+        "native64_geomean": 24.267911792034283,
+        "fastpath64_geomean": 19.033273209119212,
+        "paired_speed_ratio_geomean": 1.275025662974619,
+        "latency_reduction_percent": 21.57020607200859,
+        "candidate_faster_pairs": 1
+      },
+      "total_seconds": {
+        "native64_geomean": 27.82285229209811,
+        "fastpath64_geomean": 22.52432533400133,
+        "paired_speed_ratio_geomean": 1.2352357675325547,
+        "latency_reduction_percent": 19.04379501594663,
+        "candidate_faster_pairs": 1
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 35.7520326327268,
+        "fastpath64": 36.40681896914887
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 7505649664,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232176060384,
+          "system_available_min_bytes": 23901224960,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 21099438080,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 231981582280,
+          "system_available_min_bytes": 23852236800,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 681322,
+        "calls": 128,
+        "miss_rows": 657029,
+        "requested_rows": 794400,
+        "bypass_calls": 0,
+        "native_read_calls": 128,
+        "native_selected_bytes": 105124640,
+        "duplicate_rows_elided": 113078,
+        "native_requested_rows": 657029,
+        "cache_calls": 128,
+        "unique_hits": 24293,
+        "unique_queries": 681322,
+        "admitted": 568918,
+        "weighted_unique_hit_fraction": 0.03565568116103693
+      }
+    },
+    "later_persistent_reuse": {
+      "pairs": 11,
+      "output_tokens_compared": 1408,
+      "mtp_cycles_compared": 549,
+      "prefill_seconds": {
+        "native64_geomean": 75.69810514996357,
+        "fastpath64_geomean": 44.0683661874807,
+        "paired_speed_ratio_geomean": 1.7177424919253854,
+        "latency_reduction_percent": 41.78405641702915,
+        "candidate_faster_pairs": 11
+      },
+      "ttft_seconds": {
+        "native64_geomean": 75.84082862360926,
+        "fastpath64_geomean": 44.21262295018678,
+        "paired_speed_ratio_geomean": 1.715365964807316,
+        "latency_reduction_percent": 41.70340204270474,
+        "candidate_faster_pairs": 11
+      },
+      "total_seconds": {
+        "native64_geomean": 79.96234308847181,
+        "fastpath64_geomean": 48.41671520849402,
+        "paired_speed_ratio_geomean": 1.651544156685035,
+        "latency_reduction_percent": 39.450604699108304,
+        "candidate_faster_pairs": 11
+      },
+      "measured_decode_tokens_per_second": {
+        "native64": 41.36952521998742,
+        "fastpath64": 41.88674348743238
+      },
+      "decode_scope": "Observed arrival-based throughput, not an inferred decode benefit from prefill optimization.",
+      "resources": {
+        "native64": {
+          "disk_read_bytes_sum": 412804722688,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232432732176,
+          "system_available_min_bytes": 20671643648,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        },
+        "fastpath64": {
+          "disk_read_bytes_sum": 285596532736,
+          "disk_write_bytes_sum": 0,
+          "process_footprint_peak_bytes": 232231061568,
+          "system_available_min_bytes": 21225291776,
+          "swap_peak_bytes": 2011234304,
+          "max_per_request_swap_growth_bytes": 0
+        }
+      },
+      "candidate_row_cache": {
+        "unique_rows": 17617151,
+        "calls": 1266,
+        "miss_rows": 12720994,
+        "requested_rows": 24465648,
+        "bypass_calls": 0,
+        "native_read_calls": 1266,
+        "native_selected_bytes": 2035359040,
+        "duplicate_rows_elided": 6848497,
+        "native_requested_rows": 12720994,
+        "cache_calls": 1266,
+        "unique_hits": 4896157,
+        "unique_queries": 17617151,
+        "admitted": 4730820,
+        "weighted_unique_hit_fraction": 0.27791990884337653
+      }
+    }
+  },
+  "limits": [
+    "One adjacent pair per source/length; no confidence interval or independent cold-replicate claim.",
+    "Lengths of one source share its prefix and are correlated; each source appears in three requests.",
+    "Candidate cache survives baseline bypass. Both arms share warmed OS/file caches; no OS cache purge.",
+    "The first measured candidate is already warmup-primed. Later reuse combines new-source and repeated-source effects.",
+    "512MiB bounds retained row arrays only; prefetch, gather temporaries, model/GPU memory are additional.",
+    "Baseline after first allocation carries the candidate's retained cache memory; peak RSS is not an independent memory-cost estimate.",
+    "The one131K pair is exploratory capacity evidence, not a long-context benchmark or a1M result.",
+    "Combined gains are measured directly; separate prefetch/cone/cache gains must not be multiplied."
+  ],
+  "provenance": {
+    "raw_sha256": "496f228087d1cc7e9b45e792339db85fe9a0ffff58bb13eeec4a575416d7a340",
+    "plan_sha256": "cccc61c4273b0d8977b6b8aef0fc584ab4e7a1b8ee5e9d9dd624675a95db729d",
+    "execution_manifest_sha256": "263cdd276fbf26715846ccd015e42bae521e163b7de8680f795017f965b176a5",
+    "run_source_snapshot_manifest_sha256": "2925d1406d70b7d57006d13ba2f0977011a60acd0442b4994037eea67dbd46ba",
+    "source_files_verified": 26,
+    "qualified_experiment_python_pins_verified": 8,
+    "additional_recorded_python_files": [
+      "__init__.py",
+      "analyze.py",
+      "bench_head.py",
+      "calibrate.py",
+      "final_report.py",
+      "make_plans.py",
+      "plot_results.py",
+      "quality.py",
+      "reproduce.py",
+      "restore_original_server.py",
+      "summarize_validation.py",
+      "verify_head.py",
+      "verify_long_cache.py",
+      "verify_long_context.py",
+      "verify_restart.py",
+      "verify_server.py",
+      "verify_snapshot.py"
+    ],
+    "additional_python_scope": "Additional bench-reported file hashes are metadata, not qualified inference pins.",
+    "checkpoint_validation": "Archived full-hash verification manifest; no current weight file reads.",
+    "analyzer": "${ORIGINAL_LAB_ROOT}/work/serving-analysis-v3/analyze_performance_v2.py",
+    "analyzer_sha256": "f8b0e68ec2f05779ea9779e1efebc2258e8aef47c642ea2c6185e1d3bf04c9d1"
+  },
+  "analyzed_at_unix": 1792325553.927689,
+  "raw": "${ORIGINAL_LAB_ROOT}/outputs/flash1017-lab/results/serving-v3-performance-01.jsonl"
+}

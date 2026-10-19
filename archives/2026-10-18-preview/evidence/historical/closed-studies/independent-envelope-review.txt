@@ -1,0 +1,137 @@
+Independent review of the completed envelope performance comparison
+2026-10-18 — research_refresh — saved evidence and CPU only
+
+Accepted as a complete negative performance result. The envelope candidate took
+3.3988% more prefill time and 2.8114% more whole-request time in the frozen
+12-pair sequence. Six pairs were faster and six slower. All 1,536 measured output
+positions and 609 functional speculative-decoding cycles matched. The evidence
+does not support adopting the envelope as a speed improvement. Shared cache
+history and the strong execution-order split also prevent attributing the net
+regression solely to the envelope arithmetic.
+
+What was compared
+
+The reference is the actual frozen qualified v3 cone controller, including its
+numerical-shape corrections and DSpark stabilization. The candidate is the
+separate frozen envelope-v4 controller, which reduces padding while retaining
+the selected reference dispatch geometry. Both use the same native64 settings,
+64 MiB prefetch budget and existing HotRows allocation of 256 MiB per table.
+The checkpoint is the pinned mlx-community DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp
+conversion, revision 78456115d301eecf9fadcdcc81c0cf6f8b2c8eab, on Apple M5 Ultra
+with MLX 0.32.4. This is not stock MLX/oMLX or an official full-precision reference.
+
+One model load ran 26 requests: one warmup pair and 12 measured pairs. Six
+measured pairs use AB order (v3 then envelope), and six BA. Each request has
+fresh KV state and 128 outputs. One enabled row-cache owner persists across
+every request; OS caches are not purged. The actual v3 and envelope controllers
+are retired and installed separately for every request, even when two adjacent
+requests use the same arm. Two workers alternate by complete pair. The frozen
+inputs are the existing four code/prose corpora at 16K/32K/64K/131K lengths,
+including shared-prefix lengths. They are not new held-out independent samples.
+
+Observed latency and the order caveat
+
+Metric                       Actual v3        Envelope         More time
+Geometric-mean prefill        36.4563 s         37.6954 s          3.3988%
+Geometric-mean first token    36.5967 s         37.8354 s          3.3848%
+Geometric-mean whole request  40.8639 s         42.0127 s          2.8114%
+
+The order split is substantial. In the six AB pairs, envelope is faster in five
+and its geometric-mean prefill is 14.51% lower. In six BA pairs, it is faster in
+only one and its prefill is 25.07% higher. Balanced pair counts do not equalize
+the different lengths, texts or row-cache state received by each arm. The
+second request can reuse rows fetched by the first. These observations expose
+confounding rather than providing an adjusted causal estimate.
+
+By prompt length, envelope prefill took 7.92% more time at 16K (four pairs),
+2.33% less at 32K (four), 6.25% less at 64K (three), and 46.83% more at 131K
+(one). There is no replication of the 131K case. The first measured pair took
+73.99% more time; the other eleven together took 1.38% less. This split is
+descriptive and does not justify dropping the first pair. First measured uses
+of the four corpora took 7.00% more time; later uses took 1.64% more.
+
+All measured prefill regressions are retained:
+Pair Order  Case                   v3 seconds  Envelope seconds  More time
+ 1   BA     Pride and Prejudice 16K    10.2113      17.7667          73.99%
+ 2   BA     curl 64K                   52.8870      71.6580          35.49%
+ 4   BA     Pride and Prejudice 32K    47.8778      49.0322           2.41%
+ 5   BA     curl 16K                   10.2015      11.2032           9.82%
+ 8   BA     Moby Dick 131K            239.2123     351.2340          46.83%
+ 9   AB     Moby Dick 32K              35.1522      45.8888          30.54%
+
+The separate AB warmup favored envelope, 11.4563 → 9.1302 seconds prefill
+(20.30% less). It also had the clearest shared-history advantage: v3 read
+193,082 missing rows and 8.06 GiB of physical process reads, while the following
+envelope request missed only 5,960 rows and recorded zero physical reads. The
+23.27-second model load and warmup pair are excluded from measured timing.
+Direct decode throughput was 41.5461 → 41.5996 tokens/second in geometric mean,
+a 0.129% observed difference. This is not evidence of a useful decode gain.
+
+Rows, physical reads and resources
+
+Each measured arm made 18,298,473 unique row queries and elided 6,961,575
+duplicates. V3 hit 7,973,340 queries (43.57%); envelope hit 6,464,740 (35.33%).
+The unequal hits arise in the shared request history; they do not establish a
+changed cache algorithm. Selected miss-row bytes, at exactly 160 bytes per row,
+totaled 1,652,021,280 versus 1,893,397,280, or 14.61% more for envelope. These
+counters include full generation. Measured process physical reads separately
+totaled 223.16 versus 255.92 GiB, or 14.68% more. Packed-row bytes are not SSD
+traffic, and process reads are not an Engram-only attribution. Some slower
+requests read fewer bytes, so the observations do not identify every cause.
+
+Both arms retained at most 536,870,912 cache bytes, including payload, full-ID
+tags and the frequency sketch. Temporary gathers, prefetch, model and GPU
+buffers are additional. Sampled maximum process footprint was 216.362 versus
+216.447 GiB; minimum system available memory was 19.126 versus 18.682 GiB.
+Existing swap reached 1.503 GiB. No sampled end-minus-start or peak-minus-start
+swap increase occurred, including load and warmups. These are sampled maxima,
+not a guarantee about excursions between observations or an isolated memory
+effect of the controller.
+
+Independent proof and cleanup
+
+The unchanged frozen archive validator and analyzer were rerun, and the result
+exactly reconciled with the root report. Independent arithmetic recomputed all
+paired timing means, order/source/length/history strata, row deltas and resource
+totals. All 1,518 archived source entries and all 52 completed/observed backups
+were hash-checked and tied to their exact jobs, worker routes, inputs and final
+records. The complete history remained continuous across controller changes.
+Both real controller source hashes were checked; the reference never used the
+new envelope implementation under a disabled flag.
+
+Measured output text, 1,536 token positions, proposals, acceptance decisions and
+609 functional MTP cycles matched. The warmup adds 128 positions and 42 cycles.
+All 26 requests generated 128 outputs, or 3,328 positions across both arms.
+Complete traces account for 132 cone chunks, 132 successful DSpark appends and
+396 stage pads. The candidate's 66 chunks exercised 330 index, 1,320 gate, 198
+local-WKV and 198 DSpark-WKV envelopes, with every frozen geometry validated.
+Recorded removal of 12,619,200 zero rows is an operation count, not a latency
+or quality improvement. Fourteen requests entered through VLMModelAdapter and
+twelve through LanguageModel._omlx_prefill; all were text requests.
+
+The 26 cone owners released their model references, both workers drained, native
+model close completed, hooks/sources were restored or reverified, and both row
+tables closed with zero retained bytes. Actual benchmark child 91230 exited
+zero. The saved supervisor reports completed_chat_restored, with verified lock,
+port and memory room before restoration and fresh restored process 91485 ready
+before supervisor completion.
+
+No full-state archive, extra logits probe or external per-chunk collector was
+inside these timed requests. The separate accepted finite state/logit diagnostic
+remains separate evidence. Matching these outputs does not establish arbitrary
+input equivalence or model quality. This review makes no combined-gain,
+deployment or publication claim. No new experiment, inference import, model,
+API call or browsing was used. No frozen source or raw evidence required edits.
+
+Provenance
+
+audit.py, audit-01.log and audit-01.json preserve the checks, all pair observations
+and source receipt. manifest-01.json pins the final review and verified closure.
+The frozen execution manifest is
+work/serving-envelope-performance-v4/execution-manifest-01.json,
+SHA256 feb4e745fcbcdf088503f254fc928b9f477ad7ed6aba802e6bb31dd429738307.
+The frozen plan SHA256 is
+473259f4bd0e7ac587093dabe7916e7814ec01eb1d99fd3e64e6e4c2ddb01e53.
+Actual raw and accepted analysis are respectively
+outputs/flash1017-lab/results/serving-envelope-performance-v4-01.jsonl and
+outputs/flash1017-lab/results/serving-envelope-performance-v4-01-analysis.json.

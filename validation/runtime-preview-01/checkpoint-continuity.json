@@ -1,0 +1,6 @@
+{
+  "historical_receipt_status": "complete_hash_verified",
+  "files_checked": 61,
+  "changed_fingerprints": [],
+  "scope": "Stat fingerprints match previously hashed checkpoint files; no new full-weight hash pass."
+}

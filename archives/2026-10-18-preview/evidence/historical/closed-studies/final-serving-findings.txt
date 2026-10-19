@@ -1,0 +1,33 @@
+The planned 1M HTTP qualification ended at a strict content mismatch. The short
+smoke and cancellation checks passed. Cancellation disconnected after 139,264 of
+262,015 prompt tokens with zero cached tokens and no output; 239 retained
+observations over 26.30 seconds subsequently showed 18 entered cone calls and
+18 completed three-stage primes, with an inactive Python-call hint and no
+reported counter failures. These observations are not an independent GPU or
+future fence.
+
+The already-planned short recovery returned stop/DONE and valid usage (34 input
+tokens, zero cached tokens, 10 completion tokens). Its exact content was
+LONG_\nHTTP_RECOVERED_OK, where \n denotes an embedded newline, while the frozen
+expected content was LONG_HTTP_RECOVERED_OK. That newline is present in an
+original server content chunk; it was not inserted by the harness parser.
+The unchanged strict content requirement therefore failed.
+
+All eight live input vectors had matched the frozen inputs (2,139,342 token IDs),
+but only two of nine main HTTP jobs were accepted. The remaining cold 262K,
+replay/fork, near-1M/replay, restart and finalization checks were not run. No
+qualified 1M profile was created. The existing qualified 131K serving path remains
+the supported qualification; the separate offline exact-state findings retain
+their narrower completed scope.
+
+The cause of the response mismatch is unknown. This attempt does not isolate
+cancellation, the optimization, native serving or another factor. No expectation
+was relaxed, and no retry or additional experiment follows this failure.
+
+Saved lifecycle records confirm that the test model was natively released and
+its server exited before the prior qualified 131K server was relaunched. The
+restored profile is byte-identical (SHA-256 564947e1123fbb8216177f213c624d465f877d774e6d53298c310bbcd0b2e108),
+with a configured prompt-context limit of 131,072 and the original cache
+namespace. The saved status was ready and idle; original app memory settings
+were restored. No qualified 1M bundle or user-facing 1M shortcuts were created.
+This restoration audit reads saved evidence; it adds no live model test.

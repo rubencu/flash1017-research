@@ -1,0 +1,65 @@
+--- a/omlx/patches/deepseek_v41/config.py
++++ b/omlx/patches/deepseek_v41/config.py
+@@ -41,6 +41,9 @@
+     norm_eps: float = 1e-20
+     o_groups: int = 8
+     o_lora_rank: int = 256
++    # The 1017 reference rounds the grouped attention output before wo_a.
++    # Opt in explicitly so older converted checkpoints retain their arithmetic.
++    attention_output_quantization: bool = False
+     # sparse attention: every layer attends over a sliding window, and may add compressed KV on top
+     window_size: int = 128
+     # one entry per layer, MTP layers included: 0 = sliding window only, r = KV compressed r-to-1
+@@ -152,6 +155,11 @@
+         values["preserve_mtp"] = bool(
+             config.get("omlx_deepseek_v41", {}).get("preserve_mtp", False)
+         )
++        values["attention_output_quantization"] = bool(
++            config.get("omlx_deepseek_v41", {}).get(
++                "attention_output_quantization", False
++            )
++        )
+         rope = text.get("rope_scaling") or {}
+         values.update(
+             {
+--- a/omlx/patches/deepseek_v41/language.py
++++ b/omlx/patches/deepseek_v41/language.py
+@@ -365,6 +365,8 @@
+             )
+         out = rope(out, positions, c, bool(ratio), inverse=True)
+         grouped = out.reshape(1, length, c.o_groups, -1)
++        if c.attention_output_quantization:
++            grouped = quantize_activation(grouped)
+         weight = self.wo_a.weight.reshape(c.o_groups, c.o_lora_rank, -1)
+         return self.wo_b(mx.einsum("bsgd,grd->bsgr", grouped, weight).flatten(-2))
+ 
+--- a/omlx/patches/deepseek_v41/dspark.py
++++ b/omlx/patches/deepseek_v41/dspark.py
+@@ -59,6 +59,8 @@
+         )
+         out = rope(out, positions, c, False, inverse=True)
+         grouped = out.reshape(batch, length, c.o_groups, -1)
++        if c.attention_output_quantization:
++            grouped = quantize_activation(grouped)
+         weight = self.wo_a.weight.reshape(c.o_groups, c.o_lora_rank, -1)
+         return self.wo_b(mx.einsum("bsgd,grd->bsgr", grouped, weight).flatten(-2))
+ 
+--- a/omlx/patches/deepseek_v41/loading.py
++++ b/omlx/patches/deepseek_v41/loading.py
+@@ -62,6 +62,7 @@
+     preserve_mtp=None,
+     moe_expert_offload_resident_fraction=None,
+     ced_prefill=False,
++    attention_output_quantization=None,
+ ):
+     path = Path(path)
+     if (path / "conversion.inprogress.json").exists():
+@@ -79,6 +80,8 @@
+             raise ValueError("Expected a DeepSeek V4.1 checkpoint")
+         format_spec = {"engram_tables": source_engram_tables(mapping, raw)}
+     config = ModelConfig.from_dict(raw)
++    if attention_output_quantization is not None:
++        config.attention_output_quantization = bool(attention_output_quantization)
+     if source_checkpoint and preserve_mtp is None:
+         from ..mlx_lm_mtp import is_mtp_active
+ 

@@ -1,0 +1,82 @@
+{
+  "schema": "flash1017-runtime-preview/1",
+  "runtime_commit": "ad2f74058056e4cc7c0a13ddc76f96602e8ce092",
+  "wheel_sha256": "b5c333adc078c28d0950e925af55d5da628d0915e0586bc6ac62f97d35400554",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4566,
+      "sha256": "bfea0b40a0247c4b7a8ecc6f6ef4ebe262f3fd780c2b9c0b42a4bb135b40430d"
+    },
+    {
+      "path": "arithmetic-preservation.json",
+      "bytes": 393,
+      "sha256": "27098666f879386192efe38f363655fcc181d100fd17efbd846b914ca28c0285"
+    },
+    {
+      "path": "baseline-failures.log.gz",
+      "bytes": 2011,
+      "sha256": "61bc0750335ea7a257ee091dbac0aa991c6974302b3c52d4d4c28a5b0ffabde6"
+    },
+    {
+      "path": "build-provenance-final-01.json",
+      "bytes": 101012,
+      "sha256": "82f57206510777258f710557d7ad9763246461e0a4b8c009475c2fdcfde3ecca"
+    },
+    {
+      "path": "checkpoint-continuity.json",
+      "bytes": 217,
+      "sha256": "9abb0eb539605253a3de17b66519b374da9d9a68c45eacd6d8f91ca5f9c8c863"
+    },
+    {
+      "path": "default-tests-final.log.gz",
+      "bytes": 253205,
+      "sha256": "cb314d040c44755d06f32dee884676886b4e104dbe55b58f1c66be4cc5376470"
+    },
+    {
+      "path": "head-metal.log.gz",
+      "bytes": 356,
+      "sha256": "74e52a950dada33b5c563d23e83c8b9283578d0012eb511cf386f919d551ca8f"
+    },
+    {
+      "path": "installation-final-01.json",
+      "bytes": 469,
+      "sha256": "18454b59a297dea05851c18c133a9d9f86abc9655af6013d5cc70cd2ff6f2688"
+    },
+    {
+      "path": "installed-runtime-tests.log.gz",
+      "bytes": 1003,
+      "sha256": "d29c5bbe9aaf6102bcb6f3f92229963d8ba61c79ba545a638c83d5794d239855"
+    },
+    {
+      "path": "log-provenance.json",
+      "bytes": 1373,
+      "sha256": "70fa6be3dd9b6e38b28d3e671a9150df4018e591845d83499d273f92eb2749d5"
+    },
+    {
+      "path": "original-server-restore.json",
+      "bytes": 117,
+      "sha256": "2bcd83c98518e0c752029026ecb8e7b17cccb36998cb7b864fe7e0c9e145a984"
+    },
+    {
+      "path": "research-integrity-final.json",
+      "bytes": 242,
+      "sha256": "d1b4b1320f99fe780cbddd6d0594577db8471ba346afad607526d78fa535e742"
+    },
+    {
+      "path": "serving-smoke-01.json",
+      "bytes": 7152,
+      "sha256": "128d23d97f4867d7398a463f975ddacc6400d2115df65bf6e0bf82609d6947c4"
+    },
+    {
+      "path": "serving-smoke-01.log.gz",
+      "bytes": 5319,
+      "sha256": "396f18defca332eba86dd86497c0e6aa14dfef874dbf4a835178599b9cc11405"
+    },
+    {
+      "path": "tests-final-summary.json",
+      "bytes": 1922,
+      "sha256": "714f29dff443d565a955cf76cb9fc88d3a2b28ac01b39cd2dad9371ad6e5c9e9"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+Independent review of the completed cache-capacity comparison
+2026-10-18 — research_refresh — CPU and saved evidence only
+
+Accepted within the frozen, finite workload. Raising the existing HotRows cache
+budget from 256 to 1,024 MiB per table reduced geometric-mean prefill latency by
+10.0623% and whole-request latency by 9.1136%. It required approximately 1.5 GiB
+more retained cache memory. Eight of 24 measured comparisons regressed, and both
+warmups were slower. This supports a workload-dependent capacity tradeoff; it
+does not establish an unconditional improvement or authorize a serving change.
+
+The denominator is the actual frozen v3 implementation, already using the
+stabilized dependency cone, DSpark correction, 64 MiB prefetch budget and existing
+HotRows cache. The candidate changes the reviewed cache budget ceiling and its
+matching messages. It introduces no new cache algorithm or arithmetic. Credit
+for HotRows remains with its attributed upstream source. This result must not be
+added to or multiplied by the earlier native64-versus-v3 result.
+
+Design and observed latency
+
+Four fresh model processes ran in 256 → 1,024 → 1,024 → 256 MiB/table order. Each
+started with an empty row cache and ran one 16K warmup followed by the same 12
+measured requests, preserving cache history within that process. Every request
+used fresh KV state and generated 128 outputs. The 24 measured comparisons are
+two repetitions of 12 existing cases from four corpora, not 24 independent
+workloads. Matching inputs, seeds and order were frozen before measurements.
+OS/file caches were retained across processes. This is block-level ABBA balance,
+not adjacent per-request interleaving; it cannot eliminate storage, thermal or
+time trends. These corpora were reused from earlier local qualification.
+
+Metric                         256 MiB/table    1,024 MiB/table    Less time
+Geometric-mean prefill          43.5081 s        39.1302 s          10.0623%
+Geometric-mean first token      43.6457 s        39.2666 s          10.0333%
+Geometric-mean whole request    47.9630 s        43.5918 s           9.1136%
+
+Sixteen pairs were faster and eight slower for all three metrics. Prefill
+reductions were 10.86% for the AB repetition and 9.25% for BA. By prompt length:
+16K, 8 comparisons, 8.88%; 32K, 8, 6.25%; 64K, 6, 18.89%; and 131K, 2, 1.46%.
+The last stratum is only one Moby Dick input repeated twice, with one regression.
+
+History matters in the observed results. The first measured use of each corpus
+within a process was 2.35% slower in aggregate (8 comparisons, 3 faster); later
+uses were 15.69% faster (16, 13 faster). This additional descriptive split is
+confounded by the fixed request order and input lengths; it is not an isolated
+causal estimate of reuse. The first measured request of the process was 1.48%
+slower across its two comparisons. The two separately reported warmup pairs both
+regressed: prefill 11.5249 → 14.0672 s, or 22.06% more time. Four model loads took
+23.30–24.29 seconds and are excluded from generation timing.
+
+Every measured prefill regression is retained:
+Order  Case                   256 seconds   1,024 seconds   More time
+AB     curl 64K                 70.3848       77.2515          9.76%
+AB     CPython 32K              46.0932       51.0006         10.65%
+AB     Pride and Prejudice 32K  46.0324       56.8417         23.48%
+AB     Moby Dick 131K          385.7033      386.6143          0.24%
+BA     Pride and Prejudice 16K  18.5778       19.2903          3.84%
+BA     curl 64K                 74.6264       75.5847          1.28%
+BA     CPython 32K              39.0247       49.9005         27.87%
+BA     Pride and Prejudice 32K  51.9346       54.4132          4.77%
+
+Logical reads, physical reads and memory
+
+Across measured requests, unique-query hits rose from 9,840,900/36,596,946
+(26.89%) to 15,038,816/36,596,946 (41.09%). Miss rows fell from 26,756,046 to
+21,558,130. At the actual 160 bytes per selected packed row, selected native
+payload fell 19.43%, from 4,280,967,360 to 3,449,300,800 bytes. Duplicate elision
+was identical, and every same-budget logical counter trajectory reproduced
+exactly in its second fresh process. All these counters include generation,
+not only prefill.
+
+Separately, measured process physical-read counters totaled 641.63 → 551.09 GiB
+(14.11% less). These are not the packed-row byte counts or an Engram-only SSD
+measurement. Six larger-cache requests read more physical bytes; two of those
+were faster anyway. Conversely, several slower requests read fewer bytes. The
+records do not identify a single cause for each latency change.
+
+Maximum retained cache allocation was 536,870,912 versus 2,147,483,584 bytes
+(512 MiB versus 2 GiB minus 64 bytes). Only one cache-owning model process ran at
+a time; there is no uncounted inactive cache bank. Model, temporary gather/merge,
+prefetch and other allocations are additional. Sampled maximum process footprint
+was 216.348 versus 217.944 GiB, and minimum system available memory was 19.089
+versus 18.278 GiB. These maxima occur in potentially different requests, so their
+1.596 GiB difference is not an isolated allocation measurement. Existing swap
+peaked at 1.510 GiB. Neither end-minus-start nor peak-minus-start swap increased
+in the recorded samples, including all four loads, four warmups and 48 measured
+requests. Sampling cannot exclude excursions between observations.
+
+Independent evidence checks
+
+The unchanged frozen archive validator and analyzer were rerun, and their report
+reconciled with the accepted root analysis. Separate arithmetic recomputed paired
+geometric means, counters and resource totals. All five archived source snapshots
+were hash-checked, with 1,745 entries each. All 104 pre-enrichment and observed
+request backups were hash-checked and associated with their actual job, worker,
+input and final record. Sources and evidence were unchanged after the audit.
+
+All 3,072 measured output positions and 1,218 functional MTP cycles matched
+between budgets, including output text, proposal/acceptance decisions and emission
+accounting. Warmups additionally matched 256 output positions and 84 cycles.
+All 52 requests completed 128 outputs: 6,656 total generated positions across
+both arms. Complete request traces account for 264 cone chunks, 264 successful
+DSpark appends and 792 stage pads, with every required shape correction checked.
+Timed requests contain no full-state archive or extra probe. These observed
+generation matches are not a new full-state, arbitrary-input or model-quality
+proof, and no separate decode-speed claim follows from the prefill result.
+
+Actual model child PIDs 89898, 90085, 90332 and 90589 exited with code zero.
+Each worker drained, native model cleanup completed, hooks and sources were
+restored, both tables closed, and retained row memory returned to zero before
+the next model process. The saved supervisor and ready-launch chronology confirms
+completed_chat_restored after the final child exit. No audit issue required a
+source or evidence correction. No inference imports, live API calls, new model
+tests, deployment, browsing or publication occurred in this independent review.
+
+Machine-readable reproduction and provenance
+
+audit.py contains the independent checks; audit-01.log records successful
+completion; audit-01.json contains all pair observations, source hashes and
+strata. manifest-01.json pins those review artifacts and the already-verified
+evidence closure. The frozen source manifest is
+work/cache-budget-performance-v4/execution-manifest-01.json,
+SHA256 7030909fc657201ab52077e84415b31d095e9385feef50f62a80e11616bbd96b.
+The fixed plan is work/cache-budget-performance-v4/plan-01.json,
+SHA256 2f12708980d546bc3127ceb06f78688cf6e90c2b6a7b747941179b3c3702f68a.
+Raw and accepted analysis are respectively
+outputs/flash1017-lab/results/cache-budget-performance-v4-01.jsonl and
+outputs/flash1017-lab/results/cache-budget-performance-v4-01-analysis.json.

@@ -1,0 +1,36 @@
+Flash1017 Lab contains original experiments and patches for oMLX.
+
+oMLX: https://github.com/jundot/omlx
+The isolated runtime copies the locally installed application and preserves
+its original per-file licenses. The V4.1 reference port and vocabulary-head
+kernel carry SPDX-License-Identifier: MIT. The shared MTP loop carries
+SPDX-License-Identifier: Apache-2.0. Those upstream licenses remain applicable.
+
+The weight-reuse kernel in flash1017/head.py adapts oMLX's existing BF16
+vocabulary projection, preserving its per-row reduction order.
+
+The causal confidence scheduling algorithm follows DeepSeek's DSpark paper,
+https://arxiv.org/abs/2607.05147. It is prior art, not a new algorithm claim.
+
+The attention-output reference arithmetic correction was already documented
+by gnahzhang's exact-1017 MLX conversion. This project independently verifies
+the boundary and implements an opt-in patch for the installed runtime.
+
+DeepSeek owns the original model work. The quantized checkpoint is supplied by
+mlx-community using oMLX oQ. No model weights are redistributed in this project.
+
+Full upstream license texts are retained in third_party/deepseek-v41-MIT.txt
+and third_party/omlx-Apache-2.0.txt.
+
+Related prior implementation: oMLX PR #4475 shares large 8-bit projection
+weights across partial row tiles: https://github.com/jundot/omlx/pull/4475
+This experiment applies row reuse to the existing BF16 DeepSeek vocabulary
+projection and measures it on the exact October 17 checkpoint.
+
+Engram prefetch uses jundot/omlx's existing selected-row reader and background executor, under its original Apache-2.0 license. The local contribution is a measured configuration/integration change; it is not a new prefetch algorithm. Reviewed source: https://github.com/jundot/omlx/blob/147b8bfcb8a71648da9030770baabeb147e4d210/omlx/patches/deepseek_v41/storage.py
+
+The optional HotRows experiment copies tacos8me/m5-ultra's hot_rows.py verbatim from commit fb233e22762f11e23123437efd4cbfc400a59f07, source SHA256 341791362213d565b1b5d5aac1b8c38057375477f62a7f8177529e455e8015fa. Its Apache-2.0 license and attribution are retained in work/engram-cache-experiment/UPSTREAM-LICENSE and NOTICE.txt. The scoped adapter, bounded-budget integration and fixtures are local additions. No new row-cache algorithm is claimed. Source: https://github.com/tacos8me/m5-ultra/blob/fb233e22762f11e23123437efd4cbfc400a59f07/kernels/omlx/src/omlx/patches/deepseek_v41/hot_rows.py
+
+The experimental selectors inherit oMLX's scoring, causal masking and radix primitives from its Apache-2.0 kernels.py; that file also credits MLX-derived Bonsai matrix-fragment layouts to Apple Inc. The local dual-output dispatch and evaluation do not replace those credits.
+
+Exact shrinking decoder suffixes and arithmetic-partition preservation already appear in antirez/ds4. MLX replay and HC row-count hints already appear in tacos8me/m5-ultra; DeepSeek and vLLM provide architecture/dependency analysis. These are prior art, not local algorithm inventions. Pinned source evidence and scope are recorded in work/cone-prior-art-02/review.md and sources.json. DeepSeek owns the model work; mlx-community supplies the oMLX oQ quantization. This project neither created that quantization nor redistributes its model weights.

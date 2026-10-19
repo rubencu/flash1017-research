@@ -1,0 +1,44 @@
+{
+  "checked_bindings": {
+    "failure_audit": true,
+    "manifest_chain": true,
+    "metadata": true,
+    "restoration_audit": true,
+    "root_restoration_receipt": true
+  },
+  "independent_scope": "Separate local agent/code-path review of saved artifacts; not external peer review or another-machine replication.",
+  "inputs": {
+    "failure_audit": {
+      "original": "work/serving-long-http-run-review-v4c/failure-audit-01.json",
+      "sha256": "27f7cac709e73fb7f781630e514004a9d491863e355c6c2387ac5c582ebebcca"
+    },
+    "findings": {
+      "original": "work/serving-long-http-run-review-v4c/FINDINGS-02.txt",
+      "sha256": "48c7a96fa67f1c6a653143c34d5abc28dd6db737828aa3e3252556698188b7ef"
+    },
+    "manifest": {
+      "original": "work/serving-long-http-run-review-v4c/manifest-02.json",
+      "sha256": "98e53589c57692d8fd3e1790d1673a9d8e03886d352c660d6ecf38c541c35a4f"
+    },
+    "metadata": {
+      "original": "work/serving-long-http-run-review-v4c/selected-metadata-02.json",
+      "sha256": "877a3ba1c00c1ed985170f38aa82e7b2a982f2c325dfd87a58bbbe2bdd2c71ef"
+    },
+    "previous_manifest": {
+      "original": "work/serving-long-http-run-review-v4c/manifest-01.json",
+      "sha256": "be2f561914ac4a71339fde9333d82862204def5cddfc437ab9cfe7f780ec4c3d"
+    },
+    "restoration_audit": {
+      "original": "work/serving-long-http-run-review-v4c/restoration-audit-01.json",
+      "sha256": "0dd3e7315d56ea897a68cf810d270bcbac7d6d37d24310d88db1c3c2535cd28d"
+    },
+    "restoration_receipt": {
+      "original": "work/serving-long-http-run-03/final-gate-outcome-and-restoration-01.json",
+      "sha256": "6435d9abf77e7c8f2c4aa80a4c77d4f846f3654e14e6d414bdb3446ca85022e0"
+    }
+  },
+  "live_api_checks": false,
+  "raw_state_or_http_recomputed": false,
+  "reviewer": "decode_audit",
+  "status": "selected_failure_and_saved_restoration_bindings_pass"
+}

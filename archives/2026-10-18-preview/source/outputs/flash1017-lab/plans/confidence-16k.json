@@ -1,0 +1,269 @@
+{
+  "purpose": "New seeded 16K comparison after a 6.8% short-context confidence-policy gain. Frozen cycle costs are unchanged. CED stays disabled.",
+  "profiles": {
+    "reference-f2-head": {
+      "mtp": true,
+      "depth": 2,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true
+    },
+    "reference-a5-head6": {
+      "mtp": true,
+      "depth": 5,
+      "attention_rounding": true,
+      "fused_head": true,
+      "head_max_rows": 6
+    },
+    "confidence-head6": {
+      "mtp": true,
+      "depth": 5,
+      "fixed": true,
+      "attention_rounding": true,
+      "fused_head": true,
+      "instrument": true,
+      "draft_width": 5,
+      "head_max_rows": 6,
+      "policy": {
+        "cycle_ms": [
+          40.86379148066044,
+          51.855687983334064,
+          57.73166654398665,
+          66.96656247368082,
+          71.52610452612862,
+          77.69158302107826
+        ],
+        "temperatures": [
+          1.0,
+          0.9394130628134758,
+          1.0644944589178593,
+          0.8824969025845955,
+          1.3668379411737963
+        ]
+      }
+    }
+  },
+  "prompts": {
+    "held-code-16k": {
+      "text": "Write a Python module for a durable append-only event journal. Include framing, checksums, recovery after truncated writes, atomic index rebuilding, filtering, and a comprehensive suite of failure-injection tests. Explain invariants in comments. Aim for at least 300 lines, beginning with the implementation.",
+      "context": "class EventJournal:\n    def append(self, event):\n        encoded = encode_event(event)\n        checksum = checksum_bytes(encoded)\n        frame = encode_length(len(encoded)) + encoded + checksum\n        self.file.write(frame)\n        self.file.flush()\n\n",
+      "prompt_tokens": 16384,
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "held-prose-16k": {
+      "text": "Write an extensive design review of an island electrical microgrid powered by solar panels, wind turbines, batteries and backup generators. Include scheduling, reserve margins, forecasting errors, seasonal effects, maintenance, and measurement plans. Write at least 2000 words and begin directly with the review.",
+      "context": "A microgrid must balance supply and demand at every instant. Battery state of charge is bounded. Forecasts carry uncertainty. Reliability depends on independent reserves and safe transitions between operating modes.\n",
+      "prompt_tokens": 16384,
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "force_length": true
+    },
+    "warmup-16k": {
+      "text": "Write a comprehensive Python graph module with at least 200 lines of implementation and tests.",
+      "prompt_tokens": 16384,
+      "max_tokens": 64,
+      "temperature": 1.0,
+      "force_length": true
+    }
+  },
+  "jobs": [
+    {
+      "profile": "reference-f2-head",
+      "prompt": "warmup-16k",
+      "warmup": true
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "warmup-16k",
+      "warmup": true
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "warmup-16k",
+      "warmup": true
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-16k",
+      "repeat": 1,
+      "seed": 331018
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 0,
+      "seed": 331017
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 3,
+      "seed": 331020
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 1,
+      "seed": 331018
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-16k",
+      "repeat": 0,
+      "seed": 331017
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 3,
+      "seed": 331020
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 2,
+      "seed": 331019
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-16k",
+      "repeat": 3,
+      "seed": 331020
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 4,
+      "seed": 331021
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-16k",
+      "repeat": 4,
+      "seed": 331021
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 2,
+      "seed": 331019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 1,
+      "seed": 331018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-16k",
+      "repeat": 0,
+      "seed": 331017
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 1,
+      "seed": 331018
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 1,
+      "seed": 331018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 2,
+      "seed": 331019
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 0,
+      "seed": 331017
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-16k",
+      "repeat": 4,
+      "seed": 331021
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-16k",
+      "repeat": 3,
+      "seed": 331020
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 2,
+      "seed": 331019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-code-16k",
+      "repeat": 4,
+      "seed": 331021
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 4,
+      "seed": 331021
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 3,
+      "seed": 331020
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 0,
+      "seed": 331017
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-code-16k",
+      "repeat": 2,
+      "seed": 331019
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-16k",
+      "repeat": 2,
+      "seed": 331019
+    },
+    {
+      "profile": "reference-f2-head",
+      "prompt": "held-prose-16k",
+      "repeat": 4,
+      "seed": 331021
+    },
+    {
+      "profile": "confidence-head6",
+      "prompt": "held-code-16k",
+      "repeat": 1,
+      "seed": 331018
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 0,
+      "seed": 331017
+    },
+    {
+      "profile": "reference-a5-head6",
+      "prompt": "held-prose-16k",
+      "repeat": 3,
+      "seed": 331020
+    }
+  ],
+  "cache_limit_bytes": 8589934592
+}

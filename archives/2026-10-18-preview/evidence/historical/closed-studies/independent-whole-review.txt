@@ -1,0 +1,60 @@
+Accepted: completed whole-request replay + persistent HotRows diagnostic v5
+
+The unchanged frozen analyzer and a separate stdlib-only payload audit agree on
+all four fixed pairs and eight jobs. CPython and Moby Dick use 32,767 prefilled
+tokens; curl and Pride and Prejudice use 32,768. Each arm then produces 128 tokens
+with the same frozen seed. Pair order is AB/BA/BA/AB. A is the actual qualified v3
+cone plus its shape/DSpark stabilization and HotRows; B is the narrow standalone
+whole-request replay with the same persistent, unchanged HotRows owner.
+
+Exact evidence totals:
+- 512 matched output-token IDs (1,024 generated IDs across both arms), with
+  identical decoded text and length completion in each pair.
+- 517,120 compared full-vocabulary values: one 129,280-logit first normal anchor
+  per pair, without an additional forward to collect the probe.
+- 1,440 target-slot entries compared across pairs: 1,120 array entries and 320
+  explicitly absent left-padding/lengths entries. Each pair covers all 40 target
+  cache objects, their offsets and metadata. Arrays include valid empty tensors.
+- 12 physical DSpark ring comparisons, with matching complete metadata and
+  absolute offsets; 24 actual ring arrays were captured across all eight jobs.
+- 131,131,328 logical payload bytes compared per paired side, including the
+  target arrays, draft rings and probe logits. Both arms together contain
+  262,262,656 logical payload bytes, all independently reread. NPY file headers
+  are additional; each file and payload hash was checked, and actual bytes were
+  compared with a separate stdlib NPY parser.
+- 207 matched functional speculative cycles (414 across all jobs). Confidence,
+  verification, acceptance, copy behavior and non-timing totals match per pair.
+  The Moby Dick arms each contain one copy cycle accepting one token.
+
+The one row owner, prefetch object, two embedding/table objects and two cache
+objects retain the same identities across all eight requests, with all 15 owned
+bindings and a 256 MiB per-table budget. The same worker executes every request.
+History is continuous at every drained boundary; no cache reset occurs. Retained
+arrays reach 512 MiB and return to zero at close. Both tables retire, cone hooks
+and model references release, and the complete native model-close sentinel is
+present. The saved supervisor report binds child 90924 to actual exit code 0,
+released lock/port and sufficient headroom before restoring the prior chat owner.
+
+The full experiment source closure and 3,413 archived source entries were
+rehashed. Completed generation backups precede enrichment and observer cleanup;
+the enriched and final records agree. The unchanged independent strict analysis
+is exactly equal to the parent's accepted analysis. The review inventory pins
+9,134 artifacts, including tensor files, source snapshots, current source files,
+raw backups, lifecycle reports and the retained audit correction.
+
+Audit-only correction: the first independent script incorrectly equated normal
+depth accepts with all accepted event tokens. Native copy acceptance is a
+separate counter; the one Moby Dick copied token exposed that assumption. The
+revised audit checks normal and copy acceptance separately. The original script
+and failed log are preserved. No frozen analyzer, run artifact or inference code
+changed. An earlier interpreter probe found system Python lacked NumPy; the
+unchanged analyzer used the existing lab interpreter, and the second payload
+audit required only the standard library. No inference runtime was imported by
+the independent payload audit, and no model/API/GPU operation was performed.
+
+Limits: four fixed cold singleton text pairs at these two admitted prefix sizes;
+no vision, broader request reuse or long-context extension. The reference is
+qualified v3 cone plus rows, not native full prefill. Persistent cache history and
+file-cache effects are order dependent. State export, source validation and
+ownership checks instrument these runs, so this result supports exactness only:
+no speed, serving-readiness, public quality or general workload claim follows.
