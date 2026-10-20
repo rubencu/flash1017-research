@@ -1,0 +1,38 @@
+INFO:omlx.utils.model_loading:M5 sorted gather_qmm reroute installed (issue #2267)
+INFO:omlx.patches.mlx_lm_mtp.qwen35_model:Qwen3.5/3.6 MTP model patch applied (PR 990)
+INFO:omlx.patches.mlx_lm_mtp.nemotron_h_chain:nemotron_h MTP chain patch applied (depth-k drafting, sequential fused verify, replay-free rollback)
+INFO:omlx.patches.qwen35_verify_qmm:MTP verify qmm patch applied (rows 2..6 split-K, 7..8 sg8, 9..24 mma)
+INFO:omlx.utils.model_loading:Speculative backend selected for /Users/rubencu/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp: embedded DSpark (model_type=deepseek_v41, active)
+INFO:omlx.patches.mlx_vlm_mtp.qwen35_vlm_model:Patched mlx_vlm.models.qwen3_5.Model.sanitize for MTP
+INFO:omlx.patches.mlx_vlm_mtp.qwen35_moe_vlm_model:Patched mlx_vlm.models.qwen3_5_moe.Model.sanitize for MTP
+INFO:omlx.patches.mlx_vlm_inkling_compat:Inkling mlx-vlm compatibility patch applied
+INFO:omlx.utils.model_loading:mlx-vlm MTP sanitize patch applied for /Users/rubencu/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp
+INFO:omlx.patches.mlx_vlm_mtp.qwen35_moe_vlm_runtime:mlx-vlm Qwen3.5-MoE runtime MTP patch applied
+INFO:omlx.patches.mlx_vlm_mtp.qwen35_vlm_runtime:mlx-vlm Qwen3.5 (dense) runtime MTP patch applied
+INFO:omlx.patches.gemma4_verify_attention:gemma4 small-L verify attention patch applied (kernel + per-token)
+INFO:omlx.patches.mlx_vlm_mtp.gemma4_vlm_runtime:mlx-vlm Gemma 4 runtime MTP patch applied
+INFO:omlx.patches.mlx_vlm_mtp.inkling_vlm_runtime:mlx-vlm inkling runtime MTP patch applied
+INFO:omlx.patches.deepseek_v4:PoolingCache / BatchPoolingCache injected into mlx_lm.models.cache
+INFO:omlx.patches.deepseek_v4:PoolingCacheHandler + BatchPoolingCacheHandler registered
+INFO:omlx.patches.mlx_vlm_glm5_next_compat:GLM-5.3 mlx-vlm compatibility patch applied
+INFO:omlx.patches.mlx_vlm_mtp.glm5_next_vlm_runtime:mlx-vlm GLM-5.3 (glm5_next) runtime MTP patch applied
+INFO:omlx.utils.model_loading:mlx-vlm runtime MTP patch applied for /Users/rubencu/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp
+{"type": "manifest"}
+INFO:omlx.patches.deepseek_v41.loading:DeepSeek V4.1 Engram mode: SSD offload
+INFO:omlx.patches.deepseek_v41.loading:DeepSeek V4.1 loaded 1 tensor groups (3.7 GiB tensors, 3.7 GiB active, 0.0 GiB cached)
+INFO:omlx.patches.deepseek_v41.loading:DeepSeek V4.1 loaded 26 tensor groups (102.7 GiB tensors, 102.7 GiB active, 0.0 GiB cached)
+INFO:omlx.patches.deepseek_v41.loading:DeepSeek V4.1 loaded 51 tensor groups (204.7 GiB tensors, 204.7 GiB active, 0.0 GiB cached)
+{"type": "load", "seconds": 23.682554084109142}
+INFO:omlx.patches.mlx_lm_mtp.batch_generator:MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=512)
+INFO:omlx.patches.mlx_lm_mtp.batch_generator:MTP[0] finish=length tokens=16 cycles=5 tok/cycle=3.20 accept=9/11 (81.8%) depth[d1=4/5,d2=3/4,d3=2/2] emits[init=2,draft=9,bonus=3,verify=2] timing[backbone=282.4ms mtp=14.1ms sample=0.2ms cache=1.9ms]
+{"type": "warmup", "id": "excluded-warmup", "total_seconds": 2.234539750032127, "ttft_seconds": 1.9327360829338431, "decode_tps": 50.066512023937634}
+INFO:omlx.patches.mlx_lm_mtp.batch_generator:MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=32768)
+INFO:omlx.patches.mlx_lm_mtp.batch_generator:MTP[0] finish=length tokens=128 cycles=78 tok/cycle=1.64 accept=48/100 (48.0%) depth[d1=37/78,d2=10/20,d3=1/2] emits[init=2,draft=48,bonus=26,verify=52] timing[backbone=3877.6ms mtp=159.4ms sample=3.1ms cache=39.3ms]
+{"type": "run", "id": "performance-pride-prejudice-32768-step8192", "total_seconds": 72.25375695782714, "ttft_seconds": 68.16307941591367, "decode_tps": 31.060385669847413}
+INFO:omlx.patches.mlx_lm_mtp.batch_generator:MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=32768)
+INFO:omlx.patches.mlx_lm_mtp.batch_generator:MTP[0] finish=length tokens=128 cycles=40 tok/cycle=3.20 accept=82/92 (89.1%) depth[d1=33/37,d2=29/30,d3=20/25] copy=4/9 in 3 emits[init=2,draft=86,bonus=28,verify=12] timing[backbone=2015.7ms mtp=91.1ms sample=1.6ms cache=11.0ms]
+{"type": "run", "id": "performance-cpython-32768-step8192", "total_seconds": 72.17718437500298, "ttft_seconds": 70.0497957910411, "decode_tps": 59.74392905133674}
+INFO:omlx.patches.mlx_lm_mtp.batch_generator:MTP path activated for uid=0 (model has mtp_forward, batch=1, primed=16384)
+INFO:omlx.patches.mlx_lm_mtp.batch_generator:MTP[0] finish=length tokens=128 cycles=50 tok/cycle=2.56 accept=76/100 (76.0%) depth[d1=42/50,d2=24/36,d3=10/14] emits[init=2,draft=76,bonus=26,verify=24] timing[backbone=2491.3ms mtp=110.3ms sample=1.9ms cache=19.4ms]
+{"type": "run", "id": "performance-cpython-16384-step2048", "total_seconds": 26.145524499937892, "ttft_seconds": 23.514024707954377, "decode_tps": 48.3001722647153}
+{"type": "closed"}

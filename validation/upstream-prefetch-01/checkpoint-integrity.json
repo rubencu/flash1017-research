@@ -1,0 +1,6 @@
+{
+  "manifest_sha256": "926e2b8c29d9d81d307d2812d4f24265d9a77d0bcd6b231f0bd29473caf5868f",
+  "files": 61,
+  "mismatches": [],
+  "method": "Unchanged inode, size and mtime against prior full SHA-256 verification; no payload rehash this run."
+}

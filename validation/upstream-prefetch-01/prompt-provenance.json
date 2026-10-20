@@ -1,0 +1,54 @@
+{
+  "source_plan_sha256": "f668ef98840aa9c13a736e4b8329b396ad1f69032c46836d1640fdf9346972db",
+  "construction": "The 16K control preserves its complete original prompt. Each 32K wide workload is the first 32768 token IDs of the recorded 64K prompt, so the trailing question and generation header are absent. These are fixed-token timing and exact-output comparisons, not semantic task-quality scores.",
+  "prompts": {
+    "performance-cpython-16384-step2048": {
+      "prompt_tokens": 16384,
+      "input_tokens_sha256": "4aa960f794657af43657670080c8e3d5a2d6e31815fff0555c466e75c6ede978",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 16328,
+      "framing_and_question_tokens": 56,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "cpython",
+      "id": "performance-cpython-16384",
+      "timeout_seconds": 1200,
+      "cohort": "natural-source"
+    },
+    "performance-cpython-32768-step8192": {
+      "prompt_tokens": 65536,
+      "input_tokens_sha256": "31a42897b4a2696c5d7a6386c7e56d263f27f8c388a20c825f51349753ebdd9c",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 65480,
+      "framing_and_question_tokens": 56,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "cpython",
+      "id": "performance-cpython-65536",
+      "timeout_seconds": 1200,
+      "cohort": "natural-source"
+    },
+    "performance-pride-prejudice-32768-step8192": {
+      "prompt_tokens": 65536,
+      "input_tokens_sha256": "aba763d4f3fab02b97397173495e7ebf7a27d7b4bad14379b0dac58b617e5ddb",
+      "max_tokens": 512,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "force_length": true,
+      "thinking": false,
+      "source_tokens_used": 65482,
+      "framing_and_question_tokens": 54,
+      "construction": "One nonrepeated source-token prefix inserted immediately after native User marker; full query and generation header retained. Exact token input is authoritative; this splice need not retokenize identically as plain text.",
+      "source": "pride-prejudice",
+      "id": "performance-pride-prejudice-65536",
+      "timeout_seconds": 1200,
+      "cohort": "natural-source"
+    }
+  }
+}

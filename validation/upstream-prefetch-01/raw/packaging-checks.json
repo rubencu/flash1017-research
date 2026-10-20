@@ -1,0 +1,5 @@
+{
+  "generation_function_ast_equal": true,
+  "resource_meter_ast_equal": true,
+  "portable_changes": "Only import location and explicit model/output directory arguments; frozen input plan and generation function unchanged."
+}

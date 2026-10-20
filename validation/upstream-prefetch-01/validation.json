@@ -1,0 +1,20 @@
+{
+  "status": "complete_validated",
+  "base": "73322ed188a25b9ce2e490d3137d810f7d50128d",
+  "candidate": "058cf8473b7d49b078ebf43125f42854253e8fb7",
+  "branch": "perf/deepseek-v41-prefetch-budget",
+  "code_change": "Only PREFETCH_BYTES 16 to 64 MiB and explanatory comment",
+  "tests": {
+    "storage_passed": 39,
+    "deepseek_passed": 752,
+    "deepseek_skipped": 70,
+    "default_passed": 18028,
+    "default_skipped": 690,
+    "default_failures": 2,
+    "default_failure_baseline_reproduction": true
+  },
+  "regression": "8192-token admission fails on unchanged upstream; cap rejection passes before and after. Packed rows exactly equal synchronous reads.",
+  "performance": "Four wide-prefill pairs: total time -16.0147%, TTFT -16.6403%, decode -0.3538%. All 768 tokens match across all six pairs. Controls: total +0.6822%. No swap growth.",
+  "scope": "Default 2048 and cluster-throughput 4096 chunks already fit 16 MiB for this checkpoint. New path starts at 4162 tokens; 8192 needs31.5MiB.",
+  "decision": "Submit the narrow wide-prefill change; no default-setting performance claim."
+}
