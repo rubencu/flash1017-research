@@ -1,0 +1,27 @@
+{
+  "schema": "flash1017-quality-evidence/1",
+  "title": "Fresh installation of the measured release wheel",
+  "scope": "Installation and checkpoint metadata only; no model generation.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1637,
+      "sha256": "8db914fc0cb76c4f5f14d73c7867f6f286dacdc023bf8d7cf802cf95131ddb19"
+    },
+    {
+      "path": "checkpoint-check.json",
+      "bytes": 495,
+      "sha256": "46d47ddb0d35c6be8ecbb39da73e041f4bb53658e9b8495d446109200296d07b"
+    },
+    {
+      "path": "flash1017-2-constraints.txt",
+      "bytes": 2441,
+      "sha256": "cd33046193c8d4678641adae1c2b510d490cfa2a2cccdb97ab973a05462cf04c"
+    },
+    {
+      "path": "installation.json",
+      "bytes": 4537,
+      "sha256": "02aa23c7c57dea9a8ef527f4d4ee665387b6003f3320c9679b85112ce450c883"
+    }
+  ]
+}

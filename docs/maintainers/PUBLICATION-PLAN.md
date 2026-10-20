@@ -8,8 +8,8 @@ and [quality evaluation](../QUALITY.md).
 
 | Destination | Artifact |
 |---|---|
-| `rubencu/omlx` | Runtime source on `flash1017-preview`, installation guide, experimental wheel and checksum. |
-| `rubencu/flash1017-research` | Research article, methods, raw evidence, reproducible analysis, attribution and licenses. |
+| `rubencu/omlx` | Branch `flash1017-preview`; prerelease tag `v0.7.1rc1-flash1017.2`; tested wheel, checksum, dependency constraints and release manifest. |
+| `rubencu/flash1017-research` | Public repository, branch `main`; prerelease tag `v0.1.0`; research article, methods, raw evidence, reproducible analysis, attribution and licenses. |
 | Optional Hugging Face blog | An article linking the runtime and evidence releases. |
 
 Model weights are unchanged, so no Hugging Face model repository is needed.
@@ -25,6 +25,17 @@ Identify measured source commit `9280d25a1322c39f2f6713dc22b099a6e9dd41d1` and
 wheel SHA-256
 `0fbdb77ca86ce35b4dca0275b534c1fafde7d70f0f7f6a89d5f964821f7f7f06`.
 Documentation-only branch commits do not change that measured binary.
+
+The prepared branch also adds the recorded dependency constraints and excludes
+Flash1017 release tags from the inherited wheel-build/upload and Homebrew
+update jobs. These changes do not alter runtime modules. Publish the preserved
+wheel, not a new build from the release tag. Keep the fork's existing default
+branch and unrelated branches unchanged.
+
+Use the [prepared runtime release notes](https://github.com/rubencu/omlx/blob/v0.7.1rc1-flash1017.2/docs/releases/flash1017-2.md)
+as the release body. Attach exactly the reviewed wheel, its `.sha256` sidecar,
+`flash1017-2-constraints.txt`, `SHA256SUMS` and `RELEASE-MANIFEST.json`.
+`SHA256SUMS` covers the wheel and constraints used by the install guide.
 
 The release description should state the tested checkpoint, 256 GiB M5 Ultra,
 single-request profile and installation procedure. Link the evidence behind
@@ -47,6 +58,24 @@ Link the precise runtime artifact from the README and article. Verify the
 saved evidence and offline reproduction commands before tagging the research
 release. An optional Hugging Face blog should summarize the same scoped
 result and link the full evidence.
+
+Use the [prepared research release notes](../releases/v0.1.0.md) as its body.
+Attach `flash1017-research-v0.1.0.tar.gz` and its `SHA256SUMS`. The archive
+contains the complete repository, including corpus licenses and historical
+evidence. The [fresh-install record](../../validation/release-install-01/README.md)
+documents the constrained wheel installation; it is not another inference run.
+
+Before any remote writes, verify the reviewed source commits and all staged
+asset hashes. Push only the named branches and tags, without force. Create
+draft prereleases, upload and verify assets, then publish both as prereleases
+without marking either as the latest stable release. Finally, check the public
+download links and downloaded checksums. GitHub download links in the prepared
+reader guides are publication targets; they are not live until this sequence
+has been approved and completed.
+
+The GitHub repositories and releases are the scope of this publication. A
+Hugging Face blog, social posts and upstream submissions remain separate
+decisions.
 
 ## Narrow upstream contributions
 

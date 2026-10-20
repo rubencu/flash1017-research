@@ -8,6 +8,7 @@ running the same DeepSeek-V4.1-Flash-1017 checkpoint on a 256 GiB M5 Ultra Mac.
 | How much faster is the fork? | [Performance](performance-v2-01/README.md): 7.9% higher generation throughput and 4.5% lower first-visible-text latency across eight workloads, 32 measured requests and two blocks. |
 | Did the tested responses change? | [Answer quality](quality-v2-01/README.md): all 618 response texts and finish reasons match, with zero task regressions. |
 | Which exact software was measured? | [Build identity](quality-v2-01/BUILD-IDENTITY.json): source, wheels, checkpoint and profile. |
+| Does the release install with the measured dependencies? | [Fresh installation](release-install-01/README.md): 110 dependency versions and 752 runtime/web files checked against the measured environment and wheel. |
 
 ## Check the saved evidence
 

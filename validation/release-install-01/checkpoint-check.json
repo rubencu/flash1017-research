@@ -1,0 +1,13 @@
+{
+  "profile": "flash1017-v2",
+  "checkpoint": "LOCAL_CHECKPOINT_DIRECTORY",
+  "repository": "mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+  "revision": "78456115d301eecf9fadcdcc81c0cf6f8b2c8eab",
+  "metadata_verified": true,
+  "weight_shards_hashed": false,
+  "model_loaded": false,
+  "max_total_context_tokens": 131072,
+  "max_concurrent_requests": 1,
+  "minimum_unified_memory_gib": 256,
+  "path_note": "Local model directory redacted; metadata result unchanged. No weights loaded."
+}

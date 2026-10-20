@@ -5,17 +5,19 @@ on DeepSeek-V4.1-Flash-1017. The model weights and quantization are unchanged.
 
 | Task | Where to go |
 |---|---|
-| Build, install or modify the server | The `rubencu/omlx` fork, branch `flash1017-preview`; see its `docs/flash1017-install.md`. |
+| Install the measured server | The [experimental runtime release](https://github.com/rubencu/omlx/releases/tag/v0.7.1rc1-flash1017.2) and [installation guide](https://github.com/rubencu/omlx/blob/v0.7.1rc1-flash1017.2/docs/flash1017-install.md). |
+| Build or modify the server | The [`flash1017-preview` branch](https://github.com/rubencu/omlx/tree/flash1017-preview) of the oMLX fork. |
 | Understand the optimizations and results | The [research article](ARTICLE.md). |
 | Inspect the evaluation method | [Performance methods](RESULTS.md) and [answer quality](QUALITY.md). |
 | Recalculate results or inspect raw evidence | The [evidence guide](../validation/README.md). |
 | Check sources and licenses | [Attribution](ATTRIBUTION.md). |
 
-The runtime checkout is `../omlx` relative to this research checkout. The
-planned research repository name is `rubencu/flash1017-research`; public
-downloads are not yet available. The runtime installs a server and web UI,
-rather than a replacement macOS menu-bar application. No additional model
-repository or weight conversion is needed.
+This repository's [v0.1.0 release](https://github.com/rubencu/flash1017-research/releases/tag/v0.1.0)
+collects the research and evidence. The runtime release supplies the exact
+tested wheel, checksums and a constraints file for its 110 recorded dependency
+versions. The runtime installs a server and web UI. It does not replace the
+macOS menu-bar application. No additional model repository or weight conversion
+is needed.
 
 ## Identify the measured build
 

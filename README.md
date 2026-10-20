@@ -48,9 +48,11 @@ other model/checkpoint combinations were not measured. The
 [build identity](validation/quality-v2-01/BUILD-IDENTITY.json) and evidence
 manifests include the exact wheel and source hashes.
 
-The companion [oMLX fork](https://github.com/rubencu/omlx) is the runtime
-repository. This research repository contains the methods, recorded results,
-analysis code and attribution. Model weights are not included.
+Install the exact tested wheel from the companion
+[experimental runtime release](https://github.com/rubencu/omlx/releases/tag/v0.7.1rc1-flash1017.2),
+following its [installation guide](https://github.com/rubencu/omlx/blob/v0.7.1rc1-flash1017.2/docs/flash1017-install.md).
+This research repository contains the methods, recorded results, analysis code
+and attribution. Model weights are not included.
 
 ## Read the research
 

@@ -151,8 +151,13 @@ Saved performance arithmetic can be reproduced without a model or GPU.
 Supplying the two exact wheel files also replays the source/native identity
 audit without installing them or using private settings. Repeating inference
 requires the pinned checkpoint, suitable hardware and the declared process/cache
-sequence. The [companion oMLX fork](https://github.com/rubencu/omlx) is the runtime
-repository; this repository provides the research evidence and analysis.
+sequence. To use the measured runtime, follow the
+[installation guide](https://github.com/rubencu/omlx/blob/v0.7.1rc1-flash1017.2/docs/flash1017-install.md)
+for the [experimental wheel release](https://github.com/rubencu/omlx/releases/tag/v0.7.1rc1-flash1017.2).
+It includes the tested binary, checksums and the recorded dependency constraints.
+The runtime requires at least 256 GiB unified memory and 210 GiB available before
+loading; only the stated M5 Ultra was evaluated. This repository provides the
+research evidence and analysis.
 
 These optimizations build on established techniques and community implementations.
 The contribution is their integration into this execution path and the measured
