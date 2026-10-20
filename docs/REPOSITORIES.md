@@ -22,12 +22,20 @@ are described in [Methods and results](RESULTS.md). The corresponding source,
 input tokens, saved observations and reports are under
 `archives/2026-10-18-preview/`.
 
-The **installable fork** integrates the retained prototype changes into normal
-package modules. Its branch is `flash1017-preview`, based on public oMLX
-`v0.7.1rc1` at `7a5a3d75ce7463300bdfa5fedccd34348f60ff46`. Package version
-`0.7.1rc1+flash1017.1` passed clean installation and a bounded serving check.
-[`RUNTIME-LINK.json`](../RUNTIME-LINK.json) records its exact source commit,
-wheel checksum, checkpoint revision and [validation directory](../validation/runtime-preview-01/README.md).
+The **current installable fork** is `0.7.1rc1+flash1017.2` on branch
+`flash1017-preview`, based on public oMLX `v0.7.1rc1` at
+`7a5a3d75ce7463300bdfa5fedccd34348f60ff46`. The measured runtime commit is
+`9280d25a1322c39f2f6713dc22b099a6e9dd41d1`. Its
+[quality evidence](../validation/quality-v2-01/README.md) contains 618 exact
+paired responses and zero task regressions; its
+[performance evidence](../validation/performance-v2-01/README.md) contains the
+complete 32-request comparison. Both identify the exact source and wheel.
+Documentation can advance independently; preserve the measured wheel identity.
+
+The earlier package `0.7.1rc1+flash1017.1` passed installation and bounded
+serving checks but failed its full quality gate with seven task regressions.
+[`RUNTIME-LINK.json`](../RUNTIME-LINK.json) retains that historical identity and
+its [installation validation](../validation/runtime-preview-01/README.md).
 
 The public native binaries packaged with the fork differ from the installed
 application's binaries used in the benchmark. The prototype's performance

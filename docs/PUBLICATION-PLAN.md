@@ -6,16 +6,31 @@ findings and their methods are in [RESULTS.md](RESULTS.md).
 No action below has been performed. The local source and artifacts are the
 reviewable deliverable; publication requires Ruben's approval.
 
-## Quality prerequisite
+## Completed evidence and release scope
 
-The package is installable and functionally tested, but a claim of faster
-inference without quality loss is not ready. The complete packaged configuration
-has not received a paired answer-quality evaluation against its unchanged
-release base. The [quality evidence and validation requirement](QUALITY.md)
-records the existing task regression, the limits of component parity checks,
-and the checks needed before such a claim. A disclaimer does not complete this
-validation. Any no-quality-loss release claim must wait for that evidence, and
-speed must be measured on the exact configuration that passes.
+The installed v2 wheel, `0.7.1rc1+flash1017.2`, at runtime commit
+`9280d25a1322c39f2f6713dc22b099a6e9dd41d1`, now has paired quality and
+performance results against public oMLX `v0.7.1rc1`. All 618 quality responses
+match the baseline's text and finish reason, with zero task regressions. The
+32-request performance comparison measured 7.9% higher token-generation rate
+and 4.5% lower first-visible-token latency across eight workloads, using
+geometric means of two paired blocks per workload. See [quality](QUALITY.md)
+and [methods and results](RESULTS.md) for the raw evidence and limitations.
+
+These are results on one 256 GiB M5 Ultra Mac, one checkpoint and fixed greedy
+requests. First-token timings varied between blocks; two blocks do not establish
+statistical significance or results on other Macs. Four quality answers reached
+the output budget identically in both arms. Five timing workloads reached the
+512-token budget, so complete-answer latency applies only to the other three.
+Use the exact measured wheel and its source identity for release; changes to
+the runtime or dependencies require new validation. Documentation-only commits
+after the measured source do not change the preserved wheel.
+
+The first installed build failed seven tasks that the baseline passed. Its
+evidence remains available, as do the intermediate reporting correction and
+interrupted speed attempt. The stronger historical prototype percentages must
+not be used as the current wheel's headline. No further model experiments are
+needed for this bounded release; finish review and package the evidence.
 
 ## Runtime: the existing rubencu/omlx fork
 
@@ -37,18 +52,19 @@ oMLX API clients. Contributors can edit this fork, rebuild it and submit fixes
 to it. Keep future runtime work here, with new versioned validation when the
 inference code or native dependencies change.
 
-The 20.06% result must identify the benchmark prototype and its installed-release reference.
-A functional smoke check does not make it a benchmark of this wheel or
-establish answer-quality equivalence. Do not turn that result into a general
-claim about all models or all Macs.
+Use the installed v2 results as the release headline. The historical 20.06%
+result must identify the benchmark prototype and its installed-release
+reference; it does not describe the v2 wheel. Do not turn either result into a
+general claim about all models or all Macs.
 
 ## Research: a new rubencu/flash1017-research repository
 
 Create this repository only after review, then push its local `main`. It holds
 the immutable experiment record, raw observations, analysis, figures, article,
-attribution and separate validation of the installable fork. `RUNTIME-LINK.json`
-binds the current reviewed source and wheel; the archive keeps the identity of
-the code that actually produced its measurements.
+attribution and separate validation of the installable fork. The v2 evidence
+bundles bind the measured source and wheel. `RUNTIME-LINK.json` remains the
+historical v1 installation identity; the archive keeps the identity of the
+prototype that actually produced its measurements.
 
 Readers can check source and evidence, recompute the saved results, inspect
 failed experiments, reproduce the protocol on their hardware, and propose

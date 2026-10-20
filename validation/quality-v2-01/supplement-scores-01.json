@@ -1,0 +1,1803 @@
+{
+  "quality_equivalence_proved": false,
+  "acceptance_rule": "zero baseline-correct/candidate-incorrect tasks and complete paired outputs; no offsetting regressions with improvements",
+  "zero_observed_regression_gate_passed": true,
+  "suites": {
+    "gsm8k-test-64-hash-subset": {
+      "tasks": 64,
+      "baseline_correct": 61,
+      "candidate_correct": 61,
+      "accuracy_delta_percentage_points": 0.0,
+      "regressions": [],
+      "improvements": [],
+      "incomplete_pairs": [],
+      "identical_text_pairs": 64,
+      "regression_rate_one_sided_95pct_exact_upper": 0.045729702330762456,
+      "conditional_regression_among_baseline_correct_one_sided_95pct_upper": 0.04792395210660738,
+      "bound_interpretation": "Exploratory sampling uncertainty under independent representative tasks; the finite test set is not a random sample of all future prompts. For authored long-context controls this is only a descriptive calculation.",
+      "zero_observed_regression_gate_passed": true
+    },
+    "synthetic-long-context-controls": {
+      "tasks": 12,
+      "baseline_correct": 11,
+      "candidate_correct": 11,
+      "accuracy_delta_percentage_points": 0.0,
+      "regressions": [],
+      "improvements": [],
+      "incomplete_pairs": [],
+      "identical_text_pairs": 12,
+      "regression_rate_one_sided_95pct_exact_upper": 0.22092219194555585,
+      "conditional_regression_among_baseline_correct_one_sided_95pct_upper": 0.2384041903808527,
+      "bound_interpretation": "Exploratory sampling uncertainty under independent representative tasks; the finite test set is not a random sample of all future prompts. For authored long-context controls this is only a descriptive calculation.",
+      "zero_observed_regression_gate_passed": true
+    }
+  },
+  "pairs": [
+    {
+      "task_id": "gsm8k-test-1021",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "36",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "36",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0966",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "48",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "48",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0292",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "75",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "75",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1214",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "5",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "5",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0124",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "10",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "10",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0564",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "240",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "240",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0986",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "70",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "70",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0298",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "500",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "500",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0619",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "76",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "76",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0352",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "21",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "21",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0262",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "270",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "270",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0169",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "120",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "120",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0347",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "36",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "36",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0883",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "25",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "25",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0448",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "539",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "539",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1301",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "23",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "23",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0950",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "5",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "5",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0308",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "6",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "6",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0722",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "255",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "255",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0403",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": false,
+        "complete": true,
+        "answer": "135",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": false,
+        "complete": true,
+        "answer": "135",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0475",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "20",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "20",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0353",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "20",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "20",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0191",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "5",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "5",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0196",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "120",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "120",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0807",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "4",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "4",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0637",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "17",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "17",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1085",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "26",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "26",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0989",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "45",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "45",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0338",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "60",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "60",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0241",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "6",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "6",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0714",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "10",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "10",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1135",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "32",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "32",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0547",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "81",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "81",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1000",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "1",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "1",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0274",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "3200",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "3200",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0288",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "3",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "3",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1156",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "120",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "120",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0454",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": false,
+        "complete": true,
+        "answer": "240",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": false,
+        "complete": true,
+        "answer": "240",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0586",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "800",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "800",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0334",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "6",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "6",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0044",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "20",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "20",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1120",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "560",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "560",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1039",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "160",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "160",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0858",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "3430",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "3430",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0961",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "225",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "225",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1034",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "66",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "66",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0808",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "12",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "12",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0253",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "18",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "18",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0843",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "19",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "19",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0313",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "120000",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "120000",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1121",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "35",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "35",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0871",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "48",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "48",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0667",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "53",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "53",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0699",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "8",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "8",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0823",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": false,
+        "complete": true,
+        "answer": "18",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": false,
+        "complete": true,
+        "answer": "18",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0548",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "100",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "100",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0918",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "56",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "56",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1162",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "3",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "3",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0520",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "63",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "63",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0284",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "360",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "360",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0867",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "7",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "7",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-1216",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "20",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "20",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0773",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "10",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "10",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "gsm8k-test-0057",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "83",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "83",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-16384-early-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A98591D700A738835",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A98591D700A738835",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-16384-early-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A5D8DEBE850FCAF93",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A5D8DEBE850FCAF93",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-16384-middle-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A48A840DD7E11297B",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A48A840DD7E11297B",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-16384-middle-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A3440694DFB1BC95D",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A3440694DFB1BC95D",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-16384-late-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A005A073EAC278584",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A005A073EAC278584",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-16384-late-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A1D89C08D703917DB",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A1D89C08D703917DB",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-65536-early-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A7F30458199E6C49E",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A7F30458199E6C49E",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-65536-early-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A6C55FFE25721D3F8",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A6C55FFE25721D3F8",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-65536-middle-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "AD2DA437FF24FC785",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "AD2DA437FF24FC785",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-65536-middle-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "AC3D605219DE40F32",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "AC3D605219DE40F32",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-65536-late-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": true,
+        "complete": true,
+        "answer": "A1B457ED3CB6C3C1A",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": true,
+        "complete": true,
+        "answer": "A1B457ED3CB6C3C1A",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    },
+    {
+      "task_id": "long-65536-late-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline": {
+        "correct": false,
+        "complete": true,
+        "answer": "VEF7FBEA5484D0B12",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "candidate": {
+        "correct": false,
+        "complete": true,
+        "answer": "VEF7FBEA5484D0B12",
+        "finish_reason": "stop",
+        "error": null,
+        "reason": "complete"
+      },
+      "regression": false,
+      "improvement": false,
+      "text_equal": true
+    }
+  ],
+  "inputs": {
+    "tasks": {
+      "file": "tasks.jsonl",
+      "sha256": "db0ec1ce6d1ee205e681aa227ca8e5d24d5e3e8b2c45a571566fad85f55977ed"
+    },
+    "baseline": {
+      "file": "baseline-supplement-01.jsonl",
+      "sha256": "f57afaffce3ad6f6c6bcd609084cdef2ab03fbebbb00e987901ef97301bd1511"
+    },
+    "candidate": {
+      "file": "candidate-supplement-01.jsonl",
+      "sha256": "d0f67d3b275e260b167d12c3f72db897d77b7eaf1cf31034394a6b3d932bc3b9"
+    },
+    "scorer": {
+      "file": "score_quality_supplement.py",
+      "sha256": "b90185db997939dd476bd880d6452e8753e470d83696ae7e3794f0ee58a407c8"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "status": "passed",
+  "seatbelt": {
+    "event": "result",
+    "status": "probe_pass",
+    "isolation": {
+      "seeded_startup": true,
+      "outside_read_denied": true,
+      "outside_write_denied": true,
+      "scratch_write_denied": true,
+      "network_denied": true,
+      "fork_denied": true,
+      "foreign_exec_denied": true,
+      "RLIMIT_AS": [
+        9223372036854775807,
+        9223372036854775807
+      ],
+      "RLIMIT_DATA": [
+        9223372036854775807,
+        9223372036854775807
+      ],
+      "RLIMIT_FSIZE": [
+        1048576,
+        1048576
+      ],
+      "RLIMIT_NOFILE": [
+        64,
+        64
+      ],
+      "RLIMIT_CORE": [
+        0,
+        0
+      ],
+      "RLIMIT_CPU": [
+        180,
+        180
+      ],
+      "memory_policy": "parent RSS watchdog; 4 GiB threshold, 20 ms polling, possible overshoot"
+    },
+    "returncode": 0,
+    "sampled_peak_rss": 26673152
+  },
+  "cpu_limit": {
+    "status": "timeout",
+    "reason": "worker_exit",
+    "returncode": -24,
+    "sampled_peak_rss": 26607616,
+    "events": [
+      {
+        "event": "candidate_start",
+        "timeout": 5
+      }
+    ],
+    "stderr": ""
+  },
+  "memory_watchdog": {
+    "status": "timeout",
+    "reason": "rss_watchdog_limit",
+    "returncode": -9,
+    "sampled_peak_rss": 160858112,
+    "events": [
+      {
+        "event": "candidate_start",
+        "timeout": 5
+      }
+    ],
+    "stderr": ""
+  },
+  "wall_watchdog": {
+    "status": "timeout",
+    "reason": "candidate_timeout",
+    "returncode": -9,
+    "sampled_peak_rss": 26722304,
+    "events": [
+      {
+        "event": "candidate_start",
+        "timeout": 0.1
+      }
+    ],
+    "stderr": ""
+  },
+  "output_watchdog": {
+    "status": "timeout",
+    "reason": "output_limit",
+    "returncode": -9,
+    "sampled_peak_rss": 28835840,
+    "events": [
+      {
+        "event": "candidate_start",
+        "timeout": 5
+      }
+    ],
+    "stderr": ""
+  },
+  "determinism_repeat": [
+    {
+      "event": "result",
+      "status": "determinism_probe_pass",
+      "hash": 3081463251262140131,
+      "random_values": [
+        0.8444218515250481,
+        0.7579544029403025,
+        0.420571580830845
+      ],
+      "numpy_values": [
+        0.5488135039273248,
+        0.7151893663724195,
+        0.6027633760716439
+      ],
+      "ignore_environment": 0,
+      "no_user_site": 1,
+      "safe_path": true,
+      "returncode": 0,
+      "sampled_peak_rss": 38600704
+    },
+    {
+      "event": "result",
+      "status": "determinism_probe_pass",
+      "hash": 3081463251262140131,
+      "random_values": [
+        0.8444218515250481,
+        0.7579544029403025,
+        0.420571580830845
+      ],
+      "numpy_values": [
+        0.5488135039273248,
+        0.7151893663724195,
+        0.6027633760716439
+      ],
+      "ignore_environment": 0,
+      "no_user_site": 1,
+      "safe_path": true,
+      "returncode": 0,
+      "sampled_peak_rss": 38567936
+    }
+  ],
+  "protocol_id": "flash1017-evalplus-macos-seeded-02"
+}

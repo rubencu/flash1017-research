@@ -1,0 +1,127 @@
+--- original/flash1017_evalplus_grade.py
++++ seeded-02/flash1017_evalplus_grade.py
+@@ -3,8 +3,8 @@
+ """Pinned EvalPlus oracles in one macOS seatbelt process per task/test phase.
+ 
+ Generated and canonical code never executes in the host supervisor. The worker
+-calls upstream unsafe_execute unchanged, adapting only its temporary-directory
+-context and replacing multiprocessing shared values with local value holders.
++calls upstream unsafe_execute unchanged under the documented macOS process,
++temporary-directory, resource-limit, and explicit seed-policy adaptations.
+ """
+ import argparse
+ import contextlib
+@@ -35,6 +35,7 @@
+ MIN_TIME = 1.0
+ TIME_FACTOR = 4.0
+ WORKER_MARKER = "FLASH1017_EVALPLUS_WORKER"
++PROTOCOL_ID = "flash1017-evalplus-macos-seeded-02"
+ 
+ 
+ def sha(data):
+@@ -88,6 +89,7 @@
+ def child_env(scratch):
+     return {"PATH": "/usr/bin:/bin", "HOME": str(scratch), "TMPDIR": str(scratch),
+             "PYTHONHASHSEED": "0", "PYTHONDONTWRITEBYTECODE": "1",
++            "PYTHONNOUSERSITE": "1",
+             "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "VECLIB_MAXIMUM_THREADS": "1",
+             "HF_HUB_OFFLINE": "1", "HF_DATASETS_OFFLINE": "1",
+             "EVALPLUS_MAX_MEMORY_BYTES": str(MEMORY), WORKER_MARKER: "1"}
+@@ -109,6 +111,12 @@
+     if os.environ.get(WORKER_MARKER) != "1":
+         raise RuntimeError("Worker must be started by the sandbox supervisor")
+     checks = {}
++    checks["seeded_startup"] = (os.environ.get("PYTHONHASHSEED") == "0" and
++                                not sys.flags.ignore_environment and
++                                bool(sys.flags.no_user_site) and bool(sys.flags.safe_path) and
++                                "PYTHONPATH" not in os.environ)
++    if not checks["seeded_startup"]:
++        raise RuntimeError("Worker startup does not satisfy the seeded isolation policy")
+     checks["outside_read_denied"] = denied(lambda: Path(job["canary"]).read_bytes())
+     checks["outside_write_denied"] = denied(lambda: Path(job["canary"] + ".write").write_text("probe"))
+     checks["scratch_write_denied"] = denied(lambda: Path("forbidden-write").write_text("probe"))
+@@ -145,6 +153,18 @@
+         checks = isolation_checks(job)
+         if job["mode"] == "probe":
+             emit({"event": "result", "status": "probe_pass", "isolation": checks})
++            return
++        if job["mode"] == "determinism_probe":
++            import random
++            import numpy as np
++            random.seed(0)
++            np.random.seed(0)
++            emit({"event": "result", "status": "determinism_probe_pass",
++                  "hash": hash("fixed-evaluator-probe"),
++                  "random_values": [random.random() for _ in range(3)],
++                  "numpy_values": np.random.random(3).tolist(),
++                  "ignore_environment": sys.flags.ignore_environment,
++                  "no_user_site": sys.flags.no_user_site, "safe_path": sys.flags.safe_path})
+             return
+         if job["mode"] == "cpu_probe":
+             emit({"event": "candidate_start", "timeout": 5})
+@@ -176,10 +196,14 @@
+         from evalplus.eval._special_oracle import MBPP_OUTPUT_NOT_NONE_TASKS
+         from evalplus.gen.util import trusted_exec
+         from evalplus.sanitize import sanitize
++        import random
++        import numpy as np
+         problem = job["problem"]
+         inputs = problem[job["phase"] + "_input"]
+         if job["suite"] == "mbpp":
+             inputs = mbpp_deserialize_inputs(problem["task_id"], inputs)
++        random.seed(0)
++        np.random.seed(0)
+         expected, reference_time = trusted_exec(
+             problem["prompt"] + problem["canonical_solution"], inputs, problem["entry_point"],
+             record_time=True,
+@@ -212,6 +236,8 @@
+         timeout = min(60.0, sum(time_limits)) + 2.0  # upstream fast-check join budget
+         emit({"event": "candidate_start", "timeout": timeout,
+               "solution_sha256": sha(code.encode()), "tests": len(inputs)})
++        random.seed(0)
++        np.random.seed(0)
+         upstream.unsafe_execute(job["suite"], problem["entry_point"], code, inputs,
+                                 expected, time_limits, problem["atol"], True,
+                                 state, details, progress)
+@@ -247,7 +273,7 @@
+         stderr_path = scratch / "stderr.txt"
+         with stderr_path.open("wb") as stderr:
+             proc = subprocess.Popen(["/usr/bin/sandbox-exec", "-f", str(sb), sys.executable,
+-                                     "-I", "-B", str(Path(__file__).resolve()), "--_worker", str(job_path)],
++                                     "-s", "-P", "-B", str(Path(__file__).resolve()), "--_worker", str(job_path)],
+                                     cwd=cwd, env=child_env(scratch), stdin=subprocess.DEVNULL,
+                                     stdout=subprocess.PIPE, stderr=stderr, close_fds=True,
+                                     start_new_session=True)
+@@ -356,6 +382,11 @@
+     if probe["status"] != "probe_pass":
+         raise SystemExit(json.dumps(probe, indent=2))
+     if args.probe:
++        repeat = [run_worker(source, work, {"mode": "determinism_probe"}) for _ in range(2)]
++        fingerprints = [{k: r.get(k) for k in ("status", "hash", "random_values", "numpy_values",
++                                               "ignore_environment", "no_user_site", "safe_path")} for r in repeat]
++        if fingerprints[0] != fingerprints[1] or fingerprints[0]["status"] != "determinism_probe_pass":
++            raise SystemExit("Determinism startup probe failed: " + json.dumps(repeat))
+         cpu = run_worker(source, work, {"mode": "cpu_probe"}, cpu=1)
+         if cpu["returncode"] not in (-signal.SIGKILL, -signal.SIGXCPU) or cpu.get("reason") == "candidate_timeout":
+             raise SystemExit("CPU resource-limit probe failed: " + json.dumps(cpu))
+@@ -367,7 +398,8 @@
+         if wall.get("reason") != "candidate_timeout" or output.get("reason") != "output_limit":
+             raise SystemExit("Wall/output watchdog probe failed: " + json.dumps([wall, output]))
+         print(json.dumps({"status": "passed", "seatbelt": probe, "cpu_limit": cpu,
+-                          "memory_watchdog": memory, "wall_watchdog": wall, "output_watchdog": output}, indent=2))
++                          "memory_watchdog": memory, "wall_watchdog": wall, "output_watchdog": output,
++                          "determinism_repeat": repeat, "protocol_id": PROTOCOL_ID}, indent=2))
+         return
+     if not args.datasets or not args.output:
+         parser.error("--datasets and --output are required")
+@@ -402,7 +434,9 @@
+     else:
+         parser.error("Use --samples or --canonical")
+     args.output.parent.mkdir(parents=True, exist_ok=True)
+-    metadata = {"evalplus_commit": protocol.EVALPLUS_COMMIT, "datasets": protocol.DATASETS,
++    metadata = {"protocol_id": PROTOCOL_ID, "worker_python_flags": ["-s", "-P", "-B"],
++                "seed_policy": "PYTHONHASHSEED=0; random.seed(0) and numpy.random.seed(0) before reference and candidate; independent user RNGs/entropy are not overridden",
++                "evalplus_commit": protocol.EVALPLUS_COMMIT, "datasets": protocol.DATASETS,
+                 "adapter_sha256": sha(Path(__file__).read_bytes()),
+                 "export_helper_sha256": sha((HERE / "flash1017_evalplus_export.py").read_bytes()),
+                 "samples_sha256": sha(args.samples.read_bytes()) if args.samples else None,

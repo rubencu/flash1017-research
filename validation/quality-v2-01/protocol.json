@@ -1,0 +1,96 @@
+{
+  "schema": "flash1017-quality-protocol/2",
+  "status": "frozen-before-candidate-generation",
+  "requests_path": "../flash1017-quality-01/requests-01.jsonl",
+  "requests_sha256": "beca0b0b51ee509ff5f53998f27c5eb0f8d12c9527982c10055628927e97850d",
+  "tasks": 618,
+  "suites": {
+    "humaneval_plus": 164,
+    "mbpp_plus": 378,
+    "gsm8k_hash_subset": 64,
+    "synthetic_long_context": 12
+  },
+  "sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "top_k": 0,
+    "seed": 431017,
+    "enable_thinking": false,
+    "max_tokens": "2048 coding/math,64 long controls",
+    "ordinary_eos": true
+  },
+  "baseline": {
+    "version": "0.7.1rc1",
+    "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+    "wheel_sha256": "b3e12950a607991a1feb833b1bdc0b92fe41aeb73656ca5373db03d0d87b71c7",
+    "native_mtp": true,
+    "adaptive_max_depth": 3,
+    "prefill_step": 2048,
+    "engram_prefetch_mib": 16
+  },
+  "candidate": {
+    "version": "0.7.1rc1+flash1017.2",
+    "profile": "flash1017-v2",
+    "commit": "9280d25a1322c39f2f6713dc22b099a6e9dd41d1",
+    "wheel_sha256": "0fbdb77ca86ce35b4dca0275b534c1fafde7d70f0f7f6a89d5f964821f7f7f06",
+    "draft_width": 3,
+    "prefill_step": 2048,
+    "engram_prefetch_mib": 64,
+    "expected_runtime": {
+      "prefill_step_size": 2048,
+      "max_num_seqs": 1,
+      "attention_output_quantization": false,
+      "flash1017_enabled": true,
+      "confidence_enabled": false,
+      "replay_installed": false,
+      "engram_prefetch_bytes": 67108864,
+      "mtp_depth": 3,
+      "mtp_depth_fixed": false
+    }
+  },
+  "model": {
+    "repo": "mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+    "revision": "78456115d301eecf9fadcdcc81c0cf6f8b2c8eab"
+  },
+  "source_inputs": [
+    {
+      "path": "evalplus/requests.jsonl",
+      "sha256": "45f5ab9e058993b8ca2876337745adc4cfedc1bfffbb7d060484422288ff3a06"
+    },
+    {
+      "path": "supplement/frozen-02/requests.jsonl",
+      "sha256": "8c5ff905ecc3639bec04ab658b4d60e067a769f945fc8a6949a712017847cf86"
+    }
+  ],
+  "harness_sha256": "1ad06c439ae008abb9d35ce81f2ed772fd329a1f862353855ccda56dc494b372",
+  "execution": "One fresh installed conservative-fork server. Reuse the hash-bound public-baseline output generated with identical frozen requests, frontend request/configuration functions, checkpoint, native assets and dependencies. Initial server/prefix state empty in each arm, same excluded one-token warmup and 618-task order. No parallel GPU workloads.",
+  "acceptance": {
+    "mode": "amended-stock-arithmetic-v1",
+    "amendment_reason": "The original absolute zero-truncation rule rejected the unchanged baseline itself. This amended conservation test retains all baseline failures and requires exact text/finish parity on all 618 paired outputs, zero answer regressions and no new candidate-only truncation. The original failed result is preserved.",
+    "original_protocol_sha256": "8a14157edc39daa822368187c5ea58b2f10d296c99ee170975a5ed30b1f20c39",
+    "minimum_complete_pairs": 618,
+    "allow_missing_or_errors": false,
+    "allow_truncation": true,
+    "allow_candidate_only_truncation": false,
+    "require_exact_text_and_finish_reason": true,
+    "maximum_baseline_pass_to_candidate_fail_tasks": 0,
+    "quality_gains_offset_regressions": false,
+    "claim_scope": "Exact observed output parity on 618 fixed greedy requests and the specified software/checkpoint/hardware; not universal mathematical equivalence."
+  },
+  "performance_scope": "Per-request wall and usage timings are retained; this is not the historical overall performance protocol. Do not transfer old speedup to wheel.",
+  "preparation_note": "The full v1 candidate failed quality validation. V2 retains exact weight reuse and storage optimizations while disabling reference rounding, confidence scheduling and replay, restoring native acceptance-driven MTP and 2K chunk shapes. The complete v1 source and observations remain available.",
+  "reused_baseline": {
+    "plan_sha256": "8a14157edc39daa822368187c5ea58b2f10d296c99ee170975a5ed30b1f20c39",
+    "receipt_sha256": "b85020ae0463947e58d9c429e045e1b87d6a40c718a82769793d22e48fe79749",
+    "responses_sha256": "a6d4c0cf9a34c305a780b30fd6d0b6a4120fdcfa411d342e31057acb3756ffeb"
+  },
+  "frontend_source_check": {
+    "original_harness_sha256": "4932bc49eb8e9e425ace4620e6b75e1e8a262519bf97f0abeaf085d56d1830ce",
+    "new_harness_sha256": "1ad06c439ae008abb9d35ce81f2ed772fd329a1f862353855ccda56dc494b372",
+    "ast_unchanged_functions": {
+      "request_for": true,
+      "configure": true
+    },
+    "changes": "Version lookup from frozen plan and additional read-only receipt/runtime verification. HTTP request construction and configuration functions have identical ASTs."
+  }
+}

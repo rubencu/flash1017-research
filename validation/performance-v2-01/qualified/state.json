@@ -1,0 +1,66 @@
+{
+  "status": "qualified",
+  "processes": [
+    {
+      "process_id": "block-0-baseline",
+      "status": "generated",
+      "pid": 22964,
+      "started_unix": 1792446235.034815,
+      "process_create_time": 1792446235.032332,
+      "exit_code": 0,
+      "exited_unix": 1792446790.7572951,
+      "measured_completed": 8
+    },
+    {
+      "process_id": "block-0-candidate",
+      "status": "generated",
+      "pid": 23216,
+      "started_unix": 1792446790.964797,
+      "process_create_time": 1792446790.962891,
+      "exit_code": 0,
+      "exited_unix": 1792447329.3735769,
+      "measured_completed": 8
+    },
+    {
+      "process_id": "block-1-candidate",
+      "status": "generated",
+      "pid": 23270,
+      "started_unix": 1792447329.575902,
+      "process_create_time": 1792447329.572749,
+      "exit_code": 0,
+      "exited_unix": 1792447829.656438,
+      "measured_completed": 8
+    },
+    {
+      "process_id": "block-1-baseline",
+      "status": "generated",
+      "pid": 23308,
+      "started_unix": 1792447829.857307,
+      "process_create_time": 1792447829.855486,
+      "exit_code": 0,
+      "exited_unix": 1792448382.202018,
+      "measured_completed": 8
+    }
+  ],
+  "original_models": [
+    "Qwen3.8-Flash-Next-oQ8e-mtp"
+  ],
+  "publication": false,
+  "cleanup_errors": [],
+  "supervisor_sha256": "179ba0c924c972ab18989659b2b77e6f82b64687b84eac4d27551450a41621ab",
+  "shutdown_policy": "Owned child only: SIGINT/90s, SIGTERM/30s, SIGKILL/30s; original server never stopped",
+  "reviewed_config_sha256": "eaacc5107a29c48b102dd235efd9ea77e262dcd9b491a2e3de2796ff06ebfb3c",
+  "quality_report_sha256": "abd8723d59e00be7cacad705409aa8d89aef2bf33f48b303e4af7583d1ed7298",
+  "plan_sha256": "df65cf6313ab49bbc3a4ac9477c7f2a8ab7cd98b3d868b25d9941db3e0021540",
+  "current_process": "block-1-baseline",
+  "restoration": [
+    {
+      "model": "Qwen3.8-Flash-Next-oQ8e-mtp",
+      "loaded": true,
+      "is_loading": false
+    }
+  ],
+  "restoration_complete": true,
+  "analysis_exit_code": 0,
+  "report_sha256": "bf7beda7eeae6c581ac429cfe6c49838c445ef8f3040473357575d1187f777e6"
+}

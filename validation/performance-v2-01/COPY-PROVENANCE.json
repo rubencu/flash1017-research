@@ -1,0 +1,270 @@
+{
+  "schema": "flash1017-evidence-copy-provenance/1",
+  "scope": "Exact unchanged source/result copies from the workspace. Wheel binaries, private settings, Python environments, model weights and caches excluded. Authored README/reproduction helper and MANIFEST are not source observations. Corpus originals and licenses remain in the research archive; redistribute with the full repository.",
+  "files": [
+    {
+      "source_workspace_path": "work/flash1017-performance-04/protocol.json",
+      "bundle_path": "qualified/protocol.json",
+      "bytes": 22092,
+      "sha256": "df65cf6313ab49bbc3a4ac9477c7f2a8ab7cd98b3d868b25d9941db3e0021540"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/REVIEWED-CONFIG.json",
+      "bundle_path": "qualified/REVIEWED-CONFIG.json",
+      "bytes": 14130,
+      "sha256": "eaacc5107a29c48b102dd235efd9ea77e262dcd9b491a2e3de2796ff06ebfb3c"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/state.json",
+      "bundle_path": "qualified/state.json",
+      "bytes": 2089,
+      "sha256": "984620beeffeb369110f4f146e3f64a089fae4108dd3bde4955f383d1b772e41"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/pair-summary-final-01.json",
+      "bundle_path": "qualified/pair-summary-final-01.json",
+      "bytes": 49402,
+      "sha256": "bf7beda7eeae6c581ac429cfe6c49838c445ef8f3040473357575d1187f777e6"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/analysis.log",
+      "bundle_path": "qualified/analysis.log",
+      "bytes": 224,
+      "sha256": "89d53f2978065e1f905015958ba8875d5ae9b83c288ee3fb8907d9ff93b6e608"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/run_when_qualified.py",
+      "bundle_path": "qualified/run_when_qualified.py",
+      "bytes": 19445,
+      "sha256": "179ba0c924c972ab18989659b2b77e6f82b64687b84eac4d27551450a41621ab"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/block-0-baseline/receipt.json",
+      "bundle_path": "qualified/block-0-baseline/receipt.json",
+      "bytes": 75891,
+      "sha256": "38ca3fb4e90811a1fb994132c53f738e513b6d7b8b304aaa54b1116e39f89361"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/block-0-baseline/responses.jsonl",
+      "bundle_path": "qualified/block-0-baseline/responses.jsonl",
+      "bytes": 242779,
+      "sha256": "cafa16444edf5a2a2a85ae7d341500246b2f52cf7c39a4128e44858f955a32ab"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/block-0-candidate/receipt.json",
+      "bundle_path": "qualified/block-0-candidate/receipt.json",
+      "bytes": 81593,
+      "sha256": "167537f582c622b56b79af101f35a42f6cf6fad93816166be48c1553ebad2991"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/block-0-candidate/responses.jsonl",
+      "bundle_path": "qualified/block-0-candidate/responses.jsonl",
+      "bytes": 263132,
+      "sha256": "ec6e9fff2173ebf4f3f52b5086ba9df6c94c25eaefa38c21173ea67fe804777d"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/block-1-candidate/receipt.json",
+      "bundle_path": "qualified/block-1-candidate/receipt.json",
+      "bytes": 81574,
+      "sha256": "3c1499aaafdb5d07b3e1abb1665e39d26b1e7ba3881b5657c6cbbce101e60bc0"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/block-1-candidate/responses.jsonl",
+      "bundle_path": "qualified/block-1-candidate/responses.jsonl",
+      "bytes": 262398,
+      "sha256": "18b534469bc0f99f112cec3bfff282d9296fbc253995d7d3dfbb8c64e145fb6d"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/block-1-baseline/receipt.json",
+      "bundle_path": "qualified/block-1-baseline/receipt.json",
+      "bytes": 75869,
+      "sha256": "b9f0678b29d6f37a7acac3ed0fb7f3a3979872dc783573ab1bfea5f6fb839b54"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-04/block-1-baseline/responses.jsonl",
+      "bundle_path": "qualified/block-1-baseline/responses.jsonl",
+      "bytes": 243135,
+      "sha256": "97780b44ae0df80228560f38248c7ce317d7b404eaa32ef113b253f14a68801b"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/protocol.json",
+      "bundle_path": "interrupted/protocol.json",
+      "bytes": 22092,
+      "sha256": "df65cf6313ab49bbc3a4ac9477c7f2a8ab7cd98b3d868b25d9941db3e0021540"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/REVIEWED-CONFIG.json",
+      "bundle_path": "interrupted/REVIEWED-CONFIG.json",
+      "bytes": 13577,
+      "sha256": "03629ca3b3bc1180554a5e436a53516b7b076cedf456cb4ff7ae406b8ffd8ed7"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/state.json",
+      "bundle_path": "interrupted/state.json",
+      "bytes": 2035,
+      "sha256": "da0418aa3f9b0567fca62eab7d46d37ccdf2790b4943777c4c0eaca8e8bbd4b6"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/pair-summary-final-01.json",
+      "bundle_path": "interrupted/pair-summary-final-01.json",
+      "bytes": 34793,
+      "sha256": "78c11ecc84ab58fd52bbd1c20222d20c3effb233a1b5f234587dd8e1476b7de9"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/analysis.log",
+      "bundle_path": "interrupted/analysis.log",
+      "bytes": 226,
+      "sha256": "ffb1627bd069c00935ab5e15e6a2438c4543ed7f3a33fbf77dae01c185a32fd7"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/run_when_qualified.py",
+      "bundle_path": "interrupted/run_when_qualified.py",
+      "bytes": 19445,
+      "sha256": "179ba0c924c972ab18989659b2b77e6f82b64687b84eac4d27551450a41621ab"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/block-0-baseline/receipt.json",
+      "bundle_path": "interrupted/block-0-baseline/receipt.json",
+      "bytes": 75888,
+      "sha256": "6280770f91f5ecccaaf29e4f796d68a6fc96972e79624698f47e23c1a34b7930"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/block-0-baseline/responses.jsonl",
+      "bundle_path": "interrupted/block-0-baseline/responses.jsonl",
+      "bytes": 243057,
+      "sha256": "8e12457864f8fa29d6139b25b40e396fc76ec92aa6bf063d1b381dd762c9ce49"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/block-0-candidate/receipt.json",
+      "bundle_path": "interrupted/block-0-candidate/receipt.json",
+      "bytes": 81594,
+      "sha256": "7a07d2fcef623a99feacbf7a3b57591b96506b60792bfe143a9296a35fd842cc"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/block-0-candidate/responses.jsonl",
+      "bundle_path": "interrupted/block-0-candidate/responses.jsonl",
+      "bytes": 262479,
+      "sha256": "61686cb37a17dc673314ab4a2467dade73eb6ead5921c512251189592aaa3b64"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-03/test_supervisor.py",
+      "bundle_path": "interrupted/test_supervisor.py",
+      "bytes": 4703,
+      "sha256": "dd44c4a504ce50460ee02f52daaa5ceaf78e29a8c11b574fda343fc17ffbe811"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/requests-draft-01.jsonl",
+      "bundle_path": "preparation/requests-draft-01.jsonl",
+      "bytes": 920015,
+      "sha256": "5f8655c5861ace51e1aa6ec3f382983de45bc704d844c42d78d961fd2abcff0c"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/payloads-draft-01.jsonl",
+      "bundle_path": "preparation/payloads-draft-01.jsonl",
+      "bytes": 921765,
+      "sha256": "c42f191bed45bdc088ceec486abbe3f48d7a71a94697e3510909df1db850cf53"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/rendered-inputs-draft-01.jsonl",
+      "bundle_path": "preparation/rendered-inputs-draft-01.jsonl",
+      "bytes": 1003285,
+      "sha256": "2c2aad793fb89d086df9096304423d048fadb4f8ef20887a5ae7373d14900030"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/fixture-provenance-draft-01.json",
+      "bundle_path": "preparation/fixture-provenance-draft-01.json",
+      "bytes": 13770,
+      "sha256": "ab6c972bb126d8af53f1c0fc7f1b5e536a897ce17114f40325dcc7e5d024a2fa"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/shared-environment-reference-01.json",
+      "bundle_path": "preparation/shared-environment-reference-01.json",
+      "bytes": 7029,
+      "sha256": "3ad40c07310b5e4a6a554ea14d7cbf28ea92aed98ada45fb14ef7e0991ec74b3"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/plan-draft-01.json",
+      "bundle_path": "preparation/plan-draft-01.json",
+      "bytes": 19684,
+      "sha256": "d3cfa5bd6cd49a575423af0287d8896751dff2dcbedbb742c7ff2705ae042019"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/prepare_draft.py",
+      "bundle_path": "preparation/prepare_draft.py",
+      "bytes": 23005,
+      "sha256": "2a6273d7cbcae1f5ab8c2a113c05605a5d89c50d92c2ab1066d788f6c7ade1dd"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/freeze_reviewed_config.py",
+      "bundle_path": "preparation/freeze_reviewed_config.py",
+      "bytes": 5136,
+      "sha256": "600ce1019938987824283eef7edb8f378a8f3341d809e0ba54d01ff8ac7d0d24"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/run_when_qualified.py",
+      "bundle_path": "preparation/run_when_qualified.py",
+      "bytes": 19439,
+      "sha256": "4acdb2d8fc9fcfc5337917e182271a7a26a38c0e5a072e1ec5d7485efaaac15d"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/frozen-source/run_installed_performance.py",
+      "bundle_path": "frozen-source/run_installed_performance.py",
+      "bytes": 40658,
+      "sha256": "35689e6d76464ac132fe945068fe51a91bcb68b8b603da5dcf5b7f08131fb20d"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/frozen-source/run_installed_quality.py",
+      "bundle_path": "frozen-source/run_installed_quality.py",
+      "bytes": 16974,
+      "sha256": "1ad06c439ae008abb9d35ce81f2ed772fd329a1f862353855ccda56dc494b372"
+    },
+    {
+      "source_workspace_path": "work/flash1017-performance-02/frozen-source/summarize_installed_performance.py",
+      "bundle_path": "frozen-source/summarize_installed_performance.py",
+      "bytes": 41137,
+      "sha256": "febc26646dcf2198343396a3a0c69ed8e2a502a89939338f358eb52064404ed6"
+    },
+    {
+      "source_workspace_path": "repositories/flash1017-research/tools/test_run_installed_performance.py",
+      "bundle_path": "frozen-source/test_run_installed_performance.py",
+      "bytes": 26417,
+      "sha256": "b04420e2b6867791f0519a724d0d6f9e81fb04bf862957d244529facec7704bb"
+    },
+    {
+      "source_workspace_path": "repositories/flash1017-research/tools/test_summarize_installed_performance.py",
+      "bundle_path": "frozen-source/test_summarize_installed_performance.py",
+      "bytes": 22709,
+      "sha256": "4d37df01e6cbb7919167a76ecc74a43f1366a08db5734115cf3fd6b5ef252bc6"
+    },
+    {
+      "source_workspace_path": "work/flash1017-quality-02/pair-summary-final-02.json",
+      "bundle_path": "quality-prerequisite/pair-summary-final-02.json",
+      "bytes": 161791,
+      "sha256": "abd8723d59e00be7cacad705409aa8d89aef2bf33f48b303e4af7583d1ed7298"
+    },
+    {
+      "source_workspace_path": "work/flash1017-quality-02/protocol.json",
+      "bundle_path": "quality-prerequisite/protocol.json",
+      "bytes": 4714,
+      "sha256": "a9aa441b4b0223370a7a5f1035bea71a3624c7015e294f20f119563c91cb489a"
+    },
+    {
+      "source_workspace_path": "work/flash1017-quality-02/analysis-correction-02.json",
+      "bundle_path": "quality-prerequisite/analysis-correction-02.json",
+      "bytes": 2345,
+      "sha256": "5e9bc4320bfd5db7b45de641673092f7348f5d4a52db6180b7059de9e9719736"
+    },
+    {
+      "source_workspace_path": "work/flash1017-quality-02/finalization-state-02.json",
+      "bundle_path": "quality-prerequisite/finalization-state-02.json",
+      "bytes": 1058,
+      "sha256": "0267117cfcdba6cdeafa5634e31da814969bded40ee03adb875767a423f2a8fa"
+    },
+    {
+      "source_workspace_path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/NOTICE",
+      "bundle_path": "CORPUS-NOTICE.txt",
+      "bytes": 1658,
+      "sha256": "a4d00d45e960a78323c4906d195861a188af1a883360c8a1a798e53cccbf25ad"
+    }
+  ]
+}

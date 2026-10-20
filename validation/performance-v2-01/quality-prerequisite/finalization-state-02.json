@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "automatic_publication": false,
+  "analysis_sources": {
+    "work/flash1017-quality-02/analysis-source-02/test_summarize_installed_quality.py": "c3fd3df9d6b56b1a4bf97d61dfd3a9934d2a80267e09b9537057ed339186e73f",
+    "work/flash1017-quality-02/analysis-source-02/tests.log": "0cf69c324eab73299c06ea6abd739eef43072ea3e56ef4dfe9e02fd7760866ed",
+    "work/flash1017-quality-02/analysis-source-02/summarize_installed_quality.py": "87825e2b4aff2ce85af88e269136505a67a949181bdabf4a0a6adb34ad6492a5"
+  },
+  "report_sha256": "abd8723d59e00be7cacad705409aa8d89aef2bf33f48b303e4af7583d1ed7298",
+  "integrity": "verified",
+  "graded_pairs": 618,
+  "exact_pairs": 618,
+  "regressions": [],
+  "original_model_restoration": [
+    {
+      "model": "Qwen3.8-Flash-Next-oQ8e-mtp",
+      "loaded": true,
+      "is_loading": false
+    }
+  ],
+  "analysis_correction_sha256": "5e9bc4320bfd5db7b45de641673092f7348f5d4a52db6180b7059de9e9719736",
+  "previous_failed_finalization_sha256": "ad60e0c94c0dc86a302b8cbd4c729b5bc6868fef652216c90fc2edef001c30a0"
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "flash1017-quality-build-identity/1",
+  "status": "local-quality-and-performance-qualified",
+  "runtime_repository": "rubencu/omlx",
+  "runtime_branch": "flash1017-preview",
+  "runtime_tag": null,
+  "baseline": {
+    "version": "0.7.1rc1",
+    "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+    "wheel_sha256": "b3e12950a607991a1feb833b1bdc0b92fe41aeb73656ca5373db03d0d87b71c7",
+    "native_mtp": true,
+    "adaptive_max_depth": 3,
+    "prefill_step": 2048,
+    "engram_prefetch_mib": 16
+  },
+  "candidate": {
+    "version": "0.7.1rc1+flash1017.2",
+    "profile": "flash1017-v2",
+    "commit": "9280d25a1322c39f2f6713dc22b099a6e9dd41d1",
+    "wheel_sha256": "0fbdb77ca86ce35b4dca0275b534c1fafde7d70f0f7f6a89d5f964821f7f7f06",
+    "draft_width": 3,
+    "prefill_step": 2048,
+    "engram_prefetch_mib": 64,
+    "expected_runtime": {
+      "prefill_step_size": 2048,
+      "max_num_seqs": 1,
+      "attention_output_quantization": false,
+      "flash1017_enabled": true,
+      "confidence_enabled": false,
+      "replay_installed": false,
+      "engram_prefetch_bytes": 67108864,
+      "mtp_depth": 3,
+      "mtp_depth_fixed": false
+    }
+  },
+  "model": {
+    "repo": "mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+    "revision": "78456115d301eecf9fadcdcc81c0cf6f8b2c8eab"
+  },
+  "quality_protocol_sha256": "a9aa441b4b0223370a7a5f1035bea71a3624c7015e294f20f119563c91cb489a",
+  "quality_report_sha256": "abd8723d59e00be7cacad705409aa8d89aef2bf33f48b303e4af7583d1ed7298",
+  "observed_exact_response_pairs": 618,
+  "quality_scope": "Exact observed output parity on 618 fixed greedy requests and the specified software/checkpoint/hardware; not universal mathematical equivalence.",
+  "installed_wheel_performance_claim": true,
+  "historical_v1_identity": "../../RUNTIME-LINK.json",
+  "performance_evidence": "../performance-v2-01/README.md",
+  "performance_report_sha256": "bf7beda7eeae6c581ac429cfe6c49838c445ef8f3040473357575d1187f777e6",
+  "performance_scope": "Eight fixed HTTP workloads, two process blocks, one M5 Ultra Mac Studio; 7.9% higher generation throughput and 4.5% lower first-visible-text latency, equal-case geometric means. No other-hardware or statistical-significance claim."
+}

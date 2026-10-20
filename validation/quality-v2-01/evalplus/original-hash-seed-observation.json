@@ -1,0 +1,16 @@
+{
+  "kind": "trusted interpreter startup observation, no model or reference code",
+  "runs": [
+    {
+      "hash": -7823151801956603969,
+      "ignore_environment": 1,
+      "hash_randomization": 1
+    },
+    {
+      "hash": 1761178209293985135,
+      "ignore_environment": 1,
+      "hash_randomization": 1
+    }
+  ],
+  "conclusion": "-I ignores PYTHONHASHSEED; no cross-process deterministic hashing guarantee"
+}

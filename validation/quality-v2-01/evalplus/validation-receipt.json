@@ -1,0 +1,25 @@
+{
+  "protocol_id": "flash1017-evalplus-macos-seeded-02",
+  "status": "passed_with_two_documented_pinned_upstream_exceptions",
+  "canonical_tasks": 542,
+  "canonical_plus_pass": 540,
+  "canonical_exceptions": [
+    [
+      "HumanEval/32",
+      "fail",
+      "fail"
+    ],
+    [
+      "Mbpp/630",
+      "fail",
+      "fail"
+    ]
+  ],
+  "adapter_sha256": "24dc62dc3cdd23052de53d049057a5a6747b02115ea8a57dce59353704898098",
+  "artifacts": {
+    "isolation-probe.json": "927ff6b4bf6824e772017c573bbdb458abade7c555ecc78b3914db3f1be01e46",
+    "negative-controls.json": "d802d34b892be3962ca3eacebd1c7572ea177e242402b65cf34ead243006a7ec",
+    "canonical-grades.jsonl": "208143108242605909bd160cc80575c812c5489c7e3792bdf7195f2c732ac782"
+  },
+  "original_artifacts_unchanged": true
+}

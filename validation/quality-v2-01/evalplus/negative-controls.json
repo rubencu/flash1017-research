@@ -1,0 +1,233 @@
+{
+  "status": "passed",
+  "controls": [
+    {
+      "task_id": "HumanEval/0",
+      "control": "wrong_answer",
+      "phase": "base",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 7,
+        "tests_completed": 1,
+        "solution_sha256": "c5ab33e1e5f819de542c97ae6ca1b76aa5de7f7595cb96ffa6d3e888281479c8",
+        "raw_sha256": "aeff6c2942f263a61952869a5fee003cf8b18d6aeaf8b924df07dd94e9957ba3",
+        "reference_time_sum": 3.5762786865234375e-06,
+        "cpu_seconds": 0.36879999999999996,
+        "maxrss": 143769600,
+        "sanitized_solution": "def has_close_elements(*args):\n    return None",
+        "returncode": 0,
+        "sampled_peak_rss": 143409152
+      }
+    },
+    {
+      "task_id": "HumanEval/0",
+      "control": "wrong_answer",
+      "phase": "plus",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 999,
+        "tests_completed": 1,
+        "solution_sha256": "c5ab33e1e5f819de542c97ae6ca1b76aa5de7f7595cb96ffa6d3e888281479c8",
+        "raw_sha256": "aeff6c2942f263a61952869a5fee003cf8b18d6aeaf8b924df07dd94e9957ba3",
+        "reference_time_sum": 0.0002315044403076172,
+        "cpu_seconds": 0.37420299999999995,
+        "maxrss": 143556608,
+        "sanitized_solution": "def has_close_elements(*args):\n    return None",
+        "returncode": 0,
+        "sampled_peak_rss": 143196160
+      }
+    },
+    {
+      "task_id": "HumanEval/0",
+      "control": "malformed",
+      "phase": "base",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 7,
+        "tests_completed": 0,
+        "solution_sha256": "b839d1b2b703576919548db08bd100e7c9be17820b76bd5bbe386a36507ec127",
+        "raw_sha256": "be7fc0a69d424b317cb5e8d1d3a2e170a5d658394949c0eb32518eed33456ee5",
+        "reference_time_sum": 5.7220458984375e-06,
+        "cpu_seconds": 0.376959,
+        "maxrss": 143605760,
+        "sanitized_solution": "```python",
+        "returncode": 0,
+        "sampled_peak_rss": 143130624
+      }
+    },
+    {
+      "task_id": "HumanEval/0",
+      "control": "malformed",
+      "phase": "plus",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 999,
+        "tests_completed": 0,
+        "solution_sha256": "b839d1b2b703576919548db08bd100e7c9be17820b76bd5bbe386a36507ec127",
+        "raw_sha256": "be7fc0a69d424b317cb5e8d1d3a2e170a5d658394949c0eb32518eed33456ee5",
+        "reference_time_sum": 0.00025773048400878906,
+        "cpu_seconds": 0.41242599999999996,
+        "maxrss": 143523840,
+        "sanitized_solution": "```python",
+        "returncode": 0,
+        "sampled_peak_rss": 143130624
+      }
+    },
+    {
+      "task_id": "HumanEval/0",
+      "control": "infinite_loop",
+      "phase": "base",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 7,
+        "tests_completed": 1,
+        "solution_sha256": "e1b7c3ea0ca3e6f2c71b4fef0c17231d2505645e63e653f09e3b14c43ff994bd",
+        "raw_sha256": "0e69bd9aa09e6038288406e81438bb649ec95aaff8bddee0e918e726b3d16e0a",
+        "reference_time_sum": 8.58306884765625e-06,
+        "cpu_seconds": 1.413767,
+        "maxrss": 143835136,
+        "sanitized_solution": "def has_close_elements(*args):\n    while True:\n        pass",
+        "returncode": 0,
+        "sampled_peak_rss": 143278080
+      }
+    },
+    {
+      "task_id": "HumanEval/0",
+      "control": "infinite_loop",
+      "phase": "plus",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 999,
+        "tests_completed": 1,
+        "solution_sha256": "e1b7c3ea0ca3e6f2c71b4fef0c17231d2505645e63e653f09e3b14c43ff994bd",
+        "raw_sha256": "0e69bd9aa09e6038288406e81438bb649ec95aaff8bddee0e918e726b3d16e0a",
+        "reference_time_sum": 0.00037407875061035156,
+        "cpu_seconds": 1.4752239999999999,
+        "maxrss": 137199616,
+        "sanitized_solution": "def has_close_elements(*args):\n    while True:\n        pass",
+        "returncode": 0,
+        "sampled_peak_rss": 137527296
+      }
+    },
+    {
+      "task_id": "Mbpp/2",
+      "control": "wrong_answer",
+      "phase": "base",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 3,
+        "tests_completed": 1,
+        "solution_sha256": "d2460616c6c4b96a50d12a5b34a6616961d26d0193a66a21ccf1459701de1e2d",
+        "raw_sha256": "9e8f1b6d9fce28871ea972702223b4bdf646cdd8636373bd2fc6e733e583ce3a",
+        "reference_time_sum": 4.0531158447265625e-06,
+        "cpu_seconds": 0.44009699999999996,
+        "maxrss": 143212544,
+        "sanitized_solution": "def similar_elements(*args):\n    return None",
+        "returncode": 0,
+        "sampled_peak_rss": 142770176
+      }
+    },
+    {
+      "task_id": "Mbpp/2",
+      "control": "wrong_answer",
+      "phase": "plus",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 108,
+        "tests_completed": 1,
+        "solution_sha256": "d2460616c6c4b96a50d12a5b34a6616961d26d0193a66a21ccf1459701de1e2d",
+        "raw_sha256": "9e8f1b6d9fce28871ea972702223b4bdf646cdd8636373bd2fc6e733e583ce3a",
+        "reference_time_sum": 5.459785461425781e-05,
+        "cpu_seconds": 0.447714,
+        "maxrss": 143572992,
+        "sanitized_solution": "def similar_elements(*args):\n    return None",
+        "returncode": 0,
+        "sampled_peak_rss": 143163392
+      }
+    },
+    {
+      "task_id": "Mbpp/2",
+      "control": "malformed",
+      "phase": "base",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 3,
+        "tests_completed": 0,
+        "solution_sha256": "b839d1b2b703576919548db08bd100e7c9be17820b76bd5bbe386a36507ec127",
+        "raw_sha256": "be7fc0a69d424b317cb5e8d1d3a2e170a5d658394949c0eb32518eed33456ee5",
+        "reference_time_sum": 3.0994415283203125e-06,
+        "cpu_seconds": 0.4563539999999999,
+        "maxrss": 143409152,
+        "sanitized_solution": "```python",
+        "returncode": 0,
+        "sampled_peak_rss": 142983168
+      }
+    },
+    {
+      "task_id": "Mbpp/2",
+      "control": "malformed",
+      "phase": "plus",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 108,
+        "tests_completed": 0,
+        "solution_sha256": "b839d1b2b703576919548db08bd100e7c9be17820b76bd5bbe386a36507ec127",
+        "raw_sha256": "be7fc0a69d424b317cb5e8d1d3a2e170a5d658394949c0eb32518eed33456ee5",
+        "reference_time_sum": 5.125999450683594e-05,
+        "cpu_seconds": 0.45475999999999994,
+        "maxrss": 143179776,
+        "sanitized_solution": "```python",
+        "returncode": 0,
+        "sampled_peak_rss": 142721024
+      }
+    },
+    {
+      "task_id": "Mbpp/2",
+      "control": "infinite_loop",
+      "phase": "base",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 3,
+        "tests_completed": 1,
+        "solution_sha256": "3635051e81d0f64fcab3da5b9625f25694c18b669ea2a1e9e8123f8401105931",
+        "raw_sha256": "ba4a0aa1cfa899335260ffc861aff8d06e987b7247083f7abf947d2a25608ae8",
+        "reference_time_sum": 3.0994415283203125e-06,
+        "cpu_seconds": 1.404899,
+        "maxrss": 142131200,
+        "sanitized_solution": "def similar_elements(*args):\n    while True:\n        pass",
+        "returncode": 0,
+        "sampled_peak_rss": 141590528
+      }
+    },
+    {
+      "task_id": "Mbpp/2",
+      "control": "infinite_loop",
+      "phase": "plus",
+      "outcome": {
+        "event": "result",
+        "status": "fail",
+        "tests": 108,
+        "tests_completed": 1,
+        "solution_sha256": "3635051e81d0f64fcab3da5b9625f25694c18b669ea2a1e9e8123f8401105931",
+        "raw_sha256": "ba4a0aa1cfa899335260ffc861aff8d06e987b7247083f7abf947d2a25608ae8",
+        "reference_time_sum": 5.650520324707031e-05,
+        "cpu_seconds": 1.4164450000000002,
+        "maxrss": 143130624,
+        "sanitized_solution": "def similar_elements(*args):\n    while True:\n        pass",
+        "returncode": 0,
+        "sampled_peak_rss": 142622720
+      }
+    }
+  ]
+}

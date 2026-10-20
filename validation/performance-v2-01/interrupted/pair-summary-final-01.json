@@ -1,0 +1,1078 @@
+{
+  "schema": "flash1017-installed-performance-summary/1",
+  "status": "failed",
+  "integrity": {
+    "status": "failed",
+    "checks": 8243,
+    "errors": [
+      {
+        "code": "unreadable_evidence",
+        "detail": "/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-candidate/receipt.json: [Errno 2] No such file or directory: '/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-candidate/receipt.json'"
+      },
+      {
+        "code": "unreadable_evidence",
+        "detail": "/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-candidate/responses.jsonl: [Errno 2] No such file or directory: '/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-candidate/responses.jsonl'"
+      },
+      {
+        "code": "missing_file",
+        "detail": "/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-candidate/receipt.json: [Errno 2] No such file or directory: '/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-candidate/receipt.json'"
+      },
+      {
+        "code": "missing_file",
+        "detail": "/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-candidate/responses.jsonl: [Errno 2] No such file or directory: '/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-candidate/responses.jsonl'"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:schema"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:arm"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:block"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:process_id"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:status"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:plan_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:artifact_hashes"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:total_measured_tasks"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:measured_completed"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:attempts_completed"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:errors"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:runtime_version"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:runtime_source"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:wheel_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:quality_report_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:harness_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:quality_harness_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:controllers_closed"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:client_worker_stopped"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:memory_limit_bytes"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:shared_environment"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:shared_environment_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:process_wall_timeout_seconds"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:http_io_inactivity_timeout_seconds"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-candidate:timeout_scope"
+      },
+      {
+        "code": "receipt_identity",
+        "detail": "block-1-candidate:python_sources"
+      },
+      {
+        "code": "receipt_identity",
+        "detail": "block-1-candidate:native_assets"
+      },
+      {
+        "code": "receipt_identity",
+        "detail": "block-1-candidate:python"
+      },
+      {
+        "code": "receipt_identity",
+        "detail": "block-1-candidate:model_metadata_sha256"
+      },
+      {
+        "code": "installed_source_identity",
+        "detail": "block-1-candidate"
+      },
+      {
+        "code": "packages_missing",
+        "detail": "block-1-candidate"
+      },
+      {
+        "code": "dependency_identity",
+        "detail": "block-1-candidate"
+      },
+      {
+        "code": "hardware_identity",
+        "detail": "block-1-candidate:device_name"
+      },
+      {
+        "code": "hardware_identity",
+        "detail": "block-1-candidate:memory_size"
+      },
+      {
+        "code": "hardware_identity",
+        "detail": "block-1-candidate:architecture"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-candidate:cache_enabled"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-candidate:hot_cache_max_size"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-candidate:hot_cache_only"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-candidate:max_concurrent_requests"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-candidate:max_context_window"
+      },
+      {
+        "code": "settings_identity_missing",
+        "detail": "block-1-candidate:settings_sha256"
+      },
+      {
+        "code": "settings_identity_missing",
+        "detail": "block-1-candidate:poststart_settings_sha256"
+      },
+      {
+        "code": "process_timestamps",
+        "detail": "block-1-candidate"
+      },
+      {
+        "code": "response_order_or_missing",
+        "detail": "block-1-candidate"
+      },
+      {
+        "code": "truncation_counter",
+        "detail": "block-1-candidate"
+      },
+      {
+        "code": "runtime_snapshot_missing",
+        "detail": "block-1-candidate:initial"
+      },
+      {
+        "code": "runtime_snapshot_missing",
+        "detail": "block-1-candidate:latest"
+      },
+      {
+        "code": "warmup_receipt",
+        "detail": "block-1-candidate"
+      },
+      {
+        "code": "unreadable_evidence",
+        "detail": "/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-baseline/receipt.json: [Errno 2] No such file or directory: '/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-baseline/receipt.json'"
+      },
+      {
+        "code": "unreadable_evidence",
+        "detail": "/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-baseline/responses.jsonl: [Errno 2] No such file or directory: '/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-baseline/responses.jsonl'"
+      },
+      {
+        "code": "missing_file",
+        "detail": "/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-baseline/receipt.json: [Errno 2] No such file or directory: '/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-baseline/receipt.json'"
+      },
+      {
+        "code": "missing_file",
+        "detail": "/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-baseline/responses.jsonl: [Errno 2] No such file or directory: '/Users/rubencu/Documents/Codex/2026-10-17/want-to-make-deepseek-v4-1-2/work/flash1017-performance-03/block-1-baseline/responses.jsonl'"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:schema"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:arm"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:block"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:process_id"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:status"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:plan_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:artifact_hashes"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:total_measured_tasks"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:measured_completed"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:attempts_completed"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:errors"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:runtime_version"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:runtime_source"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:wheel_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:quality_report_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:harness_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:quality_harness_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:controllers_closed"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:client_worker_stopped"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:memory_limit_bytes"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:shared_environment"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:shared_environment_sha256"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:process_wall_timeout_seconds"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:http_io_inactivity_timeout_seconds"
+      },
+      {
+        "code": "receipt_field",
+        "detail": "block-1-baseline:timeout_scope"
+      },
+      {
+        "code": "receipt_identity",
+        "detail": "block-1-baseline:python_sources"
+      },
+      {
+        "code": "receipt_identity",
+        "detail": "block-1-baseline:native_assets"
+      },
+      {
+        "code": "receipt_identity",
+        "detail": "block-1-baseline:python"
+      },
+      {
+        "code": "receipt_identity",
+        "detail": "block-1-baseline:model_metadata_sha256"
+      },
+      {
+        "code": "installed_source_identity",
+        "detail": "block-1-baseline"
+      },
+      {
+        "code": "packages_missing",
+        "detail": "block-1-baseline"
+      },
+      {
+        "code": "dependency_identity",
+        "detail": "block-1-baseline"
+      },
+      {
+        "code": "hardware_identity",
+        "detail": "block-1-baseline:device_name"
+      },
+      {
+        "code": "hardware_identity",
+        "detail": "block-1-baseline:memory_size"
+      },
+      {
+        "code": "hardware_identity",
+        "detail": "block-1-baseline:architecture"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-baseline:cache_enabled"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-baseline:hot_cache_max_size"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-baseline:hot_cache_only"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-baseline:max_concurrent_requests"
+      },
+      {
+        "code": "effective_setting",
+        "detail": "block-1-baseline:max_context_window"
+      },
+      {
+        "code": "settings_identity_missing",
+        "detail": "block-1-baseline:settings_sha256"
+      },
+      {
+        "code": "settings_identity_missing",
+        "detail": "block-1-baseline:poststart_settings_sha256"
+      },
+      {
+        "code": "process_timestamps",
+        "detail": "block-1-baseline"
+      },
+      {
+        "code": "response_order_or_missing",
+        "detail": "block-1-baseline"
+      },
+      {
+        "code": "truncation_counter",
+        "detail": "block-1-baseline"
+      },
+      {
+        "code": "runtime_snapshot_missing",
+        "detail": "block-1-baseline:initial"
+      },
+      {
+        "code": "runtime_snapshot_missing",
+        "detail": "block-1-baseline:latest"
+      },
+      {
+        "code": "warmup_receipt",
+        "detail": "block-1-baseline"
+      },
+      {
+        "code": "missing_pair",
+        "detail": "http-held-code-1k:1"
+      },
+      {
+        "code": "missing_pair",
+        "detail": "http-performance-cpython-16384:1"
+      },
+      {
+        "code": "missing_pair",
+        "detail": "http-performance-pride-prejudice-65536:1"
+      },
+      {
+        "code": "missing_pair",
+        "detail": "http-held-prose-1k:1"
+      },
+      {
+        "code": "missing_pair",
+        "detail": "http-performance-curl-16384:1"
+      },
+      {
+        "code": "missing_pair",
+        "detail": "http-performance-cpython-65536:1"
+      },
+      {
+        "code": "missing_pair",
+        "detail": "http-performance-moby-dick-16384:1"
+      },
+      {
+        "code": "missing_pair",
+        "detail": "http-performance-pride-prejudice-16384:1"
+      },
+      {
+        "code": "complete_paired_comparison",
+        "detail": "all 16 measured pairs required"
+      }
+    ]
+  },
+  "plan_sha256": "df65cf6313ab49bbc3a4ac9477c7f2a8ab7cd98b3d868b25d9941db3e0021540",
+  "analysis_harness_sha256": "febc26646dcf2198343396a3a0c69ed8e2a502a89939338f358eb52064404ed6",
+  "run_identities": {
+    "block-0-baseline": {
+      "receipt_sha256": "6280770f91f5ecccaaf29e4f796d68a6fc96972e79624698f47e23c1a34b7930",
+      "responses_sha256": "8e12457864f8fa29d6139b25b40e396fc76ec92aa6bf063d1b381dd762c9ce49"
+    },
+    "block-0-candidate": {
+      "receipt_sha256": "7a07d2fcef623a99feacbf7a3b57591b96506b60792bfe143a9296a35fd842cc",
+      "responses_sha256": "61686cb37a17dc673314ab4a2467dade73eb6ead5921c512251189592aaa3b64"
+    },
+    "block-1-candidate": {
+      "receipt_sha256": null,
+      "responses_sha256": null
+    },
+    "block-1-baseline": {
+      "receipt_sha256": null,
+      "responses_sha256": null
+    }
+  },
+  "expected": {
+    "processes": 4,
+    "measured_requests": 32,
+    "excluded_warmups": 4,
+    "paired_observations": 16
+  },
+  "observed": {
+    "processes": 4,
+    "measured_requests": 16,
+    "valid_pairs": 8,
+    "excluded_warmups": 2
+  },
+  "processes": [
+    {
+      "process_id": "block-0-baseline",
+      "arm": "baseline",
+      "block": 0,
+      "status": "generated",
+      "rows": 9,
+      "measured_rows": 8,
+      "excluded_warmups": 1,
+      "finish_reasons": {
+        "length": 6,
+        "stop": 3
+      },
+      "errors": [],
+      "observed_cumulative_mlx_peak_bytes": 222307421208
+    },
+    {
+      "process_id": "block-0-candidate",
+      "arm": "candidate",
+      "block": 0,
+      "status": "generated",
+      "rows": 9,
+      "measured_rows": 8,
+      "excluded_warmups": 1,
+      "finish_reasons": {
+        "length": 6,
+        "stop": 3
+      },
+      "errors": [],
+      "observed_cumulative_mlx_peak_bytes": 222370548760
+    },
+    {
+      "process_id": "block-1-candidate",
+      "arm": "candidate",
+      "block": 1,
+      "status": null,
+      "rows": 0,
+      "measured_rows": 0,
+      "excluded_warmups": 0,
+      "finish_reasons": {},
+      "errors": [],
+      "observed_cumulative_mlx_peak_bytes": null
+    },
+    {
+      "process_id": "block-1-baseline",
+      "arm": "baseline",
+      "block": 1,
+      "status": null,
+      "rows": 0,
+      "measured_rows": 0,
+      "excluded_warmups": 0,
+      "finish_reasons": {},
+      "errors": [],
+      "observed_cumulative_mlx_peak_bytes": null
+    }
+  ],
+  "pairs": [
+    {
+      "task_id": "http-held-code-1k",
+      "block": 0,
+      "valid": true,
+      "ratios": {
+        "client_ttft_seconds": 1.0384504111670394,
+        "prompt_tokens_per_second": 1.0385388175207084,
+        "generation_tokens_per_second": 1.0829596412556053
+      },
+      "present": {
+        "baseline": true,
+        "candidate": true
+      },
+      "outputs": {
+        "baseline": {
+          "text_sha256": "a3ad53d11e2ffe3fba64c18e61169ce0c0f62140ce29e6c8191532fee5d44dea",
+          "finish_reason": "length",
+          "prompt_tokens": 1024,
+          "completion_tokens": 512
+        },
+        "candidate": {
+          "text_sha256": "a3ad53d11e2ffe3fba64c18e61169ce0c0f62140ce29e6c8191532fee5d44dea",
+          "finish_reason": "length",
+          "prompt_tokens": 1024,
+          "completion_tokens": 512
+        }
+      },
+      "measurements": {
+        "baseline": {
+          "client_ttft_seconds": 1.334125541,
+          "wall_seconds": 14.088034791,
+          "prompt_tokens_per_second": 771.43,
+          "generation_tokens_per_second": 40.14,
+          "time_to_first_token": 1.33,
+          "prompt_eval_duration": 1.33,
+          "generation_duration": 12.75
+        },
+        "candidate": {
+          "client_ttft_seconds": 1.28472725,
+          "wall_seconds": 13.062764541,
+          "prompt_tokens_per_second": 801.16,
+          "generation_tokens_per_second": 43.47,
+          "time_to_first_token": 1.28,
+          "prompt_eval_duration": 1.28,
+          "generation_duration": 11.78
+        }
+      }
+    },
+    {
+      "task_id": "http-held-code-1k",
+      "block": 1,
+      "valid": false,
+      "ratios": {},
+      "present": {
+        "baseline": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_id": "http-performance-cpython-16384",
+      "block": 0,
+      "valid": true,
+      "ratios": {
+        "client_ttft_seconds": 0.9769590903236427,
+        "prompt_tokens_per_second": 0.9770117993708772,
+        "generation_tokens_per_second": 1.0776887594076232
+      },
+      "present": {
+        "baseline": true,
+        "candidate": true
+      },
+      "outputs": {
+        "baseline": {
+          "text_sha256": "16b3954678ca03b25eb7fd3f2adf49a67881906aac6b9fda735daef655518b5e",
+          "finish_reason": "length",
+          "prompt_tokens": 16384,
+          "completion_tokens": 512
+        },
+        "candidate": {
+          "text_sha256": "16b3954678ca03b25eb7fd3f2adf49a67881906aac6b9fda735daef655518b5e",
+          "finish_reason": "length",
+          "prompt_tokens": 16384,
+          "completion_tokens": 512
+        }
+      },
+      "measurements": {
+        "baseline": {
+          "client_ttft_seconds": 21.774177834,
+          "wall_seconds": 34.204059292,
+          "prompt_tokens_per_second": 753.43,
+          "generation_tokens_per_second": 41.19,
+          "time_to_first_token": 21.75,
+          "prompt_eval_duration": 21.75,
+          "generation_duration": 12.43
+        },
+        "candidate": {
+          "client_ttft_seconds": 22.287706875,
+          "wall_seconds": 33.820253291,
+          "prompt_tokens_per_second": 736.11,
+          "generation_tokens_per_second": 44.39,
+          "time_to_first_token": 22.26,
+          "prompt_eval_duration": 22.26,
+          "generation_duration": 11.53
+        }
+      }
+    },
+    {
+      "task_id": "http-performance-cpython-16384",
+      "block": 1,
+      "valid": false,
+      "ratios": {},
+      "present": {
+        "baseline": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_id": "http-performance-pride-prejudice-65536",
+      "block": 0,
+      "valid": true,
+      "ratios": {
+        "client_ttft_seconds": 1.0307947467089347,
+        "prompt_tokens_per_second": 1.0307835820895523,
+        "generation_tokens_per_second": 1.082222852282393,
+        "completed_answer_latency_seconds": 1.0338369046479063
+      },
+      "present": {
+        "baseline": true,
+        "candidate": true
+      },
+      "outputs": {
+        "baseline": {
+          "text_sha256": "ecfcf03aaed4738b0b8c232ef95e930a9ef249da905ab179c5102ad05eb1b5e8",
+          "finish_reason": "stop",
+          "prompt_tokens": 65536,
+          "completion_tokens": 459
+        },
+        "candidate": {
+          "text_sha256": "ecfcf03aaed4738b0b8c232ef95e930a9ef249da905ab179c5102ad05eb1b5e8",
+          "finish_reason": "stop",
+          "prompt_tokens": 65536,
+          "completion_tokens": 459
+        }
+      },
+      "measurements": {
+        "baseline": {
+          "client_ttft_seconds": 197.318589625,
+          "wall_seconds": 210.330537083,
+          "prompt_tokens_per_second": 332.32,
+          "generation_tokens_per_second": 35.27,
+          "time_to_first_token": 197.21,
+          "prompt_eval_duration": 197.21,
+          "generation_duration": 13.01
+        },
+        "candidate": {
+          "client_ttft_seconds": 191.423743917,
+          "wall_seconds": 203.446536042,
+          "prompt_tokens_per_second": 342.55,
+          "generation_tokens_per_second": 38.17,
+          "time_to_first_token": 191.32,
+          "prompt_eval_duration": 191.32,
+          "generation_duration": 12.03
+        }
+      }
+    },
+    {
+      "task_id": "http-performance-pride-prejudice-65536",
+      "block": 1,
+      "valid": false,
+      "ratios": {},
+      "present": {
+        "baseline": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_id": "http-held-prose-1k",
+      "block": 0,
+      "valid": true,
+      "ratios": {
+        "client_ttft_seconds": 0.9990768807828243,
+        "prompt_tokens_per_second": 1.0028049769039744,
+        "generation_tokens_per_second": 1.0706422018348623
+      },
+      "present": {
+        "baseline": true,
+        "candidate": true
+      },
+      "outputs": {
+        "baseline": {
+          "text_sha256": "52851dffcf1d4d0fe21414eb39b57d3d569a16ff05de611d7506e29ee653b665",
+          "finish_reason": "length",
+          "prompt_tokens": 1024,
+          "completion_tokens": 512
+        },
+        "candidate": {
+          "text_sha256": "52851dffcf1d4d0fe21414eb39b57d3d569a16ff05de611d7506e29ee653b665",
+          "finish_reason": "length",
+          "prompt_tokens": 1024,
+          "completion_tokens": 512
+        }
+      },
+      "measurements": {
+        "baseline": {
+          "client_ttft_seconds": 1.325572416,
+          "wall_seconds": 16.981048375,
+          "prompt_tokens_per_second": 777.19,
+          "generation_tokens_per_second": 32.7,
+          "time_to_first_token": 1.32,
+          "prompt_eval_duration": 1.32,
+          "generation_duration": 15.66
+        },
+        "candidate": {
+          "client_ttft_seconds": 1.326797208,
+          "wall_seconds": 15.952212625,
+          "prompt_tokens_per_second": 779.37,
+          "generation_tokens_per_second": 35.01,
+          "time_to_first_token": 1.31,
+          "prompt_eval_duration": 1.31,
+          "generation_duration": 14.63
+        }
+      }
+    },
+    {
+      "task_id": "http-held-prose-1k",
+      "block": 1,
+      "valid": false,
+      "ratios": {},
+      "present": {
+        "baseline": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_id": "http-performance-curl-16384",
+      "block": 0,
+      "valid": true,
+      "ratios": {
+        "client_ttft_seconds": 1.0068651490100557,
+        "prompt_tokens_per_second": 1.0068514177271712,
+        "generation_tokens_per_second": 1.0924115456238361
+      },
+      "present": {
+        "baseline": true,
+        "candidate": true
+      },
+      "outputs": {
+        "baseline": {
+          "text_sha256": "4c1d068a60343bf0d49ae13844d18870b3e7b500271af6b62634ea400d8339c0",
+          "finish_reason": "length",
+          "prompt_tokens": 16384,
+          "completion_tokens": 512
+        },
+        "candidate": {
+          "text_sha256": "4c1d068a60343bf0d49ae13844d18870b3e7b500271af6b62634ea400d8339c0",
+          "finish_reason": "length",
+          "prompt_tokens": 16384,
+          "completion_tokens": 512
+        }
+      },
+      "measurements": {
+        "baseline": {
+          "client_ttft_seconds": 22.888164708,
+          "wall_seconds": 34.805403958,
+          "prompt_tokens_per_second": 716.64,
+          "generation_tokens_per_second": 42.96,
+          "time_to_first_token": 22.86,
+          "prompt_eval_duration": 22.86,
+          "generation_duration": 11.92
+        },
+        "candidate": {
+          "client_ttft_seconds": 22.732105417,
+          "wall_seconds": 33.640294375,
+          "prompt_tokens_per_second": 721.55,
+          "generation_tokens_per_second": 46.93,
+          "time_to_first_token": 22.71,
+          "prompt_eval_duration": 22.71,
+          "generation_duration": 10.91
+        }
+      }
+    },
+    {
+      "task_id": "http-performance-curl-16384",
+      "block": 1,
+      "valid": false,
+      "ratios": {},
+      "present": {
+        "baseline": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_id": "http-performance-cpython-65536",
+      "block": 0,
+      "valid": true,
+      "ratios": {
+        "client_ttft_seconds": 1.1858053599931935,
+        "prompt_tokens_per_second": 1.1859804403649674,
+        "generation_tokens_per_second": 1.0903585271317828
+      },
+      "present": {
+        "baseline": true,
+        "candidate": true
+      },
+      "outputs": {
+        "baseline": {
+          "text_sha256": "4b532f6441b465b2fe70246f182f9f9bf2bd8a68cb86d0e03e9a6ae506ccd314",
+          "finish_reason": "length",
+          "prompt_tokens": 65536,
+          "completion_tokens": 512
+        },
+        "candidate": {
+          "text_sha256": "4b532f6441b465b2fe70246f182f9f9bf2bd8a68cb86d0e03e9a6ae506ccd314",
+          "finish_reason": "length",
+          "prompt_tokens": 65536,
+          "completion_tokens": 512
+        }
+      },
+      "measurements": {
+        "baseline": {
+          "client_ttft_seconds": 119.466268916,
+          "wall_seconds": 131.866465291,
+          "prompt_tokens_per_second": 549.09,
+          "generation_tokens_per_second": 41.28,
+          "time_to_first_token": 119.35,
+          "prompt_eval_duration": 119.35,
+          "generation_duration": 12.4
+        },
+        "candidate": {
+          "client_ttft_seconds": 100.746946292,
+          "wall_seconds": 112.119859125,
+          "prompt_tokens_per_second": 651.21,
+          "generation_tokens_per_second": 45.01,
+          "time_to_first_token": 100.64,
+          "prompt_eval_duration": 100.64,
+          "generation_duration": 11.37
+        }
+      }
+    },
+    {
+      "task_id": "http-performance-cpython-65536",
+      "block": 1,
+      "valid": false,
+      "ratios": {},
+      "present": {
+        "baseline": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_id": "http-performance-moby-dick-16384",
+      "block": 0,
+      "valid": true,
+      "ratios": {
+        "client_ttft_seconds": 1.0772415118363265,
+        "prompt_tokens_per_second": 1.0773305460085745,
+        "generation_tokens_per_second": 1.0687936191425722,
+        "completed_answer_latency_seconds": 1.0750826150644524
+      },
+      "present": {
+        "baseline": true,
+        "candidate": true
+      },
+      "outputs": {
+        "baseline": {
+          "text_sha256": "1febb64f710ad2e24237d4599bf91209fcafbd4456104a7fbffa36165100314c",
+          "finish_reason": "stop",
+          "prompt_tokens": 16383,
+          "completion_tokens": 296
+        },
+        "candidate": {
+          "text_sha256": "1febb64f710ad2e24237d4599bf91209fcafbd4456104a7fbffa36165100314c",
+          "finish_reason": "stop",
+          "prompt_tokens": 16383,
+          "completion_tokens": 296
+        }
+      },
+      "measurements": {
+        "baseline": {
+          "client_ttft_seconds": 29.058376084,
+          "wall_seconds": 38.894042125,
+          "prompt_tokens_per_second": 564.46,
+          "generation_tokens_per_second": 30.09,
+          "time_to_first_token": 29.02,
+          "prompt_eval_duration": 29.02,
+          "generation_duration": 9.84
+        },
+        "candidate": {
+          "client_ttft_seconds": 26.974801625,
+          "wall_seconds": 36.177724,
+          "prompt_tokens_per_second": 608.11,
+          "generation_tokens_per_second": 32.16,
+          "time_to_first_token": 26.94,
+          "prompt_eval_duration": 26.94,
+          "generation_duration": 9.2
+        }
+      }
+    },
+    {
+      "task_id": "http-performance-moby-dick-16384",
+      "block": 1,
+      "valid": false,
+      "ratios": {},
+      "present": {
+        "baseline": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_id": "http-performance-pride-prejudice-16384",
+      "block": 0,
+      "valid": true,
+      "ratios": {
+        "client_ttft_seconds": 1.3176417410897474,
+        "prompt_tokens_per_second": 1.3179890975166566,
+        "generation_tokens_per_second": 1.0950947938609692,
+        "completed_answer_latency_seconds": 1.2432528878200673
+      },
+      "present": {
+        "baseline": true,
+        "candidate": true
+      },
+      "outputs": {
+        "baseline": {
+          "text_sha256": "c66ef97f8491aa20ebf8e31314fe4654d2ad71e6fc05be50e246648114d48575",
+          "finish_reason": "stop",
+          "prompt_tokens": 16384,
+          "completion_tokens": 417
+        },
+        "candidate": {
+          "text_sha256": "c66ef97f8491aa20ebf8e31314fe4654d2ad71e6fc05be50e246648114d48575",
+          "finish_reason": "stop",
+          "prompt_tokens": 16384,
+          "completion_tokens": 417
+        }
+      },
+      "measurements": {
+        "baseline": {
+          "client_ttft_seconds": 30.10458525,
+          "wall_seconds": 42.65188525,
+          "prompt_tokens_per_second": 544.83,
+          "generation_tokens_per_second": 33.23,
+          "time_to_first_token": 30.07,
+          "prompt_eval_duration": 30.07,
+          "generation_duration": 12.55
+        },
+        "candidate": {
+          "client_ttft_seconds": 22.847322084,
+          "wall_seconds": 34.306685042,
+          "prompt_tokens_per_second": 718.08,
+          "generation_tokens_per_second": 36.39,
+          "time_to_first_token": 22.82,
+          "prompt_eval_duration": 22.82,
+          "generation_duration": 11.46
+        }
+      }
+    },
+    {
+      "task_id": "http-performance-pride-prejudice-16384",
+      "block": 1,
+      "valid": false,
+      "ratios": {},
+      "present": {
+        "baseline": false,
+        "candidate": false
+      }
+    }
+  ],
+  "aggregates": null,
+  "completion_latency": {
+    "eligible_pairs": [
+      {
+        "task_id": "http-performance-pride-prejudice-65536",
+        "block": 0
+      },
+      {
+        "task_id": "http-performance-moby-dick-16384",
+        "block": 0
+      },
+      {
+        "task_id": "http-performance-pride-prejudice-16384",
+        "block": 0
+      }
+    ],
+    "eligible_pair_count": 3,
+    "excluded_length_stops_remain_in_primary_metrics": true
+  },
+  "memory": {
+    "block_deltas": [
+      {
+        "block": 0,
+        "baseline_bytes": 222307421208,
+        "candidate_bytes": 222370548760,
+        "candidate_minus_baseline_bytes": 63127552
+      },
+      {
+        "block": 1,
+        "baseline_bytes": null,
+        "candidate_bytes": null,
+        "candidate_minus_baseline_bytes": null
+      }
+    ],
+    "scope": "Largest observed cumulative process MLX allocator peak, including loading and warmup. Not per-request peak, full process RSS or total system memory; not comparable to the historical 7.75 GiB sampled-footprint change. Missing counters are unavailable, not zero."
+  },
+  "interpretation": {
+    "ratios": "Above 1 favors candidate: baseline/candidate for TTFT and completed-answer latency; candidate/baseline for token rates.",
+    "aggregation": "Geometric mean of 2 paired block ratios per case, then equal-case geometric means. The all-eight group deliberately mixes synthetic and natural workloads.",
+    "failure": "No aggregate speed summary is produced if any gate fails. Present pair measurements remain inspectable and are not permission to exclude failed pairs.",
+    "quality": "Timing establishes no general quality result. Pair output equality establishes comparability of these requests; the separately verified 618-task report supplies bounded quality evidence.",
+    "uncertainty": "Two temporal blocks on one device: no confidence intervals, p95/p99, population significance or other-hardware claim.",
+    "memory_policy": "Requested startup allocator guideline and wired limit: 224 GiB; allocator cache limit: 8 GiB. These are initial calls, not a measurement or guarantee of subsequent effective limits. On the observed machine the stock server raises wired memory to 243.2 GiB; the candidate profile subsequently resets it to 224 GiB. Preserve these declared native profile behaviors, record available startup/load evidence and make no assertion that effective wired limits match.",
+    "cache_policy": {
+      "prefix_reuse": "disabled through normal settings in both arms; require cached_tokens==0 on every response",
+      "global_settings_overrides": {
+        "cache.enabled": false,
+        "cache.hot_cache_max_size": "0",
+        "cache.hot_cache_only": false
+      },
+      "require_runtime_prefix_cache_disabled": true,
+      "engram_rows": "Fresh process starts each arm/block. One identical excluded 16K warmup runs first. Retain all natural Engram row-cache state after warmup and through the measured sequence; no private clear or tensor mutation.",
+      "row_cache_reporting": "Save public/read-only observer snapshots after load, after warmup, before/after each measured request and before shutdown when available. Record cache capacities, row-cache counters and their per-request deltas; missing telemetry is unavailable, never zero.",
+      "os_cache": "Do not purge. OS file/page caches can persist across processes; counterbalanced process order reduces but does not eliminate this effect.",
+      "interpretation": "Warm loaded-model performance with known row-cache history, not cold-load or cold-storage performance."
+    },
+    "identity_scope": "Frozen artifacts, wheel contents and saved receipt/runtime observations are checked. Raw secret-bearing settings and live effective wired-memory equality are not independently asserted.",
+    "checkpoint_scope": "The frozen metadata and tokenizer identities are compared; this analysis does not rehash model weight shards."
+  }
+}

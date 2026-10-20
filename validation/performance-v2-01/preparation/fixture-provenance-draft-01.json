@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "status": "draft_pending_parent_review_no_model_execution",
+  "historical_plan": {
+    "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/plan-01.json",
+    "sha256": "f668ef98840aa9c13a736e4b8329b396ad1f69032c46836d1640fdf9346972db"
+  },
+  "historical_fixture_manifest": {
+    "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/fixture-manifest.json",
+    "sha256": "c55e4d1cfd171892f59d2343539e5856ca9617640f5a2f307bc7d8c58d323a22"
+  },
+  "source_manifest": {
+    "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/source-manifest.json",
+    "sha256": "44daa65bb2e1a545a054c584488a352648497db62d195a57f1aece8ebcd7aa15"
+  },
+  "attribution_notice": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/NOTICE",
+  "redistribution_note": "Archive sources, original licenses and NOTICE must accompany redistributed excerpts; do not ship this work directory alone as a corpus bundle.",
+  "tokenizer": {
+    "path": "/Users/rubencu/Library/Application Support/LocalAI/models/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp/tokenizer.json",
+    "sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b",
+    "tokenizers_version": "0.23.3"
+  },
+  "encoder": {
+    "path": "repositories/omlx/omlx/patches/deepseek_v41/encoding.py",
+    "sha256": "ef231812dd35f5747787e2410cfa3b1413b77248e11b539973a7d6ede8853596"
+  },
+  "request_factory": {
+    "source": "repositories/flash1017-research/tools/run_installed_quality.py",
+    "source_sha256_at_preparation": "1ad06c439ae008abb9d35ce81f2ed772fd329a1f862353855ccda56dc494b372",
+    "request_for_ast_sha256": "5cc66a3f34d3b7ec06013af1850e03cb5bf87d62f0090814fc44f9de9fda647e",
+    "constants": {
+      "MODEL_ID": "DeepSeek-V4.1-Flash-1017",
+      "SEED": 431017
+    },
+    "performance_overrides": {
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      }
+    }
+  },
+  "fixtures": [
+    {
+      "task_id": "http-authored-warmup-16384",
+      "historical_id": "authored-warmup-16384",
+      "cohort": "excluded-warmup",
+      "source": "authored-synthetic",
+      "source_corpus": null,
+      "synthetic": true,
+      "max_tokens": 64,
+      "historical_prompt_tokens": 16384,
+      "historical_tokens_sha256": "7d02e9f035a84f505702bb9f463761ec1bad4455dec0c7ed3f781ca3c6a169e8",
+      "actual_http_prompt_tokens": 16384,
+      "actual_http_tokens_sha256": "7d02e9f035a84f505702bb9f463761ec1bad4455dec0c7ed3f781ca3c6a169e8",
+      "messages_sha256": "412362a102727cb94c68226a0a316f511d9e3b35647b1ffa34c28f05849c7b2d",
+      "user_text_sha256": "061e8addfca1823200e3f5a718d94d17fddfad7a44ecc78c8f57e31f450a48c2",
+      "rendered_text_sha256": "6b14b3f1c0408f69bfda69652899bc0d0e94320d8e0b7271472d40aeb551f79e",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": true,
+      "first_token_difference": null,
+      "construction": "Exact historical tokens recovered as a single user message and round-tripped through the pinned native chat encoder."
+    },
+    {
+      "task_id": "http-held-code-1k",
+      "historical_id": "held-code-1k",
+      "cohort": "synthetic-generation",
+      "source": "authored-synthetic",
+      "source_corpus": null,
+      "synthetic": true,
+      "max_tokens": 512,
+      "historical_prompt_tokens": 1024,
+      "historical_tokens_sha256": "d891e7f26f8d7e0c088d485ff56e8075e2311117d134d043130dfc73ba3dd984",
+      "actual_http_prompt_tokens": 1024,
+      "actual_http_tokens_sha256": "d891e7f26f8d7e0c088d485ff56e8075e2311117d134d043130dfc73ba3dd984",
+      "messages_sha256": "b716b28ef91e3823851483457512540af4b0750dd56b42cc2f4d4c182d449873",
+      "user_text_sha256": "e0663c7c171ec6cfdcfa653c751eaf936fb34565114e0cb4b7e4b464e7cfdd20",
+      "rendered_text_sha256": "e6c0e79638c57c44925d9a7b996166f59fa27836577c92451b2d2ad48e7bcfde",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": true,
+      "first_token_difference": null,
+      "construction": "Exact historical tokens recovered as a single user message and round-tripped through the pinned native chat encoder."
+    },
+    {
+      "task_id": "http-performance-cpython-16384",
+      "historical_id": "performance-cpython-16384",
+      "cohort": "natural-source",
+      "source": "cpython",
+      "source_corpus": {
+        "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/corpora/cpython.txt",
+        "sha256": "dad12728462b2c80b3f6bfadf275a87c508b073a28d4312b3c29fe6fb56c9da8"
+      },
+      "synthetic": false,
+      "max_tokens": 512,
+      "historical_prompt_tokens": 16384,
+      "historical_tokens_sha256": "4aa960f794657af43657670080c8e3d5a2d6e31815fff0555c466e75c6ede978",
+      "actual_http_prompt_tokens": 16384,
+      "actual_http_tokens_sha256": "4aa960f794657af43657670080c8e3d5a2d6e31815fff0555c466e75c6ede978",
+      "messages_sha256": "19d2ca87556a10903a083287299b45952967b4f77391135e8da5975574f34a1f",
+      "user_text_sha256": "2d3abf4b077f612193e57504a4f94b64afe7662858be95d43ff9549457b86bb7",
+      "rendered_text_sha256": "29d00d84e41e2473629e4841990d2a4e7d02670da1424beeb672a56e39056d79",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": true,
+      "first_token_difference": null,
+      "construction": "Exact historical tokens recovered as a single user message and round-tripped through the pinned native chat encoder."
+    },
+    {
+      "task_id": "http-performance-pride-prejudice-65536",
+      "historical_id": "performance-pride-prejudice-65536",
+      "cohort": "natural-source",
+      "source": "pride-prejudice",
+      "source_corpus": {
+        "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/corpora/pride-prejudice.txt",
+        "sha256": "cb7c0d9af2041d31e655fafe79becb0877c3fc775690c7a558eb8707035e5138"
+      },
+      "synthetic": false,
+      "max_tokens": 512,
+      "historical_prompt_tokens": 65536,
+      "historical_tokens_sha256": "aba763d4f3fab02b97397173495e7ebf7a27d7b4bad14379b0dac58b617e5ddb",
+      "actual_http_prompt_tokens": 65536,
+      "actual_http_tokens_sha256": "aba763d4f3fab02b97397173495e7ebf7a27d7b4bad14379b0dac58b617e5ddb",
+      "messages_sha256": "08265c40bb2ee20b97e4aadf219fd550f91f6da6d17838c495970b698231ed65",
+      "user_text_sha256": "28a8871f9d5033b1aeee06b46760b9a4e358c65edec00d7ce78efddd1a1d4e64",
+      "rendered_text_sha256": "43c6ef67f61f0e4edf773b3111f489fde97db37e73fbba04ede0545230bf7744",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": true,
+      "first_token_difference": null,
+      "construction": "Exact historical tokens recovered as a single user message and round-tripped through the pinned native chat encoder."
+    },
+    {
+      "task_id": "http-held-prose-1k",
+      "historical_id": "held-prose-1k",
+      "cohort": "synthetic-generation",
+      "source": "authored-synthetic",
+      "source_corpus": null,
+      "synthetic": true,
+      "max_tokens": 512,
+      "historical_prompt_tokens": 1024,
+      "historical_tokens_sha256": "b57ac472fb5aba286d6938d49364364e2f6babc65911ae868b82151cfb7c72c2",
+      "actual_http_prompt_tokens": 1024,
+      "actual_http_tokens_sha256": "b57ac472fb5aba286d6938d49364364e2f6babc65911ae868b82151cfb7c72c2",
+      "messages_sha256": "352cf2dc65153c5917ac18f03ebb98f28c28a1e110075bdac8c918e9e05c8277",
+      "user_text_sha256": "06964ae26a1f698b90a4a6b5f5031900b92d178c40b7c06bc2a4bd3a807f93cc",
+      "rendered_text_sha256": "aa6b9b76e6b7838748e862c35d5df83766f706a53001952bd2d799d1771f5d2d",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": true,
+      "first_token_difference": null,
+      "construction": "Exact historical tokens recovered as a single user message and round-tripped through the pinned native chat encoder."
+    },
+    {
+      "task_id": "http-performance-curl-16384",
+      "historical_id": "performance-curl-16384",
+      "cohort": "natural-source",
+      "source": "curl",
+      "source_corpus": {
+        "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/corpora/curl.txt",
+        "sha256": "db0b52c509bc4d8ef2babee3472b67ff623ccbf70539091911adfe631ec217c7"
+      },
+      "synthetic": false,
+      "max_tokens": 512,
+      "historical_prompt_tokens": 16384,
+      "historical_tokens_sha256": "af49fe7277fa0dc27468f16f33391f27bb97e31cb9f725b81f63b44f9735a448",
+      "actual_http_prompt_tokens": 16384,
+      "actual_http_tokens_sha256": "af49fe7277fa0dc27468f16f33391f27bb97e31cb9f725b81f63b44f9735a448",
+      "messages_sha256": "7d16a5f09c9137011998553e378d6d08cdacdad00c879a3576e9c600511f4c56",
+      "user_text_sha256": "7f4b3d5e494a70b87e6f74f95d3a926b7bcc18a1b0069f26e99fff8365fd4ac7",
+      "rendered_text_sha256": "6fcbd3f144483c9c43638417199f5b432744c1c5fd4e4cf8fdf47ff683a4a6d0",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": true,
+      "first_token_difference": null,
+      "construction": "Exact historical tokens recovered as a single user message and round-tripped through the pinned native chat encoder."
+    },
+    {
+      "task_id": "http-performance-cpython-65536",
+      "historical_id": "performance-cpython-65536",
+      "cohort": "natural-source",
+      "source": "cpython",
+      "source_corpus": {
+        "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/corpora/cpython.txt",
+        "sha256": "dad12728462b2c80b3f6bfadf275a87c508b073a28d4312b3c29fe6fb56c9da8"
+      },
+      "synthetic": false,
+      "max_tokens": 512,
+      "historical_prompt_tokens": 65536,
+      "historical_tokens_sha256": "31a42897b4a2696c5d7a6386c7e56d263f27f8c388a20c825f51349753ebdd9c",
+      "actual_http_prompt_tokens": 65536,
+      "actual_http_tokens_sha256": "0c2c2cee9b88033c6e0059c799ee51b18196256b297c01dcdcbe9f390fbde7df",
+      "messages_sha256": "1581307918fc33536ba08f4ed750cde65a2cc72e748031b0eeb6571baee2de39",
+      "user_text_sha256": "0038a6ace4534b37e6cfb7756bdfb87b5dd8d358c2c06e47857421761c6e4e69",
+      "rendered_text_sha256": "2a14f41330ef88ce5040fd529b3fa22070652f0385e065231717c2c4ce3c89d3",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": false,
+      "first_token_difference": 65481,
+      "construction": "New HTTP adaptation: identical decoded historical corpus excerpt and question, rerendered as normal user text. Ordinary BPE retokenization changes the historical spliced token stream; new HTTP tokens are authoritative."
+    },
+    {
+      "task_id": "http-performance-moby-dick-16384",
+      "historical_id": "performance-moby-dick-16384",
+      "cohort": "natural-source",
+      "source": "moby-dick",
+      "source_corpus": {
+        "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/corpora/moby-dick.txt",
+        "sha256": "6b74a36cf4b629ac137c8832b2ba2be071a02c348f3accde0c026a893a2f30eb"
+      },
+      "synthetic": false,
+      "max_tokens": 512,
+      "historical_prompt_tokens": 16384,
+      "historical_tokens_sha256": "70106dce6481c03f8bd729d17c55d9ce12368875a68a749c3e86c9f600105190",
+      "actual_http_prompt_tokens": 16383,
+      "actual_http_tokens_sha256": "c33c53c30080e4ece1ed74dc0b1992e13dfd4a7f843082d7def7fe8b2b53c9db",
+      "messages_sha256": "7ac70a0a1ea824aa5503077eff3035706e8809088d37041a52f057244b738b2b",
+      "user_text_sha256": "91d0fd75212acb89bc7c7fcf40008ecf5f20064c659fca03f6b58c8ea9feb1fd",
+      "rendered_text_sha256": "2c4d1e8347e94e09a797f31c24604c3551d6e74bbf0953ddb5875d5b950448d3",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": false,
+      "first_token_difference": 16334,
+      "construction": "New HTTP adaptation: identical decoded historical corpus excerpt and question, rerendered as normal user text. Ordinary BPE retokenization changes the historical spliced token stream; new HTTP tokens are authoritative."
+    },
+    {
+      "task_id": "http-performance-pride-prejudice-16384",
+      "historical_id": "performance-pride-prejudice-16384",
+      "cohort": "natural-source",
+      "source": "pride-prejudice",
+      "source_corpus": {
+        "path": "repositories/flash1017-research/archives/2026-10-18-preview/evidence/overall/fixtures/corpora/pride-prejudice.txt",
+        "sha256": "cb7c0d9af2041d31e655fafe79becb0877c3fc775690c7a558eb8707035e5138"
+      },
+      "synthetic": false,
+      "max_tokens": 512,
+      "historical_prompt_tokens": 16384,
+      "historical_tokens_sha256": "ff6c7bcb41f34a55d90b5dcc5c5f6bcbd9a000927b3c0737a49e3694ae231f76",
+      "actual_http_prompt_tokens": 16384,
+      "actual_http_tokens_sha256": "ff6c7bcb41f34a55d90b5dcc5c5f6bcbd9a000927b3c0737a49e3694ae231f76",
+      "messages_sha256": "db9c8b3a5bfc394ce3616bf28eb1cbd3b87a6c9d4b1d38ed503a805c52ff2762",
+      "user_text_sha256": "a102d9b097adbf7496df684ffb10e03446dcd83bd0dec13226be3286e159448e",
+      "rendered_text_sha256": "f20aaa8437dee35ebf50702c7e2be888d317972beb66599055020064c8c697e2",
+      "historical_text_reconstructed_exactly": true,
+      "historical_token_stream_reconstructed_exactly": true,
+      "first_token_difference": null,
+      "construction": "Exact historical tokens recovered as a single user message and round-tripped through the pinned native chat encoder."
+    }
+  ],
+  "cpu_only": true,
+  "inference_modules_loaded": false,
+  "weights_opened": false
+}

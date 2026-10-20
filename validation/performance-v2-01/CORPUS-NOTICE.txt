@@ -1,0 +1,31 @@
+Validation source attribution
+
+CPython3.14.0: Python Software Foundation and upstream contributors.
+https://github.com/python/cpython/tree/ebf955df7a89ed0c7968f79faec1de49f61ed7cb
+Full LICENSE and original per-file notices retained in sources/cpython/.
+Changes: none to raw source; fixture corpus concatenates selected files with
+filename separators, then uses token-prefix excerpts for model validation.
+
+curl8.16.0: Daniel Stenberg and curl contributors.
+https://github.com/curl/curl/tree/11b991232fbcaa88e2b1faecac224416b0001e35
+COPYING and original per-file notices retained in sources/curl/.
+Changes: none to raw source; selected files are concatenated with separators.
+
+Moby Dick; Or, The Whale, Herman Melville. Project Gutenberg eBook2701.
+Credits: Daniel Lazarus, Jonesey, and David Widger.
+https://www.gutenberg.org/ebooks/2701
+
+Pride and Prejudice, Jane Austen. Project Gutenberg eBook1342.
+Credits: Chuck Greif and the Online Distributed Proofreading Team.
+https://www.gutenberg.org/ebooks/1342
+
+Both catalog pages state public domain in the USA. The downloaded complete
+ebook files, including the full Project Gutenberg license, are retained in
+sources/. Corpus excerpts remove only the outer Gutenberg wrapper; the
+original files and notices must accompany a redistributed fixture bundle.
+No worldwide public-domain or model-training holdout claim is made.
+
+The diagnostic geometric image and synthetic warmup records are original
+validation fixtures dedicated to the public domain under CC0-1.0.
+The native pure-Python prompt encoder belongs to DeepSeek/upstream oMLX;
+its original MIT header and qualified source hash are preserved in place.

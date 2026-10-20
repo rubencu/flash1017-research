@@ -1,0 +1,66 @@
+{
+  "schema": "flash1017-quality-protocol/1",
+  "status": "frozen-before-model-generation",
+  "requests_path": "requests-01.jsonl",
+  "requests_sha256": "beca0b0b51ee509ff5f53998f27c5eb0f8d12c9527982c10055628927e97850d",
+  "tasks": 618,
+  "suites": {
+    "humaneval_plus": 164,
+    "mbpp_plus": 378,
+    "gsm8k_hash_subset": 64,
+    "synthetic_long_context": 12
+  },
+  "sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "top_k": 0,
+    "seed": 431017,
+    "enable_thinking": false,
+    "max_tokens": "2048 coding/math,64 long controls",
+    "ordinary_eos": true
+  },
+  "baseline": {
+    "version": "0.7.1rc1",
+    "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+    "wheel_sha256": "b3e12950a607991a1feb833b1bdc0b92fe41aeb73656ca5373db03d0d87b71c7",
+    "native_mtp": true,
+    "adaptive_max_depth": 3,
+    "prefill_step": 2048,
+    "engram_prefetch_mib": 16
+  },
+  "candidate": {
+    "version": "0.7.1rc1+flash1017.1",
+    "commit": "ad2f74058056e4cc7c0a13ddc76f96602e8ce092",
+    "wheel_sha256": "b5c333adc078c28d0950e925af55d5da628d0915e0586bc6ac62f97d35400554",
+    "profile": "flash1017-v1",
+    "draft_width": 5,
+    "prefill_step": 8192,
+    "engram_prefetch_mib": 64
+  },
+  "model": {
+    "repo": "mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+    "revision": "78456115d301eecf9fadcdcc81c0cf6f8b2c8eab"
+  },
+  "source_inputs": [
+    {
+      "path": "evalplus/requests.jsonl",
+      "sha256": "45f5ab9e058993b8ca2876337745adc4cfedc1bfffbb7d060484422288ff3a06"
+    },
+    {
+      "path": "supplement/frozen-02/requests.jsonl",
+      "sha256": "8c5ff905ecc3639bec04ab658b4d60e067a769f945fc8a6949a712017847cf86"
+    }
+  ],
+  "harness_sha256": "4932bc49eb8e9e425ace4620e6b75e1e8a262519bf97f0abeaf085d56d1830ce",
+  "execution": "Two sequential fresh server processes: unchanged public wheel then candidate wheel. Same request order and dependency versions. Empty per-arm prefix caches; retained cache history within each arm. One excluded one-token warmup. No parallel GPU workloads.",
+  "acceptance": {
+    "minimum_complete_pairs": 618,
+    "allow_missing_or_errors": false,
+    "allow_truncation": false,
+    "maximum_baseline_pass_to_candidate_fail_tasks": 0,
+    "quality_gains_offset_regressions": false,
+    "claim_scope": "Zero observed regressions on specified greedy tasks; not universal equivalence. Numerical/state preservation is separate evidence."
+  },
+  "performance_scope": "Per-request wall and usage timings are retained; this is not the historical overall performance protocol. Do not transfer old speedup to wheel.",
+  "preparation_note": "Attempt01 failed before model loading or evaluated outputs because public CLI main accepts argv via sys.argv. Attempt02 uses ordinary CLI argument parsing for both versions. Task content/settings and acceptance rules unchanged."
+}

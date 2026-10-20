@@ -1,0 +1,5768 @@
+{
+  "schema": "flash1017-quality-pair-summary/1",
+  "inputs": {
+    "plan": {
+      "file": "protocol.json",
+      "sha256": "a9aa441b4b0223370a7a5f1035bea71a3624c7015e294f20f119563c91cb489a",
+      "bytes": 4714
+    },
+    "requests": {
+      "file": "requests-01.jsonl",
+      "sha256": "beca0b0b51ee509ff5f53998f27c5eb0f8d12c9527982c10055628927e97850d",
+      "bytes": 2588151
+    },
+    "reporter": {
+      "file": "summarize_installed_quality.py",
+      "sha256": "4874227964bca97df5020045c8d5bcbd5cd998d1a3a1d16dae3d6bd2edb79837",
+      "bytes": 30542
+    },
+    "baseline_original_plan": {
+      "file": "protocol-02.json",
+      "sha256": "8a14157edc39daa822368187c5ea58b2f10d296c99ee170975a5ed30b1f20c39",
+      "bytes": 2816
+    },
+    "baseline_receipt": {
+      "file": "receipt.json",
+      "sha256": "b85020ae0463947e58d9c429e045e1b87d6a40c718a82769793d22e48fe79749",
+      "bytes": 6693
+    },
+    "baseline_responses": {
+      "file": "responses.jsonl",
+      "sha256": "a6d4c0cf9a34c305a780b30fd6d0b6a4120fdcfa411d342e31057acb3756ffeb",
+      "bytes": 1273591
+    },
+    "candidate_receipt": {
+      "file": "receipt.json",
+      "sha256": "91ec8742c540c2a0c79811b2aefae67f2f99049834a9147feb58d72a776c89b1",
+      "bytes": 72696
+    },
+    "candidate_responses": {
+      "file": "responses.jsonl",
+      "sha256": "bfdaa52beacc951350283a8a005409ea6e88c2b3d280bfc20f96382e728f1e28",
+      "bytes": 1273528
+    },
+    "supplement_scores": {
+      "file": "supplement-scores-01.json",
+      "sha256": "41376ac1590e780ea99595828e67b90ee5bb4b3479b6ca464a5260a42db44383",
+      "bytes": 44885
+    },
+    "baseline_supplement_responses": {
+      "file": "baseline-supplement-01.jsonl",
+      "sha256": "f57afaffce3ad6f6c6bcd609084cdef2ab03fbebbb00e987901ef97301bd1511",
+      "bytes": 84612
+    },
+    "candidate_supplement_responses": {
+      "file": "candidate-supplement-01.jsonl",
+      "sha256": "d0f67d3b275e260b167d12c3f72db897d77b7eaf1cf31034394a6b3d932bc3b9",
+      "bytes": 84610
+    },
+    "baseline_coding_grades": {
+      "file": "baseline-grades.jsonl",
+      "sha256": "3840679b5b66f1f03e148d59afd688caf80715cbb18d53dbc196d1186e6fbfd8",
+      "bytes": 1142155
+    },
+    "baseline_coding_metadata": {
+      "file": "baseline-grades.jsonl.metadata.json",
+      "sha256": "56ceab4da85ba0511326e36f1ee23ed9ed1111454d957260b109609d53c66be6",
+      "bytes": 11670
+    },
+    "candidate_coding_grades": {
+      "file": "candidate-grades.jsonl",
+      "sha256": "645a79d370d45a806fdfd5fdb3f659dd3dabb76027732bc01dd1ab714fed0c9d",
+      "bytes": 1141676
+    },
+    "candidate_coding_metadata": {
+      "file": "candidate-grades.jsonl.metadata.json",
+      "sha256": "4ac79c14b7be3b8cf4b2ea28f1ec5249de242d48de870d8a58c547217c9444e9",
+      "bytes": 11670
+    }
+  },
+  "integrity": {
+    "status": "failed",
+    "checks": 15891,
+    "errors": [
+      {
+        "code": "mtp_setting",
+        "detail": "candidate"
+      }
+    ],
+    "pending": [],
+    "settings_reconstructions": [
+      {
+        "arm": "baseline",
+        "file": "settings.json",
+        "method": "Exact pre-start bytes reconstructed from final JSON by reverting only the server-generated auth.secret_key and server.server_aliases fields",
+        "startup_sha256": "fcb3a6aa7c786ce1bb48a70886aae4f48bb720fa3ac37d042d50c5b276cb9f15",
+        "current_sha256": "6f98ccb34a51db35f299d7c7819208f12e03398543710fc7057a05c986f6fa28",
+        "reconstructed_sha256": "fcb3a6aa7c786ce1bb48a70886aae4f48bb720fa3ac37d042d50c5b276cb9f15"
+      }
+    ]
+  },
+  "builds": {
+    "baseline": {
+      "version": "0.7.1rc1",
+      "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+      "wheel_sha256": "b3e12950a607991a1feb833b1bdc0b92fe41aeb73656ca5373db03d0d87b71c7",
+      "native_mtp": true,
+      "adaptive_max_depth": 3,
+      "prefill_step": 2048,
+      "engram_prefetch_mib": 16
+    },
+    "candidate": {
+      "version": "0.7.1rc1+flash1017.2",
+      "profile": "flash1017-v2",
+      "commit": "9280d25a1322c39f2f6713dc22b099a6e9dd41d1",
+      "wheel_sha256": "0fbdb77ca86ce35b4dca0275b534c1fafde7d70f0f7f6a89d5f964821f7f7f06",
+      "draft_width": 3,
+      "prefill_step": 2048,
+      "engram_prefetch_mib": 64,
+      "expected_runtime": {
+        "prefill_step_size": 2048,
+        "max_num_seqs": 1,
+        "attention_output_quantization": false,
+        "flash1017_enabled": true,
+        "confidence_enabled": false,
+        "replay_installed": false,
+        "engram_prefetch_bytes": 67108864,
+        "mtp_depth": 3,
+        "mtp_depth_fixed": false
+      }
+    }
+  },
+  "identity_scope": "Checks saved version, native assets, dependencies, request/settings hashes. Planned wheel hashes are declarations; receipts do not hash every installed Python source file.",
+  "generation": {
+    "baseline": {
+      "responses": 618,
+      "finish_reasons": {
+        "stop": 614,
+        "length": 4
+      },
+      "errors": [],
+      "truncated": [
+        "Mbpp/56",
+        "Mbpp/260",
+        "Mbpp/430",
+        "Mbpp/468"
+      ],
+      "unfinished": []
+    },
+    "candidate": {
+      "responses": 618,
+      "finish_reasons": {
+        "stop": 614,
+        "length": 4
+      },
+      "errors": [],
+      "truncated": [
+        "Mbpp/56",
+        "Mbpp/260",
+        "Mbpp/430",
+        "Mbpp/468"
+      ],
+      "unfinished": []
+    }
+  },
+  "paired_responses": 618,
+  "graded_pairs": 618,
+  "suites": {
+    "gsm8k-test-64-hash-subset": {
+      "expected_tasks": 64,
+      "graded_pairs": 64,
+      "status": "complete",
+      "baseline_pass": 61,
+      "candidate_pass": 61,
+      "regressions": [],
+      "improvements": [],
+      "both_fail": [
+        "gsm8k-test-0403",
+        "gsm8k-test-0454",
+        "gsm8k-test-0823"
+      ],
+      "identical_text": 64
+    },
+    "humaneval": {
+      "expected_tasks": 164,
+      "graded_pairs": 164,
+      "status": "complete",
+      "baseline_pass": 148,
+      "candidate_pass": 148,
+      "regressions": [],
+      "improvements": [],
+      "both_fail": [
+        "HumanEval/32",
+        "HumanEval/39",
+        "HumanEval/55",
+        "HumanEval/76",
+        "HumanEval/91",
+        "HumanEval/99",
+        "HumanEval/103",
+        "HumanEval/122",
+        "HumanEval/124",
+        "HumanEval/127",
+        "HumanEval/132",
+        "HumanEval/141",
+        "HumanEval/145",
+        "HumanEval/151",
+        "HumanEval/154",
+        "HumanEval/163"
+      ],
+      "identical_text": 164
+    },
+    "mbpp": {
+      "expected_tasks": 378,
+      "graded_pairs": 378,
+      "status": "complete",
+      "baseline_pass": 299,
+      "candidate_pass": 299,
+      "regressions": [],
+      "improvements": [],
+      "both_fail": [
+        "Mbpp/16",
+        "Mbpp/74",
+        "Mbpp/84",
+        "Mbpp/92",
+        "Mbpp/93",
+        "Mbpp/99",
+        "Mbpp/102",
+        "Mbpp/109",
+        "Mbpp/113",
+        "Mbpp/119",
+        "Mbpp/126",
+        "Mbpp/138",
+        "Mbpp/145",
+        "Mbpp/160",
+        "Mbpp/161",
+        "Mbpp/223",
+        "Mbpp/235",
+        "Mbpp/244",
+        "Mbpp/255",
+        "Mbpp/260",
+        "Mbpp/267",
+        "Mbpp/278",
+        "Mbpp/287",
+        "Mbpp/294",
+        "Mbpp/300",
+        "Mbpp/305",
+        "Mbpp/310",
+        "Mbpp/311",
+        "Mbpp/392",
+        "Mbpp/398",
+        "Mbpp/410",
+        "Mbpp/415",
+        "Mbpp/427",
+        "Mbpp/430",
+        "Mbpp/437",
+        "Mbpp/440",
+        "Mbpp/445",
+        "Mbpp/446",
+        "Mbpp/448",
+        "Mbpp/451",
+        "Mbpp/459",
+        "Mbpp/462",
+        "Mbpp/465",
+        "Mbpp/468",
+        "Mbpp/472",
+        "Mbpp/473",
+        "Mbpp/556",
+        "Mbpp/559",
+        "Mbpp/564",
+        "Mbpp/576",
+        "Mbpp/577",
+        "Mbpp/580",
+        "Mbpp/581",
+        "Mbpp/589",
+        "Mbpp/590",
+        "Mbpp/593",
+        "Mbpp/597",
+        "Mbpp/603",
+        "Mbpp/615",
+        "Mbpp/620",
+        "Mbpp/622",
+        "Mbpp/630",
+        "Mbpp/638",
+        "Mbpp/639",
+        "Mbpp/735",
+        "Mbpp/739",
+        "Mbpp/748",
+        "Mbpp/757",
+        "Mbpp/759",
+        "Mbpp/765",
+        "Mbpp/769",
+        "Mbpp/771",
+        "Mbpp/777",
+        "Mbpp/785",
+        "Mbpp/790",
+        "Mbpp/794",
+        "Mbpp/800",
+        "Mbpp/801",
+        "Mbpp/806"
+      ],
+      "identical_text": 378
+    },
+    "synthetic-long-context-controls": {
+      "expected_tasks": 12,
+      "graded_pairs": 12,
+      "status": "complete",
+      "baseline_pass": 11,
+      "candidate_pass": 11,
+      "regressions": [],
+      "improvements": [],
+      "both_fail": [
+        "long-65536-late-2hop"
+      ],
+      "identical_text": 12
+    }
+  },
+  "regressions": [],
+  "candidate_only_truncated": [],
+  "exact_text_and_finish_reason": {
+    "matched": 618,
+    "expected": 618,
+    "differences": []
+  },
+  "planned_acceptance": {
+    "status": "failed",
+    "mode": "amended-stock-arithmetic-v1",
+    "rules": {
+      "mode": "amended-stock-arithmetic-v1",
+      "amendment_reason": "The original absolute zero-truncation rule rejected the unchanged baseline itself. This amended conservation test retains all baseline failures and requires exact text/finish parity on all 618 paired outputs, zero answer regressions and no new candidate-only truncation. The original failed result is preserved.",
+      "original_protocol_sha256": "8a14157edc39daa822368187c5ea58b2f10d296c99ee170975a5ed30b1f20c39",
+      "minimum_complete_pairs": 618,
+      "allow_missing_or_errors": false,
+      "allow_truncation": true,
+      "allow_candidate_only_truncation": false,
+      "require_exact_text_and_finish_reason": true,
+      "maximum_baseline_pass_to_candidate_fail_tasks": 0,
+      "quality_gains_offset_regressions": false,
+      "claim_scope": "Exact observed output parity on 618 fixed greedy requests and the specified software/checkpoint/hardware; not universal mathematical equivalence."
+    },
+    "violations": [
+      "Evidence integrity checks failed"
+    ],
+    "pending": [],
+    "improvements_offset_regressions": false
+  },
+  "original_acceptance": {
+    "status": "failed",
+    "protocol_sha256": "8a14157edc39daa822368187c5ea58b2f10d296c99ee170975a5ed30b1f20c39",
+    "violations": [
+      "The original absolute zero-truncation prerequisite remains failed"
+    ],
+    "scope": "This records the original rule's continuing failure, not a replacement or regrading of the original candidate run. Preserve that separate report."
+  },
+  "observed_exact_response_parity_established": false,
+  "observed_task_score_preservation_established": false,
+  "universal_quality_equivalence_proved": false,
+  "pairs": [
+    {
+      "task_id": "HumanEval/0",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/2",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/3",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/4",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/5",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/6",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/7",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/8",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/9",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/11",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/12",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/13",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/14",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/15",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/16",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/17",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/18",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/19",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/20",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/21",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/22",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/23",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/24",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/25",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/26",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/27",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/28",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/29",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/30",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/31",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/32",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/33",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/34",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/35",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/36",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/37",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/38",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/39",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/40",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/41",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/42",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/43",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/44",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/45",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/46",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/47",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/48",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/49",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/50",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/51",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/52",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/53",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/54",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/55",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/56",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/57",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/58",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/59",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/60",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/61",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/62",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/63",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/64",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/65",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/66",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/67",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/68",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/69",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/70",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/71",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/72",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/73",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/74",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/75",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/76",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/77",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/78",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/79",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/80",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/81",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/82",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/83",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/84",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/85",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/86",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/87",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/88",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/89",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/90",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/91",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/92",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/93",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/94",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/95",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/96",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/97",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/98",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/99",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/101",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/102",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/103",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/104",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/105",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/106",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/107",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/108",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/109",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/110",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/111",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/112",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/113",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/114",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/115",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/116",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/117",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/118",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/119",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/120",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/121",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/122",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/123",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/124",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/125",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/126",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/127",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/128",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/129",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/130",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/131",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/132",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/133",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/134",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/135",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/136",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/137",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/138",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/139",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/140",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/141",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/142",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/143",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/144",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/145",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/146",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/147",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/148",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/149",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/150",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/151",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/152",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/153",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/154",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/155",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/156",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/157",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/158",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/159",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/160",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/161",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/162",
+      "suite": "humaneval",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "HumanEval/163",
+      "suite": "humaneval",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/2",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/3",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/4",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/6",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/7",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/8",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/9",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/11",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/12",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/14",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/16",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/17",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/18",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/19",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/20",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/56",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/57",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/58",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/59",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/61",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/62",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/63",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/64",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/65",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/66",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/67",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/68",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/69",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/70",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/71",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/72",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/74",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/75",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/77",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/79",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/80",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/82",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/84",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/85",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/86",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/87",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/88",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/89",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/90",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/91",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/92",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/93",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/94",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/95",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/96",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/97",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/98",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/99",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/100",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/101",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/102",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/103",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/104",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/105",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/106",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/108",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/109",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/111",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/113",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/116",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/118",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/119",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/120",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/123",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/124",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/125",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/126",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/127",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/128",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/129",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/130",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/131",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/132",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/133",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/135",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/137",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/138",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/139",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/140",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/141",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/142",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/145",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/160",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/161",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/162",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/165",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/166",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/167",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/168",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/170",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/171",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/172",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/222",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/223",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/224",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/226",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/227",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/230",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/232",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/233",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/234",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/235",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/237",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/238",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/239",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/240",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/242",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/244",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/245",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/247",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/250",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/251",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/252",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/253",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/255",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/256",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/257",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/259",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/260",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/261",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/262",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/264",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/265",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/266",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/267",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/268",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/269",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/270",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/271",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/272",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/273",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/274",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/276",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/277",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/278",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/279",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/280",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/281",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/282",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/283",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/284",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/285",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/286",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/287",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/290",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/292",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/293",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/294",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/296",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/297",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/299",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/300",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/301",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/305",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/306",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/308",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/309",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/310",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/311",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/312",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/388",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/389",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/390",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/391",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/392",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/394",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/395",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/397",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/398",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/404",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/405",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/406",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/409",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/410",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/412",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/413",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/414",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/415",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/418",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/419",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/420",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/421",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/422",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/424",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/425",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/426",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/427",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/428",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/429",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/430",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/432",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/433",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/435",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/436",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/437",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/439",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/440",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/441",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/445",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/446",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/447",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/448",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/450",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/451",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/453",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/454",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/455",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/456",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/457",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/458",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/459",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/460",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/462",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/463",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/465",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/468",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/470",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/471",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/472",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/473",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/474",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/475",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/476",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/477",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/478",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/479",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/554",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/555",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/556",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/557",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/558",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/559",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/560",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/562",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/563",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/564",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/565",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/566",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/567",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/568",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/569",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/572",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/573",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/576",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/577",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/578",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/579",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/580",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/581",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/583",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/585",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/586",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/587",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/588",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/589",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/590",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/591",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/592",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/593",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/594",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/596",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/597",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/598",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/599",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/600",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/602",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/603",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/604",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/605",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/606",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/607",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/608",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/610",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/611",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/612",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/614",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/615",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/616",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/618",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/619",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/620",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/622",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/623",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/624",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/626",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/628",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/629",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/630",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/631",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/632",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/633",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/635",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/637",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/638",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/639",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/641",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/643",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/644",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/720",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/721",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/722",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/723",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/724",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/725",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/726",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/728",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/730",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/731",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/732",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/733",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/734",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/735",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/736",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/737",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/739",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/740",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/741",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/742",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/743",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/744",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/745",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/748",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/749",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/750",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/751",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/752",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/753",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/754",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/755",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/757",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/758",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/759",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/760",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/762",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/763",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/764",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/765",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/766",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/767",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/769",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/770",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/771",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/772",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/773",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/775",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/777",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/778",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/780",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/781",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/782",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/784",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/785",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/786",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/787",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/788",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/790",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/791",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/792",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/793",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/794",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/796",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/797",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/798",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/799",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/800",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/801",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": false,
+      "candidate_base_pass": false,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/803",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/804",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/805",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/806",
+      "suite": "mbpp",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/807",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/808",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "Mbpp/809",
+      "suite": "mbpp",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "baseline_base_pass": true,
+      "candidate_base_pass": true,
+      "grade_kind": "EvalPlus base AND extended tests"
+    },
+    {
+      "task_id": "gsm8k-test-1021",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0966",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0292",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1214",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0124",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0564",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0986",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0298",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0619",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0352",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0262",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0169",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0347",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0883",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0448",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1301",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0950",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0308",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0722",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0403",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0475",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0353",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0191",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0196",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0807",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0637",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1085",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0989",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0338",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0241",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0714",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1135",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0547",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1000",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0274",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0288",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1156",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0454",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0586",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0334",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0044",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1120",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1039",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0858",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0961",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1034",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0808",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0253",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0843",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0313",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1121",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0871",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0667",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0699",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0823",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0548",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0918",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1162",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0520",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0284",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0867",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-1216",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0773",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "gsm8k-test-0057",
+      "suite": "gsm8k-test-64-hash-subset",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-16384-early-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-16384-early-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-16384-middle-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-16384-middle-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-16384-late-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-16384-late-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-65536-early-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-65536-early-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-65536-middle-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-65536-middle-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-65536-late-1hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": true,
+      "candidate_pass": true,
+      "grade_kind": "supplement exact answer"
+    },
+    {
+      "task_id": "long-65536-late-2hop",
+      "suite": "synthetic-long-context-controls",
+      "baseline_pass": false,
+      "candidate_pass": false,
+      "grade_kind": "supplement exact answer"
+    }
+  ]
+}

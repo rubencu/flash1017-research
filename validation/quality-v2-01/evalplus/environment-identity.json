@@ -1,0 +1,8 @@
+{
+  "python_version": "3.12.15 (main, Oct  9 2026, 15:10:57) [Clang 22.1.3 ]",
+  "architecture": "arm64",
+  "macos_version": "27.0.1",
+  "darwin_release": "27.0.0",
+  "requirements_sha256": "1a3805c4b10878a54a4facbef4045de7dcb7f87b9a7818b2e89957846e481d11",
+  "scope": "Same isolated evaluator environment used for original and seeded protocols; no model packages loaded by evaluator."
+}

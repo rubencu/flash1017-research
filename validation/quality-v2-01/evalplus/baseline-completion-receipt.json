@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "protocol_id": "flash1017-evalplus-macos-seeded-02",
+  "tasks": 542,
+  "plus_passes": 447,
+  "suites": {
+    "humaneval": {
+      "tasks": 164,
+      "base_passes": 159,
+      "plus_passes": 148
+    },
+    "mbpp": {
+      "tasks": 378,
+      "base_passes": 351,
+      "plus_passes": 299
+    }
+  },
+  "postrun_source_checks": {
+    "adapter_sha256": "24dc62dc3cdd23052de53d049057a5a6747b02115ea8a57dce59353704898098",
+    "exporter_sha256": "2238e8c05bd19862259bec2e6e18f402ef01bb961a017bad56f69c6f6e4d8675",
+    "upstream_commit": "e5d0ed0bab96280b60b637ec7f15b5e4841b0cb2",
+    "datasets_sha256": {
+      "humaneval": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+      "mbpp": "b54e762755248ca411b523c917fa9f93c07b5ff2966bf60b3917b853926a3dad"
+    }
+  },
+  "grades_sha256": "3840679b5b66f1f03e148d59afd688caf80715cbb18d53dbc196d1186e6fbfd8",
+  "full_response_sha256": "a6d4c0cf9a34c305a780b30fd6d0b6a4120fdcfa411d342e31057acb3756ffeb",
+  "different_plus_verdicts_vs_original_protocol": [],
+  "infrastructure_errors": 0,
+  "phase_timeouts": [],
+  "max_sampled_worker_rss": 1719500800,
+  "completed_utc": "2026-10-19T11:26:45.671585+00:00"
+}

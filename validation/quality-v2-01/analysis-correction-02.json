@@ -1,0 +1,27 @@
+{
+  "schema": "flash1017-analysis-correction/1",
+  "scope": "Analysis-only correction; frozen plan, model, generation, grading, acceptance rules and old report unchanged.",
+  "reason": "The original reporter treated draft_width as fixed MTP depth even though the frozen v2 protocol explicitly sets mtp_depth_fixed=false. Corrected analysis checks the adaptive ceiling, absence of fixed override, enabled MTP and initial/final runtime mode and depth. Historical protocols without explicit mode retain their interpretation.",
+  "unchanged_inputs": {
+    "work/flash1017-quality-02/protocol.json": "a9aa441b4b0223370a7a5f1035bea71a3624c7015e294f20f119563c91cb489a",
+    "work/flash1017-quality-02/pair-summary-final-01.json": "611f9283b0efa425fbb836b579d157c674294be0935f876fcede12ea371263e5",
+    "work/flash1017-quality-02/analysis-source/summarize_installed_quality.py": "4874227964bca97df5020045c8d5bcbd5cd998d1a3a1d16dae3d6bd2edb79837",
+    "work/flash1017-quality-02/candidate-01/receipt.json": "91ec8742c540c2a0c79811b2aefae67f2f99049834a9147feb58d72a776c89b1",
+    "work/flash1017-quality-02/candidate-01/responses.jsonl": "bfdaa52beacc951350283a8a005409ea6e88c2b3d280bfc20f96382e728f1e28",
+    "work/flash1017-quality-01/baseline-02/receipt.json": "b85020ae0463947e58d9c429e045e1b87d6a40c718a82769793d22e48fe79749",
+    "work/flash1017-quality-01/baseline-02/responses.jsonl": "a6d4c0cf9a34c305a780b30fd6d0b6a4120fdcfa411d342e31057acb3756ffeb",
+    "work/flash1017-quality-01/evalplus-deterministic-02/baseline-grades.jsonl": "3840679b5b66f1f03e148d59afd688caf80715cbb18d53dbc196d1186e6fbfd8",
+    "work/flash1017-quality-01/evalplus-deterministic-02/candidate-grades.jsonl": "645a79d370d45a806fdfd5fdb3f659dd3dabb76027732bc01dd1ab714fed0c9d"
+  },
+  "corrected_report": {
+    "path": "work/flash1017-quality-02/pair-summary-final-02.json",
+    "sha256": "abd8723d59e00be7cacad705409aa8d89aef2bf33f48b303e4af7583d1ed7298"
+  },
+  "analysis_sources": {
+    "work/flash1017-quality-02/analysis-source-02/test_summarize_installed_quality.py": "c3fd3df9d6b56b1a4bf97d61dfd3a9934d2a80267e09b9537057ed339186e73f",
+    "work/flash1017-quality-02/analysis-source-02/summarize_installed_quality.py": "87825e2b4aff2ce85af88e269136505a67a949181bdabf4a0a6adb34ad6492a5"
+  },
+  "model_regeneration": false,
+  "regrading": false,
+  "publication": false
+}

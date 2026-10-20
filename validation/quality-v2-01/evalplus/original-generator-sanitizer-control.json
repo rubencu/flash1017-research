@@ -1,0 +1,40 @@
+{
+  "task_id": "Mbpp/630",
+  "purpose": "Synthetic positive control adding explicit return after generator exhaustion, to verify official sanitizer return-only function filter explains canonical failure. Not a model answer or benchmark score.",
+  "records": [
+    {
+      "phase": "base",
+      "outcome": {
+        "event": "result",
+        "status": "pass",
+        "tests": 3,
+        "tests_completed": 3,
+        "solution_sha256": "e3e8fe4b1909ef80e4c085423f16132e6472373de37b06dd13a918e72f24ce3e",
+        "raw_sha256": "e81ae2cceecfd9019e5a59657b5151210eaba1274a51338a28b70d29602b476c",
+        "reference_time_sum": 9.298324584960938e-06,
+        "cpu_seconds": 0.509165,
+        "maxrss": 143294464,
+        "sanitized_solution": "def adjac(ele, sub = []): \n  if not ele: \n     yield sub \n  else: \n     yield from [idx for j in range(ele[0] - 1, ele[0] + 2) \n                for idx in adjac(ele[1:], sub + [j])] \n  return\ndef get_coordinates(test_tup):\n  return list(adjac(test_tup))",
+        "returncode": 0,
+        "sampled_peak_rss": 142983168
+      }
+    },
+    {
+      "phase": "plus",
+      "outcome": {
+        "event": "result",
+        "status": "pass",
+        "tests": 120,
+        "tests_completed": 120,
+        "solution_sha256": "e3e8fe4b1909ef80e4c085423f16132e6472373de37b06dd13a918e72f24ce3e",
+        "raw_sha256": "e81ae2cceecfd9019e5a59657b5151210eaba1274a51338a28b70d29602b476c",
+        "reference_time_sum": 0.20428991317749023,
+        "cpu_seconds": 0.814101,
+        "maxrss": 207896576,
+        "sanitized_solution": "def adjac(ele, sub = []): \n  if not ele: \n     yield sub \n  else: \n     yield from [idx for j in range(ele[0] - 1, ele[0] + 2) \n                for idx in adjac(ele[1:], sub + [j])] \n  return\ndef get_coordinates(test_tup):\n  return list(adjac(test_tup))",
+        "returncode": 0,
+        "sampled_peak_rss": 204800000
+      }
+    }
+  ]
+}

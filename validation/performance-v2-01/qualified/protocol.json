@@ -1,0 +1,455 @@
+{
+  "schema": "installed-http-performance-v1",
+  "status": "frozen_before_any_model_run",
+  "scope": "Fresh installed public baseline wheel versus the final stock-arithmetic Flash1017 candidate wheel through public HTTP chat completions, on one machine, with the model loaded and prefix reuse disabled.",
+  "prerequisites": [
+    "Final candidate must pass the separately frozen 618-task quality/parity gate before any performance run.",
+    "Parent reviews this draft, binds candidate wheel/source and quality-result hashes, and freezes harness, plan, fixtures and settings before first output.",
+    "Baseline/candidate use the same checkpoint, dependency versions, native assets, Python, hardware and requested startup allocator/cache limits. Actual wired-memory policy remains native to each wheel/profile: the stock server raises its wired limit during startup, while the candidate profile resets it before loading. Record this difference; do not claim identical effective wired limits.",
+    "No simultaneous model generation, model grading or other intentional compute-heavy task during timed processes."
+  ],
+  "model": {
+    "repo": "mlx-community/DeepSeek-V4.1-Flash-1017-oQ2.5e-mtp",
+    "revision": "78456115d301eecf9fadcdcc81c0cf6f8b2c8eab"
+  },
+  "baseline": {
+    "version": "0.7.1rc1",
+    "base_commit": "7a5a3d75ce7463300bdfa5fedccd34348f60ff46",
+    "wheel_sha256": "b3e12950a607991a1feb833b1bdc0b92fe41aeb73656ca5373db03d0d87b71c7",
+    "native_mtp": true,
+    "adaptive_max_depth": 3,
+    "prefill_step": 2048,
+    "engram_prefetch_mib": 16,
+    "expected_runtime": {
+      "prefill_step_size": 2048,
+      "max_num_seqs": 1,
+      "attention_output_quantization": false,
+      "flash1017_enabled": false,
+      "confidence_enabled": false,
+      "replay_installed": false,
+      "engram_prefetch_bytes": null,
+      "mtp_depth": 3,
+      "mtp_depth_fixed": false
+    },
+    "prefetch_observer_note": "Native default is 16 MiB in pinned source. This release exposes no budget_bytes observer, so the snapshot is unavailable (null), not zero."
+  },
+  "candidate": {
+    "version": "0.7.1rc1+flash1017.2",
+    "profile": "flash1017-v2",
+    "commit": "9280d25a1322c39f2f6713dc22b099a6e9dd41d1",
+    "wheel_sha256": "0fbdb77ca86ce35b4dca0275b534c1fafde7d70f0f7f6a89d5f964821f7f7f06",
+    "draft_width": 3,
+    "prefill_step": 2048,
+    "engram_prefetch_mib": 64,
+    "expected_runtime": {
+      "prefill_step_size": 2048,
+      "max_num_seqs": 1,
+      "attention_output_quantization": false,
+      "flash1017_enabled": true,
+      "confidence_enabled": false,
+      "replay_installed": false,
+      "engram_prefetch_bytes": 67108864,
+      "mtp_depth": 3,
+      "mtp_depth_fixed": false
+    }
+  },
+  "performance_harness_sha256": "35689e6d76464ac132fe945068fe51a91bcb68b8b603da5dcf5b7f08131fb20d",
+  "observed_reference_device": {
+    "device_name": "Apple M5 Ultra",
+    "max_recommended_working_set_size": 261133172736,
+    "memory_size": 274877906944,
+    "architecture": "applegpu_g17d",
+    "max_buffer_length": 179357827072,
+    "resource_limit": 499000
+  },
+  "memory_limit_bytes": 240518168576,
+  "memory_limit_interpretation": "Requested startup allocator guideline and wired limit: 224 GiB; allocator cache limit: 8 GiB. These are initial calls, not a measurement or guarantee of subsequent effective limits. On the observed machine the stock server raises wired memory to 243.2 GiB; the candidate profile subsequently resets it to 224 GiB. Preserve these declared native profile behaviors, record available startup/load evidence and make no assertion that effective wired limits match.",
+  "artifacts": {
+    "requests-draft-01.jsonl": {
+      "path": "work/flash1017-performance-02/requests-draft-01.jsonl",
+      "sha256": "5f8655c5861ace51e1aa6ec3f382983de45bc704d844c42d78d961fd2abcff0c"
+    },
+    "payloads-draft-01.jsonl": {
+      "path": "work/flash1017-performance-02/payloads-draft-01.jsonl",
+      "sha256": "c42f191bed45bdc088ceec486abbe3f48d7a71a94697e3510909df1db850cf53"
+    },
+    "rendered-inputs-draft-01.jsonl": {
+      "path": "work/flash1017-performance-02/rendered-inputs-draft-01.jsonl",
+      "sha256": "2c2aad793fb89d086df9096304423d048fadb4f8ef20887a5ae7373d14900030"
+    },
+    "fixture-provenance-draft-01.json": {
+      "path": "work/flash1017-performance-02/fixture-provenance-draft-01.json",
+      "sha256": "ab6c972bb126d8af53f1c0fc7f1b5e536a897ce17114f40325dcc7e5d024a2fa"
+    },
+    "performance-source": {
+      "path": "work/flash1017-performance-02/frozen-source/run_installed_performance.py",
+      "sha256": "35689e6d76464ac132fe945068fe51a91bcb68b8b603da5dcf5b7f08131fb20d"
+    },
+    "quality-source": {
+      "path": "work/flash1017-performance-02/frozen-source/run_installed_quality.py",
+      "sha256": "1ad06c439ae008abb9d35ce81f2ed772fd329a1f862353855ccda56dc494b372"
+    },
+    "analysis-source": {
+      "path": "work/flash1017-performance-02/frozen-source/summarize_installed_performance.py",
+      "sha256": "febc26646dcf2198343396a3a0c69ed8e2a502a89939338f358eb52064404ed6"
+    }
+  },
+  "request_factory": {
+    "source": "repositories/flash1017-research/tools/run_installed_quality.py",
+    "source_sha256_at_preparation": "1ad06c439ae008abb9d35ce81f2ed772fd329a1f862353855ccda56dc494b372",
+    "request_for_ast_sha256": "5cc66a3f34d3b7ec06013af1850e03cb5bf87d62f0090814fc44f9de9fda647e",
+    "constants": {
+      "MODEL_ID": "DeepSeek-V4.1-Flash-1017",
+      "SEED": 431017
+    },
+    "performance_overrides": {
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      }
+    }
+  },
+  "http": {
+    "endpoint": "/v1/chat/completions",
+    "host": "127.0.0.1",
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    },
+    "concurrency": 1,
+    "client_clock": "time.perf_counter_ns",
+    "io_inactivity_timeout_seconds": 1200,
+    "timeout_semantics": "per-I/O inactivity, not a cumulative request deadline",
+    "process_wall_timeout_enforcement": "An external supervisor must enforce the declared 5400-second process wall bound; HTTPX does not enforce it and keepalives can prevent read inactivity."
+  },
+  "sampling": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "seed": 431017,
+    "enable_thinking": false,
+    "max_tokens_measured": 512,
+    "max_tokens_warmup": 64,
+    "ordinary_eos": true,
+    "force_length": false,
+    "repetition_penalty": 1.0,
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0
+  },
+  "processes": [
+    {
+      "process_index": 0,
+      "process_id": "block-0-baseline",
+      "block": 0,
+      "arm": "baseline",
+      "fresh_process": true,
+      "fresh_state_directory": true,
+      "warmup_task_id": "http-authored-warmup-16384",
+      "measured_task_ids": [
+        "http-held-code-1k",
+        "http-performance-cpython-16384",
+        "http-performance-pride-prejudice-65536",
+        "http-held-prose-1k",
+        "http-performance-curl-16384",
+        "http-performance-cpython-65536",
+        "http-performance-moby-dick-16384",
+        "http-performance-pride-prejudice-16384"
+      ]
+    },
+    {
+      "process_index": 1,
+      "process_id": "block-0-candidate",
+      "block": 0,
+      "arm": "candidate",
+      "fresh_process": true,
+      "fresh_state_directory": true,
+      "warmup_task_id": "http-authored-warmup-16384",
+      "measured_task_ids": [
+        "http-held-code-1k",
+        "http-performance-cpython-16384",
+        "http-performance-pride-prejudice-65536",
+        "http-held-prose-1k",
+        "http-performance-curl-16384",
+        "http-performance-cpython-65536",
+        "http-performance-moby-dick-16384",
+        "http-performance-pride-prejudice-16384"
+      ]
+    },
+    {
+      "process_index": 2,
+      "process_id": "block-1-candidate",
+      "block": 1,
+      "arm": "candidate",
+      "fresh_process": true,
+      "fresh_state_directory": true,
+      "warmup_task_id": "http-authored-warmup-16384",
+      "measured_task_ids": [
+        "http-performance-pride-prejudice-16384",
+        "http-performance-moby-dick-16384",
+        "http-performance-cpython-65536",
+        "http-performance-curl-16384",
+        "http-held-prose-1k",
+        "http-performance-pride-prejudice-65536",
+        "http-performance-cpython-16384",
+        "http-held-code-1k"
+      ]
+    },
+    {
+      "process_index": 3,
+      "process_id": "block-1-baseline",
+      "block": 1,
+      "arm": "baseline",
+      "fresh_process": true,
+      "fresh_state_directory": true,
+      "warmup_task_id": "http-authored-warmup-16384",
+      "measured_task_ids": [
+        "http-performance-pride-prejudice-16384",
+        "http-performance-moby-dick-16384",
+        "http-performance-cpython-65536",
+        "http-performance-curl-16384",
+        "http-held-prose-1k",
+        "http-performance-pride-prejudice-65536",
+        "http-performance-cpython-16384",
+        "http-held-code-1k"
+      ]
+    }
+  ],
+  "counts": {
+    "processes": 4,
+    "blocks": 2,
+    "measured_requests": 32,
+    "paired_case_block_observations": 16,
+    "excluded_warmups": 4,
+    "unique_measured_workloads": 8,
+    "synthetic_1k": 2,
+    "natural_16k": 4,
+    "natural_64k": 2
+  },
+  "cache_policy": {
+    "prefix_reuse": "disabled through normal settings in both arms; require cached_tokens==0 on every response",
+    "global_settings_overrides": {
+      "cache.enabled": false,
+      "cache.hot_cache_max_size": "0",
+      "cache.hot_cache_only": false
+    },
+    "require_runtime_prefix_cache_disabled": true,
+    "engram_rows": "Fresh process starts each arm/block. One identical excluded 16K warmup runs first. Retain all natural Engram row-cache state after warmup and through the measured sequence; no private clear or tensor mutation.",
+    "row_cache_reporting": "Save public/read-only observer snapshots after load, after warmup, before/after each measured request and before shutdown when available. Record cache capacities, row-cache counters and their per-request deltas; missing telemetry is unavailable, never zero.",
+    "os_cache": "Do not purge. OS file/page caches can persist across processes; counterbalanced process order reduces but does not eliminate this effect.",
+    "interpretation": "Warm loaded-model performance with known row-cache history, not cold-load or cold-storage performance."
+  },
+  "observations": {
+    "per_process": [
+      "exact wheel/source identity",
+      "installed dependency/native-asset hashes",
+      "effective safe settings before and after startup",
+      "model/checkpoint/tokenizer identities",
+      "hardware, requested startup memory limits and observed profile-specific wired-limit evidence",
+      "runtime initial/after-warmup/final snapshots",
+      "start/end times and exit status"
+    ],
+    "per_request": [
+      "task_id, block, arm, order and preceding task IDs",
+      "exact serialized request and SHA256",
+      "HTTP status/errors",
+      "client request-start, first-nonempty-content and stream-done monotonic timestamps",
+      "all text/reasoning deltas, final finish reason and final usage",
+      "actual prompt/completion/cached token counts",
+      "server TTFT, prompt_eval_duration, generation_duration and token rates",
+      "whole-output SHA256",
+      "available row-cache and MTP counters before/after request",
+      "Read-only MLX active/cache/cumulative-process-peak bytes outside the HTTP timing interval; peak includes load/warmup and is not per-request or full system resident memory."
+    ],
+    "ttft": "Client TTFT = elapsed from immediately before HTTP request send to receipt of the first SSE event with nonempty choices[].delta.content. Ignore role-only, empty content and usage-only events. Any unexpected reasoning/tool output is recorded and makes first-content interpretation explicit; do not silently count it as prose content.",
+    "server_timings": "Preserve native usage values without relabeling as client timings. Native rates and durations are rounded by the server. Validate prompt_eval_duration and generation_duration are positive; missing required usage is an invalid measurement, not a zero.",
+    "completion_latency": "Client stream-done latency includes transport and final usage; report as completed-answer latency only for pairwise identical text and ordinary stop in both arms. Length-stopped requests remain in TTFT and throughput tables but have no completed-answer latency claim."
+  },
+  "validity": {
+    "retain_every_attempt": true,
+    "no_selective_retries_or_case_replacement": true,
+    "required_measured_pairs": 16,
+    "all_eight_workloads_in_each_block_must_match_text_and_finish_reason": true,
+    "require_prompt_tokens_match_fixture_and_pair": true,
+    "require_completion_tokens_match_within_pair": true,
+    "require_cached_tokens_zero": true,
+    "require_no_errors_and_complete_sse_usage": true,
+    "require_versions_and_sources_match_frozen_plan": true,
+    "require_prefix_cache_disabled_in_effective_config": true,
+    "across_block_text_variation": "Report explicitly. Within-arm changes across deterministic repeats trigger investigation; do not silently treat them as timing noise.",
+    "failure_policy": "Preserve failed or divergent observations, mark the paired qualification incomplete/failed, and do not present a successful overall speed claim. A rerun requires a documented reason and a new immutable run identity."
+  },
+  "analysis": {
+    "primary_metrics": [
+      "client first-content TTFT in seconds",
+      "native evaluated-prompt throughput in tokens/second",
+      "native generation throughput in tokens/second"
+    ],
+    "secondary_metrics": [
+      "native server TTFT",
+      "native prompt/generation durations",
+      "client stream-done latency only on identical nontruncated pairs"
+    ],
+    "pairing": "Compare same workload and block; show all16 pairwise results before any summary. For TTFT/latency use baseline/candidate; for rates use candidate/baseline, so values above1 favor the candidate.",
+    "aggregation": "For each metric compute the geometric mean of the two block ratios within each case, then equal-case geometric means separately for synthetic1K (2cases), natural16K (4cases), natural64K (2cases), natural-all (6cases), and optionally all8 (explicitly labeled mixed). Show both block ratios and min/max across cases. Never weight by repetitions as if32 independent workloads existed.",
+    "completion_latency_denominator": "Show exact eligible task IDs and completed-pair count. Never combine completed and length-stopped answers, and never call time-to512tokens time-to-complete-answer.",
+    "no_quality_inference": "These workloads measure performance. Identical outputs establish paired comparability for these requests, not general model quality. Cite the separate618-task gate for broader bounded quality evidence.",
+    "uncertainty": "Two temporal blocks on one device support a reproducible bounded comparison, not population significance, p95/p99 latency, broad confidence intervals or general hardware claims.",
+    "historical_separation": "Do not transfer or combine the historical20.06% direct-inference result. This run uses ordinary EOS, greedy sampling, public streaming HTTP and a different final build; it stands on its own."
+  },
+  "review_items_before_freeze": [],
+  "builder_sha256": "2a6273d7cbcae1f5ab8c2a113c05605a5d89c50d92c2ab1066d788f6c7ade1dd",
+  "shared_environment": {
+    "packages": {
+      "aiohappyeyeballs": "2.7.1",
+      "aiohttp": "3.14.5",
+      "aiosignal": "1.4.0",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "attrs": "26.1.0",
+      "beautifulsoup4": "4.15.0",
+      "certifi": "2026.10.18",
+      "cffi": "2.1.1",
+      "charset-normalizer": "3.5.2",
+      "click": "8.5.0",
+      "cobble": "0.1.4",
+      "cohere-melody": "0.15.2",
+      "cryptography": "50.0.2",
+      "datasets": "5.1.0",
+      "ddgs": "9.16.0",
+      "defusedxml": "0.7.1",
+      "dill": "0.4.1",
+      "fastapi": "0.146.0",
+      "filelock": "4.2.3",
+      "flatbuffers": "25.12.19",
+      "frozenlist": "1.8.0",
+      "fsspec": "2026.7.0",
+      "h11": "0.16.0",
+      "hf-xet": "1.7.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "huggingface-hub": "1.33.0",
+      "idna": "3.20",
+      "itsdangerous": "2.2.0",
+      "jinja2": "3.1.6",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "llguidance": "1.9.1",
+      "lxml": "6.1.3",
+      "magika": "0.6.3",
+      "mammoth": "1.11.0",
+      "markdown-it-py": "4.2.0",
+      "markdownify": "1.2.3",
+      "markitdown": "0.1.8",
+      "markupsafe": "3.0.4",
+      "mdurl": "0.1.2",
+      "miniaudio": "1.71",
+      "mistral-common": "1.12.0",
+      "mlx": "0.32.4",
+      "mlx-audio": "0.5.7",
+      "mlx-embeddings": "0.1.0",
+      "mlx-lm": "0.31.4.dev132+g94cdcae13",
+      "mlx-metal": "0.32.4",
+      "mlx-vlm": "0.7.8",
+      "multidict": "7.1.0",
+      "multiprocess": "0.70.19",
+      "numpy": "2.3.5",
+      "onnxruntime": "1.31.0",
+      "openai-harmony": "0.0.8",
+      "opencv-python": "5.0.0.93",
+      "opentelemetry-api": "1.45.1",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pdfminer-six": "20260107",
+      "pdfplumber": "0.11.10",
+      "pillow": "13.0.0",
+      "pip": "25.0.1",
+      "primp": "2.0.1",
+      "propcache": "0.5.4",
+      "protobuf": "7.36.2",
+      "psutil": "7.2.2",
+      "pyarrow": "26.0.0",
+      "pycountry": "26.2.16",
+      "pycparser": "3.11",
+      "pydantic": "2.14.1",
+      "pydantic-core": "2.50.1",
+      "pydantic-extra-types": "2.11.1",
+      "pygments": "2.21.0",
+      "pypdfium2": "5.14.0",
+      "python-dateutil": "2.9.0.post0",
+      "python-dotenv": "1.2.4",
+      "python-multipart": "0.0.32",
+      "python-pptx": "1.0.2",
+      "pyyaml": "6.0.3",
+      "referencing": "0.37.0",
+      "regex": "2026.9.29",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "rpds-py": "2026.9.1",
+      "safetensors": "0.8.0",
+      "scipy": "1.18.1",
+      "sentencepiece": "0.2.2",
+      "setproctitle": "1.3.8",
+      "shellingham": "1.5.4",
+      "six": "1.17.0",
+      "socksio": "1.0.0",
+      "sounddevice": "0.5.6",
+      "soupsieve": "3.0.3",
+      "starlette": "1.9.0",
+      "tabulate": "0.10.0",
+      "tiktoken": "0.14.0",
+      "tokenizers": "0.23.3",
+      "tqdm": "4.70.1",
+      "transformers": "5.17.0",
+      "typer": "0.27.3",
+      "typing-extensions": "4.16.0",
+      "typing-inspection": "0.4.4",
+      "urllib3": "2.8.0",
+      "uvicorn": "0.54.0",
+      "websockets": "17.2",
+      "xlsxwriter": "3.2.9",
+      "xxhash": "4.0.1",
+      "yarl": "1.25.1"
+    },
+    "python": "3.12.15 (main, Oct  9 2026, 15:10:57) [Clang 22.1.3 ]",
+    "model_metadata_sha256": {
+      "config.json": "74259bebe816bb248eb075a9c285c64eb705d9ced63777ef5b0a9263b06793c6",
+      "model.safetensors.index.json": "cf5d05c50ce04258ece0b1d47f9abb9f8ff0eeb62665088042b3088a866714d0",
+      "tokenizer.json": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b",
+      "tokenizer_config.json": "6ac8c8dc065ed118161d02dd532749ae3f52c243deac27872134fae2f50d8547",
+      "generation_config.json": null
+    },
+    "native_assets": {
+      "custom_kernels/bonsai/_ext.cpython-312-darwin.so": "f4a7229864e22b20f7be9583d4edce7ff130e8c42f01653b2a77c79659e0b369",
+      "custom_kernels/bonsai/omlx_bonsai_kernels.metallib": "247f737f933468603fa390099ac8e575bb152685de4919c81158e38b533014ff",
+      "custom_kernels/decode_fast/_ext.cpython-312-darwin.so": "97fa662afbf36b448ceafa485d3214db8987cfffa90f1cfde490c00e79e9605d",
+      "custom_kernels/decode_fast/omlx_decode_fast_kernels.metallib": "84d7adce577fbecec0d43bb6ec3c8232e4db81803007aca9fc80caed64a7d8e6",
+      "custom_kernels/glm_moe_dsa/_ext.cpython-312-darwin.so": "576d880b99ad7df0a3d8d167daeba0d813d9fb176566671cb2ac7cabb0cfd104",
+      "custom_kernels/glm_moe_dsa/omlx_glm_kernels.metallib": "bb7cd8928579f9016afc50e26403cddbb14823469a4936337ae35deb15712c63",
+      "custom_kernels/minimax_m3/_ext.cpython-312-darwin.so": "c9320232198f841c10fd99a2cf1ff82f94d61e749788b19a2e541975b60c81dd",
+      "custom_kernels/minimax_m3/omlx_minimax_m3_kernels.metallib": "88b3550c3bc107e89a2b16496c69a130f6da4d92485e4f9579a1db63112a036a",
+      "custom_kernels/qwen35_prefill/_ext.cpython-312-darwin.so": "d42ffec393c072079a2a12b104a5011b5fbd76d00976240bf6154ce8f0cf2c82",
+      "custom_kernels/qwen35_prefill/omlx_qwen35_prefill_kernels.metallib": "92e22cbc4e6a4db7304392078493e1234a4db860ff942eb511e4599828b6fd11"
+    }
+  },
+  "shared_environment_reference": {
+    "path": "work/flash1017-performance-02/shared-environment-reference-01.json",
+    "sha256": "3ad40c07310b5e4a6a554ea14d7cbf28ea92aed98ada45fb14ef7e0991ec74b3"
+  },
+  "process_wall_timeout_seconds": 5400,
+  "shared_environment_reference_sha256": "3ad40c07310b5e4a6a554ea14d7cbf28ea92aed98ada45fb14ef7e0991ec74b3",
+  "performance_harness_path": "work/flash1017-performance-02/frozen-source/run_installed_performance.py",
+  "quality_harness_path": "work/flash1017-performance-02/frozen-source/run_installed_quality.py",
+  "quality_harness_sha256": "1ad06c439ae008abb9d35ce81f2ed772fd329a1f862353855ccda56dc494b372",
+  "analysis_harness_sha256": "febc26646dcf2198343396a3a0c69ed8e2a502a89939338f358eb52064404ed6",
+  "analysis_harness_path": "work/flash1017-performance-02/frozen-source/summarize_installed_performance.py",
+  "memory_observer": {
+    "method": "Read-only MLX active/cache/cumulative peak snapshots outside HTTP timing; no resets",
+    "scope": "Peak includes model load and warmup, not full system resident memory or request-only peak"
+  },
+  "qualification_stage": "Freeze only after exact 618-pair quality and fresh isolated grading pass",
+  "quality_report_path": "work/flash1017-quality-02/pair-summary-final-02.json",
+  "quality_report_sha256": "abd8723d59e00be7cacad705409aa8d89aef2bf33f48b303e4af7583d1ed7298",
+  "execution_supervisor_sha256": "179ba0c924c972ab18989659b2b77e6f82b64687b84eac4d27551450a41621ab",
+  "execution_supervisor_policy": "Owned child only: SIGINT/90s, SIGTERM/30s, SIGKILL/30s; original server never stopped"
+}
