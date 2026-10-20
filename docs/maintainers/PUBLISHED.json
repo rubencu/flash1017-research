@@ -1,0 +1,75 @@
+{
+  "status": "published-and-public-downloads-verified",
+  "public_downloads_used_authentication": false,
+  "releases": [
+    {
+      "repository": "rubencu/omlx",
+      "tag": "v0.7.1rc1-flash1017.2",
+      "url": "https://github.com/rubencu/omlx/releases/tag/v0.7.1rc1-flash1017.2",
+      "release_id": 417911699,
+      "published_at": "2026-10-20T01:31:22Z",
+      "prerelease": true,
+      "reviewed_commit": "87b5ede21ec3ac08c3914374077d89857835a693"
+    },
+    {
+      "repository": "rubencu/flash1017-research",
+      "tag": "v0.1.0",
+      "url": "https://github.com/rubencu/flash1017-research/releases/tag/v0.1.0",
+      "release_id": 417911368,
+      "published_at": "2026-10-20T01:31:23Z",
+      "prerelease": true,
+      "reviewed_commit": "297c200f0a06a541c329d24dbe0c163d0f59d515"
+    }
+  ],
+  "assets": [
+    {
+      "name": "flash1017-2-constraints.txt",
+      "url": "https://github.com/rubencu/omlx/releases/download/v0.7.1rc1-flash1017.2/flash1017-2-constraints.txt",
+      "bytes": 2441,
+      "sha256": "cd33046193c8d4678641adae1c2b510d490cfa2a2cccdb97ab973a05462cf04c",
+      "status": "verified"
+    },
+    {
+      "name": "omlx-0.7.1rc1+flash1017.2-cp312-cp312-macosx_15_0_arm64.whl",
+      "url": "https://github.com/rubencu/omlx/releases/download/v0.7.1rc1-flash1017.2/omlx-0.7.1rc1%2Bflash1017.2-cp312-cp312-macosx_15_0_arm64.whl",
+      "bytes": 39712385,
+      "sha256": "0fbdb77ca86ce35b4dca0275b534c1fafde7d70f0f7f6a89d5f964821f7f7f06",
+      "status": "verified"
+    },
+    {
+      "name": "omlx-0.7.1rc1+flash1017.2-cp312-cp312-macosx_15_0_arm64.whl.sha256",
+      "url": "https://github.com/rubencu/omlx/releases/download/v0.7.1rc1-flash1017.2/omlx-0.7.1rc1%2Bflash1017.2-cp312-cp312-macosx_15_0_arm64.whl.sha256",
+      "bytes": 126,
+      "sha256": "01376c58669b7077ac220025efa03ad5b583be7d97230545da1e1dc5cfedabdd",
+      "status": "verified"
+    },
+    {
+      "name": "RELEASE-MANIFEST.json",
+      "url": "https://github.com/rubencu/omlx/releases/download/v0.7.1rc1-flash1017.2/RELEASE-MANIFEST.json",
+      "bytes": 1458,
+      "sha256": "ca55d764af3ec1aef60e394f1bccf8045e890450252984368f1e52f0a1b14705",
+      "status": "verified"
+    },
+    {
+      "name": "SHA256SUMS",
+      "url": "https://github.com/rubencu/omlx/releases/download/v0.7.1rc1-flash1017.2/SHA256SUMS",
+      "bytes": 220,
+      "sha256": "fee2ee61e7f8bc8f4929e40076ae3f62af21ab59ef22932741859114259f4ef5",
+      "status": "verified"
+    },
+    {
+      "name": "flash1017-research-v0.1.0.tar.gz",
+      "url": "https://github.com/rubencu/flash1017-research/releases/download/v0.1.0/flash1017-research-v0.1.0.tar.gz",
+      "bytes": 22997446,
+      "sha256": "67e3b25520dd1fc465ce743ec48655662f90dc1feebcd613a88755129f5763da",
+      "status": "verified"
+    },
+    {
+      "name": "SHA256SUMS",
+      "url": "https://github.com/rubencu/flash1017-research/releases/download/v0.1.0/SHA256SUMS",
+      "bytes": 99,
+      "sha256": "b68a9138f00f3bd98991e2b708f657ceb4d51bd3dc9738c292417a7341669811",
+      "status": "verified"
+    }
+  ]
+}

@@ -1,81 +1,54 @@
-# Publication and upstream plan
+# Published distribution and upstream plan
 
-These publication actions remain pending owner approval. The measured findings
-are documented in the [article](../ARTICLE.md), [performance methods](../RESULTS.md)
-and [quality evaluation](../QUALITY.md).
+The owner approved publication, and both GitHub prereleases were published on
+2026-10-19. The [publication receipt](PUBLISHED.json) records their public URLs,
+reviewed source commits and verified asset checksums.
 
-## Release artifacts
-
-| Destination | Artifact |
+| Destination | Published artifact |
 |---|---|
-| `rubencu/omlx` | Branch `flash1017-preview`; prerelease tag `v0.7.1rc1-flash1017.2`; tested wheel, checksum, dependency constraints and release manifest. |
-| `rubencu/flash1017-research` | Public repository, branch `main`; prerelease tag `v0.1.0`; research article, methods, raw evidence, reproducible analysis, attribution and licenses. |
-| Optional Hugging Face blog | An article linking the runtime and evidence releases. |
+| [rubencu/omlx](https://github.com/rubencu/omlx/tree/flash1017-preview) | Branch `flash1017-preview`; [experimental release `v0.7.1rc1-flash1017.2`](https://github.com/rubencu/omlx/releases/tag/v0.7.1rc1-flash1017.2). |
+| [rubencu/flash1017-research](https://github.com/rubencu/flash1017-research) | Public repository, branch `main`; [research prerelease `v0.1.0`](https://github.com/rubencu/flash1017-research/releases/tag/v0.1.0). |
 
+Both releases are prereleases. The runtime fork's default branch remains
+`main`; the optimized source lives on `flash1017-preview`. Its existing branches
+are unchanged. Hugging Face articles, social posts and upstream submissions
+are separate decisions and have not been published as part of this release.
 Model weights are unchanged, so no Hugging Face model repository is needed.
-The wheel installs the oMLX server and web interface; it does not replace the
-macOS menu-bar application.
 
 ## Runtime release
 
-Push the reviewed `flash1017-preview` branch to the existing fork, retaining
-`upstream` as `jundot/omlx`. Create an explicitly experimental GitHub prerelease
-and attach the preserved CPython 3.12 Apple Silicon wheel plus checksum.
-Identify measured source commit `9280d25a1322c39f2f6713dc22b099a6e9dd41d1` and
-wheel SHA-256
-`0fbdb77ca86ce35b4dca0275b534c1fafde7d70f0f7f6a89d5f964821f7f7f06`.
-Documentation-only branch commits do not change that measured binary.
+The release attaches the exact measured CPython 3.12 Apple Silicon wheel,
+its `.sha256` sidecar, `flash1017-2-constraints.txt`, `SHA256SUMS` and
+`RELEASE-MANIFEST.json`. The checksum list covers the wheel and constraints
+used by the installation guide. The wheel installs the server and web UI.
 
-The prepared branch also adds the recorded dependency constraints and excludes
-Flash1017 release tags from the inherited wheel-build/upload and Homebrew
-update jobs. These changes do not alter runtime modules. Publish the preserved
-wheel, not a new build from the release tag. Keep the fork's existing default
-branch and unrelated branches unchanged.
+Measured runtime source: `9280d25a1322c39f2f6713dc22b099a6e9dd41d1`.
+Release source: `87b5ede21ec3ac08c3914374077d89857835a693`.
+Wheel SHA-256: `0fbdb77ca86ce35b4dca0275b534c1fafde7d70f0f7f6a89d5f964821f7f7f06`.
+The release source adds documentation, dependency constraints and workflow
+guards; runtime files are unchanged. The inherited wheel-build and Homebrew
+release jobs both completed as skipped, preserving the measured binary.
 
-Use the [prepared runtime release notes](https://github.com/rubencu/omlx/blob/v0.7.1rc1-flash1017.2/docs/releases/flash1017-2.md)
-as the release body. Attach exactly the reviewed wheel, its `.sha256` sidecar,
-`flash1017-2-constraints.txt`, `SHA256SUMS` and `RELEASE-MANIFEST.json`.
-`SHA256SUMS` covers the wheel and constraints used by the install guide.
-
-The release description should state the tested checkpoint, 256 GiB M5 Ultra,
-single-request profile and installation procedure. Link the evidence behind
-7.9% higher generation throughput, 4.5% lower first-text latency and 618 exact
-response pairs. Do not generalize to all Macs, models or prompts.
-
-Users can install the wheel in a separate environment and launch
-`omlx flash1017 --model /path/to/the/checkpoint`. Runtime and dependency changes
-need their own versioned validation before inheriting any measured claim.
+The [runtime release notes](https://github.com/rubencu/omlx/blob/v0.7.1rc1-flash1017.2/docs/releases/flash1017-2.md)
+and installation guide identify the pinned checkpoint, 256 GiB M5 Ultra,
+single-request profile and measurement scope. Runtime or dependency changes
+need their own validation before inheriting these measurements.
 
 ## Research release
 
-Create the research repository after review and push its reviewed `main`.
-Include the quality and performance bundles, source archives, licenses and
-attribution. Keep model weights, Python environments, caches and private
-server settings out of the repository. Wheel binaries belong to runtime
-release assets; the research bundle records their hashes.
+The research tag identifies commit `297c200f0a06a541c329d24dbe0c163d0f59d515`.
+Its assets are `flash1017-research-v0.1.0.tar.gz` and `SHA256SUMS`. The complete
+archive contains methods, raw evidence, analysis code, attribution, source
+archives and corpus licenses. It excludes weights, environments, caches,
+private server settings and wheel binaries. The archive's SHA-256 is
+`67e3b25520dd1fc465ce743ec48655662f90dc1feebcd613a88755129f5763da`.
 
-Link the precise runtime artifact from the README and article. Verify the
-saved evidence and offline reproduction commands before tagging the research
-release. An optional Hugging Face blog should summarize the same scoped
-result and link the full evidence.
-
-Use the [prepared research release notes](../releases/v0.1.0.md) as its body.
-Attach `flash1017-research-v0.1.0.tar.gz` and its `SHA256SUMS`. The archive
-contains the complete repository, including corpus licenses and historical
-evidence. The [fresh-install record](../../validation/release-install-01/README.md)
-documents the constrained wheel installation; it is not another inference run.
-
-Before any remote writes, verify the reviewed source commits and all staged
-asset hashes. Push only the named branches and tags, without force. Create
-draft prereleases, upload and verify assets, then publish both as prereleases
-without marking either as the latest stable release. Finally, check the public
-download links and downloaded checksums. GitHub download links in the prepared
-reader guides are publication targets; they are not live until this sequence
-has been approved and completed.
-
-The GitHub repositories and releases are the scope of this publication. A
-Hugging Face blog, social posts and upstream submissions remain separate
-decisions.
+The [research release notes](../releases/v0.1.0.md) explain how to recalculate
+results offline. The [fresh-install record](../../validation/release-install-01/README.md)
+checks the constrained installation without adding an inference measurement.
+All seven public release assets were downloaded without authentication and
+matched their reviewed sizes and SHA-256 checksums. The release tags and assets
+remain fixed; this branch also records publication status.
 
 ## Narrow upstream contributions
 
