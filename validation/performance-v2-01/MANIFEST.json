@@ -26,8 +26,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12040,
-      "sha256": "00156cc0e7337d436dda61086df4ffabcd62ac12f3587a1d70800fb85fd4a1d2"
+      "bytes": 10453,
+      "sha256": "76693e74de9e5624934385d63c628bd024fb98d62930c55a34be64b0b65a5009"
     },
     {
       "path": "frozen-source/run_installed_performance.py",

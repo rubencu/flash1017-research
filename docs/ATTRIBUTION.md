@@ -1,9 +1,9 @@
 # Attribution and contributions
 
 This project integrates and evaluates execution changes for a specific
-DeepSeek-V4.1-Flash-1017 checkpoint in oMLX. Its contributions include numerical
-and draft-state repairs, model-scoped runtime integration, resource cleanup,
-packaging, and measurements tied to exact source and configuration records.
+DeepSeek-V4.1-Flash-1017 checkpoint in oMLX. The measured profile integrates
+vocabulary-weight reuse, bounded lookup-row caching and prefetch admission,
+with resource cleanup, packaging and evaluation tied to exact build identities.
 The model, quantization and general optimization techniques come from the
 foundations and related work identified here.
 
@@ -17,27 +17,40 @@ foundations and related work identified here.
   **[MLX-LM](https://github.com/ml-explore/mlx-lm)** and
   **[MLX-VLM](https://github.com/Blaizzy/mlx-vlm)** provide array and model infrastructure.
 - **[oMLX](https://github.com/jundot/omlx)** provides loading, serving, scheduling,
-  speculative execution, native kernels and storage infrastructure. The overall
-  performance comparison uses installed release 0.7.1rc1 as its reference.
+  speculative execution, native kernels and storage infrastructure. The performance
+  comparison uses the public `v0.7.1rc1` wheel as its reference.
 
-## Reused code, related implementations and project additions
+## Used in the measured profile
 
 | Component | Source or related work | Contribution in this project |
 |---|---|---|
-| BF16 vocabulary-weight reuse | Adaptation of oMLX's projection; analogous multi-row reuse in [tacos8me/m5-ultra](https://github.com/tacos8me/m5-ultra/blob/fb233e22762f11e23123437efd4cbfc400a59f07/kernels/omlx/src/omlx/patches/deepseek_v41/head.py). | Kernel adaptation, six-row extension, integration and comparisons distinguishing rows 2–5 from the six-row fallback. |
-| Confidence scheduling | [DSpark's causal stopping method](https://arxiv.org/html/2607.05147v1#S3.SS2.SSS2); related [confidence/cost policy](https://github.com/tacos8me/m5-ultra/blob/4e4d5a81f8135249815a3f284c0ed5bbd1faee58/kernels/omlx/src/omlx/patches/deepseek_v41/mtp.py). | Previous-token conditioning, per-position calibration, a zero-draft option and a fixed cost policy integrated into the selected runtime. |
-| Dependency replay | Decoder-suffix and arithmetic-partition preservation in [antirez/ds4](https://github.com/antirez/ds4/blob/fc80bd695da76ee14bcb86820bf900a5cdfda806/ds4.c#L42408); related [MLX replay implementation](https://github.com/tacos8me/m5-ultra/blob/4e4d5a81f8135249815a3f284c0ed5bbd1faee58/kernels/omlx/src/omlx/patches/deepseek_v41/encoder_replay.py). | Adaptation to the pinned model, shape-sensitive numerical repairs, preservation of all three draft-stage projections, state checks, fallback and lifecycle integration. |
-| HotRows cache | **Copied unchanged** from [tacos8me/m5-ultra at `fb233e2`](https://github.com/tacos8me/m5-ultra/blob/fb233e22762f11e23123437efd4cbfc400a59f07/kernels/omlx/src/omlx/patches/deepseek_v41/hot_rows.py), with its Apache-2.0 license and notice. | Model-owned adapter, bounded budgets, native-reader coordination, fallback, cleanup and measurements. |
-| Engram prefetch | oMLX's existing selected-row reader and background executor. | Evaluation and integration of a larger prefetch admission budget with wider prompt chunks; instance-local budget handling in the fork. |
-| Attention-output rounding | DeepSeek reference behavior and [gnahzhang's exact-model conversion/runtime documentation](https://huggingface.co/gnahzhang/DeepSeek-V4.1-Flash-1017-LSQ3-G128-MLX/blob/c98bd97baca052f484c1d6ea6b6e8a8eced404ef/README.md). | Implementation and investigation of that boundary in the selected target and draft execution paths. |
+| BF16 vocabulary-weight reuse | Adaptation of oMLX's projection; analogous multi-row reuse in [tacos8me/m5-ultra](https://github.com/tacos8me/m5-ultra/blob/fb233e22762f11e23123437efd4cbfc400a59f07/kernels/omlx/src/omlx/patches/deepseek_v41/head.py). | Integration for rows 2–5 with stock per-row arithmetic, dispatch limits and exact Metal parity checks. |
+| HotRows cache | **Copied unchanged** from [tacos8me/m5-ultra at `fb233e2`](https://github.com/tacos8me/m5-ultra/blob/fb233e22762f11e23123437efd4cbfc400a59f07/kernels/omlx/src/omlx/patches/deepseek_v41/hot_rows.py), with its Apache-2.0 license and notice. | Model-owned adapter, bounded budgets, native-reader coordination, fallback, cleanup and evaluation. |
+| Engram prefetch | oMLX's selected-row reader and background executor. | Instance-local admission budget, a 64 MiB setting, lifecycle integration and evaluation with stock prompt chunks. |
 
-These relationships distinguish a direct source copy, an adaptation and related
-implementations. Similar implementations alone do not establish direct copying
-or independent invention. The source-level notices and the
-[component attribution accompanying the prototype](../archives/2026-10-18-preview/docs/ATTRIBUTION.md)
-provide additional references and license details.
+The contribution is implementation and verification for the identified runtime,
+not invention of weight reuse, caching, prefetch or speculative decoding.
+A related implementation is distinct from a direct source copy; the HotRows
+copy is explicitly identified above and in its source notice.
 
-## Licenses and review provenance
+## Credits for other included source
+
+The source archive and inactive runtime modules include work on additional
+execution paths. They are not part of the measured profile or its headline:
+
+- Decoder-suffix replay and arithmetic-partition preservation relate to
+  [antirez/ds4](https://github.com/antirez/ds4/blob/fc80bd695da76ee14bcb86820bf900a5cdfda806/ds4.c#L42408)
+  and [tacos8me's MLX replay](https://github.com/tacos8me/m5-ultra/blob/4e4d5a81f8135249815a3f284c0ed5bbd1faee58/kernels/omlx/src/omlx/patches/deepseek_v41/encoder_replay.py).
+- Confidence scheduling follows [DSpark's causal stopping method](https://arxiv.org/html/2607.05147v1#S3.SS2.SSS2),
+  with related [confidence/cost policy code](https://github.com/tacos8me/m5-ultra/blob/4e4d5a81f8135249815a3f284c0ed5bbd1faee58/kernels/omlx/src/omlx/patches/deepseek_v41/mtp.py).
+- Attention-output rounding was informed by DeepSeek reference behavior and
+  [gnahzhang's conversion/runtime documentation](https://huggingface.co/gnahzhang/DeepSeek-V4.1-Flash-1017-LSQ3-G128-MLX/blob/c98bd97baca052f484c1d6ea6b6e8a8eced404ef/README.md).
+
+The [source attribution record](../archives/2026-10-18-preview/docs/ATTRIBUTION.md)
+provides component details and license references. Per-file notices remain
+applicable to both active and inactive source.
+
+## Licenses and authorship
 
 Original additions and repository documentation use the root
 [Apache-2.0 license](../LICENSE). Existing per-file MIT and Apache-2.0 licenses
